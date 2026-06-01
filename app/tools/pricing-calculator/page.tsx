@@ -15,9 +15,14 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   return (
-    <main className="mx-auto max-w-5xl px-4 py-12">
-      <h1 className="text-3xl font-bold">项目报价助手</h1>
-      <p className="mt-3 max-w-3xl text-gray-600">用于估算 Upwork/Fiverr 小项目报价范围。结果只做参考，不保证成交，也不建议低价承诺复杂交付。</p>
+    <main className="mx-auto w-full max-w-6xl overflow-hidden px-4 py-12">
+      <section className="rounded-lg border border-gray-200 bg-gradient-to-b from-sky-50 to-white p-6 shadow-sm md:p-8">
+        <p className="text-sm font-medium text-brand">自由职业报价参考工具</p>
+        <h1 className="mt-2 text-3xl font-bold text-ink">项目报价助手</h1>
+        <p className="mt-3 max-w-3xl text-gray-600">
+          用于估算 Upwork/Fiverr 小项目报价范围。结果只做参考，不保证成交，也不建议低价承诺复杂交付；真实报价还要结合客户预算、范围和验收标准。
+        </p>
+      </section>
       <PricingCalculatorClient />
       <div className="mt-8"><ToolCTA title="报价后下一步" /></div>
     </main>

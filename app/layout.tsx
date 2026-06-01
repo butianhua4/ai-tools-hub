@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     template: "%s | AI 接单实验室",
   },
   description: site.description,
+  icons: {
+    icon: "/favicon.svg",
+  },
   ...(googleSiteVerification
     ? {
         verification: {

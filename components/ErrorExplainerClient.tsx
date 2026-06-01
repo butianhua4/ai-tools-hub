@@ -36,44 +36,44 @@ export function ErrorExplainerClient() {
 
   return (
     <>
-      <div className="mt-5 flex flex-wrap gap-3">
-        <button className="rounded-md border px-4 py-2 text-sm" onClick={() => setErrorText(sampleError)}>填入示例报错</button>
-        <button className="rounded-md border px-4 py-2 text-sm" onClick={() => setErrorText("")}>清空</button>
+      <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <button className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium transition hover:border-brand/50" onClick={() => setErrorText(sampleError)}>填入示例报错</button>
+        <button className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium transition hover:border-brand/50" onClick={() => setErrorText("")}>清空</button>
       </div>
 
-      <section className="mt-8 grid gap-6 lg:grid-cols-[1fr_360px]">
-        <div className="rounded-lg border bg-white p-5 shadow-sm">
+      <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,360px)]">
+        <div className="min-w-0 rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <label className="text-sm font-semibold">报错内容</label>
-          <textarea className="mt-2 h-72 w-full rounded-lg border p-4 text-sm leading-6" value={errorText} onChange={(event) => setErrorText(event.target.value)} placeholder="粘贴完整报错，不要只贴最后一行。" />
+          <textarea className="mt-2 h-72 w-full rounded-lg border border-gray-300 p-4 text-sm leading-6 outline-none transition focus:border-brand focus:ring-2 focus:ring-blue-100" value={errorText} onChange={(event) => setErrorText(event.target.value)} placeholder="粘贴完整报错，不要只贴最后一行。" />
         </div>
-        <aside className="space-y-4 rounded-lg border bg-gray-50 p-5">
+        <aside className="min-w-0 space-y-4 rounded-lg border border-gray-200 bg-gray-50 p-5 shadow-sm">
           <Select label="使用环境" value={environment} onChange={setEnvironment} options={environments} />
           <Select label="当前操作" value={action} onChange={setAction} options={actions} />
           <p className="rounded-md bg-white p-3 text-sm text-gray-600">涉及生产数据库、支付、安全权限时，不建议新手直接修改。</p>
         </aside>
       </section>
 
-      <section className="mt-8 grid gap-6 lg:grid-cols-2">
+      <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Panel title="这个报错大概是什么意思"><p>{result.meaning}</p></Panel>
         <Panel title="是否适合新手自己修"><p>{result.beginnerFit}</p></Panel>
         <Panel title="可能原因"><List items={result.causes} /></Panel>
         <Panel title="解决步骤"><List items={result.steps} ordered /></Panel>
       </section>
 
-      <section className="mt-8 rounded-lg border bg-white p-5">
-        <div className="flex items-center justify-between gap-3">
+      <section className="mt-8 rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">可以复制的命令</h2>
           <CopyButton text={result.commands.join("\n")} />
         </div>
-        <pre className="mt-4 overflow-auto rounded bg-gray-100 p-4 text-sm">{result.commands.join("\n")}</pre>
+        <pre className="mt-4 overflow-auto rounded-md bg-slate-950 p-4 text-sm leading-6 text-slate-100">{result.commands.join("\n")}</pre>
       </section>
 
-      <section className="mt-8 rounded-lg border bg-blue-50 p-5">
+      <section className="mt-8 rounded-lg border border-blue-100 bg-blue-50 p-5">
         <h2 className="text-lg font-semibold">仍然不行时怎么办</h2>
         <p className="mt-2 text-sm leading-6 text-gray-700">{result.whenToAskHelp}</p>
       </section>
 
-      <section className="mt-8 rounded-lg border bg-white p-5">
+      <section className="mt-8 rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h2 className="text-lg font-semibold">发给别人求助前，先复制这段信息</h2>
@@ -95,7 +95,7 @@ function Select({ label, value, onChange, options }: { label: string; value: str
   return (
     <label className="block text-sm font-medium text-gray-700">
       {label}
-      <select className="mt-2 w-full rounded-md border bg-white p-2" value={value} onChange={(event) => onChange(event.target.value)}>
+      <select className="mt-2 w-full rounded-md border border-gray-300 bg-white p-2 outline-none transition focus:border-brand focus:ring-2 focus:ring-blue-100" value={value} onChange={(event) => onChange(event.target.value)}>
         {options.map((option) => <option key={option}>{option}</option>)}
       </select>
     </label>
@@ -103,7 +103,7 @@ function Select({ label, value, onChange, options }: { label: string; value: str
 }
 
 function Panel({ title, children }: { title: string; children: React.ReactNode }) {
-  return <section className="rounded-lg border bg-white p-5"><h2 className="text-lg font-semibold">{title}</h2><div className="mt-3 text-sm leading-6 text-gray-700">{children}</div></section>;
+  return <section className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm"><h2 className="text-lg font-semibold text-ink">{title}</h2><div className="mt-3 text-sm leading-6 text-gray-700">{children}</div></section>;
 }
 
 function List({ items, ordered = false }: { items: string[]; ordered?: boolean }) {

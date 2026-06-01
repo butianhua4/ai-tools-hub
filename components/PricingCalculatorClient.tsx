@@ -34,13 +34,13 @@ export function PricingCalculatorClient() {
 
   return (
     <>
-      <section className="mt-8 grid gap-6 lg:grid-cols-[1fr_420px]">
-        <div className="rounded-lg border bg-white p-5 shadow-sm">
+      <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)]">
+        <div className="min-w-0 rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <div className="grid gap-4 md:grid-cols-2">
-            <label className="text-sm font-medium">项目类型<select className="mt-2 w-full rounded-md border p-2" value={projectType} onChange={(event) => { setProjectType(event.target.value); setHours(suggestedHours(event.target.value)); }}>{projectTypes.map((item) => <option key={item}>{item}</option>)}</select></label>
-            <label className="text-sm font-medium">预计工时<input className="mt-2 w-full rounded-md border p-2" type="number" min={1} max={200} value={hours} onChange={(event) => setHours(Number(event.target.value))} /></label>
-            <label className="text-sm font-medium">难度<select className="mt-2 w-full rounded-md border p-2" value={difficulty} onChange={(event) => setDifficulty(event.target.value as PricingInput["difficulty"])}><option value="beginner">简单</option><option value="intermediate">中等</option><option value="advanced">复杂</option></select></label>
-            <label className="text-sm font-medium">平台抽成比例 %<input className="mt-2 w-full rounded-md border p-2" type="number" min={0} max={40} value={platformFeeRate} onChange={(event) => setPlatformFeeRate(Number(event.target.value))} /></label>
+            <label className="text-sm font-medium">项目类型<select className="mt-2 w-full rounded-md border border-gray-300 bg-white p-2 outline-none transition focus:border-brand focus:ring-2 focus:ring-blue-100" value={projectType} onChange={(event) => { setProjectType(event.target.value); setHours(suggestedHours(event.target.value)); }}>{projectTypes.map((item) => <option key={item}>{item}</option>)}</select></label>
+            <label className="text-sm font-medium">预计工时<input className="mt-2 w-full rounded-md border border-gray-300 p-2 outline-none transition focus:border-brand focus:ring-2 focus:ring-blue-100" type="number" min={1} max={200} value={hours} onChange={(event) => setHours(Number(event.target.value))} /></label>
+            <label className="text-sm font-medium">难度<select className="mt-2 w-full rounded-md border border-gray-300 bg-white p-2 outline-none transition focus:border-brand focus:ring-2 focus:ring-blue-100" value={difficulty} onChange={(event) => setDifficulty(event.target.value as PricingInput["difficulty"])}><option value="beginner">简单</option><option value="intermediate">中等</option><option value="advanced">复杂</option></select></label>
+            <label className="text-sm font-medium">平台抽成比例 %<input className="mt-2 w-full rounded-md border border-gray-300 p-2 outline-none transition focus:border-brand focus:ring-2 focus:ring-blue-100" type="number" min={0} max={40} value={platformFeeRate} onChange={(event) => setPlatformFeeRate(Number(event.target.value))} /></label>
           </div>
           <div className="mt-4 rounded-md bg-blue-50 p-3 text-sm text-blue-900">
             已按“{projectType}”预填建议工时，你可以根据真实范围手动调整。
@@ -52,8 +52,8 @@ export function PricingCalculatorClient() {
           </div>
         </div>
 
-        <aside className="rounded-lg border bg-gray-50 p-5">
-          <div className="flex items-center justify-between gap-3">
+        <aside className="min-w-0 rounded-lg border border-gray-200 bg-gray-50 p-5 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
             <h2 className="text-xl font-semibold">报价建议</h2>
             <CopyButton text={quoteText} />
           </div>
@@ -66,18 +66,18 @@ export function PricingCalculatorClient() {
         </aside>
       </section>
 
-      <section className="mt-8 grid gap-6 md:grid-cols-2">
-        <div className="rounded-lg border bg-white p-5">
+      <section className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <h2 className="text-lg font-semibold">新手报价提醒</h2>
           <p className="mt-3 text-sm leading-6 text-gray-700">{result.beginnerReminder}</p>
         </div>
-        <div className="rounded-lg border bg-white p-5">
+        <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <h2 className="text-lg font-semibold">报价解释文案</h2>
           <p className="mt-3 text-sm leading-6 text-gray-700">{result.explanation}</p>
         </div>
       </section>
 
-      <section className="mt-8 rounded-lg border bg-white p-5">
+      <section className="mt-8 rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
         <h2 className="text-lg font-semibold">可发给客户的报价说明</h2>
         <p className="mt-3 text-sm leading-6 text-gray-700">
           I can review the current scope first and confirm the final estimate after checking the details. The quote includes implementation, basic testing, and a short delivery note. If the scope changes, I will confirm before doing extra work.
@@ -87,7 +87,7 @@ export function PricingCalculatorClient() {
         </div>
       </section>
 
-      <section className="mt-8 rounded-lg border bg-blue-50 p-5">
+      <section className="mt-8 rounded-lg border border-blue-100 bg-blue-50 p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h2 className="text-lg font-semibold">报价前边界清单</h2>
@@ -109,9 +109,9 @@ export function PricingCalculatorClient() {
 }
 
 function Check({ label, checked, onChange }: { label: string; checked: boolean; onChange: (checked: boolean) => void }) {
-  return <label className="flex items-center gap-2 rounded-md border p-3 text-sm"><input type="checkbox" checked={checked} onChange={(event) => onChange(event.target.checked)} />{label}</label>;
+  return <label className="flex items-center gap-2 rounded-md border border-gray-200 bg-white p-3 text-sm transition hover:border-brand/50"><input type="checkbox" checked={checked} onChange={(event) => onChange(event.target.checked)} />{label}</label>;
 }
 
 function Price({ label, value, highlight = false }: { label: string; value: number; highlight?: boolean }) {
-  return <div className={`rounded-md border p-4 ${highlight ? "border-blue-200 bg-blue-50" : "bg-white"}`}><p className="text-sm text-gray-500">{label}</p><p className="mt-1 text-2xl font-bold">${value}</p></div>;
+  return <div className={`rounded-md border p-4 ${highlight ? "border-blue-200 bg-blue-50" : "border-gray-200 bg-white"}`}><p className="text-sm text-gray-500">{label}</p><p className="mt-1 text-2xl font-bold text-ink">${value}</p></div>;
 }

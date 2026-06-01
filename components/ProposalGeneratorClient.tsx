@@ -39,15 +39,15 @@ export function ProposalGeneratorClient() {
 
   return (
     <>
-      <div className="mt-5 flex flex-wrap gap-3">
-        <button className="rounded-md border px-4 py-2 text-sm" onClick={() => setJob(sampleJob)}>填入新手友好示例</button>
-        <button className="rounded-md border px-4 py-2 text-sm" onClick={() => setJob("")}>清空</button>
+      <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <button className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium transition hover:border-brand/50" onClick={() => setJob(sampleJob)}>填入新手友好示例</button>
+        <button className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium transition hover:border-brand/50" onClick={() => setJob("")}>清空</button>
       </div>
 
-      <section className="mt-8 grid gap-6 lg:grid-cols-[1fr_420px]">
-        <div className="rounded-lg border bg-white p-5 shadow-sm">
+      <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)]">
+        <div className="min-w-0 rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
           <label className="text-sm font-semibold">Upwork Job Posting 原文</label>
-          <textarea className="mt-2 h-72 w-full rounded-lg border p-4 text-sm leading-6" value={job} onChange={(event) => setJob(event.target.value)} placeholder="粘贴客户原始需求，越完整越好。" />
+          <textarea className="mt-2 h-72 w-full rounded-lg border border-gray-300 p-4 text-sm leading-6 outline-none transition focus:border-brand focus:ring-2 focus:ring-blue-100" value={job} onChange={(event) => setJob(event.target.value)} placeholder="粘贴客户原始需求，越完整越好。" />
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             <Select label="我的水平" value={level} onChange={(value) => setLevel(value as ExperienceLevel)} options={levels} />
             <Select label="项目类型" value={projectType} onChange={(value) => setProjectType(value as ProjectType)} options={projectTypes} />
@@ -56,8 +56,8 @@ export function ProposalGeneratorClient() {
           </div>
         </div>
 
-        <aside className="space-y-4 rounded-lg border bg-gray-50 p-5">
-          <h2 className="text-xl font-semibold">项目判断</h2>
+        <aside className="min-w-0 space-y-4 rounded-lg border border-gray-200 bg-gray-50 p-5 shadow-sm">
+          <h2 className="text-xl font-semibold text-ink">项目判断</h2>
           <Info label="可行性" value={result.feasible ? "可以继续评估" : "需要谨慎或不建议投"} />
           <Info label="难度" value={result.difficulty} />
           <Info label="新手建议" value={result.beginnerAdvice} />
@@ -66,12 +66,12 @@ export function ProposalGeneratorClient() {
         </aside>
       </section>
 
-      <section className="mt-8 grid gap-6 lg:grid-cols-2">
+      <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
         <ResultBlock title="风险提示" items={result.risks} />
         <ResultBlock title="需要问客户的问题" items={result.questions} />
       </section>
 
-      <section className="mt-8 rounded-lg border bg-blue-50 p-5">
+      <section className="mt-8 rounded-lg border border-blue-100 bg-blue-50 p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h2 className="text-lg font-semibold">建议下一步</h2>
@@ -86,13 +86,13 @@ export function ProposalGeneratorClient() {
         </div>
       </section>
 
-      <section className="mt-8 grid gap-6 lg:grid-cols-3">
+      <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
         <ProposalCard title="英文 Proposal" text={result.proposal} />
         <ProposalCard title="简短版本" text={result.shortProposal} />
         <ProposalCard title="更稳妥版本" text={result.safeProposal} />
       </section>
 
-      <section className="mt-8 rounded-lg border bg-white p-5">
+      <section className="mt-8 rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h2 className="text-lg font-semibold">投标前检查清单</h2>
@@ -121,7 +121,7 @@ function Select({ label, value, onChange, options }: { label: string; value: str
   return (
     <label className="block text-sm font-medium text-gray-700">
       {label}
-      <select className="mt-2 w-full rounded-md border bg-white p-2" value={value} onChange={(event) => onChange(event.target.value)}>
+      <select className="mt-2 w-full rounded-md border border-gray-300 bg-white p-2 outline-none transition focus:border-brand focus:ring-2 focus:ring-blue-100" value={value} onChange={(event) => onChange(event.target.value)}>
         {options.map(([optionValue, text]) => <option key={optionValue} value={optionValue}>{text}</option>)}
       </select>
     </label>
@@ -129,13 +129,13 @@ function Select({ label, value, onChange, options }: { label: string; value: str
 }
 
 function Info({ label, value }: { label: string; value: string }) {
-  return <div><p className="text-xs text-gray-500">{label}</p><p className="mt-1 font-medium text-gray-900">{value}</p></div>;
+  return <div className="rounded-md bg-white p-3"><p className="text-xs text-gray-500">{label}</p><p className="mt-1 font-medium leading-6 text-gray-900">{value}</p></div>;
 }
 
 function ResultBlock({ title, items }: { title: string; items: string[] }) {
-  return <section className="rounded-lg border bg-white p-5"><h2 className="text-lg font-semibold">{title}</h2><ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-gray-700">{items.map((item) => <li key={item}>{item}</li>)}</ul></section>;
+  return <section className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm"><h2 className="text-lg font-semibold text-ink">{title}</h2><ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-gray-700">{items.map((item) => <li key={item}>{item}</li>)}</ul></section>;
 }
 
 function ProposalCard({ title, text }: { title: string; text: string }) {
-  return <section className="rounded-lg border bg-white p-5"><div className="flex items-center justify-between gap-3"><h2 className="text-lg font-semibold">{title}</h2><CopyButton text={text} /></div><p className="mt-4 whitespace-pre-wrap text-sm leading-6 text-gray-700">{text}</p></section>;
+  return <section className="min-w-0 rounded-lg border border-gray-200 bg-white p-5 shadow-sm"><div className="flex flex-wrap items-center justify-between gap-3"><h2 className="text-lg font-semibold text-ink">{title}</h2><CopyButton text={text} /></div><p className="mt-4 whitespace-pre-wrap break-words text-sm leading-6 text-gray-700">{text}</p></section>;
 }
