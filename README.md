@@ -44,6 +44,14 @@ npm run live:check -- --url=https://ai-jiedan-lab.vercel.app
 - 不能进入 sitemap
 - 不能出现在 `/blog`
 
+如需重建 500 篇选题计划，运行：
+
+```bash
+npm run content:plan
+```
+
+这个命令只刷新选题计划，不会发布文章，也不会调用真实 AI API。重建后要优先使用新计划继续生成草稿；旧的 `draft` 文章如果标题不够正式，必须人工打磨后才能进入 `review`。
+
 只有人工审核后进入 `review`，再通过发布脚本加 `--confirm`，才能变成：
 
 - `status: published`

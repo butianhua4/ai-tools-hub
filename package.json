@@ -11,6 +11,7 @@
     "content:check": "tsx scripts/content-quality-check.ts",
     "mark:review": "tsx scripts/mark-review.ts",
     "publish:articles": "tsx scripts/publish-articles.ts",
+    "content:plan": "tsx scripts/refresh-content-plan.ts",
     "content:dashboard": "next dev",
     "project:status": "tsx scripts/project-status.ts",
     "seo:check": "tsx scripts/seo-safety-check.ts",
