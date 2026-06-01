@@ -16,6 +16,21 @@ export function PricingCalculatorClient() {
   const [platformFeeRate, setPlatformFeeRate] = useState(10);
   const result = useMemo(() => calculatePricing({ projectType, hours, difficulty, urgent, communicationHeavy, maintenance, platformFeeRate }), [projectType, hours, difficulty, urgent, communicationHeavy, maintenance, platformFeeRate]);
   const quoteText = `参考报价：\n最低报价：$${result.minimum}\n正常报价：$${result.normal}\n高价值报价：$${result.high}\n不建议低于：$${result.floor}\n\n说明：${result.explanation}\n${result.note}`;
+  const scopeChecklist = [
+    `项目类型：${projectType}`,
+    `预计工时：${hours} 小时`,
+    `难度：${difficulty}`,
+    `是否加急：${urgent ? "是" : "否"}`,
+    `沟通复杂度：${communicationHeavy ? "较高" : "正常"}`,
+    `是否包含维护：${maintenance ? "包含" : "不包含"}`,
+    `平台抽成：${platformFeeRate}%`,
+    "",
+    "报价边界：",
+    "- 报价只包含当前确认范围。",
+    "- 范围变化需要重新确认。",
+    "- 不承诺收入结果或一定成交。",
+    "- 交付前需要测试和交付说明。",
+  ].join("\n");
 
   return (
     <>
@@ -70,6 +85,22 @@ export function PricingCalculatorClient() {
         <div className="mt-4">
           <CopyButton text="I can review the current scope first and confirm the final estimate after checking the details. The quote includes implementation, basic testing, and a short delivery note. If the scope changes, I will confirm before doing extra work." />
         </div>
+      </section>
+
+      <section className="mt-8 rounded-lg border bg-blue-50 p-5">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h2 className="text-lg font-semibold">报价前边界清单</h2>
+            <p className="mt-1 text-sm text-gray-700">报价不是承诺结果，先把范围、修改次数和不包含内容讲清楚。</p>
+          </div>
+          <CopyButton text={scopeChecklist} />
+        </div>
+        <ul className="mt-4 grid gap-2 text-sm text-gray-700 md:grid-cols-2">
+          <li className="rounded-md bg-white p-3">明确包含：实现、基础测试、交付说明。</li>
+          <li className="rounded-md bg-white p-3">明确不包含：无限修改、额外页面、长期维护。</li>
+          <li className="rounded-md bg-white p-3">客户需求不清时，先做 paid discovery 或小范围评估。</li>
+          <li className="rounded-md bg-white p-3">平台抽成、沟通成本和加急成本都要算进去。</li>
+        </ul>
       </section>
 
       <p className="mt-8 rounded-lg border bg-white p-4 text-sm text-gray-600">{result.note}</p>

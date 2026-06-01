@@ -17,6 +17,25 @@ export function ProposalGeneratorClient() {
   const [pricingStrategy, setPricingStrategy] = useState<PricingStrategy>("starter");
   const [deliveryTime, setDeliveryTime] = useState<DeliveryTime>("2-3d");
   const result = useMemo(() => generateProposal({ job, level, projectType, pricingStrategy, deliveryTime }), [job, level, projectType, pricingStrategy, deliveryTime]);
+  const fullReport = useMemo(() => [
+    "Upwork Proposal 生成器结果",
+    `可行性：${result.feasible ? "可以继续评估" : "需要谨慎或不建议投"}`,
+    `难度：${result.difficulty}`,
+    `新手建议：${result.beginnerAdvice}`,
+    `预计工时：${result.hours}`,
+    `报价建议：${result.price}`,
+    "",
+    "风险提示：",
+    ...result.risks.map((item) => `- ${item}`),
+    "",
+    "需要问客户的问题：",
+    ...result.questions.map((item) => `- ${item}`),
+    "",
+    "英文 Proposal：",
+    result.proposal,
+    "",
+    "投标前提醒：请按真实能力修改，不要承诺无法完成的内容，不要绕过平台规则。",
+  ].join("\n"), [result]);
 
   return (
     <>
@@ -50,6 +69,21 @@ export function ProposalGeneratorClient() {
       <section className="mt-8 grid gap-6 lg:grid-cols-2">
         <ResultBlock title="风险提示" items={result.risks} />
         <ResultBlock title="需要问客户的问题" items={result.questions} />
+      </section>
+
+      <section className="mt-8 rounded-lg border bg-blue-50 p-5">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h2 className="text-lg font-semibold">建议下一步</h2>
+            <p className="mt-1 text-sm text-gray-700">先复制完整评估给自己复核，再只把合适的 Proposal 内容发给客户。</p>
+          </div>
+          <CopyButton text={fullReport} />
+        </div>
+        <div className="mt-4 grid gap-3 text-sm md:grid-cols-3">
+          <div className="rounded-md bg-white p-3">1. 先补齐客户需求、截图、仓库或现有链接。</div>
+          <div className="rounded-md bg-white p-3">2. 删除你做不到的承诺，保留可验证的小范围。</div>
+          <div className="rounded-md bg-white p-3">3. 投标后保留沟通记录，不接受站外付款或违规测试。</div>
+        </div>
       </section>
 
       <section className="mt-8 grid gap-6 lg:grid-cols-3">

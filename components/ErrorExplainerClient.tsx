@@ -13,6 +13,26 @@ export function ErrorExplainerClient() {
   const [environment, setEnvironment] = useState("Windows");
   const [action, setAction] = useState("npm run build");
   const result = useMemo(() => explainError({ errorText, environment, action }), [errorText, environment, action]);
+  const helpPacket = useMemo(() => [
+    "报错排查记录",
+    `环境：${environment}`,
+    `当前操作：${action}`,
+    "",
+    "这个报错大概是什么意思：",
+    result.meaning,
+    "",
+    "可能原因：",
+    ...result.causes.map((item) => `- ${item}`),
+    "",
+    "解决步骤：",
+    ...result.steps.map((item, index) => `${index + 1}. ${item}`),
+    "",
+    "可以复制的命令：",
+    ...result.commands,
+    "",
+    "完整报错：",
+    errorText || "请粘贴完整报错",
+  ].join("\n"), [action, environment, errorText, result]);
 
   return (
     <>
@@ -59,7 +79,12 @@ export function ErrorExplainerClient() {
             <h2 className="text-lg font-semibold">发给别人求助前，先复制这段信息</h2>
             <p className="mt-1 text-sm text-gray-600">这样别人更容易判断，不需要来回追问。</p>
           </div>
-          <CopyButton text={`环境：${environment}\n当前操作：${action}\n完整报错：\n${errorText || "请粘贴完整报错"}`} />
+          <CopyButton text={helpPacket} />
+        </div>
+        <div className="mt-4 grid gap-3 text-sm text-gray-700 md:grid-cols-3">
+          <div className="rounded-md bg-gray-50 p-3">先不要删除文件或重装系统，保留完整日志。</div>
+          <div className="rounded-md bg-gray-50 p-3">先在本地复现，再考虑修改线上配置。</div>
+          <div className="rounded-md bg-gray-50 p-3">涉及密钥、支付、数据库时，先找人复核。</div>
         </div>
       </section>
     </>
