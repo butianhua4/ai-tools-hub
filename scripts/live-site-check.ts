@@ -1,3 +1,5 @@
+import { getAllPosts } from "../lib/blog";
+
 const defaultBase = process.env.NEXT_PUBLIC_SITE_URL || "https://ai-jiedan-lab.vercel.app";
 const base = normalizeBase(readArg("url") || readArg("base") || defaultBase);
 
@@ -16,6 +18,7 @@ const checks = [
 
 async function main() {
   const pageResults = [];
+  const publicPosts = getAllPosts(false);
 
   for (const [path, expected] of checks) {
     const url = `${base}${path}`;
@@ -32,11 +35,32 @@ async function main() {
   const sitemap = await fetchText("/sitemap.xml");
   const robots = await fetchText("/robots.txt");
   const home = await fetchText("/");
-  const article = await fetchText("/blog/codex-codex-1-1");
+  const articleResults = [];
+  const missingPublishedPosts = publicPosts.filter((post) => !sitemap.includes(`${base}/blog/${post.slug}`));
+
+  for (const post of publicPosts) {
+    const path = `/blog/${post.slug}`;
+    const url = `${base}${path}`;
+    const response = await fetch(url);
+    const text = await response.text();
+    articleResults.push({
+      path,
+      status: response.status,
+      ok: response.ok && text.includes(post.title) && text.includes(`${base}${path}`),
+      title: post.title,
+    });
+  }
+
   const draftLeak = sitemap.includes("codex-codex-4-31") || sitemap.includes("codex-codex-github-4-36");
   const result = {
     base,
     pages: pageResults,
+    articles: {
+      publicCount: publicPosts.length,
+      checked: articleResults.length,
+      failed: articleResults.filter((item) => !item.ok),
+      missingFromSitemap: missingPublishedPosts.map((post) => post.slug),
+    },
     sitemap: {
       urlCount: [...sitemap.matchAll(/<loc>/g)].length,
       usesBase: sitemap.includes(base),
@@ -48,7 +72,7 @@ async function main() {
     },
     canonical: {
       home: home.includes('rel="canonical"') && home.includes(base),
-      article: article.includes('rel="canonical"') && article.includes(`${base}/blog/codex-codex-1-1`),
+      article: articleResults.every((item) => item.ok),
     },
   };
 
@@ -56,6 +80,8 @@ async function main() {
 
   if (
     pageResults.some((item) => !item.ok) ||
+    result.articles.failed.length > 0 ||
+    result.articles.missingFromSitemap.length > 0 ||
     result.sitemap.leaksDrafts ||
     !result.sitemap.usesBase ||
     !result.robots.pointsToSitemap ||
