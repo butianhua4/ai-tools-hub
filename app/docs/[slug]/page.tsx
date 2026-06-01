@@ -35,6 +35,11 @@ const docs = {
     title: "上线后检查清单",
     description: "每次 Vercel 部署后的线上 SEO 和页面检查流程。",
   },
+  "search-console-setup": {
+    file: "search-console-setup.md",
+    title: "Google Search Console 提交清单",
+    description: "说明什么时候注册 Search Console、如何验证站点并提交 sitemap。",
+  },
 } as const;
 
 export function generateStaticParams() {

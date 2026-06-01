@@ -37,6 +37,11 @@ const docs = [
     href: "/docs/post-deploy-checklist",
   },
   {
+    title: "Google Search Console 提交清单",
+    description: "说明什么时候注册 Search Console、如何验证站点并提交 sitemap。",
+    href: "/docs/search-console-setup",
+  },
+  {
     title: "变现路线页面",
     description: "面向站内维护的收款平台选择表，说明不同阶段什么时候接什么平台。",
     href: "/monetization",
