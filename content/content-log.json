@@ -508,5 +508,35 @@
     "action": "generate-draft",
     "slug": "codex-vs-cursor-web-editing-mistakes",
     "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:50:07.233Z",
+    "action": "generate-draft",
+    "slug": "codex-vs-cursor-web-editing-freelance-scope",
+    "batch": 4
+  },
+  {
+    "time": "2026-06-02T15:50:07.234Z",
+    "action": "generate-draft",
+    "slug": "codex-automation-steps-not-skip",
+    "batch": 4
+  },
+  {
+    "time": "2026-06-02T15:50:07.235Z",
+    "action": "generate-draft",
+    "slug": "codex-automation-steps-not-skip-checklist",
+    "batch": 4
+  },
+  {
+    "time": "2026-06-02T15:50:07.235Z",
+    "action": "generate-draft",
+    "slug": "codex-automation-steps-not-skip-mistakes",
+    "batch": 4
+  },
+  {
+    "time": "2026-06-02T15:50:07.236Z",
+    "action": "generate-draft",
+    "slug": "codex-automation-steps-not-skip-freelance-scope",
+    "batch": 4
   }
 ]
