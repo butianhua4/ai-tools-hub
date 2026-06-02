@@ -358,5 +358,35 @@
     "action": "generate-draft",
     "slug": "codex-client-requirement-questions-checklist",
     "batch": 2
+  },
+  {
+    "time": "2026-06-02T15:30:59.017Z",
+    "action": "generate-draft",
+    "slug": "codex-client-requirement-questions-mistakes",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:30:59.018Z",
+    "action": "generate-draft",
+    "slug": "codex-client-requirement-questions-freelance-scope",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:30:59.018Z",
+    "action": "generate-draft",
+    "slug": "codex-small-website-delivery-check",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:30:59.019Z",
+    "action": "generate-draft",
+    "slug": "codex-small-website-delivery-check-checklist",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:30:59.019Z",
+    "action": "generate-draft",
+    "slug": "codex-small-website-delivery-check-mistakes",
+    "batch": 3
   }
 ]
