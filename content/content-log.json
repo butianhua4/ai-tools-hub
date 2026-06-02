@@ -388,5 +388,35 @@
     "action": "generate-draft",
     "slug": "codex-small-website-delivery-check-mistakes",
     "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:32:46.501Z",
+    "action": "generate-draft",
+    "slug": "codex-small-website-delivery-check-freelance-scope",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:32:46.501Z",
+    "action": "generate-draft",
+    "slug": "codex-avoid-secret-leak",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:32:46.502Z",
+    "action": "generate-draft",
+    "slug": "codex-avoid-secret-leak-checklist",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:32:46.502Z",
+    "action": "generate-draft",
+    "slug": "codex-avoid-secret-leak-mistakes",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:32:46.503Z",
+    "action": "generate-draft",
+    "slug": "codex-avoid-secret-leak-freelance-scope",
+    "batch": 3
   }
 ]
