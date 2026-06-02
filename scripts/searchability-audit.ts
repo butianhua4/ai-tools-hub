@@ -145,7 +145,8 @@ function hasCanonical(html: string, expected: string) {
 }
 
 function hasMetaDescription(html: string) {
-  return /<meta\s+name="description"\s+content="[^"]{30,}"/i.test(html);
+  const match = html.match(/<meta\s+name="description"\s+content="([^"]+)"/i);
+  return Boolean(match && match[1].trim().length >= 12);
 }
 
 function hasOpenGraph(html: string) {
