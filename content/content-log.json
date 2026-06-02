@@ -244,5 +244,35 @@
     "action": "generate-draft",
     "slug": "codex-github-workflow-mistakes",
     "batch": 2
+  },
+  {
+    "time": "2026-06-02T15:17:27.204Z",
+    "action": "generate-draft",
+    "slug": "codex-github-workflow-freelance-scope",
+    "batch": 2
+  },
+  {
+    "time": "2026-06-02T15:17:27.205Z",
+    "action": "generate-draft",
+    "slug": "codex-vercel-deployment",
+    "batch": 2
+  },
+  {
+    "time": "2026-06-02T15:17:27.205Z",
+    "action": "generate-draft",
+    "slug": "codex-vercel-deployment-checklist",
+    "batch": 2
+  },
+  {
+    "time": "2026-06-02T15:17:27.206Z",
+    "action": "generate-draft",
+    "slug": "codex-vercel-deployment-mistakes",
+    "batch": 2
+  },
+  {
+    "time": "2026-06-02T15:17:27.206Z",
+    "action": "generate-draft",
+    "slug": "codex-vercel-deployment-freelance-scope",
+    "batch": 2
   }
 ]
