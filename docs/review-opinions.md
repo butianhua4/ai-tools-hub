@@ -1,19 +1,19 @@
 # 草稿审核意见
 
-生成时间：2026-06-02T23:02:26.506Z
+生成时间：2026-06-02T23:12:50.464Z
 
 这份意见只用于人工审核，不会修改文章状态，不会发布文章。优先处理 revise-before-review 的问题，再决定是否进入 review。
 
 候选总数：1
 本次列出：1
 
-## Codex 是什么，新手第一天应该怎么用：常见错误和解决步骤
+## Codex 怎么做第一个落地页：新手检查清单
 
-- 文件：content/blog/codex-first-day-guide-mistakes.mdx
-- Slug：codex-first-day-guide-mistakes
+- 文件：content/blog/codex-first-landing-page-checklist.mdx
+- Slug：codex-first-landing-page-checklist
 - Batch：1
 - 分类：Codex 新手教程
-- 质量分：98
+- 质量分：100
 - 建议动作：ready-for-human-review
 
 ### 做得好的地方
@@ -25,7 +25,7 @@
 
 ### 发布前需要处理
 
-- 需要人工判断上下文：mentions risky term, verify context is cautionary: 站外付款
+- 暂无脚本发现的问题，但仍需人工复核事实和规则。
 
 ### 人工重点复核
 
