@@ -2458,5 +2458,35 @@
     "action": "generate-draft",
     "slug": "template-site-payment-platform-timing-checklist",
     "batch": 16
+  },
+  {
+    "time": "2026-06-02T20:11:31.540Z",
+    "action": "generate-draft",
+    "slug": "service-payment-method-beginner",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:11:31.541Z",
+    "action": "generate-draft",
+    "slug": "service-payment-method-beginner-checklist",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:11:31.542Z",
+    "action": "generate-draft",
+    "slug": "affiliate-vs-service-income",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:11:31.542Z",
+    "action": "generate-draft",
+    "slug": "affiliate-vs-service-income-checklist",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:11:31.543Z",
+    "action": "generate-draft",
+    "slug": "ads-income-when-to-start",
+    "batch": 17
   }
 ]
