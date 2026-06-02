@@ -2548,5 +2548,35 @@
     "action": "generate-draft",
     "slug": "vercel-vs-netlify-small-site-checklist",
     "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:22:39.917Z",
+    "action": "generate-draft",
+    "slug": "wise-vs-payoneer-freelancer",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:22:39.918Z",
+    "action": "generate-draft",
+    "slug": "wise-vs-payoneer-freelancer-checklist",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:22:39.918Z",
+    "action": "generate-draft",
+    "slug": "paypal-vs-payoneer-beginner",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:22:39.919Z",
+    "action": "generate-draft",
+    "slug": "paypal-vs-payoneer-beginner-checklist",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:22:39.919Z",
+    "action": "generate-draft",
+    "slug": "upwork-vs-fiverr-ai-beginner",
+    "batch": 17
   }
 ]
