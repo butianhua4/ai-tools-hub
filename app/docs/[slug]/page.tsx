@@ -10,6 +10,11 @@ const docs = {
     title: "内容发布工作流",
     description: "AI 接单实验室的内容发布、审核和部署流程。",
   },
+  "seo-searchability-audit": {
+    file: "seo-searchability-audit.md",
+    title: "SEO 可搜索度体检报告",
+    description: "AI 接单实验室当前可搜索度检查结果和 Search Console 下一步。",
+  },
   "automation-plan": {
     file: "automation-plan.md",
     title: "安全自动化计划",

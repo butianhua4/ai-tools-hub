@@ -31,9 +31,14 @@ npm.cmd run build
 
 ```bash
 npm run live:check -- --url=https://ai-jiedan-lab.vercel.app
+npm run searchability:check -- --url=https://ai-jiedan-lab.vercel.app
 ```
 
 这个检查只读线上页面，不会发布文章，也不会调用真实 AI API。
+
+`live:check` 负责确认主要页面、文章、sitemap 和 robots 能访问。`searchability:check` 负责更细的 SEO 可搜索度检查，包括英文 URL、canonical、Open Graph、JSON-LD、meta description、sitemap 收录范围和草稿泄漏。
+
+当前站点已通过基础可搜索度检查，但 Google 是否收录还需要提交 Google Search Console 后观察。相关记录见 `docs/seo-searchability-audit.md` 和 `docs/search-console-setup.md`。
 
 ## 内容自动化
 
@@ -146,6 +151,8 @@ npm run content:dashboard
 - 每篇文章都有 canonical 字段。
 - 工具详情页输出 WebApplication/SoftwareApplication JSON-LD。
 - 文章详情页输出 BlogPosting JSON-LD。
+- 分类和标签 URL 使用英文 slug，不使用中文 URL。
+- 每次部署后运行 `npm run searchability:check -- --url=https://ai-jiedan-lab.vercel.app`。
 
 ## GitHub / Vercel 部署
 

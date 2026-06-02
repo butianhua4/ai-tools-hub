@@ -30,9 +30,16 @@
 ```bash
 npm run live:check -- --url=https://ai-jiedan-lab.vercel.app
 npm run seo:check
+npm run searchability:check -- --url=https://ai-jiedan-lab.vercel.app
 ```
 
-如果 `leaksDrafts` 是 `false`，并且 `seo:check` 的 `ok` 是 `true`，再提交给 Search Console。
+如果 `leaksDrafts` 是 `false`，`seo:check` 的 `ok` 是 `true`，并且 `searchability:check` 的 `score` 是 `100`，再提交给 Search Console。
+
+当前站点最新体检记录见：
+
+```text
+docs/seo-searchability-audit.md
+```
 
 ## 添加站点属性
 
@@ -85,11 +92,12 @@ https://ai-jiedan-lab.vercel.app/sitemap.xml
 每次发布 1-3 篇文章后做这些事：
 
 1. 运行 `npm run seo:check`。
-2. 确认新文章是 `status: published`。
-3. 确认新文章是 `noindex: false`。
-4. 确认草稿仍然是 `noindex: true`。
-5. 打开 sitemap，看 URL 数量是否合理增加。
-6. 在 Search Console 里观察页面是否被发现。
+2. 运行 `npm run searchability:check -- --url=https://ai-jiedan-lab.vercel.app`。
+3. 确认新文章是 `status: published`。
+4. 确认新文章是 `noindex: false`。
+5. 确认草稿仍然是 `noindex: true`。
+6. 打开 sitemap，看 URL 数量是否合理增加。
+7. 在 Search Console 里观察页面是否被发现。
 
 不要为了追求数量一次性发布大量文章。这个站点的内容策略是小批量、可审核、可持续。
 
