@@ -688,5 +688,35 @@
     "action": "generate-draft",
     "slug": "claude-code-error-debug",
     "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:13:03.404Z",
+    "action": "generate-draft",
+    "slug": "claude-code-error-debug-checklist",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:13:03.405Z",
+    "action": "generate-draft",
+    "slug": "claude-code-error-debug-mistakes",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:13:03.405Z",
+    "action": "generate-draft",
+    "slug": "claude-code-error-debug-freelance-scope",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:13:03.406Z",
+    "action": "generate-draft",
+    "slug": "claude-code-automation-human-review",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:13:03.407Z",
+    "action": "generate-draft",
+    "slug": "claude-code-automation-human-review-checklist",
+    "batch": 5
   }
 ]
