@@ -17,7 +17,7 @@ const bannedPlatformPatterns = [
   "规避审核技巧",
 ];
 const riskyTerms = ["绕过平台规则", "自动群发", "刷单", "站外付款", "规避审核"];
-const mojibakeMarkers = ["鈥", "鎺", "鏂", "绋", "銆", "锛", "€"];
+const mojibakeMarkers = ["�", "鈥", "€", "閫", "鎺", "鏂", "绋", "銆", "锛"];
 
 export function checkFile(file: string) {
   const { data, content } = readArticle(file);
@@ -62,18 +62,21 @@ export function checkFile(file: string) {
   if (data.status === "published" && data.noindex !== false) failedItems.push("published must be noindex=false");
   if (!data.sourceNotes) warnings.push("sourceNotes is empty");
 
-  const paragraphs = content.split(/\n{2,}/).map((part) => part.trim()).filter((part) => part.length > 80);
+  const paragraphs = content
+    .split(/\n{2,}/)
+    .map((part) => part.trim())
+    .filter((part) => part.length > 80);
   if (new Set(paragraphs).size < paragraphs.length) failedItems.push("possible duplicate paragraph");
 
   const qualityScore = Math.max(0, 100 - failedItems.length * 6 - warnings.length * 2);
 
   return {
+    failedItems,
     file: rel(file),
     qualityScore,
-    failedItems,
-    warnings,
     suggestions: failedItems.length
       ? ["补充缺失章节", "删除违规表达或乱码", "增加内链和清晰 CTA", "人工复核事实和平台规则"]
       : ["可以进入人工审核"],
+    warnings,
   };
 }
