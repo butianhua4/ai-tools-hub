@@ -13,7 +13,7 @@ const docs = {
   "seo-searchability-audit": {
     file: "seo-searchability-audit.md",
     title: "SEO 可搜索度体检报告",
-    description: "AI 接单实验室当前可搜索度检查结果和 Search Console 下一步。",
+    description: "当前可搜索度检查结果和 Search Console 下一步。",
   },
   "automation-plan": {
     file: "automation-plan.md",
@@ -23,17 +23,17 @@ const docs = {
   "monetization-and-payment-plan": {
     file: "monetization-and-payment-plan.md",
     title: "收款与变现路线",
-    description: "AI 接单实验室的服务、模板、联盟和广告变现顺序。",
+    description: "服务、模板、联盟和广告变现顺序。",
   },
   "platform-registration-roadmap": {
     file: "platform-registration-roadmap.md",
     title: "平台注册路线图",
-    description: "说明什么时候才需要注册流量、支付、收款和 AI API 平台。",
+    description: "什么时候注册统计、支付、收款和 AI API 平台。",
   },
   "manual-review-checklist": {
     file: "manual-review-checklist.md",
     title: "人工审核清单",
-    description: "文章从 review 进入 published 前必须检查的内容质量和合规项目。",
+    description: "文章发布前必须检查的内容质量和合规项目。",
   },
   "post-deploy-checklist": {
     file: "post-deploy-checklist.md",
@@ -42,8 +42,13 @@ const docs = {
   },
   "search-console-setup": {
     file: "search-console-setup.md",
-    title: "Google Search Console 提交清单",
-    description: "说明什么时候注册 Search Console、如何验证站点并提交 sitemap。",
+    title: "Google Search Console 提交流程",
+    description: "如何验证站点并提交 sitemap。",
+  },
+  "tomorrow-registration-tasks": {
+    file: "tomorrow-registration-tasks.md",
+    title: "明日注册待办",
+    description: "需要用户明天手动确认或注册的平台事项。",
   },
 } as const;
 
@@ -56,9 +61,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const doc = docs[slug as keyof typeof docs];
   if (!doc) return {};
   return {
-    title: doc.title,
     description: doc.description,
-    robots: { index: false, follow: true },
+    robots: { follow: true, index: false },
+    title: doc.title,
   };
 }
 

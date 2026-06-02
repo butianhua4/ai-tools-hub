@@ -32,9 +32,9 @@ export default function Dashboard() {
     const batch = index + 1;
     return {
       batch,
-      total: contentPlan500.filter((item) => item.batch === batch).length,
       generated: posts.filter((post) => post.publishBatch === batch).length,
       published: posts.filter((post) => post.publishBatch === batch && post.status === "published").length,
+      total: contentPlan500.filter((item) => item.batch === batch).length,
     };
   });
   const byCategory = contentPlan500.reduce<Record<string, number>>((acc, item) => {
@@ -48,11 +48,13 @@ export default function Dashboard() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
       <h1 className="text-3xl font-bold">内容仪表盘</h1>
-      <p className="mt-3 text-gray-600">仅开发环境可访问，用于查看选题、草稿、审核和发布状态。</p>
+      <p className="mt-3 text-gray-600">
+        仅开发环境可访问，用于查看选题、草稿、审核和发布状态。生产环境会返回 404，避免草稿入口暴露。
+      </p>
 
       <section className="mt-6 grid gap-4 md:grid-cols-5">
         {Object.entries({ total: contentPlan500.length, ...counts }).map(([key, value]) => (
-          <div key={key} className="rounded-lg border bg-white p-4 shadow-sm">
+          <div className="rounded-lg border bg-white p-4 shadow-sm" key={key}>
             <p className="text-sm text-gray-500">{key}</p>
             <p className="text-3xl font-bold">{value}</p>
           </div>
@@ -63,7 +65,7 @@ export default function Dashboard() {
         <h2 className="text-2xl font-bold">Batch 进度</h2>
         <div className="mt-4 grid gap-3 md:grid-cols-5">
           {byBatch.map((item) => (
-            <div key={item.batch} className="rounded border p-3 text-sm">
+            <div className="rounded border bg-white p-3 text-sm shadow-sm" key={item.batch}>
               <strong>Batch {item.batch}</strong>
               <p>{item.generated}/{item.total} generated</p>
               <p>{item.published} published</p>
@@ -77,7 +79,7 @@ export default function Dashboard() {
           <h2 className="text-2xl font-bold">分类选题数</h2>
           <ul className="mt-3 space-y-2">
             {Object.entries(byCategory).map(([category, count]) => (
-              <li key={category} className="rounded border px-3 py-2 text-sm">
+              <li className="rounded border bg-white px-3 py-2 text-sm" key={category}>
                 {category}: {count}
               </li>
             ))}
@@ -86,11 +88,15 @@ export default function Dashboard() {
         <div>
           <h2 className="text-2xl font-bold">可发布文章</h2>
           <ul className="mt-3 space-y-2">
-            {publishable.length ? publishable.map((post) => (
-              <li key={post.slug} className="rounded border px-3 py-2 text-sm">
-                {post.title} · score {post.qualityScore}
-              </li>
-            )) : <li className="text-sm text-gray-500">暂无可发布文章</li>}
+            {publishable.length ? (
+              publishable.map((post) => (
+                <li className="rounded border bg-white px-3 py-2 text-sm" key={post.slug}>
+                  {post.title} - score {post.qualityScore}
+                </li>
+              ))
+            ) : (
+              <li className="text-sm text-gray-500">暂无可发布文章。draft 需要先通过人工审核进入 review。</li>
+            )}
           </ul>
         </div>
       </section>
@@ -99,11 +105,15 @@ export default function Dashboard() {
         <div>
           <h2 className="text-2xl font-bold">低质量文章</h2>
           <ul className="mt-3 space-y-2">
-            {lowQuality.length ? lowQuality.slice(0, 20).map((post) => (
-              <li key={post.slug} className="rounded border px-3 py-2 text-sm">
-                {post.title} · score {post.qualityScore}
-              </li>
-            )) : <li className="text-sm text-gray-500">暂无低质量文章</li>}
+            {lowQuality.length ? (
+              lowQuality.slice(0, 20).map((post) => (
+                <li className="rounded border bg-white px-3 py-2 text-sm" key={post.slug}>
+                  {post.title} - score {post.qualityScore}
+                </li>
+              ))
+            ) : (
+              <li className="text-sm text-gray-500">暂无低质量文章。</li>
+            )}
           </ul>
         </div>
         <div>
