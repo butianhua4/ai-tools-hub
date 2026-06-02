@@ -3022,5 +3022,35 @@
     "action": "generate-draft",
     "slug": "upwork-proposal-review-sheet",
     "batch": 20
+  },
+  {
+    "time": "2026-06-02T21:18:23.189Z",
+    "action": "generate-draft",
+    "slug": "upwork-proposal-review-sheet-checklist",
+    "batch": 20
+  },
+  {
+    "time": "2026-06-02T21:18:23.189Z",
+    "action": "generate-draft",
+    "slug": "small-site-launch-sop",
+    "batch": 20
+  },
+  {
+    "time": "2026-06-02T21:18:23.189Z",
+    "action": "generate-draft",
+    "slug": "small-site-launch-sop-checklist",
+    "batch": 20
+  },
+  {
+    "time": "2026-06-02T21:18:23.190Z",
+    "action": "generate-draft",
+    "slug": "freelance-weekly-review-template",
+    "batch": 20
+  },
+  {
+    "time": "2026-06-02T21:18:23.190Z",
+    "action": "generate-draft",
+    "slug": "freelance-weekly-review-template-checklist",
+    "batch": 20
   }
 ]
