@@ -2398,5 +2398,35 @@
     "action": "generate-draft",
     "slug": "platform-payment-vs-direct-payment-checklist",
     "batch": 16
+  },
+  {
+    "time": "2026-06-02T20:03:20.200Z",
+    "action": "generate-draft",
+    "slug": "subscription-payment-failed-message",
+    "batch": 16
+  },
+  {
+    "time": "2026-06-02T20:03:20.201Z",
+    "action": "generate-draft",
+    "slug": "subscription-payment-failed-message-checklist",
+    "batch": 16
+  },
+  {
+    "time": "2026-06-02T20:03:20.201Z",
+    "action": "generate-draft",
+    "slug": "payment-account-info-mismatch-risk",
+    "batch": 16
+  },
+  {
+    "time": "2026-06-02T20:03:20.202Z",
+    "action": "generate-draft",
+    "slug": "payment-account-info-mismatch-risk-checklist",
+    "batch": 16
+  },
+  {
+    "time": "2026-06-02T20:03:20.202Z",
+    "action": "generate-draft",
+    "slug": "first-freelance-payment-check",
+    "batch": 16
   }
 ]
