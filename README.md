@@ -107,11 +107,24 @@ npm run content:check -- --file=content/blog/example.mdx
 
 低于 80 分不能进入 review，也不能发布。
 
+## 生成人工审核队列
+
+500 篇正式选题补齐后，不要继续盲目生成文章。先用审核队列挑出优先级高、质量检查通过的 draft，人工抽查后再决定是否进入 review：
+
+```bash
+npm run content:review-queue
+npm run content:review-queue -- --priority=5 --limit=30
+npm run content:review-queue -- --batch=1 --format=md --write=docs/review-queue.md
+```
+
+审核队列只读，不会改文章状态，也不会发布文章。当前生成的参考队列在 `docs/review-queue.md`。
+
 ## 进入人工审核
 
 ```bash
 npm run mark:review -- --batch=1 --limit=5
 npm run mark:review -- --file=content/blog/example.mdx
+npm run mark:review -- --file=content/blog/example.mdx --confirm-human
 ```
 
 规则：
@@ -119,6 +132,7 @@ npm run mark:review -- --file=content/blog/example.mdx
 - 只允许 `qualityScore >= 80` 的 draft 进入 review。
 - 进入 review 后仍然保持 `noindex: true`。
 - 人工需要检查事实、来源备注、平台规则、原创角度和 CTA。
+- 没有 `--confirm-human` 时只会 dry run，不会修改文章状态。
 
 ## 发布文章
 

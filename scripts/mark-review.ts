@@ -3,6 +3,7 @@ import { checkFile } from "./quality-core";
 
 async function main() {
   const args = parseArgs();
+  const confirmHuman = Boolean(args["confirm-human"]);
   let files = args.file ? [String(args.file)] : await articleFiles();
   if (args.batch) {
     files = files.filter((file) => readArticle(file).data.publishBatch === Number(args.batch));
@@ -25,6 +26,19 @@ async function main() {
       continue;
     }
     if (!article.data.sourceNotes) console.log("warning: sourceNotes empty " + result.file);
+
+    if (!confirmHuman) {
+      console.log(JSON.stringify({
+        dryRun: true,
+        file: result.file,
+        score: result.qualityScore,
+        status: article.data.status,
+        message: "add --confirm-human after manual review to mark this draft as review",
+      }, null, 2));
+      marked += 1;
+      continue;
+    }
+
     article.data.status = "review";
     article.data.qualityScore = result.qualityScore;
     article.data.noindex = true;

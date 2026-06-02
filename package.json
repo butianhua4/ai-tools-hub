@@ -13,6 +13,7 @@
     "publish:articles": "tsx scripts/publish-articles.ts",
     "content:plan": "tsx scripts/refresh-content-plan.ts",
     "content:dashboard": "next dev",
+    "content:review-queue": "tsx scripts/content-review-queue.ts",
     "project:status": "tsx scripts/project-status.ts",
     "seo:check": "tsx scripts/seo-safety-check.ts",
     "search-console:check": "tsx scripts/search-console-readiness.ts",

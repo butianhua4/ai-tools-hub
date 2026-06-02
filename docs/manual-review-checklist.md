@@ -17,6 +17,12 @@
 
 ## 发布前命令
 
+人工审核通过后，先把单篇草稿改成 review：
+
+```bash
+npm run mark:review -- --file=content/blog/example.mdx --confirm-human
+```
+
 先 dry run：
 
 ```bash
