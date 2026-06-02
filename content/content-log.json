@@ -1708,5 +1708,35 @@
     "action": "generate-draft",
     "slug": "ai-beginner-project-fit-check-mistakes",
     "batch": 11
+  },
+  {
+    "time": "2026-06-02T18:32:02.545Z",
+    "action": "generate-draft",
+    "slug": "ai-freelance-common-misconceptions",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:32:02.545Z",
+    "action": "generate-draft",
+    "slug": "ai-freelance-common-misconceptions-checklist",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:32:02.546Z",
+    "action": "generate-draft",
+    "slug": "ai-freelance-common-misconceptions-mistakes",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:32:02.546Z",
+    "action": "generate-draft",
+    "slug": "ai-output-unstable-risk-control",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:32:02.547Z",
+    "action": "generate-draft",
+    "slug": "ai-output-unstable-risk-control-checklist",
+    "batch": 12
   }
 ]
