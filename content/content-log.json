@@ -748,5 +748,35 @@
     "action": "generate-draft",
     "slug": "claude-code-low-risk-freelance-jobs-mistakes",
     "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:21:28.383Z",
+    "action": "generate-draft",
+    "slug": "claude-code-low-risk-freelance-jobs-freelance-scope",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:21:28.384Z",
+    "action": "generate-draft",
+    "slug": "claude-code-beginner-mistakes",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:21:28.384Z",
+    "action": "generate-draft",
+    "slug": "claude-code-beginner-mistakes-checklist",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:21:28.384Z",
+    "action": "generate-draft",
+    "slug": "claude-code-beginner-mistakes-mistakes",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:21:28.385Z",
+    "action": "generate-draft",
+    "slug": "claude-code-beginner-mistakes-freelance-scope",
+    "batch": 5
   }
 ]
