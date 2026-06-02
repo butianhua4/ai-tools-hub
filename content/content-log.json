@@ -808,5 +808,35 @@
     "action": "generate-draft",
     "slug": "claude-code-proposal-review",
     "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:28:19.659Z",
+    "action": "generate-draft",
+    "slug": "claude-code-proposal-review-checklist",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:28:19.660Z",
+    "action": "generate-draft",
+    "slug": "claude-code-proposal-review-mistakes",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:28:19.660Z",
+    "action": "generate-draft",
+    "slug": "claude-code-proposal-review-freelance-scope",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:28:19.660Z",
+    "action": "generate-draft",
+    "slug": "claude-code-github-file-scope",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:28:19.661Z",
+    "action": "generate-draft",
+    "slug": "claude-code-github-file-scope-checklist",
+    "batch": 6
   }
 ]
