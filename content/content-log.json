@@ -658,5 +658,35 @@
     "action": "generate-draft",
     "slug": "claude-code-small-project-tasks-freelance-scope",
     "batch": 4
+  },
+  {
+    "time": "2026-06-02T16:09:48.261Z",
+    "action": "generate-draft",
+    "slug": "claude-code-vs-codex-web-editing",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:09:48.262Z",
+    "action": "generate-draft",
+    "slug": "claude-code-vs-codex-web-editing-checklist",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:09:48.262Z",
+    "action": "generate-draft",
+    "slug": "claude-code-vs-codex-web-editing-mistakes",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:09:48.263Z",
+    "action": "generate-draft",
+    "slug": "claude-code-vs-codex-web-editing-freelance-scope",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:09:48.263Z",
+    "action": "generate-draft",
+    "slug": "claude-code-error-debug",
+    "batch": 5
   }
 ]
