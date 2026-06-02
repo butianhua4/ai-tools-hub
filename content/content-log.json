@@ -1828,5 +1828,35 @@
     "action": "generate-draft",
     "slug": "node-version-mismatch-fix",
     "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:48:09.309Z",
+    "action": "generate-draft",
+    "slug": "node-version-mismatch-fix-checklist",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:48:09.310Z",
+    "action": "generate-draft",
+    "slug": "node-version-mismatch-fix-mistakes",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:48:09.310Z",
+    "action": "generate-draft",
+    "slug": "node-version-mismatch-fix-freelance-scope",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:48:09.311Z",
+    "action": "generate-draft",
+    "slug": "module-not-found-debug",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:48:09.311Z",
+    "action": "generate-draft",
+    "slug": "module-not-found-debug-checklist",
+    "batch": 12
   }
 ]
