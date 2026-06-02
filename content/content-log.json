@@ -1948,5 +1948,35 @@
     "action": "generate-draft",
     "slug": "vercel-build-failed-causes",
     "batch": 13
+  },
+  {
+    "time": "2026-06-02T19:05:43.387Z",
+    "action": "generate-draft",
+    "slug": "vercel-build-failed-causes-checklist",
+    "batch": 13
+  },
+  {
+    "time": "2026-06-02T19:05:43.388Z",
+    "action": "generate-draft",
+    "slug": "vercel-build-failed-causes-mistakes",
+    "batch": 13
+  },
+  {
+    "time": "2026-06-02T19:05:43.389Z",
+    "action": "generate-draft",
+    "slug": "vercel-build-failed-causes-freelance-scope",
+    "batch": 13
+  },
+  {
+    "time": "2026-06-02T19:05:43.389Z",
+    "action": "generate-draft",
+    "slug": "dependency-conflict-fix",
+    "batch": 13
+  },
+  {
+    "time": "2026-06-02T19:05:43.390Z",
+    "action": "generate-draft",
+    "slug": "dependency-conflict-fix-checklist",
+    "batch": 13
   }
 ]
