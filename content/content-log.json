@@ -478,5 +478,35 @@
     "action": "generate-draft",
     "slug": "codex-portfolio-page-assets-checklist",
     "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:46:28.605Z",
+    "action": "generate-draft",
+    "slug": "codex-portfolio-page-assets-mistakes",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:46:28.606Z",
+    "action": "generate-draft",
+    "slug": "codex-portfolio-page-assets-freelance-scope",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:46:28.606Z",
+    "action": "generate-draft",
+    "slug": "codex-vs-cursor-web-editing",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:46:28.607Z",
+    "action": "generate-draft",
+    "slug": "codex-vs-cursor-web-editing-checklist",
+    "batch": 3
+  },
+  {
+    "time": "2026-06-02T15:46:28.607Z",
+    "action": "generate-draft",
+    "slug": "codex-vs-cursor-web-editing-mistakes",
+    "batch": 3
   }
 ]
