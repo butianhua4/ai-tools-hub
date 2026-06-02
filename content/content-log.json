@@ -2218,5 +2218,35 @@
     "action": "generate-draft",
     "slug": "dev-works-build-fails-checklist",
     "batch": 15
+  },
+  {
+    "time": "2026-06-02T19:40:55.997Z",
+    "action": "generate-draft",
+    "slug": "dev-works-build-fails-mistakes",
+    "batch": 15
+  },
+  {
+    "time": "2026-06-02T19:40:55.998Z",
+    "action": "generate-draft",
+    "slug": "dev-works-build-fails-freelance-scope",
+    "batch": 15
+  },
+  {
+    "time": "2026-06-02T19:40:55.998Z",
+    "action": "generate-draft",
+    "slug": "windows-path-permission-install-fix",
+    "batch": 15
+  },
+  {
+    "time": "2026-06-02T19:40:55.999Z",
+    "action": "generate-draft",
+    "slug": "windows-path-permission-install-fix-checklist",
+    "batch": 15
+  },
+  {
+    "time": "2026-06-02T19:40:56.000Z",
+    "action": "generate-draft",
+    "slug": "windows-path-permission-install-fix-mistakes",
+    "batch": 15
   }
 ]
