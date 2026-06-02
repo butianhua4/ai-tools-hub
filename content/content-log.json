@@ -1468,5 +1468,35 @@
     "action": "generate-draft",
     "slug": "ai-freelance-first-7-days-checklist",
     "batch": 10
+  },
+  {
+    "time": "2026-06-02T17:59:45.063Z",
+    "action": "generate-draft",
+    "slug": "ai-freelance-first-7-days-mistakes",
+    "batch": 10
+  },
+  {
+    "time": "2026-06-02T17:59:45.064Z",
+    "action": "generate-draft",
+    "slug": "ai-assisted-vs-automated-delivery",
+    "batch": 10
+  },
+  {
+    "time": "2026-06-02T17:59:45.064Z",
+    "action": "generate-draft",
+    "slug": "ai-assisted-vs-automated-delivery-checklist",
+    "batch": 10
+  },
+  {
+    "time": "2026-06-02T17:59:45.065Z",
+    "action": "generate-draft",
+    "slug": "ai-assisted-vs-automated-delivery-mistakes",
+    "batch": 10
+  },
+  {
+    "time": "2026-06-02T17:59:45.065Z",
+    "action": "generate-draft",
+    "slug": "ai-freelance-automation-compliance-risk",
+    "batch": 10
   }
 ]
