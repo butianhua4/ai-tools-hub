@@ -2518,5 +2518,35 @@
     "action": "generate-draft",
     "slug": "digital-template-refund-policy-checklist",
     "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:19:11.188Z",
+    "action": "generate-draft",
+    "slug": "codex-vs-claude-code-beginner",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:19:11.189Z",
+    "action": "generate-draft",
+    "slug": "cursor-vs-codex-web-editing",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:19:11.190Z",
+    "action": "generate-draft",
+    "slug": "cursor-vs-codex-web-editing-checklist",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:19:11.190Z",
+    "action": "generate-draft",
+    "slug": "vercel-vs-netlify-small-site",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:19:11.191Z",
+    "action": "generate-draft",
+    "slug": "vercel-vs-netlify-small-site-checklist",
+    "batch": 17
   }
 ]
