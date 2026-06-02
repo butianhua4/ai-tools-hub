@@ -64,5 +64,11 @@
     "action": "generate-draft",
     "slug": "codex-review-generated-code-checklist",
     "batch": 2
+  },
+  {
+    "time": "2026-06-02T12:53:02.537Z",
+    "action": "generate-draft",
+    "slug": "codex-first-day-guide",
+    "batch": 1
   }
 ]
