@@ -868,5 +868,35 @@
     "action": "generate-draft",
     "slug": "claude-code-client-questions-mistakes",
     "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:37:02.361Z",
+    "action": "generate-draft",
+    "slug": "claude-code-client-questions-freelance-scope",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:37:02.361Z",
+    "action": "generate-draft",
+    "slug": "claude-code-delivery-note",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:37:02.362Z",
+    "action": "generate-draft",
+    "slug": "claude-code-delivery-note-checklist",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:37:02.362Z",
+    "action": "generate-draft",
+    "slug": "claude-code-delivery-note-mistakes",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:37:02.363Z",
+    "action": "generate-draft",
+    "slug": "claude-code-delivery-note-freelance-scope",
+    "batch": 6
   }
 ]
