@@ -898,5 +898,35 @@
     "action": "generate-draft",
     "slug": "claude-code-delivery-note-freelance-scope",
     "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:41:13.942Z",
+    "action": "generate-draft",
+    "slug": "upwork-account-prep",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:41:13.942Z",
+    "action": "generate-draft",
+    "slug": "upwork-account-prep-checklist",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:41:13.943Z",
+    "action": "generate-draft",
+    "slug": "upwork-account-prep-mistakes",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:41:13.943Z",
+    "action": "generate-draft",
+    "slug": "upwork-profile-honest-summary",
+    "batch": 6
+  },
+  {
+    "time": "2026-06-02T16:41:13.944Z",
+    "action": "generate-draft",
+    "slug": "upwork-profile-honest-summary-checklist",
+    "batch": 6
   }
 ]
