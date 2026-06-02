@@ -1798,5 +1798,35 @@
     "action": "generate-draft",
     "slug": "practice-projects-before-clients-mistakes",
     "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:43:46.919Z",
+    "action": "generate-draft",
+    "slug": "npm-command-not-found-fix",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:43:46.919Z",
+    "action": "generate-draft",
+    "slug": "npm-command-not-found-fix-checklist",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:43:46.920Z",
+    "action": "generate-draft",
+    "slug": "npm-command-not-found-fix-mistakes",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:43:46.920Z",
+    "action": "generate-draft",
+    "slug": "npm-command-not-found-fix-freelance-scope",
+    "batch": 12
+  },
+  {
+    "time": "2026-06-02T18:43:46.920Z",
+    "action": "generate-draft",
+    "slug": "node-version-mismatch-fix",
+    "batch": 12
   }
 ]
