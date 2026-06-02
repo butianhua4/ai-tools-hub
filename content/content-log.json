@@ -2932,5 +2932,35 @@
     "action": "generate-draft",
     "slug": "ai-tool-setup-service-checklist-checklist",
     "batch": 20
+  },
+  {
+    "time": "2026-06-02T21:12:48.080Z",
+    "action": "generate-draft",
+    "slug": "quote-email-uncertain-scope",
+    "batch": 20
+  },
+  {
+    "time": "2026-06-02T21:12:48.081Z",
+    "action": "generate-draft",
+    "slug": "quote-email-uncertain-scope-checklist",
+    "batch": 20
+  },
+  {
+    "time": "2026-06-02T21:12:48.081Z",
+    "action": "generate-draft",
+    "slug": "client-acceptance-checklist",
+    "batch": 20
+  },
+  {
+    "time": "2026-06-02T21:12:48.082Z",
+    "action": "generate-draft",
+    "slug": "client-acceptance-checklist-checklist",
+    "batch": 20
+  },
+  {
+    "time": "2026-06-02T21:12:48.083Z",
+    "action": "generate-draft",
+    "slug": "pre-project-risk-assessment-template",
+    "batch": 20
   }
 ]
