@@ -119,6 +119,15 @@ npm run content:review-queue -- --batch=1 --format=md --write=docs/review-queue.
 
 审核队列只读，不会改文章状态，也不会发布文章。当前生成的参考队列在 `docs/review-queue.md`。
 
+如果想把前几篇候选文章的章节、节选和审核勾选项整理成一份人工审核包：
+
+```bash
+npm run content:review-pack
+npm run content:review-pack -- --priority=5 --limit=3 --write=docs/review-pack.md
+```
+
+审核包同样只读，不会改文章状态。它适合明天人工逐篇检查时使用。
+
 ## 进入人工审核
 
 ```bash
