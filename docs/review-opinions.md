@@ -1,16 +1,16 @@
 # 草稿审核意见
 
-生成时间：2026-06-02T22:23:58.002Z
+生成时间：2026-06-02T22:28:09.842Z
 
 这份意见只用于人工审核，不会修改文章状态，不会发布文章。优先处理 revise-before-review 的问题，再决定是否进入 review。
 
 候选总数：1
 本次列出：1
 
-## Codex 修 CSS 间距和响应式问题怎么做：新手检查清单
+## Codex 修 CSS 间距和响应式问题怎么做：接单前怎么判断能不能做
 
-- 文件：content/blog/codex-css-spacing-responsive-checklist.mdx
-- Slug：codex-css-spacing-responsive-checklist
+- 文件：content/blog/codex-css-spacing-responsive-freelance-scope.mdx
+- Slug：codex-css-spacing-responsive-freelance-scope
 - Batch：1
 - 分类：Codex 新手教程
 - 质量分：98
