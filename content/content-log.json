@@ -1018,5 +1018,35 @@
     "action": "generate-draft",
     "slug": "upwork-free-test-risk-checklist",
     "batch": 7
+  },
+  {
+    "time": "2026-06-02T17:02:52.640Z",
+    "action": "generate-draft",
+    "slug": "upwork-free-test-risk-mistakes",
+    "batch": 7
+  },
+  {
+    "time": "2026-06-02T17:02:52.641Z",
+    "action": "generate-draft",
+    "slug": "upwork-off-platform-communication-risk",
+    "batch": 7
+  },
+  {
+    "time": "2026-06-02T17:02:52.641Z",
+    "action": "generate-draft",
+    "slug": "upwork-off-platform-communication-risk-checklist",
+    "batch": 7
+  },
+  {
+    "time": "2026-06-02T17:02:52.642Z",
+    "action": "generate-draft",
+    "slug": "upwork-off-platform-communication-risk-mistakes",
+    "batch": 7
+  },
+  {
+    "time": "2026-06-02T17:02:52.642Z",
+    "action": "generate-draft",
+    "slug": "upwork-small-job-delivery-check",
+    "batch": 7
   }
 ]
