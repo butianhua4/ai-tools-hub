@@ -778,5 +778,35 @@
     "action": "generate-draft",
     "slug": "claude-code-beginner-mistakes-freelance-scope",
     "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:24:56.507Z",
+    "action": "generate-draft",
+    "slug": "claude-code-nextjs-page-check",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:24:56.508Z",
+    "action": "generate-draft",
+    "slug": "claude-code-nextjs-page-check-checklist",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:24:56.508Z",
+    "action": "generate-draft",
+    "slug": "claude-code-nextjs-page-check-mistakes",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:24:56.509Z",
+    "action": "generate-draft",
+    "slug": "claude-code-nextjs-page-check-freelance-scope",
+    "batch": 5
+  },
+  {
+    "time": "2026-06-02T16:24:56.509Z",
+    "action": "generate-draft",
+    "slug": "claude-code-proposal-review",
+    "batch": 5
   }
 ]
