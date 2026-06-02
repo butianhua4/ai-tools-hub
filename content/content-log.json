@@ -1378,5 +1378,35 @@
     "action": "generate-draft",
     "slug": "upwork-avoid-fake-portfolio-checklist",
     "batch": 9
+  },
+  {
+    "time": "2026-06-02T17:50:24.840Z",
+    "action": "generate-draft",
+    "slug": "upwork-avoid-fake-portfolio-mistakes",
+    "batch": 9
+  },
+  {
+    "time": "2026-06-02T17:50:24.841Z",
+    "action": "generate-draft",
+    "slug": "upwork-vs-fiverr-beginner-rhythm",
+    "batch": 9
+  },
+  {
+    "time": "2026-06-02T17:50:24.841Z",
+    "action": "generate-draft",
+    "slug": "upwork-vs-fiverr-beginner-rhythm-checklist",
+    "batch": 9
+  },
+  {
+    "time": "2026-06-02T17:50:24.842Z",
+    "action": "generate-draft",
+    "slug": "upwork-vs-fiverr-beginner-rhythm-mistakes",
+    "batch": 9
+  },
+  {
+    "time": "2026-06-02T17:50:24.842Z",
+    "action": "generate-draft",
+    "slug": "upwork-before-start-records",
+    "batch": 9
   }
 ]
