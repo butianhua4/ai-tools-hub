@@ -2578,5 +2578,29 @@
     "action": "generate-draft",
     "slug": "upwork-vs-fiverr-ai-beginner",
     "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:26:14.123Z",
+    "action": "generate-draft",
+    "slug": "upwork-vs-fiverr-ai-beginner-checklist",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:26:14.123Z",
+    "action": "generate-draft",
+    "slug": "chatgpt-vs-claude-proposal",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:26:14.124Z",
+    "action": "generate-draft",
+    "slug": "chatgpt-vs-claude-proposal-checklist",
+    "batch": 17
+  },
+  {
+    "time": "2026-06-02T20:26:14.124Z",
+    "action": "generate-draft",
+    "slug": "make-vs-zapier-automation",
+    "batch": 17
   }
 ]
