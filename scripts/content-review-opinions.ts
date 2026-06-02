@@ -21,7 +21,7 @@ async function main() {
   const args = parseArgs();
   const limit = Math.min(Number(args.limit || 5), 10);
   const planBySlug = new Map<string, (typeof contentPlan500)[number]>(contentPlan500.map((item) => [item.slug, item]));
-  const files = await articleFiles();
+  const files = args.file ? [String(args.file)] : await articleFiles();
   const opinions: Opinion[] = [];
 
   for (const file of files) {

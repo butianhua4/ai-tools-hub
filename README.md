@@ -133,6 +133,7 @@ npm run content:review-pack -- --priority=5 --limit=3 --write=docs/review-pack.m
 ```bash
 npm run content:review-opinions
 npm run content:review-opinions -- --priority=5 --limit=5 --write=docs/review-opinions.md
+npm run content:review-opinions -- --file=content/blog/example.mdx --write=docs/review-opinions.md
 ```
 
 审核意见仍然只是辅助判断，不能替代人工审核。
