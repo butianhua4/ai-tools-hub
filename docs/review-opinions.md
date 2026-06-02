@@ -1,16 +1,16 @@
 # 草稿审核意见
 
-生成时间：2026-06-02T22:50:02.147Z
+生成时间：2026-06-02T22:56:42.436Z
 
 这份意见只用于人工审核，不会修改文章状态，不会发布文章。优先处理 revise-before-review 的问题，再决定是否进入 review。
 
 候选总数：1
 本次列出：1
 
-## Codex 是什么，新手第一天应该怎么用：新手检查清单
+## Codex 是什么，新手第一天应该怎么用：接单前怎么判断能不能做
 
-- 文件：content/blog/codex-first-day-guide-checklist.mdx
-- Slug：codex-first-day-guide-checklist
+- 文件：content/blog/codex-first-day-guide-freelance-scope.mdx
+- Slug：codex-first-day-guide-freelance-scope
 - Batch：1
 - 分类：Codex 新手教程
 - 质量分：98

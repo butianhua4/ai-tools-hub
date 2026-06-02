@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T22:21:42.922Z",
+  "generatedAt": "2026-06-02T22:54:36.832Z",
   "filters": {
     "batch": null,
     "category": null,
@@ -7,7 +7,7 @@
     "status": "draft"
   },
   "totalMatches": 25,
-  "returned": 10,
+  "returned": 12,
   "byBatch": {
     "batch-1": 25
   },
@@ -181,6 +181,40 @@
       "slug": "codex-first-landing-page-checklist",
       "status": "draft",
       "title": "Codex 怎么做第一个落地页：新手检查清单",
+      "warnings": [
+        "mentions risky term, verify context is cautionary: 站外付款"
+      ]
+    },
+    {
+      "batch": 1,
+      "category": "Codex 新手教程",
+      "contentType": "case-study",
+      "difficulty": "beginner",
+      "failedItems": [],
+      "file": "content/blog/codex-first-landing-page-freelance-scope.mdx",
+      "priority": 5,
+      "qualityScore": 98,
+      "searchIntent": "commercial",
+      "slug": "codex-first-landing-page-freelance-scope",
+      "status": "draft",
+      "title": "Codex 怎么做第一个落地页：接单前怎么判断能不能做",
+      "warnings": [
+        "mentions risky term, verify context is cautionary: 站外付款"
+      ]
+    },
+    {
+      "batch": 1,
+      "category": "Codex 新手教程",
+      "contentType": "troubleshooting",
+      "difficulty": "beginner",
+      "failedItems": [],
+      "file": "content/blog/codex-first-landing-page-mistakes.mdx",
+      "priority": 5,
+      "qualityScore": 98,
+      "searchIntent": "informational",
+      "slug": "codex-first-landing-page-mistakes",
+      "status": "draft",
+      "title": "Codex 怎么做第一个落地页：常见错误和解决步骤",
       "warnings": [
         "mentions risky term, verify context is cautionary: 站外付款"
       ]
