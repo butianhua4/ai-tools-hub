@@ -1348,5 +1348,35 @@
     "action": "generate-draft",
     "slug": "upwork-delivery-note-template-mistakes",
     "batch": 9
+  },
+  {
+    "time": "2026-06-02T17:47:30.064Z",
+    "action": "generate-draft",
+    "slug": "upwork-scope-change-response",
+    "batch": 9
+  },
+  {
+    "time": "2026-06-02T17:47:30.064Z",
+    "action": "generate-draft",
+    "slug": "upwork-scope-change-response-checklist",
+    "batch": 9
+  },
+  {
+    "time": "2026-06-02T17:47:30.065Z",
+    "action": "generate-draft",
+    "slug": "upwork-scope-change-response-mistakes",
+    "batch": 9
+  },
+  {
+    "time": "2026-06-02T17:47:30.065Z",
+    "action": "generate-draft",
+    "slug": "upwork-avoid-fake-portfolio",
+    "batch": 9
+  },
+  {
+    "time": "2026-06-02T17:47:30.066Z",
+    "action": "generate-draft",
+    "slug": "upwork-avoid-fake-portfolio-checklist",
+    "batch": 9
   }
 ]
