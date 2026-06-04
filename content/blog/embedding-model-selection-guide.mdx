@@ -1,0 +1,121 @@
+---
+title: "Embedding 模型怎么选：RAG 和向量检索别只看模型名"
+slug: "embedding-model-selection-guide"
+description: "面向新手说明 Embedding 模型选择方法，覆盖语言、领域、维度、成本、速度、检索评测、向量库兼容和更新策略。"
+date: "2026-06-04"
+updatedAt: "2026-06-04"
+category: "AI 基建"
+tags:
+  - "Embedding"
+  - "向量检索"
+  - "RAG"
+  - "AI 基建"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "准备做 RAG、语义搜索或知识库检索、需要选择 embedding 模型的新手"
+searchIntent: "informational"
+primaryKeyword: "Embedding 模型怎么选"
+secondaryKeywords:
+  - "embedding model"
+  - "RAG embedding"
+  - "向量检索模型"
+  - "语义搜索"
+sourceNotes: "AI 基建长尾草稿；正式发布前需要人工核对具体 embedding 模型、价格、维度和评测资料。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载 Embedding 模型评估表"
+  serviceCTA: "联系人工协助评估检索方案"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 22
+canonical: "https://ai-jiedan-lab.vercel.app/blog/embedding-model-selection-guide"
+noindex: true
+---
+# Embedding 模型怎么选：RAG 和向量检索别只看模型名
+
+Embedding 模型决定了文本如何变成向量，是 RAG 知识库和语义搜索的基础。很多新手只关心向量数据库，却忽略了 embedding 模型本身。检索效果不好，可能不是数据库问题，而是文档切分、embedding 模型、语言适配或评测方式出了问题。
+
+这篇是草稿，正式发布前需要核对具体模型资料。向量库基础可以看 [向量数据库怎么选](/blog/vector-database-beginner-guide)，RAG 流程可以看 [RAG 知识库怎么搭](/blog/rag-knowledge-base-beginner-guide)。
+
+## 适合谁
+
+适合准备做知识库问答、语义搜索、相似案例检索、推荐系统或 Agent 记忆的人。你可能已经知道需要向量库，但还不知道 embedding 模型该怎么选。
+
+也适合接 AI 知识库项目评估的人。客户问“为什么搜不到正确答案”，你要能检查模型、切分、检索参数和文档质量。
+
+## 不适合谁
+
+不适合只想看固定排名的人。Embedding 模型好不好，要看语言、领域、文档类型、查询方式和成本。
+
+如果项目涉及企业资料和敏感数据，还要考虑模型服务提供方、数据传输和部署方式。
+
+## 看语言和领域
+
+中文知识库要测试中文问题和中文文档。中英混合资料要测试跨语言检索。行业术语很多的资料，也要准备专门测试问题。
+
+不要只看通用榜单。你的资料和用户问题，才是最重要的评测集。
+
+## 看维度和存储
+
+Embedding 模型会输出固定维度的向量。维度会影响存储、检索性能和向量库配置。换模型时，旧向量通常不能直接混用。
+
+如果未来可能换模型，要设计重建索引流程。不要把模型选择写死后就不留迁移空间。
+
+## 看成本和速度
+
+Embedding 不是只在上线时用一次。文档更新、批量导入、用户查询都可能调用 embedding。资料越多、更新越频繁，成本和速度越重要。
+
+本地 embedding 和 API embedding 各有取舍。API 易用，本地更可控，但都要看质量和维护成本。
+
+## 看检索评测
+
+准备一组真实问题和正确文档，测试 embedding 后能否找回相关片段。评测不要只看一个案例，要覆盖常见问题、模糊问题、同义词、错别字和找不到答案。
+
+如果检索不到正确片段，先不要急着换大模型。生成模型拿不到资料，再强也会答偏。
+
+## 看和向量库兼容
+
+不同向量库对维度、索引、过滤和批量写入支持不同。Embedding 模型选择要和向量库存储方案一起考虑。
+
+还要考虑元数据过滤。好的 embedding 也不能替代权限和文档类型过滤。
+
+上线前最好保留一个小型基准集。每次换 embedding 模型、调整切分规则或改变检索参数，都用同一批问题重新测试。这样你能知道调整到底让检索变好了，还是只是某几个例子看起来更顺眼。
+
+基准集里最好包含真实用户会问的口语问题，而不只是文档标题。比如文档叫“报销流程”，用户可能问“发票丢了怎么办”。Embedding 模型的价值就在于处理这种语义差异，所以测试问题要贴近真实提问方式。
+
+交付时要保留评测记录：用了哪些问题，正确资料是什么，候选模型召回了哪些片段，最终为什么选择这个模型。没有记录，后面检索效果变差时，团队很难判断是模型、文档、切分还是向量库参数的问题。
+
+## 风险提醒
+
+Embedding 模型换了，旧索引通常需要重建。这个成本在小项目里不明显，在大知识库里会很高。
+
+另一个风险是只看平均效果。某些关键问题如果检索错了，业务影响可能很大。上线前要重点测试高风险问题。
+
+## 具体步骤
+
+第一步，准备真实问题和对应正确文档。
+
+第二步，选择 2 到 3 个候选 embedding 模型。
+
+第三步，用同一套文档切分和向量库配置测试召回效果。
+
+第四步，比较成本、速度、维度、语言效果和部署方式。
+
+第五步，记录选择理由和重建索引方案。需要评估表或人工协助，可以从 [工具导航](/tools) 进入。
+
+## 免责声明
+
+本文是 Embedding 模型选择草稿，不构成具体模型购买或部署建议。正式发布前需要人工核对模型文档、价格、维度和数据条款。生产知识库请做真实评测和安全复核。
