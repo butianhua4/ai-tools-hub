@@ -1,0 +1,129 @@
+---
+title: "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索"
+slug: "supabase-pgvector-rag-guide"
+description: "面向新手整理 Supabase pgvector 做 RAG 的入门思路，覆盖 vector column、embedding、SQL 查询、权限、索引、成本和维护。"
+date: "2026-06-05"
+updatedAt: "2026-06-05"
+category: "AI 基建"
+tags:
+  - "Supabase"
+  - "pgvector"
+  - "RAG"
+  - "向量数据库"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "已经使用 Supabase、想把 pgvector 用于 AI 知识库或语义搜索的新手"
+searchIntent: "informational"
+primaryKeyword: "Supabase pgvector"
+secondaryKeywords:
+  - "Supabase RAG"
+  - "pgvector 教程"
+  - "Postgres 向量检索"
+  - "Supabase AI"
+sourceNotes: "参考 Supabase AI & Vectors、vector columns、LangChain with Supabase 文档整理；正式发布前需要人工核对 pgvector 版本和 SQL 示例。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载 Supabase RAG 检查表"
+  serviceCTA: "联系人工协助评估 pgvector 方案"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 24
+canonical: "https://ai-jiedan-lab.vercel.app/blog/supabase-pgvector-rag-guide"
+noindex: true
+---
+# Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索
+
+Supabase 官方 AI 文档提供了向量和 embedding 相关能力，并说明 Supabase 可以通过 Postgres 的 pgvector 扩展存储和查询向量。对已经使用 Supabase 的项目来说，这条路线很有吸引力：不用马上引入独立向量数据库，就能把文档片段、metadata 和向量放进熟悉的数据库里。
+
+这篇是草稿，正式发布前需要核对 Supabase 最新文档和 SQL 示例。向量库基础可以看 [向量数据库怎么选](/blog/vector-database-beginner-guide)，RAG 流程可以看 [RAG 知识库怎么搭](/blog/rag-knowledge-base-beginner-guide)。
+
+## 适合谁
+
+适合已经用 Supabase 做用户、权限、业务数据或后台管理的人。你可能想在现有项目里加知识库问答、语义搜索、相似内容推荐或文档检索。
+
+也适合小团队原型。相比单独维护新数据库，把向量放在 Postgres 里可能更容易管理，但仍然需要关注性能和权限。
+
+## 不适合谁
+
+不适合数据规模很大、检索要求很复杂、团队已经有专门向量数据库方案的项目。pgvector 很方便，但不是所有场景的唯一答案。
+
+如果你不会管理数据库权限和索引，不要直接把敏感企业文档塞进表里上线。
+
+## vector column 是什么
+
+Supabase 的 vector column 基于 pgvector 扩展，用来存储 embedding 向量。文档片段会对应一段文本、metadata 和一组向量。
+
+向量维度要和 embedding 模型匹配。换 embedding 模型时，旧向量通常需要重建，不能随便混用。
+
+## 文档表怎么设计
+
+常见字段包括 content、embedding、source、title、metadata、created_at、updated_at、visibility。metadata 可以存部门、产品、版本、权限等信息。
+
+不要只存 content 和 embedding。没有来源和 metadata，后续很难做引用、权限和过滤。
+
+## 查询和过滤
+
+RAG 查询通常先把用户问题转成 embedding，再用 SQL 找相似向量。真实项目里还要加 metadata 过滤，例如只查某个项目、某个部门或某个可见范围。
+
+权限过滤要在查询层做，不能只靠模型自觉不回答。
+
+## 索引和性能
+
+数据少时，简单查询就能跑。数据多时，要考虑向量索引、查询速度和成本。Supabase 官方也有 vector indexes 相关文档，发布前需要根据项目规模核对。
+
+不要等用户变多后才开始记录查询耗时。原型阶段就应该记录文档数量、查询耗时和命中效果。
+
+## 和 LangChain 配合
+
+Supabase 官方文档也提供 LangChain 使用 Supabase 作为 vector store 的说明。对代码项目来说，这可以把编排框架和数据库连接起来。
+
+但使用框架不代表可以不理解表结构。出了问题时，你仍然要知道文档、向量和 metadata 存在哪里。
+
+## 常见错误
+
+常见错误是把向量表和业务表权限混在一起。RAG 查询可能会读取很多文档片段，如果权限过滤没设计好，就可能把不该看的资料带进回答。另一个错误是换了 embedding 模型却没有重建向量，导致检索效果变差。
+
+交付记录要包含表结构、vector 维度、embedding 模型、metadata 字段、查询函数、权限规则和测试问题。Supabase 很适合一体化原型，但数据库记录必须清楚。
+
+## 风险提醒
+
+Supabase pgvector 的风险主要是权限和性能。数据库里既有业务数据又有向量数据时，权限设计要更清楚。
+
+另一个风险是迁移。后续如果换 embedding 模型或向量库，要有重建索引和导出数据的计划。
+
+## 具体步骤
+
+第一步，确认是否适合在现有 Supabase 项目里做向量检索。
+
+第二步，设计文档表、metadata 和权限字段。
+
+第三步，生成 embedding 并写入 vector column。
+
+第四步，用测试问题做相似度查询和 metadata 过滤。
+
+第五步，记录性能、成本和维护方式。需要检查表或人工协助，可以从 [工具导航](/tools) 进入。
+
+## 发布前复核点
+
+发布前要补一张表结构示例，说明内容字段、向量字段、来源字段、权限字段和更新时间字段分别做什么。Supabase 用户通常需要可复制的结构，但真实项目还要根据权限和数据规模调整。
+
+还要核对 Supabase 当前关于 pgvector、AI & Vectors、vector indexes 和 LangChain 集成的官方文档。SQL 示例尤其不能凭记忆写，必须在发布前重新测试。
+
+给客户解释时，可以把 Supabase pgvector 说成“把业务数据和语义检索放在同一个 Postgres 体系里管理”。这个解释能帮助非技术客户理解为什么不一定马上引入独立向量库。但也要说明，当数据规模、性能要求或权限复杂度上升时，后续仍然可能需要专门向量数据库或更复杂架构。
+
+## 免责声明
+
+本文是 Supabase pgvector 做 RAG 的入门草稿，不构成数据库架构或性能建议。Supabase 和 pgvector 能力会变化，正式发布前需要人工核对官方文档。涉及生产数据时，请由专业人员复核。

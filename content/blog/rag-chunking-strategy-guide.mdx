@@ -1,0 +1,133 @@
+---
+title: "RAG 文档切分怎么做：chunk 太大太小都会影响检索"
+slug: "rag-chunking-strategy-guide"
+description: "面向新手解释 RAG 文档切分策略，覆盖 chunk 大小、重叠、标题层级、语义完整性、metadata、测试问题和常见误区。"
+date: "2026-06-05"
+updatedAt: "2026-06-05"
+category: "AI 基建"
+tags:
+  - "RAG"
+  - "文档切分"
+  - "chunking"
+  - "知识库"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "搭 RAG 知识库时遇到检索不准、想优化文档切分的新手"
+searchIntent: "informational"
+primaryKeyword: "RAG 文档切分"
+secondaryKeywords:
+  - "chunking strategy"
+  - "RAG chunk 大小"
+  - "知识库切分"
+  - "文档检索优化"
+sourceNotes: "RAG 工程主题草稿；正式发布前需要人工结合具体框架和文档类型补充实测案例。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载 RAG 切分测试表"
+  serviceCTA: "联系人工协助优化知识库"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 24
+canonical: "https://ai-jiedan-lab.vercel.app/blog/rag-chunking-strategy-guide"
+noindex: true
+---
+# RAG 文档切分怎么做：chunk 太大太小都会影响检索
+
+RAG 知识库效果不好，很多时候不是模型不行，而是文档切分出了问题。chunk 太大，检索结果会带入太多无关信息；chunk 太小，模型拿不到完整上下文。新手做 RAG 时，文档切分应该和真实问题一起测试，而不是只按固定字数机械切。
+
+这篇是草稿，适合作为知识库优化入口。RAG 总流程可以看 [RAG 知识库怎么搭](/blog/rag-knowledge-base-beginner-guide)，Embedding 模型选择可以看 [Embedding 模型怎么选](/blog/embedding-model-selection-guide)。
+
+## 适合谁
+
+适合已经搭了 RAG，但发现回答经常抓错资料、漏掉关键上下文、引用来源不完整的人。你可能已经有向量库和 embedding，但检索结果不稳定。
+
+也适合准备搭知识库的新手。提前理解切分，比上线后大量返工更省时间。
+
+## 不适合谁
+
+不适合资料还没有整理的人。如果文档本身过期、重复、矛盾，切分策略再好也不能解决根本问题。
+
+如果知识库只有很少的短 FAQ，复杂切分策略可能不是第一优先级。
+
+## chunk 大小
+
+chunk 大小没有万能答案。产品说明、法律条款、代码文档、客服 FAQ、课程讲义，适合的切分方式都不一样。
+
+判断标准不是字数好不好看，而是用户提问时能否召回完整答案所需的信息。一个完整步骤被切断，回答就容易缺关键条件。
+
+## chunk 重叠
+
+适当重叠可以减少上下文断裂。比如一个段落的结尾和下一个段落开头有关，重叠能帮助检索片段保持连贯。
+
+但重叠太多会增加存储、成本和重复检索。要用测试问题验证，而不是越多越好。
+
+## 保留标题层级
+
+切分时要尽量保留标题、章节、文档来源和路径。没有标题的片段，模型很难判断上下文，用户也很难信任引用。
+
+比如一个 chunk 内容是“适用于企业版”，但没有标题说明是哪款产品，回答就可能误用。
+
+## 语义完整性
+
+优先按语义切分，例如按章节、问题、步骤、表格块、代码块。不要把一个表格、流程或说明拆得支离破碎。
+
+如果文档里有长列表，可以考虑按小标题或条目切分，并保留父级标题。
+
+## metadata 配合切分
+
+每个 chunk 应该带 metadata，例如文档标题、产品、版本、部门、可见范围、更新时间。这样检索时才能过滤和引用。
+
+只存文本不存 metadata，后续权限和维护都会很困难。
+
+## 测试方法
+
+准备真实问题，检查是否召回正确 chunk。不要只看最终回答，要看检索结果排在前几位的片段。
+
+如果正确资料没有被召回，先调切分和 embedding；如果召回了但回答错，再调提示词或生成阶段。
+
+## 常见错误
+
+常见错误是所有文档都用同一种固定字数切分。客服 FAQ、产品手册、合同条款、代码文档、课程讲义的结构不同，切分方式也应该不同。另一个错误是切分后不保留标题和来源，导致模型拿到片段却不知道上下文。
+
+交付记录里要写清切分策略、chunk 大小、重叠、metadata、测试问题、召回结果和重建索引流程。切分策略一旦调整，就要知道哪些索引需要重建。
+
+## 风险提醒
+
+切分策略一旦改动，通常需要重建索引。生产知识库要记录切分版本，避免不同版本混在一起。
+
+切分还会影响权限。一个 chunk 里如果混了不同权限内容，过滤会变得困难。
+
+## 具体步骤
+
+第一步，按文档类型选择初始切分规则。
+
+第二步，保留标题、来源、版本和权限 metadata。
+
+第三步，准备测试问题和正确来源。
+
+第四步，比较不同 chunk 大小、重叠和语义切分效果。
+
+第五步，记录切分版本和重建索引流程。需要测试表或人工协助，可以从 [工具导航](/tools) 进入。
+
+## 发布前复核点
+
+发布前要补两个对比案例：一个 chunk 太大导致答案混入无关信息，一个 chunk 太小导致缺上下文。用真实问题展示前后差异，比单纯解释概念更容易让读者理解。
+
+还要核对所用框架的切分器名称、参数和默认行为。不同框架对 chunk size、overlap、语义切分的实现不同，文章里不要把某个工具的默认值写成通用规则。
+
+## 免责声明
+
+本文是 RAG 文档切分策略草稿，不构成具体框架参数建议。不同文档和模型效果差异很大，正式发布前需要结合真实数据测试。涉及企业资料时，请由专业人员复核。

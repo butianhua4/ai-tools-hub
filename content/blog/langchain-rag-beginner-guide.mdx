@@ -1,0 +1,127 @@
+---
+title: "LangChain 做 RAG 怎么开始：新手先跑通检索链路"
+slug: "langchain-rag-beginner-guide"
+description: "面向新手整理 LangChain 做 RAG 的入门流程，覆盖文档加载、切分、embedding、向量库、retriever、回答链、评测和上线边界。"
+date: "2026-06-05"
+updatedAt: "2026-06-05"
+category: "AI 基建"
+tags:
+  - "LangChain"
+  - "RAG"
+  - "知识库"
+  - "AI 基建"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "想用 LangChain 搭 RAG 知识库问答、但还不熟悉链路的新手"
+searchIntent: "informational"
+primaryKeyword: "LangChain RAG"
+secondaryKeywords:
+  - "LangChain 教程"
+  - "LangChain 知识库"
+  - "RAG 检索链路"
+  - "LangChain retriever"
+sourceNotes: "参考 LangChain 官方 RAG 相关文档和 Supabase LangChain 向量库文档整理；正式发布前需要人工核对最新包名和接口。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载 LangChain RAG 检查表"
+  serviceCTA: "联系人工协助搭 RAG 原型"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 24
+canonical: "https://ai-jiedan-lab.vercel.app/blog/langchain-rag-beginner-guide"
+noindex: true
+---
+# LangChain 做 RAG 怎么开始：新手先跑通检索链路
+
+LangChain 经常被用来搭 RAG、聊天机器人和 Agent 工作流。对新手来说，LangChain 做 RAG 的重点不是先写很多框架代码，而是理解链路：资料从哪里来，怎么切分，怎么生成 embedding，存进哪个向量库，retriever 怎么取回片段，模型如何基于片段回答，最后如何评测效果。
+
+这篇是草稿，正式发布前需要核对 LangChain 最新文档和包名。更通用的知识库流程可以看 [RAG 知识库怎么搭](/blog/rag-knowledge-base-beginner-guide)，向量库选择可以看 [向量数据库怎么选](/blog/vector-database-beginner-guide)。
+
+## 适合谁
+
+适合想从代码层面理解 RAG 的人。你可能已经用过 Dify、Flowise 这类工具，但想知道底层链路如何组合，或者想做更可控的定制开发。
+
+也适合接客户知识库项目的新手。客户可能不关心框架名，但会关心能不能回答准确、能不能引用来源、能不能接入已有数据库、能不能长期维护。
+
+## 不适合谁
+
+不适合还没有整理文档，就急着写框架代码的人。RAG 效果首先取决于资料质量，其次才是链路实现。
+
+如果项目只是一个很小的公开 FAQ，用低代码工具或简单检索可能已经够用，不一定要一开始上完整 LangChain 工程。
+
+## 第一步：准备文档
+
+先收集少量高质量文档，不要一开始就导入几千份资料。记录文档来源、格式、更新时间、负责人和权限。
+
+文档越乱，LangChain 也救不了。框架能帮你编排流程，但不能替你判断资料是否真实、过期或互相矛盾。
+
+## 第二步：切分和 embedding
+
+RAG 会把文档切成 chunk，再用 embedding 模型转成向量。切分太粗会影响检索精准度，切分太碎会丢上下文。
+
+先用一批真实问题测试切分效果。不要只看 chunk 数量，还要看用户提问时能不能召回正确片段。
+
+## 第三步：选择向量库
+
+LangChain 可以和多种向量库或向量存储集成。选型时看数据规模、权限、成本、部署方式、团队熟悉度和迁移难度。
+
+如果已经用 Supabase，可以评估 pgvector 路线；如果需要专门向量数据库，可以评估 Qdrant 等方案。不要只按工具热度选。
+
+## 第四步：搭 retriever 和回答链
+
+retriever 的职责是从向量库取回相关片段。回答链的职责是把用户问题和检索片段交给模型生成回答。
+
+测试时不要只看最终答案，还要看取回的片段是否正确。答案错了，先判断是检索错、资料错，还是生成阶段错。
+
+## 第五步：评测和上线
+
+准备测试集：常见问题、找不到答案、权限问题、模糊问题、过期资料问题。记录每个问题的正确来源和预期回答。
+
+上线前要有日志、成本限制、错误处理和人工复核。代码跑通不等于生产可用。
+
+## 常见错误
+
+常见错误是把 LangChain 当作万能封装。框架能帮你把 loader、splitter、retriever 和模型调用串起来，但不会自动保证文档质量、权限正确或答案可靠。另一个错误是只看最终回答，不看检索片段。RAG 调试必须先看资料有没有找对。
+
+交付记录里要写清文档来源、切分规则、embedding 模型、向量库、retriever 参数、测试问题和失败案例。没有这些记录，后续换模型或换向量库时会很难维护。
+
+## 风险提醒
+
+LangChain 降低了编排复杂度，但也可能让新手忽略每个环节的责任。文档、切分、embedding、检索、生成、评测都要分别检查。
+
+如果系统会处理客户资料或企业内部文档，必须设计权限、日志脱敏和删除流程。
+
+## 具体步骤
+
+第一步，选 20 到 50 个高质量文档片段做原型。
+
+第二步，设计切分、embedding 和向量库存储。
+
+第三步，搭建 retriever 和回答链。
+
+第四步，用测试集检查召回、引用和回答质量。
+
+第五步，整理交付记录。需要 LangChain RAG 检查表或人工协助，可以从 [工具导航](/tools) 进入。
+
+## 发布前复核点
+
+发布前要补真实项目截图或代码片段，尤其是文档加载、切分、检索和回答这几步。只写概念会显得空，最好用同一批问题展示“检索到了什么、模型如何回答、哪里需要人工修正”。
+
+还要核对 LangChain 当前官方文档里的包名、导入方式和示例代码。框架更新很快，文章里不应该留下过期接口。人工复核时要把可变细节标出来，避免读者照抄后失败。
+
+## 免责声明
+
+本文是 LangChain RAG 入门草稿，不构成生产架构或框架选型建议。LangChain API 和生态变化较快，正式发布前需要人工核对官方文档。涉及生产数据时，请由专业人员复核。

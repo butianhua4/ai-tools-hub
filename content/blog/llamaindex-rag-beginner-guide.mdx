@@ -1,0 +1,127 @@
+---
+title: "LlamaIndex 做 RAG 怎么开始：Document、Node 和检索"
+slug: "llamaindex-rag-beginner-guide"
+description: "面向新手解释 LlamaIndex 做 RAG 的基本流程，覆盖 Document、Node、索引、检索、引用、评测和知识库维护边界。"
+date: "2026-06-05"
+updatedAt: "2026-06-05"
+category: "AI 基建"
+tags:
+  - "LlamaIndex"
+  - "RAG"
+  - "知识库"
+  - "AI 基建"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "想用 LlamaIndex 搭文档问答或 RAG 知识库的新手"
+searchIntent: "informational"
+primaryKeyword: "LlamaIndex RAG"
+secondaryKeywords:
+  - "LlamaIndex 教程"
+  - "Document Node"
+  - "RAG 文档问答"
+  - "LlamaIndex 知识库"
+sourceNotes: "参考 LlamaIndex 官方 RAG Introduction 文档整理；正式发布前需要人工核对最新接口和示例。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载 LlamaIndex RAG 检查表"
+  serviceCTA: "联系人工协助搭文档问答"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 24
+canonical: "https://ai-jiedan-lab.vercel.app/blog/llamaindex-rag-beginner-guide"
+noindex: true
+---
+# LlamaIndex 做 RAG 怎么开始：Document、Node 和检索
+
+LlamaIndex 官方 RAG 入门文档会提到 Document 和 Node 这类概念，其中 Node 可以理解为从源文档切出来的原子数据单元。对新手来说，LlamaIndex 的价值是帮助你围绕文档构建检索、索引和问答流程，而不是把所有资料一次性塞进模型。
+
+这篇是草稿，正式发布前需要核对 LlamaIndex 最新文档。RAG 基础可以看 [RAG 知识库怎么搭](/blog/rag-knowledge-base-beginner-guide)，Embedding 选择可以看 [Embedding 模型怎么选](/blog/embedding-model-selection-guide)。
+
+## 适合谁
+
+适合想做文档问答、资料助手、内部知识库、论文资料检索或客服 FAQ 的人。你可能已经有一批文档，但不知道怎么组织成可检索结构。
+
+也适合想理解 RAG 细节的新手。低代码工具能快速搭 demo，LlamaIndex 这类框架能帮助你更细地控制文档、索引、检索和评测。
+
+## 不适合谁
+
+不适合资料还没整理清楚，就想靠框架自动解决的人。RAG 的底层依然依赖资料质量、切分质量和测试集。
+
+如果只是很小的公开文档问答，完整框架可能不是第一优先级。先验证业务价值，再决定工程复杂度。
+
+## Document 和 Node
+
+Document 可以理解为原始资料，例如文件、网页或文本。Node 是更小的数据单元，通常代表文档中的一个片段。
+
+这个拆分很重要。用户提问时，系统不是把整份文档都交给模型，而是检索最相关的 Node，再让模型基于这些片段回答。
+
+## 索引和检索
+
+索引是为了让系统能快速找到相关片段。检索是根据用户问题取回相关片段。你可以把它理解为 RAG 的“找资料”阶段。
+
+如果检索阶段找错资料，生成阶段再好也会答偏。新手调 RAG 时，要先看检索结果，再看模型回答。
+
+## 引用和可解释
+
+知识库回答最好带来源。用户看到答案后，应该能知道它来自哪份文档、哪个章节或哪个片段。
+
+来源不仅能提升信任，也能帮助维护。发现错误时，可以回到源资料修文档，而不是只改提示词。
+
+## 评测集
+
+准备真实问题非常关键。问题应该包括常见问题、模糊问题、找不到答案、过期资料、权限边界和多跳问题。
+
+每个问题都标注预期来源和合格答案。这样你才能判断 LlamaIndex 流程是否真的有效。
+
+## 维护流程
+
+知识库不是一次性导入。文档会更新、过期、删除，索引也要同步。客户项目里必须写清谁负责维护文档和索引。
+
+没有维护流程，刚上线时效果好，几周后就可能因为旧资料变差。
+
+## 常见错误
+
+常见错误是把 Document、Node、索引和检索混在一起讲不清。交付时要让客户知道：原始文档在哪里，切出来的片段是什么，索引如何更新，回答引用来自哪里。这样后续资料变化时，维护人员才知道应该改哪一层。
+
+如果回答不准，排查顺序也要写清楚：先看检索到的 Node 是否正确，再看来源是否过期，最后再看生成提示词。不要一上来就改模型。
+
+## 风险提醒
+
+LlamaIndex 能帮助构建 RAG，但不能自动保证资料正确、权限安全或回答可靠。框架只是工具，资料治理和评测仍然要人工做。
+
+如果系统包含企业资料、客户数据或内部政策，要设计权限、日志和删除流程。
+
+## 具体步骤
+
+第一步，选一批高质量文档，记录来源和更新时间。
+
+第二步，把文档转成 Document，再切成合适的 Node。
+
+第三步，建立索引和检索流程。
+
+第四步，让模型基于检索片段回答，并显示来源。
+
+第五步，用测试集评测。需要检查表或人工协助，可以从 [工具导航](/tools) 进入。
+
+## 发布前复核点
+
+发布前要补一个最小示例：一份原始文档如何变成 Document，如何拆成 Node，如何建立索引，如何返回引用来源。这个例子不需要很复杂，但必须能说明链路。
+
+还要核对 LlamaIndex 当前文档中相关对象和接口名称。文章的重点是解释流程，具体代码必须以最新官方文档为准。人工审核时要检查是否把概念和实现细节混在一起。
+
+## 免责声明
+
+本文是 LlamaIndex RAG 入门草稿，不构成生产架构建议。LlamaIndex 接口和组件可能变化，正式发布前需要人工核对官方文档。涉及敏感资料时，请由专业人员复核。
