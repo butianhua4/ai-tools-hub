@@ -189,6 +189,32 @@ async function main() {
     };
     waveSummaries?: Array<{ blockingItems?: number; files?: unknown[]; readyItems?: number }>;
   }>("content/automation/public-coverage-gap-preflight.json");
+  const publicCoverageGapDecisionPack = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
+    items?: Array<{
+      blockingIssues?: unknown[];
+      commandsAfterExplicitApproval?: { markReview?: string; publishDryRun?: string };
+      humanDecisionChecklist?: unknown[];
+      publicLinkSuggestion?: unknown;
+      readyForManualReview?: boolean;
+      reviewPacket?: { sourceTargets?: unknown[]; warningIssues?: unknown[] };
+      stopBefore?: string;
+      suggestedOptimizations?: unknown[];
+    }>;
+    summary: {
+      blockingItems: number;
+      items: number;
+      itemsWithCommandBoundary: number;
+      itemsWithHumanChecklist: number;
+      itemsWithPublicLinkSuggestion: number;
+      itemsWithSourceTargets: number;
+      itemsWithWarningRemediation: number;
+      readyItems: number;
+      unsafeItems: number;
+      waves: number;
+    };
+    waveSummaries?: Array<{ blockingItems?: number; files?: unknown[]; readyItems?: number }>;
+  }>("content/automation/public-coverage-gap-decision-pack.json");
   const cannibalization = readJson<{
     guardrails: { autoPublish: boolean };
     summary: { articleCount: number; conflicts: number; reviewBatchConflicts: number };
@@ -828,6 +854,44 @@ async function main() {
         ) &&
         Boolean(publicCoverageGapPreflight.waveSummaries?.every((wave) => (wave.blockingItems || 0) === 0 && (wave.readyItems || 0) === (wave.files?.length || 0))),
       detail: `blocking=${publicCoverageGapPreflight.summary.blockingItems}, ready=${publicCoverageGapPreflight.summary.readyItems}, structured=${publicCoverageGapPreflight.summary.structuredDataReadyItems}, seedMatches=${publicCoverageGapPreflight.summary.withSeedMatches}, warnings=${publicCoverageGapPreflight.summary.warningItems}`,
+    },
+    {
+      name: "public coverage gap decision pack is read-only and covers preflight items",
+      ok:
+        publicCoverageGapDecisionPack.guardrails.autoEditArticles === false &&
+        publicCoverageGapDecisionPack.guardrails.autoMarkReview === false &&
+        publicCoverageGapDecisionPack.guardrails.autoPublish === false &&
+        publicCoverageGapDecisionPack.summary.items === publicCoverageGapPreflight.summary.items &&
+        publicCoverageGapDecisionPack.summary.readyItems === publicCoverageGapPreflight.summary.readyItems &&
+        publicCoverageGapDecisionPack.summary.waves === publicCoverageGapPlan.summary.plannedWaves,
+      detail: `items=${publicCoverageGapDecisionPack.summary.items}, ready=${publicCoverageGapDecisionPack.summary.readyItems}, waves=${publicCoverageGapDecisionPack.summary.waves}`,
+    },
+    {
+      name: "public coverage gap decision pack has human review actions and command boundaries",
+      ok:
+        publicCoverageGapDecisionPack.summary.blockingItems === 0 &&
+        publicCoverageGapDecisionPack.summary.unsafeItems === 0 &&
+        publicCoverageGapDecisionPack.summary.itemsWithSourceTargets === publicCoverageGapDecisionPack.summary.items &&
+        publicCoverageGapDecisionPack.summary.itemsWithHumanChecklist === publicCoverageGapDecisionPack.summary.items &&
+        publicCoverageGapDecisionPack.summary.itemsWithPublicLinkSuggestion === publicCoverageGapDecisionPack.summary.items &&
+        publicCoverageGapDecisionPack.summary.itemsWithWarningRemediation === publicCoverageGapDecisionPack.summary.items &&
+        publicCoverageGapDecisionPack.summary.itemsWithCommandBoundary === publicCoverageGapDecisionPack.summary.items &&
+        Boolean(
+          publicCoverageGapDecisionPack.items?.every(
+            (item) =>
+              item.readyForManualReview === true &&
+              (item.blockingIssues?.length || 0) === 0 &&
+              (item.reviewPacket?.sourceTargets?.length || 0) >= 2 &&
+              (item.humanDecisionChecklist?.length || 0) >= 5 &&
+              Boolean(item.publicLinkSuggestion) &&
+              (item.suggestedOptimizations?.length || 0) > 0 &&
+              item.stopBefore?.includes("explicit human approval") &&
+              item.commandsAfterExplicitApproval?.markReview?.includes("--confirm-human") &&
+              !item.commandsAfterExplicitApproval?.publishDryRun?.includes("--confirm"),
+          ),
+        ) &&
+        Boolean(publicCoverageGapDecisionPack.waveSummaries?.every((wave) => (wave.blockingItems || 0) === 0 && (wave.readyItems || 0) === (wave.files?.length || 0))),
+      detail: `blocking=${publicCoverageGapDecisionPack.summary.blockingItems}, unsafe=${publicCoverageGapDecisionPack.summary.unsafeItems}, commandBoundary=${publicCoverageGapDecisionPack.summary.itemsWithCommandBoundary}, optimizations=${publicCoverageGapDecisionPack.summary.itemsWithWarningRemediation}`,
     },
     {
       name: "content cannibalization check generated warning report",

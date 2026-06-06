@@ -1,6 +1,6 @@
 # Wave Publish Simulation
 
-Generated at: 2026-06-06T15:12:38.387Z
+Generated at: 2026-06-06T15:23:35.695Z
 
 This simulation is read-only. It lists the post-approval path but does not change article status, noindex, or publishing state.
 

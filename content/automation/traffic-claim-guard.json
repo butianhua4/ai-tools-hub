@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-06T15:14:47.475Z",
+  "generatedAt": "2026-06-06T15:24:59.164Z",
   "guardrails": {
     "autoPublish": false,
     "note": "This guard scans operational docs and automation reports for unsupported traffic claims. It does not scan draft article teaching examples."
   },
   "summary": {
-    "filesScanned": 89,
+    "filesScanned": 91,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 520
+    "watchMentions": 546
   },
   "unsafeClaims": [],
   "watchMentions": [
@@ -100,13 +100,13 @@
       "file": "docs/automation-digest.md",
       "line": 195,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim files scanned: 89"
+      "text": "- Traffic claim files scanned: 91"
     },
     {
       "file": "docs/automation-digest.md",
       "line": 196,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim watch mentions: 520"
+      "text": "- Traffic claim watch mentions: 546"
     },
     {
       "file": "docs/automation-digest.md",
@@ -130,7 +130,7 @@
       "file": "docs/automation-gate.md",
       "line": 33,
       "reason": "traffic-related mention",
-      "text": "| traffic claim guard found no unsupported claims | PASS | filesScanned=89, unsafeClaims=0, watchMentions=520 |"
+      "text": "| traffic claim guard found no unsupported claims | PASS | filesScanned=91, unsafeClaims=0, watchMentions=546 |"
     },
     {
       "file": "docs/broad-search-demand-map.md",
@@ -304,13 +304,13 @@
       "file": "docs/manual-review-workbench.md",
       "line": 195,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim files scanned: 89"
+      "text": "- Traffic claim files scanned: 91"
     },
     {
       "file": "docs/manual-review-workbench.md",
       "line": 196,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim watch mentions: 520"
+      "text": "- Traffic claim watch mentions: 546"
     },
     {
       "file": "docs/manual-review-workbench.md",
@@ -469,28 +469,28 @@
       "text": "- Google Analytics 或 Vercel Web Analytics：用于看流量。"
     },
     {
-      "file": "docs/public-coverage-gap-plan.md",
-      "line": 17,
-      "reason": "traffic-related mention",
-      "text": "- Note: This plan inherits broad-demand editorial signals only. It does not claim keyword volume, search ranking, clicks, impressions, or traffic."
-    },
-    {
-      "file": "docs/public-coverage-gap-plan.md",
+      "file": "docs/public-coverage-gap-decision-pack.md",
       "line": 18,
       "reason": "traffic-related mention",
-      "text": "- Broad demand guardrails: {\"autoEditArticles\":false,\"autoMarkReview\":false,\"autoPublish\":false,\"note\":\"Read-only broad-demand map. It prioritizes likely user-search themes from the local content inventory and official source targets; it does not claim keyword volume, rankings, clicks, or traffic.\"}"
+      "text": "- Traffic note: Search seeds and link suggestions are editorial signals, not measured rankings, impressions, clicks, traffic, or income."
     },
     {
-      "file": "docs/public-coverage-gap-preflight.md",
-      "line": 17,
+      "file": "docs/public-coverage-gap-decision-pack.md",
+      "line": 99,
       "reason": "traffic-related mention",
-      "text": "- Note: Search seeds are editorial review prompts, not measured keyword volume, rankings, clicks, impressions, or traffic."
+      "text": "- Confirm the article does not claim measured traffic, rankings, impressions, clicks, revenue, or income."
     },
     {
-      "file": "docs/publishing-workflow.md",
-      "line": 20,
+      "file": "docs/public-coverage-gap-decision-pack.md",
+      "line": 142,
       "reason": "traffic-related mention",
-      "text": "14. 观察 Google Search Console 的抓取、收录和点击数据。"
+      "text": "- Confirm the article does not claim measured traffic, rankings, impressions, clicks, revenue, or income."
+    },
+    {
+      "file": "docs/public-coverage-gap-decision-pack.md",
+      "line": 185,
+      "reason": "traffic-related mention",
+      "text": "- Confirm the article does not claim measured traffic, rankings, impressions, clicks, revenue, or income."
     }
   ],
   "nextActions": [

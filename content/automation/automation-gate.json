@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T15:14:48.117Z",
+  "generatedAt": "2026-06-06T15:25:07.561Z",
   "ok": true,
   "summary": {
-    "checks": 71,
+    "checks": 73,
     "failed": 0,
-    "passed": 71
+    "passed": 73
   },
   "failed": [],
   "checks": [
@@ -90,7 +90,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=89, unsafeClaims=0, watchMentions=520"
+      "detail": "filesScanned=91, unsafeClaims=0, watchMentions=546"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -256,6 +256,16 @@
       "name": "public coverage gap preflight has no blocking publish-readiness issues",
       "ok": true,
       "detail": "blocking=0, ready=8, structured=8, seedMatches=7, warnings=8"
+    },
+    {
+      "name": "public coverage gap decision pack is read-only and covers preflight items",
+      "ok": true,
+      "detail": "items=8, ready=8, waves=4"
+    },
+    {
+      "name": "public coverage gap decision pack has human review actions and command boundaries",
+      "ok": true,
+      "detail": "blocking=0, unsafe=0, commandBoundary=8, optimizations=8"
     },
     {
       "name": "content cannibalization check generated warning report",

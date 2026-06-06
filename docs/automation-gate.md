@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-06T15:14:48.117Z
+Generated at: 2026-06-06T15:25:07.561Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 71
-- Passed: 71
+- Checks: 73
+- Passed: 73
 - Failed: 0
 
 ## Checks
@@ -30,7 +30,7 @@ Overall: PASS
 | project status still stops before publishing | PASS | publicPublished=15, publishableNow=0 |
 | traffic evidence audit passed and is read-only | PASS | failedChecks=0, measuredTrafficSources=0 |
 | traffic is not claimed without measured metrics | PASS | trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 |
-| traffic claim guard found no unsupported claims | PASS | filesScanned=89, unsafeClaims=0, watchMentions=520 |
+| traffic claim guard found no unsupported claims | PASS | filesScanned=91, unsafeClaims=0, watchMentions=546 |
 | content integrity audit is read-only and clean | PASS | filesScanned=669, blockingItems=0 |
 | content integrity audit covers public, recommended, and Wave 1 items | PASS | public=15, recommended=3, wave=3 |
 | internal link opportunity audit is read-only and covers expansion candidates | PASS | public=15, expansion=19, candidates=19 |
@@ -64,6 +64,8 @@ Overall: PASS
 | public coverage gap plan keeps candidates safe for manual review | PASS | ready=8, unsafe=0, waves=4 |
 | public coverage gap preflight is read-only and covers gap plan items | PASS | items=8, planItems=8, uniqueFiles=8 |
 | public coverage gap preflight has no blocking publish-readiness issues | PASS | blocking=0, ready=8, structured=8, seedMatches=7, warnings=8 |
+| public coverage gap decision pack is read-only and covers preflight items | PASS | items=8, ready=8, waves=4 |
+| public coverage gap decision pack has human review actions and command boundaries | PASS | blocking=0, unsafe=0, commandBoundary=8, optimizations=8 |
 | content cannibalization check generated warning report | PASS | conflicts=200, reviewBatchConflicts=0 |
 | content freshness check covers review items | PASS | highRisk=570, currentReviewItems=3, plannedReviewItems=9 |
 | review coverage report covers planned candidates | PASS | planned=9, items=9, missingCoverage=0 |

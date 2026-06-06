@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T15:12:46.094Z",
+  "generatedAt": "2026-06-06T15:23:38.062Z",
   "guardrails": {
     "autoMarkReview": false,
     "autoPublish": false,
@@ -815,10 +815,10 @@
     "trafficDataAvailable": false
   },
   "trafficClaimGuard": {
-    "filesScanned": 89,
+    "filesScanned": 91,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 520
+    "watchMentions": 546
   },
   "contentIntegrity": {
     "allIssueItems": 0,
