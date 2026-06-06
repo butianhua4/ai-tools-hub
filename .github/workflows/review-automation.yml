@@ -29,6 +29,7 @@ jobs:
           path: |
             content/automation/review-candidates.json
             content/automation/publish-readiness-pack.json
+            content/automation/review-preflight.json
             content/automation/draft-guardrail-sanitize.json
             content/automation/automation-gate.json
             content/automation/project-status.json
@@ -39,4 +40,5 @@ jobs:
             docs/review-automation.md
             docs/automation-gate.md
             docs/publish-readiness-pack.md
+            docs/review-preflight.md
             docs/seo-opportunity-map.md

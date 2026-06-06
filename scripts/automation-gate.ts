@@ -19,6 +19,7 @@ async function main() {
     "content/automation/seo-check.json",
   );
   const searchability = readJson<{ failedItems: unknown[]; score: number }>("content/automation/searchability-check.json");
+  const reviewPreflight = readJson<{ ok: boolean; summary: { failed: number } }>("content/automation/review-preflight.json");
   const sanitize = readJson<{ changedFiles: number; totalReplacements: number }>("content/automation/draft-guardrail-sanitize.json");
   const opportunityMap = readJson<{ totals: { reviewReadyDrafts: number } }>("content/automation/seo-opportunity-map.json");
   const projectStatus = readJson<{ articles: { publicPublished: number; publishableNow: unknown[] } }>("content/automation/project-status.json");
@@ -44,6 +45,11 @@ async function main() {
       name: "publish pack matches recommended review files",
       ok: sameList(packFiles, reviewFiles),
       detail: `review=${reviewFiles.join(", ")} pack=${packFiles.join(", ")}`,
+    },
+    {
+      name: "recommended review candidates pass preflight",
+      ok: reviewPreflight.ok === true && reviewPreflight.summary.failed === 0,
+      detail: `failed=${reviewPreflight.summary.failed}`,
     },
     {
       name: "recommended review clusters are diverse",

@@ -14,6 +14,7 @@ const tasks: Task[] = [
   { title: "Check draft guardrail cleanup", args: ["run", "automation:sanitize-drafts", "--", "--dry-run"] },
   { title: "Generate review queue", args: ["run", "automation:review", "--", "--limit=25"] },
   { title: "Generate publish readiness pack", args: ["run", "automation:publish-pack", "--", "--limit=3"] },
+  { title: "Run review candidate preflight", args: ["run", "automation:review-preflight"] },
   { title: "Generate project status", args: ["run", "--silent", "project:status"], outputFile: "content/automation/project-status.json" },
   { title: "Run SEO safety check", args: ["run", "--silent", "seo:check"], outputFile: "content/automation/seo-check.json" },
   { title: "Generate SEO opportunity map", args: ["run", "seo:opportunities"] },

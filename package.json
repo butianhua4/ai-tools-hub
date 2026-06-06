@@ -20,6 +20,7 @@
     "automation:review": "tsx scripts/review-automation.ts",
     "automation:gate": "tsx scripts/automation-gate.ts",
     "automation:publish-pack": "tsx scripts/publish-readiness-pack.ts",
+    "automation:review-preflight": "tsx scripts/review-candidate-preflight.ts",
     "automation:sanitize-drafts": "tsx scripts/sanitize-draft-guardrails.ts",
     "project:status": "tsx scripts/project-status.ts",
     "seo:check": "tsx scripts/seo-safety-check.ts",

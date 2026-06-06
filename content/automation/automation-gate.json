@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T09:59:46.469Z",
+  "generatedAt": "2026-06-06T10:03:03.846Z",
   "ok": true,
   "summary": {
-    "checks": 10,
+    "checks": 11,
     "failed": 0,
-    "passed": 10
+    "passed": 11
   },
   "failed": [],
   "checks": [
@@ -16,6 +16,11 @@
       "name": "publish pack matches recommended review files",
       "ok": true,
       "detail": "review=content/blog/ai-model-selection-customer-service-guide.mdx, content/blog/ai-automation-project-pricing-scope-guide.mdx, content/blog/ai-prompt-library-team-knowledge-base-guide.mdx pack=content/blog/ai-model-selection-customer-service-guide.mdx, content/blog/ai-automation-project-pricing-scope-guide.mdx, content/blog/ai-prompt-library-team-knowledge-base-guide.mdx"
+    },
+    {
+      "name": "recommended review candidates pass preflight",
+      "ok": true,
+      "detail": "failed=0"
     },
     {
       "name": "recommended review clusters are diverse",
