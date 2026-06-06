@@ -1,0 +1,30 @@
+name: Review Automation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 23 * * *"
+
+jobs:
+  review-automation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm install
+
+      - name: Generate review queue
+        run: npm run automation:review -- --limit=25
+
+      - name: Upload review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: review-automation
+          path: |
+            content/automation/review-candidates.json
+            docs/review-automation.md
