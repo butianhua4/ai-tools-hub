@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-06T12:10:38.110Z
+Generated at: 2026-06-06T12:19:35.526Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 36
-- Passed: 36
+- Checks: 39
+- Passed: 39
 - Failed: 0
 
 ## Checks
@@ -48,5 +48,8 @@ Overall: PASS
 | next review source pack covers roadmap files | PASS | items=19, roadmap=19 |
 | next review source pack includes source, fact-check, approval, and risk tasks | PASS | {"approval":0,"factCheck":0,"risk":0,"sources":0} |
 | next review source pack keeps candidates draft and non-indexable | PASS | unsafeItems=0, safeDraftItems=19 |
+| public expansion queue is manual and covers roadmap files | PASS | items=19, waves=7, roadmap=19 |
+| public expansion queue only contains source-pack-ready safe drafts | PASS | unsafeItems=0, duplicateFiles=0, sourcePackReadyItems=19 |
+| public expansion queue stops before publishing | PASS | publishableNow=0 |
 | live search surface check passed | PASS | publicArticles=15, failed=0 |
 | manual review workbench is ready and stops before publishing | PASS | currentItemsCovered=3, publishableNow=0 |

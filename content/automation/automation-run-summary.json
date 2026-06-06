@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T12:09:23.182Z",
+  "generatedAt": "2026-06-06T12:18:20.211Z",
   "failures": [],
   "ok": true,
   "tasks": [
@@ -16,6 +16,7 @@
     "Generate review batch plan",
     "Generate review priority roadmap",
     "Generate next review source pack",
+    "Generate public expansion queue",
     "Run content cannibalization check",
     "Run content freshness check",
     "Generate review coverage report",

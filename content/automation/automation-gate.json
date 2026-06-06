@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T12:10:38.110Z",
+  "generatedAt": "2026-06-06T12:19:35.526Z",
   "ok": true,
   "summary": {
-    "checks": 36,
+    "checks": 39,
     "failed": 0,
-    "passed": 36
+    "passed": 39
   },
   "failed": [],
   "checks": [
@@ -176,6 +176,21 @@
       "name": "next review source pack keeps candidates draft and non-indexable",
       "ok": true,
       "detail": "unsafeItems=0, safeDraftItems=19"
+    },
+    {
+      "name": "public expansion queue is manual and covers roadmap files",
+      "ok": true,
+      "detail": "items=19, waves=7, roadmap=19"
+    },
+    {
+      "name": "public expansion queue only contains source-pack-ready safe drafts",
+      "ok": true,
+      "detail": "unsafeItems=0, duplicateFiles=0, sourcePackReadyItems=19"
+    },
+    {
+      "name": "public expansion queue stops before publishing",
+      "ok": true,
+      "detail": "publishableNow=0"
     },
     {
       "name": "live search surface check passed",

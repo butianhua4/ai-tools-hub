@@ -124,6 +124,29 @@ type NextReviewSourcePack = {
   };
 };
 
+type PublicExpansionQueue = {
+  approvalWaves: Array<{
+    files: string[];
+    wave: number;
+  }>;
+  summary: {
+    approvalWaves: number;
+    duplicateFiles: number;
+    items: number;
+    sourcePackReadyItems: number;
+    unsafeItems: number;
+  };
+  items: Array<{
+    approvalWave: number;
+    currentPack: boolean;
+    file: string;
+    plannedBatch: boolean;
+    priorityScore: number;
+    sourcePackReady: boolean;
+    title: string;
+  }>;
+};
+
 const reports = {
   cannibalization: readJson<{ summary: { conflicts: number; reviewBatchConflicts: number } }>("content/automation/content-cannibalization.json"),
   freshness: readJson<{ summary: { currentReviewItems: number; highRisk: number; mediumRisk: number; plannedReviewItems: number } }>(
@@ -158,6 +181,7 @@ const reports = {
   reviewCoverage: readJson<ReviewCoverage>("content/automation/review-coverage-report.json"),
   reviewRoadmap: readJson<ReviewRoadmap>("content/automation/review-priority-roadmap.json"),
   nextReviewSourcePack: readJson<NextReviewSourcePack>("content/automation/next-review-source-pack.json"),
+  publicExpansion: readJson<PublicExpansionQueue>("content/automation/public-expansion-queue.json"),
   review: readJson<{ counts: { candidates: number; returned: number; rejected: Record<string, number> }; recommendedToday: ReviewCandidate[] }>(
     "content/automation/review-candidates.json",
   ),
@@ -220,6 +244,15 @@ const payload = {
     safeDraftItems: reports.nextReviewSourcePack.data?.summary.safeDraftItems ?? null,
     top: reports.nextReviewSourcePack.data?.items.slice(0, 6) ?? [],
     unsafeItems: reports.nextReviewSourcePack.data?.summary.unsafeItems ?? null,
+  },
+  publicExpansion: {
+    approvalWaves: reports.publicExpansion.data?.summary.approvalWaves ?? null,
+    duplicateFiles: reports.publicExpansion.data?.summary.duplicateFiles ?? null,
+    items: reports.publicExpansion.data?.summary.items ?? null,
+    sourcePackReadyItems: reports.publicExpansion.data?.summary.sourcePackReadyItems ?? null,
+    top: reports.publicExpansion.data?.items.slice(0, 9) ?? [],
+    unsafeItems: reports.publicExpansion.data?.summary.unsafeItems ?? null,
+    waves: reports.publicExpansion.data?.approvalWaves.slice(0, 3) ?? [],
   },
   preflight: {
     checked: reports.preflight.data?.summary.checked ?? null,
@@ -306,11 +339,15 @@ function buildNextActions() {
   if (!reports.nextReviewSourcePack.data || reports.nextReviewSourcePack.data.summary.unsafeItems > 0) {
     return ["Open docs/next-review-source-pack.md and resolve source-pack guardrail issues before manual review."];
   }
+  if (!reports.publicExpansion.data || reports.publicExpansion.data.summary.unsafeItems > 0) {
+    return ["Open docs/public-expansion-queue.md and resolve expansion queue guardrail issues before manual review."];
+  }
   if (!reports.reviewCoverage.data || reports.reviewCoverage.data.summary.missingCoverage > 0) {
     return ["Open docs/review-coverage-report.md and regenerate coverage for all planned review candidates."];
   }
   return [
     "Manually review the three recommended drafts in docs/review-preflight.md.",
+    "Use docs/public-expansion-queue.md as the approval-wave order for expanding public coverage.",
     "Use docs/next-review-source-pack.md to fact-check official sources for the roadmap's next review files.",
     "Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.",
     "If approved by a human, run mark:review with --confirm-human for approved files only.",
@@ -409,6 +446,20 @@ function toMarkdown(data: typeof payload) {
     "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ...data.nextReviewSourcePack.top.map((item) => (
       `| ${item.safeDraft} | ${item.currentPack} | ${item.plannedBatch} | ${item.qualityScore} | ${item.officialSourceTargets.length} | ${item.factCheckQueries.length} | ${item.riskReviewChecklist.length} | ${item.title} | ${item.file} |`
+    )),
+    "",
+    "## Public Expansion Queue",
+    "",
+    `- Items: ${data.publicExpansion.items}`,
+    `- Approval waves: ${data.publicExpansion.approvalWaves}`,
+    `- Source-pack-ready items: ${data.publicExpansion.sourcePackReadyItems}`,
+    `- Unsafe items: ${data.publicExpansion.unsafeItems}`,
+    `- Duplicate files: ${data.publicExpansion.duplicateFiles}`,
+    "",
+    "| Wave | Score | Source pack | Current | Planned | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- |",
+    ...data.publicExpansion.top.map((item) => (
+      `| ${item.approvalWave} | ${item.priorityScore} | ${item.sourcePackReady} | ${item.currentPack} | ${item.plannedBatch} | ${item.title} | ${item.file} |`
     )),
     "",
     "## Preflight",

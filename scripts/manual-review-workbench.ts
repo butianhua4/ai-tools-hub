@@ -101,6 +101,29 @@ type NextReviewSourcePack = {
   };
 };
 
+type PublicExpansionQueue = {
+  approvalWaves: Array<{
+    files: string[];
+    wave: number;
+  }>;
+  summary: {
+    approvalWaves: number;
+    duplicateFiles: number;
+    items: number;
+    sourcePackReadyItems: number;
+    unsafeItems: number;
+  };
+  items: Array<{
+    approvalWave: number;
+    currentPack: boolean;
+    file: string;
+    plannedBatch: boolean;
+    priorityScore: number;
+    sourcePackReady: boolean;
+    title: string;
+  }>;
+};
+
 type ProjectStatus = {
   articles: { publicPublished: number; publishableNow: unknown[]; statusCounts: Record<string, number> };
 };
@@ -119,6 +142,7 @@ function main() {
   const reviewCoverage = readJson<ReviewCoverage>("content/automation/review-coverage-report.json");
   const reviewRoadmap = readJson<ReviewRoadmap>("content/automation/review-priority-roadmap.json");
   const nextReviewSourcePack = readJson<NextReviewSourcePack>("content/automation/next-review-source-pack.json");
+  const publicExpansion = readJson<PublicExpansionQueue>("content/automation/public-expansion-queue.json");
   const deploymentCoverage = readJson<DeploymentCoverage>("content/automation/ai-deployment-coverage.json");
   const promptCoverage = readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json");
   const projectStatus = readJson<ProjectStatus>("content/automation/project-status.json");
@@ -197,6 +221,19 @@ function main() {
         title: item.title,
       })),
     },
+    publicExpansion: {
+      summary: publicExpansion.summary,
+      firstWaves: publicExpansion.approvalWaves.slice(0, 3),
+      topItems: publicExpansion.items.slice(0, 9).map((item) => ({
+        approvalWave: item.approvalWave,
+        currentPack: item.currentPack,
+        file: item.file,
+        plannedBatch: item.plannedBatch,
+        priorityScore: item.priorityScore,
+        sourcePackReady: item.sourcePackReady,
+        title: item.title,
+      })),
+    },
     deploymentCoverage: {
       summary: deploymentCoverage.summary,
       topTopics: deploymentCoverage.coverage.slice(0, 6).map((item) => ({
@@ -215,7 +252,7 @@ function main() {
         publicMatches: item.publicMatches,
       })),
     },
-    nextActions: buildNextActions(projectStatus, liveSearch, cannibalization, publishPack.items.length, reviewCoverage, nextReviewSourcePack),
+    nextActions: buildNextActions(projectStatus, liveSearch, cannibalization, publishPack.items.length, reviewCoverage, nextReviewSourcePack, publicExpansion),
   };
 
   const jsonTarget = path.join(process.cwd(), "content", "automation", "manual-review-workbench.json");
@@ -234,6 +271,7 @@ function buildNextActions(
   currentItemsCovered: number,
   reviewCoverage: ReviewCoverage,
   nextReviewSourcePack: NextReviewSourcePack,
+  publicExpansion: PublicExpansionQueue,
 ) {
   if (projectStatus.articles.publishableNow.length > 0) return ["Stop and inspect publishableNow before adding more review candidates."];
   if (!liveSearch.ok || liveSearch.failedChecks.length > 0) return ["Fix live search surface failures before any publishing action."];
@@ -248,6 +286,9 @@ function buildNextActions(
   ) {
     return ["Fill next review source pack source, fact-check, and risk tasks before any mark:review action."];
   }
+  if (publicExpansion.summary.unsafeItems > 0 || publicExpansion.summary.duplicateFiles > 0) {
+    return ["Resolve public expansion queue safety or duplicate issues before any mark:review action."];
+  }
   if (
     reviewCoverage.summary.itemsMissingOfficialSources > 0 ||
     reviewCoverage.summary.itemsMissingFactCheckQueries > 0 ||
@@ -257,6 +298,7 @@ function buildNextActions(
   }
   return [
     "Review the current publish readiness items in docs/publish-readiness-pack.md.",
+    "Use docs/public-expansion-queue.md as the approval-wave order for expanding public articles.",
     "Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.",
     "Use docs/next-review-source-pack.md to verify official sources for the roadmap's next review files.",
     "Use docs/review-coverage-report.md to inspect all planned review candidates, not only today's pack.",
@@ -306,6 +348,19 @@ function toMarkdown(payload: {
       qualityScore: number;
       riskReviewChecklist: number;
       safeDraft: boolean;
+      title: string;
+    }>;
+  };
+  publicExpansion: {
+    firstWaves: Array<{ files: string[]; wave: number }>;
+    summary: PublicExpansionQueue["summary"];
+    topItems: Array<{
+      approvalWave: number;
+      currentPack: boolean;
+      file: string;
+      plannedBatch: boolean;
+      priorityScore: number;
+      sourcePackReady: boolean;
       title: string;
     }>;
   };
@@ -429,6 +484,20 @@ function toMarkdown(payload: {
     "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ...payload.nextReviewSourcePack.topItems.map((item) => (
       `| ${item.safeDraft} | ${item.currentPack} | ${item.plannedBatch} | ${item.qualityScore} | ${item.officialSourceTargets} | ${item.factCheckQueries} | ${item.riskReviewChecklist} | ${item.title} | ${item.file} |`
+    )),
+    "",
+    "## Public Expansion Queue",
+    "",
+    `- Items: ${payload.publicExpansion.summary.items}`,
+    `- Approval waves: ${payload.publicExpansion.summary.approvalWaves}`,
+    `- Source-pack-ready items: ${payload.publicExpansion.summary.sourcePackReadyItems}`,
+    `- Unsafe items: ${payload.publicExpansion.summary.unsafeItems}`,
+    `- Duplicate files: ${payload.publicExpansion.summary.duplicateFiles}`,
+    "",
+    "| Wave | Score | Source pack | Current | Planned | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- |",
+    ...payload.publicExpansion.topItems.map((item) => (
+      `| ${item.approvalWave} | ${item.priorityScore} | ${item.sourcePackReady} | ${item.currentPack} | ${item.plannedBatch} | ${item.title} | ${item.file} |`
     )),
     "",
     "## AI Deployment Coverage",

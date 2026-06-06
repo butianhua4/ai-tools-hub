@@ -114,6 +114,18 @@ async function main() {
       unsafeItems: number;
     };
   }>("content/automation/next-review-source-pack.json");
+  const publicExpansion = readJson<{
+    guardrails: { autoMarkReview: boolean; autoPublish: boolean };
+    publishingBoundary: { publishableNow: number };
+    summary: {
+      approvalWaves: number;
+      duplicateFiles: number;
+      items: number;
+      roadmapNextReviewFiles: number;
+      sourcePackReadyItems: number;
+      unsafeItems: number;
+    };
+  }>("content/automation/public-expansion-queue.json");
   const liveSearch = readJson<{ articles: { publicCount: number }; failedChecks: string[]; ok: boolean }>("content/automation/live-search-surface.json");
   const workbench = readJson<{
     guardrails: { autoMarkReview: boolean; autoPublish: boolean };
@@ -382,6 +394,29 @@ async function main() {
         nextReviewSourcePack.summary.unsafeItems === 0 &&
         nextReviewSourcePack.summary.safeDraftItems === nextReviewSourcePack.summary.items,
       detail: `unsafeItems=${nextReviewSourcePack.summary.unsafeItems}, safeDraftItems=${nextReviewSourcePack.summary.safeDraftItems}`,
+    },
+    {
+      name: "public expansion queue is manual and covers roadmap files",
+      ok:
+        publicExpansion.guardrails.autoMarkReview === false &&
+        publicExpansion.guardrails.autoPublish === false &&
+        publicExpansion.summary.items >= reviewRoadmap.summary.uniqueNextReviewFiles &&
+        publicExpansion.summary.roadmapNextReviewFiles === reviewRoadmap.summary.uniqueNextReviewFiles &&
+        publicExpansion.summary.approvalWaves >= 4,
+      detail: `items=${publicExpansion.summary.items}, waves=${publicExpansion.summary.approvalWaves}, roadmap=${reviewRoadmap.summary.uniqueNextReviewFiles}`,
+    },
+    {
+      name: "public expansion queue only contains source-pack-ready safe drafts",
+      ok:
+        publicExpansion.summary.unsafeItems === 0 &&
+        publicExpansion.summary.duplicateFiles === 0 &&
+        publicExpansion.summary.sourcePackReadyItems === publicExpansion.summary.items,
+      detail: `unsafeItems=${publicExpansion.summary.unsafeItems}, duplicateFiles=${publicExpansion.summary.duplicateFiles}, sourcePackReadyItems=${publicExpansion.summary.sourcePackReadyItems}`,
+    },
+    {
+      name: "public expansion queue stops before publishing",
+      ok: publicExpansion.publishingBoundary.publishableNow === 0,
+      detail: `publishableNow=${publicExpansion.publishingBoundary.publishableNow}`,
     },
     {
       name: "live search surface check passed",
