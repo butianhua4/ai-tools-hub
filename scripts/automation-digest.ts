@@ -101,6 +101,29 @@ type ReviewRoadmap = {
   };
 };
 
+type NextReviewSourcePack = {
+  items: Array<{
+    currentPack: boolean;
+    factCheckQueries: string[];
+    file: string;
+    officialSourceTargets: string[];
+    plannedBatch: boolean;
+    qualityScore: number;
+    riskReviewChecklist: string[];
+    safeDraft: boolean;
+    title: string;
+  }>;
+  summary: {
+    items: number;
+    missingApprovalChecks: number;
+    missingFactCheckQueries: number;
+    missingOfficialSources: number;
+    missingRiskChecks: number;
+    safeDraftItems: number;
+    unsafeItems: number;
+  };
+};
+
 const reports = {
   cannibalization: readJson<{ summary: { conflicts: number; reviewBatchConflicts: number } }>("content/automation/content-cannibalization.json"),
   freshness: readJson<{ summary: { currentReviewItems: number; highRisk: number; mediumRisk: number; plannedReviewItems: number } }>(
@@ -134,6 +157,7 @@ const reports = {
   ),
   reviewCoverage: readJson<ReviewCoverage>("content/automation/review-coverage-report.json"),
   reviewRoadmap: readJson<ReviewRoadmap>("content/automation/review-priority-roadmap.json"),
+  nextReviewSourcePack: readJson<NextReviewSourcePack>("content/automation/next-review-source-pack.json"),
   review: readJson<{ counts: { candidates: number; returned: number; rejected: Record<string, number> }; recommendedToday: ReviewCandidate[] }>(
     "content/automation/review-candidates.json",
   ),
@@ -186,6 +210,16 @@ const payload = {
     top: reports.reviewRoadmap.data?.lanes.slice(0, 6) ?? [],
     uniqueNextReviewFiles: reports.reviewRoadmap.data?.summary.uniqueNextReviewFiles ?? null,
     unsafeCandidates: reports.reviewRoadmap.data?.summary.unsafeCandidates ?? null,
+  },
+  nextReviewSourcePack: {
+    items: reports.nextReviewSourcePack.data?.summary.items ?? null,
+    missingApprovalChecks: reports.nextReviewSourcePack.data?.summary.missingApprovalChecks ?? null,
+    missingFactCheckQueries: reports.nextReviewSourcePack.data?.summary.missingFactCheckQueries ?? null,
+    missingOfficialSources: reports.nextReviewSourcePack.data?.summary.missingOfficialSources ?? null,
+    missingRiskChecks: reports.nextReviewSourcePack.data?.summary.missingRiskChecks ?? null,
+    safeDraftItems: reports.nextReviewSourcePack.data?.summary.safeDraftItems ?? null,
+    top: reports.nextReviewSourcePack.data?.items.slice(0, 6) ?? [],
+    unsafeItems: reports.nextReviewSourcePack.data?.summary.unsafeItems ?? null,
   },
   preflight: {
     checked: reports.preflight.data?.summary.checked ?? null,
@@ -269,11 +303,15 @@ function buildNextActions() {
   if (missingReports.length) return [`Fix missing reports: ${missingReports.join(", ")}`];
   if (!reports.gate.data?.ok) return ["Open docs/automation-gate.md and fix failed checks before any review or publish action."];
   if (!reports.preflight.data?.ok) return ["Open docs/review-preflight.md and resolve candidate issues before marking review."];
+  if (!reports.nextReviewSourcePack.data || reports.nextReviewSourcePack.data.summary.unsafeItems > 0) {
+    return ["Open docs/next-review-source-pack.md and resolve source-pack guardrail issues before manual review."];
+  }
   if (!reports.reviewCoverage.data || reports.reviewCoverage.data.summary.missingCoverage > 0) {
     return ["Open docs/review-coverage-report.md and regenerate coverage for all planned review candidates."];
   }
   return [
     "Manually review the three recommended drafts in docs/review-preflight.md.",
+    "Use docs/next-review-source-pack.md to fact-check official sources for the roadmap's next review files.",
     "Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.",
     "If approved by a human, run mark:review with --confirm-human for approved files only.",
     "Publish only status=review articles in a 1-3 article batch after a dry-run.",
@@ -356,6 +394,22 @@ function toMarkdown(data: typeof payload) {
     "Next review files:",
     "",
     ...data.reviewRoadmap.nextReviewFiles.map((file) => `- ${file}`),
+    "",
+    "## Next Review Source Pack",
+    "",
+    `- Items: ${data.nextReviewSourcePack.items}`,
+    `- Safe draft items: ${data.nextReviewSourcePack.safeDraftItems}`,
+    `- Unsafe items: ${data.nextReviewSourcePack.unsafeItems}`,
+    `- Missing official sources: ${data.nextReviewSourcePack.missingOfficialSources}`,
+    `- Missing fact-check queries: ${data.nextReviewSourcePack.missingFactCheckQueries}`,
+    `- Missing approval checks: ${data.nextReviewSourcePack.missingApprovalChecks}`,
+    `- Missing risk checks: ${data.nextReviewSourcePack.missingRiskChecks}`,
+    "",
+    "| Safe | Current | Planned | Score | Sources | Queries | Risk checks | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...data.nextReviewSourcePack.top.map((item) => (
+      `| ${item.safeDraft} | ${item.currentPack} | ${item.plannedBatch} | ${item.qualityScore} | ${item.officialSourceTargets.length} | ${item.factCheckQueries.length} | ${item.riskReviewChecklist.length} | ${item.title} | ${item.file} |`
+    )),
     "",
     "## Preflight",
     "",

@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-06T12:00:43.408Z
+Generated at: 2026-06-06T12:10:38.110Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 33
-- Passed: 33
+- Checks: 36
+- Passed: 36
 - Failed: 0
 
 ## Checks
@@ -45,5 +45,8 @@ Overall: PASS
 | review priority roadmap has enough actionable lanes | PASS | lanes=12, uniqueNextReviewFiles=19 |
 | review priority roadmap includes review context | PASS | lanes=12, nextReviewFiles=19 |
 | review priority roadmap candidates stay safe | PASS | unsafeCandidates=0 |
+| next review source pack covers roadmap files | PASS | items=19, roadmap=19 |
+| next review source pack includes source, fact-check, approval, and risk tasks | PASS | {"approval":0,"factCheck":0,"risk":0,"sources":0} |
+| next review source pack keeps candidates draft and non-indexable | PASS | unsafeItems=0, safeDraftItems=19 |
 | live search surface check passed | PASS | publicArticles=15, failed=0 |
 | manual review workbench is ready and stops before publishing | PASS | currentItemsCovered=3, publishableNow=0 |

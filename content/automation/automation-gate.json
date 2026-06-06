@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T12:00:43.408Z",
+  "generatedAt": "2026-06-06T12:10:38.110Z",
   "ok": true,
   "summary": {
-    "checks": 33,
+    "checks": 36,
     "failed": 0,
-    "passed": 33
+    "passed": 36
   },
   "failed": [],
   "checks": [
@@ -161,6 +161,21 @@
       "name": "review priority roadmap candidates stay safe",
       "ok": true,
       "detail": "unsafeCandidates=0"
+    },
+    {
+      "name": "next review source pack covers roadmap files",
+      "ok": true,
+      "detail": "items=19, roadmap=19"
+    },
+    {
+      "name": "next review source pack includes source, fact-check, approval, and risk tasks",
+      "ok": true,
+      "detail": "{\"approval\":0,\"factCheck\":0,\"risk\":0,\"sources\":0}"
+    },
+    {
+      "name": "next review source pack keeps candidates draft and non-indexable",
+      "ok": true,
+      "detail": "unsafeItems=0, safeDraftItems=19"
     },
     {
       "name": "live search surface check passed",

@@ -23,6 +23,7 @@ const tasks: Task[] = [
   { title: "Generate industry prompt coverage", args: ["run", "content:prompt-coverage"] },
   { title: "Generate review batch plan", args: ["run", "automation:review-plan"] },
   { title: "Generate review priority roadmap", args: ["run", "automation:review-roadmap"] },
+  { title: "Generate next review source pack", args: ["run", "automation:next-review-source-pack"] },
   { title: "Run content cannibalization check", args: ["run", "content:cannibalization"] },
   { title: "Run content freshness check", args: ["run", "content:freshness"] },
   { title: "Generate review coverage report", args: ["run", "automation:review-coverage"] },

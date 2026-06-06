@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T12:00:43.869Z",
+  "generatedAt": "2026-06-06T12:10:38.045Z",
   "guardrails": {
     "autoPublish": false,
     "note": "Digest is read-only. It summarizes local automation reports and does not use traffic, impressions, or Search Console performance data."
@@ -836,6 +836,381 @@
     ],
     "uniqueNextReviewFiles": 19,
     "unsafeCandidates": 0
+  },
+  "nextReviewSourcePack": {
+    "items": 19,
+    "missingApprovalChecks": 0,
+    "missingFactCheckQueries": 0,
+    "missingOfficialSources": 0,
+    "missingRiskChecks": 0,
+    "safeDraftItems": 19,
+    "top": [
+      {
+        "approvalChecklist": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Quality score is at least 100: true",
+          "Source notes are present: true",
+          "Article has internal links: true",
+          "Reviewer confirms the article answers one clear search intent.",
+          "Reviewer confirms factual claims against official docs before any status change."
+        ],
+        "category": "AI 记忆",
+        "currentPack": false,
+        "factCheckQueries": [
+          "AI Agent 记忆 official docs latest",
+          "AI Agent 记忆 official documentation current limits",
+          "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 fact check official docs",
+          "AI 记忆 official docs limits pricing changelog",
+          "RAG 知识库搭建教程",
+          "企业知识库 AI 部署",
+          "向量数据库 RAG 教程",
+          "RAG 评测怎么做"
+        ],
+        "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "internalLinks": 6,
+        "lane": "deployment: RAG、知识库和向量检索",
+        "lanePriorityScore": 348,
+        "officialSourceTargets": [
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "LangChain docs: https://python.langchain.com/docs",
+          "LlamaIndex docs: https://docs.llamaindex.ai",
+          "Hugging Face docs: https://huggingface.co/docs",
+          "OpenAI API docs: https://platform.openai.com/docs",
+          "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+          "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+          "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering"
+        ],
+        "plannedBatch": true,
+        "primaryKeyword": "AI Agent 记忆",
+        "publishBatch": 40,
+        "qualityScore": 100,
+        "riskReviewChecklist": [
+          "No income, ranking, approval, or client acquisition guarantee.",
+          "No instruction to bypass platform, payment, messaging, account, or review rules.",
+          "No API key, credential, private customer data, or account detail is included.",
+          "Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.",
+          "Agent or workflow claims include permissions, human approval, logging, failure handling, and rollback boundaries.",
+          "RAG or knowledge-base claims distinguish retrieval quality, citation checks, privacy boundaries, and hallucination risk.",
+          "Deployment guidance includes environment variables, smoke checks, rate limits, logs, resource limits, and rollback steps.",
+          "Prompt examples include input context, output criteria, review rules, and adaptation notes."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotesPresent": true,
+        "status": "draft",
+        "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
+        "wordCountChinese": 1701,
+        "workflowAngles": [
+          "文档清洗",
+          "chunk",
+          "embedding",
+          "metadata",
+          "引用来源",
+          "测试集"
+        ]
+      },
+      {
+        "approvalChecklist": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Quality score is at least 100: true",
+          "Source notes are present: true",
+          "Article has internal links: true",
+          "Reviewer confirms the article answers one clear search intent.",
+          "Reviewer confirms factual claims against official docs before any status change."
+        ],
+        "category": "AI 部署",
+        "currentPack": true,
+        "factCheckQueries": [
+          "客服 AI 模型选型 official docs latest",
+          "客服 AI 模型选型 official documentation current limits",
+          "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 fact check official docs",
+          "AI 部署 official docs limits pricing changelog",
+          "RAG 知识库搭建教程",
+          "企业知识库 AI 部署",
+          "向量数据库 RAG 教程",
+          "RAG 评测怎么做"
+        ],
+        "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+        "internalLinks": 4,
+        "lane": "deployment: RAG、知识库和向量检索",
+        "lanePriorityScore": 348,
+        "officialSourceTargets": [
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "LangChain docs: https://python.langchain.com/docs",
+          "LlamaIndex docs: https://docs.llamaindex.ai",
+          "Hugging Face docs: https://huggingface.co/docs",
+          "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering"
+        ],
+        "plannedBatch": true,
+        "primaryKeyword": "客服 AI 模型选型",
+        "publishBatch": 34,
+        "qualityScore": 100,
+        "riskReviewChecklist": [
+          "No income, ranking, approval, or client acquisition guarantee.",
+          "No instruction to bypass platform, payment, messaging, account, or review rules.",
+          "No API key, credential, private customer data, or account detail is included.",
+          "Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.",
+          "RAG or knowledge-base claims distinguish retrieval quality, citation checks, privacy boundaries, and hallucination risk.",
+          "Prompt examples include input context, output criteria, review rules, and adaptation notes."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotesPresent": true,
+        "status": "draft",
+        "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+        "wordCountChinese": 1232,
+        "workflowAngles": [
+          "文档清洗",
+          "chunk",
+          "embedding",
+          "metadata",
+          "引用来源",
+          "测试集"
+        ]
+      },
+      {
+        "approvalChecklist": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Quality score is at least 100: true",
+          "Source notes are present: true",
+          "Article has internal links: true",
+          "Reviewer confirms the article answers one clear search intent.",
+          "Reviewer confirms factual claims against official docs before any status change."
+        ],
+        "category": "接单报价",
+        "currentPack": false,
+        "factCheckQueries": [
+          "AI 自动化项目报价 official docs latest",
+          "AI 自动化项目报价 official documentation current limits",
+          "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 fact check official docs",
+          "接单报价 official docs limits pricing changelog",
+          "RAG 知识库搭建教程",
+          "企业知识库 AI 部署",
+          "向量数据库 RAG 教程",
+          "RAG 评测怎么做"
+        ],
+        "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "internalLinks": 4,
+        "lane": "deployment: RAG、知识库和向量检索",
+        "lanePriorityScore": 348,
+        "officialSourceTargets": [
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "LangChain docs: https://python.langchain.com/docs",
+          "LlamaIndex docs: https://docs.llamaindex.ai",
+          "Hugging Face docs: https://huggingface.co/docs",
+          "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+          "Dify docs: https://docs.dify.ai",
+          "n8n docs: https://docs.n8n.io"
+        ],
+        "plannedBatch": true,
+        "primaryKeyword": "AI 自动化项目报价",
+        "publishBatch": 33,
+        "qualityScore": 100,
+        "riskReviewChecklist": [
+          "No income, ranking, approval, or client acquisition guarantee.",
+          "No instruction to bypass platform, payment, messaging, account, or review rules.",
+          "No API key, credential, private customer data, or account detail is included.",
+          "Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.",
+          "Agent or workflow claims include permissions, human approval, logging, failure handling, and rollback boundaries.",
+          "RAG or knowledge-base claims distinguish retrieval quality, citation checks, privacy boundaries, and hallucination risk.",
+          "Deployment guidance includes environment variables, smoke checks, rate limits, logs, resource limits, and rollback steps."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotesPresent": true,
+        "status": "draft",
+        "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
+        "wordCountChinese": 1303,
+        "workflowAngles": [
+          "文档清洗",
+          "chunk",
+          "embedding",
+          "metadata",
+          "引用来源",
+          "测试集"
+        ]
+      },
+      {
+        "approvalChecklist": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Quality score is at least 100: true",
+          "Source notes are present: true",
+          "Article has internal links: true",
+          "Reviewer confirms the article answers one clear search intent.",
+          "Reviewer confirms factual claims against official docs before any status change."
+        ],
+        "category": "AI Agent",
+        "currentPack": true,
+        "factCheckQueries": [
+          "AI Agent 部署 official docs latest",
+          "AI Agent 部署 official documentation current limits",
+          "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 fact check official docs",
+          "AI Agent official docs limits pricing changelog",
+          "AI Agent 部署教程",
+          "Agent 工具调用教程",
+          "AI 工作流部署",
+          "Agent 人工审核流程"
+        ],
+        "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "internalLinks": 6,
+        "lane": "deployment: Agent 部署、工具调用和工作流",
+        "lanePriorityScore": 338,
+        "officialSourceTargets": [
+          "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+          "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+          "LangChain docs: https://python.langchain.com/docs"
+        ],
+        "plannedBatch": true,
+        "primaryKeyword": "AI Agent 部署",
+        "publishBatch": 40,
+        "qualityScore": 100,
+        "riskReviewChecklist": [
+          "No income, ranking, approval, or client acquisition guarantee.",
+          "No instruction to bypass platform, payment, messaging, account, or review rules.",
+          "No API key, credential, private customer data, or account detail is included.",
+          "Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.",
+          "Agent or workflow claims include permissions, human approval, logging, failure handling, and rollback boundaries.",
+          "Deployment guidance includes environment variables, smoke checks, rate limits, logs, resource limits, and rollback steps."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotesPresent": true,
+        "status": "draft",
+        "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+        "wordCountChinese": 1540,
+        "workflowAngles": [
+          "工具白名单",
+          "多步执行",
+          "人工确认",
+          "失败重试",
+          "日志追踪"
+        ]
+      },
+      {
+        "approvalChecklist": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Quality score is at least 100: true",
+          "Source notes are present: true",
+          "Article has internal links: true",
+          "Reviewer confirms the article answers one clear search intent.",
+          "Reviewer confirms factual claims against official docs before any status change."
+        ],
+        "category": "AI 提示词",
+        "currentPack": true,
+        "factCheckQueries": [
+          "全行业 AI 提示词模板 official docs latest",
+          "全行业 AI 提示词模板 official documentation current limits",
+          "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 fact check official docs",
+          "AI 提示词 official docs limits pricing changelog",
+          "AI 提示词大全",
+          "销售 AI 提示词",
+          "客服 AI 提示词",
+          "运营 AI 提示词",
+          "HR AI 提示词"
+        ],
+        "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "internalLinks": 6,
+        "lane": "content-backlog: 全行业 AI 提示词和工作流模板",
+        "lanePriorityScore": 334,
+        "officialSourceTargets": [
+          "Use the article's publish readiness pack or official vendor docs listed in coverage reports before approval.",
+          "OpenAI API docs: https://platform.openai.com/docs",
+          "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering"
+        ],
+        "plannedBatch": true,
+        "primaryKeyword": "全行业 AI 提示词模板",
+        "publishBatch": 40,
+        "qualityScore": 100,
+        "riskReviewChecklist": [
+          "No income, ranking, approval, or client acquisition guarantee.",
+          "No instruction to bypass platform, payment, messaging, account, or review rules.",
+          "No API key, credential, private customer data, or account detail is included.",
+          "Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.",
+          "RAG or knowledge-base claims distinguish retrieval quality, citation checks, privacy boundaries, and hallucination risk.",
+          "Prompt examples include input context, output criteria, review rules, and adaptation notes."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotesPresent": true,
+        "status": "draft",
+        "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+        "wordCountChinese": 1862,
+        "workflowAngles": [
+          "search intent",
+          "fact review",
+          "risk language",
+          "internal links"
+        ]
+      },
+      {
+        "approvalChecklist": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Quality score is at least 100: true",
+          "Source notes are present: true",
+          "Article has internal links: true",
+          "Reviewer confirms the article answers one clear search intent.",
+          "Reviewer confirms factual claims against official docs before any status change."
+        ],
+        "category": "AI 提示词",
+        "currentPack": false,
+        "factCheckQueries": [
+          "团队 AI 提示词库 official docs latest",
+          "团队 AI 提示词库 official documentation current limits",
+          "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用 fact check official docs",
+          "AI 提示词 official docs limits pricing changelog",
+          "AI 提示词大全",
+          "销售 AI 提示词",
+          "客服 AI 提示词",
+          "运营 AI 提示词",
+          "HR AI 提示词"
+        ],
+        "file": "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+        "internalLinks": 3,
+        "lane": "content-backlog: 全行业 AI 提示词和工作流模板",
+        "lanePriorityScore": 334,
+        "officialSourceTargets": [
+          "Use the article's publish readiness pack or official vendor docs listed in coverage reports before approval.",
+          "OpenAI API docs: https://platform.openai.com/docs",
+          "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering"
+        ],
+        "plannedBatch": true,
+        "primaryKeyword": "团队 AI 提示词库",
+        "publishBatch": 32,
+        "qualityScore": 100,
+        "riskReviewChecklist": [
+          "No income, ranking, approval, or client acquisition guarantee.",
+          "No instruction to bypass platform, payment, messaging, account, or review rules.",
+          "No API key, credential, private customer data, or account detail is included.",
+          "Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.",
+          "Prompt examples include input context, output criteria, review rules, and adaptation notes."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotesPresent": true,
+        "status": "draft",
+        "title": "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用",
+        "wordCountChinese": 1269,
+        "workflowAngles": [
+          "search intent",
+          "fact review",
+          "risk language",
+          "internal links"
+        ]
+      }
+    ],
+    "unsafeItems": 0
   },
   "preflight": {
     "checked": 3,
@@ -2111,7 +2486,7 @@
   "liveSearch": {
     "checkedArticles": 15,
     "failedChecks": [],
-    "generatedAt": "2026-06-06T12:00:35.183Z",
+    "generatedAt": "2026-06-06T12:10:29.525Z",
     "missingFromSitemap": [],
     "ok": true,
     "publicArticles": 15,
@@ -2164,6 +2539,7 @@
   },
   "nextActions": [
     "Manually review the three recommended drafts in docs/review-preflight.md.",
+    "Use docs/next-review-source-pack.md to fact-check official sources for the roadmap's next review files.",
     "Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.",
     "If approved by a human, run mark:review with --confirm-human for approved files only.",
     "Publish only status=review articles in a 1-3 article batch after a dry-run."

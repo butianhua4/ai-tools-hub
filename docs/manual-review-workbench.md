@@ -1,6 +1,6 @@
 # Manual Review Workbench
 
-Generated at: 2026-06-06T11:59:27.661Z
+Generated at: 2026-06-06T12:09:19.925Z
 
 This workbench is read-only. It does not publish articles or mark drafts for review.
 
@@ -114,6 +114,25 @@ Next review files:
 - content/blog/open-webui-functions-pipelines-deployment-guide.mdx
 - content/blog/local-llm-vram-not-enough-guide.mdx
 
+## Next Review Source Pack
+
+- Items: 19
+- Safe draft items: 19
+- Unsafe items: 0
+- Missing official sources: 0
+- Missing fact-check queries: 0
+- Missing approval checks: 0
+- Missing risk checks: 0
+
+| Safe | Current | Planned | Score | Sources | Queries | Risk checks | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| true | false | true | 100 | 8 | 8 | 8 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| true | true | true | 100 | 5 | 8 | 6 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| true | false | true | 100 | 7 | 8 | 7 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+| true | true | true | 100 | 3 | 8 | 6 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| true | true | true | 100 | 3 | 9 | 6 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| true | false | true | 100 | 3 | 9 | 5 | 团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用 | content/blog/ai-prompt-library-team-knowledge-base-guide.mdx |
+
 ## AI Deployment Coverage
 
 - Topics: 10
@@ -157,6 +176,7 @@ Next review files:
 
 - Review the current publish readiness items in docs/publish-readiness-pack.md.
 - Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.
+- Use docs/next-review-source-pack.md to verify official sources for the roadmap's next review files.
 - Use docs/review-coverage-report.md to inspect all planned review candidates, not only today's pack.
 - Use docs/ai-deployment-coverage.md to prioritize deployment, Agent, RAG, and model infrastructure drafts.
 - Use docs/industry-prompt-coverage.md to prioritize broad industry AI prompt drafts for future review batches.

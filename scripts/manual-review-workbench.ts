@@ -78,6 +78,29 @@ type ReviewRoadmap = {
   };
 };
 
+type NextReviewSourcePack = {
+  items: Array<{
+    currentPack: boolean;
+    factCheckQueries: string[];
+    file: string;
+    officialSourceTargets: string[];
+    plannedBatch: boolean;
+    qualityScore: number;
+    riskReviewChecklist: string[];
+    safeDraft: boolean;
+    title: string;
+  }>;
+  summary: {
+    items: number;
+    missingApprovalChecks: number;
+    missingFactCheckQueries: number;
+    missingOfficialSources: number;
+    missingRiskChecks: number;
+    safeDraftItems: number;
+    unsafeItems: number;
+  };
+};
+
 type ProjectStatus = {
   articles: { publicPublished: number; publishableNow: unknown[]; statusCounts: Record<string, number> };
 };
@@ -95,6 +118,7 @@ function main() {
   const cannibalization = readJson<Cannibalization>("content/automation/content-cannibalization.json");
   const reviewCoverage = readJson<ReviewCoverage>("content/automation/review-coverage-report.json");
   const reviewRoadmap = readJson<ReviewRoadmap>("content/automation/review-priority-roadmap.json");
+  const nextReviewSourcePack = readJson<NextReviewSourcePack>("content/automation/next-review-source-pack.json");
   const deploymentCoverage = readJson<DeploymentCoverage>("content/automation/ai-deployment-coverage.json");
   const promptCoverage = readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json");
   const projectStatus = readJson<ProjectStatus>("content/automation/project-status.json");
@@ -159,6 +183,20 @@ function main() {
         publicMatches: item.publicMatches,
       })),
     },
+    nextReviewSourcePack: {
+      summary: nextReviewSourcePack.summary,
+      topItems: nextReviewSourcePack.items.slice(0, 6).map((item) => ({
+        currentPack: item.currentPack,
+        factCheckQueries: item.factCheckQueries.length,
+        file: item.file,
+        officialSourceTargets: item.officialSourceTargets.length,
+        plannedBatch: item.plannedBatch,
+        qualityScore: item.qualityScore,
+        riskReviewChecklist: item.riskReviewChecklist.length,
+        safeDraft: item.safeDraft,
+        title: item.title,
+      })),
+    },
     deploymentCoverage: {
       summary: deploymentCoverage.summary,
       topTopics: deploymentCoverage.coverage.slice(0, 6).map((item) => ({
@@ -177,7 +215,7 @@ function main() {
         publicMatches: item.publicMatches,
       })),
     },
-    nextActions: buildNextActions(projectStatus, liveSearch, cannibalization, publishPack.items.length, reviewCoverage),
+    nextActions: buildNextActions(projectStatus, liveSearch, cannibalization, publishPack.items.length, reviewCoverage, nextReviewSourcePack),
   };
 
   const jsonTarget = path.join(process.cwd(), "content", "automation", "manual-review-workbench.json");
@@ -195,12 +233,21 @@ function buildNextActions(
   cannibalization: Cannibalization,
   currentItemsCovered: number,
   reviewCoverage: ReviewCoverage,
+  nextReviewSourcePack: NextReviewSourcePack,
 ) {
   if (projectStatus.articles.publishableNow.length > 0) return ["Stop and inspect publishableNow before adding more review candidates."];
   if (!liveSearch.ok || liveSearch.failedChecks.length > 0) return ["Fix live search surface failures before any publishing action."];
   if (cannibalization.summary.reviewBatchConflicts > 0) return ["Resolve review batch cannibalization conflicts before marking review."];
   if (currentItemsCovered === 0) return ["Regenerate publish readiness pack before human review."];
   if (reviewCoverage.summary.missingCoverage > 0) return ["Regenerate review coverage report before human review."];
+  if (nextReviewSourcePack.summary.unsafeItems > 0) return ["Resolve next review source pack safety issues before human review."];
+  if (
+    nextReviewSourcePack.summary.missingOfficialSources > 0 ||
+    nextReviewSourcePack.summary.missingFactCheckQueries > 0 ||
+    nextReviewSourcePack.summary.missingRiskChecks > 0
+  ) {
+    return ["Fill next review source pack source, fact-check, and risk tasks before any mark:review action."];
+  }
   if (
     reviewCoverage.summary.itemsMissingOfficialSources > 0 ||
     reviewCoverage.summary.itemsMissingFactCheckQueries > 0 ||
@@ -211,6 +258,7 @@ function buildNextActions(
   return [
     "Review the current publish readiness items in docs/publish-readiness-pack.md.",
     "Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.",
+    "Use docs/next-review-source-pack.md to verify official sources for the roadmap's next review files.",
     "Use docs/review-coverage-report.md to inspect all planned review candidates, not only today's pack.",
     "Use docs/ai-deployment-coverage.md to prioritize deployment, Agent, RAG, and model infrastructure drafts.",
     "Use docs/industry-prompt-coverage.md to prioritize broad industry AI prompt drafts for future review batches.",
@@ -246,6 +294,20 @@ function toMarkdown(payload: {
     nextReviewFiles: string[];
     summary: ReviewRoadmap["summary"];
     topLanes: Array<{ candidates: number; lane: string; priorityScore: number; publicMatches: number }>;
+  };
+  nextReviewSourcePack: {
+    summary: NextReviewSourcePack["summary"];
+    topItems: Array<{
+      currentPack: boolean;
+      factCheckQueries: number;
+      file: string;
+      officialSourceTargets: number;
+      plannedBatch: boolean;
+      qualityScore: number;
+      riskReviewChecklist: number;
+      safeDraft: boolean;
+      title: string;
+    }>;
   };
   deploymentCoverage: {
     summary: DeploymentCoverage["summary"];
@@ -352,6 +414,22 @@ function toMarkdown(payload: {
     "Next review files:",
     "",
     ...payload.reviewRoadmap.nextReviewFiles.map((file) => `- ${file}`),
+    "",
+    "## Next Review Source Pack",
+    "",
+    `- Items: ${payload.nextReviewSourcePack.summary.items}`,
+    `- Safe draft items: ${payload.nextReviewSourcePack.summary.safeDraftItems}`,
+    `- Unsafe items: ${payload.nextReviewSourcePack.summary.unsafeItems}`,
+    `- Missing official sources: ${payload.nextReviewSourcePack.summary.missingOfficialSources}`,
+    `- Missing fact-check queries: ${payload.nextReviewSourcePack.summary.missingFactCheckQueries}`,
+    `- Missing approval checks: ${payload.nextReviewSourcePack.summary.missingApprovalChecks}`,
+    `- Missing risk checks: ${payload.nextReviewSourcePack.summary.missingRiskChecks}`,
+    "",
+    "| Safe | Current | Planned | Score | Sources | Queries | Risk checks | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...payload.nextReviewSourcePack.topItems.map((item) => (
+      `| ${item.safeDraft} | ${item.currentPack} | ${item.plannedBatch} | ${item.qualityScore} | ${item.officialSourceTargets} | ${item.factCheckQueries} | ${item.riskReviewChecklist} | ${item.title} | ${item.file} |`
+    )),
     "",
     "## AI Deployment Coverage",
     "",

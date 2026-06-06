@@ -100,6 +100,20 @@ async function main() {
       unsafeCandidates: number;
     };
   }>("content/automation/review-priority-roadmap.json");
+  const nextReviewSourcePack = readJson<{
+    guardrails: { autoMarkReview: boolean; autoPublish: boolean };
+    items: Array<{ file: string }>;
+    summary: {
+      items: number;
+      missingApprovalChecks: number;
+      missingFactCheckQueries: number;
+      missingOfficialSources: number;
+      missingRiskChecks: number;
+      roadmapNextReviewFiles: number;
+      safeDraftItems: number;
+      unsafeItems: number;
+    };
+  }>("content/automation/next-review-source-pack.json");
   const liveSearch = readJson<{ articles: { publicCount: number }; failedChecks: string[]; ok: boolean }>("content/automation/live-search-surface.json");
   const workbench = readJson<{
     guardrails: { autoMarkReview: boolean; autoPublish: boolean };
@@ -337,6 +351,37 @@ async function main() {
       name: "review priority roadmap candidates stay safe",
       ok: reviewRoadmap.summary.unsafeCandidates === 0,
       detail: `unsafeCandidates=${reviewRoadmap.summary.unsafeCandidates}`,
+    },
+    {
+      name: "next review source pack covers roadmap files",
+      ok:
+        nextReviewSourcePack.guardrails.autoMarkReview === false &&
+        nextReviewSourcePack.guardrails.autoPublish === false &&
+        nextReviewSourcePack.summary.items === reviewRoadmap.summary.uniqueNextReviewFiles &&
+        nextReviewSourcePack.summary.roadmapNextReviewFiles === reviewRoadmap.summary.uniqueNextReviewFiles &&
+        nextReviewSourcePack.items.length === reviewRoadmap.summary.uniqueNextReviewFiles,
+      detail: `items=${nextReviewSourcePack.summary.items}, roadmap=${reviewRoadmap.summary.uniqueNextReviewFiles}`,
+    },
+    {
+      name: "next review source pack includes source, fact-check, approval, and risk tasks",
+      ok:
+        nextReviewSourcePack.summary.missingOfficialSources === 0 &&
+        nextReviewSourcePack.summary.missingFactCheckQueries === 0 &&
+        nextReviewSourcePack.summary.missingApprovalChecks === 0 &&
+        nextReviewSourcePack.summary.missingRiskChecks === 0,
+      detail: JSON.stringify({
+        approval: nextReviewSourcePack.summary.missingApprovalChecks,
+        factCheck: nextReviewSourcePack.summary.missingFactCheckQueries,
+        risk: nextReviewSourcePack.summary.missingRiskChecks,
+        sources: nextReviewSourcePack.summary.missingOfficialSources,
+      }),
+    },
+    {
+      name: "next review source pack keeps candidates draft and non-indexable",
+      ok:
+        nextReviewSourcePack.summary.unsafeItems === 0 &&
+        nextReviewSourcePack.summary.safeDraftItems === nextReviewSourcePack.summary.items,
+      detail: `unsafeItems=${nextReviewSourcePack.summary.unsafeItems}, safeDraftItems=${nextReviewSourcePack.summary.safeDraftItems}`,
     },
     {
       name: "live search surface check passed",
