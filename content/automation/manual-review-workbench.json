@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T11:44:00.376Z",
+  "generatedAt": "2026-06-06T11:52:18.211Z",
   "guardrails": {
     "autoMarkReview": false,
     "autoPublish": false,
@@ -242,6 +242,59 @@
     "reviewBatchConflictItems": 0,
     "unsafeIndexingItems": 0
   },
+  "deploymentCoverage": {
+    "summary": {
+      "currentPackDeploymentItems": 2,
+      "deploymentDrafts": 208,
+      "deploymentPublicArticles": 3,
+      "plannedDeploymentItems": 6,
+      "reviewReadyDeploymentDrafts": 208,
+      "topics": 10,
+      "topicsWithoutPublicCoverage": 8,
+      "topicsWithReadyCandidates": 10,
+      "totalCandidateMentions": 50,
+      "uniqueCandidateFiles": 34,
+      "unsafeCandidateItems": 0
+    },
+    "topTopics": [
+      {
+        "candidates": 5,
+        "gapScore": 230,
+        "publicMatches": 0,
+        "topic": "Agent 部署、工具调用和工作流"
+      },
+      {
+        "candidates": 5,
+        "gapScore": 228,
+        "publicMatches": 0,
+        "topic": "RAG、知识库和向量检索"
+      },
+      {
+        "candidates": 5,
+        "gapScore": 224,
+        "publicMatches": 0,
+        "topic": "本地模型和开源模型部署"
+      },
+      {
+        "candidates": 5,
+        "gapScore": 220,
+        "publicMatches": 0,
+        "topic": "Dify、n8n、Flowise 和无代码 AI 自动化"
+      },
+      {
+        "candidates": 5,
+        "gapScore": 218,
+        "publicMatches": 0,
+        "topic": "模型 API 接入、限流和多模型降级"
+      },
+      {
+        "candidates": 5,
+        "gapScore": 217,
+        "publicMatches": 0,
+        "topic": "LLM Serving、GPU 和托管推理"
+      }
+    ]
+  },
   "promptCoverage": {
     "summary": {
       "currentPackPromptItems": 1,
@@ -298,6 +351,7 @@
   "nextActions": [
     "Review the current publish readiness items in docs/publish-readiness-pack.md.",
     "Use docs/review-coverage-report.md to inspect all planned review candidates, not only today's pack.",
+    "Use docs/ai-deployment-coverage.md to prioritize deployment, Agent, RAG, and model infrastructure drafts.",
     "Use docs/industry-prompt-coverage.md to prioritize broad industry AI prompt drafts for future review batches.",
     "Use docs/review-batch-plan.md to see the next topical batches after the current pack.",
     "Run dry-run mark:review commands only; add --confirm-human only after explicit human approval."

@@ -55,6 +55,18 @@ type PromptCoverage = {
   };
 };
 
+type DeploymentCoverage = {
+  coverage: Array<{ candidates: unknown[]; gapScore: number; publicMatches: number; topic: string }>;
+  summary: {
+    deploymentPublicArticles: number;
+    reviewReadyDeploymentDrafts: number;
+    topics: number;
+    topicsWithReadyCandidates: number;
+    unsafeCandidateItems: number;
+    uniqueCandidateFiles: number;
+  };
+};
+
 type ProjectStatus = {
   articles: { publicPublished: number; publishableNow: unknown[]; statusCounts: Record<string, number> };
 };
@@ -71,6 +83,7 @@ function main() {
   const publishPack = readJson<PublishPack>("content/automation/publish-readiness-pack.json");
   const cannibalization = readJson<Cannibalization>("content/automation/content-cannibalization.json");
   const reviewCoverage = readJson<ReviewCoverage>("content/automation/review-coverage-report.json");
+  const deploymentCoverage = readJson<DeploymentCoverage>("content/automation/ai-deployment-coverage.json");
   const promptCoverage = readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json");
   const projectStatus = readJson<ProjectStatus>("content/automation/project-status.json");
   const liveSearch = readJson<LiveSearch>("content/automation/live-search-surface.json");
@@ -124,6 +137,15 @@ function main() {
       reviewBatchConflictItems: cannibalization.reviewBatchConflicts,
     },
     reviewCoverage: reviewCoverage.summary,
+    deploymentCoverage: {
+      summary: deploymentCoverage.summary,
+      topTopics: deploymentCoverage.coverage.slice(0, 6).map((item) => ({
+        candidates: item.candidates.length,
+        gapScore: item.gapScore,
+        publicMatches: item.publicMatches,
+        topic: item.topic,
+      })),
+    },
     promptCoverage: {
       summary: promptCoverage.summary,
       topIndustries: promptCoverage.coverage.slice(0, 6).map((item) => ({
@@ -167,6 +189,7 @@ function buildNextActions(
   return [
     "Review the current publish readiness items in docs/publish-readiness-pack.md.",
     "Use docs/review-coverage-report.md to inspect all planned review candidates, not only today's pack.",
+    "Use docs/ai-deployment-coverage.md to prioritize deployment, Agent, RAG, and model infrastructure drafts.",
     "Use docs/industry-prompt-coverage.md to prioritize broad industry AI prompt drafts for future review batches.",
     "Use docs/review-batch-plan.md to see the next topical batches after the current pack.",
     "Run dry-run mark:review commands only; add --confirm-human only after explicit human approval.",
@@ -196,6 +219,10 @@ function toMarkdown(payload: {
     }>;
   };
   publishingBoundary: { publicPublished: number; publishableNow: number; statusCounts: Record<string, number> };
+  deploymentCoverage: {
+    summary: DeploymentCoverage["summary"];
+    topTopics: Array<{ candidates: number; gapScore: number; publicMatches: number; topic: string }>;
+  };
   promptCoverage: {
     summary: PromptCoverage["summary"];
     topIndustries: Array<{ candidates: number; gapScore: number; industry: string; publicMatches: number }>;
@@ -282,6 +309,19 @@ function toMarkdown(payload: {
     `- Missing risk checks: ${payload.reviewCoverage.itemsMissingRiskChecks}`,
     `- Unsafe indexing items: ${payload.reviewCoverage.unsafeIndexingItems}`,
     `- Non-draft items: ${payload.reviewCoverage.nonDraftItems}`,
+    "",
+    "## AI Deployment Coverage",
+    "",
+    `- Topics: ${payload.deploymentCoverage.summary.topics}`,
+    `- Topics with ready candidates: ${payload.deploymentCoverage.summary.topicsWithReadyCandidates}`,
+    `- Review-ready deployment drafts: ${payload.deploymentCoverage.summary.reviewReadyDeploymentDrafts}`,
+    `- Unique candidate files: ${payload.deploymentCoverage.summary.uniqueCandidateFiles}`,
+    `- Public deployment articles: ${payload.deploymentCoverage.summary.deploymentPublicArticles}`,
+    `- Unsafe candidate items: ${payload.deploymentCoverage.summary.unsafeCandidateItems}`,
+    "",
+    "| Topic | Score | Public | Ready candidates |",
+    "| --- | --- | --- | --- |",
+    ...payload.deploymentCoverage.topTopics.map((item) => `| ${item.topic} | ${item.gapScore} | ${item.publicMatches} | ${item.candidates} |`),
     "",
     "## Industry Prompt Coverage",
     "",

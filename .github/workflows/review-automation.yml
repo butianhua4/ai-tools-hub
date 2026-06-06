@@ -55,7 +55,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/automation docs/automation-digest.md docs/automation-gate.md docs/content-cannibalization.md docs/content-freshness.md docs/content-opportunity-backlog.md docs/industry-prompt-coverage.md docs/live-search-surface.md docs/manual-review-workbench.md docs/publish-readiness-pack.md docs/review-automation.md docs/review-batch-plan.md docs/review-coverage-report.md docs/review-preflight.md docs/seo-opportunity-map.md
+          git add content/automation docs/ai-deployment-coverage.md docs/automation-digest.md docs/automation-gate.md docs/content-cannibalization.md docs/content-freshness.md docs/content-opportunity-backlog.md docs/industry-prompt-coverage.md docs/live-search-surface.md docs/manual-review-workbench.md docs/publish-readiness-pack.md docs/review-automation.md docs/review-batch-plan.md docs/review-coverage-report.md docs/review-preflight.md docs/seo-opportunity-map.md
           if git diff --cached --quiet; then
             echo "No automation report changes to commit."
           else
@@ -91,6 +91,7 @@ jobs:
             content/automation/draft-guardrail-sanitize.json
             content/automation/automation-gate.json
             content/automation/automation-digest.json
+            content/automation/ai-deployment-coverage.json
             content/automation/content-cannibalization.json
             content/automation/content-freshness.json
             content/automation/industry-prompt-coverage.json
@@ -102,6 +103,7 @@ jobs:
             content/automation/seo-opportunity-map.json
             content/automation/searchability-check.json
             content/automation/automation-run-summary.json
+            docs/ai-deployment-coverage.md
             docs/review-automation.md
             docs/review-batch-plan.md
             docs/review-coverage-report.md

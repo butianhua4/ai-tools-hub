@@ -68,6 +68,23 @@ type PromptCoverage = {
   };
 };
 
+type DeploymentCoverage = {
+  coverage: Array<{
+    candidates: unknown[];
+    gapScore: number;
+    publicMatches: number;
+    searchQueries: string[];
+    topic: string;
+  }>;
+  summary: {
+    deploymentPublicArticles: number;
+    reviewReadyDeploymentDrafts: number;
+    topics: number;
+    topicsWithReadyCandidates: number;
+    uniqueCandidateFiles: number;
+  };
+};
+
 const reports = {
   cannibalization: readJson<{ summary: { conflicts: number; reviewBatchConflicts: number } }>("content/automation/content-cannibalization.json"),
   freshness: readJson<{ summary: { currentReviewItems: number; highRisk: number; mediumRisk: number; plannedReviewItems: number } }>(
@@ -76,6 +93,7 @@ const reports = {
   contentBacklog: readJson<{ opportunities: ContentOpportunity[]; totals: { topics: number; topicsWithReadyCandidates: number } }>(
     "content/automation/content-opportunity-backlog.json",
   ),
+  deploymentCoverage: readJson<DeploymentCoverage>("content/automation/ai-deployment-coverage.json"),
   promptCoverage: readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json"),
   gate: readJson<{ ok: boolean; summary: { checks: number; failed: number; passed: number } }>("content/automation/automation-gate.json"),
   liveSearch: readJson<{
@@ -157,6 +175,14 @@ const payload = {
     topics: reports.contentBacklog.data?.totals.topics ?? null,
     topicsWithReadyCandidates: reports.contentBacklog.data?.totals.topicsWithReadyCandidates ?? null,
     top: reports.contentBacklog.data?.opportunities.slice(0, 5) ?? [],
+  },
+  deploymentCoverage: {
+    publicArticles: reports.deploymentCoverage.data?.summary.deploymentPublicArticles ?? null,
+    reviewReadyDrafts: reports.deploymentCoverage.data?.summary.reviewReadyDeploymentDrafts ?? null,
+    top: reports.deploymentCoverage.data?.coverage.slice(0, 6) ?? [],
+    topics: reports.deploymentCoverage.data?.summary.topics ?? null,
+    topicsWithReadyCandidates: reports.deploymentCoverage.data?.summary.topicsWithReadyCandidates ?? null,
+    uniqueCandidateFiles: reports.deploymentCoverage.data?.summary.uniqueCandidateFiles ?? null,
   },
   promptCoverage: {
     industries: reports.promptCoverage.data?.summary.industries ?? null,
@@ -317,6 +343,20 @@ function toMarkdown(data: typeof payload) {
     "| --- | --- | --- | --- | --- |",
     ...data.contentOpportunities.top.map((item) => (
       `| ${item.topic} | ${item.gapScore} | ${item.publicMatches} | ${item.readyCandidates.length} | ${item.why} |`
+    )),
+    "",
+    "## AI Deployment Coverage",
+    "",
+    `- Topics: ${data.deploymentCoverage.topics}`,
+    `- Topics with ready candidates: ${data.deploymentCoverage.topicsWithReadyCandidates}`,
+    `- Review-ready deployment drafts: ${data.deploymentCoverage.reviewReadyDrafts}`,
+    `- Unique candidate files: ${data.deploymentCoverage.uniqueCandidateFiles}`,
+    `- Public deployment articles: ${data.deploymentCoverage.publicArticles}`,
+    "",
+    "| Topic | Score | Public | Ready candidates | Search query examples |",
+    "| --- | --- | --- | --- | --- |",
+    ...data.deploymentCoverage.top.map((item) => (
+      `| ${item.topic} | ${item.gapScore} | ${item.publicMatches} | ${item.candidates.length} | ${item.searchQueries.slice(0, 2).join("<br>")} |`
     )),
     "",
     "## Industry Prompt Coverage",

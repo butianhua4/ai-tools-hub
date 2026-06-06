@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T11:45:18.419Z",
+  "generatedAt": "2026-06-06T11:53:35.319Z",
   "ok": true,
   "summary": {
-    "checks": 27,
+    "checks": 30,
     "failed": 0,
-    "passed": 27
+    "passed": 30
   },
   "failed": [],
   "checks": [
@@ -91,6 +91,21 @@
       "name": "content opportunity backlog has reviewable topics",
       "ok": true,
       "detail": "topics=7, topicsWithReadyCandidates=7"
+    },
+    {
+      "name": "AI deployment coverage has broad reviewable coverage",
+      "ok": true,
+      "detail": "topics=10, withCandidates=10, reviewReady=208, unique=34"
+    },
+    {
+      "name": "AI deployment coverage includes source and search review tasks",
+      "ok": true,
+      "detail": "officialSources=12, topics=10"
+    },
+    {
+      "name": "AI deployment candidates stay draft and non-indexable",
+      "ok": true,
+      "detail": "unsafeCandidateItems=0"
     },
     {
       "name": "industry prompt coverage has broad reviewable coverage",

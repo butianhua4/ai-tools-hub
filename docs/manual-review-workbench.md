@@ -1,6 +1,6 @@
 # Manual Review Workbench
 
-Generated at: 2026-06-06T11:44:00.376Z
+Generated at: 2026-06-06T11:52:18.211Z
 
 This workbench is read-only. It does not publish articles or mark drafts for review.
 
@@ -83,6 +83,24 @@ This workbench is read-only. It does not publish articles or mark drafts for rev
 - Unsafe indexing items: 0
 - Non-draft items: 0
 
+## AI Deployment Coverage
+
+- Topics: 10
+- Topics with ready candidates: 10
+- Review-ready deployment drafts: 208
+- Unique candidate files: 34
+- Public deployment articles: 3
+- Unsafe candidate items: 0
+
+| Topic | Score | Public | Ready candidates |
+| --- | --- | --- | --- |
+| Agent 部署、工具调用和工作流 | 230 | 0 | 5 |
+| RAG、知识库和向量检索 | 228 | 0 | 5 |
+| 本地模型和开源模型部署 | 224 | 0 | 5 |
+| Dify、n8n、Flowise 和无代码 AI 自动化 | 220 | 0 | 5 |
+| 模型 API 接入、限流和多模型降级 | 218 | 0 | 5 |
+| LLM Serving、GPU 和托管推理 | 217 | 0 | 5 |
+
 ## Industry Prompt Coverage
 
 - Industries: 16
@@ -108,6 +126,7 @@ This workbench is read-only. It does not publish articles or mark drafts for rev
 
 - Review the current publish readiness items in docs/publish-readiness-pack.md.
 - Use docs/review-coverage-report.md to inspect all planned review candidates, not only today's pack.
+- Use docs/ai-deployment-coverage.md to prioritize deployment, Agent, RAG, and model infrastructure drafts.
 - Use docs/industry-prompt-coverage.md to prioritize broad industry AI prompt drafts for future review batches.
 - Use docs/review-batch-plan.md to see the next topical batches after the current pack.
 - Run dry-run mark:review commands only; add --confirm-human only after explicit human approval.

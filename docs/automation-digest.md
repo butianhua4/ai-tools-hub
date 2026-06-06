@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-06T11:45:18.406Z
+Generated at: 2026-06-06T11:53:35.319Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -84,6 +84,23 @@ This digest is read-only. It summarizes automation reports and does not publish 
 | Ollama、vLLM 和开源模型本地部署 | 260 | 0 | 5 | 本地模型部署搜索需求强，但信息变化快，必须保留人工事实核对。 |
 | Dify、n8n、MCP 和无代码 AI 自动化 | 258 | 0 | 5 | 无代码 AI 自动化容易吸引搜索流量，也最需要平台规则和权限边界提醒。 |
 
+## AI Deployment Coverage
+
+- Topics: 10
+- Topics with ready candidates: 10
+- Review-ready deployment drafts: 208
+- Unique candidate files: 34
+- Public deployment articles: 3
+
+| Topic | Score | Public | Ready candidates | Search query examples |
+| --- | --- | --- | --- | --- |
+| Agent 部署、工具调用和工作流 | 230 | 0 | 5 | AI Agent 部署教程<br>Agent 工具调用教程 |
+| RAG、知识库和向量检索 | 228 | 0 | 5 | RAG 知识库搭建教程<br>企业知识库 AI 部署 |
+| 本地模型和开源模型部署 | 224 | 0 | 5 | 本地部署大模型教程<br>Ollama 本地部署 |
+| Dify、n8n、Flowise 和无代码 AI 自动化 | 220 | 0 | 5 | Dify 部署教程<br>n8n AI Agent 自托管 |
+| 模型 API 接入、限流和多模型降级 | 218 | 0 | 5 | OpenAI API Next.js<br>Claude API 接入 |
+| LLM Serving、GPU 和托管推理 | 217 | 0 | 5 | vLLM 部署教程<br>TGI 部署教程 |
+
 ## Industry Prompt Coverage
 
 - Industries: 16
@@ -115,7 +132,7 @@ This digest is read-only. It summarizes automation reports and does not publish 
 
 ## Live Search Surface
 
-- Latest check: 2026-06-06T11:45:09.680Z
+- Latest check: 2026-06-06T11:53:24.352Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85

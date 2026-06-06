@@ -43,6 +43,18 @@ async function main() {
     opportunities?: Array<{ readyCandidates?: unknown[]; searchDemandNote?: string }>;
     totals: { topics: number; topicsWithReadyCandidates: number };
   }>("content/automation/content-opportunity-backlog.json");
+  const deploymentCoverage = readJson<{
+    coverage?: Array<{ candidates?: unknown[]; searchQueries?: unknown[]; sourceTargets?: unknown[] }>;
+    guardrails: { autoMarkReview: boolean; autoPublish: boolean };
+    sourceEvidence?: { officialSources?: unknown[] };
+    summary: {
+      reviewReadyDeploymentDrafts: number;
+      topics: number;
+      topicsWithReadyCandidates: number;
+      unsafeCandidateItems: number;
+      uniqueCandidateFiles: number;
+    };
+  }>("content/automation/ai-deployment-coverage.json");
   const promptCoverage = readJson<{
     coverage?: Array<{ candidates?: unknown[]; searchQueries?: unknown[]; sourceTargets?: unknown[] }>;
     guardrails: { autoMarkReview: boolean; autoPublish: boolean };
@@ -202,6 +214,29 @@ async function main() {
         contentBacklog.totals.topicsWithReadyCandidates > 0 &&
         Boolean(contentBacklog.opportunities?.every((item) => item.searchDemandNote && item.readyCandidates)),
       detail: `topics=${contentBacklog.totals.topics}, topicsWithReadyCandidates=${contentBacklog.totals.topicsWithReadyCandidates}`,
+    },
+    {
+      name: "AI deployment coverage has broad reviewable coverage",
+      ok:
+        deploymentCoverage.guardrails.autoMarkReview === false &&
+        deploymentCoverage.guardrails.autoPublish === false &&
+        deploymentCoverage.summary.topics >= 8 &&
+        deploymentCoverage.summary.topicsWithReadyCandidates >= 8 &&
+        deploymentCoverage.summary.reviewReadyDeploymentDrafts >= 30 &&
+        deploymentCoverage.summary.uniqueCandidateFiles >= 20,
+      detail: `topics=${deploymentCoverage.summary.topics}, withCandidates=${deploymentCoverage.summary.topicsWithReadyCandidates}, reviewReady=${deploymentCoverage.summary.reviewReadyDeploymentDrafts}, unique=${deploymentCoverage.summary.uniqueCandidateFiles}`,
+    },
+    {
+      name: "AI deployment coverage includes source and search review tasks",
+      ok:
+        (deploymentCoverage.sourceEvidence?.officialSources?.length || 0) >= 8 &&
+        Boolean(deploymentCoverage.coverage?.every((item) => (item.searchQueries?.length || 0) > 0 && (item.sourceTargets?.length || 0) > 0)),
+      detail: `officialSources=${deploymentCoverage.sourceEvidence?.officialSources?.length || 0}, topics=${deploymentCoverage.coverage?.length || 0}`,
+    },
+    {
+      name: "AI deployment candidates stay draft and non-indexable",
+      ok: deploymentCoverage.summary.unsafeCandidateItems === 0,
+      detail: `unsafeCandidateItems=${deploymentCoverage.summary.unsafeCandidateItems}`,
     },
     {
       name: "industry prompt coverage has broad reviewable coverage",

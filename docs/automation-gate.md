@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-06T11:45:18.419Z
+Generated at: 2026-06-06T11:53:35.319Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 27
-- Passed: 27
+- Checks: 30
+- Passed: 30
 - Failed: 0
 
 ## Checks
@@ -31,6 +31,9 @@ Overall: PASS
 | SEO opportunity map has review-ready drafts | PASS | reviewReadyDrafts=633 |
 | SEO opportunity map includes manual review batches | PASS | batches=6 |
 | content opportunity backlog has reviewable topics | PASS | topics=7, topicsWithReadyCandidates=7 |
+| AI deployment coverage has broad reviewable coverage | PASS | topics=10, withCandidates=10, reviewReady=208, unique=34 |
+| AI deployment coverage includes source and search review tasks | PASS | officialSources=12, topics=10 |
+| AI deployment candidates stay draft and non-indexable | PASS | unsafeCandidateItems=0 |
 | industry prompt coverage has broad reviewable coverage | PASS | industries=16, withCandidates=16, reviewReady=25, unique=19 |
 | industry prompt coverage includes source and search review tasks | PASS | officialSources=5, industries=16 |
 | industry prompt candidates stay draft and non-indexable | PASS | unsafeCandidateItems=0 |
