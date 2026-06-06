@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-06T15:39:54.698Z
+Generated at: 2026-06-06T15:49:48.668Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -53,13 +53,34 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=he
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
 - https://docs.dify.ai -> https://docs.dify.ai/en/use-dify/getting-started/introduction
 - https://docs.llamaindex.ai -> https://developers.llamaindex.ai/python/framework/
 - https://docs.vllm.ai -> https://docs.vllm.ai/en/latest/
 - https://platform.openai.com/docs -> https://developers.openai.com/api/docs
+
+## Review Action Board
+
+- Tasks: 11
+- Ready tasks: 11
+- Unsafe tasks: 0
+- Wave tasks: 3/3
+- Public gap tasks: 8/8
+
+Unsafe tasks:
+
+- none
+
+| Ready | Priority | Kind | Scope | Sources | Warnings | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| true | 1009 | wave-approval | wave-1 | 9 | 2 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| true | 1000 | wave-approval | wave-2 | 10 | 0 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| true | 988 | wave-approval | wave-3 | 8 | 0 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| true | 790 | public-gap-review | public-gap-wave-1 | 10 | 3 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| true | 787 | public-gap-review | public-gap-wave-1 | 8 | 3 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| true | 769 | public-gap-review | public-gap-wave-2 | 11 | 3 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
 
 ## Search Snippet Readiness
 
@@ -223,8 +244,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 93
-- Traffic claim watch mentions: 546
+- Traffic claim files scanned: 95
+- Traffic claim watch mentions: 551
 
 ## Preflight
 
@@ -521,7 +542,7 @@ Next review files:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-06T15:38:57.334Z
+- Latest check: 2026-06-06T15:48:48.972Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85
@@ -541,6 +562,7 @@ Next review files:
 - Use docs/public-coverage-gap-decision-pack.md to review the 8 broad-demand public gap candidates and their optimization actions.
 - Use docs/next-review-source-pack.md to fact-check official sources for the roadmap's next review files.
 - Use docs/source-target-health-audit.md to confirm official source links are reachable before approving fast-changing AI guidance.
+- Use docs/review-action-board.md as the prioritized task board for Wave 1 and public-gap manual review.
 - Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.
 - If approved by a human, run mark:review with --confirm-human for approved files only.
 - Publish only status=review articles in a 1-3 article batch after a dry-run.

@@ -257,6 +257,29 @@ type SourceHealth = {
   };
 };
 
+type ReviewActionBoard = {
+  nextTasks: Array<{
+    file: string;
+    kind: string;
+    priority: number;
+    ready: boolean;
+    scope: string;
+    sourceTargets: number;
+    title: string;
+    warnings: unknown[];
+  }>;
+  summary: {
+    publicGapReadyTasks: number;
+    publicGapTasks: number;
+    readyTasks: number;
+    tasks: number;
+    unsafeTasks: number;
+    waveReadyTasks: number;
+    waveTasks: number;
+  };
+  unsafeTasks: unknown[];
+};
+
 type SearchSnippets = {
   summary: {
     blockingItems: number;
@@ -558,6 +581,7 @@ const reports = {
   contentIntegrity: readJson<ContentIntegrity>("content/automation/content-integrity-audit.json"),
   internalLinks: readJson<InternalLinks>("content/automation/internal-link-opportunity-audit.json"),
   sourceHealth: readJson<SourceHealth>("content/automation/source-target-health-audit.json"),
+  reviewActionBoard: readJson<ReviewActionBoard>("content/automation/review-action-board.json"),
   searchSnippets: readJson<SearchSnippets>("content/automation/search-snippet-readiness-audit.json"),
   structuredData: readJson<StructuredData>("content/automation/structured-data-readiness-audit.json"),
   searchIntentLanes: readJson<SearchIntentLanes>("content/automation/search-intent-lane-map.json"),
@@ -614,6 +638,17 @@ const payload = {
     redirectedUrls: reports.sourceHealth.data?.summary.redirectedUrls ?? null,
     sourceReferences: reports.sourceHealth.data?.summary.sourceReferences ?? null,
     uniqueUrls: reports.sourceHealth.data?.summary.uniqueUrls ?? null,
+  },
+  reviewActionBoard: {
+    nextTasks: reports.reviewActionBoard.data?.nextTasks.slice(0, 6) ?? [],
+    publicGapReadyTasks: reports.reviewActionBoard.data?.summary.publicGapReadyTasks ?? null,
+    publicGapTasks: reports.reviewActionBoard.data?.summary.publicGapTasks ?? null,
+    readyTasks: reports.reviewActionBoard.data?.summary.readyTasks ?? null,
+    tasks: reports.reviewActionBoard.data?.summary.tasks ?? null,
+    unsafeTasks: reports.reviewActionBoard.data?.summary.unsafeTasks ?? null,
+    unsafeTaskList: reports.reviewActionBoard.data?.unsafeTasks.slice(0, 6) ?? [],
+    waveReadyTasks: reports.reviewActionBoard.data?.summary.waveReadyTasks ?? null,
+    waveTasks: reports.reviewActionBoard.data?.summary.waveTasks ?? null,
   },
   searchSnippets: reports.searchSnippets.data?.summary ?? null,
   structuredData: reports.structuredData.data?.summary ?? null,
@@ -901,6 +936,9 @@ function buildNextActions() {
   if (!reports.sourceHealth.data || reports.sourceHealth.data.summary.filesWithoutReachableSource > 0 || reports.sourceHealth.data.summary.missingUrlTargets > 0) {
     return ["Open docs/source-target-health-audit.md and replace missing or unreachable official source targets before manual review."];
   }
+  if (!reports.reviewActionBoard.data || reports.reviewActionBoard.data.summary.unsafeTasks > 0) {
+    return ["Open docs/review-action-board.md and resolve unsafe review tasks before any mark:review command."];
+  }
   if (!reports.searchSnippets.data || reports.searchSnippets.data.summary.waveItemsWithBlockingIssues > 0) {
     return ["Open docs/search-snippet-readiness-audit.md and fix Wave 1 title, description, slug, or indexing blockers."];
   }
@@ -945,6 +983,7 @@ function buildNextActions() {
     "Use docs/public-coverage-gap-decision-pack.md to review the 8 broad-demand public gap candidates and their optimization actions.",
     "Use docs/next-review-source-pack.md to fact-check official sources for the roadmap's next review files.",
     "Use docs/source-target-health-audit.md to confirm official source links are reachable before approving fast-changing AI guidance.",
+    "Use docs/review-action-board.md as the prioritized task board for Wave 1 and public-gap manual review.",
     "Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.",
     "If approved by a human, run mark:review with --confirm-human for approved files only.",
     "Publish only status=review articles in a 1-3 article batch after a dry-run.",
@@ -1032,6 +1071,24 @@ function toMarkdown(data: typeof payload) {
     ...(data.sourceHealth.redirectedChecks.length
       ? data.sourceHealth.redirectedChecks.map((item) => `- ${item.url} -> ${item.finalUrl || ""}`)
       : ["- none"]),
+    "",
+    "## Review Action Board",
+    "",
+    `- Tasks: ${data.reviewActionBoard.tasks}`,
+    `- Ready tasks: ${data.reviewActionBoard.readyTasks}`,
+    `- Unsafe tasks: ${data.reviewActionBoard.unsafeTasks}`,
+    `- Wave tasks: ${data.reviewActionBoard.waveReadyTasks}/${data.reviewActionBoard.waveTasks}`,
+    `- Public gap tasks: ${data.reviewActionBoard.publicGapReadyTasks}/${data.reviewActionBoard.publicGapTasks}`,
+    "",
+    "Unsafe tasks:",
+    "",
+    ...(data.reviewActionBoard.unsafeTaskList.length ? data.reviewActionBoard.unsafeTaskList.map((item) => `- ${JSON.stringify(item)}`) : ["- none"]),
+    "",
+    "| Ready | Priority | Kind | Scope | Sources | Warnings | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...data.reviewActionBoard.nextTasks.map(
+      (item) => `| ${item.ready} | ${item.priority} | ${item.kind} | ${item.scope} | ${item.sourceTargets} | ${item.warnings.length} | ${item.title} | ${item.file} |`,
+    ),
     "",
     "## Search Snippet Readiness",
     "",

@@ -362,6 +362,24 @@ async function main() {
       uniqueUrls: number;
     };
   }>("content/automation/source-target-health-audit.json");
+  const reviewActionBoard = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
+    summary: {
+      publicGapReadyTasks: number;
+      publicGapTasks: number;
+      readyTasks: number;
+      tasks: number;
+      unsafeTasks: number;
+      waveReadyTasks: number;
+      waveTasks: number;
+    };
+    tasks?: Array<{
+      commandBoundary?: { markReviewAfterHumanApproval?: string; publishConfirm?: string; publishDryRunAfterReview?: string };
+      ready?: boolean;
+      sourceTargets?: number;
+    }>;
+    unsafeTasks?: unknown[];
+  }>("content/automation/review-action-board.json");
   const searchSnippets = readJson<{
     guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
     summary: {
@@ -568,6 +586,38 @@ async function main() {
         sourceHealth.summary.okUrls > 0 &&
         sourceHealth.summary.sourceReferences >= sourceHealth.summary.filesCovered,
       detail: `checked=${sourceHealth.summary.checkedUrls}, ok=${sourceHealth.summary.okUrls}, failed=${sourceHealth.summary.failedUrls}, missingTargets=${sourceHealth.summary.missingUrlTargets}, filesWithoutReachable=${sourceHealth.summary.filesWithoutReachableSource}`,
+    },
+    {
+      name: "review action board is read-only and covers active review queues",
+      ok:
+        reviewActionBoard.guardrails.autoEditArticles === false &&
+        reviewActionBoard.guardrails.autoMarkReview === false &&
+        reviewActionBoard.guardrails.autoPublish === false &&
+        reviewActionBoard.summary.waveTasks === waveApprovalPacket.summary.items &&
+        reviewActionBoard.summary.publicGapTasks === publicCoverageGapDecisionPack.summary.items &&
+        reviewActionBoard.summary.tasks === reviewActionBoard.summary.waveTasks + reviewActionBoard.summary.publicGapTasks,
+      detail: `tasks=${reviewActionBoard.summary.tasks}, wave=${reviewActionBoard.summary.waveTasks}, publicGap=${reviewActionBoard.summary.publicGapTasks}`,
+    },
+    {
+      name: "review action board tasks are ready and preserve command boundaries",
+      ok:
+        reviewActionBoard.summary.unsafeTasks === 0 &&
+        reviewActionBoard.summary.readyTasks === reviewActionBoard.summary.tasks &&
+        reviewActionBoard.summary.waveReadyTasks === reviewActionBoard.summary.waveTasks &&
+        reviewActionBoard.summary.publicGapReadyTasks === reviewActionBoard.summary.publicGapTasks &&
+        (reviewActionBoard.unsafeTasks?.length || 0) === 0 &&
+        Boolean(
+          reviewActionBoard.tasks?.every(
+            (task) =>
+              task.ready === true &&
+              (task.sourceTargets || 0) > 0 &&
+              task.commandBoundary?.markReviewAfterHumanApproval?.includes("--confirm-human") &&
+              task.commandBoundary?.publishDryRunAfterReview &&
+              task.commandBoundary.publishConfirm === "not-included" &&
+              !task.commandBoundary.publishDryRunAfterReview.includes("--confirm"),
+          ),
+        ),
+      detail: `ready=${reviewActionBoard.summary.readyTasks}, unsafe=${reviewActionBoard.summary.unsafeTasks}`,
     },
     {
       name: "search snippet readiness audit is read-only and covers public plus expansion items",

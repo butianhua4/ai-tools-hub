@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T15:39:54.698Z",
+  "generatedAt": "2026-06-06T15:49:48.668Z",
   "guardrails": {
     "autoPublish": false,
     "note": "Digest is read-only. It summarizes local automation reports and does not use traffic, impressions, or Search Console performance data."
@@ -195,7 +195,7 @@
         "url": "https://ai-sdk.dev/docs"
       },
       {
-        "finalUrl": "https://ai.google.dev/gemini-api/docs",
+        "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=he",
         "ok": true,
         "references": [
           {
@@ -555,6 +555,180 @@
     "redirectedUrls": 13,
     "sourceReferences": 147,
     "uniqueUrls": 18
+  },
+  "reviewActionBoard": {
+    "nextTasks": [
+      {
+        "actionItems": [
+          "Read the article end to end and confirm the opening answer matches search intent.",
+          "Open 2 official source target(s) and verify fast-changing claims.",
+          "Run through 6 risk review checks.",
+          "Choose or reject public internal link suggestion: Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex).",
+          "Resolve or explicitly accept snippet/structured-data warnings before mark:review."
+        ],
+        "blockers": [],
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+        "kind": "wave-approval",
+        "priority": 1009,
+        "ready": true,
+        "scope": "wave-1",
+        "sourceTargets": 9,
+        "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+        "warnings": [
+          "description may be thin for search snippets",
+          "primary keyword is not an exact title substring"
+        ]
+      },
+      {
+        "actionItems": [
+          "Read the article end to end and confirm the opening answer matches search intent.",
+          "Open 1 official source target(s) and verify fast-changing claims.",
+          "Run through 6 risk review checks.",
+          "Choose or reject public internal link suggestion: Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist).",
+          "Confirm snippet and structured-data checks remain clean."
+        ],
+        "blockers": [],
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "kind": "wave-approval",
+        "priority": 1000,
+        "ready": true,
+        "scope": "wave-2",
+        "sourceTargets": 10,
+        "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+        "warnings": []
+      },
+      {
+        "actionItems": [
+          "Read the article end to end and confirm the opening answer matches search intent.",
+          "Open 2 official source target(s) and verify fast-changing claims.",
+          "Run through 6 risk review checks.",
+          "Choose or reject public internal link suggestion: Upwork 客户需求太模糊怎么办：新手分析和追问清单 (/blog/upwork-client-requirements-analysis-beginner).",
+          "Confirm snippet and structured-data checks remain clean."
+        ],
+        "blockers": [],
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "kind": "wave-approval",
+        "priority": 988,
+        "ready": true,
+        "scope": "wave-3",
+        "sourceTargets": 8,
+        "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+        "warnings": []
+      },
+      {
+        "actionItems": [
+          "Review theme gap: Agent deployment, tool calling, and production workflows.",
+          "Verify 3 source target(s) and source freshness.",
+          "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
+          "Review the suggested public internal link before publishing: Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist).",
+          "Decide whether missing subtopics belong in this article or should become separate follow-up drafts.",
+          "Choose or reject public internal link suggestion: Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist)."
+        ],
+        "blockers": [],
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "kind": "public-gap-review",
+        "priority": 790,
+        "ready": true,
+        "scope": "public-gap-wave-1",
+        "sourceTargets": 10,
+        "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+        "warnings": [
+          "no exact search-seed phrase appears in title, description, or body",
+          "article currently has no links to published articles",
+          "theme still has missing subtopics: tool calling, human review, permissions, logs"
+        ]
+      },
+      {
+        "actionItems": [
+          "Review theme gap: Cross-industry AI prompt templates.",
+          "Verify 2 source target(s) and source freshness.",
+          "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
+          "Review the suggested public internal link before publishing: Upwork 客户需求太模糊怎么办：新手分析和追问清单 (/blog/upwork-client-requirements-analysis-beginner).",
+          "Decide whether missing subtopics belong in this article or should become separate follow-up drafts.",
+          "Choose or reject public internal link suggestion: Upwork 客户需求太模糊怎么办：新手分析和追问清单 (/blog/upwork-client-requirements-analysis-beginner)."
+        ],
+        "blockers": [],
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "kind": "public-gap-review",
+        "priority": 787,
+        "ready": true,
+        "scope": "public-gap-wave-1",
+        "sourceTargets": 8,
+        "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+        "warnings": [
+          "no exact search-seed phrase appears in title, description, or body",
+          "article currently has no links to published articles",
+          "theme still has missing subtopics: customer service"
+        ]
+      },
+      {
+        "actionItems": [
+          "Review theme gap: RAG, knowledge base, and agent memory.",
+          "Verify 3 source target(s) and source freshness.",
+          "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
+          "Review the suggested public internal link before publishing: Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex).",
+          "Decide whether missing subtopics belong in this article or should become separate follow-up drafts.",
+          "Choose or reject public internal link suggestion: Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex)."
+        ],
+        "blockers": [],
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "kind": "public-gap-review",
+        "priority": 769,
+        "ready": true,
+        "scope": "public-gap-wave-2",
+        "sourceTargets": 11,
+        "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
+        "warnings": [
+          "no exact search-seed phrase appears in title, description, or body",
+          "article currently has no links to published articles",
+          "theme still has missing subtopics: knowledge base, vector database"
+        ]
+      }
+    ],
+    "publicGapReadyTasks": 8,
+    "publicGapTasks": 8,
+    "readyTasks": 11,
+    "tasks": 11,
+    "unsafeTasks": 0,
+    "unsafeTaskList": [],
+    "waveReadyTasks": 3,
+    "waveTasks": 3
   },
   "searchSnippets": {
     "blockingItems": 0,
@@ -2565,10 +2739,10 @@
     "trafficDataAvailable": false
   },
   "trafficClaimGuard": {
-    "filesScanned": 93,
+    "filesScanned": 95,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 546
+    "watchMentions": 551
   },
   "preflight": {
     "checked": 3,
@@ -10695,7 +10869,7 @@
   "liveSearch": {
     "checkedArticles": 15,
     "failedChecks": [],
-    "generatedAt": "2026-06-06T15:38:57.334Z",
+    "generatedAt": "2026-06-06T15:48:48.972Z",
     "missingFromSitemap": [],
     "ok": true,
     "publicArticles": 15,
@@ -10754,6 +10928,7 @@
     "Use docs/public-coverage-gap-decision-pack.md to review the 8 broad-demand public gap candidates and their optimization actions.",
     "Use docs/next-review-source-pack.md to fact-check official sources for the roadmap's next review files.",
     "Use docs/source-target-health-audit.md to confirm official source links are reachable before approving fast-changing AI guidance.",
+    "Use docs/review-action-board.md as the prioritized task board for Wave 1 and public-gap manual review.",
     "Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.",
     "If approved by a human, run mark:review with --confirm-human for approved files only.",
     "Publish only status=review articles in a 1-3 article batch after a dry-run."

@@ -1,6 +1,6 @@
 # Content Integrity Audit
 
-Generated at: 2026-06-06T15:37:50.934Z
+Generated at: 2026-06-06T15:47:52.210Z
 
 This report is read-only. It checks article metadata, encoding integrity, and indexing boundaries before review or publishing.
 
