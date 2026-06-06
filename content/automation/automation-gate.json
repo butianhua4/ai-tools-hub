@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T10:47:09.261Z",
+  "generatedAt": "2026-06-06T10:53:58.812Z",
   "ok": true,
   "summary": {
-    "checks": 14,
+    "checks": 15,
     "failed": 0,
-    "passed": 14
+    "passed": 15
   },
   "failed": [],
   "checks": [
@@ -76,6 +76,11 @@
       "name": "SEO opportunity map includes manual review batches",
       "ok": true,
       "detail": "batches=6"
+    },
+    {
+      "name": "content opportunity backlog has reviewable topics",
+      "ok": true,
+      "detail": "topics=7, topicsWithReadyCandidates=7"
     }
   ]
 }

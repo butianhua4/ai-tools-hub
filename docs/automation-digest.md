@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-06T10:47:09.735Z
+Generated at: 2026-06-06T10:53:59.365Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -49,6 +49,19 @@ This digest is read-only. It summarizes automation reports and does not publish 
 | Upwork 新手 | 2 | 78 | has enough review-ready drafts for a small manual publishing batch |
 | Codex 新手教程 | 9 | 74 | has enough review-ready drafts for a small manual publishing batch |
 | 工具流程 | 0 | 58 | has review-ready drafts but no public article yet |
+
+## Content Opportunities
+
+- Topics: 7
+- Topics with ready candidates: 7
+
+| Topic | Score | Public matches | Ready candidates | Why |
+| --- | --- | --- | --- | --- |
+| Agent 部署、工具调用和记忆 | 276 | 0 | 5 | Agent、记忆和工作流是高频 AI 应用词，但需要清楚解释边界和落地步骤。 |
+| RAG、知识库和向量检索 | 272 | 0 | 5 | 很多团队会搜索知识库 AI，但真正需要的是可审核、可引用、可质检的方案。 |
+| 全行业 AI 提示词和工作流模板 | 270 | 0 | 5 | 提示词类内容搜索面宽，但需要从模板升级成行业流程，才更适合长期收录。 |
+| Ollama、vLLM 和开源模型本地部署 | 260 | 0 | 5 | 本地模型部署搜索需求强，但信息变化快，必须保留人工事实核对。 |
+| Dify、n8n、MCP 和无代码 AI 自动化 | 258 | 0 | 5 | 无代码 AI 自动化容易吸引搜索流量，也最需要平台规则和权限边界提醒。 |
 
 ## Next Actions
 

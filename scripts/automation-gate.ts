@@ -27,6 +27,10 @@ async function main() {
   const opportunityMap = readJson<{ reviewBatches?: Array<{ candidates?: unknown[] }>; totals: { reviewReadyDrafts: number } }>(
     "content/automation/seo-opportunity-map.json",
   );
+  const contentBacklog = readJson<{
+    opportunities?: Array<{ readyCandidates?: unknown[]; searchDemandNote?: string }>;
+    totals: { topics: number; topicsWithReadyCandidates: number };
+  }>("content/automation/content-opportunity-backlog.json");
   const projectStatus = readJson<{ articles: { publicPublished: number; publishableNow: unknown[] } }>("content/automation/project-status.json");
   const articles = (await articleFiles()).map(readArticle);
 
@@ -118,6 +122,14 @@ async function main() {
       name: "SEO opportunity map includes manual review batches",
       ok: reviewBatches.length > 0 && reviewBatches.every((batch) => (batch.candidates?.length || 0) > 0),
       detail: `batches=${reviewBatches.length}`,
+    },
+    {
+      name: "content opportunity backlog has reviewable topics",
+      ok:
+        contentBacklog.totals.topics >= 6 &&
+        contentBacklog.totals.topicsWithReadyCandidates > 0 &&
+        Boolean(contentBacklog.opportunities?.every((item) => item.searchDemandNote && item.readyCandidates)),
+      detail: `topics=${contentBacklog.totals.topics}, topicsWithReadyCandidates=${contentBacklog.totals.topicsWithReadyCandidates}`,
     },
   ];
 

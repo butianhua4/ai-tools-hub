@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T10:47:09.735Z",
+  "generatedAt": "2026-06-06T10:53:59.365Z",
   "guardrails": {
     "autoPublish": false,
     "note": "Digest is read-only. It summarizes local automation reports and does not use traffic, impressions, or Search Console performance data."
@@ -146,6 +146,363 @@
         "reason": "has review-ready drafts but no public article yet",
         "reviewReadyDrafts": 58,
         "published": 0
+      }
+    ]
+  },
+  "contentOpportunities": {
+    "topics": 7,
+    "topicsWithReadyCandidates": 7,
+    "top": [
+      {
+        "audience": "想把聊天机器人升级成工作流的人",
+        "cluster": "Agent and memory",
+        "draftMatches": 34,
+        "gapScore": 276,
+        "intent": "informational",
+        "nextAction": "Review the listed candidates first; keep them draft/noindex until a human approves.",
+        "publicMatches": 0,
+        "readyCandidates": [
+          {
+            "category": "AI Agent",
+            "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+            "primaryKeyword": "AI Agent 部署",
+            "publishBatch": 40,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
+          },
+          {
+            "category": "AI 记忆",
+            "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+            "primaryKeyword": "AI Agent 记忆",
+            "publishBatch": 40,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+          },
+          {
+            "category": "接单报价",
+            "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+            "primaryKeyword": "AI 自动化项目报价",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+          },
+          {
+            "category": "AI 部署",
+            "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+            "primaryKeyword": "Dify 工作流错误处理",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底"
+          },
+          {
+            "category": "AI 部署",
+            "file": "content/blog/dify-workflow-vs-agent-guide.mdx",
+            "primaryKeyword": "Dify Workflow 和 Agent 区别",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核"
+          }
+        ],
+        "reviewFocus": [
+          "解释工具调用和多步执行边界",
+          "明确记忆、状态和人工确认的安全边界",
+          "避免承诺全自动完成业务结果"
+        ],
+        "searchDemandNote": "Broad search-intent theme, not measured traffic or keyword volume.",
+        "searchQueries": [
+          "AI Agent 部署教程",
+          "Agent 记忆怎么做",
+          "AI Agent 工具调用教程",
+          "AI 工作流部署"
+        ],
+        "topic": "Agent 部署、工具调用和记忆",
+        "why": "Agent、记忆和工作流是高频 AI 应用词，但需要清楚解释边界和落地步骤。"
+      },
+      {
+        "audience": "客服、知识库、企业内部工具负责人",
+        "cluster": "RAG and knowledge base",
+        "draftMatches": 32,
+        "gapScore": 272,
+        "intent": "informational",
+        "nextAction": "Review the listed candidates first; keep them draft/noindex until a human approves.",
+        "publicMatches": 0,
+        "readyCandidates": [
+          {
+            "category": "AI 记忆",
+            "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+            "primaryKeyword": "AI Agent 记忆",
+            "publishBatch": 40,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+          },
+          {
+            "category": "AI 部署",
+            "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+            "primaryKeyword": "客服 AI 模型选型",
+            "publishBatch": 34,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检"
+          },
+          {
+            "category": "接单报价",
+            "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+            "primaryKeyword": "AI 自动化项目报价",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+          },
+          {
+            "category": "AI 部署",
+            "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
+            "primaryKeyword": "n8n AI Agent 知识库记忆",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储"
+          },
+          {
+            "category": "AI 部署",
+            "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+            "primaryKeyword": "Open WebUI Functions Pipelines",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+          }
+        ],
+        "reviewFocus": [
+          "区分 RAG、微调和普通提示词",
+          "核对向量库、引用、召回和质检说法",
+          "说明失败案例和人工兜底"
+        ],
+        "searchDemandNote": "Broad search-intent theme, not measured traffic or keyword volume.",
+        "searchQueries": [
+          "RAG 知识库搭建教程",
+          "企业知识库 AI 部署",
+          "向量数据库教程",
+          "客服知识库 AI"
+        ],
+        "topic": "RAG、知识库和向量检索",
+        "why": "很多团队会搜索知识库 AI，但真正需要的是可审核、可引用、可质检的方案。"
+      },
+      {
+        "audience": "运营、销售、客服、HR、财务、教育等非技术岗位",
+        "cluster": "Industry AI prompts",
+        "draftMatches": 27,
+        "gapScore": 270,
+        "intent": "informational",
+        "nextAction": "Review the listed candidates first; keep them draft/noindex until a human approves.",
+        "publicMatches": 0,
+        "readyCandidates": [
+          {
+            "category": "AI 提示词",
+            "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+            "primaryKeyword": "全行业 AI 提示词模板",
+            "publishBatch": 40,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
+          },
+          {
+            "category": "AI 部署",
+            "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+            "primaryKeyword": "客服 AI 模型选型",
+            "publishBatch": 34,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检"
+          },
+          {
+            "category": "AI 提示词",
+            "file": "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+            "primaryKeyword": "团队 AI 提示词库",
+            "publishBatch": 32,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用"
+          },
+          {
+            "category": "AI 提示词",
+            "file": "content/blog/data-analysis-ai-prompts-guide.mdx",
+            "primaryKeyword": "数据分析 AI 提示词",
+            "publishBatch": 31,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要"
+          },
+          {
+            "category": "AI 提示词",
+            "file": "content/blog/education-ai-prompts-guide.mdx",
+            "primaryKeyword": "教育 AI 提示词",
+            "publishBatch": 31,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "教育 AI 提示词模板：备课、教案、测验、反馈和学习计划"
+          }
+        ],
+        "reviewFocus": [
+          "按行业给可复制结构",
+          "避免空泛万能提示词",
+          "补充输入字段、质检标准和反例"
+        ],
+        "searchDemandNote": "Broad search-intent theme, not measured traffic or keyword volume.",
+        "searchQueries": [
+          "AI 提示词大全",
+          "销售 AI 提示词",
+          "客服 AI 提示词",
+          "运营 AI 提示词",
+          "HR AI 提示词"
+        ],
+        "topic": "全行业 AI 提示词和工作流模板",
+        "why": "提示词类内容搜索面宽，但需要从模板升级成行业流程，才更适合长期收录。"
+      },
+      {
+        "audience": "本地部署爱好者、开发者、低成本工具团队",
+        "cluster": "Local model deployment",
+        "draftMatches": 16,
+        "gapScore": 260,
+        "intent": "informational",
+        "nextAction": "Review the listed candidates first; keep them draft/noindex until a human approves.",
+        "publicMatches": 0,
+        "readyCandidates": [
+          {
+            "category": "AI 部署",
+            "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
+            "primaryKeyword": "大模型部署",
+            "publishBatch": 40,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查"
+          },
+          {
+            "category": "AI 部署",
+            "file": "content/blog/local-llm-vram-not-enough-guide.mdx",
+            "primaryKeyword": "本地部署大模型显存不够",
+            "publishBatch": 32,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "本地部署大模型显存不够怎么办：量化、上下文、并发和换模型"
+          },
+          {
+            "category": "AI 基建",
+            "file": "content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx",
+            "primaryKeyword": "Docker 使用 NVIDIA GPU",
+            "publishBatch": 29,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "Docker 怎么用 NVIDIA GPU：大模型部署先装对 Container Toolkit"
+          },
+          {
+            "category": "AI 基建",
+            "file": "content/blog/huggingface-tgi-deployment-guide.mdx",
+            "primaryKeyword": "Hugging Face TGI 部署",
+            "publishBatch": 29,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "Hugging Face TGI 怎么部署：Text Generation Inference 入门检查表"
+          },
+          {
+            "category": "AI 基建",
+            "file": "content/blog/kubernetes-gpu-llm-deployment-guide.mdx",
+            "primaryKeyword": "Kubernetes GPU 大模型部署",
+            "publishBatch": 29,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "Kubernetes 怎么部署 GPU 大模型：Device Plugin、资源限制和调度边界"
+          }
+        ],
+        "reviewFocus": [
+          "核对显卡、内存、模型尺寸和量化要求",
+          "区分 Ollama、vLLM、TGI 等使用场景",
+          "不要暗示本地部署一定更省钱"
+        ],
+        "searchDemandNote": "Broad search-intent theme, not measured traffic or keyword volume.",
+        "searchQueries": [
+          "Ollama 本地部署教程",
+          "vLLM 部署教程",
+          "本地大模型部署",
+          "开源大模型部署教程"
+        ],
+        "topic": "Ollama、vLLM 和开源模型本地部署",
+        "why": "本地模型部署搜索需求强，但信息变化快，必须保留人工事实核对。"
+      },
+      {
+        "audience": "正在做自动化接单、内部工具和 SaaS 原型的人",
+        "cluster": "No-code AI automation",
+        "draftMatches": 22,
+        "gapScore": 258,
+        "intent": "informational",
+        "nextAction": "Review the listed candidates first; keep them draft/noindex until a human approves.",
+        "publicMatches": 0,
+        "readyCandidates": [
+          {
+            "category": "接单报价",
+            "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+            "primaryKeyword": "AI 自动化项目报价",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+          },
+          {
+            "category": "AI 部署",
+            "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+            "primaryKeyword": "Dify 工作流错误处理",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底"
+          },
+          {
+            "category": "AI 部署",
+            "file": "content/blog/dify-workflow-vs-agent-guide.mdx",
+            "primaryKeyword": "Dify Workflow 和 Agent 区别",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核"
+          },
+          {
+            "category": "AI 基建",
+            "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
+            "primaryKeyword": "MCP Server 部署安全",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单"
+          },
+          {
+            "category": "AI 部署",
+            "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
+            "primaryKeyword": "n8n AI Agent 知识库记忆",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "searchIntent": "informational",
+            "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储"
+          }
+        ],
+        "reviewFocus": [
+          "明确 Dify、n8n、MCP 的适用范围",
+          "核对连接器、Webhook 和权限风险",
+          "避免鼓励群发、绕规则或站外交易"
+        ],
+        "searchDemandNote": "Broad search-intent theme, not measured traffic or keyword volume.",
+        "searchQueries": [
+          "Dify 部署教程",
+          "n8n AI 自动化教程",
+          "MCP 使用教程",
+          "AI 自动化工作流教程"
+        ],
+        "topic": "Dify、n8n、MCP 和无代码 AI 自动化",
+        "why": "无代码 AI 自动化容易吸引搜索流量，也最需要平台规则和权限边界提醒。"
       }
     ]
   },

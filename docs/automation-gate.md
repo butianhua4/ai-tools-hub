@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-06T10:47:09.261Z
+Generated at: 2026-06-06T10:53:58.812Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 14
-- Passed: 14
+- Checks: 15
+- Passed: 15
 - Failed: 0
 
 ## Checks
@@ -28,3 +28,4 @@ Overall: PASS
 | project status still stops before publishing | PASS | publicPublished=15, publishableNow=0 |
 | SEO opportunity map has review-ready drafts | PASS | reviewReadyDrafts=633 |
 | SEO opportunity map includes manual review batches | PASS | batches=6 |
+| content opportunity backlog has reviewable topics | PASS | topics=7, topicsWithReadyCandidates=7 |

@@ -31,7 +31,18 @@ type OpportunityTarget = {
   reviewReadyDrafts: number;
 };
 
+type ContentOpportunity = {
+  gapScore: number;
+  publicMatches: number;
+  readyCandidates: unknown[];
+  topic: string;
+  why: string;
+};
+
 const reports = {
+  contentBacklog: readJson<{ opportunities: ContentOpportunity[]; totals: { topics: number; topicsWithReadyCandidates: number } }>(
+    "content/automation/content-opportunity-backlog.json",
+  ),
   gate: readJson<{ ok: boolean; summary: { checks: number; failed: number; passed: number } }>("content/automation/automation-gate.json"),
   preflight: readJson<{ ok: boolean; summary: { checked: number; failed: number; passed: number }; items: PreflightItem[] }>(
     "content/automation/review-preflight.json",
@@ -86,6 +97,11 @@ const payload = {
   seoOpportunities: {
     reviewReadyDrafts: reports.seoOpportunity.data?.totals.reviewReadyDrafts ?? null,
     nextReviewTargets: reports.seoOpportunity.data?.nextReviewTargets.slice(0, 5) ?? [],
+  },
+  contentOpportunities: {
+    topics: reports.contentBacklog.data?.totals.topics ?? null,
+    topicsWithReadyCandidates: reports.contentBacklog.data?.totals.topicsWithReadyCandidates ?? null,
+    top: reports.contentBacklog.data?.opportunities.slice(0, 5) ?? [],
   },
   nextActions: buildNextActions(),
 };
@@ -166,6 +182,17 @@ function toMarkdown(data: typeof payload) {
     "| Category | Published | Review-ready drafts | Reason |",
     "| --- | --- | --- | --- |",
     ...data.seoOpportunities.nextReviewTargets.map((item) => `| ${item.category} | ${item.published} | ${item.reviewReadyDrafts} | ${item.reason} |`),
+    "",
+    "## Content Opportunities",
+    "",
+    `- Topics: ${data.contentOpportunities.topics}`,
+    `- Topics with ready candidates: ${data.contentOpportunities.topicsWithReadyCandidates}`,
+    "",
+    "| Topic | Score | Public matches | Ready candidates | Why |",
+    "| --- | --- | --- | --- | --- |",
+    ...data.contentOpportunities.top.map((item) => (
+      `| ${item.topic} | ${item.gapScore} | ${item.publicMatches} | ${item.readyCandidates.length} | ${item.why} |`
+    )),
     "",
     "## Next Actions",
     "",
