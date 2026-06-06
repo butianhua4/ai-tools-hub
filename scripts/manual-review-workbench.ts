@@ -67,6 +67,17 @@ type DeploymentCoverage = {
   };
 };
 
+type ReviewRoadmap = {
+  lanes: Array<{ candidates: unknown[]; lane: string; priorityScore: number; publicMatches: number }>;
+  nextReviewFiles: string[];
+  summary: {
+    lanes: number;
+    topicsWithoutPublicCoverage: number;
+    uniqueNextReviewFiles: number;
+    unsafeCandidates: number;
+  };
+};
+
 type ProjectStatus = {
   articles: { publicPublished: number; publishableNow: unknown[]; statusCounts: Record<string, number> };
 };
@@ -83,6 +94,7 @@ function main() {
   const publishPack = readJson<PublishPack>("content/automation/publish-readiness-pack.json");
   const cannibalization = readJson<Cannibalization>("content/automation/content-cannibalization.json");
   const reviewCoverage = readJson<ReviewCoverage>("content/automation/review-coverage-report.json");
+  const reviewRoadmap = readJson<ReviewRoadmap>("content/automation/review-priority-roadmap.json");
   const deploymentCoverage = readJson<DeploymentCoverage>("content/automation/ai-deployment-coverage.json");
   const promptCoverage = readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json");
   const projectStatus = readJson<ProjectStatus>("content/automation/project-status.json");
@@ -137,6 +149,16 @@ function main() {
       reviewBatchConflictItems: cannibalization.reviewBatchConflicts,
     },
     reviewCoverage: reviewCoverage.summary,
+    reviewRoadmap: {
+      nextReviewFiles: reviewRoadmap.nextReviewFiles.slice(0, 12),
+      summary: reviewRoadmap.summary,
+      topLanes: reviewRoadmap.lanes.slice(0, 6).map((item) => ({
+        candidates: item.candidates.length,
+        lane: item.lane,
+        priorityScore: item.priorityScore,
+        publicMatches: item.publicMatches,
+      })),
+    },
     deploymentCoverage: {
       summary: deploymentCoverage.summary,
       topTopics: deploymentCoverage.coverage.slice(0, 6).map((item) => ({
@@ -188,6 +210,7 @@ function buildNextActions(
   }
   return [
     "Review the current publish readiness items in docs/publish-readiness-pack.md.",
+    "Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.",
     "Use docs/review-coverage-report.md to inspect all planned review candidates, not only today's pack.",
     "Use docs/ai-deployment-coverage.md to prioritize deployment, Agent, RAG, and model infrastructure drafts.",
     "Use docs/industry-prompt-coverage.md to prioritize broad industry AI prompt drafts for future review batches.",
@@ -219,6 +242,11 @@ function toMarkdown(payload: {
     }>;
   };
   publishingBoundary: { publicPublished: number; publishableNow: number; statusCounts: Record<string, number> };
+  reviewRoadmap: {
+    nextReviewFiles: string[];
+    summary: ReviewRoadmap["summary"];
+    topLanes: Array<{ candidates: number; lane: string; priorityScore: number; publicMatches: number }>;
+  };
   deploymentCoverage: {
     summary: DeploymentCoverage["summary"];
     topTopics: Array<{ candidates: number; gapScore: number; publicMatches: number; topic: string }>;
@@ -309,6 +337,21 @@ function toMarkdown(payload: {
     `- Missing risk checks: ${payload.reviewCoverage.itemsMissingRiskChecks}`,
     `- Unsafe indexing items: ${payload.reviewCoverage.unsafeIndexingItems}`,
     `- Non-draft items: ${payload.reviewCoverage.nonDraftItems}`,
+    "",
+    "## Review Priority Roadmap",
+    "",
+    `- Lanes: ${payload.reviewRoadmap.summary.lanes}`,
+    `- Unique next review files: ${payload.reviewRoadmap.summary.uniqueNextReviewFiles}`,
+    `- Topics without public coverage: ${payload.reviewRoadmap.summary.topicsWithoutPublicCoverage}`,
+    `- Unsafe candidates: ${payload.reviewRoadmap.summary.unsafeCandidates}`,
+    "",
+    "| Lane | Score | Public | Candidates |",
+    "| --- | --- | --- | --- |",
+    ...payload.reviewRoadmap.topLanes.map((item) => `| ${item.lane} | ${item.priorityScore} | ${item.publicMatches} | ${item.candidates} |`),
+    "",
+    "Next review files:",
+    "",
+    ...payload.reviewRoadmap.nextReviewFiles.map((file) => `- ${file}`),
     "",
     "## AI Deployment Coverage",
     "",

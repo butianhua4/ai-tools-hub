@@ -90,6 +90,16 @@ async function main() {
       unsafeIndexingItems: number;
     };
   }>("content/automation/review-coverage-report.json");
+  const reviewRoadmap = readJson<{
+    guardrails: { autoMarkReview: boolean; autoPublish: boolean };
+    lanes: Array<{ candidates?: unknown[]; reviewFocus?: unknown[]; searchQueries?: unknown[]; sourceTargets?: unknown[] }>;
+    nextReviewFiles?: unknown[];
+    summary: {
+      lanes: number;
+      uniqueNextReviewFiles: number;
+      unsafeCandidates: number;
+    };
+  }>("content/automation/review-priority-roadmap.json");
   const liveSearch = readJson<{ articles: { publicCount: number }; failedChecks: string[]; ok: boolean }>("content/automation/live-search-surface.json");
   const workbench = readJson<{
     guardrails: { autoMarkReview: boolean; autoPublish: boolean };
@@ -306,6 +316,27 @@ async function main() {
         reviewBatchConflictItems: reviewCoverage.summary.reviewBatchConflictItems,
         unsafeIndexingItems: reviewCoverage.summary.unsafeIndexingItems,
       }),
+    },
+    {
+      name: "review priority roadmap has enough actionable lanes",
+      ok:
+        reviewRoadmap.guardrails.autoMarkReview === false &&
+        reviewRoadmap.guardrails.autoPublish === false &&
+        reviewRoadmap.summary.lanes >= 8 &&
+        reviewRoadmap.summary.uniqueNextReviewFiles >= 15,
+      detail: `lanes=${reviewRoadmap.summary.lanes}, uniqueNextReviewFiles=${reviewRoadmap.summary.uniqueNextReviewFiles}`,
+    },
+    {
+      name: "review priority roadmap includes review context",
+      ok:
+        Boolean(reviewRoadmap.lanes?.every((lane) => (lane.candidates?.length || 0) > 0 && (lane.searchQueries?.length || 0) > 0 && (lane.reviewFocus?.length || 0) > 0 && (lane.sourceTargets?.length || 0) > 0)) &&
+        Boolean(reviewRoadmap.nextReviewFiles?.length),
+      detail: `lanes=${reviewRoadmap.lanes?.length || 0}, nextReviewFiles=${reviewRoadmap.nextReviewFiles?.length || 0}`,
+    },
+    {
+      name: "review priority roadmap candidates stay safe",
+      ok: reviewRoadmap.summary.unsafeCandidates === 0,
+      detail: `unsafeCandidates=${reviewRoadmap.summary.unsafeCandidates}`,
     },
     {
       name: "live search surface check passed",

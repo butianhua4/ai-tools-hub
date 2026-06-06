@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T11:53:35.319Z",
+  "generatedAt": "2026-06-06T12:00:43.408Z",
   "ok": true,
   "summary": {
-    "checks": 30,
+    "checks": 33,
     "failed": 0,
-    "passed": 30
+    "passed": 33
   },
   "failed": [],
   "checks": [
@@ -146,6 +146,21 @@
       "name": "review coverage keeps planned candidates unpublished and non-indexable",
       "ok": true,
       "detail": "{\"nonDraftItems\":0,\"reviewBatchConflictItems\":0,\"unsafeIndexingItems\":0}"
+    },
+    {
+      "name": "review priority roadmap has enough actionable lanes",
+      "ok": true,
+      "detail": "lanes=12, uniqueNextReviewFiles=19"
+    },
+    {
+      "name": "review priority roadmap includes review context",
+      "ok": true,
+      "detail": "lanes=12, nextReviewFiles=19"
+    },
+    {
+      "name": "review priority roadmap candidates stay safe",
+      "ok": true,
+      "detail": "unsafeCandidates=0"
     },
     {
       "name": "live search surface check passed",

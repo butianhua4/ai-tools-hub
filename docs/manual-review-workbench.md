@@ -1,6 +1,6 @@
 # Manual Review Workbench
 
-Generated at: 2026-06-06T11:52:18.211Z
+Generated at: 2026-06-06T11:59:27.661Z
 
 This workbench is read-only. It does not publish articles or mark drafts for review.
 
@@ -83,6 +83,37 @@ This workbench is read-only. It does not publish articles or mark drafts for rev
 - Unsafe indexing items: 0
 - Non-draft items: 0
 
+## Review Priority Roadmap
+
+- Lanes: 12
+- Unique next review files: 19
+- Topics without public coverage: 7
+- Unsafe candidates: 0
+
+| Lane | Score | Public | Candidates |
+| --- | --- | --- | --- |
+| deployment: RAG、知识库和向量检索 | 348 | 0 | 5 |
+| content-backlog: RAG、知识库和向量检索 | 342 | 0 | 5 |
+| deployment: Agent 部署、工具调用和工作流 | 338 | 0 | 5 |
+| content-backlog: 全行业 AI 提示词和工作流模板 | 334 | 0 | 5 |
+| content-backlog: Agent 部署、工具调用和记忆 | 334 | 0 | 5 |
+| industry-prompt: 全行业提示词模板库 | 324 | 0 | 4 |
+
+Next review files:
+
+- content/blog/ai-agent-memory-rag-design-guide.mdx
+- content/blog/ai-model-selection-customer-service-guide.mdx
+- content/blog/ai-automation-project-pricing-scope-guide.mdx
+- content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
+- content/blog/industry-ai-prompts-template-library-2026.mdx
+- content/blog/ai-prompt-library-team-knowledge-base-guide.mdx
+- content/blog/data-analysis-ai-prompts-guide.mdx
+- content/blog/education-ai-prompts-guide.mdx
+- content/blog/dify-workflow-error-handling-guide.mdx
+- content/blog/dify-workflow-vs-agent-guide.mdx
+- content/blog/open-webui-functions-pipelines-deployment-guide.mdx
+- content/blog/local-llm-vram-not-enough-guide.mdx
+
 ## AI Deployment Coverage
 
 - Topics: 10
@@ -125,6 +156,7 @@ This workbench is read-only. It does not publish articles or mark drafts for rev
 ## Next Actions
 
 - Review the current publish readiness items in docs/publish-readiness-pack.md.
+- Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.
 - Use docs/review-coverage-report.md to inspect all planned review candidates, not only today's pack.
 - Use docs/ai-deployment-coverage.md to prioritize deployment, Agent, RAG, and model infrastructure drafts.
 - Use docs/industry-prompt-coverage.md to prioritize broad industry AI prompt drafts for future review batches.

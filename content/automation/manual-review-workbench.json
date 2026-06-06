@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T11:52:18.211Z",
+  "generatedAt": "2026-06-06T11:59:27.661Z",
   "guardrails": {
     "autoMarkReview": false,
     "autoPublish": false,
@@ -242,6 +242,69 @@
     "reviewBatchConflictItems": 0,
     "unsafeIndexingItems": 0
   },
+  "reviewRoadmap": {
+    "nextReviewFiles": [
+      "content/blog/ai-agent-memory-rag-design-guide.mdx",
+      "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+      "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+      "content/blog/data-analysis-ai-prompts-guide.mdx",
+      "content/blog/education-ai-prompts-guide.mdx",
+      "content/blog/dify-workflow-error-handling-guide.mdx",
+      "content/blog/dify-workflow-vs-agent-guide.mdx",
+      "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+      "content/blog/local-llm-vram-not-enough-guide.mdx"
+    ],
+    "summary": {
+      "currentPackCandidates": 8,
+      "lanes": 12,
+      "plannedBatchCandidates": 28,
+      "sourceLanes": 33,
+      "topicsWithoutPublicCoverage": 7,
+      "uniqueNextReviewFiles": 19,
+      "unsafeCandidates": 0
+    },
+    "topLanes": [
+      {
+        "candidates": 5,
+        "lane": "deployment: RAG、知识库和向量检索",
+        "priorityScore": 348,
+        "publicMatches": 0
+      },
+      {
+        "candidates": 5,
+        "lane": "content-backlog: RAG、知识库和向量检索",
+        "priorityScore": 342,
+        "publicMatches": 0
+      },
+      {
+        "candidates": 5,
+        "lane": "deployment: Agent 部署、工具调用和工作流",
+        "priorityScore": 338,
+        "publicMatches": 0
+      },
+      {
+        "candidates": 5,
+        "lane": "content-backlog: 全行业 AI 提示词和工作流模板",
+        "priorityScore": 334,
+        "publicMatches": 0
+      },
+      {
+        "candidates": 5,
+        "lane": "content-backlog: Agent 部署、工具调用和记忆",
+        "priorityScore": 334,
+        "publicMatches": 0
+      },
+      {
+        "candidates": 4,
+        "lane": "industry-prompt: 全行业提示词模板库",
+        "priorityScore": 324,
+        "publicMatches": 0
+      }
+    ]
+  },
   "deploymentCoverage": {
     "summary": {
       "currentPackDeploymentItems": 2,
@@ -350,6 +413,7 @@
   },
   "nextActions": [
     "Review the current publish readiness items in docs/publish-readiness-pack.md.",
+    "Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.",
     "Use docs/review-coverage-report.md to inspect all planned review candidates, not only today's pack.",
     "Use docs/ai-deployment-coverage.md to prioritize deployment, Agent, RAG, and model infrastructure drafts.",
     "Use docs/industry-prompt-coverage.md to prioritize broad industry AI prompt drafts for future review batches.",

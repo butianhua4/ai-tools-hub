@@ -26,6 +26,7 @@
     "automation:review": "tsx scripts/review-automation.ts",
     "automation:review-plan": "tsx scripts/review-batch-plan.ts",
     "automation:review-coverage": "tsx scripts/review-coverage-report.ts",
+    "automation:review-roadmap": "tsx scripts/review-priority-roadmap.ts",
     "automation:workbench": "tsx scripts/manual-review-workbench.ts",
     "automation:gate": "tsx scripts/automation-gate.ts",
     "automation:publish-pack": "tsx scripts/publish-readiness-pack.ts",

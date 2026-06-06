@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-06T11:53:35.319Z
+Generated at: 2026-06-06T12:00:43.869Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -47,6 +47,37 @@ This digest is read-only. It summarizes automation reports and does not publish 
 - Missing fact-check queries: 0
 - Missing risk checks: 0
 - Unsafe indexing items: 0
+
+## Review Priority Roadmap
+
+- Lanes: 12
+- Unique next review files: 19
+- Topics without public coverage: 7
+- Unsafe candidates: 0
+
+| Lane | Score | Public | Candidates |
+| --- | --- | --- | --- |
+| deployment: RAG、知识库和向量检索 | 348 | 0 | 5 |
+| content-backlog: RAG、知识库和向量检索 | 342 | 0 | 5 |
+| deployment: Agent 部署、工具调用和工作流 | 338 | 0 | 5 |
+| content-backlog: 全行业 AI 提示词和工作流模板 | 334 | 0 | 5 |
+| content-backlog: Agent 部署、工具调用和记忆 | 334 | 0 | 5 |
+| industry-prompt: 全行业提示词模板库 | 324 | 0 | 4 |
+
+Next review files:
+
+- content/blog/ai-agent-memory-rag-design-guide.mdx
+- content/blog/ai-model-selection-customer-service-guide.mdx
+- content/blog/ai-automation-project-pricing-scope-guide.mdx
+- content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
+- content/blog/industry-ai-prompts-template-library-2026.mdx
+- content/blog/ai-prompt-library-team-knowledge-base-guide.mdx
+- content/blog/data-analysis-ai-prompts-guide.mdx
+- content/blog/education-ai-prompts-guide.mdx
+- content/blog/dify-workflow-error-handling-guide.mdx
+- content/blog/dify-workflow-vs-agent-guide.mdx
+- content/blog/open-webui-functions-pipelines-deployment-guide.mdx
+- content/blog/local-llm-vram-not-enough-guide.mdx
 
 ## Preflight
 
@@ -132,7 +163,7 @@ This digest is read-only. It summarizes automation reports and does not publish 
 
 ## Live Search Surface
 
-- Latest check: 2026-06-06T11:53:24.352Z
+- Latest check: 2026-06-06T12:00:35.183Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85

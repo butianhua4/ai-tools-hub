@@ -85,6 +85,22 @@ type DeploymentCoverage = {
   };
 };
 
+type ReviewRoadmap = {
+  lanes: Array<{
+    candidates: unknown[];
+    lane: string;
+    priorityScore: number;
+    publicMatches: number;
+  }>;
+  nextReviewFiles: string[];
+  summary: {
+    lanes: number;
+    topicsWithoutPublicCoverage: number;
+    uniqueNextReviewFiles: number;
+    unsafeCandidates: number;
+  };
+};
+
 const reports = {
   cannibalization: readJson<{ summary: { conflicts: number; reviewBatchConflicts: number } }>("content/automation/content-cannibalization.json"),
   freshness: readJson<{ summary: { currentReviewItems: number; highRisk: number; mediumRisk: number; plannedReviewItems: number } }>(
@@ -117,6 +133,7 @@ const reports = {
     "content/automation/review-batch-plan.json",
   ),
   reviewCoverage: readJson<ReviewCoverage>("content/automation/review-coverage-report.json"),
+  reviewRoadmap: readJson<ReviewRoadmap>("content/automation/review-priority-roadmap.json"),
   review: readJson<{ counts: { candidates: number; returned: number; rejected: Record<string, number> }; recommendedToday: ReviewCandidate[] }>(
     "content/automation/review-candidates.json",
   ),
@@ -162,6 +179,14 @@ const payload = {
     plannedCandidates: reports.reviewPlan.data?.totals.plannedCandidates ?? null,
   },
   reviewCoverage: reports.reviewCoverage.data?.summary ?? null,
+  reviewRoadmap: {
+    lanes: reports.reviewRoadmap.data?.summary.lanes ?? null,
+    nextReviewFiles: reports.reviewRoadmap.data?.nextReviewFiles.slice(0, 12) ?? [],
+    topicsWithoutPublicCoverage: reports.reviewRoadmap.data?.summary.topicsWithoutPublicCoverage ?? null,
+    top: reports.reviewRoadmap.data?.lanes.slice(0, 6) ?? [],
+    uniqueNextReviewFiles: reports.reviewRoadmap.data?.summary.uniqueNextReviewFiles ?? null,
+    unsafeCandidates: reports.reviewRoadmap.data?.summary.unsafeCandidates ?? null,
+  },
   preflight: {
     checked: reports.preflight.data?.summary.checked ?? null,
     failed: reports.preflight.data?.summary.failed ?? null,
@@ -316,6 +341,21 @@ function toMarkdown(data: typeof payload) {
     data.reviewCoverage
       ? `- Unsafe indexing items: ${data.reviewCoverage.unsafeIndexingItems}`
       : "- Unsafe indexing items: missing",
+    "",
+    "## Review Priority Roadmap",
+    "",
+    `- Lanes: ${data.reviewRoadmap.lanes}`,
+    `- Unique next review files: ${data.reviewRoadmap.uniqueNextReviewFiles}`,
+    `- Topics without public coverage: ${data.reviewRoadmap.topicsWithoutPublicCoverage}`,
+    `- Unsafe candidates: ${data.reviewRoadmap.unsafeCandidates}`,
+    "",
+    "| Lane | Score | Public | Candidates |",
+    "| --- | --- | --- | --- |",
+    ...data.reviewRoadmap.top.map((item) => `| ${item.lane} | ${item.priorityScore} | ${item.publicMatches} | ${item.candidates.length} |`),
+    "",
+    "Next review files:",
+    "",
+    ...data.reviewRoadmap.nextReviewFiles.map((file) => `- ${file}`),
     "",
     "## Preflight",
     "",
