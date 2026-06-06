@@ -1,0 +1,115 @@
+---
+title: "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+slug: "open-webui-functions-pipelines-deployment-guide"
+description: "整理 Open WebUI Functions 与 Pipelines 的使用边界，覆盖 provider 接入、RAG、消息过滤、外部工作流、安全和部署检查。"
+date: "2026-06-06"
+updatedAt: "2026-06-06"
+category: "AI 部署"
+tags:
+  - "Open WebUI"
+  - "Functions"
+  - "Pipelines"
+  - "本地大模型"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "已经部署 Open WebUI、想扩展模型 provider 或接外部工作流的新手"
+searchIntent: "informational"
+primaryKeyword: "Open WebUI Functions Pipelines"
+secondaryKeywords:
+  - "Open WebUI Functions"
+  - "Open WebUI Pipelines"
+  - "Open WebUI RAG"
+  - "Open WebUI provider"
+sourceNotes: "参考 Open WebUI Functions、Pipelines、Pipes 官方文档整理；正式发布前需要人工核对版本和安全提示。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载 Open WebUI 扩展部署清单"
+  serviceCTA: "联系人工协助部署 Open WebUI 扩展"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 33
+canonical: "https://ai-jiedan-lab.vercel.app/blog/open-webui-functions-pipelines-deployment-guide"
+noindex: true
+---
+# Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流
+
+Open WebUI 不只是一个本地聊天界面。通过 Functions、Pipelines 和 Pipes，它可以接不同模型 provider、做消息过滤、扩展 RAG、调用外部工作流、把某些功能包装成可选模型或动作。但扩展能力越强，安全边界越重要，因为 Functions 可能在服务器上执行代码。
+
+本文是待复核草稿。Open WebUI 基础部署可以看 [Open WebUI + Ollama Docker 指南](/blog/open-webui-ollama-docker-guide)，本地模型部署可以看 [本地大模型部署入门](/blog/local-llm-deployment-beginner)。
+
+## 适合谁
+
+适合已经部署 Open WebUI，希望连接更多模型、增加 RAG、做消息处理或接自动化工作流的人。你可能已经能聊天，但想让 WebUI 更像内部 AI 门户。
+
+也适合做私有化 AI 工具交付的人。Open WebUI 很适合作为统一入口，但扩展前要解释清楚权限和代码风险。
+
+## 不适合谁
+
+不适合从不可信来源随意安装 Function 或 Pipeline 的人。扩展代码可能访问服务器环境、网络和文件，必须谨慎。
+
+也不适合把 Open WebUI 当作完整权限系统。用户权限、数据权限、日志、密钥和外部系统访问仍然要单独设计。
+
+## Functions 适合什么
+
+Functions 是在 Open WebUI 内扩展能力的方式，可以实现 Pipe、Filter 或 Action。它可以接入 provider、处理消息、增加按钮动作或把外部能力暴露给用户。
+
+但 Functions 本质上是代码。只安装可信来源，先在测试环境验证，再放到生产环境。不要把生产密钥直接写在代码里。
+
+## Pipelines 适合什么
+
+Pipelines 更像外部插件服务，可以做消息前后处理、RAG 管道、外部 API 调用和工作流集成。它适合把复杂逻辑放到独立服务里，便于单独部署和维护。
+
+如果你要把 Open WebUI 接到 n8n、数据库、公司知识库或自定义模型服务，Pipelines 往往比直接堆在界面里更清楚。
+
+## provider 和 RAG
+
+如果模型 provider 支持 OpenAI Chat Completions 兼容协议，很多时候可以直接配置，不需要写 Function。只有需要特殊逻辑、转换协议或扩展动作时，才考虑自定义。
+
+RAG 也要保留来源和权限。Open WebUI 能作为入口，但文档清洗、检索质量、引用来源和权限仍然要处理。
+
+## 常见错误
+
+第一个错误是把所有扩展都装到生产环境里测试。扩展应先在隔离环境验证。
+
+第二个错误是没有记录扩展版本。后续出问题时，不知道哪个 Function 或 Pipeline 改动导致。
+
+第三个错误是忽视用户权限。聊天入口统一，不代表所有用户都能访问同一批资料和工具。
+
+## 交付检查
+
+Open WebUI 扩展交付时，建议把每个 Function、Pipeline 或 Pipe 的用途、来源、版本、权限、环境变量和回滚方式写成表格。客户后续升级 Open WebUI 或替换模型 provider 时，能知道哪些扩展可能受影响。
+
+如果接了外部工作流，还要测试超时、失败、重复调用和权限不足。Open WebUI 是入口，不是全部系统。真正的稳定性取决于后面的模型服务、RAG 服务、Pipeline 服务和外部 API 是否都有错误处理。
+
+后续内容可以继续拆：Open WebUI 怎么接自定义模型 provider、Open WebUI 怎么接 n8n、Open WebUI Pipelines 怎么做内容过滤、Open WebUI Functions 怎么接内部 API。每篇都可以配一个部署清单和风险提醒，形成私有化 AI 门户专题。
+
+验收时可以准备几类问题：普通聊天是否走默认模型，特定任务是否走 Pipe，敏感词过滤是否生效，外部工作流失败时是否有提示，不同用户是否只能看到允许的资料。这样能把“界面能打开”提升到“扩展真的可用”。
+
+上线时还可以按层分工：Open WebUI 负责用户入口和会话体验，Pipelines 负责复杂处理和外部集成，模型服务负责推理，知识库服务负责检索，监控服务负责记录错误和调用量。分层之后，某一层出问题时更容易定位，也更容易替换。
+
+## 风险提醒
+
+Open WebUI 扩展可能执行任意代码或连接外部服务。要控制来源、权限、密钥、网络访问和日志。不要在未审核代码里放敏感凭据。
+
+涉及企业内部资料时，要分清模型 provider、RAG 服务、Open WebUI、Pipeline 服务各自能看到什么数据。
+
+## 具体步骤
+
+第一步，明确要扩展 provider、RAG、过滤器还是外部动作。第二步，优先使用官方支持的配置方式。第三步，自定义 Function 或 Pipeline 前先读代码。第四步，在测试环境验证输入输出。第五步，记录版本、密钥和权限。第六步，上线后监控错误和调用日志。需要部署清单，可以从 [工具导航](/tools) 下载或联系人工协助部署。
+
+## 免责声明
+
+本文只用于 Open WebUI 扩展学习，不构成安全审计或生产部署承诺。正式上线前，应人工核对 Open WebUI 版本、扩展来源、密钥管理和访问权限。

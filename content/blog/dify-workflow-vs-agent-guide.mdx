@@ -1,0 +1,115 @@
+---
+title: "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核"
+slug: "dify-workflow-vs-agent-guide"
+description: "解释 Dify Workflow 与 Agent 的选择方法，覆盖固定流程、自由工具调用、知识库问答、人工审核、成本和上线风险。"
+date: "2026-06-06"
+updatedAt: "2026-06-06"
+category: "AI 部署"
+tags:
+  - "Dify"
+  - "Workflow"
+  - "AI Agent"
+  - "AI 应用"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "准备用 Dify 搭 AI 应用、但不知道选 Workflow 还是 Agent 的新手"
+searchIntent: "informational"
+primaryKeyword: "Dify Workflow 和 Agent 区别"
+secondaryKeywords:
+  - "Dify Workflow"
+  - "Dify Agent"
+  - "Dify 工作流"
+  - "Dify 应用类型"
+sourceNotes: "参考 Dify 应用类型、Workflow 节点和变量文档整理；正式发布前需要人工核对平台最新说明。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载 Dify 应用选型表"
+  serviceCTA: "联系人工协助设计 Dify 应用架构"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 33
+canonical: "https://ai-jiedan-lab.vercel.app/blog/dify-workflow-vs-agent-guide"
+noindex: true
+---
+# Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核
+
+很多人第一次用 Dify，会在 Workflow 和 Agent 之间犹豫。简单说，Workflow 更适合步骤明确、输入输出稳定、需要可控流程的任务；Agent 更适合需要模型自主决定调用哪些工具、根据情况多步推理的任务。但上线项目不能只看名字，应该看业务是否固定、工具风险多高、是否需要人工审核、成本能否控制。
+
+本文是待复核草稿。Dify 自部署可以看 [Dify Docker Compose 自托管指南](/blog/dify-docker-compose-self-host-guide)，平台对比可以看 [Dify、Coze、Flowise 对比](/blog/dify-coze-flowise-agent-builder-comparison)。
+
+## 适合谁
+
+适合准备做客服问答、合同摘要、文档处理、销售线索分析、内容生成、内部知识库和多步骤 AI 工具的人。你可能知道 Dify 能搭应用，但不知道该把流程写死，还是让 Agent 自己判断。
+
+也适合接客户项目的人。选错应用类型，会让后续维护很痛苦。客户要的是稳定交付，不是看起来更高级的名称。
+
+## 不适合谁
+
+不适合把 Agent 当作万能自动化的人。Agent 自主性更高，但也更难控制成本、步骤和失败情况。
+
+也不适合把 Workflow 当作所有问题的答案。如果任务需要根据用户输入动态选择工具、追问、查多个系统，固定流程可能会变得很复杂。
+
+## Workflow 适合什么
+
+Workflow 适合固定流程：输入资料、检索知识库、调用模型、格式化输出、分支判断、调用接口、返回结果。每一步都能在画布上看清楚，方便调试和交付。
+
+例如文档摘要、客服工单分类、销售线索评分、合同条款提取、简历筛选、文章改写，都可以优先考虑 Workflow。它的优点是稳定、可解释、便于测试。
+
+## Agent 适合什么
+
+Agent 适合工具选择不固定的任务。例如用户可能要求查知识库、查订单、生成邮件、创建工单、继续追问，模型需要根据任务决定下一步。
+
+但 Agent 需要更严格的工具权限和人工审核。工具越多，越要限制输入参数、动作边界和失败策略。Agent 工具权限可以看 [Agent 工具权限控制](/blog/agent-tool-permission-safety-guide)。
+
+## 成本和延迟
+
+Workflow 的调用链一般更容易估算。每个节点是否调用模型、调用几次、输入多长，都能提前算。
+
+Agent 的调用次数可能不固定。如果它反复思考、反复调用工具，成本和延迟会增加。上线前要设置最大步骤数、最大调用次数、超时和降级策略。
+
+## 人工审核
+
+如果应用会对外发布、写入系统、发送通知、修改客户资料或生成报价，就要加入人工审核。Workflow 可以在固定节点后进入人工确认，Agent 则要在高影响工具调用前确认。
+
+审核流程可以看 [Agent 人工审核流程](/blog/agent-human-review-loop-guide)。不要让模型独自决定高影响动作。
+
+## 常见错误
+
+第一个错误是为了“智能”强行用 Agent。很多任务用 Workflow 更稳定，也更容易交付。
+
+第二个错误是 Workflow 没有异常分支。固定流程不等于没有失败，知识库为空、输入缺失、API 超时都要处理。
+
+第三个错误是 Agent 暴露太多工具。工具越多，越需要权限设计和日志追踪。
+
+## 交付检查
+
+做 Dify 项目交付时，建议把选型理由写进交付文档。客户看到 Workflow 或 Agent，不一定理解背后的取舍。你可以说明：为什么这个任务使用固定流程，为什么某些步骤需要人工确认，为什么不让 Agent 自由调用全部工具，为什么要限制最大调用次数。
+
+如果后续要扩展，也要提前留口子。比如第一期先用 Workflow 做稳定问答和资料处理，第二期再接 Agent 工具调用；或者先做内部使用，再开放给客户可见场景。这样客户会觉得方案是有路线图的，而不是临时拼出来的。
+
+## 风险提醒
+
+Dify 应用如果连接客户数据、内部系统和外部 API，要注意权限、日志、脱敏和人工确认。不同应用类型只是实现方式，不会自动解决合规和安全问题。
+
+正式上线前，应该用真实输入测试固定流程、异常输入、多人并发、低置信度回答和工具失败。
+
+## 具体步骤
+
+第一步，写清业务输入和目标输出。第二步，判断流程是否固定。第三步，固定流程优先用 Workflow。第四步，需要动态工具选择再考虑 Agent。第五步，为高影响动作加人工审核。第六步，记录成本、延迟和失败案例。需要选型表，可以从 [工具导航](/tools) 下载或联系人工协助设计。
+
+## 免责声明
+
+本文只用于 Dify 应用选型学习，不构成平台功能承诺或业务效果承诺。正式实施前，应人工核对 Dify 最新功能、客户权限和上线风险。
