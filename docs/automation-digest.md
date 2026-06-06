@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-06T16:55:00.672Z
+Generated at: 2026-06-06T17:05:51.069Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -53,7 +53,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=zh-tw
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
 - https://docs.dify.ai -> https://docs.dify.ai/en/use-dify/getting-started/introduction
@@ -117,6 +117,33 @@ Next unique review items:
 | true | true | 950 | deployment, public-gap | 2 | 8 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
 | true | true | 950 | deployment, public-gap | 2 | 8 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
 | true | true | 950 | deployment, public-gap | 3 | 8 | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
+
+## Autopilot Review Queue
+
+- Items: 24
+- Ready items: 24
+- Safe draft items: 24
+- Next assignments: 10
+- With source targets: 24
+- With search queries: 23
+- Unsafe items: 0
+
+Unsafe assignment items:
+
+- none
+
+| Ready | Score | Lane | Sources | Refs | Queries | Blockers | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| true | 1688 | industry-prompt | prompt, public-gap, wave | 9 | 8 | 0 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| true | 1643 | ai-deployment | deployment, public-gap, wave | 6 | 8 | 0 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| true | 1428 | wave-review | wave | 7 | 0 | 0 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| true | 1253 | ai-deployment | deployment, public-gap | 5 | 8 | 0 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
+| true | 1238 | ai-deployment | deployment, public-gap | 4 | 8 | 0 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| true | 1223 | ai-deployment | deployment, public-gap | 3 | 8 | 0 | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
+| true | 1208 | ai-deployment | deployment, public-gap | 2 | 8 | 0 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+| true | 1208 | ai-deployment | deployment, public-gap | 2 | 8 | 0 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
+| true | 1093 | public-coverage-gap | public-gap | 2 | 4 | 0 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
+| true | 578 | industry-prompt | prompt | 5 | 4 | 0 | 客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断 | content/blog/customer-service-ai-prompts-guide.mdx |
 
 ## Review Optimization Brief
 
@@ -313,8 +340,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 107
-- Traffic claim watch mentions: 780
+- Traffic claim files scanned: 109
+- Traffic claim watch mentions: 882
 
 ## Preflight
 
@@ -676,7 +703,7 @@ Next review files:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-06T16:54:32.106Z
+- Latest check: 2026-06-06T17:05:21.947Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85
@@ -700,6 +727,7 @@ Next review files:
 - Use docs/source-target-health-audit.md to confirm official source links are reachable before approving fast-changing AI guidance.
 - Use docs/review-action-board.md as the prioritized task board for Wave 1 and public-gap manual review.
 - Use docs/review-portfolio-board.md to deduplicate Wave, public-gap, deployment, and prompt review candidates before assigning manual review.
+- Use docs/autopilot-review-queue.md as the ordered next-10 manual review assignment queue.
 - Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.
 - If approved by a human, run mark:review with --confirm-human for approved files only.
 - Publish only status=review articles in a 1-3 article batch after a dry-run.

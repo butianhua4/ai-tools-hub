@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-06T16:55:00.728Z
+Generated at: 2026-06-06T17:05:51.093Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 89
-- Passed: 89
+- Checks: 91
+- Passed: 91
 - Failed: 0
 
 ## Checks
@@ -30,7 +30,7 @@ Overall: PASS
 | project status still stops before publishing | PASS | publicPublished=15, publishableNow=0 |
 | traffic evidence audit passed and is read-only | PASS | failedChecks=0, measuredTrafficSources=0 |
 | traffic is not claimed without measured metrics | PASS | trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 |
-| traffic claim guard found no unsupported claims | PASS | filesScanned=107, unsafeClaims=0, watchMentions=780 |
+| traffic claim guard found no unsupported claims | PASS | filesScanned=109, unsafeClaims=0, watchMentions=882 |
 | content integrity audit is read-only and clean | PASS | filesScanned=669, blockingItems=0 |
 | content integrity audit covers public, recommended, and Wave 1 items | PASS | public=15, recommended=3, wave=3 |
 | internal link opportunity audit is read-only and covers expansion candidates | PASS | public=15, expansion=19, candidates=19 |
@@ -41,6 +41,8 @@ Overall: PASS
 | review action board tasks are ready and preserve command boundaries | PASS | ready=11, unsafe=0 |
 | review portfolio board deduplicates all review packs | PASS | sourceCandidates=33, uniqueItems=24, duplicates=9, multiSource=7 |
 | review portfolio board keeps unique candidates safe and human-gated | PASS | ready=24, safe=24, sources=24, commands=24 |
+| autopilot review queue is read-only and covers portfolio candidates | PASS | items=24, next=10, sources=24 |
+| autopilot review queue keeps assignments safe and human-gated | PASS | ready=24, safe=24, unsafe=0 |
 | review optimization brief is read-only and covers ready action-board tasks | PASS | briefs=11, ready=11, unsafeCommands=0 |
 | review optimization brief has actionable copydesk guidance | PASS | withAction=11, missingPublicLinkItems=10, exactQueryWeak=3 |
 | search snippet readiness audit is read-only and covers public plus expansion items | PASS | public=15, expansion=19, scoped=34 |

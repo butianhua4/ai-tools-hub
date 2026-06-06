@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-06T16:54:52.120Z",
+  "generatedAt": "2026-06-06T17:05:36.427Z",
   "guardrails": {
     "autoPublish": false,
     "note": "This guard scans operational docs and automation reports for unsupported traffic claims. It does not scan draft article teaching examples."
   },
   "summary": {
-    "filesScanned": 107,
+    "filesScanned": 109,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 780
+    "watchMentions": 882
   },
   "unsafeClaims": [],
   "watchMentions": [
@@ -128,55 +128,55 @@
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 306,
+      "line": 333,
       "reason": "traffic-related mention",
       "text": "## Traffic Evidence"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 308,
+      "line": 335,
       "reason": "traffic-related mention",
       "text": "- Traffic data available: false"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 309,
+      "line": 336,
       "reason": "traffic-related mention",
       "text": "- Can claim traffic: false"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 311,
+      "line": 338,
       "reason": "traffic-related mention",
       "text": "- Measured traffic sources: none"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 312,
+      "line": 339,
       "reason": "traffic-related mention",
       "text": "- Search Console verification evidence: false"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 315,
+      "line": 342,
       "reason": "traffic-related mention",
       "text": "- Unsupported traffic claims: 0"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 316,
+      "line": 343,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim files scanned: 107"
+      "text": "- Traffic claim files scanned: 109"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 317,
+      "line": 344,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim watch mentions: 780"
+      "text": "- Traffic claim watch mentions: 862"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 353,
+      "line": 380,
       "reason": "traffic-related mention",
       "text": "| Dify、n8n、MCP 和无代码 AI 自动化 | 258 | 0 | 5 | 无代码 AI 自动化容易吸引搜索流量，也最需要平台规则和权限边界提醒。 |"
     },
@@ -196,7 +196,79 @@
       "file": "docs/automation-gate.md",
       "line": 33,
       "reason": "traffic-related mention",
-      "text": "| traffic claim guard found no unsupported claims | PASS | filesScanned=107, unsafeClaims=0, watchMentions=780 |"
+      "text": "| traffic claim guard found no unsupported claims | PASS | filesScanned=109, unsafeClaims=0, watchMentions=862 |"
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 18,
+      "reason": "traffic-related mention",
+      "text": "- Traffic data available: false"
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 19,
+      "reason": "traffic-related mention",
+      "text": "- Can claim traffic: false"
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 67,
+      "reason": "traffic-related mention",
+      "text": "- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence."
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 84,
+      "reason": "traffic-related mention",
+      "text": "- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence."
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 101,
+      "reason": "traffic-related mention",
+      "text": "- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence."
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 118,
+      "reason": "traffic-related mention",
+      "text": "- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence."
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 135,
+      "reason": "traffic-related mention",
+      "text": "- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence."
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 152,
+      "reason": "traffic-related mention",
+      "text": "- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence."
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 169,
+      "reason": "traffic-related mention",
+      "text": "- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence."
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 186,
+      "reason": "traffic-related mention",
+      "text": "- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence."
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 203,
+      "reason": "traffic-related mention",
+      "text": "- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence."
+    },
+    {
+      "file": "docs/autopilot-review-queue.md",
+      "line": 218,
+      "reason": "traffic-related mention",
+      "text": "- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence."
     },
     {
       "file": "docs/broad-search-demand-map.md",
@@ -419,78 +491,6 @@
       "line": 461,
       "reason": "traffic-related mention",
       "text": "- No fabricated metrics, rankings, traffic, income, or client results."
-    },
-    {
-      "file": "docs/industry-prompt-review-pack.md",
-      "line": 472,
-      "reason": "traffic-related mention",
-      "text": "- Confirm the article does not promise rankings, traffic, revenue, legal outcomes, medical outcomes, or guaranteed conversion."
-    },
-    {
-      "file": "docs/industry-prompt-review-pack.md",
-      "line": 512,
-      "reason": "traffic-related mention",
-      "text": "- No fabricated metrics, rankings, traffic, income, or client results."
-    },
-    {
-      "file": "docs/industry-prompt-review-pack.md",
-      "line": 523,
-      "reason": "traffic-related mention",
-      "text": "- Confirm the article does not promise rankings, traffic, revenue, legal outcomes, medical outcomes, or guaranteed conversion."
-    },
-    {
-      "file": "docs/industry-prompt-review-pack.md",
-      "line": 563,
-      "reason": "traffic-related mention",
-      "text": "- No fabricated metrics, rankings, traffic, income, or client results."
-    },
-    {
-      "file": "docs/industry-prompt-review-pack.md",
-      "line": 574,
-      "reason": "traffic-related mention",
-      "text": "- Confirm the article does not promise rankings, traffic, revenue, legal outcomes, medical outcomes, or guaranteed conversion."
-    },
-    {
-      "file": "docs/industry-prompt-review-pack.md",
-      "line": 614,
-      "reason": "traffic-related mention",
-      "text": "- No fabricated metrics, rankings, traffic, income, or client results."
-    },
-    {
-      "file": "docs/industry-prompt-review-pack.md",
-      "line": 625,
-      "reason": "traffic-related mention",
-      "text": "- Confirm the article does not promise rankings, traffic, revenue, legal outcomes, medical outcomes, or guaranteed conversion."
-    },
-    {
-      "file": "docs/industry-prompt-review-pack.md",
-      "line": 665,
-      "reason": "traffic-related mention",
-      "text": "- No fabricated metrics, rankings, traffic, income, or client results."
-    },
-    {
-      "file": "docs/industry-prompt-review-pack.md",
-      "line": 676,
-      "reason": "traffic-related mention",
-      "text": "- Confirm the article does not promise rankings, traffic, revenue, legal outcomes, medical outcomes, or guaranteed conversion."
-    },
-    {
-      "file": "docs/live-search-surface.md",
-      "line": 5,
-      "reason": "traffic-related mention",
-      "text": "This report checks the live production search surfaces. It does not use Search Console traffic, impressions, or ranking data."
-    },
-    {
-      "file": "docs/manual-review-workbench.md",
-      "line": 186,
-      "reason": "traffic-related mention",
-      "text": "## Traffic Evidence"
-    },
-    {
-      "file": "docs/manual-review-workbench.md",
-      "line": 188,
-      "reason": "traffic-related mention",
-      "text": "- Traffic data available: false"
     }
   ],
   "nextActions": [

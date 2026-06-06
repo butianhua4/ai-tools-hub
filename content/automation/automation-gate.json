@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T16:55:00.728Z",
+  "generatedAt": "2026-06-06T17:05:51.093Z",
   "ok": true,
   "summary": {
-    "checks": 89,
+    "checks": 91,
     "failed": 0,
-    "passed": 89
+    "passed": 91
   },
   "failed": [],
   "checks": [
@@ -90,7 +90,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=107, unsafeClaims=0, watchMentions=780"
+      "detail": "filesScanned=109, unsafeClaims=0, watchMentions=882"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -141,6 +141,16 @@
       "name": "review portfolio board keeps unique candidates safe and human-gated",
       "ok": true,
       "detail": "ready=24, safe=24, sources=24, commands=24"
+    },
+    {
+      "name": "autopilot review queue is read-only and covers portfolio candidates",
+      "ok": true,
+      "detail": "items=24, next=10, sources=24"
+    },
+    {
+      "name": "autopilot review queue keeps assignments safe and human-gated",
+      "ok": true,
+      "detail": "ready=24, safe=24, unsafe=0"
     },
     {
       "name": "review optimization brief is read-only and covers ready action-board tasks",

@@ -466,6 +466,42 @@ async function main() {
       unsafeItems: number;
     };
   }>("content/automation/review-portfolio-board.json");
+  const autopilotReviewQueue = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
+    items?: Array<{
+      blockers?: unknown[];
+      commandBoundary?: {
+        markReviewAfterHumanApproval?: string;
+        publishConfirm?: string;
+        publishDryRunAfterReview?: string;
+        stopBefore?: string;
+      };
+      readyForAssignment?: boolean;
+      safeDraft?: boolean;
+      sourceTargets?: unknown[];
+    }>;
+    nextAssignments?: Array<{
+      blockers?: unknown[];
+      commandBoundary?: {
+        markReviewAfterHumanApproval?: string;
+        publishConfirm?: string;
+        publishDryRunAfterReview?: string;
+        stopBefore?: string;
+      };
+      readyForAssignment?: boolean;
+      safeDraft?: boolean;
+      sourceTargets?: unknown[];
+    }>;
+    summary: {
+      items: number;
+      nextAssignments: number;
+      readyItems: number;
+      safeDraftItems: number;
+      unsafeItems: number;
+      withSearchQueries: number;
+      withSourceTargets: number;
+    };
+  }>("content/automation/autopilot-review-queue.json");
   const reviewOptimizationBrief = readJson<{
     briefs?: Array<{
       file: string;
@@ -807,6 +843,39 @@ async function main() {
           ),
         ),
       detail: `ready=${reviewPortfolioBoard.summary.readyItems}, safe=${reviewPortfolioBoard.summary.safeDraftItems}, sources=${reviewPortfolioBoard.summary.itemsWithSourceTargets}, commands=${reviewPortfolioBoard.summary.itemsWithCommandBoundary}`,
+    },
+    {
+      name: "autopilot review queue is read-only and covers portfolio candidates",
+      ok:
+        autopilotReviewQueue.guardrails.autoEditArticles === false &&
+        autopilotReviewQueue.guardrails.autoMarkReview === false &&
+        autopilotReviewQueue.guardrails.autoPublish === false &&
+        autopilotReviewQueue.summary.items === reviewPortfolioBoard.summary.items &&
+        autopilotReviewQueue.summary.nextAssignments > 0 &&
+        autopilotReviewQueue.summary.nextAssignments <= 10 &&
+        autopilotReviewQueue.summary.withSourceTargets === autopilotReviewQueue.summary.items,
+      detail: `items=${autopilotReviewQueue.summary.items}, next=${autopilotReviewQueue.summary.nextAssignments}, sources=${autopilotReviewQueue.summary.withSourceTargets}`,
+    },
+    {
+      name: "autopilot review queue keeps assignments safe and human-gated",
+      ok:
+        autopilotReviewQueue.summary.unsafeItems === 0 &&
+        autopilotReviewQueue.summary.readyItems === autopilotReviewQueue.summary.items &&
+        autopilotReviewQueue.summary.safeDraftItems === autopilotReviewQueue.summary.items &&
+        Boolean(
+          autopilotReviewQueue.nextAssignments?.every(
+            (item) =>
+              item.readyForAssignment === true &&
+              item.safeDraft === true &&
+              (item.blockers?.length || 0) === 0 &&
+              (item.sourceTargets?.length || 0) > 0 &&
+              item.commandBoundary?.markReviewAfterHumanApproval?.includes("--confirm-human") &&
+              !item.commandBoundary?.publishDryRunAfterReview?.includes("--confirm") &&
+              item.commandBoundary?.publishConfirm === "not-included" &&
+              item.commandBoundary?.stopBefore?.includes("explicit"),
+          ),
+        ),
+      detail: `ready=${autopilotReviewQueue.summary.readyItems}, safe=${autopilotReviewQueue.summary.safeDraftItems}, unsafe=${autopilotReviewQueue.summary.unsafeItems}`,
     },
     {
       name: "review optimization brief is read-only and covers ready action-board tasks",

@@ -366,6 +366,32 @@ type ReviewPortfolioBoard = {
   };
 };
 
+type AutopilotReviewQueue = {
+  nextAssignments: Array<{
+    assignmentLane: string;
+    autopilotScore: number;
+    blockers: unknown[];
+    file: string;
+    readyForAssignment: boolean;
+    reviewFocus: string[];
+    safeDraft: boolean;
+    searchQueries: string[];
+    sourceTargets: string[];
+    sourceTypes: string[];
+    title: string;
+  }>;
+  summary: {
+    items: number;
+    nextAssignments: number;
+    readyItems: number;
+    safeDraftItems: number;
+    unsafeItems: number;
+    withSearchQueries: number;
+    withSourceTargets: number;
+  };
+  unsafeItems: unknown[];
+};
+
 type ReviewOptimizationBrief = {
   nextBriefs: Array<{
     file: string;
@@ -736,6 +762,7 @@ const reports = {
   sourceHealth: readJson<SourceHealth>("content/automation/source-target-health-audit.json"),
   reviewActionBoard: readJson<ReviewActionBoard>("content/automation/review-action-board.json"),
   reviewPortfolioBoard: readJson<ReviewPortfolioBoard>("content/automation/review-portfolio-board.json"),
+  autopilotReviewQueue: readJson<AutopilotReviewQueue>("content/automation/autopilot-review-queue.json"),
   reviewOptimizationBrief: readJson<ReviewOptimizationBrief>("content/automation/review-optimization-brief.json"),
   reviewCannibalizationBrief: readJson<ReviewCannibalizationBrief>("content/automation/review-cannibalization-brief.json"),
   reviewFreshnessBrief: readJson<ReviewFreshnessBrief>("content/automation/review-freshness-brief.json"),
@@ -818,6 +845,17 @@ const payload = {
     sourceCandidates: reports.reviewPortfolioBoard.data?.summary.sourceCandidates ?? null,
     sourceCounts: reports.reviewPortfolioBoard.data?.sourceCounts ?? null,
     unsafeItems: reports.reviewPortfolioBoard.data?.summary.unsafeItems ?? null,
+  },
+  autopilotReviewQueue: {
+    items: reports.autopilotReviewQueue.data?.summary.items ?? null,
+    nextAssignments: reports.autopilotReviewQueue.data?.summary.nextAssignments ?? null,
+    nextAssignmentItems: reports.autopilotReviewQueue.data?.nextAssignments.slice(0, 10) ?? [],
+    readyItems: reports.autopilotReviewQueue.data?.summary.readyItems ?? null,
+    safeDraftItems: reports.autopilotReviewQueue.data?.summary.safeDraftItems ?? null,
+    unsafeItems: reports.autopilotReviewQueue.data?.summary.unsafeItems ?? null,
+    unsafeItemList: reports.autopilotReviewQueue.data?.unsafeItems.slice(0, 8) ?? [],
+    withSearchQueries: reports.autopilotReviewQueue.data?.summary.withSearchQueries ?? null,
+    withSourceTargets: reports.autopilotReviewQueue.data?.summary.withSourceTargets ?? null,
   },
   reviewOptimizationBrief: {
     briefs: reports.reviewOptimizationBrief.data?.summary.briefs ?? null,
@@ -1166,6 +1204,9 @@ function buildNextActions() {
   if (!reports.reviewPortfolioBoard.data || reports.reviewPortfolioBoard.data.summary.unsafeItems > 0) {
     return ["Open docs/review-portfolio-board.md and resolve unsafe deduplicated review candidates before any mark:review command."];
   }
+  if (!reports.autopilotReviewQueue.data || reports.autopilotReviewQueue.data.summary.unsafeItems > 0) {
+    return ["Open docs/autopilot-review-queue.md and resolve unsafe review assignments before any mark:review command."];
+  }
   if (!reports.reviewOptimizationBrief.data || reports.reviewOptimizationBrief.data.summary.unsafeCommands > 0) {
     return ["Open docs/review-optimization-brief.md and resolve unsafe or missing copydesk guidance before manual review."];
   }
@@ -1229,6 +1270,7 @@ function buildNextActions() {
     "Use docs/source-target-health-audit.md to confirm official source links are reachable before approving fast-changing AI guidance.",
     "Use docs/review-action-board.md as the prioritized task board for Wave 1 and public-gap manual review.",
     "Use docs/review-portfolio-board.md to deduplicate Wave, public-gap, deployment, and prompt review candidates before assigning manual review.",
+    "Use docs/autopilot-review-queue.md as the ordered next-10 manual review assignment queue.",
     "Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.",
     "If approved by a human, run mark:review with --confirm-human for approved files only.",
     "Publish only status=review articles in a 1-3 article batch after a dry-run.",
@@ -1362,6 +1404,27 @@ function toMarkdown(data: typeof payload) {
     ...data.reviewPortfolioBoard.nextItems.map(
       (item) =>
         `| ${item.readyForHumanReview} | ${item.safeDraft} | ${item.priorityScore} | ${item.sourceTypes.join(", ")} | ${item.sourceTargets.length} | ${item.searchQueries.length} | ${item.title} | ${item.file} |`,
+    ),
+    "",
+    "## Autopilot Review Queue",
+    "",
+    `- Items: ${data.autopilotReviewQueue.items}`,
+    `- Ready items: ${data.autopilotReviewQueue.readyItems}`,
+    `- Safe draft items: ${data.autopilotReviewQueue.safeDraftItems}`,
+    `- Next assignments: ${data.autopilotReviewQueue.nextAssignments}`,
+    `- With source targets: ${data.autopilotReviewQueue.withSourceTargets}`,
+    `- With search queries: ${data.autopilotReviewQueue.withSearchQueries}`,
+    `- Unsafe items: ${data.autopilotReviewQueue.unsafeItems}`,
+    "",
+    "Unsafe assignment items:",
+    "",
+    ...(data.autopilotReviewQueue.unsafeItemList.length ? data.autopilotReviewQueue.unsafeItemList.map((item) => `- ${JSON.stringify(item)}`) : ["- none"]),
+    "",
+    "| Ready | Score | Lane | Sources | Refs | Queries | Blockers | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...data.autopilotReviewQueue.nextAssignmentItems.map(
+      (item) =>
+        `| ${item.readyForAssignment} | ${item.autopilotScore} | ${item.assignmentLane} | ${item.sourceTypes.join(", ")} | ${item.sourceTargets.length} | ${item.searchQueries.length} | ${item.blockers.length} | ${item.title} | ${item.file} |`,
     ),
     "",
     "## Review Optimization Brief",
