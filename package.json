@@ -13,6 +13,7 @@
     "publish:articles": "tsx scripts/publish-articles.ts",
     "content:plan": "tsx scripts/refresh-content-plan.ts",
     "content:cannibalization": "tsx scripts/content-cannibalization-check.ts",
+    "content:freshness": "tsx scripts/content-freshness-check.ts",
     "content:dashboard": "next dev",
     "content:review-pack": "tsx scripts/content-review-pack.ts",
     "content:review-opinions": "tsx scripts/content-review-opinions.ts",

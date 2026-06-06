@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-06T11:18:45.791Z
+Generated at: 2026-06-06T11:25:14.620Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 20
-- Passed: 20
+- Checks: 21
+- Passed: 21
 - Failed: 0
 
 ## Checks
@@ -32,5 +32,6 @@ Overall: PASS
 | SEO opportunity map includes manual review batches | PASS | batches=6 |
 | content opportunity backlog has reviewable topics | PASS | topics=7, topicsWithReadyCandidates=7 |
 | content cannibalization check generated warning report | PASS | conflicts=200, reviewBatchConflicts=0 |
+| content freshness check covers review items | PASS | highRisk=570, currentReviewItems=3, plannedReviewItems=9 |
 | live search surface check passed | PASS | publicArticles=15, failed=0 |
 | manual review workbench is ready and stops before publishing | PASS | currentItemsCovered=3, publishableNow=0 |

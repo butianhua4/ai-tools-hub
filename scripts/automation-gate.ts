@@ -47,6 +47,10 @@ async function main() {
     guardrails: { autoPublish: boolean };
     summary: { articleCount: number; conflicts: number; reviewBatchConflicts: number };
   }>("content/automation/content-cannibalization.json");
+  const freshness = readJson<{
+    guardrails: { autoPublish: boolean };
+    summary: { articlesChecked: number; currentReviewItems: number; highRisk: number; plannedReviewItems: number };
+  }>("content/automation/content-freshness.json");
   const liveSearch = readJson<{ articles: { publicCount: number }; failedChecks: string[]; ok: boolean }>("content/automation/live-search-surface.json");
   const workbench = readJson<{
     guardrails: { autoMarkReview: boolean; autoPublish: boolean };
@@ -176,6 +180,11 @@ async function main() {
       name: "content cannibalization check generated warning report",
       ok: cannibalization.guardrails.autoPublish === false && cannibalization.summary.articleCount > 0,
       detail: `conflicts=${cannibalization.summary.conflicts}, reviewBatchConflicts=${cannibalization.summary.reviewBatchConflicts}`,
+    },
+    {
+      name: "content freshness check covers review items",
+      ok: freshness.guardrails.autoPublish === false && freshness.summary.articlesChecked > 0 && freshness.summary.currentReviewItems > 0,
+      detail: `highRisk=${freshness.summary.highRisk}, currentReviewItems=${freshness.summary.currentReviewItems}, plannedReviewItems=${freshness.summary.plannedReviewItems}`,
     },
     {
       name: "live search surface check passed",

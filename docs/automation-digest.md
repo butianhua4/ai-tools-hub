@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-06T11:18:45.738Z
+Generated at: 2026-06-06T11:25:14.571Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -79,9 +79,16 @@ This digest is read-only. It summarizes automation reports and does not publish 
 - Conflicts: 200
 - Review batch conflicts: 0
 
+## Freshness Warnings
+
+- High risk: 570
+- Medium risk: 96
+- Current review items: 3
+- Planned review items: 9
+
 ## Live Search Surface
 
-- Latest check: 2026-06-06T11:18:26.477Z
+- Latest check: 2026-06-06T11:24:01.298Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85

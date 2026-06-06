@@ -41,6 +41,9 @@ type ContentOpportunity = {
 
 const reports = {
   cannibalization: readJson<{ summary: { conflicts: number; reviewBatchConflicts: number } }>("content/automation/content-cannibalization.json"),
+  freshness: readJson<{ summary: { currentReviewItems: number; highRisk: number; mediumRisk: number; plannedReviewItems: number } }>(
+    "content/automation/content-freshness.json",
+  ),
   contentBacklog: readJson<{ opportunities: ContentOpportunity[]; totals: { topics: number; topicsWithReadyCandidates: number } }>(
     "content/automation/content-opportunity-backlog.json",
   ),
@@ -126,6 +129,12 @@ const payload = {
   cannibalization: {
     conflicts: reports.cannibalization.data?.summary.conflicts ?? null,
     reviewBatchConflicts: reports.cannibalization.data?.summary.reviewBatchConflicts ?? null,
+  },
+  freshness: {
+    currentReviewItems: reports.freshness.data?.summary.currentReviewItems ?? null,
+    highRisk: reports.freshness.data?.summary.highRisk ?? null,
+    mediumRisk: reports.freshness.data?.summary.mediumRisk ?? null,
+    plannedReviewItems: reports.freshness.data?.summary.plannedReviewItems ?? null,
   },
   liveSearch: reports.liveSearch.data
     ? {
@@ -246,6 +255,13 @@ function toMarkdown(data: typeof payload) {
     "",
     `- Conflicts: ${data.cannibalization.conflicts}`,
     `- Review batch conflicts: ${data.cannibalization.reviewBatchConflicts}`,
+    "",
+    "## Freshness Warnings",
+    "",
+    `- High risk: ${data.freshness.highRisk}`,
+    `- Medium risk: ${data.freshness.mediumRisk}`,
+    `- Current review items: ${data.freshness.currentReviewItems}`,
+    `- Planned review items: ${data.freshness.plannedReviewItems}`,
     "",
     "## Live Search Surface",
     "",

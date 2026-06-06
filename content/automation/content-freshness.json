@@ -1,0 +1,2295 @@
+{
+  "generatedAt": "2026-06-06T11:24:25.985Z",
+  "guardrails": {
+    "autoPublish": false,
+    "note": "This report flags freshness risk for manual review. It does not verify live facts, claim traffic, or change article status."
+  },
+  "summary": {
+    "articlesChecked": 669,
+    "currentReviewItems": 3,
+    "highRisk": 570,
+    "items": 666,
+    "mediumRisk": 96,
+    "plannedReviewItems": 9
+  },
+  "currentReviewItems": [
+    {
+      "category": "AI Agent",
+      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "primaryKeyword": "AI Agent 部署",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: agent",
+        "fast-changing technical term: model",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "fast-changing technical term: 知识库",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 客服",
+        "review-sensitive term: 销售",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+      "updatedAt": "2026-06-06"
+    },
+    {
+      "category": "AI 部署",
+      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "primaryKeyword": "客服 AI 模型选型",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: model",
+        "fast-changing technical term: rag",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "fast-changing technical term: 知识库",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 客服"
+      ],
+      "status": "draft",
+      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+      "updatedAt": "2026-06-06"
+    },
+    {
+      "category": "AI 提示词",
+      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "primaryKeyword": "全行业 AI 提示词模板",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: 模型",
+        "fast-changing technical term: 知识库",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 客服"
+      ],
+      "status": "draft",
+      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+      "updatedAt": "2026-06-06"
+    }
+  ],
+  "plannedReviewItems": [
+    {
+      "category": "AI Agent",
+      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "primaryKeyword": "AI Agent 部署",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: agent",
+        "fast-changing technical term: model",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "fast-changing technical term: 知识库",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 客服",
+        "review-sensitive term: 销售",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+      "updatedAt": "2026-06-06"
+    },
+    {
+      "category": "AI 记忆",
+      "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+      "primaryKeyword": "AI Agent 记忆",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: agent",
+        "fast-changing technical term: model",
+        "fast-changing technical term: openai",
+        "fast-changing technical term: rag",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 客服"
+      ],
+      "status": "draft",
+      "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
+      "updatedAt": "2026-06-06"
+    },
+    {
+      "category": "接单报价",
+      "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+      "primaryKeyword": "AI 自动化项目报价",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: agent",
+        "fast-changing technical term: dify",
+        "fast-changing technical term: n8n",
+        "fast-changing technical term: rag",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "fast-changing technical term: 知识库",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 客服",
+        "review-sensitive term: 销售"
+      ],
+      "status": "draft",
+      "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
+      "updatedAt": "2026-06-06"
+    },
+    {
+      "category": "AI 部署",
+      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "primaryKeyword": "客服 AI 模型选型",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: model",
+        "fast-changing technical term: rag",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "fast-changing technical term: 知识库",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 客服"
+      ],
+      "status": "draft",
+      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+      "updatedAt": "2026-06-06"
+    },
+    {
+      "category": "AI 提示词",
+      "file": "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+      "primaryKeyword": "团队 AI 提示词库",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: 模型",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 客服"
+      ],
+      "status": "draft",
+      "title": "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用",
+      "updatedAt": "2026-06-06"
+    },
+    {
+      "category": "AI 提示词",
+      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "primaryKeyword": "全行业 AI 提示词模板",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: 模型",
+        "fast-changing technical term: 知识库",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 客服"
+      ],
+      "status": "draft",
+      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+      "updatedAt": "2026-06-06"
+    },
+    {
+      "category": "AI 部署",
+      "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
+      "primaryKeyword": "n8n AI Agent 知识库记忆",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: agent",
+        "fast-changing technical term: n8n",
+        "fast-changing technical term: rag",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "fast-changing technical term: 知识库",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 客服",
+        "review-sensitive term: 销售",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储",
+      "updatedAt": "2026-06-06"
+    },
+    {
+      "category": "AI 部署",
+      "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+      "primaryKeyword": "Open WebUI Functions Pipelines",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: n8n",
+        "fast-changing technical term: ollama",
+        "fast-changing technical term: openai",
+        "fast-changing technical term: rag",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 大模型",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流",
+      "updatedAt": "2026-06-06"
+    },
+    {
+      "category": "AI 提示词",
+      "file": "content/blog/data-analysis-ai-prompts-guide.mdx",
+      "primaryKeyword": "数据分析 AI 提示词",
+      "reviewContext": [],
+      "riskLevel": "medium",
+      "riskReasons": [
+        "review-sensitive term: prompt",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 运营"
+      ],
+      "status": "draft",
+      "title": "数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要",
+      "updatedAt": "2026-06-06"
+    }
+  ],
+  "items": [
+    {
+      "category": "Codex 新手教程",
+      "file": "content/blog/what-is-codex-beginner-start.mdx",
+      "primaryKeyword": "Codex 是什么新手怎么开始",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "published",
+      "title": "Codex 是什么新手怎么开始",
+      "updatedAt": "2026-05-31"
+    },
+    {
+      "category": "Codex 新手教程",
+      "file": "content/blog/build-first-webpage-with-codex.mdx",
+      "primaryKeyword": "Codex 怎么做第一个网页",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "published",
+      "title": "Codex 怎么做第一个网页",
+      "updatedAt": "2026-06-01"
+    },
+    {
+      "category": "Codex 新手教程",
+      "file": "content/blog/codex-code-review-delivery-checklist.mdx",
+      "primaryKeyword": "Codex 生成代码后怎么审核：交付前检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "published",
+      "title": "Codex 生成代码后怎么审核：交付前检查清单",
+      "updatedAt": "2026-06-01"
+    },
+    {
+      "category": "Codex 新手教程",
+      "file": "content/blog/codex-generated-code-review-guide.mdx",
+      "primaryKeyword": "Codex 生成代码后怎么审核",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: key",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "published",
+      "title": "Codex 生成代码后怎么审核",
+      "updatedAt": "2026-06-01"
+    },
+    {
+      "category": "Codex 新手教程",
+      "file": "content/blog/codex-github-before-commit-checklist.mdx",
+      "primaryKeyword": "Codex 和 GitHub 怎么配合：提交代码前检查",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "published",
+      "title": "Codex 和 GitHub 怎么配合：提交代码前检查",
+      "updatedAt": "2026-06-01"
+    },
+    {
+      "category": "Codex 新手教程",
+      "file": "content/blog/codex-install-failed-beginner-fix.mdx",
+      "primaryKeyword": "Codex 安装失败怎么办",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "published",
+      "title": "Codex 安装失败怎么办",
+      "updatedAt": "2026-06-01"
+    },
+    {
+      "category": "Codex 新手教程",
+      "file": "content/blog/codex-upwork-small-job-risk-checklist.mdx",
+      "primaryKeyword": "Codex 接 Upwork 小单怎么判断：风险检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "published",
+      "title": "Codex 接 Upwork 小单怎么判断：风险检查清单",
+      "updatedAt": "2026-06-01"
+    },
+    {
+      "category": "Codex 新手教程",
+      "file": "content/blog/codex-vercel-deploy-preflight-checklist.mdx",
+      "primaryKeyword": "Codex 部署 Vercel 前检查什么：上线前清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "published",
+      "title": "Codex 部署 Vercel 前检查什么：上线前清单",
+      "updatedAt": "2026-06-01"
+    },
+    {
+      "category": "Codex 新手教程",
+      "file": "content/blog/codex-vs-claude-code-beginner-checklist.mdx",
+      "primaryKeyword": "Codex 和 Claude Code 怎么选：新手对比清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "published",
+      "title": "Codex 和 Claude Code 怎么选：新手对比清单",
+      "updatedAt": "2026-06-01"
+    },
+    {
+      "category": "报错解决",
+      "file": "content/blog/codex-npm-install-error-beginner-fix.mdx",
+      "primaryKeyword": "Codex npm install 报错怎么办",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: key",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "published",
+      "title": "Codex 项目 npm install 报错怎么办：新手排查步骤",
+      "updatedAt": "2026-06-02"
+    },
+    {
+      "category": "报价指南",
+      "file": "content/blog/first-upwork-project-pricing-checklist.mdx",
+      "primaryKeyword": "第一个 Upwork 项目怎么报价",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "published",
+      "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+      "updatedAt": "2026-06-02"
+    },
+    {
+      "category": "收款工具",
+      "file": "content/blog/payoneer-wise-paypal-beginner-comparison.mdx",
+      "primaryKeyword": "Payoneer Wise PayPal 区别",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "published",
+      "title": "Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看",
+      "updatedAt": "2026-06-02"
+    },
+    {
+      "category": "Upwork 新手",
+      "file": "content/blog/upwork-client-requirements-analysis-beginner.mdx",
+      "primaryKeyword": "Upwork 客户需求太模糊怎么办",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "published",
+      "title": "Upwork 客户需求太模糊怎么办：新手分析和追问清单",
+      "updatedAt": "2026-06-02"
+    },
+    {
+      "category": "Upwork 新手",
+      "file": "content/blog/upwork-proposal-no-reply-checklist.mdx",
+      "primaryKeyword": "Upwork Proposal 没人回怎么办",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 运营"
+      ],
+      "status": "published",
+      "title": "Upwork Proposal 发出去没人回怎么办：新手检查清单",
+      "updatedAt": "2026-06-02"
+    },
+    {
+      "category": "部署教程",
+      "file": "content/blog/vercel-env-variable-missing-beginner-guide.mdx",
+      "primaryKeyword": "Vercel 环境变量缺失怎么办",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: key",
+        "fast-changing technical term: openai",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "published",
+      "title": "Vercel 提示环境变量缺失怎么办：新手部署检查流程",
+      "updatedAt": "2026-06-02"
+    },
+    {
+      "category": "收款工具",
+      "file": "content/blog/ads-income-when-to-start-checklist.mdx",
+      "primaryKeyword": "广告收入要等到什么时候再接",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "广告收入要等到什么时候再接：新手检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "收款工具",
+      "file": "content/blog/affiliate-vs-service-income.mdx",
+      "primaryKeyword": "联盟链接收入和服务收入有什么区别",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 销售"
+      ],
+      "status": "draft",
+      "title": "联盟链接收入和服务收入有什么区别",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-assisted-vs-automated-delivery-checklist.mdx",
+      "primaryKeyword": "AI 辅助交付检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: key",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 辅助交付和完全自动交付的检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-assisted-vs-automated-delivery-mistakes.mdx",
+      "primaryKeyword": "AI 辅助交付常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: key",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: workflow"
+      ],
+      "status": "draft",
+      "title": "AI 辅助交付常见错误和解决步骤",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-assisted-vs-automated-delivery.mdx",
+      "primaryKeyword": "AI 辅助交付和完全自动交付有什么区别",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 辅助交付和完全自动交付有什么区别",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-beginner-project-fit-check-checklist.mdx",
+      "primaryKeyword": "AI 新手接项目前检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "AI 新手接项目前的项目适配检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-beginner-project-fit-check-mistakes.mdx",
+      "primaryKeyword": "AI 新手判断接项目常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "AI 新手判断接项目时的常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-beginner-project-fit-check.mdx",
+      "primaryKeyword": "AI 新手如何判断自己能不能接项目",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "AI 新手如何判断自己能不能接项目",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-coding-tools-risk-check-checklist.mdx",
+      "primaryKeyword": "AI 编程工具风险检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: key",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "AI 编程工具使用前风险检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-coding-tools-risk-check.mdx",
+      "primaryKeyword": "AI 编程工具风险检查",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: key",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "AI 编程工具使用前要检查哪些风险",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "模板和清单",
+      "file": "content/blog/ai-content-human-review-template-checklist.mdx",
+      "primaryKeyword": "AI 生成内容人工审核表检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: key",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化",
+        "review-sensitive term: workflow"
+      ],
+      "status": "draft",
+      "title": "AI 生成内容人工审核表检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "模板和清单",
+      "file": "content/blog/ai-content-human-review-template.mdx",
+      "primaryKeyword": "AI 生成内容人工审核表怎么设计",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化",
+        "review-sensitive term: workflow"
+      ],
+      "status": "draft",
+      "title": "AI 生成内容人工审核表怎么设计",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-30-day-execution-checklist.mdx",
+      "primaryKeyword": "新手 30 天 AI 接单执行检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: key",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "新手 30 天 AI 接单执行检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-30-day-execution-mistakes.mdx",
+      "primaryKeyword": "新手 30 天 AI 接单计划常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "新手 30 天 AI 接单计划常见执行错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-30-day-execution.mdx",
+      "primaryKeyword": "新手 30 天 AI 接单计划怎么执行",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "新手 30 天 AI 接单计划怎么执行",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-automation-compliance-risk-checklist.mdx",
+      "primaryKeyword": "AI 自动化接单合规风险检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: key",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化",
+        "review-sensitive term: workflow"
+      ],
+      "status": "draft",
+      "title": "AI 自动化接单合规风险检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-automation-compliance-risk-mistakes.mdx",
+      "primaryKeyword": "AI 自动化接单合规错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: key",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化",
+        "review-sensitive term: workflow"
+      ],
+      "status": "draft",
+      "title": "AI 自动化接单常见合规错误和解决步骤",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-automation-compliance-risk.mdx",
+      "primaryKeyword": "AI 自动化接单有哪些合规风险",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: key",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化",
+        "review-sensitive term: workflow"
+      ],
+      "status": "draft",
+      "title": "AI 自动化接单有哪些合规风险",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-common-misconceptions-mistakes.mdx",
+      "primaryKeyword": "AI 接单误区常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单误区的常见错误和解决步骤",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-common-misconceptions.mdx",
+      "primaryKeyword": "AI 接单常见误区有哪些",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单常见误区有哪些",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "模板和清单",
+      "file": "content/blog/ai-freelance-daily-planner-checklist.mdx",
+      "primaryKeyword": "AI 接单每日执行表检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: key",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "AI 接单每日执行表检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "模板和清单",
+      "file": "content/blog/ai-freelance-daily-planner.mdx",
+      "primaryKeyword": "AI 接单每日执行表怎么安排",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单每日执行表怎么安排",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-failure-review-checklist.mdx",
+      "primaryKeyword": "AI 接单失败复盘检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "AI 接单失败复盘检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-failure-review-mistakes.mdx",
+      "primaryKeyword": "AI 接单失败复盘常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "AI 接单失败复盘常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-failure-review.mdx",
+      "primaryKeyword": "AI 接单失败复盘",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "AI 接单失败复盘怎么做",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-first-7-days-checklist.mdx",
+      "primaryKeyword": "AI 接单新手 7 天准备检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单新手 7 天准备检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-first-7-days-mistakes.mdx",
+      "primaryKeyword": "AI 接单新手 7 天准备常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单新手 7 天准备常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-first-7-days.mdx",
+      "primaryKeyword": "AI 接单新手 7 天准备什么",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单新手 7 天准备什么",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-service-page-copy-checklist.mdx",
+      "primaryKeyword": "AI 接单服务页文案检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单服务页文案检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-service-page-copy-mistakes.mdx",
+      "primaryKeyword": "AI 接单服务页文案常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 运营",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单服务页文案常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-service-page-copy.mdx",
+      "primaryKeyword": "AI 接单服务页文案",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "AI 接单服务页文案怎么写真诚",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-skill-roadmap-checklist.mdx",
+      "primaryKeyword": "AI 接单新手技能路线图检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单新手技能路线图检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-skill-roadmap-mistakes.mdx",
+      "primaryKeyword": "AI 接单技能路线图常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单技能路线图常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-freelance-skill-roadmap.mdx",
+      "primaryKeyword": "AI 接单新手技能路线图",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单新手技能路线图怎么排",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-output-unstable-risk-control-checklist.mdx",
+      "primaryKeyword": "AI 输出不稳定检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "AI 输出不稳定风险控制检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-output-unstable-risk-control-mistakes.mdx",
+      "primaryKeyword": "AI 输出不稳定常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "AI 输出不稳定风险控制常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-output-unstable-risk-control.mdx",
+      "primaryKeyword": "AI 输出不稳定风险控制",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "AI 输出不稳定怎么做风险控制",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-small-project-practice-topics-checklist.mdx",
+      "primaryKeyword": "AI 接单练习项目检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "AI 接单练习小项目选题检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-small-project-practice-topics-mistakes.mdx",
+      "primaryKeyword": "AI 接单练习项目常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单练习小项目常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-small-project-practice-topics.mdx",
+      "primaryKeyword": "AI 接单练习小项目",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单新手练习小项目选什么",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "模板和清单",
+      "file": "content/blog/ai-tool-setup-service-checklist-checklist.mdx",
+      "primaryKeyword": "AI 工具配置服务检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: key",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 客服",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 工具配置服务接单检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "模板和清单",
+      "file": "content/blog/ai-tool-setup-service-checklist.mdx",
+      "primaryKeyword": "AI 工具配置服务接单清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: key",
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 工具配置服务接单清单怎么写",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-tools-stack-free-start-checklist.mdx",
+      "primaryKeyword": "AI 接单免费工具栈检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "AI 接单免费工具栈检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-tools-stack-free-start-mistakes.mdx",
+      "primaryKeyword": "AI 接单免费工具栈常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: vercel",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单免费工具栈常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "AI 自由职业路线",
+      "file": "content/blog/ai-tools-stack-free-start.mdx",
+      "primaryKeyword": "AI 接单免费工具栈",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: gemini",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "AI 接单新手免费工具栈怎么选",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "报错解决",
+      "file": "content/blog/api-key-invalid-or-missing-checklist.mdx",
+      "primaryKeyword": "API Key 无效或缺失排查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: key",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "API Key 无效或缺失排查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "报错解决",
+      "file": "content/blog/api-key-invalid-or-missing-freelance-scope.mdx",
+      "primaryKeyword": "API Key 无效或缺失接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: key",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "API Key 无效或缺失：接单前怎么判断能不能做",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "报错解决",
+      "file": "content/blog/api-key-invalid-or-missing-mistakes.mdx",
+      "primaryKeyword": "API Key 无效或缺失常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: key",
+        "fast-changing technical term: openai",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "API Key 无效或缺失的常见错误和修复步骤",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "报错解决",
+      "file": "content/blog/api-key-invalid-or-missing.mdx",
+      "primaryKeyword": "API Key 无效或缺失怎么处理",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: key",
+        "fast-changing technical term: openai",
+        "fast-changing technical term: vercel",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "API Key 无效或缺失怎么处理",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "新手路线",
+      "file": "content/blog/before-first-ai-freelance-job.mdx",
+      "primaryKeyword": "第一次接 AI 小单前要准备什么",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "第一次接 AI 小单前要准备什么",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "模板和清单",
+      "file": "content/blog/bugfix-delivery-note-template-checklist.mdx",
+      "primaryKeyword": "Bug 修复交付前检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: 部署"
+      ],
+      "status": "draft",
+      "title": "Bug 修复交付前检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "模板和清单",
+      "file": "content/blog/bugfix-delivery-note-template.mdx",
+      "primaryKeyword": "Bug 修复交付说明模板",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: key",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Bug 修复交付说明模板怎么写",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "作品集",
+      "file": "content/blog/canva-portfolio-cover-tips.mdx",
+      "primaryKeyword": "Canva 作品集封面",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "Canva 作品集封面怎么做更适合 AI 接单新手",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/chatgpt-codex-claude-workflow-checklist.mdx",
+      "primaryKeyword": "ChatGPT Codex Claude 工作流检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: workflow"
+      ],
+      "status": "draft",
+      "title": "ChatGPT、Codex 和 Claude 工作流检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/chatgpt-codex-claude-workflow.mdx",
+      "primaryKeyword": "ChatGPT Codex Claude 工作流",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: key",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "ChatGPT、Codex 和 Claude 怎么分工做 AI 接单流程",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "Proposal",
+      "file": "content/blog/chatgpt-vs-claude-proposal-checklist.mdx",
+      "primaryKeyword": "AI 生成 Proposal 检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "AI 生成 Proposal 发布前检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "Proposal",
+      "file": "content/blog/chatgpt-vs-claude-proposal.mdx",
+      "primaryKeyword": "ChatGPT 和 Claude 写 Proposal",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: workflow"
+      ],
+      "status": "draft",
+      "title": "ChatGPT 和 Claude 写 Proposal 有什么区别",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-automation-human-review-checklist.mdx",
+      "primaryKeyword": "Claude Code 自动化人工审核清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "Claude Code 自动化人工审核检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-automation-human-review-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code 自动化接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "Claude Code 自动化接单前怎么判断能不能做",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-automation-human-review-mistakes.mdx",
+      "primaryKeyword": "Claude Code 自动化审核错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "Claude Code 自动化最容易忽略的人工审核错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-automation-human-review.mdx",
+      "primaryKeyword": "Claude Code 自动化人工审核",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "Claude Code 自动化为什么必须有人审",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-beginner-mistakes-checklist.mdx",
+      "primaryKeyword": "Claude Code 新手检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: workflow"
+      ],
+      "status": "draft",
+      "title": "Claude Code 新手使用检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-beginner-mistakes-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code 接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 接单前怎么判断范围",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-beginner-mistakes-mistakes.mdx",
+      "primaryKeyword": "Claude Code 常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: api",
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 新手常见错误和修正方法",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-beginner-mistakes.mdx",
+      "primaryKeyword": "Claude Code 新手错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: 提示词",
+        "review-sensitive term: 工具",
+        "review-sensitive term: workflow"
+      ],
+      "status": "draft",
+      "title": "Claude Code 新手最容易犯的错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-beginner-use-cases-checklist.mdx",
+      "primaryKeyword": "Claude Code 使用场景检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "Claude Code 新手使用场景检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-beginner-use-cases-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code 使用场景接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "Claude Code 新手接单前怎么判断使用场景",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-beginner-use-cases-mistakes.mdx",
+      "primaryKeyword": "Claude Code 使用场景常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 新手选使用场景时的常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-beginner-use-cases.mdx",
+      "primaryKeyword": "Claude Code 新手使用场景",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "Claude Code 新手适合用在哪些接单场景",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-bug-prompt-checklist.mdx",
+      "primaryKeyword": "Claude Code bug prompt 检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 自动化"
+      ],
+      "status": "draft",
+      "title": "Claude Code Bug Prompt 检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-bug-prompt-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code bug prompt 接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code Bug Prompt 接单前怎么判断范围",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-bug-prompt-mistakes.mdx",
+      "primaryKeyword": "Claude Code bug prompt 常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code Bug Prompt 常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-bug-prompt.mdx",
+      "primaryKeyword": "Claude Code bug prompt",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "fast-changing technical term: 模型",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 修 bug 的 prompt 怎么写",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-client-questions-checklist.mdx",
+      "primaryKeyword": "Claude Code 客户问题检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 接单客户问题检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-client-questions-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code 客户问题接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 接单前客户问题不清楚时怎么判断范围",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-client-questions-mistakes.mdx",
+      "primaryKeyword": "Claude Code 接单客户沟通常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 接单前问客户时的常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-client-questions.mdx",
+      "primaryKeyword": "Claude Code 接单客户问题",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "用 Claude Code 接单前要问客户哪些问题",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-common-commands-checklist.mdx",
+      "primaryKeyword": "Claude Code 命令检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 常用命令检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-common-commands-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code 常用命令接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 常用命令哪些适合写进接单范围",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-common-commands-mistakes.mdx",
+      "primaryKeyword": "Claude Code 命令常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 新手运行常用命令时的常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-common-commands.mdx",
+      "primaryKeyword": "Claude Code 常用命令",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 新手常用命令怎么整理成接单笔记",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-delivery-note-checklist.mdx",
+      "primaryKeyword": "Claude Code 交付说明检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 交付说明检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-delivery-note-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code 交付说明接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 交付说明哪些内容适合写进接单范围",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-delivery-note-mistakes.mdx",
+      "primaryKeyword": "Claude Code 交付说明常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 交付说明常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-delivery-note.mdx",
+      "primaryKeyword": "Claude Code 交付说明",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "用 Claude Code 接单后交付说明怎么写",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-error-debug-checklist.mdx",
+      "primaryKeyword": "Claude Code 错误排查检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 错误排查检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-error-debug-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code 错误排查接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 错误排查哪些适合写进接单范围",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-error-debug-mistakes.mdx",
+      "primaryKeyword": "Claude Code 排查报错常见错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 排查客户报错时的常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-error-debug.mdx",
+      "primaryKeyword": "Claude Code 错误排查",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "用 Claude Code 排查客户报错时怎么做才稳",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-github-file-scope-checklist.mdx",
+      "primaryKeyword": "Claude Code GitHub 文件检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code GitHub 文件范围检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-github-file-scope-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code GitHub 文件接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 看 GitHub 文件哪些适合写进接单范围",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-github-file-scope-mistakes.mdx",
+      "primaryKeyword": "Claude Code GitHub 文件范围错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 看 GitHub 文件时的常见范围错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-github-file-scope.mdx",
+      "primaryKeyword": "Claude Code GitHub 文件范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "客户给 GitHub 文件时用 Claude Code 怎么限定范围",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-install-prerequisites-checklist.mdx",
+      "primaryKeyword": "Claude Code 安装检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 安装前置条件检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-install-prerequisites-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code 安装准备接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 安装准备哪些适合写进接单范围",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-install-prerequisites-mistakes.mdx",
+      "primaryKeyword": "Claude Code 安装准备错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 安装准备常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-install-prerequisites.mdx",
+      "primaryKeyword": "Claude Code 安装前置条件",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "安装 Claude Code 前新手要先确认哪些条件",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-low-risk-freelance-jobs-checklist.mdx",
+      "primaryKeyword": "Claude Code 低风险接单检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 低风险接单检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-low-risk-freelance-jobs-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code 低风险小单接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 低风险小单哪些适合写进接单范围",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-low-risk-freelance-jobs-mistakes.mdx",
+      "primaryKeyword": "Claude Code 低风险接单错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 低风险接单常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-low-risk-freelance-jobs.mdx",
+      "primaryKeyword": "Claude Code 低风险接单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 新手适合先接哪些低风险小单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-nextjs-page-check-checklist.mdx",
+      "primaryKeyword": "Claude Code Next.js 页面检查清单",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code Next.js 页面检查清单",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-nextjs-page-check-freelance-scope.mdx",
+      "primaryKeyword": "Claude Code Next.js 页面检查接单范围",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "Claude Code 检查 Next.js 页面哪些适合写进接单范围",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-nextjs-page-check-mistakes.mdx",
+      "primaryKeyword": "Claude Code Next.js 页面检查错误",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: 工具"
+      ],
+      "status": "draft",
+      "title": "Claude Code 检查 Next.js 页面时的常见错误",
+      "updatedAt": "2026-06-03"
+    },
+    {
+      "category": "工具流程",
+      "file": "content/blog/claude-code-nextjs-page-check.mdx",
+      "primaryKeyword": "Claude Code Next.js 页面检查",
+      "reviewContext": [],
+      "riskLevel": "high",
+      "riskReasons": [
+        "fast-changing technical term: claude",
+        "fast-changing technical term: 部署",
+        "review-sensitive term: prompt",
+        "review-sensitive term: 工具",
+        "review-sensitive term: 报价"
+      ],
+      "status": "draft",
+      "title": "用 Claude Code 检查 Next.js 页面小问题怎么做",
+      "updatedAt": "2026-06-03"
+    }
+  ]
+}
