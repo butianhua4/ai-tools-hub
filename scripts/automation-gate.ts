@@ -165,6 +165,30 @@ async function main() {
     };
     waves?: Array<{ items?: unknown[]; readyItems?: number }>;
   }>("content/automation/public-coverage-gap-plan.json");
+  const publicCoverageGapPreflight = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
+    items?: Array<{
+      blockingIssues?: unknown[];
+      publicLinkSuggestions?: unknown[];
+      readyForManualReview?: boolean;
+      safeDraft?: boolean;
+      structuredDataReady?: boolean;
+    }>;
+    summary: {
+      blockingItems: number;
+      items: number;
+      planItems: number;
+      planReadyItems: number;
+      planUnsafeItems: number;
+      readyItems: number;
+      structuredDataReadyItems: number;
+      uniqueFiles: number;
+      warningItems: number;
+      withPublicLinkSuggestions: number;
+      withSeedMatches: number;
+    };
+    waveSummaries?: Array<{ blockingItems?: number; files?: unknown[]; readyItems?: number }>;
+  }>("content/automation/public-coverage-gap-preflight.json");
   const cannibalization = readJson<{
     guardrails: { autoPublish: boolean };
     summary: { articleCount: number; conflicts: number; reviewBatchConflicts: number };
@@ -771,6 +795,39 @@ async function main() {
         ) &&
         Boolean(publicCoverageGapPlan.waves?.every((wave) => (wave.readyItems || 0) === (wave.items?.length || 0))),
       detail: `ready=${publicCoverageGapPlan.summary.readyItems}, unsafe=${publicCoverageGapPlan.summary.unsafeItems}, waves=${publicCoverageGapPlan.summary.plannedWaves}`,
+    },
+    {
+      name: "public coverage gap preflight is read-only and covers gap plan items",
+      ok:
+        publicCoverageGapPreflight.guardrails.autoEditArticles === false &&
+        publicCoverageGapPreflight.guardrails.autoMarkReview === false &&
+        publicCoverageGapPreflight.guardrails.autoPublish === false &&
+        publicCoverageGapPreflight.summary.items === publicCoverageGapPlan.summary.items &&
+        publicCoverageGapPreflight.summary.planItems === publicCoverageGapPlan.summary.items &&
+        publicCoverageGapPreflight.summary.uniqueFiles === publicCoverageGapPreflight.summary.items,
+      detail: `items=${publicCoverageGapPreflight.summary.items}, planItems=${publicCoverageGapPreflight.summary.planItems}, uniqueFiles=${publicCoverageGapPreflight.summary.uniqueFiles}`,
+    },
+    {
+      name: "public coverage gap preflight has no blocking publish-readiness issues",
+      ok:
+        publicCoverageGapPreflight.summary.blockingItems === 0 &&
+        publicCoverageGapPreflight.summary.readyItems === publicCoverageGapPreflight.summary.items &&
+        publicCoverageGapPreflight.summary.planUnsafeItems === 0 &&
+        publicCoverageGapPreflight.summary.structuredDataReadyItems === publicCoverageGapPreflight.summary.items &&
+        publicCoverageGapPreflight.summary.withPublicLinkSuggestions === publicCoverageGapPreflight.summary.items &&
+        publicCoverageGapPreflight.summary.withSeedMatches >= publicCoverageGapPreflight.summary.items - 1 &&
+        Boolean(
+          publicCoverageGapPreflight.items?.every(
+            (item) =>
+              item.readyForManualReview === true &&
+              item.safeDraft === true &&
+              item.structuredDataReady === true &&
+              (item.blockingIssues?.length || 0) === 0 &&
+              (item.publicLinkSuggestions?.length || 0) > 0,
+          ),
+        ) &&
+        Boolean(publicCoverageGapPreflight.waveSummaries?.every((wave) => (wave.blockingItems || 0) === 0 && (wave.readyItems || 0) === (wave.files?.length || 0))),
+      detail: `blocking=${publicCoverageGapPreflight.summary.blockingItems}, ready=${publicCoverageGapPreflight.summary.readyItems}, structured=${publicCoverageGapPreflight.summary.structuredDataReadyItems}, seedMatches=${publicCoverageGapPreflight.summary.withSeedMatches}, warnings=${publicCoverageGapPreflight.summary.warningItems}`,
     },
     {
       name: "content cannibalization check generated warning report",

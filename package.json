@@ -55,7 +55,8 @@
     "automation:search-query-coverage": "tsx scripts/search-query-coverage.ts",
     "automation:search-query-match": "tsx scripts/search-query-match-audit.ts",
     "automation:broad-search-demand": "tsx scripts/broad-search-demand-map.ts",
-    "automation:public-gap-plan": "tsx scripts/public-coverage-gap-plan.ts"
+    "automation:public-gap-plan": "tsx scripts/public-coverage-gap-plan.ts",
+    "automation:public-gap-preflight": "tsx scripts/public-coverage-gap-preflight.ts"
   },
   "dependencies": {
     "fast-glob": "^3.3.3",

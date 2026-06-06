@@ -1,0 +1,1441 @@
+{
+  "generatedAt": "2026-06-06T15:12:36.551Z",
+  "guardrails": {
+    "autoEditArticles": false,
+    "autoMarkReview": false,
+    "autoPublish": false,
+    "note": "Read-only preflight for the public coverage gap plan. It does not edit metadata, links, status, noindex, review, or publishing state.",
+    "stopBefore": "Use findings during human review. Do not run mark:review --confirm-human or publish:articles --confirm without explicit human approval."
+  },
+  "sourceEvidence": {
+    "gapPlanGuardrails": {
+      "autoEditArticles": false,
+      "autoMarkReview": false,
+      "autoPublish": false,
+      "note": "Read-only plan for public-coverage gaps. It selects one safe draft per broad demand theme with no public coverage and stops before human review or publishing.",
+      "stopBefore": "Do not run mark:review --confirm-human or publish:articles --confirm without explicit human approval."
+    },
+    "note": "Search seeds are editorial review prompts, not measured keyword volume, rankings, clicks, impressions, or traffic."
+  },
+  "summary": {
+    "blockingItems": 0,
+    "items": 8,
+    "planItems": 8,
+    "planReadyItems": 8,
+    "planUnsafeItems": 0,
+    "planWaves": 4,
+    "readyItems": 8,
+    "structuredDataReadyItems": 8,
+    "uniqueFiles": 8,
+    "warningItems": 8,
+    "withPublicLinkSuggestions": 8,
+    "withSeedMatches": 7
+  },
+  "waveSummaries": [
+    {
+      "blockingItems": 0,
+      "files": [
+        "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "content/blog/industry-ai-prompts-template-library-2026.mdx"
+      ],
+      "readyItems": 2,
+      "themes": [
+        "Agent deployment, tool calling, and production workflows",
+        "Cross-industry AI prompt templates"
+      ],
+      "warningItems": 2,
+      "wave": 1
+    },
+    {
+      "blockingItems": 0,
+      "files": [
+        "content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "content/blog/open-webui-functions-pipelines-deployment-guide.mdx"
+      ],
+      "readyItems": 2,
+      "themes": [
+        "RAG, knowledge base, and agent memory",
+        "Local and open-source model deployment"
+      ],
+      "warningItems": 2,
+      "wave": 2
+    },
+    {
+      "blockingItems": 0,
+      "files": [
+        "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "content/blog/dify-workflow-error-handling-guide.mdx"
+      ],
+      "readyItems": 2,
+      "themes": [
+        "Dify, n8n, Flowise, and no-code AI automation",
+        "Business AI workflows and SOP templates"
+      ],
+      "warningItems": 2,
+      "wave": 3
+    },
+    {
+      "blockingItems": 0,
+      "files": [
+        "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+        "content/blog/ai-api-key-security-rotation-guide.mdx"
+      ],
+      "readyItems": 2,
+      "themes": [
+        "LLM serving, GPU, and managed inference",
+        "LLM evaluation, observability, and security"
+      ],
+      "warningItems": 2,
+      "wave": 4
+    }
+  ],
+  "blockingItems": [],
+  "warningItems": [
+    {
+      "approvalWave": 1,
+      "blockingIssues": [],
+      "descriptionLength": 69,
+      "exactSeedMatches": 0,
+      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "gapScore": 388,
+      "internalLinks": 6,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "tool calling",
+        "human review",
+        "permissions",
+        "logs"
+      ],
+      "noindex": true,
+      "primaryKeyword": "AI Agent 部署",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: ai, vercel, 部署, 上线, 检查, 新手",
+          "score": 32,
+          "title": "Codex 部署 Vercel 前检查什么：上线前清单",
+          "url": "/blog/codex-vercel-deploy-preflight-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 么做, 新手, 网页, 一个",
+          "score": 28,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: 怎么, 检查, 项目, 新手, 一个, 第一",
+          "score": 28,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 工具, 新手, 什么, 有什, 么区",
+          "score": 28,
+          "title": "Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看",
+          "url": "/blog/payoneer-wise-paypal-beginner-comparison"
+        },
+        {
+          "reason": "keyword overlap: vercel, 部署, 怎么, 检查, 新手, 署检",
+          "score": 28,
+          "title": "Vercel 提示环境变量缺失怎么办：新手部署检查流程",
+          "url": "/blog/vercel-env-variable-missing-beginner-guide"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "tool permissions",
+        "multi-step state",
+        "human approval",
+        "observability and fallback paths"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "AI Agent deployment tutorial",
+        "agent tool calling tutorial",
+        "OpenAI Agents SDK beginner guide",
+        "Vercel AI SDK agent"
+      ],
+      "seedFamilyMatches": 4,
+      "slug": "ai-agent-deployment-vercel-ai-sdk-guide",
+      "sourceTargets": [
+        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+        "LangChain docs: https://python.langchain.com/docs"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "agent-deployment-and-tools",
+      "themeTitle": "Agent deployment, tool calling, and production workflows",
+      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+      "titleLength": 47,
+      "warningIssues": [
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: tool calling, human review, permissions, logs"
+      ],
+      "wordCountChinese": 1540
+    },
+    {
+      "approvalWave": 1,
+      "blockingIssues": [],
+      "descriptionLength": 67,
+      "exactSeedMatches": 0,
+      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "gapScore": 378,
+      "internalLinks": 5,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "customer service"
+      ],
+      "noindex": true,
+      "primaryKeyword": "全行业 AI 提示词模板",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: proposal, 客户沟通, 怎么, 客户, 需求, 户沟",
+          "score": 32,
+          "title": "Upwork 客户需求太模糊怎么办：新手分析和追问清单",
+          "url": "/blog/upwork-client-requirements-analysis-beginner"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 审核, 接单, 生成, 交付",
+          "score": 24,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 么做, 接单, 第一",
+          "score": 20,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 审核, 接单, 生成",
+          "score": 20,
+          "title": "Codex 生成代码后怎么审核",
+          "url": "/blog/codex-generated-code-review-guide"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 失败, 接单",
+          "score": 16,
+          "title": "Codex 安装失败怎么办",
+          "url": "/blog/codex-install-failed-beginner-fix"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "input fields",
+        "output formats",
+        "quality checks",
+        "risk disclaimers",
+        "prompt versioning"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "ChatGPT prompts for business",
+        "AI prompt template library",
+        "industry AI prompts",
+        "best AI prompts for work"
+      ],
+      "seedFamilyMatches": 3,
+      "slug": "industry-ai-prompts-template-library-2026",
+      "sourceTargets": [
+        "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+        "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "cross-industry-prompts",
+      "themeTitle": "Cross-industry AI prompt templates",
+      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+      "titleLength": 37,
+      "warningIssues": [
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: customer service"
+      ],
+      "wordCountChinese": 1862
+    },
+    {
+      "approvalWave": 2,
+      "blockingIssues": [],
+      "descriptionLength": 60,
+      "exactSeedMatches": 0,
+      "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+      "gapScore": 352,
+      "internalLinks": 6,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "knowledge base",
+        "vector database"
+      ],
+      "noindex": true,
+      "primaryKeyword": "AI Agent 记忆",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: ai, 怎么, 一个, 么做, 接单",
+          "score": 20,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 接单, 检查",
+          "score": 20,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 接单, 检查",
+          "score": 20,
+          "title": "Codex 和 GitHub 怎么配合：提交代码前检查",
+          "url": "/blog/codex-github-before-commit-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 部署, 什么, 接单, 检查",
+          "score": 20,
+          "title": "Codex 部署 Vercel 前检查什么：上线前清单",
+          "url": "/blog/codex-vercel-deploy-preflight-checklist"
+        },
+        {
+          "reason": "keyword overlap: 怎么, 项目, 一个, 接单, 检查",
+          "score": 20,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "RAG versus fine-tuning",
+        "chunking and embeddings",
+        "citations",
+        "evaluation and privacy"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "RAG knowledge base tutorial",
+        "AI agent memory",
+        "vector database RAG",
+        "enterprise knowledge base AI"
+      ],
+      "seedFamilyMatches": 4,
+      "slug": "ai-agent-memory-rag-design-guide",
+      "sourceTargets": [
+        "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+        "LangChain docs: https://python.langchain.com/docs",
+        "LlamaIndex docs: https://docs.llamaindex.ai"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "rag-knowledge-memory",
+      "themeTitle": "RAG, knowledge base, and agent memory",
+      "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
+      "titleLength": 41,
+      "warningIssues": [
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: knowledge base, vector database"
+      ],
+      "wordCountChinese": 1701
+    },
+    {
+      "approvalWave": 2,
+      "blockingIssues": [],
+      "descriptionLength": 80,
+      "exactSeedMatches": 0,
+      "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+      "gapScore": 342,
+      "internalLinks": 3,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "gpu memory",
+        "quantization",
+        "local api",
+        "model download"
+      ],
+      "noindex": true,
+      "primaryKeyword": "Open WebUI Functions Pipelines",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: ai, 怎么, 一个, 第一",
+          "score": 16,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 交付",
+          "score": 16,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: 指南, 怎么, 一个, 第一",
+          "score": 16,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码",
+          "score": 12,
+          "title": "Codex 生成代码后怎么审核",
+          "url": "/blog/codex-generated-code-review-guide"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码",
+          "score": 12,
+          "title": "Codex 和 GitHub 怎么配合：提交代码前检查",
+          "url": "/blog/codex-github-before-commit-checklist"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "hardware sizing",
+        "model size and quantization",
+        "local API exposure",
+        "privacy caveats"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "local LLM deployment",
+        "Ollama local model tutorial",
+        "Open WebUI deployment",
+        "local AI model GPU memory"
+      ],
+      "seedFamilyMatches": 3,
+      "slug": "open-webui-functions-pipelines-deployment-guide",
+      "sourceTargets": [
+        "Ollama docs: https://docs.ollama.com",
+        "Hugging Face docs: https://huggingface.co/docs",
+        "vLLM docs: https://docs.vllm.ai"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "local-and-open-models",
+      "themeTitle": "Local and open-source model deployment",
+      "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流",
+      "titleLength": 52,
+      "warningIssues": [
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: gpu memory, quantization, local api, model download"
+      ],
+      "wordCountChinese": 1263
+    },
+    {
+      "approvalWave": 3,
+      "blockingIssues": [],
+      "descriptionLength": 54,
+      "exactSeedMatches": 0,
+      "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+      "gapScore": 330,
+      "internalLinks": 3,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "self hosted",
+        "connector"
+      ],
+      "noindex": true,
+      "primaryKeyword": "AI 自动化项目报价",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: 报价, 项目, 目怎, 怎么, 么报, 范围",
+          "score": 40,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 接单, 交付, 清单, 新手",
+          "score": 32,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 部署, 接单, 什么, 清单, 新手",
+          "score": 28,
+          "title": "Codex 部署 Vercel 前检查什么：上线前清单",
+          "url": "/blog/codex-vercel-deploy-preflight-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 接单, 一个, 新手, 第一",
+          "score": 24,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 接单, 新手, 生成, 审核",
+          "score": 24,
+          "title": "Codex 生成代码后怎么审核",
+          "url": "/blog/codex-generated-code-review-guide"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "self-hosted versus cloud boundaries",
+        "webhook auth",
+        "connector failures",
+        "manual fallback"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "Dify deployment tutorial",
+        "n8n AI agent self hosted",
+        "Flowise local deployment",
+        "Dify workflow error handling"
+      ],
+      "seedFamilyMatches": 3,
+      "slug": "ai-automation-project-pricing-scope-guide",
+      "sourceTargets": [
+        "Dify docs: https://docs.dify.ai",
+        "n8n docs: https://docs.n8n.io"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "nocode-ai-automation",
+      "themeTitle": "Dify, n8n, Flowise, and no-code AI automation",
+      "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
+      "titleLength": 37,
+      "warningIssues": [
+        "description may be thin for search snippets",
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: self hosted, connector"
+      ],
+      "wordCountChinese": 1303
+    },
+    {
+      "approvalWave": 3,
+      "blockingIssues": [],
+      "descriptionLength": 55,
+      "exactSeedMatches": 0,
+      "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+      "gapScore": 328,
+      "internalLinks": 4,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "support",
+        "product",
+        "weekly report"
+      ],
+      "noindex": true,
+      "primaryKeyword": "Dify 工作流错误处理",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: 变量, 部署, next, 怎么, 失败, 新手",
+          "score": 48,
+          "title": "Vercel 提示环境变量缺失怎么办：新手部署检查流程",
+          "url": "/blog/vercel-env-variable-missing-beginner-guide"
+        },
+        {
+          "reason": "keyword overlap: 怎么, 指南, 新手, 一个, 项目, 第一",
+          "score": 40,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 生成, 交付, 新手",
+          "score": 28,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: 需求, 怎么, 分析, 析和, 新手, 客户",
+          "score": 28,
+          "title": "Upwork 客户需求太模糊怎么办：新手分析和追问清单",
+          "url": "/blog/upwork-client-requirements-analysis-beginner"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 么做, 新手, 一个, 第一",
+          "score": 24,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "workflow owner",
+        "handoff and approval",
+        "measurable output",
+        "risk boundary"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "AI workflow examples",
+        "AI use cases for business",
+        "AI automation workflow",
+        "department AI SOP"
+      ],
+      "seedFamilyMatches": 2,
+      "slug": "dify-workflow-error-handling-guide",
+      "sourceTargets": [
+        "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "business-ai-workflows",
+      "themeTitle": "Business AI workflows and SOP templates",
+      "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底",
+      "titleLength": 29,
+      "warningIssues": [
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: support, product, weekly report"
+      ],
+      "wordCountChinese": 1366
+    },
+    {
+      "approvalWave": 4,
+      "blockingIssues": [],
+      "descriptionLength": 91,
+      "exactSeedMatches": 0,
+      "file": "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+      "gapScore": 312,
+      "internalLinks": 3,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "concurrency",
+        "autoscaling"
+      ],
+      "noindex": true,
+      "primaryKeyword": "BentoML LLM 部署",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: ai, 怎么, 交付, 清单, 代码, 生成",
+          "score": 24,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 第一, 一个",
+          "score": 16,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 生成",
+          "score": 16,
+          "title": "Codex 生成代码后怎么审核",
+          "url": "/blog/codex-generated-code-review-guide"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 提交",
+          "score": 16,
+          "title": "Codex 和 GitHub 怎么配合：提交代码前检查",
+          "url": "/blog/codex-github-before-commit-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 清单, 对比",
+          "score": 16,
+          "title": "Codex 和 Claude Code 怎么选：新手对比清单",
+          "url": "/blog/codex-vs-claude-code-beginner-checklist"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "serving framework versions",
+        "cold starts and concurrency",
+        "GPU cost",
+        "autoscaling and monitoring"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "vLLM deployment tutorial",
+        "Hugging Face TGI deployment",
+        "RunPod serverless LLM",
+        "serverless GPU LLM deployment"
+      ],
+      "seedFamilyMatches": 4,
+      "slug": "bentoml-llm-deployment-beginner-guide",
+      "sourceTargets": [
+        "vLLM docs: https://docs.vllm.ai",
+        "Hugging Face docs: https://huggingface.co/docs"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "llm-serving-gpu",
+      "themeTitle": "LLM serving, GPU, and managed inference",
+      "title": "BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收",
+      "titleLength": 44,
+      "warningIssues": [
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: concurrency, autoscaling"
+      ],
+      "wordCountChinese": 1266
+    },
+    {
+      "approvalWave": 4,
+      "blockingIssues": [],
+      "descriptionLength": 59,
+      "exactSeedMatches": 0,
+      "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+      "gapScore": 312,
+      "internalLinks": 3,
+      "linksToPublicArticles": 1,
+      "missingSubtopics": [
+        "logs",
+        "prompt injection",
+        "cost tracking"
+      ],
+      "noindex": true,
+      "primaryKeyword": "AI API Key 安全管理",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: ai, 怎么, 新手, 代码, 检查, 交付",
+          "score": 28,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, github, 怎么, 新手, 提交, 代码",
+          "score": 28,
+          "title": "Codex 和 GitHub 怎么配合：提交代码前检查",
+          "url": "/blog/codex-github-before-commit-checklist"
+        },
+        {
+          "reason": "keyword overlap: 怎么, 新手, 项目, 一个, 指南, 检查",
+          "score": 28,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 新手, 一个, 么做, 第一",
+          "score": 24,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 部署, vercel, 上线, 新手, 检查",
+          "score": 24,
+          "title": "Codex 部署 Vercel 前检查什么：上线前清单",
+          "url": "/blog/codex-vercel-deploy-preflight-checklist"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "traces and logs",
+        "evaluation datasets",
+        "prompt injection",
+        "cost and quality drift"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "LLM observability",
+        "RAG evaluation",
+        "AI agent logs",
+        "prompt injection defense"
+      ],
+      "seedFamilyMatches": 1,
+      "slug": "ai-api-key-security-rotation-guide",
+      "sourceTargets": [
+        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+        "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+        "LangChain docs: https://python.langchain.com/docs"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "evals-observability-security",
+      "themeTitle": "LLM evaluation, observability, and security",
+      "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
+      "titleLength": 33,
+      "warningIssues": [
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "few search-seed token families appear in article text",
+        "theme still has missing subtopics: logs, prompt injection, cost tracking"
+      ],
+      "wordCountChinese": 1270
+    }
+  ],
+  "items": [
+    {
+      "approvalWave": 1,
+      "blockingIssues": [],
+      "descriptionLength": 69,
+      "exactSeedMatches": 0,
+      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "gapScore": 388,
+      "internalLinks": 6,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "tool calling",
+        "human review",
+        "permissions",
+        "logs"
+      ],
+      "noindex": true,
+      "primaryKeyword": "AI Agent 部署",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: ai, vercel, 部署, 上线, 检查, 新手",
+          "score": 32,
+          "title": "Codex 部署 Vercel 前检查什么：上线前清单",
+          "url": "/blog/codex-vercel-deploy-preflight-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 么做, 新手, 网页, 一个",
+          "score": 28,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: 怎么, 检查, 项目, 新手, 一个, 第一",
+          "score": 28,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 工具, 新手, 什么, 有什, 么区",
+          "score": 28,
+          "title": "Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看",
+          "url": "/blog/payoneer-wise-paypal-beginner-comparison"
+        },
+        {
+          "reason": "keyword overlap: vercel, 部署, 怎么, 检查, 新手, 署检",
+          "score": 28,
+          "title": "Vercel 提示环境变量缺失怎么办：新手部署检查流程",
+          "url": "/blog/vercel-env-variable-missing-beginner-guide"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "tool permissions",
+        "multi-step state",
+        "human approval",
+        "observability and fallback paths"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "AI Agent deployment tutorial",
+        "agent tool calling tutorial",
+        "OpenAI Agents SDK beginner guide",
+        "Vercel AI SDK agent"
+      ],
+      "seedFamilyMatches": 4,
+      "slug": "ai-agent-deployment-vercel-ai-sdk-guide",
+      "sourceTargets": [
+        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+        "LangChain docs: https://python.langchain.com/docs"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "agent-deployment-and-tools",
+      "themeTitle": "Agent deployment, tool calling, and production workflows",
+      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+      "titleLength": 47,
+      "warningIssues": [
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: tool calling, human review, permissions, logs"
+      ],
+      "wordCountChinese": 1540
+    },
+    {
+      "approvalWave": 1,
+      "blockingIssues": [],
+      "descriptionLength": 67,
+      "exactSeedMatches": 0,
+      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "gapScore": 378,
+      "internalLinks": 5,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "customer service"
+      ],
+      "noindex": true,
+      "primaryKeyword": "全行业 AI 提示词模板",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: proposal, 客户沟通, 怎么, 客户, 需求, 户沟",
+          "score": 32,
+          "title": "Upwork 客户需求太模糊怎么办：新手分析和追问清单",
+          "url": "/blog/upwork-client-requirements-analysis-beginner"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 审核, 接单, 生成, 交付",
+          "score": 24,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 么做, 接单, 第一",
+          "score": 20,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 审核, 接单, 生成",
+          "score": 20,
+          "title": "Codex 生成代码后怎么审核",
+          "url": "/blog/codex-generated-code-review-guide"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 失败, 接单",
+          "score": 16,
+          "title": "Codex 安装失败怎么办",
+          "url": "/blog/codex-install-failed-beginner-fix"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "input fields",
+        "output formats",
+        "quality checks",
+        "risk disclaimers",
+        "prompt versioning"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "ChatGPT prompts for business",
+        "AI prompt template library",
+        "industry AI prompts",
+        "best AI prompts for work"
+      ],
+      "seedFamilyMatches": 3,
+      "slug": "industry-ai-prompts-template-library-2026",
+      "sourceTargets": [
+        "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+        "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "cross-industry-prompts",
+      "themeTitle": "Cross-industry AI prompt templates",
+      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+      "titleLength": 37,
+      "warningIssues": [
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: customer service"
+      ],
+      "wordCountChinese": 1862
+    },
+    {
+      "approvalWave": 2,
+      "blockingIssues": [],
+      "descriptionLength": 60,
+      "exactSeedMatches": 0,
+      "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+      "gapScore": 352,
+      "internalLinks": 6,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "knowledge base",
+        "vector database"
+      ],
+      "noindex": true,
+      "primaryKeyword": "AI Agent 记忆",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: ai, 怎么, 一个, 么做, 接单",
+          "score": 20,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 接单, 检查",
+          "score": 20,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 接单, 检查",
+          "score": 20,
+          "title": "Codex 和 GitHub 怎么配合：提交代码前检查",
+          "url": "/blog/codex-github-before-commit-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 部署, 什么, 接单, 检查",
+          "score": 20,
+          "title": "Codex 部署 Vercel 前检查什么：上线前清单",
+          "url": "/blog/codex-vercel-deploy-preflight-checklist"
+        },
+        {
+          "reason": "keyword overlap: 怎么, 项目, 一个, 接单, 检查",
+          "score": 20,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "RAG versus fine-tuning",
+        "chunking and embeddings",
+        "citations",
+        "evaluation and privacy"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "RAG knowledge base tutorial",
+        "AI agent memory",
+        "vector database RAG",
+        "enterprise knowledge base AI"
+      ],
+      "seedFamilyMatches": 4,
+      "slug": "ai-agent-memory-rag-design-guide",
+      "sourceTargets": [
+        "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+        "LangChain docs: https://python.langchain.com/docs",
+        "LlamaIndex docs: https://docs.llamaindex.ai"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "rag-knowledge-memory",
+      "themeTitle": "RAG, knowledge base, and agent memory",
+      "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
+      "titleLength": 41,
+      "warningIssues": [
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: knowledge base, vector database"
+      ],
+      "wordCountChinese": 1701
+    },
+    {
+      "approvalWave": 2,
+      "blockingIssues": [],
+      "descriptionLength": 80,
+      "exactSeedMatches": 0,
+      "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+      "gapScore": 342,
+      "internalLinks": 3,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "gpu memory",
+        "quantization",
+        "local api",
+        "model download"
+      ],
+      "noindex": true,
+      "primaryKeyword": "Open WebUI Functions Pipelines",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: ai, 怎么, 一个, 第一",
+          "score": 16,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 交付",
+          "score": 16,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: 指南, 怎么, 一个, 第一",
+          "score": 16,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码",
+          "score": 12,
+          "title": "Codex 生成代码后怎么审核",
+          "url": "/blog/codex-generated-code-review-guide"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码",
+          "score": 12,
+          "title": "Codex 和 GitHub 怎么配合：提交代码前检查",
+          "url": "/blog/codex-github-before-commit-checklist"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "hardware sizing",
+        "model size and quantization",
+        "local API exposure",
+        "privacy caveats"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "local LLM deployment",
+        "Ollama local model tutorial",
+        "Open WebUI deployment",
+        "local AI model GPU memory"
+      ],
+      "seedFamilyMatches": 3,
+      "slug": "open-webui-functions-pipelines-deployment-guide",
+      "sourceTargets": [
+        "Ollama docs: https://docs.ollama.com",
+        "Hugging Face docs: https://huggingface.co/docs",
+        "vLLM docs: https://docs.vllm.ai"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "local-and-open-models",
+      "themeTitle": "Local and open-source model deployment",
+      "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流",
+      "titleLength": 52,
+      "warningIssues": [
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: gpu memory, quantization, local api, model download"
+      ],
+      "wordCountChinese": 1263
+    },
+    {
+      "approvalWave": 3,
+      "blockingIssues": [],
+      "descriptionLength": 54,
+      "exactSeedMatches": 0,
+      "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+      "gapScore": 330,
+      "internalLinks": 3,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "self hosted",
+        "connector"
+      ],
+      "noindex": true,
+      "primaryKeyword": "AI 自动化项目报价",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: 报价, 项目, 目怎, 怎么, 么报, 范围",
+          "score": 40,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 接单, 交付, 清单, 新手",
+          "score": 32,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 部署, 接单, 什么, 清单, 新手",
+          "score": 28,
+          "title": "Codex 部署 Vercel 前检查什么：上线前清单",
+          "url": "/blog/codex-vercel-deploy-preflight-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 接单, 一个, 新手, 第一",
+          "score": 24,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 接单, 新手, 生成, 审核",
+          "score": 24,
+          "title": "Codex 生成代码后怎么审核",
+          "url": "/blog/codex-generated-code-review-guide"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "self-hosted versus cloud boundaries",
+        "webhook auth",
+        "connector failures",
+        "manual fallback"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "Dify deployment tutorial",
+        "n8n AI agent self hosted",
+        "Flowise local deployment",
+        "Dify workflow error handling"
+      ],
+      "seedFamilyMatches": 3,
+      "slug": "ai-automation-project-pricing-scope-guide",
+      "sourceTargets": [
+        "Dify docs: https://docs.dify.ai",
+        "n8n docs: https://docs.n8n.io"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "nocode-ai-automation",
+      "themeTitle": "Dify, n8n, Flowise, and no-code AI automation",
+      "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
+      "titleLength": 37,
+      "warningIssues": [
+        "description may be thin for search snippets",
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: self hosted, connector"
+      ],
+      "wordCountChinese": 1303
+    },
+    {
+      "approvalWave": 3,
+      "blockingIssues": [],
+      "descriptionLength": 55,
+      "exactSeedMatches": 0,
+      "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+      "gapScore": 328,
+      "internalLinks": 4,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "support",
+        "product",
+        "weekly report"
+      ],
+      "noindex": true,
+      "primaryKeyword": "Dify 工作流错误处理",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: 变量, 部署, next, 怎么, 失败, 新手",
+          "score": 48,
+          "title": "Vercel 提示环境变量缺失怎么办：新手部署检查流程",
+          "url": "/blog/vercel-env-variable-missing-beginner-guide"
+        },
+        {
+          "reason": "keyword overlap: 怎么, 指南, 新手, 一个, 项目, 第一",
+          "score": 40,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 生成, 交付, 新手",
+          "score": 28,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: 需求, 怎么, 分析, 析和, 新手, 客户",
+          "score": 28,
+          "title": "Upwork 客户需求太模糊怎么办：新手分析和追问清单",
+          "url": "/blog/upwork-client-requirements-analysis-beginner"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 么做, 新手, 一个, 第一",
+          "score": 24,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "workflow owner",
+        "handoff and approval",
+        "measurable output",
+        "risk boundary"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "AI workflow examples",
+        "AI use cases for business",
+        "AI automation workflow",
+        "department AI SOP"
+      ],
+      "seedFamilyMatches": 2,
+      "slug": "dify-workflow-error-handling-guide",
+      "sourceTargets": [
+        "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "business-ai-workflows",
+      "themeTitle": "Business AI workflows and SOP templates",
+      "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底",
+      "titleLength": 29,
+      "warningIssues": [
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: support, product, weekly report"
+      ],
+      "wordCountChinese": 1366
+    },
+    {
+      "approvalWave": 4,
+      "blockingIssues": [],
+      "descriptionLength": 91,
+      "exactSeedMatches": 0,
+      "file": "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+      "gapScore": 312,
+      "internalLinks": 3,
+      "linksToPublicArticles": 0,
+      "missingSubtopics": [
+        "concurrency",
+        "autoscaling"
+      ],
+      "noindex": true,
+      "primaryKeyword": "BentoML LLM 部署",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: ai, 怎么, 交付, 清单, 代码, 生成",
+          "score": 24,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 第一, 一个",
+          "score": 16,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 生成",
+          "score": 16,
+          "title": "Codex 生成代码后怎么审核",
+          "url": "/blog/codex-generated-code-review-guide"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 代码, 提交",
+          "score": 16,
+          "title": "Codex 和 GitHub 怎么配合：提交代码前检查",
+          "url": "/blog/codex-github-before-commit-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 清单, 对比",
+          "score": 16,
+          "title": "Codex 和 Claude Code 怎么选：新手对比清单",
+          "url": "/blog/codex-vs-claude-code-beginner-checklist"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "serving framework versions",
+        "cold starts and concurrency",
+        "GPU cost",
+        "autoscaling and monitoring"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "vLLM deployment tutorial",
+        "Hugging Face TGI deployment",
+        "RunPod serverless LLM",
+        "serverless GPU LLM deployment"
+      ],
+      "seedFamilyMatches": 4,
+      "slug": "bentoml-llm-deployment-beginner-guide",
+      "sourceTargets": [
+        "vLLM docs: https://docs.vllm.ai",
+        "Hugging Face docs: https://huggingface.co/docs"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "llm-serving-gpu",
+      "themeTitle": "LLM serving, GPU, and managed inference",
+      "title": "BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收",
+      "titleLength": 44,
+      "warningIssues": [
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: concurrency, autoscaling"
+      ],
+      "wordCountChinese": 1266
+    },
+    {
+      "approvalWave": 4,
+      "blockingIssues": [],
+      "descriptionLength": 59,
+      "exactSeedMatches": 0,
+      "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+      "gapScore": 312,
+      "internalLinks": 3,
+      "linksToPublicArticles": 1,
+      "missingSubtopics": [
+        "logs",
+        "prompt injection",
+        "cost tracking"
+      ],
+      "noindex": true,
+      "primaryKeyword": "AI API Key 安全管理",
+      "publicLinkSuggestions": [
+        {
+          "reason": "keyword overlap: ai, 怎么, 新手, 代码, 检查, 交付",
+          "score": 28,
+          "title": "Codex 生成代码后怎么审核：交付前检查清单",
+          "url": "/blog/codex-code-review-delivery-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, github, 怎么, 新手, 提交, 代码",
+          "score": 28,
+          "title": "Codex 和 GitHub 怎么配合：提交代码前检查",
+          "url": "/blog/codex-github-before-commit-checklist"
+        },
+        {
+          "reason": "keyword overlap: 怎么, 新手, 项目, 一个, 指南, 检查",
+          "score": 28,
+          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+          "url": "/blog/first-upwork-project-pricing-checklist"
+        },
+        {
+          "reason": "keyword overlap: ai, 怎么, 新手, 一个, 么做, 第一",
+          "score": 24,
+          "title": "Codex 怎么做第一个网页",
+          "url": "/blog/build-first-webpage-with-codex"
+        },
+        {
+          "reason": "keyword overlap: ai, 部署, vercel, 上线, 新手, 检查",
+          "score": 24,
+          "title": "Codex 部署 Vercel 前检查什么：上线前清单",
+          "url": "/blog/codex-vercel-deploy-preflight-checklist"
+        }
+      ],
+      "qualityIssues": [],
+      "qualityScore": 100,
+      "readyForManualReview": true,
+      "reviewFocus": [
+        "traces and logs",
+        "evaluation datasets",
+        "prompt injection",
+        "cost and quality drift"
+      ],
+      "safeDraft": true,
+      "searchSeeds": [
+        "LLM observability",
+        "RAG evaluation",
+        "AI agent logs",
+        "prompt injection defense"
+      ],
+      "seedFamilyMatches": 1,
+      "slug": "ai-api-key-security-rotation-guide",
+      "sourceTargets": [
+        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+        "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+        "LangChain docs: https://python.langchain.com/docs"
+      ],
+      "status": "draft",
+      "structuredDataReady": true,
+      "themeId": "evals-observability-security",
+      "themeTitle": "LLM evaluation, observability, and security",
+      "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
+      "titleLength": 33,
+      "warningIssues": [
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "few search-seed token families appear in article text",
+        "theme still has missing subtopics: logs, prompt injection, cost tracking"
+      ],
+      "wordCountChinese": 1270
+    }
+  ]
+}

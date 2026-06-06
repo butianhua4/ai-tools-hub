@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-06T15:04:05.453Z
+Generated at: 2026-06-06T15:14:48.649Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -192,8 +192,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 87
-- Traffic claim watch mentions: 518
+- Traffic claim files scanned: 89
+- Traffic claim watch mentions: 520
 
 ## Preflight
 
@@ -297,6 +297,34 @@ Next review files:
 | 328 | true | Business AI workflows and SOP templates | support, product, weekly report | Dify 工作流错误处理 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
 | 312 | true | LLM serving, GPU, and managed inference | concurrency, autoscaling | BentoML LLM 部署 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
 | 312 | true | LLM evaluation, observability, and security | logs, prompt injection, cost tracking | AI API Key 安全管理 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
+
+## Public Coverage Gap Preflight
+
+- Items: 8
+- Ready items: 8
+- Blocking items: 0
+- Warning items: 8
+- Structured data ready items: 8
+- With public link suggestions: 8
+- With search seed matches: 7
+
+| Wave | Ready | Blocking | Warning | Themes | Files |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 2/2 | 0 | 2 | Agent deployment, tool calling, and production workflows<br>Cross-industry AI prompt templates | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/industry-ai-prompts-template-library-2026.mdx |
+| 2 | 2/2 | 0 | 2 | RAG, knowledge base, and agent memory<br>Local and open-source model deployment | content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
+| 3 | 2/2 | 0 | 2 | Dify, n8n, Flowise, and no-code AI automation<br>Business AI workflows and SOP templates | content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx |
+| 4 | 2/2 | 0 | 2 | LLM serving, GPU, and managed inference<br>LLM evaluation, observability, and security | content/blog/bentoml-llm-deployment-beginner-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx |
+
+| Wave | Ready | Structured | Links | Seeds | Warnings | Theme | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | true | true | 0+5 | 0/4 | 3 | Agent deployment, tool calling, and production workflows | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 1 | true | true | 0+5 | 0/3 | 3 | Cross-industry AI prompt templates | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| 2 | true | true | 0+5 | 0/4 | 3 | RAG, knowledge base, and agent memory | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| 2 | true | true | 0+5 | 0/3 | 4 | Local and open-source model deployment | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
+| 3 | true | true | 0+5 | 0/3 | 5 | Dify, n8n, Flowise, and no-code AI automation | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+| 3 | true | true | 0+5 | 0/2 | 4 | Business AI workflows and SOP templates | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
+| 4 | true | true | 0+5 | 0/4 | 4 | LLM serving, GPU, and managed inference | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
+| 4 | true | true | 1+5 | 0/1 | 4 | LLM evaluation, observability, and security | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
 
 ## Search Intent Lane Map
 
@@ -431,7 +459,7 @@ Next review files:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-06T14:58:37.696Z
+- Latest check: 2026-06-06T15:13:37.628Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85

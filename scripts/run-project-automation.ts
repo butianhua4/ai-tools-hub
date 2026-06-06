@@ -39,6 +39,7 @@ const tasks: Task[] = [
   { title: "Run search query match audit", args: ["run", "automation:search-query-match"] },
   { title: "Generate broad search demand map", args: ["run", "automation:broad-search-demand"] },
   { title: "Generate public coverage gap plan", args: ["run", "automation:public-gap-plan"] },
+  { title: "Run public coverage gap preflight", args: ["run", "automation:public-gap-preflight"] },
   { title: "Generate wave publish simulation", args: ["run", "automation:wave-publish-sim"] },
   { title: "Run content cannibalization check", args: ["run", "content:cannibalization"] },
   { title: "Run content freshness check", args: ["run", "content:freshness"] },
