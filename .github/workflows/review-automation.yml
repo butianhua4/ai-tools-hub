@@ -21,6 +21,20 @@ jobs:
       - name: Run project automation
         run: npm run automation:all
 
+      - name: Add automation digest to job summary
+        if: always()
+        shell: bash
+        run: |
+          if [ -f docs/automation-digest.md ]; then
+            cat docs/automation-digest.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            {
+              echo "# Automation Digest"
+              echo ""
+              echo "Digest report was not generated. Download the project-automation artifact and inspect automation-run-summary.json."
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Upload project automation reports
         if: always()
         uses: actions/upload-artifact@v4
