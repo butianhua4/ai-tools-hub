@@ -1,6 +1,6 @@
 # Content Opportunity Backlog
 
-Generated at: 2026-06-06T14:28:41.327Z
+Generated at: 2026-06-06T14:37:05.684Z
 
 This backlog is read-only. It does not publish articles, mark review, or claim measured traffic.
 

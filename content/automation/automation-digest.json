@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T14:29:16.405Z",
+  "generatedAt": "2026-06-06T14:37:48.877Z",
   "guardrails": {
     "autoPublish": false,
     "note": "Digest is read-only. It summarizes local automation reports and does not use traffic, impressions, or Search Console performance data."
@@ -2019,10 +2019,10 @@
     "trafficDataAvailable": false
   },
   "trafficClaimGuard": {
-    "filesScanned": 81,
+    "filesScanned": 83,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 505
+    "watchMentions": 507
   },
   "preflight": {
     "checked": 3,
@@ -6335,6 +6335,428 @@
     "uniqueLanes": 6,
     "uniqueQueries": 360
   },
+  "searchQueryMatch": {
+    "averageExactMatches": 1.42,
+    "averageMatchedFamilies": 7,
+    "blockingItems": 0,
+    "items": 12,
+    "readyItems": 12,
+    "top": [
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 4,
+        "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": false,
+          "template": true,
+          "comparison": false,
+          "risk": true,
+          "costOps": false,
+          "intentSeeds": false
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "全行业 AI 提示词模板",
+        "queryCount": 35,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+        "titleHit": true,
+        "warningIssues": [],
+        "wave": 1
+      },
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 0,
+        "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": false,
+          "template": false,
+          "comparison": false,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": false
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "客服 AI 模型选型",
+        "queryCount": 35,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 1
+      },
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 4,
+        "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "AI Agent 部署",
+        "queryCount": 35,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+        "titleHit": true,
+        "warningIssues": [],
+        "wave": 1
+      },
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 1,
+        "file": "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": false,
+          "template": false,
+          "comparison": false,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": false
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "团队 AI 提示词库",
+        "queryCount": 35,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 2
+      },
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 1,
+        "file": "content/blog/data-analysis-ai-prompts-guide.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": false,
+          "template": true,
+          "comparison": false,
+          "risk": true,
+          "costOps": false,
+          "intentSeeds": false
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "数据分析 AI 提示词",
+        "queryCount": 35,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 2
+      },
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 0,
+        "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": false,
+          "template": false,
+          "comparison": false,
+          "risk": true,
+          "costOps": false,
+          "intentSeeds": false
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "Dify 工作流错误处理",
+        "queryCount": 36,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 2
+      },
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 0,
+        "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": false
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "Open WebUI Functions Pipelines",
+        "queryCount": 36,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 3
+      },
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 3,
+        "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": false,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": false
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "AI Agent 记忆",
+        "queryCount": 35,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
+        "titleHit": true,
+        "warningIssues": [],
+        "wave": 3
+      },
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 1,
+        "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": false,
+          "template": false,
+          "comparison": false,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": false
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "AI 自动化项目报价",
+        "queryCount": 35,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 3
+      },
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 1,
+        "file": "content/blog/customer-service-ai-prompts-guide.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": false,
+          "template": false,
+          "comparison": false,
+          "risk": true,
+          "costOps": false,
+          "intentSeeds": false
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "客服 AI 提示词",
+        "queryCount": 35,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 4
+      },
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 2,
+        "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": false
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "大模型部署",
+        "queryCount": 35,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查",
+        "titleHit": true,
+        "warningIssues": [],
+        "wave": 4
+      },
+      {
+        "blockingIssues": [],
+        "bodyFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": true
+        },
+        "descriptionHit": true,
+        "exactQueryMatches": 0,
+        "file": "content/blog/dify-workflow-vs-agent-guide.mdx",
+        "headingFamilyMatches": {
+          "howTo": true,
+          "deployment": true,
+          "template": true,
+          "comparison": true,
+          "risk": true,
+          "costOps": true,
+          "intentSeeds": false
+        },
+        "matchedFamilies": 7,
+        "primaryKeyword": "Dify Workflow 和 Agent 区别",
+        "queryCount": 35,
+        "readyForManualReview": true,
+        "reviewSuggestions": [],
+        "title": "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 4
+      }
+    ],
+    "warningItems": 8
+  },
   "promptCoverage": {
     "industries": 16,
     "industriesWithReadyCandidates": 16,
@@ -6705,7 +7127,7 @@
   "liveSearch": {
     "checkedArticles": 15,
     "failedChecks": [],
-    "generatedAt": "2026-06-06T14:20:51.472Z",
+    "generatedAt": "2026-06-06T14:29:31.862Z",
     "missingFromSitemap": [],
     "ok": true,
     "publicArticles": 15,

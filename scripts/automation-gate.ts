@@ -122,6 +122,18 @@ async function main() {
       uniqueQueries: number;
     };
   }>("content/automation/search-query-coverage.json");
+  const searchQueryMatch = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
+    items?: Array<{ descriptionHit?: boolean; readyForManualReview?: boolean; titleHit?: boolean }>;
+    summary: {
+      averageMatchedFamilies: number;
+      blockingItems: number;
+      items: number;
+      queryCoverageItems: number;
+      readyItems: number;
+      warningItems: number;
+    };
+  }>("content/automation/search-query-match-audit.json");
   const cannibalization = readJson<{
     guardrails: { autoPublish: boolean };
     summary: { articleCount: number; conflicts: number; reviewBatchConflicts: number };
@@ -647,6 +659,25 @@ async function main() {
           ),
         ),
       detail: `uniqueQueries=${searchQueryCoverage.summary.uniqueQueries}, ready=${searchQueryCoverage.summary.readyItems}, unsafe=${searchQueryCoverage.summary.unsafeItems}`,
+    },
+    {
+      name: "search query match audit is read-only and covers query plan",
+      ok:
+        searchQueryMatch.guardrails.autoEditArticles === false &&
+        searchQueryMatch.guardrails.autoMarkReview === false &&
+        searchQueryMatch.guardrails.autoPublish === false &&
+        searchQueryMatch.summary.items === searchQueryCoverage.summary.items &&
+        searchQueryMatch.summary.queryCoverageItems === searchQueryCoverage.summary.items &&
+        searchQueryMatch.summary.readyItems === searchQueryMatch.summary.items,
+      detail: `items=${searchQueryMatch.summary.items}, ready=${searchQueryMatch.summary.readyItems}, warnings=${searchQueryMatch.summary.warningItems}`,
+    },
+    {
+      name: "search query match audit has no blocking search-alignment issues",
+      ok:
+        searchQueryMatch.summary.blockingItems === 0 &&
+        searchQueryMatch.summary.averageMatchedFamilies >= 3 &&
+        Boolean(searchQueryMatch.items?.every((item) => item.readyForManualReview === true && item.titleHit === true && item.descriptionHit === true)),
+      detail: `blocking=${searchQueryMatch.summary.blockingItems}, averageFamilies=${searchQueryMatch.summary.averageMatchedFamilies}`,
     },
     {
       name: "content cannibalization check generated warning report",

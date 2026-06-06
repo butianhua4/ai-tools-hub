@@ -1,6 +1,6 @@
 # Manual Review Workbench
 
-Generated at: 2026-06-06T14:29:15.077Z
+Generated at: 2026-06-06T14:37:47.600Z
 
 This workbench is read-only. It does not publish articles or mark drafts for review.
 
@@ -192,8 +192,8 @@ Next review files:
 - Search Console verification evidence: false
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 81
-- Traffic claim watch mentions: 505
+- Traffic claim files scanned: 83
+- Traffic claim watch mentions: 507
 
 ## Content Integrity
 
@@ -344,6 +344,30 @@ Next review files:
 | 4 | true | 35 | Large model deployment, LLM serving, and GPU infrastructure | 大模型部署 | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
 | 4 | true | 35 | Dify, n8n, no-code AI automation, and workflow deployment | Dify Workflow 和 Agent 区别 | Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核 | content/blog/dify-workflow-vs-agent-guide.mdx |
 
+## Search Query Match Audit
+
+- Items: 12
+- Ready items: 12
+- Blocking items: 0
+- Warning items: 8
+- Average exact matches: 1.42
+- Average matched families: 7
+
+| Wave | Ready | Title hit | Description hit | Exact queries | Families | Warnings | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | true | true | true | 4 | 7 | none | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| 1 | true | true | true | 0 | 7 | few exact query variant matches in article text | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| 1 | true | true | true | 4 | 7 | none | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 2 | true | true | true | 1 | 7 | few exact query variant matches in article text | 团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用 | content/blog/ai-prompt-library-team-knowledge-base-guide.mdx |
+| 2 | true | true | true | 1 | 7 | few exact query variant matches in article text | 数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要 | content/blog/data-analysis-ai-prompts-guide.mdx |
+| 2 | true | true | true | 0 | 7 | few exact query variant matches in article text | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
+| 3 | true | true | true | 0 | 7 | few exact query variant matches in article text | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
+| 3 | true | true | true | 3 | 7 | none | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| 3 | true | true | true | 1 | 7 | few exact query variant matches in article text | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+| 4 | true | true | true | 1 | 7 | few exact query variant matches in article text | 客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断 | content/blog/customer-service-ai-prompts-guide.mdx |
+| 4 | true | true | true | 2 | 7 | none | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
+| 4 | true | true | true | 0 | 7 | few exact query variant matches in article text | Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核 | content/blog/dify-workflow-vs-agent-guide.mdx |
+
 ## Industry Prompt Coverage
 
 - Industries: 16
@@ -378,6 +402,7 @@ Next review files:
 - Use docs/search-intent-approval-packet.md as the concrete current-wave and next-gap approval queue.
 - Use docs/search-intent-wave-planner.md as the continuous multi-wave review queue across prompt, Agent, RAG, and model deployment lanes.
 - Use docs/search-query-coverage.md to review likely user-search query variants for each planned wave item.
+- Use docs/search-query-match-audit.md to spot title, description, heading, or body gaps before approving a draft.
 - Use docs/public-expansion-queue.md as the approval-wave order for expanding public articles.
 - Use docs/traffic-evidence-audit.md before making any traffic or Search Console performance claim.
 - Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.

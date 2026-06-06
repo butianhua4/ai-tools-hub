@@ -339,6 +339,28 @@ type SearchQueryCoverage = {
   };
 };
 
+type SearchQueryMatch = {
+  items: Array<{
+    descriptionHit: boolean;
+    exactQueryMatches: number;
+    file: string;
+    matchedFamilies: number;
+    readyForManualReview: boolean;
+    title: string;
+    titleHit: boolean;
+    warningIssues: string[];
+    wave: number;
+  }>;
+  summary: {
+    averageExactMatches: number;
+    averageMatchedFamilies: number;
+    blockingItems: number;
+    items: number;
+    readyItems: number;
+    warningItems: number;
+  };
+};
+
 type ProjectStatus = {
   articles: { publicPublished: number; publishableNow: unknown[]; statusCounts: Record<string, number> };
 };
@@ -370,6 +392,7 @@ function main() {
   const searchIntentApproval = readJson<SearchIntentApproval>("content/automation/search-intent-approval-packet.json");
   const searchIntentWaves = readJson<SearchIntentWaves>("content/automation/search-intent-wave-planner.json");
   const searchQueryCoverage = readJson<SearchQueryCoverage>("content/automation/search-query-coverage.json");
+  const searchQueryMatch = readJson<SearchQueryMatch>("content/automation/search-query-match-audit.json");
   const deploymentCoverage = readJson<DeploymentCoverage>("content/automation/ai-deployment-coverage.json");
   const promptCoverage = readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json");
   const projectStatus = readJson<ProjectStatus>("content/automation/project-status.json");
@@ -587,6 +610,20 @@ function main() {
         wave: item.wave,
       })),
     },
+    searchQueryMatch: {
+      summary: searchQueryMatch.summary,
+      topItems: searchQueryMatch.items.slice(0, 12).map((item) => ({
+        descriptionHit: item.descriptionHit,
+        exactQueryMatches: item.exactQueryMatches,
+        file: item.file,
+        matchedFamilies: item.matchedFamilies,
+        readyForManualReview: item.readyForManualReview,
+        title: item.title,
+        titleHit: item.titleHit,
+        warningIssues: item.warningIssues,
+        wave: item.wave,
+      })),
+    },
     promptCoverage: {
       summary: promptCoverage.summary,
       topIndustries: promptCoverage.coverage.slice(0, 6).map((item) => ({
@@ -616,6 +653,7 @@ function main() {
       searchIntentApproval,
       searchIntentWaves,
       searchQueryCoverage,
+      searchQueryMatch,
     ),
   };
 
@@ -648,6 +686,7 @@ function buildNextActions(
   searchIntentApproval: SearchIntentApproval,
   searchIntentWaves: SearchIntentWaves,
   searchQueryCoverage: SearchQueryCoverage,
+  searchQueryMatch: SearchQueryMatch,
 ) {
   if (projectStatus.articles.publishableNow.length > 0) return ["Stop and inspect publishableNow before adding more review candidates."];
   if (!liveSearch.ok || liveSearch.failedChecks.length > 0) return ["Fix live search surface failures before any publishing action."];
@@ -681,6 +720,7 @@ function buildNextActions(
   if (searchIntentApproval.summary.unsafeItems > 0) return ["Resolve search intent approval packet safety issues before manual review."];
   if (searchIntentWaves.summary.unsafeItems > 0) return ["Resolve search intent wave planner safety issues before manual review."];
   if (searchQueryCoverage.summary.unsafeItems > 0) return ["Resolve search query coverage gaps before manual review."];
+  if (searchQueryMatch.summary.blockingItems > 0) return ["Resolve search query match blockers before manual review."];
   if (
     reviewCoverage.summary.itemsMissingOfficialSources > 0 ||
     reviewCoverage.summary.itemsMissingFactCheckQueries > 0 ||
@@ -700,6 +740,7 @@ function buildNextActions(
     "Use docs/search-intent-approval-packet.md as the concrete current-wave and next-gap approval queue.",
     "Use docs/search-intent-wave-planner.md as the continuous multi-wave review queue across prompt, Agent, RAG, and model deployment lanes.",
     "Use docs/search-query-coverage.md to review likely user-search query variants for each planned wave item.",
+    "Use docs/search-query-match-audit.md to spot title, description, heading, or body gaps before approving a draft.",
     "Use docs/public-expansion-queue.md as the approval-wave order for expanding public articles.",
     "Use docs/traffic-evidence-audit.md before making any traffic or Search Console performance claim.",
     "Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.",
@@ -870,6 +911,20 @@ function toMarkdown(payload: {
       queryCount: number;
       readyForManualReview: boolean;
       title: string;
+      wave: number;
+    }>;
+  };
+  searchQueryMatch: {
+    summary: SearchQueryMatch["summary"];
+    topItems: Array<{
+      descriptionHit: boolean;
+      exactQueryMatches: number;
+      file: string;
+      matchedFamilies: number;
+      readyForManualReview: boolean;
+      title: string;
+      titleHit: boolean;
+      warningIssues: string[];
       wave: number;
     }>;
   };
@@ -1171,6 +1226,21 @@ function toMarkdown(payload: {
     "| --- | --- | --- | --- | --- | --- | --- |",
     ...payload.searchQueryCoverage.topItems.map((item) => (
       `| ${item.wave} | ${item.readyForManualReview} | ${item.queryCount} | ${item.laneTitle} | ${item.primaryKeyword} | ${item.title} | ${item.file} |`
+    )),
+    "",
+    "## Search Query Match Audit",
+    "",
+    `- Items: ${payload.searchQueryMatch.summary.items}`,
+    `- Ready items: ${payload.searchQueryMatch.summary.readyItems}`,
+    `- Blocking items: ${payload.searchQueryMatch.summary.blockingItems}`,
+    `- Warning items: ${payload.searchQueryMatch.summary.warningItems}`,
+    `- Average exact matches: ${payload.searchQueryMatch.summary.averageExactMatches}`,
+    `- Average matched families: ${payload.searchQueryMatch.summary.averageMatchedFamilies}`,
+    "",
+    "| Wave | Ready | Title hit | Description hit | Exact queries | Families | Warnings | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...payload.searchQueryMatch.topItems.map((item) => (
+      `| ${item.wave} | ${item.readyForManualReview} | ${item.titleHit} | ${item.descriptionHit} | ${item.exactQueryMatches} | ${item.matchedFamilies} | ${item.warningIssues.length ? item.warningIssues.join("<br>") : "none"} | ${item.title} | ${item.file} |`
     )),
     "",
     "## Industry Prompt Coverage",

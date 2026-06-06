@@ -52,7 +52,8 @@
     "content:search-intent-lanes": "tsx scripts/search-intent-lane-map.ts",
     "automation:search-intent-approval": "tsx scripts/search-intent-approval-packet.ts",
     "automation:search-intent-waves": "tsx scripts/search-intent-wave-planner.ts",
-    "automation:search-query-coverage": "tsx scripts/search-query-coverage.ts"
+    "automation:search-query-coverage": "tsx scripts/search-query-coverage.ts",
+    "automation:search-query-match": "tsx scripts/search-query-match-audit.ts"
   },
   "dependencies": {
     "fast-glob": "^3.3.3",

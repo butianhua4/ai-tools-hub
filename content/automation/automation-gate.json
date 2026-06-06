@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T14:29:15.871Z",
+  "generatedAt": "2026-06-06T14:37:48.349Z",
   "ok": true,
   "summary": {
-    "checks": 63,
+    "checks": 65,
     "failed": 0,
-    "passed": 63
+    "passed": 65
   },
   "failed": [],
   "checks": [
@@ -90,7 +90,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=81, unsafeClaims=0, watchMentions=505"
+      "detail": "filesScanned=83, unsafeClaims=0, watchMentions=507"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -216,6 +216,16 @@
       "name": "search query coverage has broad user-search variants",
       "ok": true,
       "detail": "uniqueQueries=360, ready=12, unsafe=0"
+    },
+    {
+      "name": "search query match audit is read-only and covers query plan",
+      "ok": true,
+      "detail": "items=12, ready=12, warnings=8"
+    },
+    {
+      "name": "search query match audit has no blocking search-alignment issues",
+      "ok": true,
+      "detail": "blocking=0, averageFamilies=7"
     },
     {
       "name": "content cannibalization check generated warning report",

@@ -1,6 +1,6 @@
 # Search Query Coverage
 
-Generated at: 2026-06-06T14:28:47.663Z
+Generated at: 2026-06-06T14:37:11.996Z
 
 This report is read-only. It expands each planned review-wave article into user-search query variants for human review and SEO planning. It does not claim measured search volume.
 

@@ -343,6 +343,28 @@ type SearchQueryCoverage = {
   };
 };
 
+type SearchQueryMatch = {
+  items: Array<{
+    descriptionHit: boolean;
+    exactQueryMatches: number;
+    file: string;
+    matchedFamilies: number;
+    readyForManualReview: boolean;
+    title: string;
+    titleHit: boolean;
+    warningIssues: string[];
+    wave: number;
+  }>;
+  summary: {
+    averageExactMatches: number;
+    averageMatchedFamilies: number;
+    blockingItems: number;
+    items: number;
+    readyItems: number;
+    warningItems: number;
+  };
+};
+
 const reports = {
   cannibalization: readJson<{ summary: { conflicts: number; reviewBatchConflicts: number } }>("content/automation/content-cannibalization.json"),
   freshness: readJson<{ summary: { currentReviewItems: number; highRisk: number; mediumRisk: number; plannedReviewItems: number } }>(
@@ -390,6 +412,7 @@ const reports = {
   searchIntentApproval: readJson<SearchIntentApproval>("content/automation/search-intent-approval-packet.json"),
   searchIntentWaves: readJson<SearchIntentWaves>("content/automation/search-intent-wave-planner.json"),
   searchQueryCoverage: readJson<SearchQueryCoverage>("content/automation/search-query-coverage.json"),
+  searchQueryMatch: readJson<SearchQueryMatch>("content/automation/search-query-match-audit.json"),
   review: readJson<{ counts: { candidates: number; returned: number; rejected: Record<string, number> }; recommendedToday: ReviewCandidate[] }>(
     "content/automation/review-candidates.json",
   ),
@@ -560,6 +583,15 @@ const payload = {
     uniqueLanes: reports.searchQueryCoverage.data?.summary.uniqueLanes ?? null,
     uniqueQueries: reports.searchQueryCoverage.data?.summary.uniqueQueries ?? null,
   },
+  searchQueryMatch: {
+    averageExactMatches: reports.searchQueryMatch.data?.summary.averageExactMatches ?? null,
+    averageMatchedFamilies: reports.searchQueryMatch.data?.summary.averageMatchedFamilies ?? null,
+    blockingItems: reports.searchQueryMatch.data?.summary.blockingItems ?? null,
+    items: reports.searchQueryMatch.data?.summary.items ?? null,
+    readyItems: reports.searchQueryMatch.data?.summary.readyItems ?? null,
+    top: reports.searchQueryMatch.data?.items.slice(0, 12) ?? [],
+    warningItems: reports.searchQueryMatch.data?.summary.warningItems ?? null,
+  },
   promptCoverage: {
     industries: reports.promptCoverage.data?.summary.industries ?? null,
     industriesWithReadyCandidates: reports.promptCoverage.data?.summary.industriesWithReadyCandidates ?? null,
@@ -661,6 +693,9 @@ function buildNextActions() {
   }
   if (!reports.searchQueryCoverage.data || reports.searchQueryCoverage.data.summary.unsafeItems > 0) {
     return ["Open docs/search-query-coverage.md and resolve search-query coverage gaps before manual review."];
+  }
+  if (!reports.searchQueryMatch.data || reports.searchQueryMatch.data.summary.blockingItems > 0) {
+    return ["Open docs/search-query-match-audit.md and resolve blocking query-match issues before manual review."];
   }
   if (!reports.reviewCoverage.data || reports.reviewCoverage.data.summary.missingCoverage > 0) {
     return ["Open docs/review-coverage-report.md and regenerate coverage for all planned review candidates."];
@@ -1003,6 +1038,21 @@ function toMarkdown(data: typeof payload) {
     "| --- | --- | --- | --- | --- | --- | --- |",
     ...data.searchQueryCoverage.top.map((item) => (
       `| ${item.wave} | ${item.readyForManualReview} | ${item.queryCount} | ${item.laneTitle} | ${item.primaryKeyword} | ${item.title} | ${item.file} |`
+    )),
+    "",
+    "## Search Query Match Audit",
+    "",
+    `- Items: ${data.searchQueryMatch.items}`,
+    `- Ready items: ${data.searchQueryMatch.readyItems}`,
+    `- Blocking items: ${data.searchQueryMatch.blockingItems}`,
+    `- Warning items: ${data.searchQueryMatch.warningItems}`,
+    `- Average exact matches: ${data.searchQueryMatch.averageExactMatches}`,
+    `- Average matched families: ${data.searchQueryMatch.averageMatchedFamilies}`,
+    "",
+    "| Wave | Ready | Title hit | Description hit | Exact queries | Families | Warnings | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...data.searchQueryMatch.top.map((item) => (
+      `| ${item.wave} | ${item.readyForManualReview} | ${item.titleHit} | ${item.descriptionHit} | ${item.exactQueryMatches} | ${item.matchedFamilies} | ${item.warningIssues.length ? item.warningIssues.join("<br>") : "none"} | ${item.title} | ${item.file} |`
     )),
     "",
     "## Industry Prompt Coverage",

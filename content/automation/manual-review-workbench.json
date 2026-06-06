@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T14:29:15.077Z",
+  "generatedAt": "2026-06-06T14:37:47.600Z",
   "guardrails": {
     "autoMarkReview": false,
     "autoPublish": false,
@@ -815,10 +815,10 @@
     "trafficDataAvailable": false
   },
   "trafficClaimGuard": {
-    "filesScanned": 81,
+    "filesScanned": 83,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 505
+    "watchMentions": 507
   },
   "contentIntegrity": {
     "allIssueItems": 0,
@@ -1448,6 +1448,168 @@
       }
     ]
   },
+  "searchQueryMatch": {
+    "summary": {
+      "averageExactMatches": 1.42,
+      "averageMatchedFamilies": 7,
+      "blockingItems": 0,
+      "items": 12,
+      "queryCoverageItems": 12,
+      "queryCoverageUniqueQueries": 360,
+      "readyItems": 12,
+      "warningItems": 8
+    },
+    "topItems": [
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 4,
+        "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+        "titleHit": true,
+        "warningIssues": [],
+        "wave": 1
+      },
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 0,
+        "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 1
+      },
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 4,
+        "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+        "titleHit": true,
+        "warningIssues": [],
+        "wave": 1
+      },
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 1,
+        "file": "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 2
+      },
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 1,
+        "file": "content/blog/data-analysis-ai-prompts-guide.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 2
+      },
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 0,
+        "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 2
+      },
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 0,
+        "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 3
+      },
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 3,
+        "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
+        "titleHit": true,
+        "warningIssues": [],
+        "wave": 3
+      },
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 1,
+        "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 3
+      },
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 1,
+        "file": "content/blog/customer-service-ai-prompts-guide.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 4
+      },
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 2,
+        "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查",
+        "titleHit": true,
+        "warningIssues": [],
+        "wave": 4
+      },
+      {
+        "descriptionHit": true,
+        "exactQueryMatches": 0,
+        "file": "content/blog/dify-workflow-vs-agent-guide.mdx",
+        "matchedFamilies": 7,
+        "readyForManualReview": true,
+        "title": "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核",
+        "titleHit": true,
+        "warningIssues": [
+          "few exact query variant matches in article text"
+        ],
+        "wave": 4
+      }
+    ]
+  },
   "promptCoverage": {
     "summary": {
       "currentPackPromptItems": 1,
@@ -1513,6 +1675,7 @@
     "Use docs/search-intent-approval-packet.md as the concrete current-wave and next-gap approval queue.",
     "Use docs/search-intent-wave-planner.md as the continuous multi-wave review queue across prompt, Agent, RAG, and model deployment lanes.",
     "Use docs/search-query-coverage.md to review likely user-search query variants for each planned wave item.",
+    "Use docs/search-query-match-audit.md to spot title, description, heading, or body gaps before approving a draft.",
     "Use docs/public-expansion-queue.md as the approval-wave order for expanding public articles.",
     "Use docs/traffic-evidence-audit.md before making any traffic or Search Console performance claim.",
     "Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.",
