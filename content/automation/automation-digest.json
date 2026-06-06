@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T14:01:24.492Z",
+  "generatedAt": "2026-06-06T14:09:45.783Z",
   "guardrails": {
     "autoPublish": false,
     "note": "Digest is read-only. It summarizes local automation reports and does not use traffic, impressions, or Search Console performance data."
@@ -2019,10 +2019,10 @@
     "trafficDataAvailable": false
   },
   "trafficClaimGuard": {
-    "filesScanned": 75,
+    "filesScanned": 77,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 395
+    "watchMentions": 445
   },
   "preflight": {
     "checked": 3,
@@ -4325,6 +4325,412 @@
     ],
     "totalReadyDraftMatches": 233
   },
+  "searchIntentApproval": {
+    "currentWaveItems": 3,
+    "currentWaveReady": 3,
+    "nextGapItems": 6,
+    "nextGapLanes": 3,
+    "top": [
+      {
+        "approvalChecks": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Source notes are present: true",
+          "Quality check passed: true",
+          "Reviewer verifies official sources before any status change.",
+          "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
+        ],
+        "category": "AI 提示词",
+        "currentPack": false,
+        "description": "讲清团队提示词库的搭建方式，覆盖行业分类、版本管理、示例输出、适用边界、审核流程、失败案例和工具导航。",
+        "file": "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-prompt-library-team-knowledge-base-guide.mdx --confirm-human",
+        "intentSeeds": [
+          "AI 提示词大全",
+          "ChatGPT 提示词模板",
+          "全行业 AI 提示词",
+          "AI prompt library"
+        ],
+        "laneAudience": "Teams trying to build reusable prompt libraries instead of one-off prompts.",
+        "laneId": "industry-prompt-library",
+        "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=23; currentPack=2; wave1=2",
+        "lanePriorityScore": 386,
+        "laneTitle": "Cross-industry AI prompt templates and reusable prompt libraries",
+        "noindex": true,
+        "primaryKeyword": "团队 AI 提示词库",
+        "publishBatch": 32,
+        "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+        "qualityIssues": [],
+        "qualityScore": 100,
+        "readyForHumanReview": true,
+        "reviewFocus": [
+          "input fields",
+          "output format",
+          "quality checks",
+          "risk disclaimers",
+          "versioning"
+        ],
+        "riskChecks": [
+          "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+          "No API key, private customer data, credential, or bypass instruction is included.",
+          "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+          "Prompt templates include input context, output criteria, human review rules, and adaptation notes."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotes": "参考 OpenAI prompt engineering 最佳实践、Microsoft Copilot 提示词建议和团队知识管理经验整理；正式发布前需要人工核对示例。",
+        "sourceTargets": [
+          "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+          "OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation",
+          "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+          "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
+        ],
+        "status": "draft",
+        "title": "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用",
+        "wave1": false,
+        "wordCountChinese": 1269,
+        "workflowAngles": [
+          "industry taxonomy",
+          "input schema",
+          "output format",
+          "review checklist",
+          "reuse rules"
+        ]
+      },
+      {
+        "approvalChecks": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Source notes are present: true",
+          "Quality check passed: true",
+          "Reviewer verifies official sources before any status change.",
+          "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
+        ],
+        "category": "AI 提示词",
+        "currentPack": false,
+        "description": "面向数据分析和业务团队整理 AI 提示词模板，覆盖指标解释、SQL 思路、异常排查、报表摘要、实验复盘和人工核对边界。",
+        "file": "content/blog/data-analysis-ai-prompts-guide.mdx",
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/data-analysis-ai-prompts-guide.mdx --confirm-human",
+        "intentSeeds": [
+          "AI 提示词大全",
+          "ChatGPT 提示词模板",
+          "全行业 AI 提示词",
+          "AI prompt library"
+        ],
+        "laneAudience": "Teams trying to build reusable prompt libraries instead of one-off prompts.",
+        "laneId": "industry-prompt-library",
+        "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=23; currentPack=2; wave1=2",
+        "lanePriorityScore": 386,
+        "laneTitle": "Cross-industry AI prompt templates and reusable prompt libraries",
+        "noindex": true,
+        "primaryKeyword": "数据分析 AI 提示词",
+        "publishBatch": 31,
+        "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/data-analysis-ai-prompts-guide.mdx",
+        "qualityIssues": [],
+        "qualityScore": 100,
+        "readyForHumanReview": true,
+        "reviewFocus": [
+          "input fields",
+          "output format",
+          "quality checks",
+          "risk disclaimers",
+          "versioning"
+        ],
+        "riskChecks": [
+          "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+          "No API key, private customer data, credential, or bypass instruction is included.",
+          "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+          "Prompt templates include input context, output criteria, human review rules, and adaptation notes."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotes": "参考 OpenAI 提示词最佳实践和生成式 AI 在数据分析、运营和软件辅助中的常见用法整理；正式发布前需要人工核对数据安全、SQL 方言和业务口径。",
+        "sourceTargets": [
+          "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+          "OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation",
+          "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+          "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
+        ],
+        "status": "draft",
+        "title": "数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要",
+        "wave1": false,
+        "wordCountChinese": 1229,
+        "workflowAngles": [
+          "industry taxonomy",
+          "input schema",
+          "output format",
+          "review checklist",
+          "reuse rules"
+        ]
+      },
+      {
+        "approvalChecks": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Source notes are present: true",
+          "Quality check passed: true",
+          "Reviewer verifies official sources before any status change.",
+          "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
+        ],
+        "category": "AI 部署",
+        "currentPack": false,
+        "description": "面向新手整理 Dify 工作流错误处理方法，覆盖输入变量校验、节点失败、条件分支、重试、人工兜底和上线前测试。",
+        "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/dify-workflow-error-handling-guide.mdx --confirm-human",
+        "intentSeeds": [
+          "企业 AI 应用场景",
+          "AI 工作流模板",
+          "销售 AI 提示词",
+          "客服 AI 提示词",
+          "运营 AI 提示词"
+        ],
+        "laneAudience": "Business teams deciding how to use AI across departments.",
+        "laneId": "business-ai-workflows",
+        "lanePriorityReason": "demandScore=9; no public coverage; readyDrafts=16; currentPack=2; wave1=2",
+        "lanePriorityScore": 366,
+        "laneTitle": "Business department AI workflows across sales, support, ops, HR, finance, legal, and education",
+        "noindex": true,
+        "primaryKeyword": "Dify 工作流错误处理",
+        "publishBatch": 33,
+        "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/dify-workflow-error-handling-guide.mdx",
+        "qualityIssues": [],
+        "qualityScore": 100,
+        "readyForHumanReview": true,
+        "reviewFocus": [
+          "role-specific input fields",
+          "approval owner",
+          "risk boundaries",
+          "measurable output format"
+        ],
+        "riskChecks": [
+          "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+          "No API key, private customer data, credential, or bypass instruction is included.",
+          "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+          "Department workflows identify approval owner, sensitive decisions, and human handoff points."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotes": "参考 Dify Workflow 节点、变量和应用 DSL 官方文档整理；正式发布前需要人工核对 Dify 最新界面和节点名称。",
+        "sourceTargets": [
+          "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+          "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
+        ],
+        "status": "draft",
+        "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底",
+        "wave1": false,
+        "wordCountChinese": 1366,
+        "workflowAngles": [
+          "department workflows",
+          "SOP",
+          "review owner",
+          "handoff",
+          "template library"
+        ]
+      },
+      {
+        "approvalChecks": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Source notes are present: true",
+          "Quality check passed: true",
+          "Reviewer verifies official sources before any status change.",
+          "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
+        ],
+        "category": "AI 部署",
+        "currentPack": false,
+        "description": "整理 Open WebUI Functions 与 Pipelines 的使用边界，覆盖 provider 接入、RAG、消息过滤、外部工作流、安全和部署检查。",
+        "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human",
+        "intentSeeds": [
+          "企业 AI 应用场景",
+          "AI 工作流模板",
+          "销售 AI 提示词",
+          "客服 AI 提示词",
+          "运营 AI 提示词"
+        ],
+        "laneAudience": "Business teams deciding how to use AI across departments.",
+        "laneId": "business-ai-workflows",
+        "lanePriorityReason": "demandScore=9; no public coverage; readyDrafts=16; currentPack=2; wave1=2",
+        "lanePriorityScore": 366,
+        "laneTitle": "Business department AI workflows across sales, support, ops, HR, finance, legal, and education",
+        "noindex": true,
+        "primaryKeyword": "Open WebUI Functions Pipelines",
+        "publishBatch": 33,
+        "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+        "qualityIssues": [],
+        "qualityScore": 100,
+        "readyForHumanReview": true,
+        "reviewFocus": [
+          "role-specific input fields",
+          "approval owner",
+          "risk boundaries",
+          "measurable output format"
+        ],
+        "riskChecks": [
+          "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+          "No API key, private customer data, credential, or bypass instruction is included.",
+          "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+          "Department workflows identify approval owner, sensitive decisions, and human handoff points."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotes": "参考 Open WebUI Functions、Pipelines、Pipes 官方文档整理；正式发布前需要人工核对版本和安全提示。",
+        "sourceTargets": [
+          "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+          "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
+        ],
+        "status": "draft",
+        "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流",
+        "wave1": false,
+        "wordCountChinese": 1263,
+        "workflowAngles": [
+          "department workflows",
+          "SOP",
+          "review owner",
+          "handoff",
+          "template library"
+        ]
+      },
+      {
+        "approvalChecks": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Source notes are present: true",
+          "Quality check passed: true",
+          "Reviewer verifies official sources before any status change.",
+          "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
+        ],
+        "category": "AI 记忆",
+        "currentPack": false,
+        "description": "解释 AI Agent 记忆和 RAG 的区别，覆盖短期记忆、长期记忆、知识库检索、引用来源、更新机制、隐私和验收检查。",
+        "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human",
+        "intentSeeds": [
+          "AI Agent 部署",
+          "AI Agent 工具调用",
+          "Vercel AI SDK Agent",
+          "OpenAI Agents SDK"
+        ],
+        "laneAudience": "Developers and teams trying to move beyond chatbots into production agents.",
+        "laneId": "agent-deployment-tools",
+        "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=27; currentPack=1; wave1=1",
+        "lanePriorityScore": 358,
+        "laneTitle": "AI Agent deployment, tool calling, and production workflow",
+        "noindex": true,
+        "primaryKeyword": "AI Agent 记忆",
+        "publishBatch": 40,
+        "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "qualityIssues": [],
+        "qualityScore": 100,
+        "readyForHumanReview": true,
+        "reviewFocus": [
+          "tool permission boundaries",
+          "loop control and stop conditions",
+          "human handoff",
+          "logs and fallback paths"
+        ],
+        "riskChecks": [
+          "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+          "No API key, private customer data, credential, or bypass instruction is included.",
+          "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+          "Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotes": "参考 OpenAI Agents SDK memory 文档、OpenAI prompt engineering 中关于 RAG 和上下文的说明，以及知识库系统交付经验整理；正式公开前需要人工核对 SDK 版本和隐私建议。",
+        "sourceTargets": [
+          "OpenAI Agents: https://platform.openai.com/docs/guides/agents",
+          "OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk",
+          "Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents",
+          "n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
+        ],
+        "status": "draft",
+        "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
+        "wave1": false,
+        "wordCountChinese": 1701,
+        "workflowAngles": [
+          "tool calling",
+          "multi-step execution",
+          "human approval",
+          "observability",
+          "permissions"
+        ]
+      },
+      {
+        "approvalChecks": [
+          "Article remains draft: true",
+          "Article remains noindex: true",
+          "Human review flag is present: true",
+          "Source notes are present: true",
+          "Quality check passed: true",
+          "Reviewer verifies official sources before any status change.",
+          "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
+        ],
+        "category": "接单报价",
+        "currentPack": false,
+        "description": "整理 AI 自动化项目报价思路，覆盖需求范围、工具选型、RAG、Agent、部署、维护、验收标准和风险边界。",
+        "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human",
+        "intentSeeds": [
+          "AI Agent 部署",
+          "AI Agent 工具调用",
+          "Vercel AI SDK Agent",
+          "OpenAI Agents SDK"
+        ],
+        "laneAudience": "Developers and teams trying to move beyond chatbots into production agents.",
+        "laneId": "agent-deployment-tools",
+        "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=27; currentPack=1; wave1=1",
+        "lanePriorityScore": 358,
+        "laneTitle": "AI Agent deployment, tool calling, and production workflow",
+        "noindex": true,
+        "primaryKeyword": "AI 自动化项目报价",
+        "publishBatch": 33,
+        "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "qualityIssues": [],
+        "qualityScore": 100,
+        "readyForHumanReview": true,
+        "reviewFocus": [
+          "tool permission boundaries",
+          "loop control and stop conditions",
+          "human handoff",
+          "logs and fallback paths"
+        ],
+        "riskChecks": [
+          "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+          "No API key, private customer data, credential, or bypass instruction is included.",
+          "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+          "Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit."
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "sourceNotes": "结合 Dify、n8n、RAG、Agent 部署内容和接单报价经验整理；正式发布前需要人工核对市场价格和交付边界。",
+        "sourceTargets": [
+          "OpenAI Agents: https://platform.openai.com/docs/guides/agents",
+          "OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk",
+          "Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents",
+          "n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
+        ],
+        "status": "draft",
+        "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
+        "wave1": false,
+        "wordCountChinese": 1303,
+        "workflowAngles": [
+          "tool calling",
+          "multi-step execution",
+          "human approval",
+          "observability",
+          "permissions"
+        ]
+      }
+    ],
+    "unsafeItems": 0,
+    "wave": 1
+  },
   "promptCoverage": {
     "industries": 16,
     "industriesWithReadyCandidates": 16,
@@ -4695,7 +5101,7 @@
   "liveSearch": {
     "checkedArticles": 15,
     "failedChecks": [],
-    "generatedAt": "2026-06-06T14:01:09.223Z",
+    "generatedAt": "2026-06-06T14:09:15.591Z",
     "missingFromSitemap": [],
     "ok": true,
     "publicArticles": 15,

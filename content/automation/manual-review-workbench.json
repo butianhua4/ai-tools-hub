@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T14:01:18.821Z",
+  "generatedAt": "2026-06-06T14:09:37.957Z",
   "guardrails": {
     "autoMarkReview": false,
     "autoPublish": false,
@@ -815,10 +815,10 @@
     "trafficDataAvailable": false
   },
   "trafficClaimGuard": {
-    "filesScanned": 75,
+    "filesScanned": 77,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 395
+    "watchMentions": 445
   },
   "contentIntegrity": {
     "allIssueItems": 0,
@@ -1205,6 +1205,66 @@
       }
     ]
   },
+  "searchIntentApproval": {
+    "summary": {
+      "currentWaveItems": 3,
+      "currentWaveReady": 3,
+      "nextGapItems": 6,
+      "nextGapLanes": 3,
+      "unsafeItems": 0,
+      "wave": 1
+    },
+    "nextGapItems": [
+      {
+        "file": "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+        "lanePriorityScore": 386,
+        "laneTitle": "Cross-industry AI prompt templates and reusable prompt libraries",
+        "primaryKeyword": "团队 AI 提示词库",
+        "readyForHumanReview": true,
+        "title": "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用"
+      },
+      {
+        "file": "content/blog/data-analysis-ai-prompts-guide.mdx",
+        "lanePriorityScore": 386,
+        "laneTitle": "Cross-industry AI prompt templates and reusable prompt libraries",
+        "primaryKeyword": "数据分析 AI 提示词",
+        "readyForHumanReview": true,
+        "title": "数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要"
+      },
+      {
+        "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+        "lanePriorityScore": 366,
+        "laneTitle": "Business department AI workflows across sales, support, ops, HR, finance, legal, and education",
+        "primaryKeyword": "Dify 工作流错误处理",
+        "readyForHumanReview": true,
+        "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底"
+      },
+      {
+        "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+        "lanePriorityScore": 366,
+        "laneTitle": "Business department AI workflows across sales, support, ops, HR, finance, legal, and education",
+        "primaryKeyword": "Open WebUI Functions Pipelines",
+        "readyForHumanReview": true,
+        "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+      },
+      {
+        "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "lanePriorityScore": 358,
+        "laneTitle": "AI Agent deployment, tool calling, and production workflow",
+        "primaryKeyword": "AI Agent 记忆",
+        "readyForHumanReview": true,
+        "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+      },
+      {
+        "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "lanePriorityScore": 358,
+        "laneTitle": "AI Agent deployment, tool calling, and production workflow",
+        "primaryKeyword": "AI 自动化项目报价",
+        "readyForHumanReview": true,
+        "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+      }
+    ]
+  },
   "promptCoverage": {
     "summary": {
       "currentPackPromptItems": 1,
@@ -1267,6 +1327,7 @@
     "Use docs/search-snippet-readiness-audit.md to review title, description, and slug snippet quality.",
     "Use docs/structured-data-readiness-audit.md to review metadata and JSON-LD readiness.",
     "Use docs/search-intent-lane-map.md to choose broad, high-search-intent lanes beyond basic web deployment.",
+    "Use docs/search-intent-approval-packet.md as the concrete current-wave and next-gap approval queue.",
     "Use docs/public-expansion-queue.md as the approval-wave order for expanding public articles.",
     "Use docs/traffic-evidence-audit.md before making any traffic or Search Console performance claim.",
     "Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.",

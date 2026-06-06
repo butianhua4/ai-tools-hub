@@ -1,6 +1,6 @@
 # Manual Review Workbench
 
-Generated at: 2026-06-06T14:01:18.821Z
+Generated at: 2026-06-06T14:09:37.957Z
 
 This workbench is read-only. It does not publish articles or mark drafts for review.
 
@@ -192,8 +192,8 @@ Next review files:
 - Search Console verification evidence: false
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 75
-- Traffic claim watch mentions: 395
+- Traffic claim files scanned: 77
+- Traffic claim watch mentions: 445
 
 ## Content Integrity
 
@@ -286,6 +286,24 @@ Next review files:
 | 314 | 9 | 0 | 24 | 8 | Model API integration, rate limits, and multi-model fallback | OpenAI API 接入<br>Claude API 限流<br>Gemini API 限流 | demandScore=9; no public coverage; readyDrafts=24 |
 | 306 | 9 | 0 | 16 | 8 | Local and open-source model deployment | 本地部署大模型<br>Ollama 本地部署<br>Open WebUI 部署 | demandScore=9; no public coverage; readyDrafts=16 |
 
+## Search Intent Approval Packet
+
+- Wave: 1
+- Current wave items: 3
+- Current wave ready: 3
+- Next gap items: 6
+- Next gap lanes: 3
+- Unsafe items: 0
+
+| Ready | Lane score | Lane | Primary keyword | Title | File |
+| --- | --- | --- | --- | --- | --- |
+| true | 386 | Cross-industry AI prompt templates and reusable prompt libraries | 团队 AI 提示词库 | 团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用 | content/blog/ai-prompt-library-team-knowledge-base-guide.mdx |
+| true | 386 | Cross-industry AI prompt templates and reusable prompt libraries | 数据分析 AI 提示词 | 数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要 | content/blog/data-analysis-ai-prompts-guide.mdx |
+| true | 366 | Business department AI workflows across sales, support, ops, HR, finance, legal, and education | Dify 工作流错误处理 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
+| true | 366 | Business department AI workflows across sales, support, ops, HR, finance, legal, and education | Open WebUI Functions Pipelines | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
+| true | 358 | AI Agent deployment, tool calling, and production workflow | AI Agent 记忆 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| true | 358 | AI Agent deployment, tool calling, and production workflow | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+
 ## Industry Prompt Coverage
 
 - Industries: 16
@@ -317,6 +335,7 @@ Next review files:
 - Use docs/search-snippet-readiness-audit.md to review title, description, and slug snippet quality.
 - Use docs/structured-data-readiness-audit.md to review metadata and JSON-LD readiness.
 - Use docs/search-intent-lane-map.md to choose broad, high-search-intent lanes beyond basic web deployment.
+- Use docs/search-intent-approval-packet.md as the concrete current-wave and next-gap approval queue.
 - Use docs/public-expansion-queue.md as the approval-wave order for expanding public articles.
 - Use docs/traffic-evidence-audit.md before making any traffic or Search Console performance claim.
 - Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.

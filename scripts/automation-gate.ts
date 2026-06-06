@@ -81,6 +81,19 @@ async function main() {
     };
     topLanes?: Array<{ matchedCandidates?: unknown[] }>;
   }>("content/automation/search-intent-lane-map.json");
+  const searchIntentApproval = readJson<{
+    currentWaveItems?: Array<{ readyForHumanReview?: boolean }>;
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
+    nextGapItems?: Array<{ readyForHumanReview?: boolean; sourceTargets?: unknown[]; riskChecks?: unknown[] }>;
+    summary: {
+      currentWaveItems: number;
+      currentWaveReady: number;
+      nextGapItems: number;
+      nextGapLanes: number;
+      unsafeItems: number;
+      wave: number;
+    };
+  }>("content/automation/search-intent-approval-packet.json");
   const cannibalization = readJson<{
     guardrails: { autoPublish: boolean };
     summary: { articleCount: number; conflicts: number; reviewBatchConflicts: number };
@@ -527,6 +540,30 @@ async function main() {
           ),
         ),
       detail: `readyDraftMatches=${searchIntentLanes.summary.totalReadyDraftMatches}, noPublicCoverage=${searchIntentLanes.summary.lanesWithoutPublicCoverage}, notReadyMatched=${searchIntentLanes.summary.notReadyMatchedDrafts}`,
+    },
+    {
+      name: "search intent approval packet is read-only and covers current wave plus next gaps",
+      ok:
+        searchIntentApproval.guardrails.autoEditArticles === false &&
+        searchIntentApproval.guardrails.autoMarkReview === false &&
+        searchIntentApproval.guardrails.autoPublish === false &&
+        searchIntentApproval.summary.currentWaveItems === waveApprovalPacket.summary.items &&
+        searchIntentApproval.summary.currentWaveReady === waveApprovalPacket.summary.readyForHumanReview &&
+        searchIntentApproval.summary.nextGapItems >= 6 &&
+        searchIntentApproval.summary.nextGapLanes >= 3,
+      detail: `currentWave=${searchIntentApproval.summary.currentWaveItems}, nextGap=${searchIntentApproval.summary.nextGapItems}, nextGapLanes=${searchIntentApproval.summary.nextGapLanes}`,
+    },
+    {
+      name: "search intent approval packet has no unsafe items and includes review context",
+      ok:
+        searchIntentApproval.summary.unsafeItems === 0 &&
+        Boolean(searchIntentApproval.currentWaveItems?.every((item) => item.readyForHumanReview === true)) &&
+        Boolean(
+          searchIntentApproval.nextGapItems?.every(
+            (item) => item.readyForHumanReview === true && (item.sourceTargets?.length || 0) >= 2 && (item.riskChecks?.length || 0) >= 4,
+          ),
+        ),
+      detail: `unsafe=${searchIntentApproval.summary.unsafeItems}, currentReady=${searchIntentApproval.summary.currentWaveReady}, nextGap=${searchIntentApproval.summary.nextGapItems}`,
     },
     {
       name: "content cannibalization check generated warning report",

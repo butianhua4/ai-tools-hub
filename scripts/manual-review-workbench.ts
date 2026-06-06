@@ -282,6 +282,25 @@ type SearchIntentLanes = {
   }>;
 };
 
+type SearchIntentApproval = {
+  nextGapItems: Array<{
+    file: string;
+    lanePriorityScore: number;
+    laneTitle: string;
+    primaryKeyword: string;
+    readyForHumanReview: boolean;
+    title: string;
+  }>;
+  summary: {
+    currentWaveItems: number;
+    currentWaveReady: number;
+    nextGapItems: number;
+    nextGapLanes: number;
+    unsafeItems: number;
+    wave: number;
+  };
+};
+
 type ProjectStatus = {
   articles: { publicPublished: number; publishableNow: unknown[]; statusCounts: Record<string, number> };
 };
@@ -310,6 +329,7 @@ function main() {
   const searchSnippets = readJson<SearchSnippets>("content/automation/search-snippet-readiness-audit.json");
   const structuredData = readJson<StructuredData>("content/automation/structured-data-readiness-audit.json");
   const searchIntentLanes = readJson<SearchIntentLanes>("content/automation/search-intent-lane-map.json");
+  const searchIntentApproval = readJson<SearchIntentApproval>("content/automation/search-intent-approval-packet.json");
   const deploymentCoverage = readJson<DeploymentCoverage>("content/automation/ai-deployment-coverage.json");
   const promptCoverage = readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json");
   const projectStatus = readJson<ProjectStatus>("content/automation/project-status.json");
@@ -494,6 +514,17 @@ function main() {
         title: item.title,
       })),
     },
+    searchIntentApproval: {
+      summary: searchIntentApproval.summary,
+      nextGapItems: searchIntentApproval.nextGapItems.slice(0, 6).map((item) => ({
+        file: item.file,
+        lanePriorityScore: item.lanePriorityScore,
+        laneTitle: item.laneTitle,
+        primaryKeyword: item.primaryKeyword,
+        readyForHumanReview: item.readyForHumanReview,
+        title: item.title,
+      })),
+    },
     promptCoverage: {
       summary: promptCoverage.summary,
       topIndustries: promptCoverage.coverage.slice(0, 6).map((item) => ({
@@ -520,6 +551,7 @@ function main() {
       searchSnippets,
       structuredData,
       searchIntentLanes,
+      searchIntentApproval,
     ),
   };
 
@@ -549,6 +581,7 @@ function buildNextActions(
   searchSnippets: SearchSnippets,
   structuredData: StructuredData,
   searchIntentLanes: SearchIntentLanes,
+  searchIntentApproval: SearchIntentApproval,
 ) {
   if (projectStatus.articles.publishableNow.length > 0) return ["Stop and inspect publishableNow before adding more review candidates."];
   if (!liveSearch.ok || liveSearch.failedChecks.length > 0) return ["Fix live search surface failures before any publishing action."];
@@ -579,6 +612,7 @@ function buildNextActions(
   if (searchSnippets.summary.waveItemsWithBlockingIssues > 0) return ["Fix Wave 1 search snippet blockers before publishing."];
   if (structuredData.summary.waveItemsWithBlockingIssues > 0) return ["Fix Wave 1 structured data readiness blockers before publishing."];
   if (searchIntentLanes.summary.lanesWithReadyDrafts !== searchIntentLanes.summary.lanes) return ["Regenerate search intent lane map and ensure every broad lane has ready draft candidates."];
+  if (searchIntentApproval.summary.unsafeItems > 0) return ["Resolve search intent approval packet safety issues before manual review."];
   if (
     reviewCoverage.summary.itemsMissingOfficialSources > 0 ||
     reviewCoverage.summary.itemsMissingFactCheckQueries > 0 ||
@@ -595,6 +629,7 @@ function buildNextActions(
     "Use docs/search-snippet-readiness-audit.md to review title, description, and slug snippet quality.",
     "Use docs/structured-data-readiness-audit.md to review metadata and JSON-LD readiness.",
     "Use docs/search-intent-lane-map.md to choose broad, high-search-intent lanes beyond basic web deployment.",
+    "Use docs/search-intent-approval-packet.md as the concrete current-wave and next-gap approval queue.",
     "Use docs/public-expansion-queue.md as the approval-wave order for expanding public articles.",
     "Use docs/traffic-evidence-audit.md before making any traffic or Search Console performance claim.",
     "Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.",
@@ -734,6 +769,17 @@ function toMarkdown(payload: {
       readyDraftCount: number;
       title: string;
     }>;
+  };
+  searchIntentApproval: {
+    nextGapItems: Array<{
+      file: string;
+      lanePriorityScore: number;
+      laneTitle: string;
+      primaryKeyword: string;
+      readyForHumanReview: boolean;
+      title: string;
+    }>;
+    summary: SearchIntentApproval["summary"];
   };
   promptCoverage: {
     summary: PromptCoverage["summary"];
@@ -988,6 +1034,21 @@ function toMarkdown(payload: {
     "| --- | --- | --- | --- | --- | --- | --- | --- |",
     ...payload.searchIntentLanes.topLanes.map((item) => (
       `| ${item.priorityScore} | ${item.demandScore} | ${item.publicCount} | ${item.readyDraftCount} | ${item.matchedCandidates} | ${item.title} | ${item.intentSeeds.slice(0, 3).join("<br>")} | ${item.priorityReason} |`
+    )),
+    "",
+    "## Search Intent Approval Packet",
+    "",
+    `- Wave: ${payload.searchIntentApproval.summary.wave}`,
+    `- Current wave items: ${payload.searchIntentApproval.summary.currentWaveItems}`,
+    `- Current wave ready: ${payload.searchIntentApproval.summary.currentWaveReady}`,
+    `- Next gap items: ${payload.searchIntentApproval.summary.nextGapItems}`,
+    `- Next gap lanes: ${payload.searchIntentApproval.summary.nextGapLanes}`,
+    `- Unsafe items: ${payload.searchIntentApproval.summary.unsafeItems}`,
+    "",
+    "| Ready | Lane score | Lane | Primary keyword | Title | File |",
+    "| --- | --- | --- | --- | --- | --- |",
+    ...payload.searchIntentApproval.nextGapItems.map((item) => (
+      `| ${item.readyForHumanReview} | ${item.lanePriorityScore} | ${item.laneTitle} | ${item.primaryKeyword} | ${item.title} | ${item.file} |`
     )),
     "",
     "## Industry Prompt Coverage",

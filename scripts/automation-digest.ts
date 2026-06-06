@@ -286,6 +286,25 @@ type SearchIntentLanes = {
   }>;
 };
 
+type SearchIntentApproval = {
+  nextGapItems: Array<{
+    file: string;
+    lanePriorityScore: number;
+    laneTitle: string;
+    primaryKeyword: string;
+    readyForHumanReview: boolean;
+    title: string;
+  }>;
+  summary: {
+    currentWaveItems: number;
+    currentWaveReady: number;
+    nextGapItems: number;
+    nextGapLanes: number;
+    unsafeItems: number;
+    wave: number;
+  };
+};
+
 const reports = {
   cannibalization: readJson<{ summary: { conflicts: number; reviewBatchConflicts: number } }>("content/automation/content-cannibalization.json"),
   freshness: readJson<{ summary: { currentReviewItems: number; highRisk: number; mediumRisk: number; plannedReviewItems: number } }>(
@@ -330,6 +349,7 @@ const reports = {
   searchSnippets: readJson<SearchSnippets>("content/automation/search-snippet-readiness-audit.json"),
   structuredData: readJson<StructuredData>("content/automation/structured-data-readiness-audit.json"),
   searchIntentLanes: readJson<SearchIntentLanes>("content/automation/search-intent-lane-map.json"),
+  searchIntentApproval: readJson<SearchIntentApproval>("content/automation/search-intent-approval-packet.json"),
   review: readJson<{ counts: { candidates: number; returned: number; rejected: Record<string, number> }; recommendedToday: ReviewCandidate[] }>(
     "content/automation/review-candidates.json",
   ),
@@ -473,6 +493,15 @@ const payload = {
     top: reports.searchIntentLanes.data?.topLanes.slice(0, 8) ?? [],
     totalReadyDraftMatches: reports.searchIntentLanes.data?.summary.totalReadyDraftMatches ?? null,
   },
+  searchIntentApproval: {
+    currentWaveItems: reports.searchIntentApproval.data?.summary.currentWaveItems ?? null,
+    currentWaveReady: reports.searchIntentApproval.data?.summary.currentWaveReady ?? null,
+    nextGapItems: reports.searchIntentApproval.data?.summary.nextGapItems ?? null,
+    nextGapLanes: reports.searchIntentApproval.data?.summary.nextGapLanes ?? null,
+    top: reports.searchIntentApproval.data?.nextGapItems.slice(0, 6) ?? [],
+    unsafeItems: reports.searchIntentApproval.data?.summary.unsafeItems ?? null,
+    wave: reports.searchIntentApproval.data?.summary.wave ?? null,
+  },
   promptCoverage: {
     industries: reports.promptCoverage.data?.summary.industries ?? null,
     industriesWithReadyCandidates: reports.promptCoverage.data?.summary.industriesWithReadyCandidates ?? null,
@@ -565,6 +594,9 @@ function buildNextActions() {
   }
   if (!reports.searchIntentLanes.data || reports.searchIntentLanes.data.summary.lanesWithReadyDrafts !== reports.searchIntentLanes.data.summary.lanes) {
     return ["Open docs/search-intent-lane-map.md and ensure every high-search-intent lane has ready draft candidates."];
+  }
+  if (!reports.searchIntentApproval.data || reports.searchIntentApproval.data.summary.unsafeItems > 0) {
+    return ["Open docs/search-intent-approval-packet.md and resolve approval packet safety issues before manual review."];
   }
   if (!reports.reviewCoverage.data || reports.reviewCoverage.data.summary.missingCoverage > 0) {
     return ["Open docs/review-coverage-report.md and regenerate coverage for all planned review candidates."];
@@ -862,6 +894,21 @@ function toMarkdown(data: typeof payload) {
     "| --- | --- | --- | --- | --- | --- | --- | --- |",
     ...data.searchIntentLanes.top.map((item) => (
       `| ${item.priorityScore} | ${item.demandScore} | ${item.publicCount} | ${item.readyDraftCount} | ${item.matchedCandidates.length} | ${item.title} | ${item.intentSeeds.slice(0, 3).join("<br>")} | ${item.priorityReason} |`
+    )),
+    "",
+    "## Search Intent Approval Packet",
+    "",
+    `- Wave: ${data.searchIntentApproval.wave}`,
+    `- Current wave items: ${data.searchIntentApproval.currentWaveItems}`,
+    `- Current wave ready: ${data.searchIntentApproval.currentWaveReady}`,
+    `- Next gap items: ${data.searchIntentApproval.nextGapItems}`,
+    `- Next gap lanes: ${data.searchIntentApproval.nextGapLanes}`,
+    `- Unsafe items: ${data.searchIntentApproval.unsafeItems}`,
+    "",
+    "| Ready | Lane score | Lane | Primary keyword | Title | File |",
+    "| --- | --- | --- | --- | --- | --- |",
+    ...data.searchIntentApproval.top.map((item) => (
+      `| ${item.readyForHumanReview} | ${item.lanePriorityScore} | ${item.laneTitle} | ${item.primaryKeyword} | ${item.title} | ${item.file} |`
     )),
     "",
     "## Industry Prompt Coverage",

@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-06T14:01:24.492Z
+Generated at: 2026-06-06T14:09:45.783Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -192,8 +192,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 75
-- Traffic claim watch mentions: 395
+- Traffic claim files scanned: 77
+- Traffic claim watch mentions: 445
 
 ## Preflight
 
@@ -268,6 +268,24 @@ Next review files:
 | 314 | 9 | 0 | 24 | 8 | Model API integration, rate limits, and multi-model fallback | OpenAI API 接入<br>Claude API 限流<br>Gemini API 限流 | demandScore=9; no public coverage; readyDrafts=24 |
 | 306 | 9 | 0 | 16 | 8 | Local and open-source model deployment | 本地部署大模型<br>Ollama 本地部署<br>Open WebUI 部署 | demandScore=9; no public coverage; readyDrafts=16 |
 
+## Search Intent Approval Packet
+
+- Wave: 1
+- Current wave items: 3
+- Current wave ready: 3
+- Next gap items: 6
+- Next gap lanes: 3
+- Unsafe items: 0
+
+| Ready | Lane score | Lane | Primary keyword | Title | File |
+| --- | --- | --- | --- | --- | --- |
+| true | 386 | Cross-industry AI prompt templates and reusable prompt libraries | 团队 AI 提示词库 | 团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用 | content/blog/ai-prompt-library-team-knowledge-base-guide.mdx |
+| true | 386 | Cross-industry AI prompt templates and reusable prompt libraries | 数据分析 AI 提示词 | 数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要 | content/blog/data-analysis-ai-prompts-guide.mdx |
+| true | 366 | Business department AI workflows across sales, support, ops, HR, finance, legal, and education | Dify 工作流错误处理 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
+| true | 366 | Business department AI workflows across sales, support, ops, HR, finance, legal, and education | Open WebUI Functions Pipelines | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
+| true | 358 | AI Agent deployment, tool calling, and production workflow | AI Agent 记忆 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| true | 358 | AI Agent deployment, tool calling, and production workflow | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+
 ## Industry Prompt Coverage
 
 - Industries: 16
@@ -299,7 +317,7 @@ Next review files:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-06T14:01:09.223Z
+- Latest check: 2026-06-06T14:09:15.591Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85

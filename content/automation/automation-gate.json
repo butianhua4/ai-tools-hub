@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T14:01:18.997Z",
+  "generatedAt": "2026-06-06T14:09:38.930Z",
   "ok": true,
   "summary": {
-    "checks": 57,
+    "checks": 59,
     "failed": 0,
-    "passed": 57
+    "passed": 59
   },
   "failed": [],
   "checks": [
@@ -90,7 +90,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=75, unsafeClaims=0, watchMentions=395"
+      "detail": "filesScanned=77, unsafeClaims=0, watchMentions=445"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -186,6 +186,16 @@
       "name": "search intent lane map includes sources, review focus, and safe candidates",
       "ok": true,
       "detail": "readyDraftMatches=233, noPublicCoverage=10, notReadyMatched=355"
+    },
+    {
+      "name": "search intent approval packet is read-only and covers current wave plus next gaps",
+      "ok": true,
+      "detail": "currentWave=3, nextGap=6, nextGapLanes=3"
+    },
+    {
+      "name": "search intent approval packet has no unsafe items and includes review context",
+      "ok": true,
+      "detail": "unsafe=0, currentReady=3, nextGap=6"
     },
     {
       "name": "content cannibalization check generated warning report",
