@@ -12,7 +12,10 @@ async function main() {
   const reviewQueue = readJson<{ guardrails: { autoPublish: boolean }; recommendedToday: Array<{ cluster: string; file: string }> }>(
     "content/automation/review-candidates.json",
   );
-  const publishPack = readJson<{ guardrails: { autoPublish: boolean }; items: Array<{ file: string }> }>(
+  const publishPack = readJson<{
+    guardrails: { autoPublish: boolean };
+    items: Array<{ factCheckQueries?: unknown[]; file: string; officialSourceTargets?: unknown[] }>;
+  }>(
     "content/automation/publish-readiness-pack.json",
   );
   const seo = readJson<{ ok: boolean; leakedDraftOrReview: string[]; nonPublishedWithNoindexFalse: string[]; publishedButNoindexed: string[] }>(
@@ -27,6 +30,9 @@ async function main() {
 
   const reviewFiles = reviewQueue.recommendedToday.map((item) => item.file);
   const packFiles = publishPack.items.map((item) => item.file);
+  const packItemsMissingSourceReview = publishPack.items
+    .filter((item) => !item.officialSourceTargets?.length || !item.factCheckQueries?.length)
+    .map((item) => item.file);
   const clusters = reviewQueue.recommendedToday.map((item) => item.cluster);
   const repeatedClusters = clusters.filter((cluster, index) => clusters.indexOf(cluster) !== index);
   const nonPublishedIndexed = articles
@@ -45,6 +51,11 @@ async function main() {
       name: "publish pack matches recommended review files",
       ok: sameList(packFiles, reviewFiles),
       detail: `review=${reviewFiles.join(", ")} pack=${packFiles.join(", ")}`,
+    },
+    {
+      name: "publish pack includes source verification tasks",
+      ok: packItemsMissingSourceReview.length === 0,
+      detail: packItemsMissingSourceReview.length ? packItemsMissingSourceReview.join(", ") : `${publishPack.items.length} item(s) covered`,
     },
     {
       name: "recommended review candidates pass preflight",

@@ -17,6 +17,8 @@ type PackItem = {
   category: string;
   description: string;
   file: string;
+  factCheckQueries: string[];
+  officialSourceTargets: string[];
   internalLinks: number;
   markReviewCommand: string;
   opportunityReason: string;
@@ -28,6 +30,7 @@ type PackItem = {
   reviewFocus: string[];
   searchIntent: string;
   slug: string;
+  sourceNotes: string;
   title: string;
   wordCountChinese: number;
 };
@@ -80,7 +83,9 @@ function toPackItem(candidate: Candidate): PackItem {
   return {
     category: String(data.category || ""),
     description: String(data.description || ""),
+    factCheckQueries: buildFactCheckQueries(data),
     file,
+    officialSourceTargets: buildOfficialSourceTargets(data, content),
     internalLinks: (content.match(/\]\(\//g) || []).length,
     markReviewCommand: `npm run mark:review -- --file=${file} --confirm-human`,
     opportunityReason: candidate.opportunityReason || "",
@@ -92,6 +97,7 @@ function toPackItem(candidate: Candidate): PackItem {
     reviewFocus: buildReviewFocus(result.warnings),
     searchIntent: String(data.searchIntent || ""),
     slug: String(data.slug || ""),
+    sourceNotes: String(data.sourceNotes || ""),
     title: String(data.title || candidate.title || ""),
     wordCountChinese: chineseCount(content),
   };
@@ -103,8 +109,47 @@ function buildReviewFocus(warnings: string[]) {
     "Check facts, tool names, limits, and platform policy wording.",
     "Confirm risk reminders are cautionary and do not imply guaranteed outcomes.",
     "Confirm internal links and CTA point to relevant site pages.",
+    "Open the official source targets below before approving fast-changing AI, deployment, pricing, or API claims.",
     ...warnings.map((warning) => `Quality warning: ${warning}`),
   ];
+}
+
+function buildFactCheckQueries(data: Record<string, unknown>) {
+  const title = String(data.title || "").trim();
+  const primaryKeyword = String(data.primaryKeyword || "").trim();
+  const category = String(data.category || "").trim();
+  const queries = [
+    primaryKeyword ? `${primaryKeyword} 官方文档 最新` : "",
+    primaryKeyword ? `${primaryKeyword} official docs latest` : "",
+    title ? `${title} 事实核对` : "",
+    category ? `${category} 平台限制 官方文档` : "",
+  ].filter(Boolean);
+
+  return [...new Set(queries)].slice(0, 4);
+}
+
+function buildOfficialSourceTargets(data: Record<string, unknown>, content: string) {
+  const text = `${data.title || ""} ${data.category || ""} ${data.primaryKeyword || ""} ${data.sourceNotes || ""} ${content}`.toLowerCase();
+  const targets = [
+    matchTarget(text, ["openai", "chatgpt", "agents sdk", "responses api"], "OpenAI docs", "https://platform.openai.com/docs"),
+    matchTarget(text, ["vercel ai sdk", "ai sdk", "vercel"], "Vercel AI SDK docs", "https://ai-sdk.dev/docs"),
+    matchTarget(text, ["hugging face", "inference endpoints", "vllm", "tgi", "sglang"], "Hugging Face docs", "https://huggingface.co/docs"),
+    matchTarget(text, ["dify"], "Dify docs", "https://docs.dify.ai"),
+    matchTarget(text, ["n8n"], "n8n docs", "https://docs.n8n.io"),
+    matchTarget(text, ["ollama"], "Ollama docs", "https://ollama.com/docs"),
+    matchTarget(text, ["github"], "GitHub docs", "https://docs.github.com"),
+    matchTarget(text, ["google search console", "search console"], "Google Search Central docs", "https://developers.google.com/search/docs"),
+  ].filter((target): target is string => Boolean(target));
+
+  if (!targets.length) {
+    targets.push("General official docs search: verify the primary keyword against current vendor documentation before approval.");
+  }
+
+  return [...new Set(targets)].slice(0, 6);
+}
+
+function matchTarget(text: string, terms: string[], label: string, url: string) {
+  return terms.some((term) => text.includes(term.toLowerCase())) ? `${label}: ${url}` : "";
 }
 
 function toMarkdown(payload: {
@@ -141,16 +186,25 @@ function toMarkdown(payload: {
       `- Category: ${item.category}`,
       `- Primary keyword: ${item.primaryKeyword}`,
       `- Search intent: ${item.searchIntent}`,
-    `- Quality score: ${item.qualityScore}`,
+      `- Quality score: ${item.qualityScore}`,
       `- Opportunity score: ${item.opportunityScore}`,
       `- Opportunity reason: ${item.opportunityReason}`,
       `- Chinese chars: ${item.wordCountChinese}`,
       `- Internal links: ${item.internalLinks}`,
       `- Description: ${item.description}`,
+      `- Source notes: ${item.sourceNotes}`,
       "",
       "Review focus:",
       "",
       ...item.reviewFocus.map((focus) => `- ${focus}`),
+      "",
+      "Official source targets:",
+      "",
+      ...item.officialSourceTargets.map((target) => `- ${target}`),
+      "",
+      "Fact-check queries:",
+      "",
+      ...item.factCheckQueries.map((query) => `- ${query}`),
       "",
       "Commands:",
       "",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T10:21:27.737Z",
+  "generatedAt": "2026-06-06T10:26:57.614Z",
   "guardrails": {
     "autoPublish": false,
     "requiredHumanAction": "Read the article, verify factual claims and risk language, then mark review manually.",
@@ -13,7 +13,16 @@
     {
       "category": "AI Agent",
       "description": "面向新手解释 AI Agent 部署流程，覆盖 Vercel AI SDK、工具调用、多步执行、停止条件、日志、权限、人工接管和上线检查。",
+      "factCheckQueries": [
+        "AI Agent 部署 官方文档 最新",
+        "AI Agent 部署 official docs latest",
+        "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 事实核对",
+        "AI Agent 平台限制 官方文档"
+      ],
       "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "officialSourceTargets": [
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs"
+      ],
       "internalLinks": 6,
       "markReviewCommand": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
       "opportunityReason": "Agent and memory cluster; no public article in cluster; no public article in category",
@@ -26,17 +35,28 @@
         "Verify the opening answer matches the title and search intent.",
         "Check facts, tool names, limits, and platform policy wording.",
         "Confirm risk reminders are cautionary and do not imply guaranteed outcomes.",
-        "Confirm internal links and CTA point to relevant site pages."
+        "Confirm internal links and CTA point to relevant site pages.",
+        "Open the official source targets below before approving fast-changing AI, deployment, pricing, or API claims."
       ],
       "searchIntent": "informational",
       "slug": "ai-agent-deployment-vercel-ai-sdk-guide",
+      "sourceNotes": "参考 Vercel 官方 AI SDK Agent 文档和实际 Web 应用部署流程整理；正式公开前需要人工核对 API 示例、版本和平台限制。",
       "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
       "wordCountChinese": 1540
     },
     {
       "category": "AI 提示词",
       "description": "整理全行业 AI 提示词模板库的搭建方法，覆盖销售、运营、客服、HR、财务、教育、产品和研发场景，重点讲分类、输入、输出、审核和复用。",
+      "factCheckQueries": [
+        "全行业 AI 提示词模板 官方文档 最新",
+        "全行业 AI 提示词模板 official docs latest",
+        "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 事实核对",
+        "AI 提示词 平台限制 官方文档"
+      ],
       "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "officialSourceTargets": [
+        "OpenAI docs: https://platform.openai.com/docs"
+      ],
       "internalLinks": 6,
       "markReviewCommand": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
       "opportunityReason": "Industry AI prompts cluster; no public article in cluster; no public article in category",
@@ -49,17 +69,28 @@
         "Verify the opening answer matches the title and search intent.",
         "Check facts, tool names, limits, and platform policy wording.",
         "Confirm risk reminders are cautionary and do not imply guaranteed outcomes.",
-        "Confirm internal links and CTA point to relevant site pages."
+        "Confirm internal links and CTA point to relevant site pages.",
+        "Open the official source targets below before approving fast-changing AI, deployment, pricing, or API claims."
       ],
       "searchIntent": "informational",
       "slug": "industry-ai-prompts-template-library-2026",
+      "sourceNotes": "参考 OpenAI prompt engineering 官方指南、团队知识库实践和行业 SOP 设计经验整理；正式公开前需要人工核对示例、行业边界和敏感内容。",
       "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
       "wordCountChinese": 1862
     },
     {
       "category": "AI 部署",
       "description": "整理客服 AI 模型选型方法，覆盖响应速度、成本、知识库、情绪识别、转人工、质检、上下文长度和安全边界。",
+      "factCheckQueries": [
+        "客服 AI 模型选型 官方文档 最新",
+        "客服 AI 模型选型 official docs latest",
+        "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 事实核对",
+        "AI 部署 平台限制 官方文档"
+      ],
       "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "officialSourceTargets": [
+        "General official docs search: verify the primary keyword against current vendor documentation before approval."
+      ],
       "internalLinks": 4,
       "markReviewCommand": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
       "opportunityReason": "RAG and knowledge base cluster; no public article in cluster; no public article in category",
@@ -72,10 +103,12 @@
         "Verify the opening answer matches the title and search intent.",
         "Check facts, tool names, limits, and platform policy wording.",
         "Confirm risk reminders are cautionary and do not imply guaranteed outcomes.",
-        "Confirm internal links and CTA point to relevant site pages."
+        "Confirm internal links and CTA point to relevant site pages.",
+        "Open the official source targets below before approving fast-changing AI, deployment, pricing, or API claims."
       ],
       "searchIntent": "informational",
       "slug": "ai-model-selection-customer-service-guide",
+      "sourceNotes": "结合多模型路由、RAG、客服提示词和生产客服系统风险整理；正式发布前需要人工核对具体平台规则。",
       "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
       "wordCountChinese": 1232
     }
