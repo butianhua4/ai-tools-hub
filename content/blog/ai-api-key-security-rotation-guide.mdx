@@ -1,0 +1,121 @@
+---
+title: "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急"
+slug: "ai-api-key-security-rotation-guide"
+description: "整理 AI API Key 安全管理清单，覆盖环境变量、最小权限、服务端调用、密钥轮换、日志脱敏、泄露应急和客户交付。"
+date: "2026-06-06"
+updatedAt: "2026-06-06"
+category: "AI 部署"
+tags:
+  - "API Key"
+  - "AI 安全"
+  - "环境变量"
+  - "密钥管理"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "准备上线 AI 应用、需要管理 OpenAI、Claude、Gemini 等 API Key 的新手"
+searchIntent: "informational"
+primaryKeyword: "AI API Key 安全管理"
+secondaryKeywords:
+  - "OpenAI API Key 泄露"
+  - "Claude API Key 安全"
+  - "环境变量管理"
+  - "API Key 轮换"
+sourceNotes: "结合 OpenAI、Anthropic、Google API 接入安全和 Web 应用密钥管理实践整理；正式发布前需要人工核对平台控制台能力。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载 AI API Key 安全清单"
+  serviceCTA: "联系人工协助检查 AI 应用密钥风险"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 34
+canonical: "https://ai-jiedan-lab.vercel.app/blog/ai-api-key-security-rotation-guide"
+noindex: true
+---
+# AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
+
+AI 应用上线时，API Key 是最容易被新手忽略的风险。很多人把 Key 写进前端、提交到 GitHub、打印到日志、发给客户群，或者所有项目共用同一个高权限 Key。结果一旦泄露，可能产生费用、数据风险和账号风险。密钥管理不是上线后再补，而是项目一开始就要设计。
+
+本文是待复核草稿。Vercel 环境变量问题可以看 [Vercel 环境变量缺失指南](/blog/vercel-env-variable-missing-beginner-guide)，API 限流可以看 [大模型 API 限流和重试怎么做](/blog/llm-api-rate-limit-retry-guide)。
+
+## 适合谁
+
+适合做 AI 网站、聊天机器人、Agent、知识库、自动化工作流和 API 服务的人。只要调用 OpenAI、Claude、Gemini、Vercel AI Gateway 或其他模型 provider，就要管理密钥。
+
+也适合接客户 AI 项目的人。客户的 Key、你的 Key、测试 Key 和生产 Key 应该分清楚，不能混用。
+
+## 不适合谁
+
+不适合在前端直接调用模型 API 的人。前端代码和网络请求容易暴露 Key。
+
+也不适合把密钥写进提示词、README、截图、日志或工单里。这些地方很容易被复制和传播。
+
+## 服务端调用
+
+模型 API 通常应该由服务端调用。前端把用户请求发给你的后端，后端检查权限、限流、日志和预算后，再调用模型。
+
+这样可以保护 Key，也能统一做缓存、队列、重试和成本监控。不要为了省事把 Key 暴露给浏览器。
+
+## 环境变量
+
+本地开发用 `.env.local`，生产环境用平台环境变量。不要把 `.env` 提交到仓库。不同环境使用不同 Key，避免测试代码影响生产额度。
+
+如果使用 Vercel、Docker、n8n 或 Dify，都要确认密钥保存位置和日志行为。某些平台的节点配置、导出文件或调试日志可能暴露敏感值。
+
+## 最小权限和轮换
+
+如果平台支持项目级、模型级、额度级限制，应尽量使用最小权限。不要让一个 Key 访问所有项目和所有模型。
+
+定期轮换密钥。员工离职、客户交付结束、怀疑泄露、仓库误提交、日志暴露后，都应该立即撤销旧 Key，生成新 Key，并检查异常调用。
+
+## 泄露应急
+
+发现 Key 泄露后，第一步不是删除截图，而是立即撤销密钥。第二步查看调用日志和费用。第三步替换生产环境变量。第四步检查仓库、日志、聊天记录和文档里是否还有泄露内容。
+
+如果 Key 涉及客户账号，要及时通知客户并说明处理步骤。
+
+## 常见错误
+
+第一个错误是把 Key 写进前端配置。构建后仍可能被看到。
+
+第二个错误是多个客户共用一个 Key。费用和数据边界会混乱。
+
+第三个错误是日志里打印完整请求。提示词和 headers 里可能有敏感内容。
+
+## 交付检查
+
+AI 应用交付前，建议做一次密钥扫描。检查仓库、环境变量、部署平台、日志、截图、README、工作流节点和客户交接文档。只要 Key 曾经出现在公开或半公开位置，就应该轮换。
+
+交付文档里还要写清谁持有生产 Key，谁能修改环境变量，谁负责查看费用，客户结束合作后怎么移交或撤销。密钥管理讲清楚，后续合作会稳很多。
+
+后续可以拆成实操文章：OpenAI API Key 泄露怎么办、Vercel 环境变量怎么配置、n8n 凭据怎么管理、Dify API Key 怎么分环境。安全类长尾词通常很急，用户搜索时已经遇到问题。
+
+运维时还要固定检查账单和异常调用。密钥没有泄露，也可能因为功能设计问题被大量消耗。安全和成本要一起看。
+
+客户交接时建议单独开一场密钥移交。确认旧测试 Key 是否撤销、生产 Key 是否由客户持有、你是否还保留访问权限、后续谁负责轮换。这个动作很小，但能避免很多后续责任不清的问题。
+
+## 风险提醒
+
+API Key 泄露可能造成费用损失、滥用调用和数据风险。上线前要做密钥检查，发布后要做费用和异常调用监控。
+
+不要购买或使用来源不明的 API 转发服务。数据、费用和模型真实性都可能有风险。
+
+## 具体步骤
+
+第一步，确认所有模型调用都走服务端。第二步，把 Key 放进环境变量或密钥管理服务。第三步，为测试和生产使用不同 Key。第四步，设置预算、限流和日志脱敏。第五步，建立轮换周期。第六步，准备泄露应急流程。需要安全清单，可以从 [工具导航](/tools) 下载或联系人工协助检查。
+
+## 免责声明
+
+本文只用于 AI API Key 安全管理学习，不构成安全审计或合规意见。正式上线前，应结合具体平台、权限和客户要求人工复核。

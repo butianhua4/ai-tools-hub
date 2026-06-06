@@ -1,0 +1,119 @@
+---
+title: "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级"
+slug: "vercel-ai-gateway-multi-provider-guide"
+description: "整理 Vercel AI Gateway 多模型接入思路，覆盖统一 API、provider 切换、日志、成本、降级、AI SDK 和上线检查。"
+date: "2026-06-06"
+updatedAt: "2026-06-06"
+category: "AI 部署"
+tags:
+  - "Vercel AI Gateway"
+  - "AI SDK"
+  - "多模型"
+  - "AI 部署"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "想在一个应用里接 OpenAI、Claude、Gemini 等多个模型的新手开发者"
+searchIntent: "informational"
+primaryKeyword: "Vercel AI Gateway 多模型"
+secondaryKeywords:
+  - "AI Gateway"
+  - "Vercel AI SDK provider"
+  - "多模型路由"
+  - "AI 模型降级"
+sourceNotes: "参考 Vercel AI Gateway 官方文档、models and providers、provider options 和 capability 文档整理；正式发布前需要人工核对最新模型列表。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载多模型网关选型表"
+  serviceCTA: "联系人工协助设计 AI Gateway 接入"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 34
+canonical: "https://ai-jiedan-lab.vercel.app/blog/vercel-ai-gateway-multi-provider-guide"
+noindex: true
+---
+# Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级
+
+AI 应用上线后，很少永远只用一个模型。不同任务可能适合不同 provider：有的模型适合代码，有的适合长文档，有的适合低成本分类，有的适合多模态。Vercel AI Gateway 的价值在于用统一入口管理多个 provider，减少接入复杂度，同时保留日志和切换空间。但多模型不是把模型名堆在一起，而是要设计路由、降级、成本和监控。
+
+本文是待复核草稿。Vercel AI SDK 部署可以看 [Vercel AI SDK Chatbot 部署指南](/blog/vercel-ai-sdk-chatbot-deploy-guide)，通用限流可以看 [大模型 API 限流和重试怎么做](/blog/llm-api-rate-limit-retry-guide)。
+
+## 适合谁
+
+适合做 Next.js AI 应用、聊天工具、知识库、Agent、内容生成和内部 AI 平台的人。你希望应用能接多个模型，而不是每换一个 provider 就重写一套代码。
+
+也适合接企业 AI 应用的人。客户可能一开始选 OpenAI，后面想试 Claude 或 Gemini。如果架构没有抽象，切换成本会很高。
+
+## 不适合谁
+
+不适合还没有明确任务分类的人。多模型路由需要知道哪个功能用哪个模型，不是越多越好。
+
+也不适合把网关当成自动解决质量问题的工具。模型选择、提示词、上下文和评估仍然要自己做。
+
+## 统一入口
+
+AI Gateway 可以帮助统一请求入口，减少不同 provider 的接入差异。配合 AI SDK 时，前端和后端代码更容易保持一致。
+
+统一入口的好处是日志、成本和切换更清楚。缺点是仍要理解每个 provider 的模型能力、限制和价格。
+
+## 路由策略
+
+可以按任务路由：客服短问答用快模型，长文档分析用长上下文模型，代码任务用代码表现更好的模型，批量分类用低成本模型。
+
+也可以按用户等级路由：普通用户使用基础模型，付费用户使用更强模型。前提是要清楚写在产品规则里。
+
+## 降级策略
+
+当主模型超时、限流或成本过高时，可以切到备用模型。但降级要注意输出差异，尤其是 JSON 格式、工具调用和安全策略。
+
+降级不是偷偷换模型就完事。对用户可见的关键任务，应该提示“当前使用简化处理”或进入后台队列。
+
+## 日志和成本
+
+多模型系统必须记录每次请求用的模型、provider、输入输出长度、耗时、错误和成本估算。没有这些数据，后续不知道哪个功能最贵。
+
+Vercel AI Gateway 提供请求可观测方向，但业务侧仍要记录用户、功能和任务 ID。
+
+## 常见错误
+
+第一个错误是同时接很多模型，但没有评估集。结果模型切换后质量变化没人知道。
+
+第二个错误是只按价格选模型。便宜但回答不稳定，可能增加人工复核成本。
+
+第三个错误是降级后不测试格式。工具调用和结构化输出尤其容易出问题。
+
+## 交付检查
+
+AI Gateway 项目交付时，建议把模型路由表交给客户。表里写清每个功能的主模型、备用模型、触发降级的条件、成本等级、是否允许处理敏感数据、失败后用户看到什么提示。
+
+如果使用 AI SDK，还要把环境变量、provider 配置、日志字段和本地测试命令写清楚。多模型接入最怕“开发者机器能跑，生产环境不知道走了哪个模型”，日志和配置文档能减少这种问题。
+
+后续可以拆成更具体的文章：Vercel AI Gateway 接 Claude、Vercel AI Gateway 接 Gemini、AI SDK 怎么切换 provider、AI Gateway 怎么看调用日志。每篇都可以对应一个真实接入场景，更适合搜索引擎收录。
+
+运维时还要定期复查模型列表。provider 会新增模型、下线模型、调整价格和限制。路由表如果半年不更新，应用可能还在使用不合适的模型。
+
+## 风险提醒
+
+不同 provider 有不同条款、数据处理方式、限流和价格。接入前要核对官方文档，不要只看网关能不能调用。
+
+涉及敏感数据时，要确认数据会经过哪些服务，日志里不要保存完整隐私内容。
+
+## 具体步骤
+
+第一步，列出应用功能和模型需求。第二步，为每个功能选择主模型和备用模型。第三步，用 AI Gateway 或 AI SDK 统一调用。第四步，记录模型、耗时、错误和成本。第五步，测试降级输出。第六步，定期用评估集比较模型表现。需要选型表，可以从 [工具导航](/tools) 下载或联系人工协助。
+
+## 免责声明
+
+本文只用于 Vercel AI Gateway 多模型接入学习，不构成模型价格、可用性或业务效果承诺。正式上线前，应人工核对 Vercel 和各模型 provider 最新文档。

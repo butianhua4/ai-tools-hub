@@ -1,0 +1,115 @@
+---
+title: "Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型"
+slug: "gemini-api-rate-limit-debug-guide"
+description: "整理 Gemini API 限流排查方法，覆盖 RPM、TPM、请求峰值、上下文长度、队列、重试、降级和生产监控。"
+date: "2026-06-06"
+updatedAt: "2026-06-06"
+category: "AI 部署"
+tags:
+  - "Gemini API"
+  - "Google AI"
+  - "Rate limit"
+  - "AI API"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "调用 Gemini API 时遇到限流、失败或峰值请求的新手开发者"
+searchIntent: "informational"
+primaryKeyword: "Gemini API 限流"
+secondaryKeywords:
+  - "Gemini API rate limits"
+  - "Google AI API 429"
+  - "Gemini RPM TPM"
+  - "Gemini API 重试"
+sourceNotes: "参考 Google AI for Developers Gemini API rate limits 文档和常见 API 稳定性设计整理；正式发布前需要人工核对最新额度。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载 Gemini API 限流排查清单"
+  serviceCTA: "联系人工协助设计 Gemini API 稳定性方案"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 34
+canonical: "https://ai-jiedan-lab.vercel.app/blog/gemini-api-rate-limit-debug-guide"
+noindex: true
+---
+# Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型
+
+Gemini API 限流排查不能只看“请求失败”四个字。Google 的速率限制通常会涉及 RPM、TPM、RPD 等维度，也就是每分钟请求数、每分钟 token 和每日请求等约束。一个应用可能请求次数不多，但每次上下文太长；也可能单次请求很短，但高峰期并发太多。要稳定上线，必须把请求量、token、队列和降级方案一起设计。
+
+本文是待复核草稿，正式发布前要核对 Google AI 最新文档。通用限流处理可以看 [大模型 API 限流和重试怎么做](/blog/llm-api-rate-limit-retry-guide)，多模型路由可以看 [多模型 Router 怎么做降级](/blog/multi-model-router-fallback-guide)。
+
+## 适合谁
+
+适合用 Gemini API 做文本生成、图文理解、摘要、搜索增强、客服、Agent 和批量处理的人。你可能已经能在开发环境跑通，但在多人使用或批量任务时开始失败。
+
+也适合做 Google AI 接入交付的人。客户往往只看模型效果，实际交付还要看限流、预算、日志和错误处理。
+
+## 不适合谁
+
+不适合把免费额度当生产方案的人。生产环境要按真实调用量、峰值和预算设计。
+
+也不适合无脑并发。批量任务如果同时发起太多请求，很容易触发限制。
+
+## 先拆限流维度
+
+RPM 是每分钟请求数，TPM 是每分钟 token，RPD 是每日请求。不同模型、不同账号等级和不同区域可能有差异。排查时要知道自己撞的是哪个维度。
+
+如果错误发生在少量长文档任务上，重点看 token。如果错误发生在大量短请求上，重点看请求数。如果每天固定时间失败，重点看峰值和队列。
+
+## 记录请求画像
+
+生产系统里要记录功能名、模型、输入长度、输出长度、请求时间、用户 ID、错误码、重试次数和耗时。这样才能看出是哪类功能消耗额度。
+
+例如图片理解、长文档摘要和多轮 Agent，消耗可能远高于普通聊天。不要把所有功能混在同一个统计里。
+
+## 队列和批处理
+
+后台任务应该排队。比如批量总结 200 个文档，不应该同时打到 API。可以按优先级处理，实时用户请求优先，批量任务慢慢跑。
+
+如果任务不需要立即返回，可以把结果写入数据库或通知用户稍后查看。这样比让用户一直等待更稳。
+
+## 降级模型和降级输出
+
+降级不一定是换差模型。也可以减少上下文、缩短输出、只返回摘要、延后处理、从多步骤 Agent 改成单步处理。
+
+如果有多个模型可选，可以根据任务难度分层。简单分类和摘要用低成本模型，复杂推理再用更强模型。
+
+## 常见错误
+
+第一个错误是没有区分功能成本。客服短问答和长文档分析不能放在同一条预算线上。
+
+第二个错误是没有重试上限。重试太多会放大限流。
+
+第三个错误是没有告警。等用户投诉时才知道限流，已经晚了。
+
+## 交付检查
+
+Gemini API 项目交付时，建议提供一张请求画像表。表里写清每个功能使用哪个模型、平均输入长度、平均输出长度、预计请求峰值、是否排队、失败后怎么提示。这样客户能看懂成本和稳定性，不会只停留在“模型能回答”。
+
+如果业务同时有图片、长文本和普通聊天，要分开测试。多模态请求、长上下文请求和短文本请求的消耗差异很大，不应该用一个测试结果代表所有功能。
+
+## 风险提醒
+
+Gemini API 额度和价格可能变化，正式上线前要看官方控制台和文档。不同模型的限制不同，不要把一个模型的测试结果套到全部模型上。
+
+日志、缓存和队列里可能保存用户输入。涉及敏感数据时，要脱敏并控制访问权限。
+
+## 具体步骤
+
+第一步，确认当前模型和账号的限制。第二步，记录请求数和 token 消耗。第三步，把实时任务和批量任务分开。第四步，加入队列、退避和重试上限。第五步，为高峰期准备降级方案。第六步，监控错误率、延迟和成本。需要排查清单，可以从 [工具导航](/tools) 下载或联系人工协助整理。
+
+## 免责声明
+
+本文只用于 Gemini API 限流排查学习，不构成具体额度、价格或可用性承诺。正式上线前，应人工核对 Google AI 最新文档和控制台限制。

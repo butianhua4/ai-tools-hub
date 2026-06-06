@@ -1,0 +1,117 @@
+---
+title: "大模型成本监控怎么做：按用户、功能、模型和项目拆账"
+slug: "llm-cost-monitoring-dashboard-guide"
+description: "整理 LLM 成本监控看板设计方法，覆盖用户、功能、模型、token、错误率、缓存、预算告警和客户项目拆账。"
+date: "2026-06-06"
+updatedAt: "2026-06-06"
+category: "AI 部署"
+tags:
+  - "LLM 成本"
+  - "AI 监控"
+  - "Token"
+  - "成本看板"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "上线 AI 应用后想知道钱花在哪里的新手开发者和服务商"
+searchIntent: "informational"
+primaryKeyword: "大模型成本监控"
+secondaryKeywords:
+  - "LLM cost dashboard"
+  - "AI token 成本"
+  - "模型调用成本"
+  - "AI 项目拆账"
+sourceNotes: "结合 Vercel AI Gateway 可观测性、模型 API 日志和生产成本控制经验整理；正式发布前需要人工核对具体工具。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载 LLM 成本监控字段表"
+  serviceCTA: "联系人工协助搭建 AI 成本看板"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 34
+canonical: "https://ai-jiedan-lab.vercel.app/blog/llm-cost-monitoring-dashboard-guide"
+noindex: true
+---
+# 大模型成本监控怎么做：按用户、功能、模型和项目拆账
+
+AI 应用刚上线时，大家关心效果；用起来以后，成本问题会很快冒出来。哪个功能最贵，哪个用户消耗最多，哪个模型延迟最高，哪个 Agent 反复调用工具，哪些请求应该缓存，哪些批量任务应该改成异步，这些问题如果没有成本监控，就只能靠猜。大模型成本看板不是财务报表，而是产品和工程优化工具。
+
+本文是待复核草稿。成本延迟估算可以看 [大模型部署成本和延迟估算](/blog/llm-serving-cost-latency-checklist)，多模型接入可以看 [Vercel AI Gateway 多模型接入](/blog/vercel-ai-gateway-multi-provider-guide)。
+
+## 适合谁
+
+适合做 AI SaaS、内部 AI 工具、知识库问答、Agent、客服助手和批量生成工具的人。只要模型调用会持续产生费用，就要监控。
+
+也适合接客户项目的人。客户问“每个月大概要多少钱”，你不能只按开发期测试估算，要有上线后的数据记录。
+
+## 不适合谁
+
+不适合只看总账单的人。总账单只能告诉你花了多少钱，不能告诉你哪个功能造成的。
+
+也不适合完全不记录用户和任务。没有维度，成本就无法归因。
+
+## 记录哪些字段
+
+每次模型调用至少记录：用户 ID、项目 ID、功能名、模型、provider、输入 token、输出 token、耗时、是否缓存命中、是否失败、错误码和请求时间。
+
+如果是 Agent，还要记录步骤数、工具调用次数和每步模型。Agent 成本常常不是单次对话，而是多步累加。
+
+## 按功能拆账
+
+功能维度很重要。客服问答、文档摘要、代码生成、线索评分、报告生成和批量分类的成本结构完全不同。
+
+拆到功能后，你才能知道该优化哪里。例如某个功能输入过长，就做摘要；某个功能重复问题多，就做缓存；某个功能价值低但成本高，就限制使用。
+
+## 预算和告警
+
+成本看板要有预算线。可以按项目、客户、用户、功能设置月度预算和单日预算。接近上限时提醒，超过上限时降级或暂停非关键任务。
+
+不要等账单来了才发现问题。AI 成本是实时累积的，监控越早越好。
+
+## 缓存和批处理
+
+如果大量请求相似，可以缓存。比如模板生成、固定 FAQ、重复摘要和相同输入的分类任务。
+
+不需要实时返回的任务可以转批处理。批处理能减少高峰压力，也方便统一验收。
+
+## 常见错误
+
+第一个错误是只记录请求次数，不记录 token。长上下文一次请求可能比短请求贵很多。
+
+第二个错误是没有区分模型。不同模型价格和延迟差别很大。
+
+第三个错误是客户项目不拆账。多个客户共用同一套服务时，后续很难解释费用。
+
+## 交付检查
+
+成本监控看板交付时，建议先做最小版本：每日总成本、按模型成本、按功能成本、失败率、平均延迟和高消耗用户。不要一开始做太复杂，否则团队不会看。
+
+如果是客户项目，还要提供月度复盘模板。复盘里写清本月调用量、最高成本功能、异常调用、缓存节省、下月优化建议。这样成本监控就不只是技术报表，而是可以续费的服务内容。
+
+后续可以继续拆分：OpenAI 成本看板怎么做、Claude API 成本怎么估算、AI 客服每月成本怎么算、RAG 项目 token 成本怎么拆。这些文章能和报价、部署、维护服务形成一条完整转化链。
+
+## 风险提醒
+
+成本日志可能包含用户、项目和输入摘要，要控制访问权限并脱敏。不要在日志里保存完整隐私内容。
+
+成本优化不要只追求便宜。便宜模型如果质量差，可能增加人工复核和客户沟通成本。
+
+## 具体步骤
+
+第一步，定义模型调用日志字段。第二步，按用户、功能、项目和模型记录。第三步，建立每日和月度成本看板。第四步，设置预算告警。第五步，找出高成本功能做缓存或降级。第六步，给客户项目单独拆账。需要字段表，可以从 [工具导航](/tools) 下载或联系人工协助搭建。
+
+## 免责声明
+
+本文只用于大模型成本监控设计学习，不构成具体价格或成本承诺。正式上线前，应核对各模型 provider 最新价格和业务调用量。

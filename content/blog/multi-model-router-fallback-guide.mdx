@@ -1,0 +1,117 @@
+---
+title: "多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估"
+slug: "multi-model-router-fallback-guide"
+description: "讲清多模型 Router 和 fallback 的设计方法，覆盖任务分类、主备模型、限流、成本、质量评估、日志和用户提示。"
+date: "2026-06-06"
+updatedAt: "2026-06-06"
+category: "AI 部署"
+tags:
+  - "多模型"
+  - "AI Router"
+  - "Fallback"
+  - "AI 部署"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "想给 AI 应用加入备用模型和自动降级的新手开发者"
+searchIntent: "informational"
+primaryKeyword: "多模型 Router 降级"
+secondaryKeywords:
+  - "AI model fallback"
+  - "LLM router"
+  - "多模型路由"
+  - "AI 模型切换"
+sourceNotes: "结合 Vercel AI Gateway、AI SDK、多 provider 接入和生产限流设计整理；正式发布前需要人工核对具体平台能力。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载多模型 Router 设计表"
+  serviceCTA: "联系人工协助设计模型降级方案"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 34
+canonical: "https://ai-jiedan-lab.vercel.app/blog/multi-model-router-fallback-guide"
+noindex: true
+---
+# 多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估
+
+多模型 Router 的目的不是炫技，而是让 AI 应用在主模型限流、超时、成本过高或任务类型变化时仍然可用。一个稳定系统通常会有主模型、备用模型、简单任务模型、批量任务模型和人工兜底。关键是路由规则要清楚，降级后要知道质量会变成什么样。
+
+本文是待复核草稿。AI Gateway 接入可以看 [Vercel AI Gateway 多模型接入](/blog/vercel-ai-gateway-multi-provider-guide)，限流重试可以看 [大模型 API 限流和重试怎么做](/blog/llm-api-rate-limit-retry-guide)。
+
+## 适合谁
+
+适合上线聊天机器人、RAG、Agent、内容生成、代码助手和企业内部 AI 平台的人。你不希望某个 provider 出问题时整个应用停摆。
+
+也适合接 AI 应用稳定性项目的人。客户通常关心“能不能稳定用”，模型降级是稳定性设计的一部分。
+
+## 不适合谁
+
+不适合没有质量评估的人。没有评估集时，换模型后看似能答，实际可能质量下降。
+
+也不适合所有任务都自动切换。法律、财务、医疗、报价和客户承诺类任务，降级后可能需要人工确认。
+
+## 按任务分类
+
+先把任务分成简单分类、摘要、长文档分析、代码、知识库问答、多轮 Agent 和结构化抽取。不同任务对模型能力、上下文、格式稳定性和成本要求不同。
+
+简单任务可以用低成本模型，复杂任务用强模型。不要让所有请求都打到最贵模型，也不要让廉价模型处理高风险任务。
+
+## 主备模型
+
+每个任务可以设置主模型和备用模型。备用模型要提前测试，不要等主模型失败才临时选择。
+
+备用模型的输出格式要和主模型兼容。尤其是 JSON、工具调用、函数参数和引用来源，换模型后可能出现差异。
+
+## 触发降级
+
+常见触发条件包括 429 限流、超时、错误率升高、成本超过预算、上下文超长和模型暂不可用。每种触发条件都要有处理策略。
+
+降级可以是换模型，也可以是减少上下文、减少输出、进入后台队列或转人工。
+
+## 日志和评估
+
+每次路由都要记录选择了哪个模型、为什么选择、是否降级、耗时、成本、错误和用户反馈。否则你不知道降级是否真的改善了体验。
+
+评估集要覆盖真实问题。RAG 要看来源是否正确，Agent 要看工具调用是否正确，结构化抽取要看字段是否完整。
+
+## 常见错误
+
+第一个错误是把备用模型当摆设，没有测试。
+
+第二个错误是降级后仍然使用原来的长上下文，导致备用模型也失败。
+
+第三个错误是对用户完全不透明。关键任务降级后，用户应该知道结果可能是简化版。
+
+## 交付检查
+
+多模型 Router 交付时，至少要给一份路由规则表和评估结果。路由规则表说明什么任务走什么模型，评估结果说明主模型和备用模型在同一批测试问题上的差异。
+
+验收时可以准备三类场景：主模型正常、主模型限流、主模型输出格式错误。每一类都要看系统是否正确切换、是否记录日志、是否提醒用户。没有这些测试，降级机制可能只是纸面设计。
+
+后续可以继续写模型路由专题：客服 AI 怎么选主备模型、RAG 怎么做模型降级、Agent 工具调用失败怎么切备用模型、多模型成本怎么拆账。这些词更贴近真实上线问题，适合做成一个系列。
+
+## 风险提醒
+
+模型降级可能改变答案风格、准确性和安全策略。不要把降级当作无损切换。
+
+不同 provider 的数据处理方式和条款不同，涉及敏感数据时要提前确认。
+
+## 具体步骤
+
+第一步，列出任务类型。第二步，为每类任务选择主模型和备用模型。第三步，定义触发降级的条件。第四步，测试输出格式兼容性。第五步，记录路由日志和用户反馈。第六步，定期用评估集复测。需要设计表，可以从 [工具导航](/tools) 下载或联系人工协助。
+
+## 免责声明
+
+本文只用于多模型路由设计学习，不构成模型质量、价格或可用性承诺。正式上线前，应结合实际任务和 provider 文档人工复核。
