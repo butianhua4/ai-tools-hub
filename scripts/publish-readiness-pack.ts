@@ -4,7 +4,10 @@ import { chineseCount, parseArgs, readArticle, rel } from "./content-utils";
 import { checkFile } from "./quality-core";
 
 type Candidate = {
+  cluster?: string;
   file: string;
+  opportunityReason?: string;
+  opportunityScore?: number;
   publishBatch: number | null;
   qualityScore: number;
   title: string;
@@ -16,6 +19,8 @@ type PackItem = {
   file: string;
   internalLinks: number;
   markReviewCommand: string;
+  opportunityReason: string;
+  opportunityScore: number;
   primaryKeyword: string;
   publishConfirmCommand: string;
   publishDryRunCommand: string;
@@ -78,6 +83,8 @@ function toPackItem(candidate: Candidate): PackItem {
     file,
     internalLinks: (content.match(/\]\(\//g) || []).length,
     markReviewCommand: `npm run mark:review -- --file=${file} --confirm-human`,
+    opportunityReason: candidate.opportunityReason || "",
+    opportunityScore: candidate.opportunityScore || 0,
     primaryKeyword: String(data.primaryKeyword || ""),
     publishConfirmCommand: `npm run publish:articles -- --file=${file} --confirm`,
     publishDryRunCommand: `npm run publish:articles -- --file=${file}`,
@@ -134,7 +141,9 @@ function toMarkdown(payload: {
       `- Category: ${item.category}`,
       `- Primary keyword: ${item.primaryKeyword}`,
       `- Search intent: ${item.searchIntent}`,
-      `- Quality score: ${item.qualityScore}`,
+    `- Quality score: ${item.qualityScore}`,
+      `- Opportunity score: ${item.opportunityScore}`,
+      `- Opportunity reason: ${item.opportunityReason}`,
       `- Chinese chars: ${item.wordCountChinese}`,
       `- Internal links: ${item.internalLinks}`,
       `- Description: ${item.description}`,
