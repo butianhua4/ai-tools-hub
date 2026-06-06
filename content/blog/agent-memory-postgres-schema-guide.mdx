@@ -1,0 +1,109 @@
+---
+title: "Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则"
+slug: "agent-memory-postgres-schema-guide"
+description: "面向新手整理 Agent 记忆落库设计，覆盖短期会话、长期偏好、项目事实、来源记录、过期时间、删除入口和人工复核。"
+date: "2026-06-06"
+updatedAt: "2026-06-06"
+category: "AI 基建"
+tags:
+  - "Agent 记忆"
+  - "Postgres"
+  - "AI Agent"
+  - "长期记忆"
+author: "AI 接单实验室"
+status: "draft"
+contentType: "tutorial"
+difficulty: "beginner"
+targetReader: "想给 Agent 做长期记忆但不知道数据库怎么设计的新手开发者"
+searchIntent: "informational"
+primaryKeyword: "Agent 记忆数据库设计"
+secondaryKeywords:
+  - "Agent memory Postgres"
+  - "AI Agent 长期记忆"
+  - "用户偏好存储"
+  - "Agent 记忆表结构"
+sourceNotes: "参考 LangChain memory 概念、OpenAI Agents SDK memory 与 tracing 文档整理；正式发布前需要人工核对具体 SDK、数据库权限和隐私要求。"
+humanReviewRequired: true
+reviewChecklist:
+  hasOriginalAngle: true
+  hasActionableSteps: true
+  hasRiskWarning: true
+  hasNoIncomeGuarantee: true
+  hasNoCopyrightIssue: true
+  hasNoPlatformViolation: true
+  hasClearCTA: true
+monetization:
+  affiliateSlots:
+    - "工具导航"
+  templateCTA: "下载 Agent 记忆表结构模板"
+  serviceCTA: "联系人工协助设计 Agent 记忆模块"
+  adSlots:
+    - "article-bottom"
+qualityScore: 86
+publishBatch: 32
+canonical: "https://ai-jiedan-lab.vercel.app/blog/agent-memory-postgres-schema-guide"
+noindex: true
+---
+# Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则
+
+很多人做 Agent 记忆时，第一反应是把聊天记录全存起来。这样原型很快，但上线后会遇到三个问题：数据越积越乱、用户不知道系统记住了什么、错误事实会被反复带入后续回答。更稳的做法是把记忆拆成几类：会话上下文、用户偏好、项目事实、团队规则、知识库引用和临时草稿。每一类都要有来源、更新时间、可信度、过期时间和删除方式。
+
+本文是待复核草稿，正式发布前需要按实际技术栈补充代码。Agent 基础设计可以看 [Agent 记忆怎么设计](/blog/agent-memory-design-guide)，知识库方向可以看 [RAG 知识库怎么搭](/blog/rag-knowledge-base-beginner-guide)。
+
+## 适合谁
+
+适合正在做个人助手、客服助手、销售助手、项目助理、企业内部 Agent 的开发者。你可能已经能让 Agent 对话和调用工具，但还不知道哪些信息应该持久化，哪些信息只该保留在当前任务里。
+
+也适合接客户项目的人。客户常说“希望 AI 越用越懂我”，但这句话不能直接翻译成“所有输入都存数据库”。你需要给客户一张记忆设计表，说明存什么、为什么存、存多久、谁能看、怎么删。
+
+## 不适合谁
+
+不适合想跳过权限、隐私和删除流程的人。记忆模块不是普通缓存，它可能包含用户偏好、项目背景、客户资料和内部决策。越是长期保存，越要克制。
+
+也不适合把向量数据库当成唯一记忆层的场景。向量检索适合相似内容召回，但用户偏好、项目事实、状态字段和过期规则更适合结构化保存。
+
+## 建议的表结构
+
+可以先设计一张 `agent_memories` 表，字段包括 `id`、`user_id`、`scope`、`memory_type`、`content`、`source`、`confidence`、`created_at`、`updated_at`、`expires_at`、`review_status` 和 `deleted_at`。`scope` 用来区分个人、项目、团队或组织；`memory_type` 用来区分偏好、事实、规则、任务状态和临时摘要。
+
+如果内容需要检索，可以额外保存 embedding 或把可检索内容同步到向量库。但结构化字段仍然要保留，因为系统需要按用户、项目、权限和有效期过滤，不应该只靠相似度判断。
+
+## 写入规则
+
+记忆写入要比普通日志更谨慎。推荐默认只自动写入低风险偏好和任务状态，例如“用户喜欢简洁回答”“这个项目使用 Next.js”。涉及身份、财务、医疗、法律、客户资料和公司内部资料时，应该要求用户确认或人工审核。
+
+写入时要记录来源。来源可以是用户明确确认、会议纪要、上传文档、管理员配置或系统摘要。没有来源的记忆很难纠错，也很难解释为什么 Agent 会这样回答。
+
+## 读取规则
+
+读取记忆时不要一次性塞进所有历史。先根据用户、项目、任务类型和权限筛选，再按更新时间、可信度和相关性排序。对当前任务无关的记忆不要加载，否则会增加 token 成本，也可能引入干扰。
+
+可以把记忆分为“必须加载”“按需加载”和“检索加载”。例如团队规则可能每次都要加载，项目事实按项目加载，历史聊天摘要只在用户追问时检索加载。
+
+## 删除和过期
+
+每条记忆都应该有生命周期。偏好可以长期保留，但要允许用户修改；项目事实可能随版本变化而过期；临时任务状态在任务结束后就该清理；敏感内容默认不长期保存。
+
+删除最好使用软删除，并记录删除时间。这样可以避免误删后无法排查，同时也能让前端隐藏已经删除的记忆。正式上线前要结合适用规则确认保留策略。
+
+## 常见错误
+
+第一个错误是把聊天记录当记忆。聊天记录是原始材料，记忆应该是经过筛选、归纳和确认的结构化信息。
+
+第二个错误是没有用户可见入口。用户不知道 Agent 记住了什么，就很难信任系统。记忆列表、编辑入口、删除入口和“本次是否写入记忆”的提示都很重要。
+
+第三个错误是没有冲突处理。例如旧记忆写着“项目用 Vue”，新记忆写着“项目迁到 Next.js”，系统要知道保留哪一个，而不是两个都塞进上下文。
+
+## 风险提醒
+
+Agent 记忆可能保存个人信息、商业信息和项目决策。上线前要确认权限、脱敏、删除、审计和备份策略。不要让工作 Agent 随意把所有观察都写入长期记忆。
+
+记忆污染也是风险。错误信息一旦进入长期记忆，后续回答会持续受影响。建议设置人工纠错入口，并记录每条记忆的来源和更新时间。
+
+## 具体步骤
+
+第一步，列出 Agent 需要记住的信息类型。第二步，按个人、项目、团队和组织划分作用域。第三步，设计结构化表字段和向量检索字段。第四步，给每类记忆设置写入门槛。第五步，做用户可见的查看、编辑和删除入口。第六步，增加审计日志和人工复核流程。需要表结构模板，可以从 [工具导航](/tools) 下载或联系人工协助整理。
+
+## 免责声明
+
+本文只用于 Agent 记忆设计学习，不构成隐私合规、数据库架构或安全审计意见。正式上线前，应由开发、法务、安全和业务人员共同复核。
