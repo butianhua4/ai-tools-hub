@@ -1,6 +1,6 @@
 # Review Automation Queue
 
-Generated at: 2026-06-06T09:30:35.844Z
+Generated at: 2026-06-06T09:35:24.740Z
 
 This automation does not publish articles. It only ranks safe-looking draft candidates for human review.
 
@@ -20,6 +20,32 @@ This automation does not publish articles. It only ranks safe-looking draft cand
 - blocked-pattern: 112
 - status:archived: 21
 - status:published: 15
+
+## Recommended Today
+
+Review these first. Keep publishing to a small manual batch after fact/risk checks.
+
+| # | Score | Batch | Category | Title | File |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 100 | 34 | AI 部署 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
+| 2 | 100 | 34 | AI 部署 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| 3 | 100 | 34 | AI 部署 | Claude API Rate limit reached 怎么办：限流、上下文、重试和降级 | content/blog/claude-api-rate-limit-debug-guide.mdx |
+
+Dry-run commands:
+
+```bash
+npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx
+npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx
+npm run mark:review -- --file=content/blog/claude-api-rate-limit-debug-guide.mdx
+```
+
+After manual approval:
+
+```bash
+npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human
+npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human
+npm run mark:review -- --file=content/blog/claude-api-rate-limit-debug-guide.mdx --confirm-human
+```
 
 ## Recommended Review Order
 

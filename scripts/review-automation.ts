@@ -5,11 +5,13 @@ import { checkFile } from "./quality-core";
 
 type Candidate = {
   category: string;
+  dryRunCommand: string;
   file: string;
   noindex: boolean;
   publishBatch: number | null;
   qualityScore: number;
   reason: string;
+  reviewCommand: string;
   slug: string;
   sourceNotes: boolean;
   status: string;
@@ -32,7 +34,7 @@ async function main() {
     const status = String(article.data.status || "unknown");
     const raw = article.raw;
     const result = checkFile(file);
-    const rejectReason = getRejectReason(article, result.failedItems, raw, status, minScore);
+    const rejectReason = getRejectReason(article, result.failedItems, result.qualityScore, raw, status, minScore);
 
     if (rejectReason) {
       rejected[rejectReason] = (rejected[rejectReason] || 0) + 1;
@@ -41,11 +43,13 @@ async function main() {
 
     candidates.push({
       category: String(article.data.category || ""),
+      dryRunCommand: `npm run mark:review -- --file=${rel(file)}`,
       file: rel(file),
       noindex: article.data.noindex === true,
       publishBatch: typeof article.data.publishBatch === "number" ? article.data.publishBatch : null,
       qualityScore: result.qualityScore,
       reason: getCandidateReason(article),
+      reviewCommand: `npm run mark:review -- --file=${rel(file)} --confirm-human`,
       slug: String(article.data.slug || ""),
       sourceNotes: Boolean(article.data.sourceNotes),
       status,
@@ -60,6 +64,7 @@ async function main() {
   });
 
   const selected = candidates.slice(0, limit);
+  const recommendedToday = selected.slice(0, 3);
   const payload = {
     generatedAt: new Date().toISOString(),
     guardrails: {
@@ -80,6 +85,7 @@ async function main() {
       returned: selected.length,
       rejected,
     },
+    recommendedToday,
     candidates: selected,
   };
 
@@ -101,17 +107,17 @@ async function main() {
 function getRejectReason(
   article: ReturnType<typeof readArticle>,
   failedItems: string[],
+  qualityScore: number,
   raw: string,
   status: string,
   minScore: number,
 ) {
-  const result = checkFile(article.file);
   if (status !== "draft") return `status:${status}`;
   if (article.data.noindex !== true) return "not-noindex";
   if (!article.data.sourceNotes) return "missing-sourceNotes";
   if (blockedPattern.test(raw)) return "blocked-pattern";
   if (failedItems.length) return "quality-failed";
-  if (result.qualityScore < minScore) return "score-below-threshold";
+  if (qualityScore < minScore) return "score-below-threshold";
   return "";
 }
 
@@ -125,6 +131,7 @@ function toMarkdown(payload: {
   generatedAt: string;
   guardrails: { autoPublish: boolean; nextHumanAction: string; publishLimitRecommendation: string };
   counts: { candidates: number; returned: number; rejected: Record<string, number> };
+  recommendedToday: Candidate[];
   candidates: Candidate[];
 }) {
   const lines = [
@@ -150,6 +157,28 @@ function toMarkdown(payload: {
     ...Object.entries(payload.counts.rejected)
       .sort(([a], [b]) => a.localeCompare(b))
       .map(([reason, count]) => `- ${reason}: ${count}`),
+    "",
+    "## Recommended Today",
+    "",
+    "Review these first. Keep publishing to a small manual batch after fact/risk checks.",
+    "",
+    "| # | Score | Batch | Category | Title | File |",
+    "| --- | --- | --- | --- | --- | --- |",
+    ...payload.recommendedToday.map((item, index) => (
+      `| ${index + 1} | ${item.qualityScore} | ${item.publishBatch ?? ""} | ${item.category} | ${item.title} | ${item.file} |`
+    )),
+    "",
+    "Dry-run commands:",
+    "",
+    "```bash",
+    ...payload.recommendedToday.map((item) => item.dryRunCommand),
+    "```",
+    "",
+    "After manual approval:",
+    "",
+    "```bash",
+    ...payload.recommendedToday.map((item) => item.reviewCommand),
+    "```",
     "",
     "## Recommended Review Order",
     "",
