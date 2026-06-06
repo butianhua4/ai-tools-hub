@@ -45,6 +45,9 @@ jobs:
             git push
           fi
 
+      - name: Check live search surfaces
+        run: npm run live:check -- --url=https://ai-jiedan-lab.vercel.app
+
       - name: Add automation digest to job summary
         if: always()
         shell: bash
