@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T14:58:43.599Z",
+  "generatedAt": "2026-06-06T15:04:05.453Z",
   "guardrails": {
     "autoPublish": false,
     "note": "Digest is read-only. It summarizes local automation reports and does not use traffic, impressions, or Search Console performance data."
@@ -608,98 +608,6 @@
       {
         "candidates": [
           {
-            "category": "AI Agent",
-            "currentPack": true,
-            "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-            "plannedBatch": true,
-            "primaryKeyword": "AI Agent 部署",
-            "publishBatch": 40,
-            "qualityScore": 100,
-            "safeDraft": true,
-            "searchIntent": "informational",
-            "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
-          },
-          {
-            "category": "AI 记忆",
-            "currentPack": false,
-            "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
-            "plannedBatch": true,
-            "primaryKeyword": "AI Agent 记忆",
-            "publishBatch": 40,
-            "qualityScore": 100,
-            "safeDraft": true,
-            "searchIntent": "informational",
-            "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
-          },
-          {
-            "category": "接单报价",
-            "currentPack": false,
-            "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-            "plannedBatch": true,
-            "primaryKeyword": "AI 自动化项目报价",
-            "publishBatch": 33,
-            "qualityScore": 100,
-            "safeDraft": true,
-            "searchIntent": "informational",
-            "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
-          },
-          {
-            "category": "AI 部署",
-            "currentPack": false,
-            "file": "content/blog/dify-workflow-error-handling-guide.mdx",
-            "plannedBatch": false,
-            "primaryKeyword": "Dify 工作流错误处理",
-            "publishBatch": 33,
-            "qualityScore": 100,
-            "safeDraft": true,
-            "searchIntent": "informational",
-            "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底"
-          },
-          {
-            "category": "AI 部署",
-            "currentPack": false,
-            "file": "content/blog/dify-workflow-vs-agent-guide.mdx",
-            "plannedBatch": false,
-            "primaryKeyword": "Dify Workflow 和 Agent 区别",
-            "publishBatch": 33,
-            "qualityScore": 100,
-            "safeDraft": true,
-            "searchIntent": "informational",
-            "title": "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核"
-          }
-        ],
-        "currentPackCandidates": 1,
-        "draftMatches": 5,
-        "lane": "content-backlog: Agent 部署、工具调用和记忆",
-        "missingPublicCoverage": false,
-        "plannedBatchCandidates": 3,
-        "priorityScore": 334,
-        "publicMatches": 0,
-        "rationale": "Agent、记忆和工作流是高频 AI 应用词，但需要清楚解释边界和落地步骤。",
-        "reviewFocus": [
-          "解释工具调用和多步执行边界",
-          "明确记忆、状态和人工确认的安全边界",
-          "避免承诺全自动完成业务结果"
-        ],
-        "searchQueries": [
-          "AI Agent 部署教程",
-          "Agent 记忆怎么做",
-          "AI Agent 工具调用教程",
-          "AI 工作流部署"
-        ],
-        "sourceTargets": [
-          "Use the article's publish readiness pack or official vendor docs listed in coverage reports before approval."
-        ],
-        "workflowAngles": [
-          "search intent",
-          "fact review",
-          "risk language",
-          "internal links"
-        ]
-      },
-      {
-        "candidates": [
-          {
             "category": "AI 提示词",
             "currentPack": true,
             "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
@@ -779,6 +687,98 @@
           "客服 AI 提示词",
           "运营 AI 提示词",
           "HR AI 提示词"
+        ],
+        "sourceTargets": [
+          "Use the article's publish readiness pack or official vendor docs listed in coverage reports before approval."
+        ],
+        "workflowAngles": [
+          "search intent",
+          "fact review",
+          "risk language",
+          "internal links"
+        ]
+      },
+      {
+        "candidates": [
+          {
+            "category": "AI Agent",
+            "currentPack": true,
+            "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+            "plannedBatch": true,
+            "primaryKeyword": "AI Agent 部署",
+            "publishBatch": 40,
+            "qualityScore": 100,
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
+          },
+          {
+            "category": "AI 记忆",
+            "currentPack": false,
+            "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+            "plannedBatch": true,
+            "primaryKeyword": "AI Agent 记忆",
+            "publishBatch": 40,
+            "qualityScore": 100,
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+          },
+          {
+            "category": "接单报价",
+            "currentPack": false,
+            "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+            "plannedBatch": true,
+            "primaryKeyword": "AI 自动化项目报价",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+          },
+          {
+            "category": "AI 部署",
+            "currentPack": false,
+            "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+            "plannedBatch": false,
+            "primaryKeyword": "Dify 工作流错误处理",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底"
+          },
+          {
+            "category": "AI 部署",
+            "currentPack": false,
+            "file": "content/blog/dify-workflow-vs-agent-guide.mdx",
+            "plannedBatch": false,
+            "primaryKeyword": "Dify Workflow 和 Agent 区别",
+            "publishBatch": 33,
+            "qualityScore": 100,
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "title": "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核"
+          }
+        ],
+        "currentPackCandidates": 1,
+        "draftMatches": 5,
+        "lane": "content-backlog: Agent 部署、工具调用和记忆",
+        "missingPublicCoverage": false,
+        "plannedBatchCandidates": 3,
+        "priorityScore": 334,
+        "publicMatches": 0,
+        "rationale": "Agent、记忆和工作流是高频 AI 应用词，但需要清楚解释边界和落地步骤。",
+        "reviewFocus": [
+          "解释工具调用和多步执行边界",
+          "明确记忆、状态和人工确认的安全边界",
+          "避免承诺全自动完成业务结果"
+        ],
+        "searchQueries": [
+          "AI Agent 部署教程",
+          "Agent 记忆怎么做",
+          "AI Agent 工具调用教程",
+          "AI 工作流部署"
         ],
         "sourceTargets": [
           "Use the article's publish readiness pack or official vendor docs listed in coverage reports before approval."
@@ -2019,10 +2019,10 @@
     "trafficDataAvailable": false
   },
   "trafficClaimGuard": {
-    "filesScanned": 85,
+    "filesScanned": 87,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 514
+    "watchMentions": 518
   },
   "preflight": {
     "checked": 3,
@@ -3873,6 +3873,723 @@
     ],
     "totalReadyDraftMatches": 417,
     "uniqueCandidateFiles": 56
+  },
+  "publicCoverageGapPlan": {
+    "duplicateFiles": 0,
+    "gapThemes": 8,
+    "items": 8,
+    "plannedWaves": 4,
+    "readyItems": 8,
+    "top": [
+      {
+        "approvalWave": 1,
+        "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "gapScore": 388,
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
+        "missingSubtopics": [
+          "tool calling",
+          "human review",
+          "permissions",
+          "logs"
+        ],
+        "noindex": true,
+        "primaryKeyword": "AI Agent 部署",
+        "publicMatches": 0,
+        "publishBatch": 40,
+        "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "qualityScore": 100,
+        "readyForManualReview": true,
+        "reviewFocus": [
+          "tool permissions",
+          "multi-step state",
+          "human approval",
+          "observability and fallback paths"
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "searchSeeds": [
+          "AI Agent deployment tutorial",
+          "agent tool calling tutorial",
+          "OpenAI Agents SDK beginner guide",
+          "Vercel AI SDK agent"
+        ],
+        "sourceNotes": true,
+        "sourceTargets": [
+          "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+          "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+          "LangChain docs: https://python.langchain.com/docs"
+        ],
+        "themeId": "agent-deployment-and-tools",
+        "themeTitle": "Agent deployment, tool calling, and production workflows",
+        "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
+      },
+      {
+        "approvalWave": 1,
+        "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "gapScore": 378,
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
+        "missingSubtopics": [
+          "customer service"
+        ],
+        "noindex": true,
+        "primaryKeyword": "全行业 AI 提示词模板",
+        "publicMatches": 0,
+        "publishBatch": 40,
+        "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "qualityScore": 100,
+        "readyForManualReview": true,
+        "reviewFocus": [
+          "input fields",
+          "output formats",
+          "quality checks",
+          "risk disclaimers",
+          "prompt versioning"
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "searchSeeds": [
+          "ChatGPT prompts for business",
+          "AI prompt template library",
+          "industry AI prompts",
+          "best AI prompts for work"
+        ],
+        "sourceNotes": true,
+        "sourceTargets": [
+          "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+          "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
+        ],
+        "themeId": "cross-industry-prompts",
+        "themeTitle": "Cross-industry AI prompt templates",
+        "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
+      },
+      {
+        "approvalWave": 2,
+        "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "gapScore": 352,
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human",
+        "missingSubtopics": [
+          "knowledge base",
+          "vector database"
+        ],
+        "noindex": true,
+        "primaryKeyword": "AI Agent 记忆",
+        "publicMatches": 0,
+        "publishBatch": 40,
+        "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "qualityScore": 100,
+        "readyForManualReview": true,
+        "reviewFocus": [
+          "RAG versus fine-tuning",
+          "chunking and embeddings",
+          "citations",
+          "evaluation and privacy"
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "searchSeeds": [
+          "RAG knowledge base tutorial",
+          "AI agent memory",
+          "vector database RAG",
+          "enterprise knowledge base AI"
+        ],
+        "sourceNotes": true,
+        "sourceTargets": [
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "LangChain docs: https://python.langchain.com/docs",
+          "LlamaIndex docs: https://docs.llamaindex.ai"
+        ],
+        "themeId": "rag-knowledge-memory",
+        "themeTitle": "RAG, knowledge base, and agent memory",
+        "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+      },
+      {
+        "approvalWave": 2,
+        "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+        "gapScore": 342,
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human",
+        "missingSubtopics": [
+          "gpu memory",
+          "quantization",
+          "local api",
+          "model download"
+        ],
+        "noindex": true,
+        "primaryKeyword": "Open WebUI Functions Pipelines",
+        "publicMatches": 0,
+        "publishBatch": 33,
+        "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+        "qualityScore": 100,
+        "readyForManualReview": true,
+        "reviewFocus": [
+          "hardware sizing",
+          "model size and quantization",
+          "local API exposure",
+          "privacy caveats"
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "searchSeeds": [
+          "local LLM deployment",
+          "Ollama local model tutorial",
+          "Open WebUI deployment",
+          "local AI model GPU memory"
+        ],
+        "sourceNotes": true,
+        "sourceTargets": [
+          "Ollama docs: https://docs.ollama.com",
+          "Hugging Face docs: https://huggingface.co/docs",
+          "vLLM docs: https://docs.vllm.ai"
+        ],
+        "themeId": "local-and-open-models",
+        "themeTitle": "Local and open-source model deployment",
+        "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+      },
+      {
+        "approvalWave": 3,
+        "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "gapScore": 330,
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human",
+        "missingSubtopics": [
+          "self hosted",
+          "connector"
+        ],
+        "noindex": true,
+        "primaryKeyword": "AI 自动化项目报价",
+        "publicMatches": 0,
+        "publishBatch": 33,
+        "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "qualityScore": 100,
+        "readyForManualReview": true,
+        "reviewFocus": [
+          "self-hosted versus cloud boundaries",
+          "webhook auth",
+          "connector failures",
+          "manual fallback"
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "searchSeeds": [
+          "Dify deployment tutorial",
+          "n8n AI agent self hosted",
+          "Flowise local deployment",
+          "Dify workflow error handling"
+        ],
+        "sourceNotes": true,
+        "sourceTargets": [
+          "Dify docs: https://docs.dify.ai",
+          "n8n docs: https://docs.n8n.io"
+        ],
+        "themeId": "nocode-ai-automation",
+        "themeTitle": "Dify, n8n, Flowise, and no-code AI automation",
+        "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+      },
+      {
+        "approvalWave": 3,
+        "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+        "gapScore": 328,
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/dify-workflow-error-handling-guide.mdx --confirm-human",
+        "missingSubtopics": [
+          "support",
+          "product",
+          "weekly report"
+        ],
+        "noindex": true,
+        "primaryKeyword": "Dify 工作流错误处理",
+        "publicMatches": 0,
+        "publishBatch": 33,
+        "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/dify-workflow-error-handling-guide.mdx",
+        "qualityScore": 100,
+        "readyForManualReview": true,
+        "reviewFocus": [
+          "workflow owner",
+          "handoff and approval",
+          "measurable output",
+          "risk boundary"
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "searchSeeds": [
+          "AI workflow examples",
+          "AI use cases for business",
+          "AI automation workflow",
+          "department AI SOP"
+        ],
+        "sourceNotes": true,
+        "sourceTargets": [
+          "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+          "Vercel AI SDK docs: https://ai-sdk.dev/docs"
+        ],
+        "themeId": "business-ai-workflows",
+        "themeTitle": "Business AI workflows and SOP templates",
+        "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底"
+      },
+      {
+        "approvalWave": 4,
+        "file": "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+        "gapScore": 312,
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human",
+        "missingSubtopics": [
+          "concurrency",
+          "autoscaling"
+        ],
+        "noindex": true,
+        "primaryKeyword": "BentoML LLM 部署",
+        "publicMatches": 0,
+        "publishBatch": 29,
+        "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+        "qualityScore": 100,
+        "readyForManualReview": true,
+        "reviewFocus": [
+          "serving framework versions",
+          "cold starts and concurrency",
+          "GPU cost",
+          "autoscaling and monitoring"
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "searchSeeds": [
+          "vLLM deployment tutorial",
+          "Hugging Face TGI deployment",
+          "RunPod serverless LLM",
+          "serverless GPU LLM deployment"
+        ],
+        "sourceNotes": true,
+        "sourceTargets": [
+          "vLLM docs: https://docs.vllm.ai",
+          "Hugging Face docs: https://huggingface.co/docs"
+        ],
+        "themeId": "llm-serving-gpu",
+        "themeTitle": "LLM serving, GPU, and managed inference",
+        "title": "BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收"
+      },
+      {
+        "approvalWave": 4,
+        "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+        "gapScore": 312,
+        "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
+        "missingSubtopics": [
+          "logs",
+          "prompt injection",
+          "cost tracking"
+        ],
+        "noindex": true,
+        "primaryKeyword": "AI API Key 安全管理",
+        "publicMatches": 0,
+        "publishBatch": 34,
+        "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx",
+        "qualityScore": 100,
+        "readyForManualReview": true,
+        "reviewFocus": [
+          "traces and logs",
+          "evaluation datasets",
+          "prompt injection",
+          "cost and quality drift"
+        ],
+        "safeDraft": true,
+        "searchIntent": "informational",
+        "searchSeeds": [
+          "LLM observability",
+          "RAG evaluation",
+          "AI agent logs",
+          "prompt injection defense"
+        ],
+        "sourceNotes": true,
+        "sourceTargets": [
+          "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "LangChain docs: https://python.langchain.com/docs"
+        ],
+        "themeId": "evals-observability-security",
+        "themeTitle": "LLM evaluation, observability, and security",
+        "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急"
+      }
+    ],
+    "unsafeItems": 0,
+    "uniqueFiles": 8,
+    "waves": [
+      {
+        "files": [
+          "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+          "content/blog/industry-ai-prompts-template-library-2026.mdx"
+        ],
+        "focus": "Agent deployment, tool calling, and production workflows + Cross-industry AI prompt templates",
+        "items": [
+          {
+            "approvalWave": 1,
+            "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+            "gapScore": 388,
+            "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
+            "missingSubtopics": [
+              "tool calling",
+              "human review",
+              "permissions",
+              "logs"
+            ],
+            "noindex": true,
+            "primaryKeyword": "AI Agent 部署",
+            "publicMatches": 0,
+            "publishBatch": 40,
+            "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+            "qualityScore": 100,
+            "readyForManualReview": true,
+            "reviewFocus": [
+              "tool permissions",
+              "multi-step state",
+              "human approval",
+              "observability and fallback paths"
+            ],
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "searchSeeds": [
+              "AI Agent deployment tutorial",
+              "agent tool calling tutorial",
+              "OpenAI Agents SDK beginner guide",
+              "Vercel AI SDK agent"
+            ],
+            "sourceNotes": true,
+            "sourceTargets": [
+              "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+              "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+              "LangChain docs: https://python.langchain.com/docs"
+            ],
+            "themeId": "agent-deployment-and-tools",
+            "themeTitle": "Agent deployment, tool calling, and production workflows",
+            "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
+          },
+          {
+            "approvalWave": 1,
+            "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+            "gapScore": 378,
+            "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
+            "missingSubtopics": [
+              "customer service"
+            ],
+            "noindex": true,
+            "primaryKeyword": "全行业 AI 提示词模板",
+            "publicMatches": 0,
+            "publishBatch": 40,
+            "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
+            "qualityScore": 100,
+            "readyForManualReview": true,
+            "reviewFocus": [
+              "input fields",
+              "output formats",
+              "quality checks",
+              "risk disclaimers",
+              "prompt versioning"
+            ],
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "searchSeeds": [
+              "ChatGPT prompts for business",
+              "AI prompt template library",
+              "industry AI prompts",
+              "best AI prompts for work"
+            ],
+            "sourceNotes": true,
+            "sourceTargets": [
+              "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+              "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
+            ],
+            "themeId": "cross-industry-prompts",
+            "themeTitle": "Cross-industry AI prompt templates",
+            "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
+          }
+        ],
+        "readyItems": 2,
+        "themes": [
+          "Agent deployment, tool calling, and production workflows",
+          "Cross-industry AI prompt templates"
+        ],
+        "wave": 1
+      },
+      {
+        "files": [
+          "content/blog/ai-agent-memory-rag-design-guide.mdx",
+          "content/blog/open-webui-functions-pipelines-deployment-guide.mdx"
+        ],
+        "focus": "RAG, knowledge base, and agent memory + Local and open-source model deployment",
+        "items": [
+          {
+            "approvalWave": 2,
+            "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+            "gapScore": 352,
+            "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human",
+            "missingSubtopics": [
+              "knowledge base",
+              "vector database"
+            ],
+            "noindex": true,
+            "primaryKeyword": "AI Agent 记忆",
+            "publicMatches": 0,
+            "publishBatch": 40,
+            "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx",
+            "qualityScore": 100,
+            "readyForManualReview": true,
+            "reviewFocus": [
+              "RAG versus fine-tuning",
+              "chunking and embeddings",
+              "citations",
+              "evaluation and privacy"
+            ],
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "searchSeeds": [
+              "RAG knowledge base tutorial",
+              "AI agent memory",
+              "vector database RAG",
+              "enterprise knowledge base AI"
+            ],
+            "sourceNotes": true,
+            "sourceTargets": [
+              "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+              "LangChain docs: https://python.langchain.com/docs",
+              "LlamaIndex docs: https://docs.llamaindex.ai"
+            ],
+            "themeId": "rag-knowledge-memory",
+            "themeTitle": "RAG, knowledge base, and agent memory",
+            "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+          },
+          {
+            "approvalWave": 2,
+            "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+            "gapScore": 342,
+            "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human",
+            "missingSubtopics": [
+              "gpu memory",
+              "quantization",
+              "local api",
+              "model download"
+            ],
+            "noindex": true,
+            "primaryKeyword": "Open WebUI Functions Pipelines",
+            "publicMatches": 0,
+            "publishBatch": 33,
+            "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+            "qualityScore": 100,
+            "readyForManualReview": true,
+            "reviewFocus": [
+              "hardware sizing",
+              "model size and quantization",
+              "local API exposure",
+              "privacy caveats"
+            ],
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "searchSeeds": [
+              "local LLM deployment",
+              "Ollama local model tutorial",
+              "Open WebUI deployment",
+              "local AI model GPU memory"
+            ],
+            "sourceNotes": true,
+            "sourceTargets": [
+              "Ollama docs: https://docs.ollama.com",
+              "Hugging Face docs: https://huggingface.co/docs",
+              "vLLM docs: https://docs.vllm.ai"
+            ],
+            "themeId": "local-and-open-models",
+            "themeTitle": "Local and open-source model deployment",
+            "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+          }
+        ],
+        "readyItems": 2,
+        "themes": [
+          "RAG, knowledge base, and agent memory",
+          "Local and open-source model deployment"
+        ],
+        "wave": 2
+      },
+      {
+        "files": [
+          "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+          "content/blog/dify-workflow-error-handling-guide.mdx"
+        ],
+        "focus": "Dify, n8n, Flowise, and no-code AI automation + Business AI workflows and SOP templates",
+        "items": [
+          {
+            "approvalWave": 3,
+            "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+            "gapScore": 330,
+            "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human",
+            "missingSubtopics": [
+              "self hosted",
+              "connector"
+            ],
+            "noindex": true,
+            "primaryKeyword": "AI 自动化项目报价",
+            "publicMatches": 0,
+            "publishBatch": 33,
+            "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx",
+            "qualityScore": 100,
+            "readyForManualReview": true,
+            "reviewFocus": [
+              "self-hosted versus cloud boundaries",
+              "webhook auth",
+              "connector failures",
+              "manual fallback"
+            ],
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "searchSeeds": [
+              "Dify deployment tutorial",
+              "n8n AI agent self hosted",
+              "Flowise local deployment",
+              "Dify workflow error handling"
+            ],
+            "sourceNotes": true,
+            "sourceTargets": [
+              "Dify docs: https://docs.dify.ai",
+              "n8n docs: https://docs.n8n.io"
+            ],
+            "themeId": "nocode-ai-automation",
+            "themeTitle": "Dify, n8n, Flowise, and no-code AI automation",
+            "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+          },
+          {
+            "approvalWave": 3,
+            "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+            "gapScore": 328,
+            "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/dify-workflow-error-handling-guide.mdx --confirm-human",
+            "missingSubtopics": [
+              "support",
+              "product",
+              "weekly report"
+            ],
+            "noindex": true,
+            "primaryKeyword": "Dify 工作流错误处理",
+            "publicMatches": 0,
+            "publishBatch": 33,
+            "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/dify-workflow-error-handling-guide.mdx",
+            "qualityScore": 100,
+            "readyForManualReview": true,
+            "reviewFocus": [
+              "workflow owner",
+              "handoff and approval",
+              "measurable output",
+              "risk boundary"
+            ],
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "searchSeeds": [
+              "AI workflow examples",
+              "AI use cases for business",
+              "AI automation workflow",
+              "department AI SOP"
+            ],
+            "sourceNotes": true,
+            "sourceTargets": [
+              "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+              "Vercel AI SDK docs: https://ai-sdk.dev/docs"
+            ],
+            "themeId": "business-ai-workflows",
+            "themeTitle": "Business AI workflows and SOP templates",
+            "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底"
+          }
+        ],
+        "readyItems": 2,
+        "themes": [
+          "Dify, n8n, Flowise, and no-code AI automation",
+          "Business AI workflows and SOP templates"
+        ],
+        "wave": 3
+      },
+      {
+        "files": [
+          "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+          "content/blog/ai-api-key-security-rotation-guide.mdx"
+        ],
+        "focus": "LLM serving, GPU, and managed inference + LLM evaluation, observability, and security",
+        "items": [
+          {
+            "approvalWave": 4,
+            "file": "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+            "gapScore": 312,
+            "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human",
+            "missingSubtopics": [
+              "concurrency",
+              "autoscaling"
+            ],
+            "noindex": true,
+            "primaryKeyword": "BentoML LLM 部署",
+            "publicMatches": 0,
+            "publishBatch": 29,
+            "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+            "qualityScore": 100,
+            "readyForManualReview": true,
+            "reviewFocus": [
+              "serving framework versions",
+              "cold starts and concurrency",
+              "GPU cost",
+              "autoscaling and monitoring"
+            ],
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "searchSeeds": [
+              "vLLM deployment tutorial",
+              "Hugging Face TGI deployment",
+              "RunPod serverless LLM",
+              "serverless GPU LLM deployment"
+            ],
+            "sourceNotes": true,
+            "sourceTargets": [
+              "vLLM docs: https://docs.vllm.ai",
+              "Hugging Face docs: https://huggingface.co/docs"
+            ],
+            "themeId": "llm-serving-gpu",
+            "themeTitle": "LLM serving, GPU, and managed inference",
+            "title": "BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收"
+          },
+          {
+            "approvalWave": 4,
+            "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+            "gapScore": 312,
+            "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
+            "missingSubtopics": [
+              "logs",
+              "prompt injection",
+              "cost tracking"
+            ],
+            "noindex": true,
+            "primaryKeyword": "AI API Key 安全管理",
+            "publicMatches": 0,
+            "publishBatch": 34,
+            "publishDryRunCommandAfterReview": "npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx",
+            "qualityScore": 100,
+            "readyForManualReview": true,
+            "reviewFocus": [
+              "traces and logs",
+              "evaluation datasets",
+              "prompt injection",
+              "cost and quality drift"
+            ],
+            "safeDraft": true,
+            "searchIntent": "informational",
+            "searchSeeds": [
+              "LLM observability",
+              "RAG evaluation",
+              "AI agent logs",
+              "prompt injection defense"
+            ],
+            "sourceNotes": true,
+            "sourceTargets": [
+              "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+              "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+              "LangChain docs: https://python.langchain.com/docs"
+            ],
+            "themeId": "evals-observability-security",
+            "themeTitle": "LLM evaluation, observability, and security",
+            "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急"
+          }
+        ],
+        "readyItems": 2,
+        "themes": [
+          "LLM serving, GPU, and managed inference",
+          "LLM evaluation, observability, and security"
+        ],
+        "wave": 4
+      }
+    ]
   },
   "searchIntentLanes": {
     "highPriorityLanes": 12,
@@ -8073,7 +8790,7 @@
   "liveSearch": {
     "checkedArticles": 15,
     "failedChecks": [],
-    "generatedAt": "2026-06-06T14:58:41.623Z",
+    "generatedAt": "2026-06-06T14:58:37.696Z",
     "missingFromSitemap": [],
     "ok": true,
     "publicArticles": 15,

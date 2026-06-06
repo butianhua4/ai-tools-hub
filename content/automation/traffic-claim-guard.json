@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-06T14:58:42.630Z",
+  "generatedAt": "2026-06-06T15:04:04.173Z",
   "guardrails": {
     "autoPublish": false,
     "note": "This guard scans operational docs and automation reports for unsupported traffic claims. It does not scan draft article teaching examples."
   },
   "summary": {
-    "filesScanned": 85,
+    "filesScanned": 87,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 514
+    "watchMentions": 518
   },
   "unsafeClaims": [],
   "watchMentions": [
@@ -47,30 +47,6 @@
       "line": 47,
       "reason": "traffic-related mention",
       "text": "\"- The site does not claim real traffic, impressions, income guarantees, or automatic publishing.\","
-    },
-    {
-      "file": "docs/NEXT_ACTIONS.md",
-      "line": 24,
-      "reason": "traffic-related mention",
-      "text": "## 4. 收款和流量收益"
-    },
-    {
-      "file": "docs/NEXT_ACTIONS.md",
-      "line": 29,
-      "reason": "traffic-related mention",
-      "text": "- 稳定流量后再接联盟链接和广告。"
-    },
-    {
-      "file": "docs/NEXT_ACTIONS.md",
-      "line": 46,
-      "reason": "traffic-related mention",
-      "text": "- 有 5 篇以上人工审核公开文章：注册 Google Search Console。"
-    },
-    {
-      "file": "docs/NEXT_ACTIONS.md",
-      "line": 47,
-      "reason": "traffic-related mention",
-      "text": "- 有稳定访问：开启 Vercel Web Analytics 或 Google Analytics。"
     },
     {
       "file": "docs/ai-deployment-coverage.md",
@@ -124,13 +100,13 @@
       "file": "docs/automation-digest.md",
       "line": 195,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim files scanned: 85"
+      "text": "- Traffic claim files scanned: 87"
     },
     {
       "file": "docs/automation-digest.md",
       "line": 196,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim watch mentions: 514"
+      "text": "- Traffic claim watch mentions: 518"
     },
     {
       "file": "docs/automation-digest.md",
@@ -154,7 +130,7 @@
       "file": "docs/automation-gate.md",
       "line": 33,
       "reason": "traffic-related mention",
-      "text": "| traffic claim guard found no unsupported claims | PASS | filesScanned=85, unsafeClaims=0, watchMentions=514 |"
+      "text": "| traffic claim guard found no unsupported claims | PASS | filesScanned=87, unsafeClaims=0, watchMentions=518 |"
     },
     {
       "file": "docs/broad-search-demand-map.md",
@@ -328,13 +304,13 @@
       "file": "docs/manual-review-workbench.md",
       "line": 195,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim files scanned: 85"
+      "text": "- Traffic claim files scanned: 87"
     },
     {
       "file": "docs/manual-review-workbench.md",
       "line": 196,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim watch mentions: 514"
+      "text": "- Traffic claim watch mentions: 518"
     },
     {
       "file": "docs/manual-review-workbench.md",
@@ -383,6 +359,30 @@
       "line": 130,
       "reason": "traffic-related mention",
       "text": "6. 有稳定访问后再申请广告和联盟计划。"
+    },
+    {
+      "file": "docs/NEXT_ACTIONS.md",
+      "line": 24,
+      "reason": "traffic-related mention",
+      "text": "## 4. 收款和流量收益"
+    },
+    {
+      "file": "docs/NEXT_ACTIONS.md",
+      "line": 29,
+      "reason": "traffic-related mention",
+      "text": "- 稳定流量后再接联盟链接和广告。"
+    },
+    {
+      "file": "docs/NEXT_ACTIONS.md",
+      "line": 46,
+      "reason": "traffic-related mention",
+      "text": "- 有 5 篇以上人工审核公开文章：注册 Google Search Console。"
+    },
+    {
+      "file": "docs/NEXT_ACTIONS.md",
+      "line": 47,
+      "reason": "traffic-related mention",
+      "text": "- 有稳定访问：开启 Vercel Web Analytics 或 Google Analytics。"
     },
     {
       "file": "docs/platform-registration-roadmap.md",
@@ -469,6 +469,18 @@
       "text": "- Google Analytics 或 Vercel Web Analytics：用于看流量。"
     },
     {
+      "file": "docs/public-coverage-gap-plan.md",
+      "line": 17,
+      "reason": "traffic-related mention",
+      "text": "- Note: This plan inherits broad-demand editorial signals only. It does not claim keyword volume, search ranking, clicks, impressions, or traffic."
+    },
+    {
+      "file": "docs/public-coverage-gap-plan.md",
+      "line": 18,
+      "reason": "traffic-related mention",
+      "text": "- Broad demand guardrails: {\"autoEditArticles\":false,\"autoMarkReview\":false,\"autoPublish\":false,\"note\":\"Read-only broad-demand map. It prioritizes likely user-search themes from the local content inventory and official source targets; it does not claim keyword volume, rankings, clicks, or traffic.\"}"
+    },
+    {
       "file": "docs/publishing-workflow.md",
       "line": 20,
       "reason": "traffic-related mention",
@@ -479,18 +491,6 @@
       "line": 33,
       "reason": "traffic-related mention",
       "text": "前期只发布少量最有用的文章，优先围绕已经能承接流量的工具页："
-    },
-    {
-      "file": "docs/review-automation.md",
-      "line": 72,
-      "reason": "traffic-related mention",
-      "text": "| 20 | 251 | 100 | 31 | Industry AI prompts | AI 提示词 | 医疗行政 AI 提示词模板：病历摘要、随访问卷和宣教材料怎么安全写 | content/blog/healthcare-admin-ai-prompts-guide.mdx |"
-    },
-    {
-      "file": "docs/review-coverage-report.md",
-      "line": 146,
-      "reason": "traffic-related mention",
-      "text": "- No income, traffic, approval, ranking, or client-acquisition guarantee."
     }
   ],
   "nextActions": [

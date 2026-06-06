@@ -390,6 +390,34 @@ type BroadSearchDemand = {
   }>;
 };
 
+type PublicCoverageGapPlan = {
+  items: Array<{
+    file: string;
+    gapScore: number;
+    missingSubtopics: string[];
+    primaryKeyword: string;
+    readyForManualReview: boolean;
+    themeTitle: string;
+    title: string;
+  }>;
+  summary: {
+    duplicateFiles: number;
+    gapThemes: number;
+    items: number;
+    plannedWaves: number;
+    readyItems: number;
+    unsafeItems: number;
+    uniqueFiles: number;
+  };
+  waves: Array<{
+    files: string[];
+    focus: string;
+    readyItems: number;
+    themes: string[];
+    wave: number;
+  }>;
+};
+
 const reports = {
   cannibalization: readJson<{ summary: { conflicts: number; reviewBatchConflicts: number } }>("content/automation/content-cannibalization.json"),
   freshness: readJson<{ summary: { currentReviewItems: number; highRisk: number; mediumRisk: number; plannedReviewItems: number } }>(
@@ -400,6 +428,7 @@ const reports = {
   ),
   deploymentCoverage: readJson<DeploymentCoverage>("content/automation/ai-deployment-coverage.json"),
   broadSearchDemand: readJson<BroadSearchDemand>("content/automation/broad-search-demand-map.json"),
+  publicCoverageGapPlan: readJson<PublicCoverageGapPlan>("content/automation/public-coverage-gap-plan.json"),
   promptCoverage: readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json"),
   gate: readJson<{ ok: boolean; summary: { checks: number; failed: number; passed: number } }>("content/automation/automation-gate.json"),
   liveSearch: readJson<{
@@ -584,6 +613,17 @@ const payload = {
     totalReadyDraftMatches: reports.broadSearchDemand.data?.summary.totalReadyDraftMatches ?? null,
     uniqueCandidateFiles: reports.broadSearchDemand.data?.summary.uniqueCandidateFiles ?? null,
   },
+  publicCoverageGapPlan: {
+    duplicateFiles: reports.publicCoverageGapPlan.data?.summary.duplicateFiles ?? null,
+    gapThemes: reports.publicCoverageGapPlan.data?.summary.gapThemes ?? null,
+    items: reports.publicCoverageGapPlan.data?.summary.items ?? null,
+    plannedWaves: reports.publicCoverageGapPlan.data?.summary.plannedWaves ?? null,
+    readyItems: reports.publicCoverageGapPlan.data?.summary.readyItems ?? null,
+    top: reports.publicCoverageGapPlan.data?.items.slice(0, 8) ?? [],
+    unsafeItems: reports.publicCoverageGapPlan.data?.summary.unsafeItems ?? null,
+    uniqueFiles: reports.publicCoverageGapPlan.data?.summary.uniqueFiles ?? null,
+    waves: reports.publicCoverageGapPlan.data?.waves.slice(0, 4) ?? [],
+  },
   searchIntentLanes: {
     highPriorityLanes: reports.searchIntentLanes.data?.summary.highPriorityLanes ?? null,
     lanes: reports.searchIntentLanes.data?.summary.lanes ?? null,
@@ -737,6 +777,9 @@ function buildNextActions() {
   }
   if (!reports.broadSearchDemand.data || reports.broadSearchDemand.data.summary.themesWithReadyDrafts !== reports.broadSearchDemand.data.summary.themes) {
     return ["Open docs/broad-search-demand-map.md and ensure every broad demand theme has ready draft candidates."];
+  }
+  if (!reports.publicCoverageGapPlan.data || reports.publicCoverageGapPlan.data.summary.unsafeItems > 0) {
+    return ["Open docs/public-coverage-gap-plan.md and resolve public coverage gap plan safety issues before manual review."];
   }
   if (!reports.reviewCoverage.data || reports.reviewCoverage.data.summary.missingCoverage > 0) {
     return ["Open docs/review-coverage-report.md and regenerate coverage for all planned review candidates."];
@@ -1036,6 +1079,26 @@ function toMarkdown(data: typeof payload) {
     "| --- | --- | --- | --- | --- | --- | --- | --- |",
     ...data.broadSearchDemand.top.map((item) => (
       `| ${item.title} | ${item.gapScore} | ${item.publicMatches} | ${item.readyDrafts} | ${item.reviewPackMatches} | ${item.plannedWaveMatches} | ${item.missingSubtopics.join(", ") || "none"} | ${item.searchSeeds.slice(0, 2).join("<br>")} |`
+    )),
+    "",
+    "## Public Coverage Gap Plan",
+    "",
+    `- Gap themes: ${data.publicCoverageGapPlan.gapThemes}`,
+    `- Items: ${data.publicCoverageGapPlan.items}`,
+    `- Ready items: ${data.publicCoverageGapPlan.readyItems}`,
+    `- Unsafe items: ${data.publicCoverageGapPlan.unsafeItems}`,
+    `- Unique files: ${data.publicCoverageGapPlan.uniqueFiles}`,
+    `- Duplicate files: ${data.publicCoverageGapPlan.duplicateFiles}`,
+    `- Planned waves: ${data.publicCoverageGapPlan.plannedWaves}`,
+    "",
+    "| Wave | Ready | Focus | Files |",
+    "| --- | --- | --- | --- |",
+    ...data.publicCoverageGapPlan.waves.map((item) => `| ${item.wave} | ${item.readyItems}/${item.files.length} | ${item.focus} | ${item.files.join("<br>")} |`),
+    "",
+    "| Score | Ready | Theme | Missing subtopics | Primary keyword | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- |",
+    ...data.publicCoverageGapPlan.top.map((item) => (
+      `| ${item.gapScore} | ${item.readyForManualReview} | ${item.themeTitle} | ${item.missingSubtopics.join(", ") || "none"} | ${item.primaryKeyword} | ${item.title} | ${item.file} |`
     )),
     "",
     "## Search Intent Lane Map",

@@ -150,6 +150,21 @@ async function main() {
     };
     themes?: Array<{ candidateDrafts?: unknown[]; reviewFocus?: unknown[]; searchSeeds?: unknown[]; sourceTargets?: unknown[]; subtopics?: unknown[] }>;
   }>("content/automation/broad-search-demand-map.json");
+  const publicCoverageGapPlan = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
+    items?: Array<{ noindex?: boolean; readyForManualReview?: boolean; safeDraft?: boolean; searchSeeds?: unknown[]; sourceTargets?: unknown[] }>;
+    summary: {
+      duplicateFiles: number;
+      gapThemes: number;
+      items: number;
+      plannedWaves: number;
+      readyItems: number;
+      sourceThemesWithoutPublicCoverage: number;
+      uniqueFiles: number;
+      unsafeItems: number;
+    };
+    waves?: Array<{ items?: unknown[]; readyItems?: number }>;
+  }>("content/automation/public-coverage-gap-plan.json");
   const cannibalization = readJson<{
     guardrails: { autoPublish: boolean };
     summary: { articleCount: number; conflicts: number; reviewBatchConflicts: number };
@@ -724,6 +739,38 @@ async function main() {
           ),
         ),
       detail: `officialSources=${broadSearchDemand.sourceEvidence?.officialSources?.length || 0}, reviewPackMatches=${broadSearchDemand.summary.reviewPackThemeMatches}, waveMatches=${broadSearchDemand.summary.plannedWaveThemeMatches}, readyMatches=${broadSearchDemand.summary.totalReadyDraftMatches}`,
+    },
+    {
+      name: "public coverage gap plan is read-only and covers every no-public broad theme",
+      ok:
+        publicCoverageGapPlan.guardrails.autoEditArticles === false &&
+        publicCoverageGapPlan.guardrails.autoMarkReview === false &&
+        publicCoverageGapPlan.guardrails.autoPublish === false &&
+        publicCoverageGapPlan.summary.gapThemes === broadSearchDemand.summary.themesWithoutPublicCoverage &&
+        publicCoverageGapPlan.summary.sourceThemesWithoutPublicCoverage === broadSearchDemand.summary.themesWithoutPublicCoverage &&
+        publicCoverageGapPlan.summary.items === publicCoverageGapPlan.summary.gapThemes &&
+        publicCoverageGapPlan.summary.uniqueFiles === publicCoverageGapPlan.summary.items &&
+        publicCoverageGapPlan.summary.duplicateFiles === 0,
+      detail: `gapThemes=${publicCoverageGapPlan.summary.gapThemes}, items=${publicCoverageGapPlan.summary.items}, uniqueFiles=${publicCoverageGapPlan.summary.uniqueFiles}, duplicateFiles=${publicCoverageGapPlan.summary.duplicateFiles}`,
+    },
+    {
+      name: "public coverage gap plan keeps candidates safe for manual review",
+      ok:
+        publicCoverageGapPlan.summary.unsafeItems === 0 &&
+        publicCoverageGapPlan.summary.readyItems === publicCoverageGapPlan.summary.items &&
+        publicCoverageGapPlan.summary.plannedWaves >= 4 &&
+        Boolean(
+          publicCoverageGapPlan.items?.every(
+            (item) =>
+              item.readyForManualReview === true &&
+              item.safeDraft === true &&
+              item.noindex === true &&
+              (item.searchSeeds?.length || 0) >= 4 &&
+              (item.sourceTargets?.length || 0) >= 2,
+          ),
+        ) &&
+        Boolean(publicCoverageGapPlan.waves?.every((wave) => (wave.readyItems || 0) === (wave.items?.length || 0))),
+      detail: `ready=${publicCoverageGapPlan.summary.readyItems}, unsafe=${publicCoverageGapPlan.summary.unsafeItems}, waves=${publicCoverageGapPlan.summary.plannedWaves}`,
     },
     {
       name: "content cannibalization check generated warning report",

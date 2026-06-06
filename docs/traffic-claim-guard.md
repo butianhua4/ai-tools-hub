@@ -1,14 +1,14 @@
 # Traffic Claim Guard
-Generated at: 2026-06-06T14:58:42.630Z
+Generated at: 2026-06-06T15:04:04.173Z
 This guard scans operational reports and docs for unsupported claims that real traffic, clicks, impressions, or visits already exist.
 ## Guardrails
 - Auto publish: false
 - Note: This guard scans operational docs and automation reports for unsupported traffic claims. It does not scan draft article teaching examples.
 ## Summary
-- filesScanned: 85
+- filesScanned: 87
 - measuredTrafficUnavailable: true
 - unsafeClaims: 0
-- watchMentions: 514
+- watchMentions: 518
 ## Unsafe Claims
 None.
 ## Watch Mentions
@@ -20,10 +20,6 @@ None.
 | README.md | 250 | 4. 每次只发布 1-3 篇人工审核文章，观察收录和点击。 |
 | README.md | 276 | - Google Search Console 提交清单：`docs/search-console-setup.md` |
 | app/llms.txt/route.ts | 47 | "- The site does not claim real traffic, impressions, income guarantees, or automatic publishing.", |
-| docs/NEXT_ACTIONS.md | 24 | ## 4. 收款和流量收益 |
-| docs/NEXT_ACTIONS.md | 29 | - 稳定流量后再接联盟链接和广告。 |
-| docs/NEXT_ACTIONS.md | 46 | - 有 5 篇以上人工审核公开文章：注册 Google Search Console。 |
-| docs/NEXT_ACTIONS.md | 47 | - 有稳定访问：开启 Vercel Web Analytics 或 Google Analytics。 |
 | docs/ai-deployment-coverage.md | 11 | - Note: This coverage matrix is read-only. It organizes deployment, Agent, RAG, and model infrastructure drafts for manual review and does not claim measured traffic. |
 | docs/automation-digest.md | 14 | - Traffic data available: false |
 | docs/automation-digest.md | 185 | ## Traffic Evidence |
@@ -32,12 +28,12 @@ None.
 | docs/automation-digest.md | 190 | - Measured traffic sources: none |
 | docs/automation-digest.md | 191 | - Search Console verification evidence: false |
 | docs/automation-digest.md | 194 | - Unsupported traffic claims: 0 |
-| docs/automation-digest.md | 195 | - Traffic claim files scanned: 85 |
-| docs/automation-digest.md | 196 | - Traffic claim watch mentions: 514 |
+| docs/automation-digest.md | 195 | - Traffic claim files scanned: 87 |
+| docs/automation-digest.md | 196 | - Traffic claim watch mentions: 518 |
 | docs/automation-digest.md | 232 | \| Dify、n8n、MCP 和无代码 AI 自动化 \| 258 \| 0 \| 5 \| 无代码 AI 自动化容易吸引搜索流量，也最需要平台规则和权限边界提醒。 \| |
 | docs/automation-gate.md | 31 | \| traffic evidence audit passed and is read-only \| PASS \| failedChecks=0, measuredTrafficSources=0 \| |
 | docs/automation-gate.md | 32 | \| traffic is not claimed without measured metrics \| PASS \| trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 \| |
-| docs/automation-gate.md | 33 | \| traffic claim guard found no unsupported claims \| PASS \| filesScanned=85, unsafeClaims=0, watchMentions=514 \| |
+| docs/automation-gate.md | 33 | \| traffic claim guard found no unsupported claims \| PASS \| filesScanned=87, unsafeClaims=0, watchMentions=518 \| |
 | docs/broad-search-demand-map.md | 5 | This report is read-only. It turns broad user-search demand areas into a review and content-gap map. It does not publish, mark review, claim keyword volume, or claim traffic. |
 | docs/broad-search-demand-map.md | 12 | - Note: Read-only broad-demand map. It prioritizes likely user-search themes from the local content inventory and official source targets; it does not claim keyword volume, rankings, clicks, or traffic. |
 | docs/broad-search-demand-map.md | 123 | \| 31 \| 100 \| informational \| 医疗 AI 提示词 \| 医疗行政 AI 提示词模板：病历摘要、随访问卷和宣教材料怎么安全写 \| content/blog/healthcare-admin-ai-prompts-guide.mdx \| |
@@ -66,8 +62,8 @@ None.
 | docs/manual-review-workbench.md | 191 | - Measured traffic sources: none |
 | docs/manual-review-workbench.md | 192 | - Search Console verification evidence: false |
 | docs/manual-review-workbench.md | 194 | - Unsupported traffic claims: 0 |
-| docs/manual-review-workbench.md | 195 | - Traffic claim files scanned: 85 |
-| docs/manual-review-workbench.md | 196 | - Traffic claim watch mentions: 514 |
+| docs/manual-review-workbench.md | 195 | - Traffic claim files scanned: 87 |
+| docs/manual-review-workbench.md | 196 | - Traffic claim watch mentions: 518 |
 | docs/manual-review-workbench.md | 407 | - Use docs/traffic-evidence-audit.md before making any traffic or Search Console performance claim. |
 | docs/monetization-and-payment-plan.md | 3 | 这个项目的变现顺序不是“先注册一堆收款平台”，而是“先让网站有可用工具、可信内容和真实访问”。早期重点是降低复杂度，避免把时间花在还没有用户验证的支付系统上。 |
 | docs/monetization-and-payment-plan.md | 11 | 3. 用 Search Console 和 Analytics 观察用户搜索词、访问页面和点击行为。 |
@@ -76,6 +72,10 @@ None.
 | docs/monetization-and-payment-plan.md | 87 | 等搜索流量稳定后，再接广告。 |
 | docs/monetization-and-payment-plan.md | 127 | 3. 接 Google Search Console。 |
 | docs/monetization-and-payment-plan.md | 130 | 6. 有稳定访问后再申请广告和联盟计划。 |
+| docs/NEXT_ACTIONS.md | 24 | ## 4. 收款和流量收益 |
+| docs/NEXT_ACTIONS.md | 29 | - 稳定流量后再接联盟链接和广告。 |
+| docs/NEXT_ACTIONS.md | 46 | - 有 5 篇以上人工审核公开文章：注册 Google Search Console。 |
+| docs/NEXT_ACTIONS.md | 47 | - 有稳定访问：开启 Vercel Web Analytics 或 Google Analytics。 |
 | docs/platform-registration-roadmap.md | 13 | ## 第一阶段：收录和流量观察 |
 | docs/platform-registration-roadmap.md | 17 | - 网站正式可访问。 |
 | docs/platform-registration-roadmap.md | 23 | - Google Search Console |
@@ -90,10 +90,10 @@ None.
 | docs/platform-registration-roadmap.md | 135 | 等需要注册新平台时，优先注册 Google Search Console。其他平台都可以再等等。 |
 | docs/post-deploy-checklist.md | 34 | - Google Search Console：用于提交 sitemap 和看收录。 |
 | docs/post-deploy-checklist.md | 35 | - Google Analytics 或 Vercel Web Analytics：用于看流量。 |
+| docs/public-coverage-gap-plan.md | 17 | - Note: This plan inherits broad-demand editorial signals only. It does not claim keyword volume, search ranking, clicks, impressions, or traffic. |
+| docs/public-coverage-gap-plan.md | 18 | - Broad demand guardrails: {"autoEditArticles":false,"autoMarkReview":false,"autoPublish":false,"note":"Read-only broad-demand map. It prioritizes likely user-search themes from the local content inventory and official source targets; it does not claim keyword volume, rankings, clicks, or traffic."} |
 | docs/publishing-workflow.md | 20 | 14. 观察 Google Search Console 的抓取、收录和点击数据。 |
 | docs/publishing-workflow.md | 33 | 前期只发布少量最有用的文章，优先围绕已经能承接流量的工具页： |
-| docs/review-automation.md | 72 | \| 20 \| 251 \| 100 \| 31 \| Industry AI prompts \| AI 提示词 \| 医疗行政 AI 提示词模板：病历摘要、随访问卷和宣教材料怎么安全写 \| content/blog/healthcare-admin-ai-prompts-guide.mdx \| |
-| docs/review-coverage-report.md | 146 | - No income, traffic, approval, ranking, or client-acquisition guarantee. |
 ## Next Actions
 - Keep saying that live/search surfaces are healthy, not that traffic exists.
 - Only report traffic after an audited source provides clicks, impressions, visits, or pageviews.

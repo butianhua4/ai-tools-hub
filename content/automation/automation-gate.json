@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T14:58:43.188Z",
+  "generatedAt": "2026-06-06T15:04:04.842Z",
   "ok": true,
   "summary": {
-    "checks": 67,
+    "checks": 69,
     "failed": 0,
-    "passed": 67
+    "passed": 69
   },
   "failed": [],
   "checks": [
@@ -90,7 +90,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=85, unsafeClaims=0, watchMentions=514"
+      "detail": "filesScanned=87, unsafeClaims=0, watchMentions=518"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -236,6 +236,16 @@
       "name": "broad search demand map links demand, sources, and planned review waves",
       "ok": true,
       "detail": "officialSources=13, reviewPackMatches=4, waveMatches=24, readyMatches=417"
+    },
+    {
+      "name": "public coverage gap plan is read-only and covers every no-public broad theme",
+      "ok": true,
+      "detail": "gapThemes=8, items=8, uniqueFiles=8, duplicateFiles=0"
+    },
+    {
+      "name": "public coverage gap plan keeps candidates safe for manual review",
+      "ok": true,
+      "detail": "ready=8, unsafe=0, waves=4"
     },
     {
       "name": "content cannibalization check generated warning report",

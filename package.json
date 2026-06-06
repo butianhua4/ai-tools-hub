@@ -54,7 +54,8 @@
     "automation:search-intent-waves": "tsx scripts/search-intent-wave-planner.ts",
     "automation:search-query-coverage": "tsx scripts/search-query-coverage.ts",
     "automation:search-query-match": "tsx scripts/search-query-match-audit.ts",
-    "automation:broad-search-demand": "tsx scripts/broad-search-demand-map.ts"
+    "automation:broad-search-demand": "tsx scripts/broad-search-demand-map.ts",
+    "automation:public-gap-plan": "tsx scripts/public-coverage-gap-plan.ts"
   },
   "dependencies": {
     "fast-glob": "^3.3.3",

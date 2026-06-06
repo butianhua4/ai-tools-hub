@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-06T14:58:43.188Z
+Generated at: 2026-06-06T15:04:04.842Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 67
-- Passed: 67
+- Checks: 69
+- Passed: 69
 - Failed: 0
 
 ## Checks
@@ -30,7 +30,7 @@ Overall: PASS
 | project status still stops before publishing | PASS | publicPublished=15, publishableNow=0 |
 | traffic evidence audit passed and is read-only | PASS | failedChecks=0, measuredTrafficSources=0 |
 | traffic is not claimed without measured metrics | PASS | trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 |
-| traffic claim guard found no unsupported claims | PASS | filesScanned=85, unsafeClaims=0, watchMentions=514 |
+| traffic claim guard found no unsupported claims | PASS | filesScanned=87, unsafeClaims=0, watchMentions=518 |
 | content integrity audit is read-only and clean | PASS | filesScanned=669, blockingItems=0 |
 | content integrity audit covers public, recommended, and Wave 1 items | PASS | public=15, recommended=3, wave=3 |
 | internal link opportunity audit is read-only and covers expansion candidates | PASS | public=15, expansion=19, candidates=19 |
@@ -60,6 +60,8 @@ Overall: PASS
 | search query match audit has no blocking search-alignment issues | PASS | blocking=0, averageFamilies=7 |
 | broad search demand map is read-only and covers major demand themes | PASS | themes=10, readyThemes=10, uniqueCandidates=56 |
 | broad search demand map links demand, sources, and planned review waves | PASS | officialSources=13, reviewPackMatches=4, waveMatches=24, readyMatches=417 |
+| public coverage gap plan is read-only and covers every no-public broad theme | PASS | gapThemes=8, items=8, uniqueFiles=8, duplicateFiles=0 |
+| public coverage gap plan keeps candidates safe for manual review | PASS | ready=8, unsafe=0, waves=4 |
 | content cannibalization check generated warning report | PASS | conflicts=200, reviewBatchConflicts=0 |
 | content freshness check covers review items | PASS | highRisk=570, currentReviewItems=3, plannedReviewItems=9 |
 | review coverage report covers planned candidates | PASS | planned=9, items=9, missingCoverage=0 |
