@@ -439,6 +439,33 @@ async function main() {
     }>;
     unsafeTasks?: unknown[];
   }>("content/automation/review-action-board.json");
+  const reviewPortfolioBoard = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
+    items?: Array<{
+      commandBoundary?: {
+        markReviewAfterHumanApproval?: string;
+        publishConfirm?: string;
+        publishDryRunAfterReview?: string;
+        stopBefore?: string;
+      };
+      readyForHumanReview?: boolean;
+      safeDraft?: boolean;
+      sourceTargets?: unknown[];
+      sourceTypes?: unknown[];
+    }>;
+    sourceCounts: { deployment: number; prompt: number; publicGap: number; wave: number };
+    summary: {
+      duplicateMentions: number;
+      items: number;
+      itemsWithCommandBoundary: number;
+      itemsWithMultipleSources: number;
+      itemsWithSourceTargets: number;
+      readyItems: number;
+      safeDraftItems: number;
+      sourceCandidates: number;
+      unsafeItems: number;
+    };
+  }>("content/automation/review-portfolio-board.json");
   const reviewOptimizationBrief = readJson<{
     briefs?: Array<{
       file: string;
@@ -741,6 +768,45 @@ async function main() {
           ),
       ),
       detail: `ready=${reviewActionBoard.summary.readyTasks}, unsafe=${reviewActionBoard.summary.unsafeTasks}`,
+    },
+    {
+      name: "review portfolio board deduplicates all review packs",
+      ok:
+        reviewPortfolioBoard.guardrails.autoEditArticles === false &&
+        reviewPortfolioBoard.guardrails.autoMarkReview === false &&
+        reviewPortfolioBoard.guardrails.autoPublish === false &&
+        reviewPortfolioBoard.summary.sourceCandidates ===
+          reviewPortfolioBoard.sourceCounts.wave +
+            reviewPortfolioBoard.sourceCounts.publicGap +
+            reviewPortfolioBoard.sourceCounts.deployment +
+            reviewPortfolioBoard.sourceCounts.prompt &&
+        reviewPortfolioBoard.summary.items < reviewPortfolioBoard.summary.sourceCandidates &&
+        reviewPortfolioBoard.summary.duplicateMentions === reviewPortfolioBoard.summary.sourceCandidates - reviewPortfolioBoard.summary.items &&
+        reviewPortfolioBoard.summary.itemsWithMultipleSources > 0,
+      detail: `sourceCandidates=${reviewPortfolioBoard.summary.sourceCandidates}, uniqueItems=${reviewPortfolioBoard.summary.items}, duplicates=${reviewPortfolioBoard.summary.duplicateMentions}, multiSource=${reviewPortfolioBoard.summary.itemsWithMultipleSources}`,
+    },
+    {
+      name: "review portfolio board keeps unique candidates safe and human-gated",
+      ok:
+        reviewPortfolioBoard.summary.unsafeItems === 0 &&
+        reviewPortfolioBoard.summary.readyItems === reviewPortfolioBoard.summary.items &&
+        reviewPortfolioBoard.summary.safeDraftItems === reviewPortfolioBoard.summary.items &&
+        reviewPortfolioBoard.summary.itemsWithSourceTargets === reviewPortfolioBoard.summary.items &&
+        reviewPortfolioBoard.summary.itemsWithCommandBoundary === reviewPortfolioBoard.summary.items &&
+        Boolean(
+          reviewPortfolioBoard.items?.every(
+            (item) =>
+              item.readyForHumanReview === true &&
+              item.safeDraft === true &&
+              (item.sourceTargets?.length || 0) > 0 &&
+              (item.sourceTypes?.length || 0) > 0 &&
+              item.commandBoundary?.markReviewAfterHumanApproval?.includes("--confirm-human") &&
+              !item.commandBoundary?.publishDryRunAfterReview?.includes("--confirm") &&
+              item.commandBoundary?.publishConfirm === "not-included" &&
+              item.commandBoundary?.stopBefore?.includes("explicit human approval"),
+          ),
+        ),
+      detail: `ready=${reviewPortfolioBoard.summary.readyItems}, safe=${reviewPortfolioBoard.summary.safeDraftItems}, sources=${reviewPortfolioBoard.summary.itemsWithSourceTargets}, commands=${reviewPortfolioBoard.summary.itemsWithCommandBoundary}`,
     },
     {
       name: "review optimization brief is read-only and covers ready action-board tasks",

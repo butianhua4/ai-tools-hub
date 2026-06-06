@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T16:43:22.137Z",
+  "generatedAt": "2026-06-06T16:55:00.672Z",
   "guardrails": {
     "autoPublish": false,
     "note": "Digest is read-only. It summarizes local automation reports and does not use traffic, impressions, or Search Console performance data."
@@ -195,7 +195,7 @@
         "url": "https://ai-sdk.dev/docs"
       },
       {
-        "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=fr",
+        "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=zh-tw",
         "ok": true,
         "references": [
           {
@@ -729,6 +729,673 @@
     "unsafeTaskList": [],
     "waveReadyTasks": 3,
     "waveTasks": 3
+  },
+  "reviewPortfolioBoard": {
+    "duplicateMentions": 9,
+    "items": 24,
+    "itemsWithMultipleSources": 7,
+    "multiSourceItems": [
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap, wave.",
+          "Verify 6 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 1275,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 22,
+        "safeDraft": true,
+        "searchQueries": [
+          "AI Agent deployment tutorial",
+          "agent tool calling tutorial",
+          "OpenAI Agents SDK beginner guide",
+          "Vercel AI SDK agent",
+          "AI Agent 部署教程",
+          "Agent 工具调用教程",
+          "AI 工作流部署",
+          "Agent 人工审核流程"
+        ],
+        "sourceTargets": [
+          "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+          "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+          "LangChain docs: https://python.langchain.com/docs",
+          "OpenAI API docs: https://platform.openai.com/docs",
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap",
+          "wave"
+        ],
+        "status": "draft",
+        "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: prompt, public-gap, wave.",
+          "Verify 9 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 1275,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 20,
+        "safeDraft": true,
+        "searchQueries": [
+          "ChatGPT prompts for business",
+          "AI prompt template library",
+          "industry AI prompts",
+          "best AI prompts for work",
+          "AI 提示词大全",
+          "ChatGPT 提示词模板",
+          "全行业 AI 提示词",
+          "AI prompt library"
+        ],
+        "sourceTargets": [
+          "OpenAI API docs: https://platform.openai.com/docs",
+          "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering",
+          "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+          "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+          "OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation",
+          "Google Gemini Workspace prompting: https://support.google.com/docs/answer/15013615",
+          "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
+        ],
+        "sourceTypes": [
+          "prompt",
+          "public-gap",
+          "wave"
+        ],
+        "status": "draft",
+        "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap.",
+          "Verify 4 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 950,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 16,
+        "safeDraft": true,
+        "searchQueries": [
+          "RAG knowledge base tutorial",
+          "AI agent memory",
+          "vector database RAG",
+          "enterprise knowledge base AI",
+          "RAG 知识库搭建教程",
+          "企业知识库 AI 部署",
+          "向量数据库 RAG 教程",
+          "RAG 评测怎么做"
+        ],
+        "sourceTargets": [
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "LangChain docs: https://python.langchain.com/docs",
+          "LlamaIndex docs: https://docs.llamaindex.ai",
+          "Hugging Face docs: https://huggingface.co/docs"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap"
+        ],
+        "status": "draft",
+        "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap.",
+          "Verify 5 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 950,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 17,
+        "safeDraft": true,
+        "searchQueries": [
+          "LLM observability",
+          "RAG evaluation",
+          "AI agent logs",
+          "prompt injection defense",
+          "OpenAI API Next.js",
+          "Claude API 接入",
+          "Gemini API Next.js",
+          "API rate limit 怎么办"
+        ],
+        "sourceTargets": [
+          "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "LangChain docs: https://python.langchain.com/docs",
+          "OpenAI API docs: https://platform.openai.com/docs",
+          "Anthropic docs: https://docs.anthropic.com"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap"
+        ],
+        "status": "draft",
+        "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap.",
+          "Verify 2 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 950,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 18,
+        "safeDraft": true,
+        "searchQueries": [
+          "Dify deployment tutorial",
+          "n8n AI agent self hosted",
+          "Flowise local deployment",
+          "Dify workflow error handling",
+          "Dify 部署教程",
+          "n8n AI Agent 自托管",
+          "Flowise 本地部署",
+          "Dify 工作流错误处理"
+        ],
+        "sourceTargets": [
+          "Dify docs: https://docs.dify.ai",
+          "n8n docs: https://docs.n8n.io"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap"
+        ],
+        "status": "draft",
+        "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap.",
+          "Verify 2 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 950,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 17,
+        "safeDraft": true,
+        "searchQueries": [
+          "vLLM deployment tutorial",
+          "Hugging Face TGI deployment",
+          "RunPod serverless LLM",
+          "serverless GPU LLM deployment",
+          "vLLM 部署教程",
+          "TGI 部署教程",
+          "RunPod Serverless 大模型部署",
+          "Modal Serverless GPU LLM"
+        ],
+        "sourceTargets": [
+          "vLLM docs: https://docs.vllm.ai",
+          "Hugging Face docs: https://huggingface.co/docs"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap"
+        ],
+        "status": "draft",
+        "title": "BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap.",
+          "Verify 3 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 950,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 17,
+        "safeDraft": true,
+        "searchQueries": [
+          "local LLM deployment",
+          "Ollama local model tutorial",
+          "Open WebUI deployment",
+          "local AI model GPU memory",
+          "本地部署大模型教程",
+          "Ollama 本地部署",
+          "Open WebUI Ollama 部署",
+          "本地大模型显存不够"
+        ],
+        "sourceTargets": [
+          "Ollama docs: https://docs.ollama.com",
+          "Hugging Face docs: https://huggingface.co/docs",
+          "vLLM docs: https://docs.vllm.ai"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap"
+        ],
+        "status": "draft",
+        "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+      }
+    ],
+    "nextItems": [
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap, wave.",
+          "Verify 6 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 1275,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 22,
+        "safeDraft": true,
+        "searchQueries": [
+          "AI Agent deployment tutorial",
+          "agent tool calling tutorial",
+          "OpenAI Agents SDK beginner guide",
+          "Vercel AI SDK agent",
+          "AI Agent 部署教程",
+          "Agent 工具调用教程",
+          "AI 工作流部署",
+          "Agent 人工审核流程"
+        ],
+        "sourceTargets": [
+          "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+          "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+          "LangChain docs: https://python.langchain.com/docs",
+          "OpenAI API docs: https://platform.openai.com/docs",
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap",
+          "wave"
+        ],
+        "status": "draft",
+        "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: prompt, public-gap, wave.",
+          "Verify 9 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 1275,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 20,
+        "safeDraft": true,
+        "searchQueries": [
+          "ChatGPT prompts for business",
+          "AI prompt template library",
+          "industry AI prompts",
+          "best AI prompts for work",
+          "AI 提示词大全",
+          "ChatGPT 提示词模板",
+          "全行业 AI 提示词",
+          "AI prompt library"
+        ],
+        "sourceTargets": [
+          "OpenAI API docs: https://platform.openai.com/docs",
+          "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering",
+          "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
+          "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+          "OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation",
+          "Google Gemini Workspace prompting: https://support.google.com/docs/answer/15013615",
+          "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
+        ],
+        "sourceTypes": [
+          "prompt",
+          "public-gap",
+          "wave"
+        ],
+        "status": "draft",
+        "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: wave.",
+          "Verify 7 official source target(s) before any approval.",
+          "Confirm search intent from the source review packet.",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 1225,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 6,
+        "safeDraft": true,
+        "searchQueries": [],
+        "sourceTargets": [
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "LangChain docs: https://python.langchain.com/docs",
+          "LlamaIndex docs: https://docs.llamaindex.ai",
+          "Hugging Face docs: https://huggingface.co/docs",
+          "OpenAI API docs: https://platform.openai.com/docs",
+          "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+          "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering"
+        ],
+        "sourceTypes": [
+          "wave"
+        ],
+        "status": "draft",
+        "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap.",
+          "Verify 4 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 950,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 16,
+        "safeDraft": true,
+        "searchQueries": [
+          "RAG knowledge base tutorial",
+          "AI agent memory",
+          "vector database RAG",
+          "enterprise knowledge base AI",
+          "RAG 知识库搭建教程",
+          "企业知识库 AI 部署",
+          "向量数据库 RAG 教程",
+          "RAG 评测怎么做"
+        ],
+        "sourceTargets": [
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "LangChain docs: https://python.langchain.com/docs",
+          "LlamaIndex docs: https://docs.llamaindex.ai",
+          "Hugging Face docs: https://huggingface.co/docs"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap"
+        ],
+        "status": "draft",
+        "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap.",
+          "Verify 5 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 950,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 17,
+        "safeDraft": true,
+        "searchQueries": [
+          "LLM observability",
+          "RAG evaluation",
+          "AI agent logs",
+          "prompt injection defense",
+          "OpenAI API Next.js",
+          "Claude API 接入",
+          "Gemini API Next.js",
+          "API rate limit 怎么办"
+        ],
+        "sourceTargets": [
+          "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+          "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+          "LangChain docs: https://python.langchain.com/docs",
+          "OpenAI API docs: https://platform.openai.com/docs",
+          "Anthropic docs: https://docs.anthropic.com"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap"
+        ],
+        "status": "draft",
+        "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap.",
+          "Verify 2 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 950,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 18,
+        "safeDraft": true,
+        "searchQueries": [
+          "Dify deployment tutorial",
+          "n8n AI agent self hosted",
+          "Flowise local deployment",
+          "Dify workflow error handling",
+          "Dify 部署教程",
+          "n8n AI Agent 自托管",
+          "Flowise 本地部署",
+          "Dify 工作流错误处理"
+        ],
+        "sourceTargets": [
+          "Dify docs: https://docs.dify.ai",
+          "n8n docs: https://docs.n8n.io"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap"
+        ],
+        "status": "draft",
+        "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap.",
+          "Verify 2 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 950,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 17,
+        "safeDraft": true,
+        "searchQueries": [
+          "vLLM deployment tutorial",
+          "Hugging Face TGI deployment",
+          "RunPod serverless LLM",
+          "serverless GPU LLM deployment",
+          "vLLM 部署教程",
+          "TGI 部署教程",
+          "RunPod Serverless 大模型部署",
+          "Modal Serverless GPU LLM"
+        ],
+        "sourceTargets": [
+          "vLLM docs: https://docs.vllm.ai",
+          "Hugging Face docs: https://huggingface.co/docs"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap"
+        ],
+        "status": "draft",
+        "title": "BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收"
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+          "publishConfirm": "not-included",
+          "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+        },
+        "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+        "humanActionPlan": [
+          "Review source lanes together: deployment, public-gap.",
+          "Verify 3 official source target(s) before any approval.",
+          "Check search intent against 6 query seed(s).",
+          "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+          "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+          "Run mark:review only after explicit human approval; publishing requires a separate explicit approval."
+        ],
+        "priorityScore": 950,
+        "readyForHumanReview": true,
+        "reviewChecklistCount": 17,
+        "safeDraft": true,
+        "searchQueries": [
+          "local LLM deployment",
+          "Ollama local model tutorial",
+          "Open WebUI deployment",
+          "local AI model GPU memory",
+          "本地部署大模型教程",
+          "Ollama 本地部署",
+          "Open WebUI Ollama 部署",
+          "本地大模型显存不够"
+        ],
+        "sourceTargets": [
+          "Ollama docs: https://docs.ollama.com",
+          "Hugging Face docs: https://huggingface.co/docs",
+          "vLLM docs: https://docs.vllm.ai"
+        ],
+        "sourceTypes": [
+          "deployment",
+          "public-gap"
+        ],
+        "status": "draft",
+        "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+      }
+    ],
+    "readyItems": 24,
+    "safeDraftItems": 24,
+    "sourceCandidates": 33,
+    "sourceCounts": {
+      "deployment": 10,
+      "prompt": 12,
+      "publicGap": 8,
+      "wave": 3
+    },
+    "unsafeItems": 0
   },
   "reviewOptimizationBrief": {
     "briefs": 11,
@@ -3753,10 +4420,10 @@
     "trafficDataAvailable": false
   },
   "trafficClaimGuard": {
-    "filesScanned": 105,
+    "filesScanned": 107,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 697
+    "watchMentions": 780
   },
   "preflight": {
     "checked": 3,
@@ -12600,7 +13267,7 @@
   "liveSearch": {
     "checkedArticles": 15,
     "failedChecks": [],
-    "generatedAt": "2026-06-06T16:42:52.634Z",
+    "generatedAt": "2026-06-06T16:54:32.106Z",
     "missingFromSitemap": [],
     "ok": true,
     "publicArticles": 15,
@@ -12662,6 +13329,7 @@
     "Use docs/next-review-source-pack.md to fact-check official sources for the roadmap's next review files.",
     "Use docs/source-target-health-audit.md to confirm official source links are reachable before approving fast-changing AI guidance.",
     "Use docs/review-action-board.md as the prioritized task board for Wave 1 and public-gap manual review.",
+    "Use docs/review-portfolio-board.md to deduplicate Wave, public-gap, deployment, and prompt review candidates before assigning manual review.",
     "Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.",
     "If approved by a human, run mark:review with --confirm-human for approved files only.",
     "Publish only status=review articles in a 1-3 article batch after a dry-run."

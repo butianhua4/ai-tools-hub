@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-06T16:43:22.137Z
+Generated at: 2026-06-06T16:55:00.672Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -53,7 +53,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=fr
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=zh-tw
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
 - https://docs.dify.ai -> https://docs.dify.ai/en/use-dify/getting-started/introduction
@@ -81,6 +81,42 @@ Unsafe tasks:
 | true | 790 | public-gap-review | public-gap-wave-1 | 10 | 3 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
 | true | 787 | public-gap-review | public-gap-wave-1 | 8 | 3 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
 | true | 769 | public-gap-review | public-gap-wave-2 | 11 | 3 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+
+## Review Portfolio Board
+
+- Source candidates: 33
+- Unique items: 24
+- Duplicate mentions: 9
+- Multi-source items: 7
+- Ready items: 24
+- Safe draft items: 24
+- Unsafe items: 0
+- Source counts: {"deployment":10,"prompt":12,"publicGap":8,"wave":3}
+
+Multi-source items:
+
+| Ready | Safe | Score | Sources | Official refs | Queries | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| true | true | 1275 | deployment, public-gap, wave | 6 | 8 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| true | true | 1275 | prompt, public-gap, wave | 9 | 8 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| true | true | 950 | deployment, public-gap | 4 | 8 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| true | true | 950 | deployment, public-gap | 5 | 8 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
+| true | true | 950 | deployment, public-gap | 2 | 8 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+| true | true | 950 | deployment, public-gap | 2 | 8 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
+| true | true | 950 | deployment, public-gap | 3 | 8 | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
+
+Next unique review items:
+
+| Ready | Safe | Score | Sources | Official refs | Queries | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| true | true | 1275 | deployment, public-gap, wave | 6 | 8 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| true | true | 1275 | prompt, public-gap, wave | 9 | 8 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| true | true | 1225 | wave | 7 | 0 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| true | true | 950 | deployment, public-gap | 4 | 8 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| true | true | 950 | deployment, public-gap | 5 | 8 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
+| true | true | 950 | deployment, public-gap | 2 | 8 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+| true | true | 950 | deployment, public-gap | 2 | 8 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
+| true | true | 950 | deployment, public-gap | 3 | 8 | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
 
 ## Review Optimization Brief
 
@@ -277,8 +313,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 105
-- Traffic claim watch mentions: 697
+- Traffic claim files scanned: 107
+- Traffic claim watch mentions: 780
 
 ## Preflight
 
@@ -640,7 +676,7 @@ Next review files:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-06T16:42:52.634Z
+- Latest check: 2026-06-06T16:54:32.106Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85
@@ -663,6 +699,7 @@ Next review files:
 - Use docs/next-review-source-pack.md to fact-check official sources for the roadmap's next review files.
 - Use docs/source-target-health-audit.md to confirm official source links are reachable before approving fast-changing AI guidance.
 - Use docs/review-action-board.md as the prioritized task board for Wave 1 and public-gap manual review.
+- Use docs/review-portfolio-board.md to deduplicate Wave, public-gap, deployment, and prompt review candidates before assigning manual review.
 - Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.
 - If approved by a human, run mark:review with --confirm-human for approved files only.
 - Publish only status=review articles in a 1-3 article batch after a dry-run.

@@ -45,6 +45,7 @@ const tasks: Task[] = [
   { title: "Generate public coverage gap decision pack", args: ["run", "automation:public-gap-decision-pack"] },
   { title: "Run source target health audit", args: ["run", "content:source-health"] },
   { title: "Generate review action board", args: ["run", "automation:review-action-board"] },
+  { title: "Generate review portfolio board", args: ["run", "automation:review-portfolio-board"] },
   { title: "Generate review optimization brief", args: ["run", "automation:review-optimization-brief"] },
   { title: "Generate wave publish simulation", args: ["run", "automation:wave-publish-sim"] },
   { title: "Run content cannibalization check", args: ["run", "content:cannibalization"] },

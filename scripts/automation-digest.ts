@@ -333,6 +333,39 @@ type ReviewActionBoard = {
   unsafeTasks: unknown[];
 };
 
+type ReviewPortfolioBoard = {
+  multiSourceItems: Array<{
+    file: string;
+    priorityScore: number;
+    readyForHumanReview: boolean;
+    safeDraft: boolean;
+    searchQueries: string[];
+    sourceTargets: string[];
+    sourceTypes: string[];
+    title: string;
+  }>;
+  nextItems: Array<{
+    file: string;
+    priorityScore: number;
+    readyForHumanReview: boolean;
+    safeDraft: boolean;
+    searchQueries: string[];
+    sourceTargets: string[];
+    sourceTypes: string[];
+    title: string;
+  }>;
+  sourceCounts: { deployment: number; prompt: number; publicGap: number; wave: number };
+  summary: {
+    duplicateMentions: number;
+    items: number;
+    itemsWithMultipleSources: number;
+    readyItems: number;
+    safeDraftItems: number;
+    sourceCandidates: number;
+    unsafeItems: number;
+  };
+};
+
 type ReviewOptimizationBrief = {
   nextBriefs: Array<{
     file: string;
@@ -702,6 +735,7 @@ const reports = {
   internalLinks: readJson<InternalLinks>("content/automation/internal-link-opportunity-audit.json"),
   sourceHealth: readJson<SourceHealth>("content/automation/source-target-health-audit.json"),
   reviewActionBoard: readJson<ReviewActionBoard>("content/automation/review-action-board.json"),
+  reviewPortfolioBoard: readJson<ReviewPortfolioBoard>("content/automation/review-portfolio-board.json"),
   reviewOptimizationBrief: readJson<ReviewOptimizationBrief>("content/automation/review-optimization-brief.json"),
   reviewCannibalizationBrief: readJson<ReviewCannibalizationBrief>("content/automation/review-cannibalization-brief.json"),
   reviewFreshnessBrief: readJson<ReviewFreshnessBrief>("content/automation/review-freshness-brief.json"),
@@ -772,6 +806,18 @@ const payload = {
     unsafeTaskList: reports.reviewActionBoard.data?.unsafeTasks.slice(0, 6) ?? [],
     waveReadyTasks: reports.reviewActionBoard.data?.summary.waveReadyTasks ?? null,
     waveTasks: reports.reviewActionBoard.data?.summary.waveTasks ?? null,
+  },
+  reviewPortfolioBoard: {
+    duplicateMentions: reports.reviewPortfolioBoard.data?.summary.duplicateMentions ?? null,
+    items: reports.reviewPortfolioBoard.data?.summary.items ?? null,
+    itemsWithMultipleSources: reports.reviewPortfolioBoard.data?.summary.itemsWithMultipleSources ?? null,
+    multiSourceItems: reports.reviewPortfolioBoard.data?.multiSourceItems.slice(0, 8) ?? [],
+    nextItems: reports.reviewPortfolioBoard.data?.nextItems.slice(0, 8) ?? [],
+    readyItems: reports.reviewPortfolioBoard.data?.summary.readyItems ?? null,
+    safeDraftItems: reports.reviewPortfolioBoard.data?.summary.safeDraftItems ?? null,
+    sourceCandidates: reports.reviewPortfolioBoard.data?.summary.sourceCandidates ?? null,
+    sourceCounts: reports.reviewPortfolioBoard.data?.sourceCounts ?? null,
+    unsafeItems: reports.reviewPortfolioBoard.data?.summary.unsafeItems ?? null,
   },
   reviewOptimizationBrief: {
     briefs: reports.reviewOptimizationBrief.data?.summary.briefs ?? null,
@@ -1117,6 +1163,9 @@ function buildNextActions() {
   if (!reports.reviewActionBoard.data || reports.reviewActionBoard.data.summary.unsafeTasks > 0) {
     return ["Open docs/review-action-board.md and resolve unsafe review tasks before any mark:review command."];
   }
+  if (!reports.reviewPortfolioBoard.data || reports.reviewPortfolioBoard.data.summary.unsafeItems > 0) {
+    return ["Open docs/review-portfolio-board.md and resolve unsafe deduplicated review candidates before any mark:review command."];
+  }
   if (!reports.reviewOptimizationBrief.data || reports.reviewOptimizationBrief.data.summary.unsafeCommands > 0) {
     return ["Open docs/review-optimization-brief.md and resolve unsafe or missing copydesk guidance before manual review."];
   }
@@ -1179,6 +1228,7 @@ function buildNextActions() {
     "Use docs/next-review-source-pack.md to fact-check official sources for the roadmap's next review files.",
     "Use docs/source-target-health-audit.md to confirm official source links are reachable before approving fast-changing AI guidance.",
     "Use docs/review-action-board.md as the prioritized task board for Wave 1 and public-gap manual review.",
+    "Use docs/review-portfolio-board.md to deduplicate Wave, public-gap, deployment, and prompt review candidates before assigning manual review.",
     "Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.",
     "If approved by a human, run mark:review with --confirm-human for approved files only.",
     "Publish only status=review articles in a 1-3 article batch after a dry-run.",
@@ -1283,6 +1333,35 @@ function toMarkdown(data: typeof payload) {
     "| --- | --- | --- | --- | --- | --- | --- | --- |",
     ...data.reviewActionBoard.nextTasks.map(
       (item) => `| ${item.ready} | ${item.priority} | ${item.kind} | ${item.scope} | ${item.sourceTargets} | ${item.warnings.length} | ${item.title} | ${item.file} |`,
+    ),
+    "",
+    "## Review Portfolio Board",
+    "",
+    `- Source candidates: ${data.reviewPortfolioBoard.sourceCandidates}`,
+    `- Unique items: ${data.reviewPortfolioBoard.items}`,
+    `- Duplicate mentions: ${data.reviewPortfolioBoard.duplicateMentions}`,
+    `- Multi-source items: ${data.reviewPortfolioBoard.itemsWithMultipleSources}`,
+    `- Ready items: ${data.reviewPortfolioBoard.readyItems}`,
+    `- Safe draft items: ${data.reviewPortfolioBoard.safeDraftItems}`,
+    `- Unsafe items: ${data.reviewPortfolioBoard.unsafeItems}`,
+    `- Source counts: ${data.reviewPortfolioBoard.sourceCounts ? JSON.stringify(data.reviewPortfolioBoard.sourceCounts) : "missing"}`,
+    "",
+    "Multi-source items:",
+    "",
+    "| Ready | Safe | Score | Sources | Official refs | Queries | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...data.reviewPortfolioBoard.multiSourceItems.map(
+      (item) =>
+        `| ${item.readyForHumanReview} | ${item.safeDraft} | ${item.priorityScore} | ${item.sourceTypes.join(", ")} | ${item.sourceTargets.length} | ${item.searchQueries.length} | ${item.title} | ${item.file} |`,
+    ),
+    "",
+    "Next unique review items:",
+    "",
+    "| Ready | Safe | Score | Sources | Official refs | Queries | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...data.reviewPortfolioBoard.nextItems.map(
+      (item) =>
+        `| ${item.readyForHumanReview} | ${item.safeDraft} | ${item.priorityScore} | ${item.sourceTypes.join(", ")} | ${item.sourceTargets.length} | ${item.searchQueries.length} | ${item.title} | ${item.file} |`,
     ),
     "",
     "## Review Optimization Brief",
