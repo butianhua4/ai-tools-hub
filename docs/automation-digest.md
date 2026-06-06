@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-06T11:09:12.252Z
+Generated at: 2026-06-06T11:13:18.781Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -74,9 +74,14 @@ This digest is read-only. It summarizes automation reports and does not publish 
 | Ollama、vLLM 和开源模型本地部署 | 260 | 0 | 5 | 本地模型部署搜索需求强，但信息变化快，必须保留人工事实核对。 |
 | Dify、n8n、MCP 和无代码 AI 自动化 | 258 | 0 | 5 | 无代码 AI 自动化容易吸引搜索流量，也最需要平台规则和权限边界提醒。 |
 
+## Cannibalization Warnings
+
+- Conflicts: 200
+- Review batch conflicts: 0
+
 ## Live Search Surface
 
-- Latest check: 2026-06-06T11:08:50.499Z
+- Latest check: 2026-06-06T11:13:01.189Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85

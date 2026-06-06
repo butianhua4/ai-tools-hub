@@ -40,6 +40,7 @@ type ContentOpportunity = {
 };
 
 const reports = {
+  cannibalization: readJson<{ summary: { conflicts: number; reviewBatchConflicts: number } }>("content/automation/content-cannibalization.json"),
   contentBacklog: readJson<{ opportunities: ContentOpportunity[]; totals: { topics: number; topicsWithReadyCandidates: number } }>(
     "content/automation/content-opportunity-backlog.json",
   ),
@@ -117,6 +118,10 @@ const payload = {
     topics: reports.contentBacklog.data?.totals.topics ?? null,
     topicsWithReadyCandidates: reports.contentBacklog.data?.totals.topicsWithReadyCandidates ?? null,
     top: reports.contentBacklog.data?.opportunities.slice(0, 5) ?? [],
+  },
+  cannibalization: {
+    conflicts: reports.cannibalization.data?.summary.conflicts ?? null,
+    reviewBatchConflicts: reports.cannibalization.data?.summary.reviewBatchConflicts ?? null,
   },
   liveSearch: reports.liveSearch.data
     ? {
@@ -228,6 +233,11 @@ function toMarkdown(data: typeof payload) {
     ...data.contentOpportunities.top.map((item) => (
       `| ${item.topic} | ${item.gapScore} | ${item.publicMatches} | ${item.readyCandidates.length} | ${item.why} |`
     )),
+    "",
+    "## Cannibalization Warnings",
+    "",
+    `- Conflicts: ${data.cannibalization.conflicts}`,
+    `- Review batch conflicts: ${data.cannibalization.reviewBatchConflicts}`,
     "",
     "## Live Search Surface",
     "",

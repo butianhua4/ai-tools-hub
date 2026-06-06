@@ -43,6 +43,10 @@ async function main() {
     opportunities?: Array<{ readyCandidates?: unknown[]; searchDemandNote?: string }>;
     totals: { topics: number; topicsWithReadyCandidates: number };
   }>("content/automation/content-opportunity-backlog.json");
+  const cannibalization = readJson<{
+    guardrails: { autoPublish: boolean };
+    summary: { articleCount: number; conflicts: number; reviewBatchConflicts: number };
+  }>("content/automation/content-cannibalization.json");
   const liveSearch = readJson<{ articles: { publicCount: number }; failedChecks: string[]; ok: boolean }>("content/automation/live-search-surface.json");
   const projectStatus = readJson<{ articles: { publicPublished: number; publishableNow: unknown[] } }>("content/automation/project-status.json");
   const articles = (await articleFiles()).map(readArticle);
@@ -161,6 +165,11 @@ async function main() {
         contentBacklog.totals.topicsWithReadyCandidates > 0 &&
         Boolean(contentBacklog.opportunities?.every((item) => item.searchDemandNote && item.readyCandidates)),
       detail: `topics=${contentBacklog.totals.topics}, topicsWithReadyCandidates=${contentBacklog.totals.topicsWithReadyCandidates}`,
+    },
+    {
+      name: "content cannibalization check generated warning report",
+      ok: cannibalization.guardrails.autoPublish === false && cannibalization.summary.articleCount > 0,
+      detail: `conflicts=${cannibalization.summary.conflicts}, reviewBatchConflicts=${cannibalization.summary.reviewBatchConflicts}`,
     },
     {
       name: "live search surface check passed",

@@ -1,0 +1,1598 @@
+{
+  "generatedAt": "2026-06-06T11:12:28.369Z",
+  "guardrails": {
+    "autoPublish": false,
+    "note": "This is a warning report for manual review. It does not change article status or block drafts by itself."
+  },
+  "summary": {
+    "articleCount": 669,
+    "conflicts": 200,
+    "keywordConflicts": 11,
+    "reviewBatchConflicts": 0,
+    "slugStemConflicts": 177,
+    "titleStemConflicts": 12
+  },
+  "reviewBatchConflicts": [],
+  "conflicts": [
+    {
+      "files": [
+        "content/blog/codex-codex-npm-install-1-3.mdx",
+        "content/blog/codex-codex-npm-install-4-33.mdx",
+        "content/blog/codex-npm-install-error-beginner-fix.mdx"
+      ],
+      "groupKey": "codex npm install 报错怎么办",
+      "publishedCount": 1,
+      "reason": "same primary keyword",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "archived": 1,
+        "draft": 1,
+        "published": 1
+      },
+      "titles": [
+        "Codex npm install 报错怎么办",
+        "Codex npm install 报错怎么办：新手诊断流程",
+        "Codex 项目 npm install 报错怎么办：新手排查步骤"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-codex-4-32.mdx",
+        "content/blog/codex-install-failed-beginner-fix.mdx"
+      ],
+      "groupKey": "codex 安装失败怎么办",
+      "publishedCount": 1,
+      "reason": "same primary keyword",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 1,
+        "published": 1
+      },
+      "titles": [
+        "Codex 安装失败怎么办",
+        "Codex 安装失败怎么办：新手排查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-codex-4-38.mdx",
+        "content/blog/codex-generated-code-review-guide.mdx"
+      ],
+      "groupKey": "codex 生成代码后怎么审核",
+      "publishedCount": 1,
+      "reason": "same primary keyword",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 1,
+        "published": 1
+      },
+      "titles": [
+        "Codex 生成代码后怎么审核",
+        "Codex 生成代码后怎么审核：新手检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-codex-4-31.mdx",
+        "content/blog/what-is-codex-beginner-start.mdx"
+      ],
+      "groupKey": "codex 是什么新手怎么开始",
+      "publishedCount": 1,
+      "reason": "same primary keyword",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 1,
+        "published": 1
+      },
+      "titles": [
+        "Codex 是什么新手怎么开始",
+        "Codex 是什么：新手怎么开始"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/build-first-webpage-with-codex.mdx",
+        "content/blog/codex-codex-4-34.mdx"
+      ],
+      "groupKey": "codex 怎么做第一个网页",
+      "publishedCount": 1,
+      "reason": "same primary keyword",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "published": 1,
+        "draft": 1
+      },
+      "titles": [
+        "Codex 怎么做第一个网页",
+        "Codex 怎么做第一个网页：新手练习流程"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-vs-claude-code-beginner-checklist.mdx",
+        "content/blog/codex-vs-claude-code-beginner.mdx"
+      ],
+      "groupKey": "codex-claude-code-beginner",
+      "publishedCount": 1,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "published": 1,
+        "draft": 1
+      },
+      "titles": [
+        "Codex 和 Claude Code 怎么选：新手对比清单",
+        "Codex 和 Claude Code 新手怎么选"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-codex-2-11.mdx",
+        "content/blog/codex-codex-2-12.mdx",
+        "content/blog/codex-codex-2-14.mdx",
+        "content/blog/codex-codex-2-18.mdx",
+        "content/blog/codex-codex-3-21.mdx",
+        "content/blog/codex-codex-3-22.mdx",
+        "content/blog/codex-codex-3-24.mdx",
+        "content/blog/codex-codex-4-31.mdx",
+        "content/blog/codex-codex-4-32.mdx",
+        "content/blog/codex-codex-4-34.mdx",
+        "content/blog/codex-codex-4-38.mdx"
+      ],
+      "groupKey": "codex-codex",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "archived": 7,
+        "draft": 4
+      },
+      "titles": [
+        "Codex 安装失败怎么办：场景 2",
+        "Codex 安装失败怎么办：场景 3",
+        "Codex 安装失败怎么办：新手排查清单",
+        "Codex 怎么做第一个网页：场景 2",
+        "Codex 怎么做第一个网页：场景 3",
+        "Codex 怎么做第一个网页：新手练习流程",
+        "Codex 是什么新手怎么开始：场景 2",
+        "Codex 是什么新手怎么开始：场景 3",
+        "Codex 是什么：新手怎么开始",
+        "Codex 生成代码后怎么审核：场景 2",
+        "Codex 生成代码后怎么审核：新手检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-automation-human-review-checklist.mdx",
+        "content/blog/claude-code-automation-human-review-freelance-scope.mdx",
+        "content/blog/claude-code-automation-human-review-mistakes.mdx",
+        "content/blog/claude-code-automation-human-review.mdx"
+      ],
+      "groupKey": "claude-code-automation-human-review",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "Claude Code 自动化为什么必须有人审",
+        "Claude Code 自动化人工审核检查清单",
+        "Claude Code 自动化接单前怎么判断能不能做",
+        "Claude Code 自动化最容易忽略的人工审核错误"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-beginner-use-cases-checklist.mdx",
+        "content/blog/claude-code-beginner-use-cases-freelance-scope.mdx",
+        "content/blog/claude-code-beginner-use-cases-mistakes.mdx",
+        "content/blog/claude-code-beginner-use-cases.mdx"
+      ],
+      "groupKey": "claude-code-beginner-use-cases",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "Claude Code 新手使用场景检查清单",
+        "Claude Code 新手接单前怎么判断使用场景",
+        "Claude Code 新手适合用在哪些接单场景",
+        "Claude Code 新手选使用场景时的常见错误"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-vs-codex-web-editing-checklist.mdx",
+        "content/blog/claude-code-vs-codex-web-editing-freelance-scope.mdx",
+        "content/blog/claude-code-vs-codex-web-editing-mistakes.mdx",
+        "content/blog/claude-code-vs-codex-web-editing.mdx"
+      ],
+      "groupKey": "claude-code-codex-web-editing",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "Claude Code 和 Codex 哪个适合网页修改",
+        "Claude Code 和 Codex 网页修改常见错误",
+        "Claude Code 和 Codex 网页修改接单前怎么判断能不能做",
+        "Claude Code 和 Codex 网页修改新手检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-github-file-scope-checklist.mdx",
+        "content/blog/claude-code-github-file-scope-freelance-scope.mdx",
+        "content/blog/claude-code-github-file-scope-mistakes.mdx",
+        "content/blog/claude-code-github-file-scope.mdx"
+      ],
+      "groupKey": "claude-code-github-file-scope",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "Claude Code GitHub 文件范围检查清单",
+        "Claude Code 看 GitHub 文件哪些适合写进接单范围",
+        "Claude Code 看 GitHub 文件时的常见范围错误",
+        "客户给 GitHub 文件时用 Claude Code 怎么限定范围"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-low-risk-freelance-jobs-checklist.mdx",
+        "content/blog/claude-code-low-risk-freelance-jobs-freelance-scope.mdx",
+        "content/blog/claude-code-low-risk-freelance-jobs-mistakes.mdx",
+        "content/blog/claude-code-low-risk-freelance-jobs.mdx"
+      ],
+      "groupKey": "claude-code-low-risk-freelance",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "Claude Code 低风险小单哪些适合写进接单范围",
+        "Claude Code 低风险接单常见错误",
+        "Claude Code 低风险接单检查清单",
+        "Claude Code 新手适合先接哪些低风险小单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-nextjs-page-check-checklist.mdx",
+        "content/blog/claude-code-nextjs-page-check-freelance-scope.mdx",
+        "content/blog/claude-code-nextjs-page-check-mistakes.mdx",
+        "content/blog/claude-code-nextjs-page-check.mdx"
+      ],
+      "groupKey": "claude-code-nextjs-page-check",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "Claude Code Next.js 页面检查清单",
+        "Claude Code 检查 Next.js 页面哪些适合写进接单范围",
+        "Claude Code 检查 Next.js 页面时的常见错误",
+        "用 Claude Code 检查 Next.js 页面小问题怎么做"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-small-project-tasks-checklist.mdx",
+        "content/blog/claude-code-small-project-tasks-freelance-scope.mdx",
+        "content/blog/claude-code-small-project-tasks-mistakes.mdx",
+        "content/blog/claude-code-small-project-tasks.mdx"
+      ],
+      "groupKey": "claude-code-small-project-tasks",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "Claude Code 小项目任务哪些适合写进接单范围",
+        "Claude Code 小项目任务检查清单",
+        "Claude Code 小项目接单常见错误",
+        "哪些小项目任务适合用 Claude Code 辅助接单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-automation-steps-not-skip-checklist.mdx",
+        "content/blog/codex-automation-steps-not-skip-freelance-scope.mdx",
+        "content/blog/codex-automation-steps-not-skip-mistakes.mdx",
+        "content/blog/codex-automation-steps-not-skip.mdx"
+      ],
+      "groupKey": "codex-automation-steps-not-skip",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "Codex 自动化开发接单前怎么判断能不能做",
+        "Codex 自动化开发流程哪些步骤不能省",
+        "Codex 自动化开发流程常见错误",
+        "Codex 自动化开发流程新手检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-codex-css-bug-1-5.mdx",
+        "content/blog/codex-codex-css-bug-2-15.mdx",
+        "content/blog/codex-codex-css-bug-3-25.mdx",
+        "content/blog/codex-codex-css-bug-4-35.mdx"
+      ],
+      "groupKey": "codex-codex-css-bug",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "archived": 3,
+        "draft": 1
+      },
+      "titles": [
+        "Codex 修 CSS bug 的流程",
+        "Codex 修 CSS bug 的流程：场景 2",
+        "Codex 修 CSS bug 的流程：场景 3",
+        "Codex 修 CSS bug 的流程：新手接单边界"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-codex-npm-install-1-3.mdx",
+        "content/blog/codex-codex-npm-install-2-13.mdx",
+        "content/blog/codex-codex-npm-install-3-23.mdx",
+        "content/blog/codex-codex-npm-install-4-33.mdx"
+      ],
+      "groupKey": "codex-codex-npm-install",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "archived": 3,
+        "draft": 1
+      },
+      "titles": [
+        "Codex npm install 报错怎么办",
+        "Codex npm install 报错怎么办：场景 2",
+        "Codex npm install 报错怎么办：场景 3",
+        "Codex npm install 报错怎么办：新手诊断流程"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-small-website-delivery-check-checklist.mdx",
+        "content/blog/codex-small-website-delivery-check-freelance-scope.mdx",
+        "content/blog/codex-small-website-delivery-check-mistakes.mdx",
+        "content/blog/codex-small-website-delivery-check.mdx"
+      ],
+      "groupKey": "codex-small-website-delivery-check",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "小网站交付前检查清单",
+        "小网站交付检查常见错误和修复顺序",
+        "小网站交付检查接单能不能接",
+        "用 Codex 做小网站交付前检查"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-upwork-job-risk-check-checklist.mdx",
+        "content/blog/codex-upwork-job-risk-check-freelance-scope.mdx",
+        "content/blog/codex-upwork-job-risk-check-mistakes.mdx",
+        "content/blog/codex-upwork-job-risk-check.mdx"
+      ],
+      "groupKey": "codex-upwork-job-risk-check",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "Upwork 任务风险判断常见错误和修复顺序",
+        "Upwork 任务风险检查清单",
+        "Upwork 筛单风险判断能不能接",
+        "用 Codex 判断 Upwork 任务风险"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/eslint-error-should-not-disable-checklist.mdx",
+        "content/blog/eslint-error-should-not-disable-freelance-scope.mdx",
+        "content/blog/eslint-error-should-not-disable-mistakes.mdx",
+        "content/blog/eslint-error-should-not-disable.mdx"
+      ],
+      "groupKey": "eslint-error-should-not-disable",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "ESLint error 处理检查清单",
+        "ESLint error 常见错误和解决步骤",
+        "ESLint error 接单前怎么判断能不能做",
+        "ESLint error 要不要直接关闭"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/failed-to-push-some-refs-fix-checklist.mdx",
+        "content/blog/failed-to-push-some-refs-fix-freelance-scope.mdx",
+        "content/blog/failed-to-push-some-refs-fix-mistakes.mdx",
+        "content/blog/failed-to-push-some-refs-fix.mdx"
+      ],
+      "groupKey": "failed to push some refs",
+      "publishedCount": 0,
+      "reason": "similar title stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "failed to push some refs 常见错误和解决步骤",
+        "failed to push some refs 怎么排查",
+        "failed to push some refs 排查检查清单",
+        "failed to push some refs 接单前怎么判断能不能做"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/failed-to-push-some-refs-fix-checklist.mdx",
+        "content/blog/failed-to-push-some-refs-fix-freelance-scope.mdx",
+        "content/blog/failed-to-push-some-refs-fix-mistakes.mdx",
+        "content/blog/failed-to-push-some-refs-fix.mdx"
+      ],
+      "groupKey": "failed-push-some-refs-fix",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "failed to push some refs 常见错误和解决步骤",
+        "failed to push some refs 怎么排查",
+        "failed to push some refs 排查检查清单",
+        "failed to push some refs 接单前怎么判断能不能做"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/github-actions-build-log-debug-checklist.mdx",
+        "content/blog/github-actions-build-log-debug-freelance-scope.mdx",
+        "content/blog/github-actions-build-log-debug-mistakes.mdx",
+        "content/blog/github-actions-build-log-debug.mdx"
+      ],
+      "groupKey": "github-actions-build-log-debug",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "GitHub Actions build 失败常见错误和解决步骤",
+        "GitHub Actions build 失败怎么看日志",
+        "GitHub Actions build 失败接单前怎么判断能不能做",
+        "GitHub Actions build 失败日志检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/nextjs-hydration-error-debug-checklist.mdx",
+        "content/blog/nextjs-hydration-error-debug-freelance-scope.mdx",
+        "content/blog/nextjs-hydration-error-debug-mistakes.mdx",
+        "content/blog/nextjs-hydration-error-debug.mdx"
+      ],
+      "groupKey": "next js hydration error 怎么排查",
+      "publishedCount": 0,
+      "reason": "similar title stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "Next.js hydration error 怎么排查",
+        "Next.js hydration error 怎么排查：常见错误和解决步骤",
+        "Next.js hydration error 怎么排查：接单前怎么判断能不能做",
+        "Next.js hydration error 怎么排查：新手检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/dev-works-build-fails-checklist.mdx",
+        "content/blog/dev-works-build-fails-freelance-scope.mdx",
+        "content/blog/dev-works-build-fails-mistakes.mdx",
+        "content/blog/dev-works-build-fails.mdx"
+      ],
+      "groupKey": "npm run dev 能跑但 build",
+      "publishedCount": 0,
+      "reason": "similar title stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "npm run dev 能跑但 build 失败常见错误和解决步骤",
+        "npm run dev 能跑但 build 失败怎么办",
+        "npm run dev 能跑但 build 失败接单前怎么判断能不能做",
+        "npm run dev 能跑但 build 失败检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/npm-command-not-found-fix-checklist.mdx",
+        "content/blog/npm-command-not-found-fix-freelance-scope.mdx",
+        "content/blog/npm-command-not-found-fix-mistakes.mdx",
+        "content/blog/npm-command-not-found-fix.mdx"
+      ],
+      "groupKey": "npm-command-not-found-fix",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "npm command not found 常见错误和修正方法",
+        "npm command not found 怎么解决",
+        "npm command not found 排查检查清单",
+        "npm command not found 接单前怎么判断能不能做"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/windows-path-permission-install-fix-checklist.mdx",
+        "content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+        "content/blog/windows-path-permission-install-fix-mistakes.mdx",
+        "content/blog/windows-path-permission-install-fix.mdx"
+      ],
+      "groupKey": "windows-path-permission-install-fix",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 4
+      },
+      "titles": [
+        "Windows 路径和权限导致安装失败怎么办",
+        "Windows 路径和权限导致安装失败怎么办：常见错误和解决步骤",
+        "Windows 路径和权限导致安装失败怎么办：接单前怎么判断能不能做",
+        "Windows 路径和权限导致安装失败怎么办：新手检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/api-key-invalid-or-missing-checklist.mdx",
+        "content/blog/api-key-invalid-or-missing-mistakes.mdx",
+        "content/blog/api-key-invalid-or-missing.mdx"
+      ],
+      "groupKey": "api-key-invalid-missing",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "API Key 无效或缺失怎么处理",
+        "API Key 无效或缺失排查清单",
+        "API Key 无效或缺失的常见错误和修复步骤"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/ai-assisted-vs-automated-delivery-checklist.mdx",
+        "content/blog/ai-assisted-vs-automated-delivery-mistakes.mdx",
+        "content/blog/ai-assisted-vs-automated-delivery.mdx"
+      ],
+      "groupKey": "assisted-automated-delivery",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "AI 辅助交付和完全自动交付有什么区别",
+        "AI 辅助交付和完全自动交付的检查清单",
+        "AI 辅助交付常见错误和解决步骤"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/before-first-ai-freelance-job-checklist.mdx",
+        "content/blog/before-first-ai-freelance-job-mistakes.mdx",
+        "content/blog/before-first-ai-freelance-job.mdx"
+      ],
+      "groupKey": "before-first-freelance-job",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "第一次接 AI 小单前最容易犯的错误",
+        "第一次接 AI 小单前检查清单",
+        "第一次接 AI 小单前要准备什么"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/ai-beginner-project-fit-check-checklist.mdx",
+        "content/blog/ai-beginner-project-fit-check-mistakes.mdx",
+        "content/blog/ai-beginner-project-fit-check.mdx"
+      ],
+      "groupKey": "beginner-project-fit-check",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "AI 新手判断接项目时的常见错误",
+        "AI 新手如何判断自己能不能接项目",
+        "AI 新手接项目前的项目适配检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-nextjs-page-check-freelance-scope.mdx",
+        "content/blog/claude-code-nextjs-page-check-mistakes.mdx",
+        "content/blog/claude-code-nextjs-page-check.mdx"
+      ],
+      "groupKey": "claude code 检查 next js",
+      "publishedCount": 0,
+      "reason": "similar title stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Claude Code 检查 Next.js 页面哪些适合写进接单范围",
+        "Claude Code 检查 Next.js 页面时的常见错误",
+        "用 Claude Code 检查 Next.js 页面小问题怎么做"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-beginner-mistakes-checklist.mdx",
+        "content/blog/claude-code-beginner-mistakes-mistakes.mdx",
+        "content/blog/claude-code-beginner-mistakes.mdx"
+      ],
+      "groupKey": "claude-code-beginner",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Claude Code 新手使用检查清单",
+        "Claude Code 新手常见错误和修正方法",
+        "Claude Code 新手最容易犯的错误"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-bug-prompt-checklist.mdx",
+        "content/blog/claude-code-bug-prompt-mistakes.mdx",
+        "content/blog/claude-code-bug-prompt.mdx"
+      ],
+      "groupKey": "claude-code-bug-prompt",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Claude Code Bug Prompt 常见错误",
+        "Claude Code Bug Prompt 检查清单",
+        "Claude Code 修 bug 的 prompt 怎么写"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-client-questions-checklist.mdx",
+        "content/blog/claude-code-client-questions-mistakes.mdx",
+        "content/blog/claude-code-client-questions.mdx"
+      ],
+      "groupKey": "claude-code-client-questions",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Claude Code 接单前问客户时的常见错误",
+        "Claude Code 接单客户问题检查清单",
+        "用 Claude Code 接单前要问客户哪些问题"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-common-commands-checklist.mdx",
+        "content/blog/claude-code-common-commands-mistakes.mdx",
+        "content/blog/claude-code-common-commands.mdx"
+      ],
+      "groupKey": "claude-code-common-commands",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Claude Code 常用命令检查清单",
+        "Claude Code 新手常用命令怎么整理成接单笔记",
+        "Claude Code 新手运行常用命令时的常见错误"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-delivery-note-checklist.mdx",
+        "content/blog/claude-code-delivery-note-mistakes.mdx",
+        "content/blog/claude-code-delivery-note.mdx"
+      ],
+      "groupKey": "claude-code-delivery-note",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Claude Code 交付说明常见错误",
+        "Claude Code 交付说明检查清单",
+        "用 Claude Code 接单后交付说明怎么写"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-error-debug-checklist.mdx",
+        "content/blog/claude-code-error-debug-mistakes.mdx",
+        "content/blog/claude-code-error-debug.mdx"
+      ],
+      "groupKey": "claude-code-error-debug",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Claude Code 排查客户报错时的常见错误",
+        "Claude Code 错误排查检查清单",
+        "用 Claude Code 排查客户报错时怎么做才稳"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-install-prerequisites-checklist.mdx",
+        "content/blog/claude-code-install-prerequisites-mistakes.mdx",
+        "content/blog/claude-code-install-prerequisites.mdx"
+      ],
+      "groupKey": "claude-code-install-prerequisites",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Claude Code 安装准备常见错误",
+        "Claude Code 安装前置条件检查清单",
+        "安装 Claude Code 前新手要先确认哪些条件"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/claude-code-proposal-review-checklist.mdx",
+        "content/blog/claude-code-proposal-review-mistakes.mdx",
+        "content/blog/claude-code-proposal-review.mdx"
+      ],
+      "groupKey": "claude-code-proposal-review",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Claude Code Proposal 审阅检查清单",
+        "Claude Code 审阅 Proposal 时的常见错误",
+        "用 Claude Code 审阅接单 Proposal 时要看什么"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/no-code-ai-freelance-start-checklist.mdx",
+        "content/blog/no-code-ai-freelance-start-mistakes.mdx",
+        "content/blog/no-code-ai-freelance-start.mdx"
+      ],
+      "groupKey": "code-freelance-start",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "不会编程开始 AI 接单练习：常见错误和解决步骤",
+        "不会编程开始 AI 接单练习：新手检查清单",
+        "不会编程怎么开始 AI 接单练习"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-avoid-secret-leak-checklist.mdx",
+        "content/blog/codex-avoid-secret-leak-mistakes.mdx",
+        "content/blog/codex-avoid-secret-leak.mdx"
+      ],
+      "groupKey": "codex-avoid-secret-leak",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex 处理客户项目的密钥安全检查清单",
+        "Codex 接单时如何避免把密钥写进代码",
+        "Codex 接单时常见密钥泄露错误和修复顺序"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-bugfix-rollback-record-checklist.mdx",
+        "content/blog/codex-bugfix-rollback-record-mistakes.mdx",
+        "content/blog/codex-bugfix-rollback-record.mdx"
+      ],
+      "groupKey": "codex-bugfix-rollback-record",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex 修 bug 回滚记录常见错误和修复顺序",
+        "Codex 修 bug 回滚记录检查清单",
+        "Codex 修 bug 时如何保留回滚记录"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-client-requirement-questions-checklist.mdx",
+        "content/blog/codex-client-requirement-questions-mistakes.mdx",
+        "content/blog/codex-client-requirement-questions.mdx"
+      ],
+      "groupKey": "codex-client-requirement-questions",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex 处理客户需求不清楚时怎么提问",
+        "Codex 客户需求澄清常见错误和修复顺序",
+        "Codex 客户需求澄清问题检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-codex-claude-code-1-10.mdx",
+        "content/blog/codex-codex-claude-code-2-20.mdx",
+        "content/blog/codex-codex-claude-code-4-40.mdx"
+      ],
+      "groupKey": "codex-codex-claude-code",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "archived": 2,
+        "draft": 1
+      },
+      "titles": [
+        "Codex 和 Claude Code 怎么选",
+        "Codex 和 Claude Code 怎么选：场景 2",
+        "Codex 和 Claude Code 怎么选：新手判断模板"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-codex-github-1-6.mdx",
+        "content/blog/codex-codex-github-2-16.mdx",
+        "content/blog/codex-codex-github-4-36.mdx"
+      ],
+      "groupKey": "codex-codex-github",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "archived": 2,
+        "draft": 1
+      },
+      "titles": [
+        "Codex 和 GitHub 怎么配合",
+        "Codex 和 GitHub 怎么配合：场景 2",
+        "Codex 和 GitHub 怎么配合：新手工作流"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-codex-upwork-1-9.mdx",
+        "content/blog/codex-codex-upwork-2-19.mdx",
+        "content/blog/codex-codex-upwork-4-39.mdx"
+      ],
+      "groupKey": "codex-codex-upwork",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "archived": 2,
+        "draft": 1
+      },
+      "titles": [
+        "Codex 接 Upwork 小单怎么判断",
+        "Codex 接 Upwork 小单怎么判断",
+        "Codex 接 Upwork 小单怎么判断：场景 2"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-codex-vercel-1-7.mdx",
+        "content/blog/codex-codex-vercel-2-17.mdx",
+        "content/blog/codex-codex-vercel-4-37.mdx"
+      ],
+      "groupKey": "codex-codex-vercel",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "archived": 2,
+        "draft": 1
+      },
+      "titles": [
+        "Codex 部署 Vercel 前检查什么",
+        "Codex 部署 Vercel 前检查什么",
+        "Codex 部署 Vercel 前检查什么：场景 2"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-css-spacing-responsive-checklist.mdx",
+        "content/blog/codex-css-spacing-responsive-mistakes.mdx",
+        "content/blog/codex-css-spacing-responsive.mdx"
+      ],
+      "groupKey": "codex-css-spacing-responsive",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex 修 CSS 间距和响应式问题怎么做",
+        "Codex 修 CSS 间距和响应式问题怎么做：常见错误和解决步骤",
+        "Codex 修 CSS 间距和响应式问题怎么做：新手检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-vs-cursor-web-editing-checklist.mdx",
+        "content/blog/codex-vs-cursor-web-editing-mistakes.mdx",
+        "content/blog/codex-vs-cursor-web-editing.mdx"
+      ],
+      "groupKey": "codex-cursor-web-editing",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex 和 Cursor 改网页常见错误和修复顺序",
+        "Codex 和 Cursor 改网页怎么选",
+        "Codex 和 Cursor 网页修改选择清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-edit-existing-ui-checklist.mdx",
+        "content/blog/codex-edit-existing-ui-mistakes.mdx",
+        "content/blog/codex-edit-existing-ui.mdx"
+      ],
+      "groupKey": "codex-edit-existing",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex 修改现有网页 UI 常见错误和修复顺序",
+        "Codex 修改现有网页 UI 检查清单",
+        "Codex 修改现有网页 UI 的安全流程"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-first-day-guide-checklist.mdx",
+        "content/blog/codex-first-day-guide-mistakes.mdx",
+        "content/blog/codex-first-day-guide.mdx"
+      ],
+      "groupKey": "codex-first-day",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex 是什么，新手第一天应该怎么用",
+        "Codex 是什么，新手第一天应该怎么用：常见错误和解决步骤",
+        "Codex 是什么，新手第一天应该怎么用：新手检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-first-landing-page-checklist.mdx",
+        "content/blog/codex-first-landing-page-mistakes.mdx",
+        "content/blog/codex-first-landing-page.mdx"
+      ],
+      "groupKey": "codex-first-landing-page",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex 怎么做第一个落地页",
+        "Codex 怎么做第一个落地页：常见错误和解决步骤",
+        "Codex 怎么做第一个落地页：新手检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-github-workflow-checklist.mdx",
+        "content/blog/codex-github-workflow-mistakes.mdx",
+        "content/blog/codex-github-workflow.mdx"
+      ],
+      "groupKey": "codex-github-workflow",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex GitHub 工作流常见错误和修复顺序",
+        "Codex GitHub 提交代码检查清单",
+        "Codex 和 GitHub 怎么配合提交代码"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-install-prerequisites-checklist.mdx",
+        "content/blog/codex-install-prerequisites-mistakes.mdx",
+        "content/blog/codex-install-prerequisites.mdx"
+      ],
+      "groupKey": "codex-install-prerequisites",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex 安装前置条件常见错误和修复顺序",
+        "Codex 安装前置条件检查清单",
+        "安装 Codex 前要准备什么"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-npm-install-errors-checklist.mdx",
+        "content/blog/codex-npm-install-errors-mistakes.mdx",
+        "content/blog/codex-npm-install-errors.mdx"
+      ],
+      "groupKey": "codex-npm-install-errors",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "npm install 报错常见错误和修复顺序",
+        "npm install 报错排查检查清单",
+        "用 Codex 排查 npm install 报错"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-portfolio-page-assets-checklist.mdx",
+        "content/blog/codex-portfolio-page-assets-mistakes.mdx",
+        "content/blog/codex-portfolio-page-assets.mdx"
+      ],
+      "groupKey": "codex-portfolio-page-assets",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex 作品集素材常见错误和修复顺序",
+        "Codex 作品集页面素材检查清单",
+        "用 Codex 准备作品集页面素材"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-readme-review-checklist.mdx",
+        "content/blog/codex-readme-review-mistakes.mdx",
+        "content/blog/codex-readme-review.mdx"
+      ],
+      "groupKey": "codex-readme-review",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex README 审核常见错误和修复顺序",
+        "Codex README 审核检查清单",
+        "用 Codex 审核 README 怎么做"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-review-generated-code-checklist.mdx",
+        "content/blog/codex-review-generated-code-mistakes.mdx",
+        "content/blog/codex-review-generated-code.mdx"
+      ],
+      "groupKey": "codex-review-generated-code",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Codex 代码审查常见错误和修复顺序",
+        "Codex 生成代码后怎么人工审核",
+        "Codex 生成代码后的人工审核检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-tailwind-mobile-check-checklist.mdx",
+        "content/blog/codex-tailwind-mobile-check-mistakes.mdx",
+        "content/blog/codex-tailwind-mobile-check.mdx"
+      ],
+      "groupKey": "codex-tailwind-mobile-check",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Tailwind 移动端样式检查清单",
+        "Tailwind 移动端检查常见错误和修复顺序",
+        "用 Codex 检查 Tailwind 移动端样式"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-vercel-deployment-checklist.mdx",
+        "content/blog/codex-vercel-deployment-mistakes.mdx",
+        "content/blog/codex-vercel-deployment.mdx"
+      ],
+      "groupKey": "codex-vercel-deployment",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Vercel 部署常见错误和修复顺序",
+        "Vercel 部署检查清单",
+        "用 Codex 检查 Vercel 部署问题"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/codex-windows-install-failed-checklist.mdx",
+        "content/blog/codex-windows-install-failed-mistakes.mdx",
+        "content/blog/codex-windows-install-failed.mdx"
+      ],
+      "groupKey": "codex-windows-install-failed",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Windows 上 Codex 安装失败怎么排查",
+        "Windows 上 Codex 安装失败检查清单",
+        "Windows 安装 Codex 常见错误和修复顺序"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/daily-ai-freelance-practice-log-checklist.mdx",
+        "content/blog/daily-ai-freelance-practice-log-mistakes.mdx",
+        "content/blog/daily-ai-freelance-practice-log.mdx"
+      ],
+      "groupKey": "daily-freelance-practice-log",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "新手如何记录每天的接单练习",
+        "每天接单练习记录常见错误和解决步骤",
+        "每天接单练习记录检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/deliver-small-website-with-ai-no-code-checklist.mdx",
+        "content/blog/deliver-small-website-with-ai-no-code-mistakes.mdx",
+        "content/blog/deliver-small-website-with-ai-no-code.mdx"
+      ],
+      "groupKey": "deliver-small-website-code",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "不会写代码怎么交付一个小网站",
+        "小网站交付常见错误和解决步骤",
+        "小网站交付检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/dependency-conflict-fix-checklist.mdx",
+        "content/blog/dependency-conflict-fix-mistakes.mdx",
+        "content/blog/dependency-conflict-fix.mdx"
+      ],
+      "groupKey": "dependency-conflict-fix",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "dependency conflict 依赖冲突处理检查清单",
+        "dependency conflict 依赖冲突怎么处理",
+        "dependency conflict 常见错误和解决步骤"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/dev-works-build-fails-checklist.mdx",
+        "content/blog/dev-works-build-fails-mistakes.mdx",
+        "content/blog/dev-works-build-fails.mdx"
+      ],
+      "groupKey": "dev-works-build-fails",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "npm run dev 能跑但 build 失败常见错误和解决步骤",
+        "npm run dev 能跑但 build 失败怎么办",
+        "npm run dev 能跑但 build 失败检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/env-variable-missing-fix-checklist.mdx",
+        "content/blog/env-variable-missing-fix-mistakes.mdx",
+        "content/blog/env-variable-missing-fix.mdx"
+      ],
+      "groupKey": "env-variable-missing-fix",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "环境变量 missing 常见错误和解决步骤",
+        "环境变量 missing 怎么排查",
+        "环境变量 missing 排查检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/first-portfolio-case-realistic-checklist.mdx",
+        "content/blog/first-portfolio-case-realistic-mistakes.mdx",
+        "content/blog/first-portfolio-case-realistic.mdx"
+      ],
+      "groupKey": "first-portfolio-case-realistic",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "第一个作品集案例常见错误和修正方法",
+        "第一个作品集案例怎么做才真实",
+        "第一个作品集案例真实性检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/ai-freelance-automation-compliance-risk-checklist.mdx",
+        "content/blog/ai-freelance-automation-compliance-risk-mistakes.mdx",
+        "content/blog/ai-freelance-automation-compliance-risk.mdx"
+      ],
+      "groupKey": "freelance-automation-compliance-risk",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "AI 自动化接单合规风险检查清单",
+        "AI 自动化接单常见合规错误和解决步骤",
+        "AI 自动化接单有哪些合规风险"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/freelance-beginner-scope-confirmation-checklist.mdx",
+        "content/blog/freelance-beginner-scope-confirmation-mistakes.mdx",
+        "content/blog/freelance-beginner-scope-confirmation.mdx"
+      ],
+      "groupKey": "freelance-beginner-scope-confirmation",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "自由职业新手怎么和客户确认范围",
+        "自由职业范围确认常见错误和解决步骤",
+        "自由职业范围确认检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/ai-freelance-common-misconceptions-checklist.mdx",
+        "content/blog/ai-freelance-common-misconceptions-mistakes.mdx",
+        "content/blog/ai-freelance-common-misconceptions.mdx"
+      ],
+      "groupKey": "freelance-common-misconceptions",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "AI 接单常见误区有哪些",
+        "AI 接单常见误区自查清单",
+        "AI 接单误区的常见错误和解决步骤"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/ai-freelance-30-day-execution-checklist.mdx",
+        "content/blog/ai-freelance-30-day-execution-mistakes.mdx",
+        "content/blog/ai-freelance-30-day-execution.mdx"
+      ],
+      "groupKey": "freelance-day-execution",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "新手 30 天 AI 接单执行检查清单",
+        "新手 30 天 AI 接单计划常见执行错误",
+        "新手 30 天 AI 接单计划怎么执行"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/ai-freelance-failure-review-checklist.mdx",
+        "content/blog/ai-freelance-failure-review-mistakes.mdx",
+        "content/blog/ai-freelance-failure-review.mdx"
+      ],
+      "groupKey": "freelance-failure-review",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "AI 接单失败复盘常见错误",
+        "AI 接单失败复盘怎么做",
+        "AI 接单失败复盘检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/ai-freelance-first-7-days-checklist.mdx",
+        "content/blog/ai-freelance-first-7-days-mistakes.mdx",
+        "content/blog/ai-freelance-first-7-days.mdx"
+      ],
+      "groupKey": "freelance-first-days",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "AI 接单新手 7 天准备什么",
+        "AI 接单新手 7 天准备常见错误",
+        "AI 接单新手 7 天准备检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/ai-freelance-service-page-copy-checklist.mdx",
+        "content/blog/ai-freelance-service-page-copy-mistakes.mdx",
+        "content/blog/ai-freelance-service-page-copy.mdx"
+      ],
+      "groupKey": "freelance-service-page-copy",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "AI 接单服务页文案常见错误",
+        "AI 接单服务页文案怎么写真诚",
+        "AI 接单服务页文案检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/ai-freelance-skill-roadmap-checklist.mdx",
+        "content/blog/ai-freelance-skill-roadmap-mistakes.mdx",
+        "content/blog/ai-freelance-skill-roadmap.mdx"
+      ],
+      "groupKey": "freelance-skill-roadmap",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "AI 接单技能路线图常见错误",
+        "AI 接单新手技能路线图怎么排",
+        "AI 接单新手技能路线图检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/git-authentication-failed-fix-checklist.mdx",
+        "content/blog/git-authentication-failed-fix-mistakes.mdx",
+        "content/blog/git-authentication-failed-fix.mdx"
+      ],
+      "groupKey": "git-authentication-failed-fix",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "git authentication failed 处理检查清单",
+        "git authentication failed 常见错误和解决步骤",
+        "git authentication failed 怎么解决"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/module-not-found-debug-checklist.mdx",
+        "content/blog/module-not-found-debug-mistakes.mdx",
+        "content/blog/module-not-found-debug.mdx"
+      ],
+      "groupKey": "module-not-found-debug",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "module not found 常见错误和解决步骤",
+        "module not found 报错定位检查清单",
+        "module not found 报错怎么定位文件"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/nextjs-hydration-error-debug-checklist.mdx",
+        "content/blog/nextjs-hydration-error-debug-mistakes.mdx",
+        "content/blog/nextjs-hydration-error-debug.mdx"
+      ],
+      "groupKey": "nextjs-hydration-error-debug",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Next.js hydration error 怎么排查",
+        "Next.js hydration error 怎么排查：常见错误和解决步骤",
+        "Next.js hydration error 怎么排查：新手检查清单"
+      ]
+    },
+    {
+      "files": [
+        "content/blog/node-version-mismatch-fix-checklist.mdx",
+        "content/blog/node-version-mismatch-fix-mistakes.mdx",
+        "content/blog/node-version-mismatch-fix.mdx"
+      ],
+      "groupKey": "node-version-mismatch-fix",
+      "publishedCount": 0,
+      "reason": "similar slug stem",
+      "reviewBatchOverlap": [],
+      "statuses": {
+        "draft": 3
+      },
+      "titles": [
+        "Node 版本不匹配常见错误和解决步骤",
+        "Node 版本不匹配怎么排查",
+        "Node 版本不匹配排查检查清单"
+      ]
+    }
+  ]
+}
