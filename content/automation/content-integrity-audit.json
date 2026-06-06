@@ -1,0 +1,268 @@
+{
+  "generatedAt": "2026-06-06T12:59:35.679Z",
+  "guardrails": {
+    "autoMarkReview": false,
+    "autoPublish": false,
+    "note": "Read-only content integrity audit. It does not edit articles, mark review, or publish."
+  },
+  "summary": {
+    "allIssueItems": 0,
+    "blockingItems": 0,
+    "expansionItems": 19,
+    "filesScanned": 669,
+    "publicItems": 15,
+    "recommendedItems": 3,
+    "waveItems": 3
+  },
+  "blockingItems": [],
+  "issueItems": [],
+  "publicItems": [
+    {
+      "descriptionLength": 88,
+      "file": "content/blog/build-first-webpage-with-codex.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Codex 怎么做第一个网页",
+      "titleLength": 14
+    },
+    {
+      "descriptionLength": 97,
+      "file": "content/blog/codex-code-review-delivery-checklist.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Codex 生成代码后怎么审核：交付前检查清单",
+      "titleLength": 23
+    },
+    {
+      "descriptionLength": 89,
+      "file": "content/blog/codex-generated-code-review-guide.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Codex 生成代码后怎么审核",
+      "titleLength": 15
+    },
+    {
+      "descriptionLength": 101,
+      "file": "content/blog/codex-github-before-commit-checklist.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Codex 和 GitHub 怎么配合：提交代码前检查",
+      "titleLength": 27
+    },
+    {
+      "descriptionLength": 87,
+      "file": "content/blog/codex-install-failed-beginner-fix.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Codex 安装失败怎么办",
+      "titleLength": 13
+    },
+    {
+      "descriptionLength": 102,
+      "file": "content/blog/codex-npm-install-error-beginner-fix.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Codex 项目 npm install 报错怎么办：新手排查步骤",
+      "titleLength": 33
+    },
+    {
+      "descriptionLength": 102,
+      "file": "content/blog/codex-upwork-small-job-risk-checklist.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Codex 接 Upwork 小单怎么判断：风险检查清单",
+      "titleLength": 28
+    },
+    {
+      "descriptionLength": 101,
+      "file": "content/blog/codex-vercel-deploy-preflight-checklist.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Codex 部署 Vercel 前检查什么：上线前清单",
+      "titleLength": 27
+    },
+    {
+      "descriptionLength": 104,
+      "file": "content/blog/codex-vs-claude-code-beginner-checklist.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Codex 和 Claude Code 怎么选：新手对比清单",
+      "titleLength": 30
+    },
+    {
+      "descriptionLength": 72,
+      "file": "content/blog/first-upwork-project-pricing-checklist.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+      "titleLength": 28
+    },
+    {
+      "descriptionLength": 82,
+      "file": "content/blog/payoneer-wise-paypal-beginner-comparison.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看",
+      "titleLength": 39
+    },
+    {
+      "descriptionLength": 64,
+      "file": "content/blog/upwork-client-requirements-analysis-beginner.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Upwork 客户需求太模糊怎么办：新手分析和追问清单",
+      "titleLength": 27
+    },
+    {
+      "descriptionLength": 80,
+      "file": "content/blog/upwork-proposal-no-reply-checklist.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Upwork Proposal 发出去没人回怎么办：新手检查清单",
+      "titleLength": 32
+    },
+    {
+      "descriptionLength": 87,
+      "file": "content/blog/vercel-env-variable-missing-beginner-guide.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Vercel 提示环境变量缺失怎么办：新手部署检查流程",
+      "titleLength": 27
+    },
+    {
+      "descriptionLength": 89,
+      "file": "content/blog/what-is-codex-beginner-start.mdx",
+      "issues": [],
+      "scope": [
+        "public"
+      ],
+      "status": "published",
+      "title": "Codex 是什么新手怎么开始",
+      "titleLength": 15
+    }
+  ],
+  "recommendedItems": [
+    {
+      "descriptionLength": 69,
+      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "issues": [],
+      "scope": [
+        "recommended",
+        "wave-1",
+        "expansion"
+      ],
+      "status": "draft",
+      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+      "titleLength": 47
+    },
+    {
+      "descriptionLength": 52,
+      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "issues": [],
+      "scope": [
+        "recommended",
+        "wave-1",
+        "expansion"
+      ],
+      "status": "draft",
+      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+      "titleLength": 29
+    },
+    {
+      "descriptionLength": 67,
+      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "issues": [],
+      "scope": [
+        "recommended",
+        "wave-1",
+        "expansion"
+      ],
+      "status": "draft",
+      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+      "titleLength": 37
+    }
+  ],
+  "waveItems": [
+    {
+      "descriptionLength": 69,
+      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "issues": [],
+      "scope": [
+        "recommended",
+        "wave-1",
+        "expansion"
+      ],
+      "status": "draft",
+      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+      "titleLength": 47
+    },
+    {
+      "descriptionLength": 52,
+      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "issues": [],
+      "scope": [
+        "recommended",
+        "wave-1",
+        "expansion"
+      ],
+      "status": "draft",
+      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+      "titleLength": 29
+    },
+    {
+      "descriptionLength": 67,
+      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "issues": [],
+      "scope": [
+        "recommended",
+        "wave-1",
+        "expansion"
+      ],
+      "status": "draft",
+      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+      "titleLength": 37
+    }
+  ]
+}

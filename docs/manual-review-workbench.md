@@ -1,6 +1,6 @@
 # Manual Review Workbench
 
-Generated at: 2026-06-06T12:52:44.532Z
+Generated at: 2026-06-06T12:59:45.023Z
 
 This workbench is read-only. It does not publish articles or mark drafts for review.
 
@@ -192,8 +192,18 @@ Next review files:
 - Search Console verification evidence: false
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 65
+- Traffic claim files scanned: 67
 - Traffic claim watch mentions: 387
+
+## Content Integrity
+
+- Files scanned: 669
+- Blocking items: 0
+- All issue items: 0
+- Public items: 15
+- Recommended items: 3
+- Wave items: 3
+- Expansion items: 19
 
 ## AI Deployment Coverage
 
@@ -239,6 +249,7 @@ Next review files:
 - Review the current publish readiness items in docs/publish-readiness-pack.md.
 - Use docs/wave-approval-packet.md as the focused Wave 1 approval packet.
 - Use docs/wave-publish-simulation.md for the exact post-approval mark-review and publish dry-run path.
+- Use docs/content-integrity-audit.md to confirm encoding, metadata, and indexing boundaries before approval.
 - Use docs/public-expansion-queue.md as the approval-wave order for expanding public articles.
 - Use docs/traffic-evidence-audit.md before making any traffic or Search Console performance claim.
 - Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.

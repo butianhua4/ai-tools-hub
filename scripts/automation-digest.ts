@@ -211,6 +211,18 @@ type TrafficClaimGuard = {
   };
 };
 
+type ContentIntegrity = {
+  summary: {
+    allIssueItems: number;
+    blockingItems: number;
+    expansionItems: number;
+    filesScanned: number;
+    publicItems: number;
+    recommendedItems: number;
+    waveItems: number;
+  };
+};
+
 const reports = {
   cannibalization: readJson<{ summary: { conflicts: number; reviewBatchConflicts: number } }>("content/automation/content-cannibalization.json"),
   freshness: readJson<{ summary: { currentReviewItems: number; highRisk: number; mediumRisk: number; plannedReviewItems: number } }>(
@@ -250,6 +262,7 @@ const reports = {
   wavePublishSimulation: readJson<WavePublishSimulation>("content/automation/wave-publish-simulation.json"),
   trafficEvidence: readJson<TrafficEvidence>("content/automation/traffic-evidence-audit.json"),
   trafficClaimGuard: readJson<TrafficClaimGuard>("content/automation/traffic-claim-guard.json"),
+  contentIntegrity: readJson<ContentIntegrity>("content/automation/content-integrity-audit.json"),
   review: readJson<{ counts: { candidates: number; returned: number; rejected: Record<string, number> }; recommendedToday: ReviewCandidate[] }>(
     "content/automation/review-candidates.json",
   ),
@@ -280,6 +293,7 @@ const payload = {
     seoOk: reports.seo.data?.ok ?? false,
     trafficDataAvailable: reports.trafficEvidence.data?.summary.trafficDataAvailable ?? false,
   },
+  contentIntegrity: reports.contentIntegrity.data?.summary ?? null,
   publishingBoundary: {
     publicPublished: reports.project.data?.articles.publicPublished ?? null,
     publishableNow: reports.project.data?.articles.publishableNow.length ?? null,
@@ -457,6 +471,9 @@ function buildNextActions() {
   if (!reports.trafficClaimGuard.data || reports.trafficClaimGuard.data.summary.unsafeClaims > 0) {
     return ["Open docs/traffic-claim-guard.md and remove unsupported traffic claims."];
   }
+  if (!reports.contentIntegrity.data || reports.contentIntegrity.data.summary.blockingItems > 0) {
+    return ["Open docs/content-integrity-audit.md and fix content integrity blockers before any review or publish action."];
+  }
   if (!reports.reviewCoverage.data || reports.reviewCoverage.data.summary.missingCoverage > 0) {
     return ["Open docs/review-coverage-report.md and regenerate coverage for all planned review candidates."];
   }
@@ -489,6 +506,24 @@ function toMarkdown(data: typeof payload) {
     `- Searchability score: ${data.health.searchabilityScore}`,
     `- Traffic data available: ${data.health.trafficDataAvailable}`,
     `- Missing reports: ${data.health.missingReports.length ? data.health.missingReports.join(", ") : "none"}`,
+    "",
+    "## Content Integrity",
+    "",
+    data.contentIntegrity
+      ? `- Files scanned: ${data.contentIntegrity.filesScanned}`
+      : "- Files scanned: missing",
+    data.contentIntegrity
+      ? `- Blocking items: ${data.contentIntegrity.blockingItems}`
+      : "- Blocking items: missing",
+    data.contentIntegrity
+      ? `- Public items: ${data.contentIntegrity.publicItems}`
+      : "- Public items: missing",
+    data.contentIntegrity
+      ? `- Recommended items: ${data.contentIntegrity.recommendedItems}`
+      : "- Recommended items: missing",
+    data.contentIntegrity
+      ? `- Wave items: ${data.contentIntegrity.waveItems}`
+      : "- Wave items: missing",
     "",
     "## Publishing Boundary",
     "",

@@ -180,6 +180,18 @@ type TrafficClaimGuard = {
   };
 };
 
+type ContentIntegrity = {
+  summary: {
+    allIssueItems: number;
+    blockingItems: number;
+    expansionItems: number;
+    filesScanned: number;
+    publicItems: number;
+    recommendedItems: number;
+    waveItems: number;
+  };
+};
+
 type ProjectStatus = {
   articles: { publicPublished: number; publishableNow: unknown[]; statusCounts: Record<string, number> };
 };
@@ -203,6 +215,7 @@ function main() {
   const wavePublishSimulation = readJson<WavePublishSimulation>("content/automation/wave-publish-simulation.json");
   const trafficEvidence = readJson<TrafficEvidence>("content/automation/traffic-evidence-audit.json");
   const trafficClaimGuard = readJson<TrafficClaimGuard>("content/automation/traffic-claim-guard.json");
+  const contentIntegrity = readJson<ContentIntegrity>("content/automation/content-integrity-audit.json");
   const deploymentCoverage = readJson<DeploymentCoverage>("content/automation/ai-deployment-coverage.json");
   const promptCoverage = readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json");
   const projectStatus = readJson<ProjectStatus>("content/automation/project-status.json");
@@ -324,6 +337,7 @@ function main() {
       trafficDataAvailable: trafficEvidence.summary.trafficDataAvailable,
     },
     trafficClaimGuard: trafficClaimGuard.summary,
+    contentIntegrity: contentIntegrity.summary,
     deploymentCoverage: {
       summary: deploymentCoverage.summary,
       topTopics: deploymentCoverage.coverage.slice(0, 6).map((item) => ({
@@ -354,6 +368,7 @@ function main() {
       wavePublishSimulation,
       trafficEvidence,
       trafficClaimGuard,
+      contentIntegrity,
     ),
   };
 
@@ -378,6 +393,7 @@ function buildNextActions(
   wavePublishSimulation: WavePublishSimulation,
   trafficEvidence: TrafficEvidence,
   trafficClaimGuard: TrafficClaimGuard,
+  contentIntegrity: ContentIntegrity,
 ) {
   if (projectStatus.articles.publishableNow.length > 0) return ["Stop and inspect publishableNow before adding more review candidates."];
   if (!liveSearch.ok || liveSearch.failedChecks.length > 0) return ["Fix live search surface failures before any publishing action."];
@@ -403,6 +419,7 @@ function buildNextActions(
   }
   if (trafficEvidence.summary.failedChecks > 0) return ["Resolve traffic evidence audit failures before reporting traffic status."];
   if (trafficClaimGuard.summary.unsafeClaims > 0) return ["Remove unsupported traffic claims before reporting traffic status."];
+  if (contentIntegrity.summary.blockingItems > 0) return ["Fix content integrity blockers before any mark:review action."];
   if (
     reviewCoverage.summary.itemsMissingOfficialSources > 0 ||
     reviewCoverage.summary.itemsMissingFactCheckQueries > 0 ||
@@ -414,6 +431,7 @@ function buildNextActions(
     "Review the current publish readiness items in docs/publish-readiness-pack.md.",
     "Use docs/wave-approval-packet.md as the focused Wave 1 approval packet.",
     "Use docs/wave-publish-simulation.md for the exact post-approval mark-review and publish dry-run path.",
+    "Use docs/content-integrity-audit.md to confirm encoding, metadata, and indexing boundaries before approval.",
     "Use docs/public-expansion-queue.md as the approval-wave order for expanding public articles.",
     "Use docs/traffic-evidence-audit.md before making any traffic or Search Console performance claim.",
     "Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.",
@@ -499,6 +517,7 @@ function toMarkdown(payload: {
     trafficDataAvailable: boolean;
   };
   trafficClaimGuard: { filesScanned: number; unsafeClaims: number; watchMentions: number };
+  contentIntegrity: ContentIntegrity["summary"];
   deploymentCoverage: {
     summary: DeploymentCoverage["summary"];
     topTopics: Array<{ candidates: number; gapScore: number; publicMatches: number; topic: string }>;
@@ -676,6 +695,16 @@ function toMarkdown(payload: {
     `- Unsupported traffic claims: ${payload.trafficClaimGuard.unsafeClaims}`,
     `- Traffic claim files scanned: ${payload.trafficClaimGuard.filesScanned}`,
     `- Traffic claim watch mentions: ${payload.trafficClaimGuard.watchMentions}`,
+    "",
+    "## Content Integrity",
+    "",
+    `- Files scanned: ${payload.contentIntegrity.filesScanned}`,
+    `- Blocking items: ${payload.contentIntegrity.blockingItems}`,
+    `- All issue items: ${payload.contentIntegrity.allIssueItems}`,
+    `- Public items: ${payload.contentIntegrity.publicItems}`,
+    `- Recommended items: ${payload.contentIntegrity.recommendedItems}`,
+    `- Wave items: ${payload.contentIntegrity.waveItems}`,
+    `- Expansion items: ${payload.contentIntegrity.expansionItems}`,
     "",
     "## AI Deployment Coverage",
     "",

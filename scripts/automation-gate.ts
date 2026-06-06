@@ -174,6 +174,16 @@ async function main() {
       watchMentions: number;
     };
   }>("content/automation/traffic-claim-guard.json");
+  const contentIntegrity = readJson<{
+    guardrails: { autoMarkReview: boolean; autoPublish: boolean };
+    summary: {
+      blockingItems: number;
+      filesScanned: number;
+      publicItems: number;
+      recommendedItems: number;
+      waveItems: number;
+    };
+  }>("content/automation/content-integrity-audit.json");
   const articles = (await articleFiles()).map(readArticle);
 
   const reviewFiles = reviewQueue.recommendedToday.map((item) => item.file);
@@ -293,6 +303,23 @@ async function main() {
         trafficClaimGuard.summary.filesScanned > 0 &&
         trafficClaimGuard.summary.unsafeClaims === 0,
       detail: `filesScanned=${trafficClaimGuard.summary.filesScanned}, unsafeClaims=${trafficClaimGuard.summary.unsafeClaims}, watchMentions=${trafficClaimGuard.summary.watchMentions}`,
+    },
+    {
+      name: "content integrity audit is read-only and clean",
+      ok:
+        contentIntegrity.guardrails.autoMarkReview === false &&
+        contentIntegrity.guardrails.autoPublish === false &&
+        contentIntegrity.summary.filesScanned === articles.length &&
+        contentIntegrity.summary.blockingItems === 0,
+      detail: `filesScanned=${contentIntegrity.summary.filesScanned}, blockingItems=${contentIntegrity.summary.blockingItems}`,
+    },
+    {
+      name: "content integrity audit covers public, recommended, and Wave 1 items",
+      ok:
+        contentIntegrity.summary.publicItems === projectStatus.articles.publicPublished &&
+        contentIntegrity.summary.recommendedItems === reviewQueue.recommendedToday.length &&
+        contentIntegrity.summary.waveItems === waveApprovalPacket.summary.items,
+      detail: `public=${contentIntegrity.summary.publicItems}, recommended=${contentIntegrity.summary.recommendedItems}, wave=${contentIntegrity.summary.waveItems}`,
     },
     {
       name: "SEO opportunity map has review-ready drafts",

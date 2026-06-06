@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T12:52:44.532Z",
+  "generatedAt": "2026-06-06T12:59:45.023Z",
   "guardrails": {
     "autoMarkReview": false,
     "autoPublish": false,
@@ -815,10 +815,19 @@
     "trafficDataAvailable": false
   },
   "trafficClaimGuard": {
-    "filesScanned": 65,
+    "filesScanned": 67,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
     "watchMentions": 387
+  },
+  "contentIntegrity": {
+    "allIssueItems": 0,
+    "blockingItems": 0,
+    "expansionItems": 19,
+    "filesScanned": 669,
+    "publicItems": 15,
+    "recommendedItems": 3,
+    "waveItems": 3
   },
   "deploymentCoverage": {
     "summary": {
@@ -930,6 +939,7 @@
     "Review the current publish readiness items in docs/publish-readiness-pack.md.",
     "Use docs/wave-approval-packet.md as the focused Wave 1 approval packet.",
     "Use docs/wave-publish-simulation.md for the exact post-approval mark-review and publish dry-run path.",
+    "Use docs/content-integrity-audit.md to confirm encoding, metadata, and indexing boundaries before approval.",
     "Use docs/public-expansion-queue.md as the approval-wave order for expanding public articles.",
     "Use docs/traffic-evidence-audit.md before making any traffic or Search Console performance claim.",
     "Use docs/review-priority-roadmap.md as the merged priority list before deciding the next manual review batch.",
