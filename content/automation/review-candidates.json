@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T09:35:24.740Z",
+  "generatedAt": "2026-06-06T09:39:49.540Z",
   "guardrails": {
     "autoPublish": false,
     "nextHumanAction": "Open each candidate, verify facts and risk language, then run mark:review with --confirm-human for approved files.",
@@ -14,12 +14,11 @@
     "blockedPattern": "保证赚钱|自动群发客户|自动群发|绕过平台规则|站外付款|规避平台规则|无风险|这篇文章默认是草稿|发布前必须补齐|脚本生成的原创草稿|这篇草稿默认是 draft|脚本生成原创草稿"
   },
   "counts": {
-    "candidates": 517,
+    "candidates": 629,
     "returned": 25,
     "rejected": {
       "status:published": 15,
-      "status:archived": 21,
-      "blocked-pattern": 112
+      "status:archived": 21
     }
   },
   "recommendedToday": [

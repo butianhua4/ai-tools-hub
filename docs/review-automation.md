@@ -1,6 +1,6 @@
 # Review Automation Queue
 
-Generated at: 2026-06-06T09:35:24.740Z
+Generated at: 2026-06-06T09:39:49.540Z
 
 This automation does not publish articles. It only ranks safe-looking draft candidates for human review.
 
@@ -12,12 +12,11 @@ This automation does not publish articles. It only ranks safe-looking draft cand
 
 ## Counts
 
-- Candidates: 517
+- Candidates: 629
 - Returned: 25
 
 ## Rejected
 
-- blocked-pattern: 112
 - status:archived: 21
 - status:published: 15
 
