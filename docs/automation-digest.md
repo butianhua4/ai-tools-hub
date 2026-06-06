@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-06T17:05:51.069Z
+Generated at: 2026-06-06T17:13:45.024Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -144,6 +144,26 @@ Unsafe assignment items:
 | true | 1208 | ai-deployment | deployment, public-gap | 2 | 8 | 0 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
 | true | 1093 | public-coverage-gap | public-gap | 2 | 4 | 0 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
 | true | 578 | industry-prompt | prompt | 5 | 4 | 0 | 客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断 | content/blog/customer-service-ai-prompts-guide.mdx |
+
+## Autopilot Approval Packet
+
+- Items: 3
+- Ready for human approval: 3
+- With source targets: 3
+- With search queries: 3
+- With headings: 3
+- Queue unsafe items: 0
+- Unsafe items: 0
+
+Unsafe packet items:
+
+- none
+
+| Ready | Score | Lane | Status | noindex | Sources | Queries | Headings | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| true | 1688 | industry-prompt | draft | true | 9 | 8 | 8 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| true | 1643 | ai-deployment | draft | true | 6 | 8 | 8 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| true | 1253 | ai-deployment | draft | true | 5 | 8 | 8 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
 
 ## Review Optimization Brief
 
@@ -340,8 +360,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 109
-- Traffic claim watch mentions: 882
+- Traffic claim files scanned: 111
+- Traffic claim watch mentions: 895
 
 ## Preflight
 
@@ -703,7 +723,7 @@ Next review files:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-06T17:05:21.947Z
+- Latest check: 2026-06-06T17:13:22.751Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85
@@ -728,6 +748,7 @@ Next review files:
 - Use docs/review-action-board.md as the prioritized task board for Wave 1 and public-gap manual review.
 - Use docs/review-portfolio-board.md to deduplicate Wave, public-gap, deployment, and prompt review candidates before assigning manual review.
 - Use docs/autopilot-review-queue.md as the ordered next-10 manual review assignment queue.
+- Use docs/autopilot-approval-packet.md as the top-3 packet for human approval.
 - Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.
 - If approved by a human, run mark:review with --confirm-human for approved files only.
 - Publish only status=review articles in a 1-3 article batch after a dry-run.

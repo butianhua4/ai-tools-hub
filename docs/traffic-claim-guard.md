@@ -1,14 +1,14 @@
 # Traffic Claim Guard
-Generated at: 2026-06-06T17:05:36.427Z
+Generated at: 2026-06-06T17:13:36.834Z
 This guard scans operational reports and docs for unsupported claims that real traffic, clicks, impressions, or visits already exist.
 ## Guardrails
 - Auto publish: false
 - Note: This guard scans operational docs and automation reports for unsupported traffic claims. It does not scan draft article teaching examples.
 ## Summary
-- filesScanned: 109
+- filesScanned: 111
 - measuredTrafficUnavailable: true
 - unsafeClaims: 0
-- watchMentions: 882
+- watchMentions: 895
 ## Unsafe Claims
 None.
 ## Watch Mentions
@@ -33,18 +33,23 @@ None.
 | docs/ai-deployment-review-pack.md | 562 | - No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim. |
 | docs/ai-deployment-review-pack.md | 618 | - No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim. |
 | docs/automation-digest.md | 14 | - Traffic data available: false |
-| docs/automation-digest.md | 333 | ## Traffic Evidence |
-| docs/automation-digest.md | 335 | - Traffic data available: false |
-| docs/automation-digest.md | 336 | - Can claim traffic: false |
-| docs/automation-digest.md | 338 | - Measured traffic sources: none |
-| docs/automation-digest.md | 339 | - Search Console verification evidence: false |
-| docs/automation-digest.md | 342 | - Unsupported traffic claims: 0 |
-| docs/automation-digest.md | 343 | - Traffic claim files scanned: 109 |
-| docs/automation-digest.md | 344 | - Traffic claim watch mentions: 862 |
-| docs/automation-digest.md | 380 | \| Dify、n8n、MCP 和无代码 AI 自动化 \| 258 \| 0 \| 5 \| 无代码 AI 自动化容易吸引搜索流量，也最需要平台规则和权限边界提醒。 \| |
+| docs/automation-digest.md | 353 | ## Traffic Evidence |
+| docs/automation-digest.md | 355 | - Traffic data available: false |
+| docs/automation-digest.md | 356 | - Can claim traffic: false |
+| docs/automation-digest.md | 358 | - Measured traffic sources: none |
+| docs/automation-digest.md | 359 | - Search Console verification evidence: false |
+| docs/automation-digest.md | 362 | - Unsupported traffic claims: 0 |
+| docs/automation-digest.md | 363 | - Traffic claim files scanned: 111 |
+| docs/automation-digest.md | 364 | - Traffic claim watch mentions: 895 |
+| docs/automation-digest.md | 400 | \| Dify、n8n、MCP 和无代码 AI 自动化 \| 258 \| 0 \| 5 \| 无代码 AI 自动化容易吸引搜索流量，也最需要平台规则和权限边界提醒。 \| |
 | docs/automation-gate.md | 31 | \| traffic evidence audit passed and is read-only \| PASS \| failedChecks=0, measuredTrafficSources=0 \| |
 | docs/automation-gate.md | 32 | \| traffic is not claimed without measured metrics \| PASS \| trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 \| |
-| docs/automation-gate.md | 33 | \| traffic claim guard found no unsupported claims \| PASS \| filesScanned=109, unsafeClaims=0, watchMentions=862 \| |
+| docs/automation-gate.md | 33 | \| traffic claim guard found no unsupported claims \| PASS \| filesScanned=111, unsafeClaims=0, watchMentions=895 \| |
+| docs/autopilot-approval-packet.md | 18 | - Traffic data available: false |
+| docs/autopilot-approval-packet.md | 19 | - Can claim traffic: false |
+| docs/autopilot-approval-packet.md | 95 | - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence. |
+| docs/autopilot-approval-packet.md | 150 | - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence. |
+| docs/autopilot-approval-packet.md | 204 | - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence. |
 | docs/autopilot-review-queue.md | 18 | - Traffic data available: false |
 | docs/autopilot-review-queue.md | 19 | - Can claim traffic: false |
 | docs/autopilot-review-queue.md | 67 | - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence. |
@@ -89,11 +94,6 @@ None.
 | docs/industry-prompt-review-pack.md | 268 | - Confirm the article does not promise rankings, traffic, revenue, legal outcomes, medical outcomes, or guaranteed conversion. |
 | docs/industry-prompt-review-pack.md | 308 | - No fabricated metrics, rankings, traffic, income, or client results. |
 | docs/industry-prompt-review-pack.md | 319 | - Confirm the article does not promise rankings, traffic, revenue, legal outcomes, medical outcomes, or guaranteed conversion. |
-| docs/industry-prompt-review-pack.md | 359 | - No fabricated metrics, rankings, traffic, income, or client results. |
-| docs/industry-prompt-review-pack.md | 370 | - Confirm the article does not promise rankings, traffic, revenue, legal outcomes, medical outcomes, or guaranteed conversion. |
-| docs/industry-prompt-review-pack.md | 410 | - No fabricated metrics, rankings, traffic, income, or client results. |
-| docs/industry-prompt-review-pack.md | 421 | - Confirm the article does not promise rankings, traffic, revenue, legal outcomes, medical outcomes, or guaranteed conversion. |
-| docs/industry-prompt-review-pack.md | 461 | - No fabricated metrics, rankings, traffic, income, or client results. |
 ## Next Actions
 - Keep saying that live/search surfaces are healthy, not that traffic exists.
 - Only report traffic after an audited source provides clicks, impressions, visits, or pageviews.

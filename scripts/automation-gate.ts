@@ -502,6 +502,34 @@ async function main() {
       withSourceTargets: number;
     };
   }>("content/automation/autopilot-review-queue.json");
+  const autopilotApprovalPacket = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
+    items?: Array<{
+      articleMeta?: {
+        humanReviewRequired?: boolean;
+        noindex?: boolean;
+        status?: string;
+      };
+      commandBoundary?: {
+        markReviewAfterHumanApproval?: string;
+        publishConfirm?: string;
+        publishDryRunAfterReview?: string;
+        stopBefore?: string;
+      };
+      readyForHumanApproval?: boolean;
+      searchQueries?: unknown[];
+      sourceTargets?: unknown[];
+    }>;
+    summary: {
+      items: number;
+      queueUnsafeItems: number;
+      readyForHumanApproval: number;
+      unsafeItems: number;
+      withHeadings: number;
+      withSearchQueries: number;
+      withSourceTargets: number;
+    };
+  }>("content/automation/autopilot-approval-packet.json");
   const reviewOptimizationBrief = readJson<{
     briefs?: Array<{
       file: string;
@@ -876,6 +904,40 @@ async function main() {
           ),
         ),
       detail: `ready=${autopilotReviewQueue.summary.readyItems}, safe=${autopilotReviewQueue.summary.safeDraftItems}, unsafe=${autopilotReviewQueue.summary.unsafeItems}`,
+    },
+    {
+      name: "autopilot approval packet packages the top safe assignments",
+      ok:
+        autopilotApprovalPacket.guardrails.autoEditArticles === false &&
+        autopilotApprovalPacket.guardrails.autoMarkReview === false &&
+        autopilotApprovalPacket.guardrails.autoPublish === false &&
+        autopilotApprovalPacket.summary.items === 3 &&
+        autopilotApprovalPacket.summary.queueUnsafeItems === 0 &&
+        autopilotApprovalPacket.summary.readyForHumanApproval === autopilotApprovalPacket.summary.items &&
+        autopilotApprovalPacket.summary.withSourceTargets === autopilotApprovalPacket.summary.items &&
+        autopilotApprovalPacket.summary.withSearchQueries === autopilotApprovalPacket.summary.items,
+      detail: `items=${autopilotApprovalPacket.summary.items}, ready=${autopilotApprovalPacket.summary.readyForHumanApproval}, sources=${autopilotApprovalPacket.summary.withSourceTargets}, queries=${autopilotApprovalPacket.summary.withSearchQueries}`,
+    },
+    {
+      name: "autopilot approval packet keeps publish and review commands human-gated",
+      ok:
+        autopilotApprovalPacket.summary.unsafeItems === 0 &&
+        Boolean(
+          autopilotApprovalPacket.items?.every(
+            (item) =>
+              item.readyForHumanApproval === true &&
+              item.articleMeta?.status === "draft" &&
+              item.articleMeta?.noindex === true &&
+              item.articleMeta?.humanReviewRequired === true &&
+              (item.sourceTargets?.length || 0) > 0 &&
+              (item.searchQueries?.length || 0) > 0 &&
+              item.commandBoundary?.markReviewAfterHumanApproval?.includes("--confirm-human") &&
+              !item.commandBoundary?.publishDryRunAfterReview?.includes("--confirm") &&
+              item.commandBoundary?.publishConfirm === "not-included" &&
+              item.commandBoundary?.stopBefore?.includes("explicit"),
+          ),
+        ),
+      detail: `unsafe=${autopilotApprovalPacket.summary.unsafeItems}, headings=${autopilotApprovalPacket.summary.withHeadings}`,
     },
     {
       name: "review optimization brief is read-only and covers ready action-board tasks",

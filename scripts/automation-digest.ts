@@ -392,6 +392,34 @@ type AutopilotReviewQueue = {
   unsafeItems: unknown[];
 };
 
+type AutopilotApprovalPacket = {
+  items: Array<{
+    articleMeta: {
+      noindex: boolean;
+      status: string;
+    };
+    assignmentLane: string;
+    autopilotScore: number;
+    file: string;
+    headings: string[];
+    readyForHumanApproval: boolean;
+    searchQueries: string[];
+    sourceTargets: string[];
+    sourceTypes: string[];
+    title: string;
+  }>;
+  summary: {
+    items: number;
+    queueUnsafeItems: number;
+    readyForHumanApproval: number;
+    unsafeItems: number;
+    withHeadings: number;
+    withSearchQueries: number;
+    withSourceTargets: number;
+  };
+  unsafeItems: unknown[];
+};
+
 type ReviewOptimizationBrief = {
   nextBriefs: Array<{
     file: string;
@@ -763,6 +791,7 @@ const reports = {
   reviewActionBoard: readJson<ReviewActionBoard>("content/automation/review-action-board.json"),
   reviewPortfolioBoard: readJson<ReviewPortfolioBoard>("content/automation/review-portfolio-board.json"),
   autopilotReviewQueue: readJson<AutopilotReviewQueue>("content/automation/autopilot-review-queue.json"),
+  autopilotApprovalPacket: readJson<AutopilotApprovalPacket>("content/automation/autopilot-approval-packet.json"),
   reviewOptimizationBrief: readJson<ReviewOptimizationBrief>("content/automation/review-optimization-brief.json"),
   reviewCannibalizationBrief: readJson<ReviewCannibalizationBrief>("content/automation/review-cannibalization-brief.json"),
   reviewFreshnessBrief: readJson<ReviewFreshnessBrief>("content/automation/review-freshness-brief.json"),
@@ -856,6 +885,17 @@ const payload = {
     unsafeItemList: reports.autopilotReviewQueue.data?.unsafeItems.slice(0, 8) ?? [],
     withSearchQueries: reports.autopilotReviewQueue.data?.summary.withSearchQueries ?? null,
     withSourceTargets: reports.autopilotReviewQueue.data?.summary.withSourceTargets ?? null,
+  },
+  autopilotApprovalPacket: {
+    items: reports.autopilotApprovalPacket.data?.summary.items ?? null,
+    packetItems: reports.autopilotApprovalPacket.data?.items.slice(0, 3) ?? [],
+    queueUnsafeItems: reports.autopilotApprovalPacket.data?.summary.queueUnsafeItems ?? null,
+    readyForHumanApproval: reports.autopilotApprovalPacket.data?.summary.readyForHumanApproval ?? null,
+    unsafeItems: reports.autopilotApprovalPacket.data?.summary.unsafeItems ?? null,
+    unsafeItemList: reports.autopilotApprovalPacket.data?.unsafeItems.slice(0, 8) ?? [],
+    withHeadings: reports.autopilotApprovalPacket.data?.summary.withHeadings ?? null,
+    withSearchQueries: reports.autopilotApprovalPacket.data?.summary.withSearchQueries ?? null,
+    withSourceTargets: reports.autopilotApprovalPacket.data?.summary.withSourceTargets ?? null,
   },
   reviewOptimizationBrief: {
     briefs: reports.reviewOptimizationBrief.data?.summary.briefs ?? null,
@@ -1207,6 +1247,9 @@ function buildNextActions() {
   if (!reports.autopilotReviewQueue.data || reports.autopilotReviewQueue.data.summary.unsafeItems > 0) {
     return ["Open docs/autopilot-review-queue.md and resolve unsafe review assignments before any mark:review command."];
   }
+  if (!reports.autopilotApprovalPacket.data || reports.autopilotApprovalPacket.data.summary.unsafeItems > 0) {
+    return ["Open docs/autopilot-approval-packet.md and resolve unsafe approval packet items before any mark:review command."];
+  }
   if (!reports.reviewOptimizationBrief.data || reports.reviewOptimizationBrief.data.summary.unsafeCommands > 0) {
     return ["Open docs/review-optimization-brief.md and resolve unsafe or missing copydesk guidance before manual review."];
   }
@@ -1271,6 +1314,7 @@ function buildNextActions() {
     "Use docs/review-action-board.md as the prioritized task board for Wave 1 and public-gap manual review.",
     "Use docs/review-portfolio-board.md to deduplicate Wave, public-gap, deployment, and prompt review candidates before assigning manual review.",
     "Use docs/autopilot-review-queue.md as the ordered next-10 manual review assignment queue.",
+    "Use docs/autopilot-approval-packet.md as the top-3 packet for human approval.",
     "Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.",
     "If approved by a human, run mark:review with --confirm-human for approved files only.",
     "Publish only status=review articles in a 1-3 article batch after a dry-run.",
@@ -1425,6 +1469,27 @@ function toMarkdown(data: typeof payload) {
     ...data.autopilotReviewQueue.nextAssignmentItems.map(
       (item) =>
         `| ${item.readyForAssignment} | ${item.autopilotScore} | ${item.assignmentLane} | ${item.sourceTypes.join(", ")} | ${item.sourceTargets.length} | ${item.searchQueries.length} | ${item.blockers.length} | ${item.title} | ${item.file} |`,
+    ),
+    "",
+    "## Autopilot Approval Packet",
+    "",
+    `- Items: ${data.autopilotApprovalPacket.items}`,
+    `- Ready for human approval: ${data.autopilotApprovalPacket.readyForHumanApproval}`,
+    `- With source targets: ${data.autopilotApprovalPacket.withSourceTargets}`,
+    `- With search queries: ${data.autopilotApprovalPacket.withSearchQueries}`,
+    `- With headings: ${data.autopilotApprovalPacket.withHeadings}`,
+    `- Queue unsafe items: ${data.autopilotApprovalPacket.queueUnsafeItems}`,
+    `- Unsafe items: ${data.autopilotApprovalPacket.unsafeItems}`,
+    "",
+    "Unsafe packet items:",
+    "",
+    ...(data.autopilotApprovalPacket.unsafeItemList.length ? data.autopilotApprovalPacket.unsafeItemList.map((item) => `- ${JSON.stringify(item)}`) : ["- none"]),
+    "",
+    "| Ready | Score | Lane | Status | noindex | Sources | Queries | Headings | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...data.autopilotApprovalPacket.packetItems.map(
+      (item) =>
+        `| ${item.readyForHumanApproval} | ${item.autopilotScore} | ${item.assignmentLane} | ${item.articleMeta.status} | ${item.articleMeta.noindex} | ${item.sourceTargets.length} | ${item.searchQueries.length} | ${item.headings.length} | ${item.title} | ${item.file} |`,
     ),
     "",
     "## Review Optimization Brief",
