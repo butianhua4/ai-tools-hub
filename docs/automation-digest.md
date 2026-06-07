@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T21:54:40.681Z
+Generated at: 2026-06-07T22:07:07.254Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -117,6 +117,31 @@ This digest is read-only. It summarizes automation reports and does not publish 
 | repair-before-review | 1723 | 6 | none | ChatGPT prompts for business | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
 | repair-before-review | 1598 | 10 | none | RAG 知识库搭建教程 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
 
+## Human Approval Repair Queue
+
+- Approval items: 3
+- Repair before review items: 3
+- Files with tasks: 3
+- Tasks: 57
+- Blocker files/tasks: 0/0
+- Human-gated tasks: 57
+- Publish confirm commands included: 0
+- Traffic data available: false
+- Unsafe items: 0
+- Tasks by category: {"source-url":15,"source-review":3,"search-intent":17,"internal-link":15,"copydesk":3,"approval-boundary":4}
+- Tasks by severity: {"high":18,"medium":39}
+
+| Priority | Severity | Category | Action | Title | File |
+| ---: | --- | --- | --- | --- | --- |
+| 2143 | high | source-url | Confirm source redirect before approval: https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction. | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 2143 | high | source-url | Source URL action: Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent. | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 2143 | high | source-url | Review reason: 10 source URL remediation action(s) need human confirmation. | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 2143 | high | source-url | Resolve or explicitly accept source URL remediation actions before mark:review. | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 2143 | high | source-url | Verify source URLs and fact-check queries before mark:review. | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 2083 | high | source-review | Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported. | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 1983 | medium | search-intent | Resolve or explicitly accept search weakness: no exact search query appears in title. | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 1983 | medium | search-intent | Resolve or explicitly accept search weakness: no exact search query appears in description. | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+
 ## Mojibake Remediation Brief
 
 - Files scanned: 669
@@ -222,7 +247,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=zh-cn
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/ -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
@@ -1310,8 +1335,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 199
-- Traffic claim watch mentions: 3565
+- Traffic claim files scanned: 201
+- Traffic claim watch mentions: 3583
 
 ## Public Surface Inventory
 

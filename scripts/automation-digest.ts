@@ -131,6 +131,32 @@ type HumanApprovalDecisionMatrix = {
   };
 };
 
+type HumanApprovalRepairQueue = {
+  summary: {
+    approvalItems: number;
+    blockerFiles: number;
+    blockerTasks: number;
+    filesWithTasks: number;
+    humanGatedTasks: number;
+    publishConfirmCommandsIncluded: number;
+    repairBeforeReviewItems: number;
+    tasks: number;
+    tasksByCategory: Record<string, number>;
+    tasksBySeverity: Record<string, number>;
+    trafficDataAvailable: boolean;
+    unsafeItems: number;
+  };
+  tasks: Array<{
+    action: string;
+    category: string;
+    file: string;
+    priority: number;
+    proofRequired: string;
+    severity: string;
+    title: string;
+  }>;
+};
+
 type MojibakeRemediationBrief = {
   items: Array<{
     file: string;
@@ -2333,6 +2359,7 @@ const reports = {
   publicCoverageGapPreflight: readJson<PublicCoverageGapPreflight>("content/automation/public-coverage-gap-preflight.json"),
   publicCoverageGapDecisionPack: readJson<PublicCoverageGapDecisionPack>("content/automation/public-coverage-gap-decision-pack.json"),
   humanApprovalDecisionMatrix: readJson<HumanApprovalDecisionMatrix>("content/automation/human-approval-decision-matrix.json"),
+  humanApprovalRepairQueue: readJson<HumanApprovalRepairQueue>("content/automation/human-approval-repair-queue.json"),
   promptCoverage: readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json"),
   promptReviewPack: readJson<PromptReviewPack>("content/automation/industry-prompt-review-pack.json"),
   industryPromptOpportunityBoard: readJson<IndustryPromptOpportunityBoard>("content/automation/industry-prompt-opportunity-board.json"),
@@ -2521,6 +2548,21 @@ const payload = {
     top: reports.humanApprovalDecisionMatrix.data?.rows.slice(0, 5) ?? [],
     trafficDataAvailable: reports.humanApprovalDecisionMatrix.data?.summary.trafficDataAvailable ?? null,
     unsafeItems: reports.humanApprovalDecisionMatrix.data?.summary.unsafeItems ?? null,
+  },
+  humanApprovalRepairQueue: {
+    approvalItems: reports.humanApprovalRepairQueue.data?.summary.approvalItems ?? null,
+    blockerFiles: reports.humanApprovalRepairQueue.data?.summary.blockerFiles ?? null,
+    blockerTasks: reports.humanApprovalRepairQueue.data?.summary.blockerTasks ?? null,
+    filesWithTasks: reports.humanApprovalRepairQueue.data?.summary.filesWithTasks ?? null,
+    humanGatedTasks: reports.humanApprovalRepairQueue.data?.summary.humanGatedTasks ?? null,
+    publishConfirmCommandsIncluded: reports.humanApprovalRepairQueue.data?.summary.publishConfirmCommandsIncluded ?? null,
+    repairBeforeReviewItems: reports.humanApprovalRepairQueue.data?.summary.repairBeforeReviewItems ?? null,
+    tasks: reports.humanApprovalRepairQueue.data?.summary.tasks ?? null,
+    tasksByCategory: reports.humanApprovalRepairQueue.data?.summary.tasksByCategory ?? {},
+    tasksBySeverity: reports.humanApprovalRepairQueue.data?.summary.tasksBySeverity ?? {},
+    top: reports.humanApprovalRepairQueue.data?.tasks.slice(0, 8) ?? [],
+    trafficDataAvailable: reports.humanApprovalRepairQueue.data?.summary.trafficDataAvailable ?? null,
+    unsafeItems: reports.humanApprovalRepairQueue.data?.summary.unsafeItems ?? null,
   },
   mojibakeRemediation: {
     affectedDraftFiles: reports.mojibakeRemediation.data?.summary.affectedDraftFiles ?? null,
@@ -3598,6 +3640,13 @@ function buildNextActions() {
     return ["Open docs/human-approval-decision-matrix.md and resolve decision matrix safety issues before any mark:review command."];
   }
   if (
+    !reports.humanApprovalRepairQueue.data ||
+    reports.humanApprovalRepairQueue.data.summary.unsafeItems > 0 ||
+    reports.humanApprovalRepairQueue.data.summary.publishConfirmCommandsIncluded > 0
+  ) {
+    return ["Open docs/human-approval-repair-queue.md and resolve repair queue guardrail issues before assigning draft repair work."];
+  }
+  if (
     !reports.mojibakeRemediation.data ||
     reports.mojibakeRemediation.data.summary.unsafeItems > 0 ||
     reports.mojibakeRemediation.data.summary.publishConfirmCommandsIncluded > 0
@@ -4009,6 +4058,26 @@ function toMarkdown(data: typeof payload) {
     ...data.humanApprovalDecisionMatrix.top.map(
       (item) =>
         `| ${item.nextDecision} | ${item.autopilotScore} | ${item.repairBeforeApproval.length} | ${item.deferIf.join("<br>") || "none"} | ${item.primaryQuery} | ${item.title} | ${item.file} |`,
+    ),
+    "",
+    "## Human Approval Repair Queue",
+    "",
+    `- Approval items: ${data.humanApprovalRepairQueue.approvalItems}`,
+    `- Repair before review items: ${data.humanApprovalRepairQueue.repairBeforeReviewItems}`,
+    `- Files with tasks: ${data.humanApprovalRepairQueue.filesWithTasks}`,
+    `- Tasks: ${data.humanApprovalRepairQueue.tasks}`,
+    `- Blocker files/tasks: ${data.humanApprovalRepairQueue.blockerFiles}/${data.humanApprovalRepairQueue.blockerTasks}`,
+    `- Human-gated tasks: ${data.humanApprovalRepairQueue.humanGatedTasks}`,
+    `- Publish confirm commands included: ${data.humanApprovalRepairQueue.publishConfirmCommandsIncluded}`,
+    `- Traffic data available: ${data.humanApprovalRepairQueue.trafficDataAvailable}`,
+    `- Unsafe items: ${data.humanApprovalRepairQueue.unsafeItems}`,
+    `- Tasks by category: ${JSON.stringify(data.humanApprovalRepairQueue.tasksByCategory)}`,
+    `- Tasks by severity: ${JSON.stringify(data.humanApprovalRepairQueue.tasksBySeverity)}`,
+    "",
+    "| Priority | Severity | Category | Action | Title | File |",
+    "| ---: | --- | --- | --- | --- | --- |",
+    ...data.humanApprovalRepairQueue.top.map(
+      (item) => `| ${item.priority} | ${item.severity} | ${item.category} | ${String(item.action).replace(/\|/g, "\\|")} | ${String(item.title).replace(/\|/g, "\\|")} | ${item.file} |`,
     ),
     "",
     "## Mojibake Remediation Brief",

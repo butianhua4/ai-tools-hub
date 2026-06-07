@@ -1374,6 +1374,43 @@ async function main() {
     };
     unsafeRows?: unknown[];
   }>("content/automation/human-approval-decision-matrix.json");
+  const humanApprovalRepairQueue = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    publishingBoundary: {
+      currentPublicPublished: number;
+      currentPublishableNow: number;
+      publishConfirmCommandsIncluded: number;
+      trafficDataAvailable: boolean;
+    };
+    sourceEvidence: {
+      approvalItems: number;
+      decisionRows: number;
+      matrixUnsafeItems: number;
+      mojibakeUnsafeItems: number;
+      remediationUnsafeItems: number;
+    };
+    summary: {
+      approvalItems: number;
+      blockerFiles: number;
+      blockerTasks: number;
+      filesWithTasks: number;
+      humanGatedTasks: number;
+      publishConfirmCommandsIncluded: number;
+      repairBeforeReviewItems: number;
+      tasks: number;
+      trafficDataAvailable: boolean;
+      unsafeItems: number;
+    };
+    tasks?: Array<{
+      autoEditable?: boolean;
+      commandBoundary?: string;
+      file?: string;
+      humanGate?: boolean;
+      publishConfirm?: string;
+      severity?: string;
+    }>;
+    unsafeTasks?: unknown[];
+  }>("content/automation/human-approval-repair-queue.json");
   const autopilotReviewSprintBoard = readJson<{
     guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
     items?: Array<{
@@ -2861,6 +2898,45 @@ async function main() {
           ),
         ),
       detail: `commands=${humanApprovalDecisionMatrix.summary.rowsWithCommandBoundary}, repairs=${humanApprovalDecisionMatrix.summary.rowsWithRepairActions}, branches=${humanApprovalDecisionMatrix.summary.humanDecisionBranches}, publishConfirm=${humanApprovalDecisionMatrix.publishingBoundary.publishConfirmCommandsIncluded}`,
+    },
+    {
+      name: "human approval repair queue covers decision matrix",
+      ok:
+        humanApprovalRepairQueue.guardrails.autoEditArticles === false &&
+        humanApprovalRepairQueue.guardrails.autoMarkReview === false &&
+        humanApprovalRepairQueue.guardrails.autoPublish === false &&
+        humanApprovalRepairQueue.guardrails.trafficClaim === "not-included" &&
+        humanApprovalRepairQueue.sourceEvidence.approvalItems === humanApprovalDecisionMatrix.summary.approvalItems &&
+        humanApprovalRepairQueue.sourceEvidence.decisionRows === humanApprovalDecisionMatrix.summary.decisionRows &&
+        humanApprovalRepairQueue.sourceEvidence.matrixUnsafeItems === 0 &&
+        humanApprovalRepairQueue.sourceEvidence.remediationUnsafeItems === 0 &&
+        humanApprovalRepairQueue.sourceEvidence.mojibakeUnsafeItems === 0 &&
+        humanApprovalRepairQueue.summary.approvalItems === humanApprovalDecisionMatrix.summary.approvalItems &&
+        humanApprovalRepairQueue.summary.repairBeforeReviewItems === humanApprovalDecisionMatrix.summary.repairBeforeReviewItems &&
+        humanApprovalRepairQueue.summary.filesWithTasks === humanApprovalDecisionMatrix.summary.decisionRows &&
+        humanApprovalRepairQueue.summary.tasks > humanApprovalDecisionMatrix.summary.decisionRows &&
+        humanApprovalRepairQueue.summary.unsafeItems === 0,
+      detail: `files=${humanApprovalRepairQueue.summary.filesWithTasks}, tasks=${humanApprovalRepairQueue.summary.tasks}, blockers=${humanApprovalRepairQueue.summary.blockerFiles}/${humanApprovalRepairQueue.summary.blockerTasks}, unsafe=${humanApprovalRepairQueue.summary.unsafeItems}`,
+    },
+    {
+      name: "human approval repair queue stays manual and non-publishing",
+      ok:
+        humanApprovalRepairQueue.publishingBoundary.currentPublicPublished === projectStatus.articles.publicPublished &&
+        humanApprovalRepairQueue.publishingBoundary.currentPublishableNow === projectStatus.articles.publishableNow.length &&
+        humanApprovalRepairQueue.publishingBoundary.publishConfirmCommandsIncluded === 0 &&
+        humanApprovalRepairQueue.summary.publishConfirmCommandsIncluded === 0 &&
+        humanApprovalRepairQueue.summary.humanGatedTasks === humanApprovalRepairQueue.summary.tasks &&
+        Boolean(
+          humanApprovalRepairQueue.tasks?.every(
+            (item) =>
+              item.autoEditable === false &&
+              item.humanGate === true &&
+              item.publishConfirm === "not-included" &&
+              item.commandBoundary?.includes("--confirm-human") &&
+              ["blocker", "high", "medium"].includes(String(item.severity)),
+          ),
+        ),
+      detail: `humanGated=${humanApprovalRepairQueue.summary.humanGatedTasks}/${humanApprovalRepairQueue.summary.tasks}, publishConfirm=${humanApprovalRepairQueue.summary.publishConfirmCommandsIncluded}`,
     },
     {
       name: "autopilot review sprint board covers next assignments",
