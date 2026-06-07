@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-07T21:09:21.022Z
+Generated at: 2026-06-07T21:18:42.280Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 179
-- Passed: 179
+- Checks: 180
+- Passed: 180
 - Failed: 0
 
 ## Checks
@@ -38,6 +38,7 @@ Overall: PASS
 | traffic is not claimed without measured metrics | PASS | trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 |
 | traffic claim guard found no unsupported claims | PASS | filesScanned=195, unsafeClaims=0, watchMentions=3511 |
 | content integrity audit is read-only and clean | PASS | filesScanned=669, blockingItems=0 |
+| content integrity audit mirrors mojibake warnings without blocking | PASS | warnings=77, mojibake=77, publicMojibake=9, remediationAffected=77/9 |
 | content integrity audit covers public, recommended, and Wave 1 items | PASS | public=15, recommended=3, wave=3 |
 | internal link opportunity audit is read-only and covers expansion candidates | PASS | public=15, expansion=19, broadFirst=8, candidates=22 |
 | internal link opportunity audit has public suggestions for Wave 1 | PASS | wave=3, broadFirstMissing=0, waveMissing=0, candidateMissing=0 |

@@ -10,6 +10,7 @@ type AuditItem = {
   status: string;
   title: string;
   titleLength: number;
+  warnings: string[];
 };
 
 type ReviewCandidates = {
@@ -24,7 +25,9 @@ type PublicExpansionQueue = {
   items: Array<{ file: string }>;
 };
 
-const mojibakePattern = /[\uFFFD]|(?:Ã.|Â.|â€|â„|æ|ç|è|é|å|ä|ö|ð|Ð|Ñ|閮|鎬|涓|鏂|绋|銆|锛|鍙|鐢|妫|瀹|璇|悊|噴|拰|杩)/;
+const broadMojibakePattern =
+  /[\uFFFD]|鈥|閫|鎺|鏂|绋|銆|锛|閮|鎬|涓|鐢|妫|瀹|璇|悊|噴|拰|杩|鍏|鍦|鍨|甯|閿|璧||||||Ã|Â|â€|æ|ç|è|é|å|脙|脗|芒|莽|猫|茅|氓|盲|枚|冒|脨|脩/;
+const mojibakePattern = broadMojibakePattern;
 
 async function main() {
   const reviewCandidates = readJson<ReviewCandidates>("content/automation/review-candidates.json");
@@ -40,6 +43,9 @@ async function main() {
   const waveItems = items.filter((item) => item.scope.includes("wave-1"));
   const blockingItems = items.filter((item) => item.issues.length > 0 && item.scope.some((scope) => ["public", "recommended", "wave-1"].includes(scope)));
   const allIssueItems = items.filter((item) => item.issues.length > 0);
+  const warningItems = items.filter((item) => item.warnings.length > 0);
+  const mojibakeWarningItems = warningItems.filter((item) => item.warnings.includes("possible mojibake or replacement character"));
+  const publicMojibakeWarningItems = mojibakeWarningItems.filter((item) => item.scope.includes("public"));
 
   const payload = {
     generatedAt: new Date().toISOString(),
@@ -53,14 +59,18 @@ async function main() {
       blockingItems: blockingItems.length,
       expansionItems: expansionFiles.size,
       filesScanned: items.length,
+      mojibakeWarningItems: mojibakeWarningItems.length,
       publicItems: publicItems.length,
+      publicMojibakeWarningItems: publicMojibakeWarningItems.length,
       recommendedItems: recommendedItems.length,
       waveItems: waveItems.length,
+      warningItems: warningItems.length,
     },
     blockingItems,
     issueItems: allIssueItems.slice(0, 50),
     publicItems,
     recommendedItems,
+    warningItems: warningItems.slice(0, 80),
     waveItems,
   };
 
@@ -90,7 +100,11 @@ function auditFile(file: string, recommended: Set<string>, waveFiles: Set<string
     title,
     description,
     String(article.data.category || ""),
+    stringifyValue(article.data.tags),
+    String(article.data.author || ""),
+    String(article.data.targetReader || ""),
     String(article.data.primaryKeyword || ""),
+    stringifyValue(article.data.secondaryKeywords),
     String(article.data.sourceNotes || ""),
     article.content,
   ].join("\n");
@@ -99,9 +113,11 @@ function auditFile(file: string, recommended: Set<string>, waveFiles: Set<string
     description.trim().length >= 20 ? "" : "description shorter than 20 characters",
     chineseCount(title) >= 2 ? "" : "title has fewer than 2 Chinese characters",
     chineseCount(description) >= 8 ? "" : "description has fewer than 8 Chinese characters",
-    mojibakePattern.test(inspectedText) ? "possible mojibake or replacement character" : "",
     status === "published" && article.data.noindex !== false ? "published article must have noindex=false" : "",
     status !== "published" && article.data.noindex === false ? "non-published article must not be indexable" : "",
+  ].filter(Boolean);
+  const warnings = [
+    mojibakePattern.test(inspectedText) || broadMojibakePattern.test(inspectedText) ? "possible mojibake or replacement character" : "",
   ].filter(Boolean);
 
   return {
@@ -112,6 +128,7 @@ function auditFile(file: string, recommended: Set<string>, waveFiles: Set<string
     status,
     title,
     titleLength: title.length,
+    warnings,
   };
 }
 
@@ -123,6 +140,12 @@ function readJson<T>(relativePath: string): T {
   return JSON.parse(fs.readFileSync(path.join(process.cwd(), relativePath), "utf8").replace(/^\uFEFF/, "")) as T;
 }
 
+function stringifyValue(value: unknown): string {
+  if (Array.isArray(value)) return value.map(stringifyValue).join(" ");
+  if (value && typeof value === "object") return Object.values(value as Record<string, unknown>).map(stringifyValue).join(" ");
+  return String(value || "");
+}
+
 function toMarkdown(payload: {
   blockingItems: AuditItem[];
   generatedAt: string;
@@ -131,6 +154,7 @@ function toMarkdown(payload: {
   publicItems: AuditItem[];
   recommendedItems: AuditItem[];
   summary: Record<string, number>;
+  warningItems: AuditItem[];
   waveItems: AuditItem[];
 }) {
   const lines = [
@@ -170,6 +194,10 @@ function toMarkdown(payload: {
     "",
     ...table(payload.issueItems.filter((item) => !payload.blockingItems.some((blocking) => blocking.file === item.file))),
     "",
+    "## Warning Items",
+    "",
+    ...table(payload.warningItems),
+    "",
   ];
 
   return lines.join("\n");
@@ -179,12 +207,13 @@ function table(items: AuditItem[]) {
   if (!items.length) return ["- none"];
 
   return [
-    "| Status | Scope | Title chars | Description chars | Issues | Title | File |",
-    "| --- | --- | --- | --- | --- | --- | --- |",
+    "| Status | Scope | Title chars | Description chars | Issues | Warnings | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- |",
     ...items.map((item) => (
-      `| ${item.status} | ${item.scope.join(", ") || "all"} | ${item.titleLength} | ${item.descriptionLength} | ${item.issues.length ? item.issues.join("<br>") : "none"} | ${item.title} | ${item.file} |`
+      `| ${item.status} | ${item.scope.join(", ") || "all"} | ${item.titleLength} | ${item.descriptionLength} | ${item.issues.length ? item.issues.join("<br>") : "none"} | ${item.warnings.length ? item.warnings.join("<br>") : "none"} | ${item.title} | ${item.file} |`
     )),
   ];
 }
 
 void main();
+

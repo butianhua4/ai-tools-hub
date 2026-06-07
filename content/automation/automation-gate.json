@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-07T21:09:21.022Z",
+  "generatedAt": "2026-06-07T21:18:42.280Z",
   "ok": true,
   "summary": {
-    "checks": 179,
+    "checks": 180,
     "failed": 0,
-    "passed": 179
+    "passed": 180
   },
   "failed": [],
   "checks": [
@@ -126,6 +126,11 @@
       "name": "content integrity audit is read-only and clean",
       "ok": true,
       "detail": "filesScanned=669, blockingItems=0"
+    },
+    {
+      "name": "content integrity audit mirrors mojibake warnings without blocking",
+      "ok": true,
+      "detail": "warnings=77, mojibake=77, publicMojibake=9, remediationAffected=77/9"
     },
     {
       "name": "content integrity audit covers public, recommended, and Wave 1 items",

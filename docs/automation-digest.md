@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T21:09:21.592Z
+Generated at: 2026-06-07T21:18:42.838Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -82,6 +82,9 @@ This digest is read-only. It summarizes automation reports and does not publish 
 
 - Files scanned: 669
 - Blocking items: 0
+- Warning items: 77
+- Mojibake warning items: 77
+- Public mojibake warning items: 9
 - Public items: 15
 - Recommended items: 3
 - Wave items: 3
@@ -157,7 +160,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=de
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/ -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview

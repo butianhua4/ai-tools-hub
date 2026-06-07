@@ -901,9 +901,12 @@ type ContentIntegrity = {
     blockingItems: number;
     expansionItems: number;
     filesScanned: number;
+    mojibakeWarningItems: number;
     publicItems: number;
+    publicMojibakeWarningItems: number;
     recommendedItems: number;
     waveItems: number;
+    warningItems: number;
   };
 };
 
@@ -3839,6 +3842,15 @@ function toMarkdown(data: typeof payload) {
     data.contentIntegrity
       ? `- Blocking items: ${data.contentIntegrity.blockingItems}`
       : "- Blocking items: missing",
+    data.contentIntegrity
+      ? `- Warning items: ${data.contentIntegrity.warningItems}`
+      : "- Warning items: missing",
+    data.contentIntegrity
+      ? `- Mojibake warning items: ${data.contentIntegrity.mojibakeWarningItems}`
+      : "- Mojibake warning items: missing",
+    data.contentIntegrity
+      ? `- Public mojibake warning items: ${data.contentIntegrity.publicMojibakeWarningItems}`
+      : "- Public mojibake warning items: missing",
     data.contentIntegrity
       ? `- Public items: ${data.contentIntegrity.publicItems}`
       : "- Public items: missing",

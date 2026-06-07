@@ -916,9 +916,12 @@ async function main() {
     summary: {
       blockingItems: number;
       filesScanned: number;
+      mojibakeWarningItems: number;
       publicItems: number;
+      publicMojibakeWarningItems: number;
       recommendedItems: number;
       waveItems: number;
+      warningItems: number;
     };
   }>("content/automation/content-integrity-audit.json");
   const internalLinks = readJson<{
@@ -2211,6 +2214,15 @@ async function main() {
         contentIntegrity.summary.filesScanned === articles.length &&
         contentIntegrity.summary.blockingItems === 0,
       detail: `filesScanned=${contentIntegrity.summary.filesScanned}, blockingItems=${contentIntegrity.summary.blockingItems}`,
+    },
+    {
+      name: "content integrity audit mirrors mojibake warnings without blocking",
+      ok:
+        contentIntegrity.summary.warningItems === mojibakeRemediation.summary.affectedFiles &&
+        contentIntegrity.summary.mojibakeWarningItems === mojibakeRemediation.summary.affectedFiles &&
+        contentIntegrity.summary.publicMojibakeWarningItems === mojibakeRemediation.summary.affectedPublicFiles &&
+        contentIntegrity.summary.blockingItems === 0,
+      detail: `warnings=${contentIntegrity.summary.warningItems}, mojibake=${contentIntegrity.summary.mojibakeWarningItems}, publicMojibake=${contentIntegrity.summary.publicMojibakeWarningItems}, remediationAffected=${mojibakeRemediation.summary.affectedFiles}/${mojibakeRemediation.summary.affectedPublicFiles}`,
     },
     {
       name: "content integrity audit covers public, recommended, and Wave 1 items",
