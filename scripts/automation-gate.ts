@@ -1505,6 +1505,52 @@ async function main() {
     };
     unsafeItems?: unknown[];
   }>("content/automation/human-approval-repair-progress.json");
+  const humanApprovalRepairSessionPack = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    items?: Array<{
+      approvalBoundary?: { markReviewAfterExplicitApproval?: string; publishConfirm?: string; rerunAfterRepair?: unknown[]; stopBefore?: string };
+      copydeskActions?: unknown[];
+      internalLinkActions?: unknown[];
+      nextManualSession?: { categories?: unknown[]; name?: string; proofRequired?: unknown[] };
+      searchActions?: unknown[];
+      sourceReviewActions?: unknown[];
+      sourceTargetUrlItems?: unknown[];
+      sourceUrlActions?: unknown[];
+      unsafeReasons?: unknown[];
+    }>;
+    sourceEvidence: {
+      internalLinkUnsafeItems: number;
+      progressFilesTracked: number;
+      progressOpenCategories: number;
+      progressUnsafeItems: number;
+      remediationItems: number;
+      remediationSourceUrlFixActions: number;
+      remediationUnsafeItems: number;
+      routeFiles: number;
+      routeSessions: number;
+      routeUnsafeItems: number;
+      searchIntentUnsafeItems: number;
+      sourceTargetFailedUrlItems: number;
+      sourceTargetRedirectedUrlItems: number;
+      sourceTargetUnsafeItems: number;
+      sourceVerificationUnsafeItems: number;
+    };
+    summary: {
+      copydeskActions: number;
+      filesWithNextSession: number;
+      internalLinkActions: number;
+      publishConfirmCommandsIncluded: number;
+      readyForHumanApprovalAfterRepair: number;
+      searchActions: number;
+      sessionActions: number;
+      sourceReviewActions: number;
+      sourceTargetUrlItems: number;
+      sourceUrlActions: number;
+      trafficDataAvailable: boolean;
+      unsafeItems: number;
+    };
+    unsafeItems?: unknown[];
+  }>("content/automation/human-approval-repair-session-pack.json");
   const autopilotReviewSprintBoard = readJson<{
     guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
     items?: Array<{
@@ -3132,6 +3178,55 @@ async function main() {
           ),
         ),
       detail: `readyAfterRepair=${humanApprovalRepairProgress.summary.filesReadyForHumanApprovalAfterRepair}, open=${humanApprovalRepairProgress.summary.openCategories}, evidenceReady=${humanApprovalRepairProgress.summary.evidenceReadyCategories}, publishConfirm=${humanApprovalRepairProgress.summary.publishConfirmCommandsIncluded}`,
+    },
+    {
+      name: "human approval repair session pack covers current repair progress",
+      ok:
+        humanApprovalRepairSessionPack.guardrails.autoEditArticles === false &&
+        humanApprovalRepairSessionPack.guardrails.autoMarkReview === false &&
+        humanApprovalRepairSessionPack.guardrails.autoPublish === false &&
+        humanApprovalRepairSessionPack.guardrails.trafficClaim === "not-included" &&
+        humanApprovalRepairSessionPack.sourceEvidence.progressFilesTracked === humanApprovalRepairProgress.summary.filesTracked &&
+        humanApprovalRepairSessionPack.sourceEvidence.progressOpenCategories === humanApprovalRepairProgress.summary.openCategories &&
+        humanApprovalRepairSessionPack.sourceEvidence.progressUnsafeItems === 0 &&
+        humanApprovalRepairSessionPack.sourceEvidence.routeFiles === humanApprovalRepairRoute.summary.filesRouted &&
+        humanApprovalRepairSessionPack.sourceEvidence.routeSessions === humanApprovalRepairRoute.summary.routeSessions &&
+        humanApprovalRepairSessionPack.sourceEvidence.routeUnsafeItems === 0 &&
+        humanApprovalRepairSessionPack.sourceEvidence.remediationItems === autopilotApprovalRemediation.summary.items &&
+        humanApprovalRepairSessionPack.sourceEvidence.remediationSourceUrlFixActions === autopilotApprovalRemediation.summary.sourceUrlFixActions &&
+        humanApprovalRepairSessionPack.sourceEvidence.sourceTargetFailedUrlItems === sourceTargetRemediationPack.summary.failedUrlItems &&
+        humanApprovalRepairSessionPack.sourceEvidence.sourceTargetRedirectedUrlItems === sourceTargetRemediationPack.summary.redirectedUrlItems &&
+        humanApprovalRepairSessionPack.sourceEvidence.sourceTargetUnsafeItems === 0 &&
+        humanApprovalRepairSessionPack.sourceEvidence.searchIntentUnsafeItems === 0 &&
+        humanApprovalRepairSessionPack.sourceEvidence.internalLinkUnsafeItems === 0 &&
+        humanApprovalRepairSessionPack.sourceEvidence.sourceVerificationUnsafeItems === 0 &&
+        humanApprovalRepairSessionPack.summary.filesWithNextSession === humanApprovalRepairProgress.summary.filesTracked &&
+        humanApprovalRepairSessionPack.summary.sessionActions > humanApprovalRepairSessionPack.summary.filesWithNextSession,
+      detail: `files=${humanApprovalRepairSessionPack.summary.filesWithNextSession}, actions=${humanApprovalRepairSessionPack.summary.sessionActions}, sourceUrl=${humanApprovalRepairSessionPack.summary.sourceUrlActions}, sourceTargets=${humanApprovalRepairSessionPack.summary.sourceTargetUrlItems}`,
+    },
+    {
+      name: "human approval repair session pack stays manual and non-publishing",
+      ok:
+        humanApprovalRepairSessionPack.summary.unsafeItems === 0 &&
+        (humanApprovalRepairSessionPack.unsafeItems?.length || 0) === 0 &&
+        humanApprovalRepairSessionPack.summary.publishConfirmCommandsIncluded === 0 &&
+        humanApprovalRepairSessionPack.summary.trafficDataAvailable === false &&
+        humanApprovalRepairSessionPack.summary.readyForHumanApprovalAfterRepair <= humanApprovalRepairSessionPack.summary.filesWithNextSession &&
+        humanApprovalRepairSessionPack.summary.sourceUrlActions > 0 &&
+        humanApprovalRepairSessionPack.summary.sourceReviewActions > 0 &&
+        Boolean(
+          humanApprovalRepairSessionPack.items?.every(
+            (item) =>
+              item.approvalBoundary?.publishConfirm === "not-included" &&
+              item.approvalBoundary?.markReviewAfterExplicitApproval?.includes("--confirm-human") &&
+              item.approvalBoundary?.stopBefore?.toLowerCase().includes("explicit human approval") &&
+              (item.approvalBoundary?.rerunAfterRepair?.length || 0) >= 3 &&
+              (item.nextManualSession?.categories?.length || 0) > 0 &&
+              (item.sourceUrlActions?.length || 0) + (item.sourceReviewActions?.length || 0) + (item.searchActions?.length || 0) + (item.internalLinkActions?.length || 0) + (item.copydeskActions?.length || 0) > 0 &&
+              (item.unsafeReasons?.length || 0) === 0,
+          ),
+        ),
+      detail: `unsafe=${humanApprovalRepairSessionPack.summary.unsafeItems}, publishConfirm=${humanApprovalRepairSessionPack.summary.publishConfirmCommandsIncluded}, readyAfterRepair=${humanApprovalRepairSessionPack.summary.readyForHumanApprovalAfterRepair}`,
     },
     {
       name: "autopilot review sprint board covers next assignments",

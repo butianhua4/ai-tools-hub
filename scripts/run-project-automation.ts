@@ -90,6 +90,7 @@ const tasks: Task[] = [
   { title: "Generate human approval repair queue", args: ["run", "automation:human-approval-repair-queue"] },
   { title: "Generate human approval repair route", args: ["run", "automation:human-approval-repair-route"] },
   { title: "Generate human approval repair progress", args: ["run", "automation:human-approval-repair-progress"] },
+  { title: "Generate human approval repair session pack", args: ["run", "automation:human-approval-repair-session-pack"] },
   { title: "Generate autopilot review sprint board", args: ["run", "automation:autopilot-review-sprint"] },
   { title: "Generate autopilot search query gap brief", args: ["run", "automation:autopilot-search-query-gap"] },
   { title: "Generate autopilot queued playbook brief", args: ["run", "automation:autopilot-queued-playbook"] },

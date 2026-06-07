@@ -221,6 +221,39 @@ type HumanApprovalRepairProgress = {
   };
 };
 
+type HumanApprovalRepairSessionPack = {
+  items: Array<{
+    copydeskActions: unknown[];
+    file: string;
+    internalLinkActions: unknown[];
+    lane: string;
+    nextManualSession: { categories: string[]; name: string };
+    openCategories: string[];
+    primaryQuery: string;
+    readyForHumanApprovalAfterRepair: boolean;
+    routeRank: number;
+    searchActions: unknown[];
+    sourceReviewActions: unknown[];
+    sourceTargetUrlItems: unknown[];
+    sourceUrlActions: unknown[];
+    title: string;
+  }>;
+  summary: {
+    copydeskActions: number;
+    filesWithNextSession: number;
+    internalLinkActions: number;
+    publishConfirmCommandsIncluded: number;
+    readyForHumanApprovalAfterRepair: number;
+    searchActions: number;
+    sessionActions: number;
+    sourceReviewActions: number;
+    sourceTargetUrlItems: number;
+    sourceUrlActions: number;
+    trafficDataAvailable: boolean;
+    unsafeItems: number;
+  };
+};
+
 type MojibakeRemediationBrief = {
   items: Array<{
     file: string;
@@ -2426,6 +2459,7 @@ const reports = {
   humanApprovalRepairQueue: readJson<HumanApprovalRepairQueue>("content/automation/human-approval-repair-queue.json"),
   humanApprovalRepairRoute: readJson<HumanApprovalRepairRoute>("content/automation/human-approval-repair-route.json"),
   humanApprovalRepairProgress: readJson<HumanApprovalRepairProgress>("content/automation/human-approval-repair-progress.json"),
+  humanApprovalRepairSessionPack: readJson<HumanApprovalRepairSessionPack>("content/automation/human-approval-repair-session-pack.json"),
   promptCoverage: readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json"),
   promptReviewPack: readJson<PromptReviewPack>("content/automation/industry-prompt-review-pack.json"),
   industryPromptOpportunityBoard: readJson<IndustryPromptOpportunityBoard>("content/automation/industry-prompt-opportunity-board.json"),
@@ -2662,6 +2696,21 @@ const payload = {
     top: reports.humanApprovalRepairProgress.data?.items.slice(0, 5) ?? [],
     trafficDataAvailable: reports.humanApprovalRepairProgress.data?.summary.trafficDataAvailable ?? null,
     unsafeItems: reports.humanApprovalRepairProgress.data?.summary.unsafeItems ?? null,
+  },
+  humanApprovalRepairSessionPack: {
+    copydeskActions: reports.humanApprovalRepairSessionPack.data?.summary.copydeskActions ?? null,
+    filesWithNextSession: reports.humanApprovalRepairSessionPack.data?.summary.filesWithNextSession ?? null,
+    internalLinkActions: reports.humanApprovalRepairSessionPack.data?.summary.internalLinkActions ?? null,
+    publishConfirmCommandsIncluded: reports.humanApprovalRepairSessionPack.data?.summary.publishConfirmCommandsIncluded ?? null,
+    readyForHumanApprovalAfterRepair: reports.humanApprovalRepairSessionPack.data?.summary.readyForHumanApprovalAfterRepair ?? null,
+    searchActions: reports.humanApprovalRepairSessionPack.data?.summary.searchActions ?? null,
+    sessionActions: reports.humanApprovalRepairSessionPack.data?.summary.sessionActions ?? null,
+    sourceReviewActions: reports.humanApprovalRepairSessionPack.data?.summary.sourceReviewActions ?? null,
+    sourceTargetUrlItems: reports.humanApprovalRepairSessionPack.data?.summary.sourceTargetUrlItems ?? null,
+    sourceUrlActions: reports.humanApprovalRepairSessionPack.data?.summary.sourceUrlActions ?? null,
+    top: reports.humanApprovalRepairSessionPack.data?.items.slice(0, 5) ?? [],
+    trafficDataAvailable: reports.humanApprovalRepairSessionPack.data?.summary.trafficDataAvailable ?? null,
+    unsafeItems: reports.humanApprovalRepairSessionPack.data?.summary.unsafeItems ?? null,
   },
   mojibakeRemediation: {
     affectedDraftFiles: reports.mojibakeRemediation.data?.summary.affectedDraftFiles ?? null,
@@ -3759,9 +3808,16 @@ function buildNextActions() {
   ) {
     return ["Open docs/human-approval-repair-progress.md and resolve repair progress guardrail issues before assigning manual repair sessions."];
   }
+  if (
+    !reports.humanApprovalRepairSessionPack.data ||
+    reports.humanApprovalRepairSessionPack.data.summary.unsafeItems > 0 ||
+    reports.humanApprovalRepairSessionPack.data.summary.publishConfirmCommandsIncluded > 0
+  ) {
+    return ["Open docs/human-approval-repair-session-pack.md and resolve repair session pack guardrail issues before assigning manual repair work."];
+  }
   if (reports.humanApprovalRepairProgress.data.summary.openCategories > 0 || reports.humanApprovalRepairProgress.data.summary.blockedCategories > 0) {
     return [
-      `Open docs/human-approval-repair-progress.md and run the next manual repair session for ${reports.humanApprovalRepairProgress.data.summary.nextRepairFile || "the top routed file"}.`,
+      `Open docs/human-approval-repair-session-pack.md and run the next manual repair session for ${reports.humanApprovalRepairProgress.data.summary.nextRepairFile || "the top routed file"}.`,
     ];
   }
   if (
@@ -4246,6 +4302,28 @@ function toMarkdown(data: typeof payload) {
     ...data.humanApprovalRepairProgress.top.map(
       (item) =>
         `| ${item.routeRank} | ${item.readyForHumanApprovalAfterRepair} | ${item.openCategories.join(", ") || "none"} | ${item.nextManualSession ? item.nextManualSession.name : "none"} | ${item.lane} | ${String(item.primaryQuery).replace(/\|/g, "\\|")} | ${String(item.title).replace(/\|/g, "\\|")} | ${item.file} |`,
+    ),
+    "",
+    "## Human Approval Repair Session Pack",
+    "",
+    `- Files with next session: ${data.humanApprovalRepairSessionPack.filesWithNextSession}`,
+    `- Session actions: ${data.humanApprovalRepairSessionPack.sessionActions}`,
+    `- Source URL actions: ${data.humanApprovalRepairSessionPack.sourceUrlActions}`,
+    `- Source target URL items: ${data.humanApprovalRepairSessionPack.sourceTargetUrlItems}`,
+    `- Source review actions: ${data.humanApprovalRepairSessionPack.sourceReviewActions}`,
+    `- Search actions: ${data.humanApprovalRepairSessionPack.searchActions}`,
+    `- Internal-link actions: ${data.humanApprovalRepairSessionPack.internalLinkActions}`,
+    `- Copydesk actions: ${data.humanApprovalRepairSessionPack.copydeskActions}`,
+    `- Ready for human approval after repair: ${data.humanApprovalRepairSessionPack.readyForHumanApprovalAfterRepair}`,
+    `- Publish confirm commands included: ${data.humanApprovalRepairSessionPack.publishConfirmCommandsIncluded}`,
+    `- Traffic data available: ${data.humanApprovalRepairSessionPack.trafficDataAvailable}`,
+    `- Unsafe items: ${data.humanApprovalRepairSessionPack.unsafeItems}`,
+    "",
+    "| Rank | Session | Source URL actions | Source target items | Source review actions | Search | Links | Copydesk | Title | File |",
+    "| ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |",
+    ...data.humanApprovalRepairSessionPack.top.map(
+      (item) =>
+        `| ${item.routeRank} | ${item.nextManualSession.name} | ${item.sourceUrlActions.length} | ${item.sourceTargetUrlItems.length} | ${item.sourceReviewActions.length} | ${item.searchActions.length} | ${item.internalLinkActions.length} | ${item.copydeskActions.length} | ${String(item.title).replace(/\|/g, "\\|")} | ${item.file} |`,
     ),
     "",
     "## Mojibake Remediation Brief",

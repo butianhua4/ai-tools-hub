@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-07T22:40:09.569Z",
+  "generatedAt": "2026-06-07T22:49:16.993Z",
   "ok": true,
   "summary": {
-    "checks": 191,
+    "checks": 193,
     "failed": 0,
-    "passed": 191
+    "passed": 193
   },
   "failed": [],
   "checks": [
@@ -135,7 +135,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=205, unsafeClaims=0, watchMentions=3629"
+      "detail": "filesScanned=207, unsafeClaims=0, watchMentions=3650"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -331,6 +331,16 @@
       "name": "human approval repair progress stays manual and non-publishing",
       "ok": true,
       "detail": "readyAfterRepair=0, open=11, evidenceReady=3, publishConfirm=0"
+    },
+    {
+      "name": "human approval repair session pack covers current repair progress",
+      "ok": true,
+      "detail": "files=3, actions=192, sourceUrl=62, sourceTargets=18"
+    },
+    {
+      "name": "human approval repair session pack stays manual and non-publishing",
+      "ok": true,
+      "detail": "unsafe=0, publishConfirm=0, readyAfterRepair=0"
     },
     {
       "name": "autopilot review sprint board covers next assignments",
