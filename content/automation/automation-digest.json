@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T14:28:50.834Z",
+  "generatedAt": "2026-06-07T14:54:33.323Z",
   "guardrails": {
     "autoPublish": false,
     "note": "Digest is read-only. It summarizes local automation reports and does not use traffic, impressions, or Search Console performance data."
@@ -8,7 +8,7 @@
     "gateOk": true,
     "missingReports": [],
     "preflightOk": true,
-    "runOk": true,
+    "runOk": false,
     "searchabilityScore": 100,
     "seoOk": true,
     "trafficDataAvailable": false
@@ -434,6 +434,7 @@
         "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
       },
       {
+        "error": "AbortError",
         "finalUrl": "https://docs.dify.ai/en/use-dify/getting-started/introduction",
         "ok": true,
         "references": [
@@ -15582,6 +15583,711 @@
     "waves": 8,
     "wavesReady": 8
   },
+  "autopilotBroadWaveRemediation": {
+    "items": 24,
+    "itemsList": [
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+          "publishConfirm": "not-included"
+        },
+        "file": "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
+        "humanChecklist": [
+          "Review reason: broad AI wave item needs human remediation before approval.",
+          "Review reason: missing specific public internal-link suggestion needs human choice.",
+          "Review reason: warning remediation needs human sign-off.",
+          "Review reason: search-intent wording needs human copy review.",
+          "Review reason: source evidence needs human verification.",
+          "Apply, rewrite, or explicitly reject search and snippet fixes before mark:review.",
+          "Open source targets or run equivalent source checks before mark:review.",
+          "Choose, apply, or explicitly reject the public internal-link plan before mark:review.",
+          "Resolve warning and risk checks before mark:review.",
+          "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human",
+          "Publishing remains a separate explicit approval step."
+        ],
+        "internalLinkFixes": [
+          "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
+          "Fallback public link candidate: Codex 项目 npm install 报错怎么办：新手排查步骤 (/blog/codex-npm-install-error-beginner-fix).",
+          "Fallback public link candidate: 第一个 Upwork 小项目怎么报价：新手范围和底价检查 (/blog/first-upwork-project-pricing-checklist).",
+          "Fallback public link candidate: Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide).",
+          "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
+          "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
+        ],
+        "manualFixReady": true,
+        "publicLinkPlan": [
+          "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
+          "Fallback public link candidate: Codex 项目 npm install 报错怎么办：新手排查步骤 (/blog/codex-npm-install-error-beginner-fix).",
+          "Fallback public link candidate: 第一个 Upwork 小项目怎么报价：新手范围和底价检查 (/blog/first-upwork-project-pricing-checklist).",
+          "Fallback public link candidate: Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide)."
+        ],
+        "remediationReasons": [
+          "broad AI wave item needs human remediation before approval",
+          "missing specific public internal-link suggestion needs human choice",
+          "warning remediation needs human sign-off",
+          "search-intent wording needs human copy review",
+          "source evidence needs human verification"
+        ],
+        "riskChecks": [
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
+          "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks.",
+          "Reject unsupported traffic, ranking, revenue, benchmark, cost, latency, or stability claims."
+        ],
+        "searchFixes": [
+          "Make the title and first paragraph answer this search intent explicitly: 大模型部署教程.",
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Add one exact or near-exact search query naturally in the opening or first H2.",
+          "Check search phrasing coverage: 大模型部署教程.",
+          "Check search phrasing coverage: Ollama 本地部署教程.",
+          "Check search phrasing coverage: vLLM 部署教程.",
+          "Check search phrasing coverage: RunPod vLLM serverless.",
+          "Confirm article naturally answers search query: 大模型部署教程.",
+          "Confirm article naturally answers search query: Ollama 本地部署教程.",
+          "Confirm article naturally answers search query: vLLM 部署教程.",
+          "Confirm article naturally answers search query: RunPod vLLM serverless.",
+          "Confirm article naturally answers search query: Hugging Face TGI 部署."
+        ],
+        "sourceChecks": [
+          "Verify implementation-sensitive claims against source: https://docs.vllm.ai.",
+          "Verify implementation-sensitive claims against source: https://huggingface.co/docs.",
+          "Verify implementation-sensitive claims against source: https://docs.runpod.io/serverless/vllm/get-started.",
+          "Verify implementation-sensitive claims against source: https://www.runpod.io/articles/guides/deploy-vllm-runpod-docker.",
+          "Verify implementation-sensitive claims against source: https://www.spheron.network/blog/llm-deployment-guide/.",
+          "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources."
+        ],
+        "title": "BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收",
+        "unsafeReasons": [],
+        "warningFixes": [
+          "Freshness risk is high; all implementation-sensitive claims need current source checks."
+        ],
+        "wave": 1
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+          "publishConfirm": "not-included"
+        },
+        "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "humanChecklist": [
+          "Review reason: broad AI wave item needs human remediation before approval.",
+          "Review reason: specific public internal-link suggestion needs human acceptance or rejection.",
+          "Review reason: warning remediation needs human sign-off.",
+          "Review reason: search-intent wording needs human copy review.",
+          "Review reason: source evidence needs human verification.",
+          "Apply, rewrite, or explicitly reject search and snippet fixes before mark:review.",
+          "Open source targets or run equivalent source checks before mark:review.",
+          "Choose, apply, or explicitly reject the public internal-link plan before mark:review.",
+          "Resolve warning and risk checks before mark:review.",
+          "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
+          "Publishing remains a separate explicit approval step."
+        ],
+        "internalLinkFixes": [
+          "Use suggested public link: Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist).",
+          "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
+          "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
+        ],
+        "manualFixReady": true,
+        "publicLinkPlan": [
+          "Use suggested public link: Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist)."
+        ],
+        "remediationReasons": [
+          "broad AI wave item needs human remediation before approval",
+          "specific public internal-link suggestion needs human acceptance or rejection",
+          "warning remediation needs human sign-off",
+          "search-intent wording needs human copy review",
+          "source evidence needs human verification"
+        ],
+        "riskChecks": [
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
+          "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
+          "Meta description is short; rewrite it before approval.",
+          "No current link to published articles; add one approved contextual public link.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks.",
+          "Reject unsupported traffic, ranking, revenue, benchmark, cost, latency, or stability claims."
+        ],
+        "searchFixes": [
+          "Make the title and first paragraph answer this search intent explicitly: AI Agent 部署教程.",
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Add one exact or near-exact search query naturally in the opening or first H2.",
+          "Check search phrasing coverage: AI Agent 部署教程.",
+          "Check search phrasing coverage: Agent 工具调用教程.",
+          "Check search phrasing coverage: AI Agent 生产环境.",
+          "Check search phrasing coverage: LangGraph Agent 入门.",
+          "Confirm article naturally answers search query: AI Agent 部署教程.",
+          "Confirm article naturally answers search query: Agent 工具调用教程.",
+          "Confirm article naturally answers search query: AI Agent 生产环境.",
+          "Confirm article naturally answers search query: LangGraph Agent 入门.",
+          "Confirm article naturally answers search query: CrewAI 部署教程."
+        ],
+        "sourceChecks": [
+          "Verify implementation-sensitive claims against source: https://ai-sdk.dev/docs.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs/guides/agents.",
+          "Verify implementation-sensitive claims against source: https://python.langchain.com/docs.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs/guides/retrieval.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs/guides/prompt-engineering.",
+          "Verify implementation-sensitive claims against source: https://openai.github.io/openai-agents-python/.",
+          "Verify implementation-sensitive claims against source: https://langchain-ai.github.io/langgraph/.",
+          "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources."
+        ],
+        "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+        "unsafeReasons": [],
+        "warningFixes": [
+          "Meta description is short; rewrite it before approval.",
+          "No current link to published articles; add one approved contextual public link.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks."
+        ],
+        "wave": 1
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/agent-memory-postgres-schema-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/agent-memory-postgres-schema-guide.mdx",
+          "publishConfirm": "not-included"
+        },
+        "file": "content/blog/agent-memory-postgres-schema-guide.mdx",
+        "humanChecklist": [
+          "Review reason: broad AI wave item needs human remediation before approval.",
+          "Review reason: missing specific public internal-link suggestion needs human choice.",
+          "Review reason: warning remediation needs human sign-off.",
+          "Review reason: search-intent wording needs human copy review.",
+          "Review reason: source evidence needs human verification.",
+          "Apply, rewrite, or explicitly reject search and snippet fixes before mark:review.",
+          "Open source targets or run equivalent source checks before mark:review.",
+          "Choose, apply, or explicitly reject the public internal-link plan before mark:review.",
+          "Resolve warning and risk checks before mark:review.",
+          "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/agent-memory-postgres-schema-guide.mdx --confirm-human",
+          "Publishing remains a separate explicit approval step."
+        ],
+        "internalLinkFixes": [
+          "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
+          "Fallback public link candidate: Codex 项目 npm install 报错怎么办：新手排查步骤 (/blog/codex-npm-install-error-beginner-fix).",
+          "Fallback public link candidate: 第一个 Upwork 小项目怎么报价：新手范围和底价检查 (/blog/first-upwork-project-pricing-checklist).",
+          "Fallback public link candidate: Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide).",
+          "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
+          "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
+        ],
+        "manualFixReady": true,
+        "publicLinkPlan": [
+          "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
+          "Fallback public link candidate: Codex 项目 npm install 报错怎么办：新手排查步骤 (/blog/codex-npm-install-error-beginner-fix).",
+          "Fallback public link candidate: 第一个 Upwork 小项目怎么报价：新手范围和底价检查 (/blog/first-upwork-project-pricing-checklist).",
+          "Fallback public link candidate: Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide)."
+        ],
+        "remediationReasons": [
+          "broad AI wave item needs human remediation before approval",
+          "missing specific public internal-link suggestion needs human choice",
+          "warning remediation needs human sign-off",
+          "search-intent wording needs human copy review",
+          "source evidence needs human verification"
+        ],
+        "riskChecks": [
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
+          "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
+          "Meta description is short; rewrite it before approval.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks.",
+          "Reject unsupported traffic, ranking, revenue, benchmark, cost, latency, or stability claims."
+        ],
+        "searchFixes": [
+          "Make the title and first paragraph answer this search intent explicitly: AI Agent 记忆怎么做.",
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Add one exact or near-exact search query naturally in the opening or first H2.",
+          "Check search phrasing coverage: AI Agent 记忆怎么做.",
+          "Check search phrasing coverage: Agent memory RAG.",
+          "Check search phrasing coverage: AI Agent 长期记忆.",
+          "Check search phrasing coverage: pgvector Agent memory.",
+          "Confirm article naturally answers search query: AI Agent 记忆怎么做.",
+          "Confirm article naturally answers search query: Agent memory RAG.",
+          "Confirm article naturally answers search query: AI Agent 长期记忆.",
+          "Confirm article naturally answers search query: pgvector Agent memory.",
+          "Confirm article naturally answers search query: RAG 和记忆区别."
+        ],
+        "sourceChecks": [
+          "Verify implementation-sensitive claims against source: https://arxiv.org/abs/2604.20598.",
+          "Verify implementation-sensitive claims against source: https://www.reddit.com/r/Rag/comments/1qjvqd4/vector_dbs_arent_memory_learned_this_the_hard_way/.",
+          "Verify implementation-sensitive claims against source: https://docs.agenticgokit.com/tutorials/getting-started/memory-and-rag.",
+          "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources."
+        ],
+        "title": "Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则",
+        "unsafeReasons": [],
+        "warningFixes": [
+          "Meta description is short; rewrite it before approval.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks."
+        ],
+        "wave": 1
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx",
+          "publishConfirm": "not-included"
+        },
+        "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+        "humanChecklist": [
+          "Review reason: broad AI wave item needs human remediation before approval.",
+          "Review reason: specific public internal-link suggestion needs human acceptance or rejection.",
+          "Review reason: warning remediation needs human sign-off.",
+          "Review reason: search-intent wording needs human copy review.",
+          "Review reason: source evidence needs human verification.",
+          "Apply, rewrite, or explicitly reject search and snippet fixes before mark:review.",
+          "Open source targets or run equivalent source checks before mark:review.",
+          "Choose, apply, or explicitly reject the public internal-link plan before mark:review.",
+          "Resolve warning and risk checks before mark:review.",
+          "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
+          "Publishing remains a separate explicit approval step."
+        ],
+        "internalLinkFixes": [
+          "Use suggested public link: Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex).",
+          "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
+          "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
+        ],
+        "manualFixReady": true,
+        "publicLinkPlan": [
+          "Use suggested public link: Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex)."
+        ],
+        "remediationReasons": [
+          "broad AI wave item needs human remediation before approval",
+          "specific public internal-link suggestion needs human acceptance or rejection",
+          "warning remediation needs human sign-off",
+          "search-intent wording needs human copy review",
+          "source evidence needs human verification"
+        ],
+        "riskChecks": [
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
+          "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
+          "Meta description is short; rewrite it before approval.",
+          "No current link to published articles; add one approved contextual public link.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks.",
+          "Reject unsupported traffic, ranking, revenue, benchmark, cost, latency, or stability claims."
+        ],
+        "searchFixes": [
+          "Make the title and first paragraph answer this search intent explicitly: RAG 知识库搭建教程.",
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Add one exact or near-exact search query naturally in the opening or first H2.",
+          "Check search phrasing coverage: RAG 知识库搭建教程.",
+          "Check search phrasing coverage: 向量数据库教程.",
+          "Check search phrasing coverage: 企业知识库 AI 部署.",
+          "Check search phrasing coverage: RAG 检索不到内容.",
+          "Confirm article naturally answers search query: RAG 知识库搭建教程.",
+          "Confirm article naturally answers search query: 向量数据库教程.",
+          "Confirm article naturally answers search query: 企业知识库 AI 部署.",
+          "Confirm article naturally answers search query: RAG 检索不到内容.",
+          "Confirm article naturally answers search query: RAG 评测教程."
+        ],
+        "sourceChecks": [
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs/guides/retrieval.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs/guides/prompt-engineering.",
+          "Verify implementation-sensitive claims against source: https://python.langchain.com/docs.",
+          "Verify implementation-sensitive claims against source: https://docs.llamaindex.ai.",
+          "Verify implementation-sensitive claims against source: https://huggingface.co/docs.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs.",
+          "Verify implementation-sensitive claims against source: https://ai-sdk.dev/docs.",
+          "Verify implementation-sensitive claims against source: https://www.reddit.com/r/Rag/comments/1t9v93f/is_anyone_still_running_pure_vector_rag_in/.",
+          "Verify implementation-sensitive claims against source: https://arxiv.org/abs/2603.10700.",
+          "Verify implementation-sensitive claims against source: https://www.pinecone.io/learn/retrieval-augmented-generation/.",
+          "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources."
+        ],
+        "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+        "unsafeReasons": [],
+        "warningFixes": [
+          "Meta description is short; rewrite it before approval.",
+          "No current link to published articles; add one approved contextual public link.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks."
+        ],
+        "wave": 2
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-prompt-library-team-knowledge-base-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+          "publishConfirm": "not-included"
+        },
+        "file": "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+        "humanChecklist": [
+          "Review reason: broad AI wave item needs human remediation before approval.",
+          "Review reason: specific public internal-link suggestion needs human acceptance or rejection.",
+          "Review reason: warning remediation needs human sign-off.",
+          "Review reason: search-intent wording needs human copy review.",
+          "Review reason: source evidence needs human verification.",
+          "Apply, rewrite, or explicitly reject search and snippet fixes before mark:review.",
+          "Open source targets or run equivalent source checks before mark:review.",
+          "Choose, apply, or explicitly reject the public internal-link plan before mark:review.",
+          "Resolve warning and risk checks before mark:review.",
+          "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-prompt-library-team-knowledge-base-guide.mdx --confirm-human",
+          "Publishing remains a separate explicit approval step."
+        ],
+        "internalLinkFixes": [
+          "Use suggested public link: Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist).",
+          "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
+          "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
+        ],
+        "manualFixReady": true,
+        "publicLinkPlan": [
+          "Use suggested public link: Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist)."
+        ],
+        "remediationReasons": [
+          "broad AI wave item needs human remediation before approval",
+          "specific public internal-link suggestion needs human acceptance or rejection",
+          "warning remediation needs human sign-off",
+          "search-intent wording needs human copy review",
+          "source evidence needs human verification"
+        ],
+        "riskChecks": [
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
+          "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
+          "Meta description is short; rewrite it before approval.",
+          "No current link to published articles; add one approved contextual public link.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks.",
+          "Reject unsupported traffic, ranking, revenue, benchmark, cost, latency, or stability claims."
+        ],
+        "searchFixes": [
+          "Make the title and first paragraph answer this search intent explicitly: AI 提示词大全.",
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Add one exact or near-exact search query naturally in the opening or first H2.",
+          "Check search phrasing coverage: AI 提示词大全.",
+          "Check search phrasing coverage: 销售 AI 提示词.",
+          "Check search phrasing coverage: 客服 AI 提示词.",
+          "Check search phrasing coverage: HR AI 提示词.",
+          "Confirm article naturally answers search query: AI 提示词大全.",
+          "Confirm article naturally answers search query: 销售 AI 提示词.",
+          "Confirm article naturally answers search query: 客服 AI 提示词.",
+          "Confirm article naturally answers search query: HR AI 提示词.",
+          "Confirm article naturally answers search query: 运营 AI 提示词.",
+          "Confirm article naturally answers search query: 企业 AI 提示词模板."
+        ],
+        "sourceChecks": [
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs/guides/prompt-engineering.",
+          "Verify implementation-sensitive claims against source: https://ai-sdk.dev/docs.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs/guides/retrieval.",
+          "Verify implementation-sensitive claims against source: https://ai-prompts-pro.com/blog/ai-prompt-templates-business.",
+          "Verify implementation-sensitive claims against source: https://sensara.io/prompts/.",
+          "Verify implementation-sensitive claims against source: https://www.mrprompts.ai/learn/ai-prompts-for-sales.",
+          "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources."
+        ],
+        "title": "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用",
+        "unsafeReasons": [],
+        "warningFixes": [
+          "Meta description is short; rewrite it before approval.",
+          "No current link to published articles; add one approved contextual public link.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks."
+        ],
+        "wave": 2
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/mcp-server-deployment-security-checklist.mdx",
+          "publishConfirm": "not-included"
+        },
+        "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
+        "humanChecklist": [
+          "Review reason: broad AI wave item needs human remediation before approval.",
+          "Review reason: specific public internal-link suggestion needs human acceptance or rejection.",
+          "Review reason: warning remediation needs human sign-off.",
+          "Review reason: search-intent wording needs human copy review.",
+          "Review reason: source evidence needs human verification.",
+          "Apply, rewrite, or explicitly reject search and snippet fixes before mark:review.",
+          "Open source targets or run equivalent source checks before mark:review.",
+          "Choose, apply, or explicitly reject the public internal-link plan before mark:review.",
+          "Resolve warning and risk checks before mark:review.",
+          "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human",
+          "Publishing remains a separate explicit approval step."
+        ],
+        "internalLinkFixes": [
+          "Use suggested public link: Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide).",
+          "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
+          "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
+        ],
+        "manualFixReady": true,
+        "publicLinkPlan": [
+          "Use suggested public link: Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide)."
+        ],
+        "remediationReasons": [
+          "broad AI wave item needs human remediation before approval",
+          "specific public internal-link suggestion needs human acceptance or rejection",
+          "warning remediation needs human sign-off",
+          "search-intent wording needs human copy review",
+          "source evidence needs human verification"
+        ],
+        "riskChecks": [
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
+          "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
+          "Meta description is short; rewrite it before approval.",
+          "No current link to published articles; add one approved contextual public link.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks.",
+          "Reject unsupported traffic, ranking, revenue, benchmark, cost, latency, or stability claims."
+        ],
+        "searchFixes": [
+          "Make the title and first paragraph answer this search intent explicitly: Dify 部署教程.",
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Add one exact or near-exact search query naturally in the opening or first H2.",
+          "Check search phrasing coverage: Dify 部署教程.",
+          "Check search phrasing coverage: n8n AI 自动化教程.",
+          "Check search phrasing coverage: MCP 使用教程.",
+          "Check search phrasing coverage: Flowise 本地部署.",
+          "Confirm article naturally answers search query: Dify 部署教程.",
+          "Confirm article naturally answers search query: n8n AI 自动化教程.",
+          "Confirm article naturally answers search query: MCP 使用教程.",
+          "Confirm article naturally answers search query: Flowise 本地部署.",
+          "Confirm article naturally answers search query: Coze Bot 发布."
+        ],
+        "sourceChecks": [
+          "Verify implementation-sensitive claims against source: https://docs.dify.ai/.",
+          "Verify implementation-sensitive claims against source: https://docs.n8n.io/.",
+          "Verify implementation-sensitive claims against source: https://modelcontextprotocol.io/docs.",
+          "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources."
+        ],
+        "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单",
+        "unsafeReasons": [],
+        "warningFixes": [
+          "Meta description is short; rewrite it before approval.",
+          "No current link to published articles; add one approved contextual public link.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks."
+        ],
+        "wave": 2
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx",
+          "publishConfirm": "not-included"
+        },
+        "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+        "humanChecklist": [
+          "Review reason: broad AI wave item needs human remediation before approval.",
+          "Review reason: specific public internal-link suggestion needs human acceptance or rejection.",
+          "Review reason: warning remediation needs human sign-off.",
+          "Review reason: search-intent wording needs human copy review.",
+          "Review reason: source evidence needs human verification.",
+          "Apply, rewrite, or explicitly reject search and snippet fixes before mark:review.",
+          "Open source targets or run equivalent source checks before mark:review.",
+          "Choose, apply, or explicitly reject the public internal-link plan before mark:review.",
+          "Resolve warning and risk checks before mark:review.",
+          "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
+          "Publishing remains a separate explicit approval step."
+        ],
+        "internalLinkFixes": [
+          "Use suggested public link: Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist).",
+          "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
+          "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
+        ],
+        "manualFixReady": true,
+        "publicLinkPlan": [
+          "Use suggested public link: Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist)."
+        ],
+        "remediationReasons": [
+          "broad AI wave item needs human remediation before approval",
+          "specific public internal-link suggestion needs human acceptance or rejection",
+          "warning remediation needs human sign-off",
+          "search-intent wording needs human copy review",
+          "source evidence needs human verification"
+        ],
+        "riskChecks": [
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
+          "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
+          "Meta description is short; rewrite it before approval.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks.",
+          "Reject unsupported traffic, ranking, revenue, benchmark, cost, latency, or stability claims."
+        ],
+        "searchFixes": [
+          "Make the title and first paragraph answer this search intent explicitly: OpenAI API 接入教程.",
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Add one exact or near-exact search query naturally in the opening or first H2.",
+          "Check search phrasing coverage: OpenAI API 接入教程.",
+          "Check search phrasing coverage: Claude API rate limit.",
+          "Check search phrasing coverage: Gemini API 限流.",
+          "Check search phrasing coverage: OpenRouter API 教程.",
+          "Confirm article naturally answers search query: OpenAI API 接入教程.",
+          "Confirm article naturally answers search query: Claude API rate limit.",
+          "Confirm article naturally answers search query: Gemini API 限流.",
+          "Confirm article naturally answers search query: OpenRouter API 教程.",
+          "Confirm article naturally answers search query: AI API key 安全."
+        ],
+        "sourceChecks": [
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs/guides/agents.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs/guides/retrieval.",
+          "Verify implementation-sensitive claims against source: https://python.langchain.com/docs.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs.",
+          "Verify implementation-sensitive claims against source: https://docs.anthropic.com.",
+          "Verify implementation-sensitive claims against source: https://ai-sdk.dev/docs.",
+          "Verify implementation-sensitive claims against source: https://ai.google.dev/docs.",
+          "Verify implementation-sensitive claims against source: https://docs.dify.ai.",
+          "Verify implementation-sensitive claims against source: https://docs.n8n.io.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs/guides/prompt-engineering.",
+          "Verify implementation-sensitive claims against source: https://docs.anthropic.com/.",
+          "Verify implementation-sensitive claims against source: https://vercel.com/docs/ai-gateway.",
+          "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources."
+        ],
+        "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
+        "unsafeReasons": [],
+        "warningFixes": [
+          "Meta description is short; rewrite it before approval.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks."
+        ],
+        "wave": 3
+      },
+      {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx --confirm-human",
+          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx",
+          "publishConfirm": "not-included"
+        },
+        "file": "content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx",
+        "humanChecklist": [
+          "Review reason: broad AI wave item needs human remediation before approval.",
+          "Review reason: specific public internal-link suggestion needs human acceptance or rejection.",
+          "Review reason: warning remediation needs human sign-off.",
+          "Review reason: search-intent wording needs human copy review.",
+          "Review reason: source evidence needs human verification.",
+          "Apply, rewrite, or explicitly reject search and snippet fixes before mark:review.",
+          "Open source targets or run equivalent source checks before mark:review.",
+          "Choose, apply, or explicitly reject the public internal-link plan before mark:review.",
+          "Resolve warning and risk checks before mark:review.",
+          "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx --confirm-human",
+          "Publishing remains a separate explicit approval step."
+        ],
+        "internalLinkFixes": [
+          "Use suggested public link: Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide).",
+          "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
+          "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
+        ],
+        "manualFixReady": true,
+        "publicLinkPlan": [
+          "Use suggested public link: Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide)."
+        ],
+        "remediationReasons": [
+          "broad AI wave item needs human remediation before approval",
+          "specific public internal-link suggestion needs human acceptance or rejection",
+          "warning remediation needs human sign-off",
+          "search-intent wording needs human copy review",
+          "source evidence needs human verification"
+        ],
+        "riskChecks": [
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
+          "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
+          "No current link to published articles; add one approved contextual public link.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks.",
+          "Reject unsupported traffic, ranking, revenue, benchmark, cost, latency, or stability claims."
+        ],
+        "searchFixes": [
+          "Make the title and first paragraph answer this search intent explicitly: 大模型部署教程.",
+          "Keep the meta description focused on audience, workflow, risk boundary, and review outcome.",
+          "Add one exact or near-exact search query naturally in the opening or first H2.",
+          "Check search phrasing coverage: 大模型部署教程.",
+          "Check search phrasing coverage: Ollama 本地部署教程.",
+          "Check search phrasing coverage: vLLM 部署教程.",
+          "Check search phrasing coverage: RunPod vLLM serverless.",
+          "Confirm article naturally answers search query: 大模型部署教程.",
+          "Confirm article naturally answers search query: Ollama 本地部署教程.",
+          "Confirm article naturally answers search query: vLLM 部署教程.",
+          "Confirm article naturally answers search query: RunPod vLLM serverless.",
+          "Confirm article naturally answers search query: Hugging Face TGI 部署."
+        ],
+        "sourceChecks": [
+          "Verify implementation-sensitive claims against source: https://docs.ollama.com.",
+          "Verify implementation-sensitive claims against source: https://docs.vllm.ai.",
+          "Verify implementation-sensitive claims against source: https://huggingface.co/docs.",
+          "Verify implementation-sensitive claims against source: https://platform.openai.com/docs.",
+          "Verify implementation-sensitive claims against source: https://ai-sdk.dev/docs.",
+          "Verify implementation-sensitive claims against source: https://docs.runpod.io/serverless/vllm/get-started.",
+          "Verify implementation-sensitive claims against source: https://www.runpod.io/articles/guides/deploy-vllm-runpod-docker.",
+          "Verify implementation-sensitive claims against source: https://www.spheron.network/blog/llm-deployment-guide/.",
+          "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources."
+        ],
+        "title": "Docker 怎么用 NVIDIA GPU：大模型部署先装对 Container Toolkit",
+        "unsafeReasons": [],
+        "warningFixes": [
+          "No current link to published articles; add one approved contextual public link.",
+          "Freshness risk is high; all implementation-sensitive claims need current source checks."
+        ],
+        "wave": 3
+      }
+    ],
+    "itemsWithCommandBoundary": 24,
+    "itemsWithInternalLinkFixes": 24,
+    "itemsWithPublicLinkPlan": 24,
+    "itemsWithRemediationReasons": 24,
+    "itemsWithRiskChecks": 24,
+    "itemsWithSearchFixes": 24,
+    "itemsWithSourceChecks": 24,
+    "itemsWithWarningFixes": 24,
+    "manualFixReadyItems": 24,
+    "missingSpecificLinkSuggestionItems": 8,
+    "unsafeItems": 0,
+    "unsafeItemList": [],
+    "waveItems": 24,
+    "waveSummaries": [
+      {
+        "items": 3,
+        "manualFixReadyItems": 3,
+        "missingSpecificLinkSuggestionItems": 2,
+        "unsafeItems": 0,
+        "wave": 1
+      },
+      {
+        "items": 3,
+        "manualFixReadyItems": 3,
+        "missingSpecificLinkSuggestionItems": 0,
+        "unsafeItems": 0,
+        "wave": 2
+      },
+      {
+        "items": 3,
+        "manualFixReadyItems": 3,
+        "missingSpecificLinkSuggestionItems": 0,
+        "unsafeItems": 0,
+        "wave": 3
+      },
+      {
+        "items": 3,
+        "manualFixReadyItems": 3,
+        "missingSpecificLinkSuggestionItems": 1,
+        "unsafeItems": 0,
+        "wave": 4
+      },
+      {
+        "items": 3,
+        "manualFixReadyItems": 3,
+        "missingSpecificLinkSuggestionItems": 1,
+        "unsafeItems": 0,
+        "wave": 5
+      },
+      {
+        "items": 3,
+        "manualFixReadyItems": 3,
+        "missingSpecificLinkSuggestionItems": 2,
+        "unsafeItems": 0,
+        "wave": 6
+      },
+      {
+        "items": 3,
+        "manualFixReadyItems": 3,
+        "missingSpecificLinkSuggestionItems": 1,
+        "unsafeItems": 0,
+        "wave": 7
+      },
+      {
+        "items": 3,
+        "manualFixReadyItems": 3,
+        "missingSpecificLinkSuggestionItems": 1,
+        "unsafeItems": 0,
+        "wave": 8
+      }
+    ],
+    "waves": 8,
+    "wavesReady": 8
+  },
   "reviewOptimizationBrief": {
     "briefs": 16,
     "briefsWithAction": 16,
@@ -18815,10 +19521,10 @@
     "trafficDataAvailable": false
   },
   "trafficClaimGuard": {
-    "filesScanned": 151,
+    "filesScanned": 153,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 1730
+    "watchMentions": 1876
   },
   "publicSurfaceInventory": {
     "broadCoverage": [
@@ -29465,7 +30171,7 @@
   "liveSearch": {
     "checkedArticles": 15,
     "failedChecks": [],
-    "generatedAt": "2026-06-07T10:13:45.088Z",
+    "generatedAt": "2026-06-07T14:52:42.226Z",
     "missingFromSitemap": [],
     "ok": true,
     "publicArticles": 15,

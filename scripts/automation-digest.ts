@@ -1037,6 +1037,42 @@ type AutopilotBroadWaveOptimization = {
   waveSummaries: Array<{ files: string[]; items: number; readyItems: number; theme: string; unsafeItems: number; wave: number }>;
 };
 
+type AutopilotBroadWaveRemediationPack = {
+  items: Array<{
+    commandBoundary: { markReviewAfterHumanApproval: string; publishConfirm: string; publishDryRunAfterReview: string };
+    file: string;
+    internalLinkFixes: unknown[];
+    manualFixReady: boolean;
+    publicLinkPlan: unknown[];
+    remediationReasons: unknown[];
+    riskChecks: unknown[];
+    searchFixes: unknown[];
+    sourceChecks: unknown[];
+    title: string;
+    warningFixes: unknown[];
+    wave: number;
+  }>;
+  summary: {
+    items: number;
+    itemsWithCommandBoundary: number;
+    itemsWithInternalLinkFixes: number;
+    itemsWithPublicLinkPlan: number;
+    itemsWithRemediationReasons: number;
+    itemsWithRiskChecks: number;
+    itemsWithSearchFixes: number;
+    itemsWithSourceChecks: number;
+    itemsWithWarningFixes: number;
+    manualFixReadyItems: number;
+    missingSpecificLinkSuggestionItems: number;
+    unsafeItems: number;
+    waveItems: number;
+    waves: number;
+    wavesReady: number;
+  };
+  unsafeItems: unknown[];
+  waveSummaries: Array<{ items: number; manualFixReadyItems: number; missingSpecificLinkSuggestionItems: number; unsafeItems: number; wave: number }>;
+};
+
 type ReviewOptimizationBrief = {
   nextBriefs: Array<{
     file: string;
@@ -1454,6 +1490,7 @@ const reports = {
   autopilotBroadFreshnessTriage: readJson<AutopilotBroadFreshnessTriage>("content/automation/autopilot-broad-freshness-triage.json"),
   autopilotBroadPublishWaves: readJson<AutopilotBroadPublishWaves>("content/automation/autopilot-broad-publish-waves.json"),
   autopilotBroadWaveOptimization: readJson<AutopilotBroadWaveOptimization>("content/automation/autopilot-broad-wave-optimization.json"),
+  autopilotBroadWaveRemediation: readJson<AutopilotBroadWaveRemediationPack>("content/automation/autopilot-broad-wave-remediation-pack.json"),
   broadFirstCoverageLaunchPack: readJson<BroadFirstCoverageLaunchPack>("content/automation/broad-first-coverage-launch-pack.json"),
   broadFirstCoverageReadinessMatrix: readJson<BroadFirstCoverageReadinessMatrix>("content/automation/broad-first-coverage-readiness-matrix.json"),
   reviewOptimizationBrief: readJson<ReviewOptimizationBrief>("content/automation/review-optimization-brief.json"),
@@ -1795,6 +1832,26 @@ const payload = {
     waveSummaries: reports.autopilotBroadWaveOptimization.data?.waveSummaries.slice(0, 8) ?? [],
     waves: reports.autopilotBroadWaveOptimization.data?.summary.waves ?? null,
     wavesReady: reports.autopilotBroadWaveOptimization.data?.summary.wavesReady ?? null,
+  },
+  autopilotBroadWaveRemediation: {
+    items: reports.autopilotBroadWaveRemediation.data?.summary.items ?? null,
+    itemsList: reports.autopilotBroadWaveRemediation.data?.items.slice(0, 8) ?? [],
+    itemsWithCommandBoundary: reports.autopilotBroadWaveRemediation.data?.summary.itemsWithCommandBoundary ?? null,
+    itemsWithInternalLinkFixes: reports.autopilotBroadWaveRemediation.data?.summary.itemsWithInternalLinkFixes ?? null,
+    itemsWithPublicLinkPlan: reports.autopilotBroadWaveRemediation.data?.summary.itemsWithPublicLinkPlan ?? null,
+    itemsWithRemediationReasons: reports.autopilotBroadWaveRemediation.data?.summary.itemsWithRemediationReasons ?? null,
+    itemsWithRiskChecks: reports.autopilotBroadWaveRemediation.data?.summary.itemsWithRiskChecks ?? null,
+    itemsWithSearchFixes: reports.autopilotBroadWaveRemediation.data?.summary.itemsWithSearchFixes ?? null,
+    itemsWithSourceChecks: reports.autopilotBroadWaveRemediation.data?.summary.itemsWithSourceChecks ?? null,
+    itemsWithWarningFixes: reports.autopilotBroadWaveRemediation.data?.summary.itemsWithWarningFixes ?? null,
+    manualFixReadyItems: reports.autopilotBroadWaveRemediation.data?.summary.manualFixReadyItems ?? null,
+    missingSpecificLinkSuggestionItems: reports.autopilotBroadWaveRemediation.data?.summary.missingSpecificLinkSuggestionItems ?? null,
+    unsafeItems: reports.autopilotBroadWaveRemediation.data?.summary.unsafeItems ?? null,
+    unsafeItemList: reports.autopilotBroadWaveRemediation.data?.unsafeItems.slice(0, 8) ?? [],
+    waveItems: reports.autopilotBroadWaveRemediation.data?.summary.waveItems ?? null,
+    waveSummaries: reports.autopilotBroadWaveRemediation.data?.waveSummaries.slice(0, 8) ?? [],
+    waves: reports.autopilotBroadWaveRemediation.data?.summary.waves ?? null,
+    wavesReady: reports.autopilotBroadWaveRemediation.data?.summary.wavesReady ?? null,
   },
   reviewOptimizationBrief: {
     briefs: reports.reviewOptimizationBrief.data?.summary.briefs ?? null,
@@ -2266,6 +2323,9 @@ function buildNextActions() {
   }
   if (!reports.autopilotBroadWaveOptimization.data || reports.autopilotBroadWaveOptimization.data.summary.unsafeItems > 0) {
     return ["Open docs/autopilot-broad-wave-optimization.md and resolve unsafe broad wave optimization items before any approval action."];
+  }
+  if (!reports.autopilotBroadWaveRemediation.data || reports.autopilotBroadWaveRemediation.data.summary.unsafeItems > 0) {
+    return ["Open docs/autopilot-broad-wave-remediation-pack.md and resolve unsafe broad wave remediation items before any approval action."];
   }
   if (!reports.broadFirstCoverageLaunchPack.data || reports.broadFirstCoverageLaunchPack.data.summary.unsafeItems > 0) {
     return ["Open docs/broad-first-coverage-launch-pack.md and resolve unsafe first-coverage launch candidates before any approval action."];
@@ -2929,6 +2989,40 @@ function toMarkdown(data: typeof payload) {
     ...data.autopilotBroadWaveOptimization.itemsList.map(
       (item) =>
         `| ${item.wave} | ${item.readyForHumanOptimizationReview} | ${item.publicLinkSuggestion ? item.publicLinkSuggestion.url : "missing"} | ${item.articleSignals.h2Count} | ${item.articleSignals.descriptionLength} | ${item.actionChecklist.length} | ${item.warningRemediation.length} | ${item.title} | ${item.file} |`,
+    ),
+    "",
+    "## Autopilot Broad Wave Remediation Pack",
+    "",
+    `- Waves: ${data.autopilotBroadWaveRemediation.waves}`,
+    `- Waves ready: ${data.autopilotBroadWaveRemediation.wavesReady}`,
+    `- Items: ${data.autopilotBroadWaveRemediation.items}`,
+    `- Wave items: ${data.autopilotBroadWaveRemediation.waveItems}`,
+    `- Manual fix ready items: ${data.autopilotBroadWaveRemediation.manualFixReadyItems}`,
+    `- Items with command boundary: ${data.autopilotBroadWaveRemediation.itemsWithCommandBoundary}`,
+    `- Items with internal-link fixes: ${data.autopilotBroadWaveRemediation.itemsWithInternalLinkFixes}`,
+    `- Items with public-link plan: ${data.autopilotBroadWaveRemediation.itemsWithPublicLinkPlan}`,
+    `- Missing specific link suggestion items: ${data.autopilotBroadWaveRemediation.missingSpecificLinkSuggestionItems}`,
+    `- Items with search fixes: ${data.autopilotBroadWaveRemediation.itemsWithSearchFixes}`,
+    `- Items with source checks: ${data.autopilotBroadWaveRemediation.itemsWithSourceChecks}`,
+    `- Items with warning fixes: ${data.autopilotBroadWaveRemediation.itemsWithWarningFixes}`,
+    `- Items with risk checks: ${data.autopilotBroadWaveRemediation.itemsWithRiskChecks}`,
+    `- Unsafe items: ${data.autopilotBroadWaveRemediation.unsafeItems}`,
+    "",
+    "Unsafe broad wave remediation items:",
+    "",
+    ...(data.autopilotBroadWaveRemediation.unsafeItemList.length ? data.autopilotBroadWaveRemediation.unsafeItemList.map((item) => `- ${JSON.stringify(item)}`) : ["- none"]),
+    "",
+    "| Wave | Ready | Missing specific link suggestion | Unsafe | Items |",
+    "| --- | --- | --- | --- | --- |",
+    ...data.autopilotBroadWaveRemediation.waveSummaries.map(
+      (wave) => `| ${wave.wave} | ${wave.manualFixReadyItems}/${wave.items} | ${wave.missingSpecificLinkSuggestionItems} | ${wave.unsafeItems} | ${wave.items} |`,
+    ),
+    "",
+    "| Wave | Ready | Reasons | Search fixes | Source checks | Link fixes | Link plan | Warnings | Risk checks | Mark-review gated | Publish confirm | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...data.autopilotBroadWaveRemediation.itemsList.map(
+      (item) =>
+        `| ${item.wave} | ${item.manualFixReady} | ${item.remediationReasons.length} | ${item.searchFixes.length} | ${item.sourceChecks.length} | ${item.internalLinkFixes.length} | ${item.publicLinkPlan.length} | ${item.warningFixes.length} | ${item.riskChecks.length} | ${item.commandBoundary.markReviewAfterHumanApproval.includes("--confirm-human")} | ${item.commandBoundary.publishConfirm} | ${item.title} | ${item.file} |`,
     ),
     "",
     "## Broad First Coverage Launch Pack",

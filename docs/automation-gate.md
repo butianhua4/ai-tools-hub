@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-07T14:28:50.247Z
+Generated at: 2026-06-07T14:54:32.805Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 133
-- Passed: 133
+- Checks: 135
+- Passed: 135
 - Failed: 0
 
 ## Checks
@@ -30,7 +30,7 @@ Overall: PASS
 | project status still stops before publishing | PASS | publicPublished=15, publishableNow=0 |
 | traffic evidence audit passed and is read-only | PASS | failedChecks=0, measuredTrafficSources=0 |
 | traffic is not claimed without measured metrics | PASS | trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 |
-| traffic claim guard found no unsupported claims | PASS | filesScanned=151, unsafeClaims=0, watchMentions=1730 |
+| traffic claim guard found no unsupported claims | PASS | filesScanned=153, unsafeClaims=0, watchMentions=1876 |
 | content integrity audit is read-only and clean | PASS | filesScanned=669, blockingItems=0 |
 | content integrity audit covers public, recommended, and Wave 1 items | PASS | public=15, recommended=3, wave=3 |
 | internal link opportunity audit is read-only and covers expansion candidates | PASS | public=15, expansion=19, broadFirst=8, candidates=22 |
@@ -71,6 +71,8 @@ Overall: PASS
 | autopilot broad publish waves preserve human approval command boundaries | PASS | ready=24, safe=24, approvalWaves=8 |
 | autopilot broad wave optimization is read-only and covers publish waves | PASS | items=24, waves=8, readyWaves=8, unsafe=0 |
 | autopilot broad wave optimization has actionable SEO and approval guidance | PASS | ready=24, checklists=24, links=16 |
+| autopilot broad wave remediation pack covers optimization items | PASS | items=24, waves=8, readyWaves=8, unsafe=0 |
+| autopilot broad wave remediation pack has human-gated fixes | PASS | ready=24, search=24, source=24, linkPlan=24, missingSpecificLinks=8 |
 | broad first coverage launch pack is read-only and covers zero-public clusters | PASS | selected=8, zeroPublic=8, unique=8, unsafe=0 |
 | broad first coverage launch pack preserves human review boundaries | PASS | safe=8, commands=8, sources=8, checks=8 |
 | broad first coverage readiness matrix is read-only and covers launch pack | PASS | items=8, unique=8, blocking=0, unsafe=0 |

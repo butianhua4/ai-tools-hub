@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T14:28:46.363Z",
+  "generatedAt": "2026-06-07T14:54:28.843Z",
   "guardrails": {
     "autoCreateArticles": false,
     "autoEditArticles": false,
@@ -10,7 +10,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "demandBriefGeneratedAt": "2026-06-07T14:28:44.408Z",
+    "demandBriefGeneratedAt": "2026-06-07T14:54:26.247Z",
     "demandBriefGuardrails": {
       "autoCreateArticles": false,
       "autoEditArticles": false,
@@ -29,7 +29,7 @@
       "reviewReadyDrafts": 633,
       "unsafeClusters": 0
     },
-    "freshnessTriageGeneratedAt": "2026-06-07T14:28:44.899Z",
+    "freshnessTriageGeneratedAt": "2026-06-07T14:54:26.751Z",
     "freshnessTriageGuardrails": {
       "autoEditArticles": false,
       "autoMarkReview": false,
@@ -54,7 +54,7 @@
       "unsafeItems": 0,
       "uniqueFiles": 24
     },
-    "publicSurfaceGeneratedAt": "2026-06-07T14:18:04.498Z",
+    "publicSurfaceGeneratedAt": "2026-06-07T14:53:36.677Z",
     "publicSurfaceGuardrails": {
       "autoEditArticles": false,
       "autoMarkReview": false,

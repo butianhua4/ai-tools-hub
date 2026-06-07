@@ -1033,6 +1033,50 @@ async function main() {
     };
     waveSummaries?: Array<{ items?: number; readyItems?: number; unsafeItems?: number }>;
   }>("content/automation/autopilot-broad-wave-optimization.json");
+  const autopilotBroadWaveRemediation = readJson<{
+    guardrails: {
+      autoEditArticles: boolean;
+      autoMarkReview: boolean;
+      autoPublish: boolean;
+      trafficClaim: string;
+    };
+    items?: Array<{
+      commandBoundary?: { markReviewAfterHumanApproval?: string; publishConfirm?: string; publishDryRunAfterReview?: string };
+      humanChecklist?: unknown[];
+      internalLinkFixes?: unknown[];
+      manualFixReady?: boolean;
+      publicLinkPlan?: unknown[];
+      remediationReasons?: unknown[];
+      riskChecks?: unknown[];
+      searchFixes?: unknown[];
+      sourceChecks?: unknown[];
+      unsafeReasons?: unknown[];
+      warningFixes?: unknown[];
+    }>;
+    sourceEvidence: {
+      broadWaveOptimizationUnsafeItems: number;
+      trafficDataAvailable: boolean;
+    };
+    summary: {
+      items: number;
+      itemsWithCommandBoundary: number;
+      itemsWithInternalLinkFixes: number;
+      itemsWithPublicLinkPlan: number;
+      itemsWithRemediationReasons: number;
+      itemsWithRiskChecks: number;
+      itemsWithSearchFixes: number;
+      itemsWithSourceChecks: number;
+      itemsWithWarningFixes: number;
+      manualFixReadyItems: number;
+      missingSpecificLinkSuggestionItems: number;
+      unsafeItems: number;
+      waveItems: number;
+      waves: number;
+      wavesReady: number;
+    };
+    unsafeItems?: unknown[];
+    waveSummaries?: Array<{ items?: number; manualFixReadyItems?: number; unsafeItems?: number }>;
+  }>("content/automation/autopilot-broad-wave-remediation-pack.json");
   const broadFirstCoverageLaunchPack = readJson<{
     guardrails: {
       autoCreateArticles: boolean;
@@ -2039,6 +2083,52 @@ async function main() {
           ),
       ),
       detail: `ready=${autopilotBroadWaveOptimization.summary.readyItems}, checklists=${autopilotBroadWaveOptimization.summary.itemsWithActionChecklist}, links=${autopilotBroadWaveOptimization.summary.itemsWithPublicLinkSuggestion}`,
+    },
+    {
+      name: "autopilot broad wave remediation pack covers optimization items",
+      ok:
+        autopilotBroadWaveRemediation.guardrails.autoEditArticles === false &&
+        autopilotBroadWaveRemediation.guardrails.autoMarkReview === false &&
+        autopilotBroadWaveRemediation.guardrails.autoPublish === false &&
+        autopilotBroadWaveRemediation.guardrails.trafficClaim === "not-included" &&
+        autopilotBroadWaveRemediation.sourceEvidence.broadWaveOptimizationUnsafeItems === 0 &&
+        autopilotBroadWaveRemediation.sourceEvidence.trafficDataAvailable === false &&
+        autopilotBroadWaveRemediation.summary.items === autopilotBroadWaveOptimization.summary.items &&
+        autopilotBroadWaveRemediation.summary.waveItems === autopilotBroadWaveOptimization.summary.waveItems &&
+        autopilotBroadWaveRemediation.summary.waves === autopilotBroadWaveOptimization.summary.waves &&
+        autopilotBroadWaveRemediation.summary.wavesReady === autopilotBroadWaveRemediation.summary.waves &&
+        autopilotBroadWaveRemediation.summary.unsafeItems === 0,
+      detail: `items=${autopilotBroadWaveRemediation.summary.items}, waves=${autopilotBroadWaveRemediation.summary.waves}, readyWaves=${autopilotBroadWaveRemediation.summary.wavesReady}, unsafe=${autopilotBroadWaveRemediation.summary.unsafeItems}`,
+    },
+    {
+      name: "autopilot broad wave remediation pack has human-gated fixes",
+      ok:
+        autopilotBroadWaveRemediation.summary.manualFixReadyItems === autopilotBroadWaveRemediation.summary.items &&
+        autopilotBroadWaveRemediation.summary.itemsWithCommandBoundary === autopilotBroadWaveRemediation.summary.items &&
+        autopilotBroadWaveRemediation.summary.itemsWithInternalLinkFixes === autopilotBroadWaveRemediation.summary.items &&
+        autopilotBroadWaveRemediation.summary.itemsWithPublicLinkPlan === autopilotBroadWaveRemediation.summary.items &&
+        autopilotBroadWaveRemediation.summary.itemsWithRemediationReasons === autopilotBroadWaveRemediation.summary.items &&
+        autopilotBroadWaveRemediation.summary.itemsWithRiskChecks === autopilotBroadWaveRemediation.summary.items &&
+        autopilotBroadWaveRemediation.summary.itemsWithSearchFixes === autopilotBroadWaveRemediation.summary.items &&
+        autopilotBroadWaveRemediation.summary.itemsWithSourceChecks === autopilotBroadWaveRemediation.summary.items &&
+        Boolean(
+          autopilotBroadWaveRemediation.items?.every(
+            (item) =>
+              item.manualFixReady === true &&
+              (item.unsafeReasons?.length || 0) === 0 &&
+              (item.humanChecklist?.length || 0) >= 5 &&
+              (item.internalLinkFixes?.length || 0) > 0 &&
+              (item.publicLinkPlan?.length || 0) > 0 &&
+              (item.remediationReasons?.length || 0) > 0 &&
+              (item.riskChecks?.length || 0) >= 4 &&
+              (item.searchFixes?.length || 0) > 0 &&
+              (item.sourceChecks?.length || 0) > 0 &&
+              item.commandBoundary?.markReviewAfterHumanApproval?.includes("--confirm-human") &&
+              !item.commandBoundary?.publishDryRunAfterReview?.includes("--confirm") &&
+              item.commandBoundary?.publishConfirm === "not-included",
+          ),
+        ),
+      detail: `ready=${autopilotBroadWaveRemediation.summary.manualFixReadyItems}, search=${autopilotBroadWaveRemediation.summary.itemsWithSearchFixes}, source=${autopilotBroadWaveRemediation.summary.itemsWithSourceChecks}, linkPlan=${autopilotBroadWaveRemediation.summary.itemsWithPublicLinkPlan}, missingSpecificLinks=${autopilotBroadWaveRemediation.summary.missingSpecificLinkSuggestionItems}`,
     },
     {
       name: "broad first coverage launch pack is read-only and covers zero-public clusters",

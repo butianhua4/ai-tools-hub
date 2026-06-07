@@ -1,6 +1,6 @@
 # Source Target Health Audit
 
-Generated at: 2026-06-07T14:18:40.950Z
+Generated at: 2026-06-07T14:54:13.498Z
 
 This report is read-only. It verifies official source URLs used by review and public-gap candidates before any human approval step.
 
@@ -48,7 +48,7 @@ This report is read-only. It verifies official source URLs used by review and pu
 | true | 200 | https://docs.anthropic.com | https://platform.claude.com/docs/en/home | 5 |  |
 | true | 200 | https://docs.anthropic.com/ | https://platform.claude.com/docs/en/home | 2 |  |
 | true | 200 | https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview | 5 |  |
-| true | 200 | https://docs.dify.ai | https://docs.dify.ai/en/use-dify/getting-started/introduction | 7 |  |
+| true | 200 | https://docs.dify.ai | https://docs.dify.ai/en/use-dify/getting-started/introduction | 7 | AbortError |
 | true | 200 | https://docs.dify.ai/ | https://docs.dify.ai/en/use-dify/getting-started/introduction | 2 |  |
 | true | 200 | https://docs.helicone.ai/ | https://docs.helicone.ai/getting-started/quick-start | 2 |  |
 | true | 200 | https://docs.llamaindex.ai | https://developers.llamaindex.ai/python/framework/ | 7 |  |
@@ -60,7 +60,7 @@ This report is read-only. It verifies official source URLs used by review and pu
 | true | 200 | https://platform.openai.com/docs/guides/prompt-engineering | https://developers.openai.com/api/docs/guides/prompt-engineering | 30 |  |
 | true | 200 | https://platform.openai.com/docs/guides/prompt-generation | https://developers.openai.com/api/docs/guides/prompt-generation | 2 |  |
 | true | 200 | https://platform.openai.com/docs/guides/retrieval | https://developers.openai.com/api/docs/guides/retrieval | 29 |  |
-| true | 200 | https://python.langchain.com/docs | https://docs.langchain.com/oss/python/langchain/overview | 16 | AbortError |
+| true | 200 | https://python.langchain.com/docs | https://docs.langchain.com/oss/python/langchain/overview | 16 |  |
 
 ## File Coverage
 
@@ -104,7 +104,7 @@ This report is read-only. It verifies official source URLs used by review and pu
 | true | 200 | https://docs.anthropic.com | https://platform.claude.com/docs/en/home | 5 |  |
 | true | 200 | https://docs.anthropic.com/ | https://platform.claude.com/docs/en/home | 2 |  |
 | true | 200 | https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview | 5 |  |
-| true | 200 | https://docs.dify.ai | https://docs.dify.ai/en/use-dify/getting-started/introduction | 7 |  |
+| true | 200 | https://docs.dify.ai | https://docs.dify.ai/en/use-dify/getting-started/introduction | 7 | AbortError |
 | true | 200 | https://docs.dify.ai/ | https://docs.dify.ai/en/use-dify/getting-started/introduction | 2 |  |
 | true | 200 | https://docs.helicone.ai/ | https://docs.helicone.ai/getting-started/quick-start | 2 |  |
 | true | 200 | https://docs.llamaindex.ai | https://developers.llamaindex.ai/python/framework/ | 7 |  |
@@ -123,7 +123,7 @@ This report is read-only. It verifies official source URLs used by review and pu
 | true | 200 | https://platform.openai.com/docs/guides/prompt-engineering | https://developers.openai.com/api/docs/guides/prompt-engineering | 30 |  |
 | true | 200 | https://platform.openai.com/docs/guides/prompt-generation | https://developers.openai.com/api/docs/guides/prompt-generation | 2 |  |
 | true | 200 | https://platform.openai.com/docs/guides/retrieval | https://developers.openai.com/api/docs/guides/retrieval | 29 |  |
-| true | 200 | https://python.langchain.com/docs | https://docs.langchain.com/oss/python/langchain/overview | 16 | AbortError |
+| true | 200 | https://python.langchain.com/docs | https://docs.langchain.com/oss/python/langchain/overview | 16 |  |
 | true | 200 | https://sensara.io/prompts/ | https://sensara.io/prompts/ | 2 |  |
 | true | 200 | https://support.google.com/docs/answer/15013615 | https://support.google.com/docs/answer/15013615 | 2 |  |
 | true | 200 | https://vercel.com/docs/ai-gateway | https://vercel.com/docs/ai-gateway | 2 |  |

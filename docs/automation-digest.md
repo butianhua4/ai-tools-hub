@@ -1,12 +1,12 @@
 # Automation Digest
 
-Generated at: 2026-06-07T14:28:50.834Z
+Generated at: 2026-06-07T14:54:33.323Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
 ## Health
 
-- Run ok: true
+- Run ok: false
 - Gate ok: true
 - Preflight ok: true
 - SEO ok: true
@@ -613,6 +613,49 @@ Unsafe broad wave optimization items:
 | 3 | true | /blog/codex-code-review-delivery-checklist | 11 | 59 | 15 | 2 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
 | 3 | true | /blog/vercel-env-variable-missing-beginner-guide | 11 | 102 | 15 | 2 | Docker 怎么用 NVIDIA GPU：大模型部署先装对 Container Toolkit | content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx |
 
+## Autopilot Broad Wave Remediation Pack
+
+- Waves: 8
+- Waves ready: 8
+- Items: 24
+- Wave items: 24
+- Manual fix ready items: 24
+- Items with command boundary: 24
+- Items with internal-link fixes: 24
+- Items with public-link plan: 24
+- Missing specific link suggestion items: 8
+- Items with search fixes: 24
+- Items with source checks: 24
+- Items with warning fixes: 24
+- Items with risk checks: 24
+- Unsafe items: 0
+
+Unsafe broad wave remediation items:
+
+- none
+
+| Wave | Ready | Missing specific link suggestion | Unsafe | Items |
+| --- | --- | --- | --- | --- |
+| 1 | 3/3 | 2 | 0 | 3 |
+| 2 | 3/3 | 0 | 0 | 3 |
+| 3 | 3/3 | 0 | 0 | 3 |
+| 4 | 3/3 | 1 | 0 | 3 |
+| 5 | 3/3 | 1 | 0 | 3 |
+| 6 | 3/3 | 2 | 0 | 3 |
+| 7 | 3/3 | 1 | 0 | 3 |
+| 8 | 3/3 | 1 | 0 | 3 |
+
+| Wave | Ready | Reasons | Search fixes | Source checks | Link fixes | Link plan | Warnings | Risk checks | Mark-review gated | Publish confirm | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | true | 5 | 12 | 6 | 6 | 4 | 1 | 5 | true | not-included | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
+| 1 | true | 5 | 12 | 9 | 3 | 1 | 3 | 7 | true | not-included | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 1 | true | 5 | 12 | 4 | 6 | 4 | 2 | 6 | true | not-included | Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则 | content/blog/agent-memory-postgres-schema-guide.mdx |
+| 2 | true | 5 | 12 | 11 | 3 | 1 | 3 | 7 | true | not-included | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| 2 | true | 5 | 13 | 8 | 3 | 1 | 3 | 7 | true | not-included | 团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用 | content/blog/ai-prompt-library-team-knowledge-base-guide.mdx |
+| 2 | true | 5 | 12 | 4 | 3 | 1 | 3 | 7 | true | not-included | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
+| 3 | true | 5 | 12 | 13 | 3 | 1 | 2 | 6 | true | not-included | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
+| 3 | true | 5 | 12 | 9 | 3 | 1 | 2 | 6 | true | not-included | Docker 怎么用 NVIDIA GPU：大模型部署先装对 Container Toolkit | content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx |
+
 ## Broad First Coverage Launch Pack
 
 - Zero-public clusters: 8
@@ -904,8 +947,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 151
-- Traffic claim watch mentions: 1730
+- Traffic claim files scanned: 153
+- Traffic claim watch mentions: 1876
 
 ## Public Surface Inventory
 
@@ -1322,7 +1365,7 @@ Public categories:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-07T10:13:45.088Z
+- Latest check: 2026-06-07T14:52:42.226Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85
