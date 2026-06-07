@@ -50,6 +50,27 @@ type PublicSearchRefreshPack = {
   unsafeItems?: unknown[];
 };
 
+type MojibakeRemediationBrief = {
+  generatedAt: string;
+  items?: Array<{
+    bodyHit?: { sample?: string } | null;
+    file: string;
+    metadataHits?: Array<{ field: string; sample: string }>;
+    status: string;
+  }>;
+  summary: {
+    affectedPublicFiles: number;
+    publishConfirmCommandsIncluded: number;
+    trafficDataAvailable: boolean;
+    unsafeItems: number;
+  };
+};
+
+type MojibakeSignal = {
+  fields: string[];
+  sample: string;
+};
+
 type SprintItem = {
   actionCount: number;
   category: string;
@@ -60,6 +81,7 @@ type SprintItem = {
   readyForPublicRefreshSprint: boolean;
   refreshActions: string[];
   refreshReasons: string[];
+  mojibakeSignal: MojibakeSignal | null;
   slug: string;
   sprintWave: number;
   title: string;
@@ -81,11 +103,26 @@ const ITEMS_PER_WAVE = 3;
 
 function main() {
   const refreshPack = readJson<PublicSearchRefreshPack>("content/automation/public-search-refresh-pack.json");
+  const mojibake = readJson<MojibakeRemediationBrief>("content/automation/mojibake-remediation-brief.json");
+  const mojibakeByFile = new Map(
+    (mojibake.items || [])
+      .filter((item) => item.status === "published")
+      .map((item) => [
+        item.file,
+        {
+          fields: [
+            ...(item.metadataHits || []).map((hit) => hit.field),
+            item.bodyHit ? "bodyExcerpt" : "",
+          ].filter(Boolean),
+          sample: item.bodyHit?.sample || item.metadataHits?.[0]?.sample || "",
+        },
+      ]),
+  );
   const sourceItems = refreshPack.items || [];
   const items = sourceItems
     .slice()
-    .sort((a, b) => b.priorityScore - a.priorityScore || b.actionCount - a.actionCount || a.file.localeCompare(b.file))
-    .map(toSprintItem);
+    .sort((a, b) => priorityWithMojibake(b, mojibakeByFile) - priorityWithMojibake(a, mojibakeByFile) || b.actionCount - a.actionCount || a.file.localeCompare(b.file))
+    .map((item, index) => toSprintItem(item, index, mojibakeByFile.get(item.file) || null));
   const waves = buildWaves(items);
   const unsafeItems = items.filter((item) => item.unsafeReasons.length > 0);
 
@@ -101,6 +138,8 @@ function main() {
       trafficClaim: "not-included",
     },
     sourceEvidence: {
+      mojibakeRemediationGeneratedAt: mojibake.generatedAt,
+      mojibakeRemediationSummary: mojibake.summary,
       publicSearchRefreshGeneratedAt: refreshPack.generatedAt,
       publicSearchRefreshSummary: refreshPack.summary,
       trafficNote: "No measured traffic, ranking, impression, click, conversion, or revenue claim is made.",
@@ -113,6 +152,7 @@ function main() {
       itemsPerWave: ITEMS_PER_WAVE,
       itemsReadyForPublicRefreshSprint: items.filter((item) => item.readyForPublicRefreshSprint).length,
       liveMissingFromSitemap: refreshPack.summary.liveMissingFromSitemap,
+      mojibakePublicItems: items.filter((item) => item.refreshReasons.includes("mojibake-public")).length,
       publicArticles: refreshPack.summary.publicArticles,
       publishConfirmCommandsIncluded: 0,
       publishedButNoindexed: refreshPack.summary.publishedButNoindexed,
@@ -137,20 +177,21 @@ function main() {
   if (unsafeItems.length) process.exitCode = 1;
 }
 
-function toSprintItem(item: RefreshPackItem, index: number): SprintItem {
+function toSprintItem(item: RefreshPackItem, index: number, mojibakeSignal: MojibakeSignal | null): SprintItem {
   const unsafeReasons = unsafeReasonsFor(item);
-  const refreshReasons = refreshReasonsFor(item);
-  const refreshActions = refreshActionsFor(item, refreshReasons);
+  const refreshReasons = refreshReasonsFor(item, mojibakeSignal);
+  const refreshActions = refreshActionsFor(item, refreshReasons, mojibakeSignal);
   return {
     actionCount: refreshActions.length,
     category: item.category,
     descriptionLength: item.descriptionLength,
     file: item.file,
-    priorityScore: item.priorityScore,
+    priorityScore: item.priorityScore + (mojibakeSignal ? 80 : 0),
     publishConfirm: "not-included",
     readyForPublicRefreshSprint: unsafeReasons.length === 0 && item.readyForHumanRefreshReview === true,
     refreshActions,
     refreshReasons,
+    mojibakeSignal,
     slug: item.slug,
     sprintWave: Math.floor(index / ITEMS_PER_WAVE) + 1,
     title: item.title,
@@ -158,8 +199,9 @@ function toSprintItem(item: RefreshPackItem, index: number): SprintItem {
   };
 }
 
-function refreshReasonsFor(item: RefreshPackItem) {
+function refreshReasonsFor(item: RefreshPackItem, mojibakeSignal: MojibakeSignal | null) {
   const reasons: string[] = [];
+  if (mojibakeSignal) reasons.push("mojibake-public");
   if (item.seoWarning) reasons.push("seo-warning");
   if (item.descriptionLength < 90) reasons.push("short-description");
   if ((item.cannibalizationConflicts?.length || 0) > 0) reasons.push("cannibalization");
@@ -168,12 +210,16 @@ function refreshReasonsFor(item: RefreshPackItem) {
   return dedupe(reasons);
 }
 
-function refreshActionsFor(item: RefreshPackItem, refreshReasons: string[]) {
+function refreshActionsFor(item: RefreshPackItem, refreshReasons: string[], mojibakeSignal: MojibakeSignal | null) {
   const actions = [
     "Confirm the public page still answers one clear search intent before editing.",
     "Do not claim traffic, rankings, impressions, clicks, conversions, or revenue.",
   ];
   for (const action of item.actions.slice(0, 6)) actions.push(action);
+  if (refreshReasons.includes("mojibake-public")) {
+    actions.push(`Repair likely garbled public copy in ${mojibakeSignal?.fields.join(", ") || "article copy"} after comparing the intended topic and sources.`);
+    actions.push("Prioritize readable Chinese body copy before metadata polishing, because this page is already public.");
+  }
   if (refreshReasons.includes("short-description")) actions.push("Rewrite the meta description manually with a clearer user problem, concrete workflow term, and safe outcome.");
   if (refreshReasons.includes("cannibalization")) actions.push("Decide whether overlapping draft/review pages should be merged, redirected, archived, or kept as separate intent pages.");
   if (refreshReasons.includes("freshness-high")) actions.push("Re-check fast-changing tool, model, deployment, API, and policy claims against current official sources.");
@@ -192,6 +238,10 @@ function unsafeReasonsFor(item: RefreshPackItem) {
   if (!item.slug) reasons.push("public page missing slug");
   if (!item.title) reasons.push("public page missing title");
   return dedupe(reasons);
+}
+
+function priorityWithMojibake(item: RefreshPackItem, mojibakeByFile: Map<string, MojibakeSignal>) {
+  return item.priorityScore + (mojibakeByFile.has(item.file) ? 80 : 0);
 }
 
 function buildWaves(items: SprintItem[]) {

@@ -82,6 +82,7 @@ async function main() {
     manualRemediationRules?: unknown[];
     summary: {
       affectedFiles: number;
+      affectedPublicFiles: number;
       filesScanned: number;
       publishConfirmCommandsIncluded: number;
       scannedMetadataFields: number;
@@ -878,6 +879,7 @@ async function main() {
       itemsPerWave: number;
       itemsReadyForPublicRefreshSprint: number;
       liveMissingFromSitemap: number | null;
+      mojibakePublicItems: number;
       publicArticles: number;
       publishConfirmCommandsIncluded: number;
       publishedButNoindexed: number;
@@ -4618,6 +4620,7 @@ async function main() {
         publicRefreshSprintBoard.summary.items === publicSearchRefreshPack.summary.items &&
         publicRefreshSprintBoard.summary.publicArticles === publicSearchRefreshPack.summary.publicArticles &&
         publicRefreshSprintBoard.summary.itemsReadyForPublicRefreshSprint === publicSearchRefreshPack.summary.itemsReadyForHumanRefreshReview &&
+        publicRefreshSprintBoard.summary.mojibakePublicItems === mojibakeRemediation.summary.affectedPublicFiles &&
         publicRefreshSprintBoard.summary.seoWarningItems === publicSearchRefreshPack.summary.seoWarningItems &&
         publicRefreshSprintBoard.summary.shortDescriptionItems === publicSearchRefreshPack.summary.shortDescriptionItems &&
         publicRefreshSprintBoard.summary.cannibalizationItems === publicSearchRefreshPack.summary.cannibalizationItems &&
@@ -4625,7 +4628,7 @@ async function main() {
         publicRefreshSprintBoard.summary.publishedButNoindexed === publicSearchRefreshPack.summary.publishedButNoindexed &&
         publicRefreshSprintBoard.summary.trafficDataAvailable === false &&
         publicRefreshSprintBoard.summary.waves >= 5,
-      detail: `items=${publicRefreshSprintBoard.summary.items}, public=${publicRefreshSprintBoard.summary.publicArticles}, waves=${publicRefreshSprintBoard.summary.waves}, seo=${publicRefreshSprintBoard.summary.seoWarningItems}, shortDescriptions=${publicRefreshSprintBoard.summary.shortDescriptionItems}`,
+      detail: `items=${publicRefreshSprintBoard.summary.items}, public=${publicRefreshSprintBoard.summary.publicArticles}, waves=${publicRefreshSprintBoard.summary.waves}, mojibakePublic=${publicRefreshSprintBoard.summary.mojibakePublicItems}, seo=${publicRefreshSprintBoard.summary.seoWarningItems}, shortDescriptions=${publicRefreshSprintBoard.summary.shortDescriptionItems}`,
     },
     {
       name: "public refresh sprint board keeps public edits manual and publish-confirm-free",
@@ -4640,7 +4643,9 @@ async function main() {
               item.readyForPublicRefreshSprint === true &&
               (item.unsafeReasons?.length || 0) === 0 &&
               (item.refreshActions?.length || item.actionCount || 0) >= 5 &&
-              item.publishConfirm === "not-included",
+              item.publishConfirm === "not-included" &&
+              (!item.refreshReasons?.includes("mojibake-public") ||
+                Boolean(item.refreshActions?.some((action) => typeof action === "string" && action.includes("garbled public copy")))),
           ),
         ) &&
         Boolean(publicRefreshSprintBoard.waves?.every((wave) => wave.readyItems === wave.items && (wave.unsafeItems || 0) === 0 && (wave.actionItems || 0) >= (wave.items || 0) * 5)),

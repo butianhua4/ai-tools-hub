@@ -610,6 +610,7 @@ type PublicRefreshSprintBoard = {
     itemsPerWave: number;
     itemsReadyForPublicRefreshSprint: number;
     liveMissingFromSitemap: number | null;
+    mojibakePublicItems: number;
     publicArticles: number;
     publishConfirmCommandsIncluded: number;
     publishedButNoindexed: number;
@@ -2957,6 +2958,7 @@ const payload = {
     itemsPerWave: reports.publicRefreshSprintBoard.data?.summary.itemsPerWave ?? null,
     itemsReadyForPublicRefreshSprint: reports.publicRefreshSprintBoard.data?.summary.itemsReadyForPublicRefreshSprint ?? null,
     liveMissingFromSitemap: reports.publicRefreshSprintBoard.data?.summary.liveMissingFromSitemap ?? null,
+    mojibakePublicItems: reports.publicRefreshSprintBoard.data?.summary.mojibakePublicItems ?? null,
     publicArticles: reports.publicRefreshSprintBoard.data?.summary.publicArticles ?? null,
     publishConfirmCommandsIncluded: reports.publicRefreshSprintBoard.data?.summary.publishConfirmCommandsIncluded ?? null,
     publishedButNoindexed: reports.publicRefreshSprintBoard.data?.summary.publishedButNoindexed ?? null,
@@ -4974,6 +4976,7 @@ function toMarkdown(data: typeof payload) {
     `- High-priority items: ${data.publicRefreshSprintBoard.highPriorityItems}`,
     `- SEO warning items: ${data.publicRefreshSprintBoard.seoWarningItems}`,
     `- Short-description items: ${data.publicRefreshSprintBoard.shortDescriptionItems}`,
+    `- Mojibake public items: ${data.publicRefreshSprintBoard.mojibakePublicItems}`,
     `- Cannibalization items: ${data.publicRefreshSprintBoard.cannibalizationItems}`,
     `- Action items: ${data.publicRefreshSprintBoard.actionItems}`,
     `- Live missing from sitemap: ${data.publicRefreshSprintBoard.liveMissingFromSitemap}`,
