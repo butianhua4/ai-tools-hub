@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T17:05:36.094Z
+Generated at: 2026-06-07T17:14:50.981Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -54,7 +54,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=it
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/ -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
@@ -831,6 +831,35 @@ Unsafe first coverage launch items:
 - Wave items: 3
 - Wave items with blocking issues: 0
 
+## SEO Warning Remediation
+
+- Items: 16
+- Public items: 8
+- Draft items: 8
+- Recommended items: 1
+- Wave items: 1
+- Snippet warning items: 13
+- Schema warning items: 7
+- Manual-fix-ready items: 16
+- Human-gated items: 16
+- Unsafe items: 0
+- Traffic data available: false
+
+Unsafe SEO warning remediation items:
+
+- none
+
+| Priority | Ready | Status | Scope | Snippet warnings | Schema warnings | Title | File |
+| ---: | --- | --- | --- | ---: | ---: | --- | --- |
+| 86 | true | draft | expansion, recommended, wave-1 | 2 | 0 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| 63 | true | published | public | 1 | 1 | Codex 项目 npm install 报错怎么办：新手排查步骤 | content/blog/codex-npm-install-error-beginner-fix.mdx |
+| 63 | true | published | public | 1 | 1 | 第一个 Upwork 小项目怎么报价：新手范围和底价检查 | content/blog/first-upwork-project-pricing-checklist.mdx |
+| 63 | true | published | public | 1 | 1 | Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看 | content/blog/payoneer-wise-paypal-beginner-comparison.mdx |
+| 63 | true | published | public | 1 | 1 | Vercel 提示环境变量缺失怎么办：新手部署检查流程 | content/blog/vercel-env-variable-missing-beginner-guide.mdx |
+| 58 | true | published | public | 1 | 0 | Upwork Proposal 发出去没人回怎么办：新手检查清单 | content/blog/upwork-proposal-no-reply-checklist.mdx |
+| 55 | true | published | public | 0 | 1 | Codex 和 GitHub 怎么配合：提交代码前检查 | content/blog/codex-github-before-commit-checklist.mdx |
+| 55 | true | published | public | 0 | 1 | Codex 部署 Vercel 前检查什么：上线前清单 | content/blog/codex-vercel-deploy-preflight-checklist.mdx |
+
 ## Publishing Boundary
 
 - Public published: 15
@@ -976,8 +1005,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 157
-- Traffic claim watch mentions: 2029
+- Traffic claim files scanned: 159
+- Traffic claim watch mentions: 2048
 
 ## Public Surface Inventory
 

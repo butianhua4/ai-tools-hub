@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-07T17:05:35.568Z
+Generated at: 2026-06-07T17:14:50.446Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 140
-- Passed: 140
+- Checks: 142
+- Passed: 142
 - Failed: 0
 
 ## Checks
@@ -30,7 +30,7 @@ Overall: PASS
 | project status still stops before publishing | PASS | publicPublished=15, publishableNow=0 |
 | traffic evidence audit passed and is read-only | PASS | failedChecks=0, measuredTrafficSources=0 |
 | traffic is not claimed without measured metrics | PASS | trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 |
-| traffic claim guard found no unsupported claims | PASS | filesScanned=157, unsafeClaims=0, watchMentions=2029 |
+| traffic claim guard found no unsupported claims | PASS | filesScanned=159, unsafeClaims=0, watchMentions=2048 |
 | content integrity audit is read-only and clean | PASS | filesScanned=669, blockingItems=0 |
 | content integrity audit covers public, recommended, and Wave 1 items | PASS | public=15, recommended=3, wave=3 |
 | internal link opportunity audit is read-only and covers expansion candidates | PASS | public=15, expansion=19, broadFirst=8, candidates=22 |
@@ -85,6 +85,8 @@ Overall: PASS
 | search snippet readiness audit has no blocking Wave 1 issues | PASS | blocking=0, wave=3, waveBlocking=0, warnings=13 |
 | structured data readiness audit is read-only and covers public plus expansion items | PASS | public=15, expansion=19, scoped=34 |
 | structured data readiness audit has JSON-LD previews and no blocking Wave 1 issues | PASS | blocking=0, previews=34, wave=3, waveBlocking=0, warnings=7 |
+| SEO warning remediation pack is read-only and mirrors snippet/schema warnings | PASS | items=16, snippet=13/13, schema=7/7 |
+| SEO warning remediation pack keeps every SEO fix human-gated | PASS | ready=16, public=8, draft=8, gated=16 |
 | SEO opportunity map has review-ready drafts | PASS | reviewReadyDrafts=633 |
 | SEO opportunity map includes manual review batches | PASS | batches=6 |
 | content opportunity backlog has reviewable topics | PASS | topics=7, topicsWithReadyCandidates=7 |

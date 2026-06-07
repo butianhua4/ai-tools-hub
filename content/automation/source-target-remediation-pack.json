@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T17:05:17.803Z",
+  "generatedAt": "2026-06-07T17:14:32.193Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "sourceHealthGeneratedAt": "2026-06-07T17:05:17.276Z",
+    "sourceHealthGeneratedAt": "2026-06-07T17:14:31.687Z",
     "sourceHealthGuardrails": {
       "autoEditArticles": false,
       "autoMarkReview": false,
@@ -2230,10 +2230,10 @@
         "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
         "Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型"
       ],
-      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=it",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs",
       "humanChecklist": [
         "Review URL: https://ai.google.dev/docs.",
-        "Review final URL: https://ai.google.dev/gemini-api/docs?hl=it.",
+        "Review final URL: https://ai.google.dev/gemini-api/docs.",
         "HTTP status observed by automation: 200.",
         "Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.",
         "If the final URL is the canonical destination, update the source target during human review.",
@@ -2306,11 +2306,13 @@
       "affectedTitles": [
         "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急"
       ],
+      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/home",
       "humanChecklist": [
         "Review URL: https://docs.anthropic.com/.",
         "Review final URL: https://platform.claude.com/docs/en/home.",
         "HTTP status observed by automation: 200.",
+        "Automation error observed: TimeoutError.",
         "Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.",
         "If the final URL is the canonical destination, update the source target during human review.",
         "If the redirect lands on a generic, tracked, or unrelated page, replace it with a more specific official source.",

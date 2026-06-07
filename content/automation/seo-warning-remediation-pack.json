@@ -1,0 +1,727 @@
+{
+  "generatedAt": "2026-06-07T17:14:03.845Z",
+  "guardrails": {
+    "autoEditArticles": false,
+    "autoMarkReview": false,
+    "autoPublish": false,
+    "note": "Read-only SEO warning remediation pack. It turns snippet and structured-data warnings into manual review actions without editing articles.",
+    "stopBefore": "Use this pack during human review only. Article edits, mark:review, and publishing require explicit human approval.",
+    "trafficClaim": "not-included"
+  },
+  "sourceEvidence": {
+    "searchSnippetAuditGeneratedAt": "2026-06-07T17:14:02.708Z",
+    "searchSnippetSummary": {
+      "blockingItems": 0,
+      "expansionItems": 19,
+      "publicItems": 15,
+      "recommendedItems": 3,
+      "scopedItems": 34,
+      "warningItems": 13,
+      "waveItems": 3,
+      "waveItemsWithBlockingIssues": 0
+    },
+    "structuredDataAuditGeneratedAt": "2026-06-07T17:14:03.340Z",
+    "structuredDataSummary": {
+      "blockingItems": 0,
+      "expansionItems": 19,
+      "jsonLdPreviewItems": 34,
+      "publicItems": 15,
+      "recommendedItems": 3,
+      "scopedItems": 34,
+      "warningItems": 7,
+      "waveItems": 3,
+      "waveItemsWithBlockingIssues": 0
+    }
+  },
+  "summary": {
+    "blockingItems": 0,
+    "draftItems": 8,
+    "humanGatedItems": 16,
+    "items": 16,
+    "itemsWithHumanChecklist": 16,
+    "itemsWithManualActions": 16,
+    "publicItems": 8,
+    "recommendedItems": 1,
+    "schemaWarningItems": 7,
+    "snippetWarningItems": 13,
+    "trafficDataAvailable": false,
+    "unsafeItems": 0,
+    "warningItems": 16,
+    "waveItems": 1
+  },
+  "unsafeItems": [],
+  "items": [
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
+      },
+      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/ai-model-selection-customer-service-guide.mdx.",
+        "Review status: draft.",
+        "Confirm primary keyword intent: 客服 AI 模型选型.",
+        "Snippet warning: description may be thin for search snippets.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Expand the meta description with the user problem, outcome, and one concrete workflow term.",
+        "Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.",
+        "Confirm description length remains suitable for search snippets after editing.",
+        "Check whether the title can naturally include the exact primary keyword: 客服 AI 模型选型.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Expand the meta description with the user problem, outcome, and one concrete workflow term.",
+        "Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.",
+        "Confirm description length remains suitable for search snippets after editing.",
+        "Check whether the title can naturally include the exact primary keyword: 客服 AI 模型选型.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "客服 AI 模型选型",
+      "priority": 86,
+      "scope": [
+        "expansion",
+        "recommended",
+        "wave-1"
+      ],
+      "schemaWarnings": [],
+      "snippetWarnings": [
+        "description may be thin for search snippets",
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "draft",
+      "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
+      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "not-applicable-public-page",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "not-applicable-public-page"
+      },
+      "file": "content/blog/codex-npm-install-error-beginner-fix.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/codex-npm-install-error-beginner-fix.mdx.",
+        "Review status: published.",
+        "Confirm primary keyword intent: Codex npm install 报错怎么办.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Structured-data warning: contentType is uncommon: troubleshooting.",
+        "Check whether the title can naturally include the exact primary keyword: Codex npm install 报错怎么办.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Check whether the title can naturally include the exact primary keyword: Codex npm install 报错怎么办.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "Codex npm install 报错怎么办",
+      "priority": 63,
+      "scope": [
+        "public"
+      ],
+      "schemaWarnings": [
+        "contentType is uncommon: troubleshooting"
+      ],
+      "snippetWarnings": [
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "published",
+      "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
+      "title": "Codex 项目 npm install 报错怎么办：新手排查步骤",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "not-applicable-public-page",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "not-applicable-public-page"
+      },
+      "file": "content/blog/first-upwork-project-pricing-checklist.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/first-upwork-project-pricing-checklist.mdx.",
+        "Review status: published.",
+        "Confirm primary keyword intent: 第一个 Upwork 项目怎么报价.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Structured-data warning: contentType is uncommon: pricing-guide.",
+        "Check whether the title can naturally include the exact primary keyword: 第一个 Upwork 项目怎么报价.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Check whether the title can naturally include the exact primary keyword: 第一个 Upwork 项目怎么报价.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "第一个 Upwork 项目怎么报价",
+      "priority": 63,
+      "scope": [
+        "public"
+      ],
+      "schemaWarnings": [
+        "contentType is uncommon: pricing-guide"
+      ],
+      "snippetWarnings": [
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "published",
+      "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
+      "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "not-applicable-public-page",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "not-applicable-public-page"
+      },
+      "file": "content/blog/payoneer-wise-paypal-beginner-comparison.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/payoneer-wise-paypal-beginner-comparison.mdx.",
+        "Review status: published.",
+        "Confirm primary keyword intent: Payoneer Wise PayPal 区别.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Structured-data warning: contentType is uncommon: comparison.",
+        "Check whether the title can naturally include the exact primary keyword: Payoneer Wise PayPal 区别.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Check whether the title can naturally include the exact primary keyword: Payoneer Wise PayPal 区别.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "Payoneer Wise PayPal 区别",
+      "priority": 63,
+      "scope": [
+        "public"
+      ],
+      "schemaWarnings": [
+        "contentType is uncommon: comparison"
+      ],
+      "snippetWarnings": [
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "published",
+      "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
+      "title": "Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "not-applicable-public-page",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "not-applicable-public-page"
+      },
+      "file": "content/blog/vercel-env-variable-missing-beginner-guide.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/vercel-env-variable-missing-beginner-guide.mdx.",
+        "Review status: published.",
+        "Confirm primary keyword intent: Vercel 环境变量缺失怎么办.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Structured-data warning: contentType is uncommon: troubleshooting.",
+        "Check whether the title can naturally include the exact primary keyword: Vercel 环境变量缺失怎么办.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Check whether the title can naturally include the exact primary keyword: Vercel 环境变量缺失怎么办.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "Vercel 环境变量缺失怎么办",
+      "priority": 63,
+      "scope": [
+        "public"
+      ],
+      "schemaWarnings": [
+        "contentType is uncommon: troubleshooting"
+      ],
+      "snippetWarnings": [
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "published",
+      "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
+      "title": "Vercel 提示环境变量缺失怎么办：新手部署检查流程",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "not-applicable-public-page",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "not-applicable-public-page"
+      },
+      "file": "content/blog/upwork-proposal-no-reply-checklist.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/upwork-proposal-no-reply-checklist.mdx.",
+        "Review status: published.",
+        "Confirm primary keyword intent: Upwork Proposal 没人回怎么办.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Check whether the title can naturally include the exact primary keyword: Upwork Proposal 没人回怎么办.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Check whether the title can naturally include the exact primary keyword: Upwork Proposal 没人回怎么办.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "Upwork Proposal 没人回怎么办",
+      "priority": 58,
+      "scope": [
+        "public"
+      ],
+      "schemaWarnings": [],
+      "snippetWarnings": [
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "published",
+      "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
+      "title": "Upwork Proposal 发出去没人回怎么办：新手检查清单",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "not-applicable-public-page",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "not-applicable-public-page"
+      },
+      "file": "content/blog/codex-github-before-commit-checklist.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/codex-github-before-commit-checklist.mdx.",
+        "Review status: published.",
+        "Structured-data warning: contentType is uncommon: pricing-guide.",
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+      ],
+      "manualFixReady": true,
+      "priority": 55,
+      "scope": [
+        "public"
+      ],
+      "schemaWarnings": [
+        "contentType is uncommon: pricing-guide"
+      ],
+      "snippetWarnings": [],
+      "status": "published",
+      "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
+      "title": "Codex 和 GitHub 怎么配合：提交代码前检查",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "not-applicable-public-page",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "not-applicable-public-page"
+      },
+      "file": "content/blog/codex-vercel-deploy-preflight-checklist.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/codex-vercel-deploy-preflight-checklist.mdx.",
+        "Review status: published.",
+        "Structured-data warning: contentType is uncommon: roadmap.",
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+      ],
+      "manualFixReady": true,
+      "priority": 55,
+      "scope": [
+        "public"
+      ],
+      "schemaWarnings": [
+        "contentType is uncommon: roadmap"
+      ],
+      "snippetWarnings": [],
+      "status": "published",
+      "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
+      "title": "Codex 部署 Vercel 前检查什么：上线前清单",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "not-applicable-public-page",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "not-applicable-public-page"
+      },
+      "file": "content/blog/codex-vs-claude-code-beginner-checklist.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/codex-vs-claude-code-beginner-checklist.mdx.",
+        "Review status: published.",
+        "Structured-data warning: contentType is uncommon: comparison.",
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Confirm the contentType value matches the actual article format and category.",
+        "If the value is intentionally uncommon, document that decision during human review.",
+        "If the value is accidental, replace it with the closest established content type before approval.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+      ],
+      "manualFixReady": true,
+      "priority": 55,
+      "scope": [
+        "public"
+      ],
+      "schemaWarnings": [
+        "contentType is uncommon: comparison"
+      ],
+      "snippetWarnings": [],
+      "status": "published",
+      "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
+      "title": "Codex 和 Claude Code 怎么选：新手对比清单",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
+      },
+      "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/ai-automation-project-pricing-scope-guide.mdx.",
+        "Review status: draft.",
+        "Confirm primary keyword intent: AI 自动化项目报价.",
+        "Snippet warning: description may be thin for search snippets.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Expand the meta description with the user problem, outcome, and one concrete workflow term.",
+        "Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.",
+        "Confirm description length remains suitable for search snippets after editing.",
+        "Check whether the title can naturally include the exact primary keyword: AI 自动化项目报价.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Expand the meta description with the user problem, outcome, and one concrete workflow term.",
+        "Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.",
+        "Confirm description length remains suitable for search snippets after editing.",
+        "Check whether the title can naturally include the exact primary keyword: AI 自动化项目报价.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "AI 自动化项目报价",
+      "priority": 16,
+      "scope": [
+        "expansion"
+      ],
+      "schemaWarnings": [],
+      "snippetWarnings": [
+        "description may be thin for search snippets",
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "draft",
+      "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
+      "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
+      },
+      "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/ai-api-key-security-rotation-guide.mdx.",
+        "Review status: draft.",
+        "Confirm primary keyword intent: AI API Key 安全管理.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Check whether the title can naturally include the exact primary keyword: AI API Key 安全管理.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Check whether the title can naturally include the exact primary keyword: AI API Key 安全管理.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "AI API Key 安全管理",
+      "priority": 8,
+      "scope": [
+        "expansion"
+      ],
+      "schemaWarnings": [],
+      "snippetWarnings": [
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "draft",
+      "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
+      "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-prompt-library-team-knowledge-base-guide.mdx --confirm-human",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
+      },
+      "file": "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/ai-prompt-library-team-knowledge-base-guide.mdx.",
+        "Review status: draft.",
+        "Confirm primary keyword intent: 团队 AI 提示词库.",
+        "Snippet warning: description may be thin for search snippets.",
+        "Expand the meta description with the user problem, outcome, and one concrete workflow term.",
+        "Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.",
+        "Confirm description length remains suitable for search snippets after editing.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Expand the meta description with the user problem, outcome, and one concrete workflow term.",
+        "Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.",
+        "Confirm description length remains suitable for search snippets after editing.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "团队 AI 提示词库",
+      "priority": 8,
+      "scope": [
+        "expansion"
+      ],
+      "schemaWarnings": [],
+      "snippetWarnings": [
+        "description may be thin for search snippets"
+      ],
+      "status": "draft",
+      "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
+      "title": "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/dify-workflow-error-handling-guide.mdx --confirm-human",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
+      },
+      "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/dify-workflow-error-handling-guide.mdx.",
+        "Review status: draft.",
+        "Confirm primary keyword intent: Dify 工作流错误处理.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Check whether the title can naturally include the exact primary keyword: Dify 工作流错误处理.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Check whether the title can naturally include the exact primary keyword: Dify 工作流错误处理.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "Dify 工作流错误处理",
+      "priority": 8,
+      "scope": [
+        "expansion"
+      ],
+      "schemaWarnings": [],
+      "snippetWarnings": [
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "draft",
+      "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
+      "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/dify-workflow-vs-agent-guide.mdx --confirm-human",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
+      },
+      "file": "content/blog/dify-workflow-vs-agent-guide.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/dify-workflow-vs-agent-guide.mdx.",
+        "Review status: draft.",
+        "Confirm primary keyword intent: Dify Workflow 和 Agent 区别.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Check whether the title can naturally include the exact primary keyword: Dify Workflow 和 Agent 区别.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Check whether the title can naturally include the exact primary keyword: Dify Workflow 和 Agent 区别.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "Dify Workflow 和 Agent 区别",
+      "priority": 8,
+      "scope": [
+        "expansion"
+      ],
+      "schemaWarnings": [],
+      "snippetWarnings": [
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "draft",
+      "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
+      "title": "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx --confirm-human",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
+      },
+      "file": "content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx.",
+        "Review status: draft.",
+        "Confirm primary keyword intent: Docker 使用 NVIDIA GPU.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Check whether the title can naturally include the exact primary keyword: Docker 使用 NVIDIA GPU.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Check whether the title can naturally include the exact primary keyword: Docker 使用 NVIDIA GPU.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "Docker 使用 NVIDIA GPU",
+      "priority": 8,
+      "scope": [
+        "expansion"
+      ],
+      "schemaWarnings": [],
+      "snippetWarnings": [
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "draft",
+      "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
+      "title": "Docker 怎么用 NVIDIA GPU：大模型部署先装对 Container Toolkit",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
+      },
+      "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/open-webui-functions-pipelines-deployment-guide.mdx.",
+        "Review status: draft.",
+        "Confirm primary keyword intent: Open WebUI Functions Pipelines.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Check whether the title can naturally include the exact primary keyword: Open WebUI Functions Pipelines.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Check whether the title can naturally include the exact primary keyword: Open WebUI Functions Pipelines.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "Open WebUI Functions Pipelines",
+      "priority": 8,
+      "scope": [
+        "expansion"
+      ],
+      "schemaWarnings": [],
+      "snippetWarnings": [
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "draft",
+      "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
+      "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流",
+      "unsafeReasons": []
+    }
+  ]
+}

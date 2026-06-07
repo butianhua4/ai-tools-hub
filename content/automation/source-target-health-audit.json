@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T17:05:17.276Z",
+  "generatedAt": "2026-06-07T17:14:31.687Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -268,7 +268,7 @@
       "url": "https://ai-sdk.dev/docs"
     },
     {
-      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=it",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs",
       "ok": true,
       "references": [
         {
@@ -347,6 +347,7 @@
       "url": "https://docs.anthropic.com"
     },
     {
+      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/home",
       "ok": true,
       "references": [
@@ -2394,7 +2395,7 @@
       "url": "https://ai-sdk.dev/docs"
     },
     {
-      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=it",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs",
       "ok": true,
       "references": [
         {
@@ -2539,6 +2540,7 @@
       "url": "https://docs.anthropic.com"
     },
     {
+      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/home",
       "ok": true,
       "references": [

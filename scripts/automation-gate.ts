@@ -1363,6 +1363,37 @@ async function main() {
       waveItemsWithBlockingIssues: number;
     };
   }>("content/automation/structured-data-readiness-audit.json");
+  const seoWarningRemediation = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    items?: Array<{
+      commandBoundary?: { markReviewAfterHumanApproval?: string; publishConfirm?: string; publishDryRunAfterReview?: string };
+      humanChecklist?: unknown[];
+      manualActions?: unknown[];
+      manualFixReady?: boolean;
+      schemaWarnings?: unknown[];
+      snippetWarnings?: unknown[];
+      status?: string;
+      stopBefore?: string;
+      unsafeReasons?: unknown[];
+    }>;
+    summary: {
+      blockingItems: number;
+      draftItems: number;
+      humanGatedItems: number;
+      items: number;
+      itemsWithHumanChecklist: number;
+      itemsWithManualActions: number;
+      publicItems: number;
+      recommendedItems: number;
+      schemaWarningItems: number;
+      snippetWarningItems: number;
+      trafficDataAvailable: boolean;
+      unsafeItems: number;
+      warningItems: number;
+      waveItems: number;
+    };
+    unsafeItems?: unknown[];
+  }>("content/automation/seo-warning-remediation-pack.json");
   const articles = (await articleFiles()).map(readArticle);
 
   const reviewFiles = reviewQueue.recommendedToday.map((item) => item.file);
@@ -2428,6 +2459,44 @@ async function main() {
         structuredData.summary.recommendedItems === reviewQueue.recommendedToday.length &&
         structuredData.summary.waveItemsWithBlockingIssues === 0,
       detail: `blocking=${structuredData.summary.blockingItems}, previews=${structuredData.summary.jsonLdPreviewItems}, wave=${structuredData.summary.waveItems}, waveBlocking=${structuredData.summary.waveItemsWithBlockingIssues}, warnings=${structuredData.summary.warningItems}`,
+    },
+    {
+      name: "SEO warning remediation pack is read-only and mirrors snippet/schema warnings",
+      ok:
+        seoWarningRemediation.guardrails.autoEditArticles === false &&
+        seoWarningRemediation.guardrails.autoMarkReview === false &&
+        seoWarningRemediation.guardrails.autoPublish === false &&
+        seoWarningRemediation.guardrails.trafficClaim === "not-included" &&
+        seoWarningRemediation.summary.snippetWarningItems === searchSnippets.summary.warningItems &&
+        seoWarningRemediation.summary.schemaWarningItems === structuredData.summary.warningItems &&
+        seoWarningRemediation.summary.blockingItems === searchSnippets.summary.blockingItems + structuredData.summary.blockingItems &&
+        seoWarningRemediation.summary.warningItems <= seoWarningRemediation.summary.snippetWarningItems + seoWarningRemediation.summary.schemaWarningItems &&
+        seoWarningRemediation.summary.items === seoWarningRemediation.summary.warningItems,
+      detail: `items=${seoWarningRemediation.summary.items}, snippet=${seoWarningRemediation.summary.snippetWarningItems}/${searchSnippets.summary.warningItems}, schema=${seoWarningRemediation.summary.schemaWarningItems}/${structuredData.summary.warningItems}`,
+    },
+    {
+      name: "SEO warning remediation pack keeps every SEO fix human-gated",
+      ok:
+        seoWarningRemediation.summary.unsafeItems === 0 &&
+        seoWarningRemediation.summary.itemsWithManualActions === seoWarningRemediation.summary.items &&
+        seoWarningRemediation.summary.itemsWithHumanChecklist === seoWarningRemediation.summary.items &&
+        seoWarningRemediation.summary.humanGatedItems === seoWarningRemediation.summary.items &&
+        seoWarningRemediation.summary.trafficDataAvailable === false &&
+        (seoWarningRemediation.unsafeItems?.length || 0) === 0 &&
+        Boolean(
+          seoWarningRemediation.items?.every(
+            (item) =>
+              item.manualFixReady === true &&
+              (item.manualActions?.length || 0) >= 3 &&
+              (item.humanChecklist?.length || 0) >= 5 &&
+              (item.snippetWarnings?.length || 0) + (item.schemaWarnings?.length || 0) > 0 &&
+              (item.unsafeReasons?.length || 0) === 0 &&
+              item.stopBefore?.toLowerCase().includes("human") &&
+              item.commandBoundary?.publishConfirm === "not-included" &&
+              !String(item.commandBoundary?.publishDryRunAfterReview || "").includes("--confirm"),
+          ),
+        ),
+      detail: `ready=${seoWarningRemediation.summary.items - seoWarningRemediation.summary.unsafeItems}, public=${seoWarningRemediation.summary.publicItems}, draft=${seoWarningRemediation.summary.draftItems}, gated=${seoWarningRemediation.summary.humanGatedItems}`,
     },
     {
       name: "SEO opportunity map has review-ready drafts",

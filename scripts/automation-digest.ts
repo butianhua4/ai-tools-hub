@@ -1266,6 +1266,38 @@ type StructuredData = {
   };
 };
 
+type SeoWarningRemediationPack = {
+  items: Array<{
+    file: string;
+    humanChecklist: unknown[];
+    manualActions: unknown[];
+    manualFixReady: boolean;
+    priority: number;
+    schemaWarnings: unknown[];
+    scope: string[];
+    snippetWarnings: unknown[];
+    status: string;
+    title: string;
+  }>;
+  summary: {
+    blockingItems: number;
+    draftItems: number;
+    humanGatedItems: number;
+    items: number;
+    itemsWithHumanChecklist: number;
+    itemsWithManualActions: number;
+    publicItems: number;
+    recommendedItems: number;
+    schemaWarningItems: number;
+    snippetWarningItems: number;
+    trafficDataAvailable: boolean;
+    unsafeItems: number;
+    warningItems: number;
+    waveItems: number;
+  };
+  unsafeItems: unknown[];
+};
+
 type SearchIntentLanes = {
   summary: {
     highPriorityLanes: number;
@@ -1576,6 +1608,7 @@ const reports = {
   reviewFreshnessBrief: readJson<ReviewFreshnessBrief>("content/automation/review-freshness-brief.json"),
   searchSnippets: readJson<SearchSnippets>("content/automation/search-snippet-readiness-audit.json"),
   structuredData: readJson<StructuredData>("content/automation/structured-data-readiness-audit.json"),
+  seoWarningRemediation: readJson<SeoWarningRemediationPack>("content/automation/seo-warning-remediation-pack.json"),
   searchIntentLanes: readJson<SearchIntentLanes>("content/automation/search-intent-lane-map.json"),
   searchIntentApproval: readJson<SearchIntentApproval>("content/automation/search-intent-approval-packet.json"),
   searchIntentWaves: readJson<SearchIntentWaves>("content/automation/search-intent-wave-planner.json"),
@@ -1992,6 +2025,23 @@ const payload = {
   },
   searchSnippets: reports.searchSnippets.data?.summary ?? null,
   structuredData: reports.structuredData.data?.summary ?? null,
+  seoWarningRemediation: {
+    blockingItems: reports.seoWarningRemediation.data?.summary.blockingItems ?? null,
+    draftItems: reports.seoWarningRemediation.data?.summary.draftItems ?? null,
+    humanGatedItems: reports.seoWarningRemediation.data?.summary.humanGatedItems ?? null,
+    items: reports.seoWarningRemediation.data?.summary.items ?? null,
+    itemsList: reports.seoWarningRemediation.data?.items.slice(0, 8) ?? [],
+    manualFixReadyItems: reports.seoWarningRemediation.data?.items.filter((item) => item.manualFixReady).length ?? null,
+    publicItems: reports.seoWarningRemediation.data?.summary.publicItems ?? null,
+    recommendedItems: reports.seoWarningRemediation.data?.summary.recommendedItems ?? null,
+    schemaWarningItems: reports.seoWarningRemediation.data?.summary.schemaWarningItems ?? null,
+    snippetWarningItems: reports.seoWarningRemediation.data?.summary.snippetWarningItems ?? null,
+    trafficDataAvailable: reports.seoWarningRemediation.data?.summary.trafficDataAvailable ?? null,
+    unsafeItems: reports.seoWarningRemediation.data?.summary.unsafeItems ?? null,
+    unsafeItemList: reports.seoWarningRemediation.data?.unsafeItems.slice(0, 8) ?? [],
+    warningItems: reports.seoWarningRemediation.data?.summary.warningItems ?? null,
+    waveItems: reports.seoWarningRemediation.data?.summary.waveItems ?? null,
+  },
   publishingBoundary: {
     publicPublished: reports.project.data?.articles.publicPublished ?? null,
     publishableNow: reports.project.data?.articles.publishableNow.length ?? null,
@@ -3323,6 +3373,30 @@ function toMarkdown(data: typeof payload) {
     data.structuredData
       ? `- Wave items with blocking issues: ${data.structuredData.waveItemsWithBlockingIssues}`
       : "- Wave items with blocking issues: missing",
+    "",
+    "## SEO Warning Remediation",
+    "",
+    `- Items: ${data.seoWarningRemediation.items}`,
+    `- Public items: ${data.seoWarningRemediation.publicItems}`,
+    `- Draft items: ${data.seoWarningRemediation.draftItems}`,
+    `- Recommended items: ${data.seoWarningRemediation.recommendedItems}`,
+    `- Wave items: ${data.seoWarningRemediation.waveItems}`,
+    `- Snippet warning items: ${data.seoWarningRemediation.snippetWarningItems}`,
+    `- Schema warning items: ${data.seoWarningRemediation.schemaWarningItems}`,
+    `- Manual-fix-ready items: ${data.seoWarningRemediation.manualFixReadyItems}`,
+    `- Human-gated items: ${data.seoWarningRemediation.humanGatedItems}`,
+    `- Unsafe items: ${data.seoWarningRemediation.unsafeItems}`,
+    `- Traffic data available: ${data.seoWarningRemediation.trafficDataAvailable}`,
+    "",
+    "Unsafe SEO warning remediation items:",
+    "",
+    ...(data.seoWarningRemediation.unsafeItemList.length ? data.seoWarningRemediation.unsafeItemList.map((item) => `- ${JSON.stringify(item)}`) : ["- none"]),
+    "",
+    "| Priority | Ready | Status | Scope | Snippet warnings | Schema warnings | Title | File |",
+    "| ---: | --- | --- | --- | ---: | ---: | --- | --- |",
+    ...data.seoWarningRemediation.itemsList.map(
+      (item) => `| ${item.priority} | ${item.manualFixReady} | ${item.status} | ${item.scope.join(", ")} | ${item.snippetWarnings.length} | ${item.schemaWarnings.length} | ${item.title} | ${item.file} |`,
+    ),
     "",
     "## Publishing Boundary",
     "",
