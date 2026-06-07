@@ -59,6 +59,7 @@
     "automation:broad-first-coverage-readiness": "tsx scripts/broad-first-coverage-readiness-matrix.ts",
     "automation:human-approval-queue": "tsx scripts/human-approval-execution-queue.ts",
     "automation:human-approval-clearance": "tsx scripts/human-approval-clearance-pack.ts",
+    "automation:human-approval-decision-matrix": "tsx scripts/human-approval-decision-matrix.ts",
     "automation:next-batch-approval-route": "tsx scripts/next-batch-approval-route.ts",
     "automation:next-batch-route-remediation": "tsx scripts/next-batch-route-remediation-pack.ts",
     "automation:publication-bottleneck": "tsx scripts/publication-bottleneck-report.ts",

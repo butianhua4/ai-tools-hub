@@ -105,6 +105,32 @@ type PublicationBottleneck = {
   };
 };
 
+type HumanApprovalDecisionMatrix = {
+  rows: Array<{
+    autopilotScore: number;
+    deferIf: string[];
+    file: string;
+    nextDecision: string;
+    primaryQuery: string;
+    repairBeforeApproval: string[];
+    title: string;
+  }>;
+  summary: {
+    approvalItems: number;
+    approveAfterReviewItems: number;
+    decisionRows: number;
+    deferItems: number;
+    humanDecisionBranches: number;
+    repairBeforeReviewItems: number;
+    rowsWithCommandBoundary: number;
+    rowsWithDeferCriteria: number;
+    rowsWithRepairActions: number;
+    sourceReadyRows: number;
+    trafficDataAvailable: boolean;
+    unsafeItems: number;
+  };
+};
+
 type MojibakeRemediationBrief = {
   items: Array<{
     file: string;
@@ -2306,6 +2332,7 @@ const reports = {
   publicCoverageGapPlan: readJson<PublicCoverageGapPlan>("content/automation/public-coverage-gap-plan.json"),
   publicCoverageGapPreflight: readJson<PublicCoverageGapPreflight>("content/automation/public-coverage-gap-preflight.json"),
   publicCoverageGapDecisionPack: readJson<PublicCoverageGapDecisionPack>("content/automation/public-coverage-gap-decision-pack.json"),
+  humanApprovalDecisionMatrix: readJson<HumanApprovalDecisionMatrix>("content/automation/human-approval-decision-matrix.json"),
   promptCoverage: readJson<PromptCoverage>("content/automation/industry-prompt-coverage.json"),
   promptReviewPack: readJson<PromptReviewPack>("content/automation/industry-prompt-review-pack.json"),
   industryPromptOpportunityBoard: readJson<IndustryPromptOpportunityBoard>("content/automation/industry-prompt-opportunity-board.json"),
@@ -2479,6 +2506,21 @@ const payload = {
     statusCounts: reports.publicationBottleneck.data?.summary.statusCounts ?? {},
     trafficDataAvailable: reports.publicationBottleneck.data?.summary.trafficDataAvailable ?? null,
     unsafeItems: reports.publicationBottleneck.data?.summary.unsafeItems ?? null,
+  },
+  humanApprovalDecisionMatrix: {
+    approvalItems: reports.humanApprovalDecisionMatrix.data?.summary.approvalItems ?? null,
+    approveAfterReviewItems: reports.humanApprovalDecisionMatrix.data?.summary.approveAfterReviewItems ?? null,
+    decisionRows: reports.humanApprovalDecisionMatrix.data?.summary.decisionRows ?? null,
+    deferItems: reports.humanApprovalDecisionMatrix.data?.summary.deferItems ?? null,
+    humanDecisionBranches: reports.humanApprovalDecisionMatrix.data?.summary.humanDecisionBranches ?? null,
+    repairBeforeReviewItems: reports.humanApprovalDecisionMatrix.data?.summary.repairBeforeReviewItems ?? null,
+    rowsWithCommandBoundary: reports.humanApprovalDecisionMatrix.data?.summary.rowsWithCommandBoundary ?? null,
+    rowsWithDeferCriteria: reports.humanApprovalDecisionMatrix.data?.summary.rowsWithDeferCriteria ?? null,
+    rowsWithRepairActions: reports.humanApprovalDecisionMatrix.data?.summary.rowsWithRepairActions ?? null,
+    sourceReadyRows: reports.humanApprovalDecisionMatrix.data?.summary.sourceReadyRows ?? null,
+    top: reports.humanApprovalDecisionMatrix.data?.rows.slice(0, 5) ?? [],
+    trafficDataAvailable: reports.humanApprovalDecisionMatrix.data?.summary.trafficDataAvailable ?? null,
+    unsafeItems: reports.humanApprovalDecisionMatrix.data?.summary.unsafeItems ?? null,
   },
   mojibakeRemediation: {
     affectedDraftFiles: reports.mojibakeRemediation.data?.summary.affectedDraftFiles ?? null,
@@ -3552,6 +3594,9 @@ function buildNextActions() {
   ) {
     return ["Open docs/publication-bottleneck-report.md and resolve publication gate reporting issues before assigning review work."];
   }
+  if (!reports.humanApprovalDecisionMatrix.data || reports.humanApprovalDecisionMatrix.data.summary.unsafeItems > 0) {
+    return ["Open docs/human-approval-decision-matrix.md and resolve decision matrix safety issues before any mark:review command."];
+  }
   if (
     !reports.mojibakeRemediation.data ||
     reports.mojibakeRemediation.data.summary.unsafeItems > 0 ||
@@ -3942,6 +3987,28 @@ function toMarkdown(data: typeof payload) {
     "| ---: | ---: | --- | --- | --- |",
     ...data.publicationBottleneck.nextBatchWarnings.map(
       (item) => `| ${item.priorityScore} | ${item.actionCount} | ${item.routeWarnings.join("<br>") || "none"} | ${item.title} | ${item.file} |`,
+    ),
+    "",
+    "## Human Approval Decision Matrix",
+    "",
+    `- Approval items: ${data.humanApprovalDecisionMatrix.approvalItems}`,
+    `- Decision rows: ${data.humanApprovalDecisionMatrix.decisionRows}`,
+    `- Approve after review items: ${data.humanApprovalDecisionMatrix.approveAfterReviewItems}`,
+    `- Repair before review items: ${data.humanApprovalDecisionMatrix.repairBeforeReviewItems}`,
+    `- Defer items: ${data.humanApprovalDecisionMatrix.deferItems}`,
+    `- Rows with command boundary: ${data.humanApprovalDecisionMatrix.rowsWithCommandBoundary}`,
+    `- Rows with repair actions: ${data.humanApprovalDecisionMatrix.rowsWithRepairActions}`,
+    `- Rows with defer criteria: ${data.humanApprovalDecisionMatrix.rowsWithDeferCriteria}`,
+    `- Source-ready rows: ${data.humanApprovalDecisionMatrix.sourceReadyRows}`,
+    `- Human decision branches: ${data.humanApprovalDecisionMatrix.humanDecisionBranches}`,
+    `- Traffic data available: ${data.humanApprovalDecisionMatrix.trafficDataAvailable}`,
+    `- Unsafe items: ${data.humanApprovalDecisionMatrix.unsafeItems}`,
+    "",
+    "| Decision | Score | Repairs | Defer if | Primary query | Title | File |",
+    "| --- | ---: | ---: | --- | --- | --- | --- |",
+    ...data.humanApprovalDecisionMatrix.top.map(
+      (item) =>
+        `| ${item.nextDecision} | ${item.autopilotScore} | ${item.repairBeforeApproval.length} | ${item.deferIf.join("<br>") || "none"} | ${item.primaryQuery} | ${item.title} | ${item.file} |`,
     ),
     "",
     "## Mojibake Remediation Brief",

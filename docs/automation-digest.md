@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T21:43:03.126Z
+Generated at: 2026-06-07T21:54:40.681Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -95,6 +95,27 @@ This digest is read-only. It summarizes automation reports and does not publish 
 | 872 | 15 | not yet matched in human approval clearance pack<br>no copydesk optimization brief matched<br>search query match warning exists | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
 | 820 | 10 | not yet matched in human approval clearance pack | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
 | 798 | 9 | none | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+
+## Human Approval Decision Matrix
+
+- Approval items: 3
+- Decision rows: 3
+- Approve after review items: 0
+- Repair before review items: 3
+- Defer items: 0
+- Rows with command boundary: 3
+- Rows with repair actions: 3
+- Rows with defer criteria: 0
+- Source-ready rows: 3
+- Human decision branches: 9
+- Traffic data available: false
+- Unsafe items: 0
+
+| Decision | Score | Repairs | Defer if | Primary query | Title | File |
+| --- | ---: | ---: | --- | --- | --- | --- |
+| repair-before-review | 1723 | 9 | none | AI Agent deployment tutorial | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| repair-before-review | 1723 | 6 | none | ChatGPT prompts for business | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| repair-before-review | 1598 | 10 | none | RAG 知识库搭建教程 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
 
 ## Mojibake Remediation Brief
 
@@ -1289,8 +1310,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 197
-- Traffic claim watch mentions: 3551
+- Traffic claim files scanned: 199
+- Traffic claim watch mentions: 3565
 
 ## Public Surface Inventory
 

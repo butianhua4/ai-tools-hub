@@ -1334,6 +1334,46 @@ async function main() {
       unsafeItems: number;
     };
   }>("content/automation/autopilot-approval-remediation-pack.json");
+  const humanApprovalDecisionMatrix = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    publishingBoundary: {
+      currentPublicPublished: number;
+      currentPublishableNow: number;
+      publishConfirmCommandsIncluded: number;
+      trafficDataAvailable: boolean;
+    };
+    rows?: Array<{
+      approveAfterHumanReviewCommand?: string;
+      deferIf?: unknown[];
+      humanDecisionBranches?: unknown[];
+      nextDecision?: string;
+      publishConfirm?: string;
+      repairBeforeApproval?: unknown[];
+      sourceReady?: boolean;
+    }>;
+    sourceEvidence: {
+      approvalPacketItems: number;
+      approvalPacketUnsafeItems: number;
+      internalLinkUnsafeItems: number;
+      playbookUnsafeItems: number;
+      remediationUnsafeItems: number;
+      searchIntentUnsafeItems: number;
+      sourceVerificationUnsafeItems: number;
+    };
+    summary: {
+      approvalItems: number;
+      decisionRows: number;
+      humanDecisionBranches: number;
+      repairBeforeReviewItems: number;
+      rowsWithCommandBoundary: number;
+      rowsWithDeferCriteria: number;
+      rowsWithRepairActions: number;
+      sourceReadyRows: number;
+      trafficDataAvailable: boolean;
+      unsafeItems: number;
+    };
+    unsafeRows?: unknown[];
+  }>("content/automation/human-approval-decision-matrix.json");
   const autopilotReviewSprintBoard = readJson<{
     guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
     items?: Array<{
@@ -2779,6 +2819,48 @@ async function main() {
           ),
         ),
       detail: `commands=${autopilotApprovalRemediation.summary.itemsWithCommandBoundary}, links=${autopilotApprovalRemediation.summary.itemsWithInternalLinkFixes}, search=${autopilotApprovalRemediation.summary.itemsWithSearchFixes}, source=${autopilotApprovalRemediation.summary.itemsWithSourceChecks}, sourceUrlFixes=${autopilotApprovalRemediation.summary.itemsWithSourceUrlFixes}/${autopilotApprovalRemediation.summary.sourceUrlFixActions}`,
+    },
+    {
+      name: "human approval decision matrix covers approval packet",
+      ok:
+        humanApprovalDecisionMatrix.guardrails.autoEditArticles === false &&
+        humanApprovalDecisionMatrix.guardrails.autoMarkReview === false &&
+        humanApprovalDecisionMatrix.guardrails.autoPublish === false &&
+        humanApprovalDecisionMatrix.guardrails.trafficClaim === "not-included" &&
+        humanApprovalDecisionMatrix.sourceEvidence.approvalPacketItems === autopilotApprovalPacket.summary.items &&
+        humanApprovalDecisionMatrix.sourceEvidence.approvalPacketUnsafeItems === 0 &&
+        humanApprovalDecisionMatrix.sourceEvidence.playbookUnsafeItems === 0 &&
+        humanApprovalDecisionMatrix.sourceEvidence.remediationUnsafeItems === 0 &&
+        humanApprovalDecisionMatrix.sourceEvidence.searchIntentUnsafeItems === 0 &&
+        humanApprovalDecisionMatrix.sourceEvidence.internalLinkUnsafeItems === 0 &&
+        humanApprovalDecisionMatrix.sourceEvidence.sourceVerificationUnsafeItems === 0 &&
+        humanApprovalDecisionMatrix.summary.approvalItems === autopilotApprovalPacket.summary.items &&
+        humanApprovalDecisionMatrix.summary.decisionRows === autopilotApprovalPacket.summary.items &&
+        humanApprovalDecisionMatrix.summary.unsafeItems === 0,
+      detail: `rows=${humanApprovalDecisionMatrix.summary.decisionRows}, approvals=${humanApprovalDecisionMatrix.summary.approvalItems}, unsafe=${humanApprovalDecisionMatrix.summary.unsafeItems}`,
+    },
+    {
+      name: "human approval decision matrix stays human-gated and decision-ready",
+      ok:
+        humanApprovalDecisionMatrix.publishingBoundary.currentPublicPublished === projectStatus.articles.publicPublished &&
+        humanApprovalDecisionMatrix.publishingBoundary.currentPublishableNow === projectStatus.articles.publishableNow.length &&
+        humanApprovalDecisionMatrix.publishingBoundary.publishConfirmCommandsIncluded === 0 &&
+        humanApprovalDecisionMatrix.summary.rowsWithCommandBoundary === humanApprovalDecisionMatrix.summary.decisionRows &&
+        humanApprovalDecisionMatrix.summary.rowsWithRepairActions === humanApprovalDecisionMatrix.summary.decisionRows &&
+        humanApprovalDecisionMatrix.summary.sourceReadyRows === humanApprovalDecisionMatrix.summary.decisionRows &&
+        humanApprovalDecisionMatrix.summary.humanDecisionBranches >= humanApprovalDecisionMatrix.summary.decisionRows * 3 &&
+        Boolean(
+          humanApprovalDecisionMatrix.rows?.every(
+            (item) =>
+              item.approveAfterHumanReviewCommand?.includes("--confirm-human") &&
+              item.publishConfirm === "not-included" &&
+              item.sourceReady === true &&
+              (item.humanDecisionBranches?.length || 0) >= 3 &&
+              (item.repairBeforeApproval?.length || 0) > 0 &&
+              ["approve-after-review", "repair-before-review", "defer"].includes(String(item.nextDecision)),
+          ),
+        ),
+      detail: `commands=${humanApprovalDecisionMatrix.summary.rowsWithCommandBoundary}, repairs=${humanApprovalDecisionMatrix.summary.rowsWithRepairActions}, branches=${humanApprovalDecisionMatrix.summary.humanDecisionBranches}, publishConfirm=${humanApprovalDecisionMatrix.publishingBoundary.publishConfirmCommandsIncluded}`,
     },
     {
       name: "autopilot review sprint board covers next assignments",
