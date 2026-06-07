@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-07T20:39:19.707Z",
+  "generatedAt": "2026-06-07T20:48:49.662Z",
   "ok": true,
   "summary": {
-    "checks": 175,
+    "checks": 177,
     "failed": 0,
-    "passed": 175
+    "passed": 177
   },
   "failed": [],
   "checks": [
@@ -73,6 +73,16 @@
       "detail": "forbiddenWorkflowCommands=0, checks=10/10"
     },
     {
+      "name": "autopilot executive brief summarizes immediate execution priorities",
+      "ok": true,
+      "detail": "public=15, immediate=3/3, boards=5"
+    },
+    {
+      "name": "autopilot executive brief stays human-gated and publish-safe",
+      "ok": true,
+      "detail": "unsafe=0, publishConfirm=0, publishableNow=0, routeWarnings=2"
+    },
+    {
       "name": "no non-published article is indexable",
       "ok": true,
       "detail": ""
@@ -100,7 +110,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=191, unsafeClaims=0, watchMentions=3479"
+      "detail": "filesScanned=193, unsafeClaims=0, watchMentions=3499"
     },
     {
       "name": "content integrity audit is read-only and clean",

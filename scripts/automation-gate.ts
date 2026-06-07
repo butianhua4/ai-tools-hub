@@ -53,6 +53,25 @@ async function main() {
       trafficDataAvailable: boolean;
     };
   }>("content/automation/project-automation-workflow-audit.json");
+  const executiveBrief = readJson<{
+    boardActions?: Array<{ publishConfirm?: string; summary?: Record<string, unknown> }>;
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    summary: {
+      automationRunsPerDay: number;
+      boardActionItems: number;
+      currentPublishableNow: number;
+      forbiddenWorkflowCommands: number;
+      immediateApprovalItems: number;
+      immediateApprovalReadyItems: number;
+      publicArticles: number;
+      publishConfirmCommandsIncluded: number;
+      routeWarningItems: number;
+      trafficDataAvailable: boolean;
+      unsafeItems: number;
+    };
+    topApprovalActions?: Array<{ humanGate?: string; priority?: number }>;
+    unsafeReasons?: unknown[];
+  }>("content/automation/autopilot-executive-brief.json");
   const opportunityMap = readJson<{ reviewBatches?: Array<{ candidates?: unknown[] }>; totals: { reviewReadyDrafts: number } }>(
     "content/automation/seo-opportunity-map.json",
   );
@@ -2072,6 +2091,34 @@ async function main() {
         workflowAudit.summary.trafficDataAvailable === false &&
         workflowAudit.summary.passed === workflowAudit.summary.checks,
       detail: `forbiddenWorkflowCommands=${workflowAudit.summary.forbiddenWorkflowCommands}, checks=${workflowAudit.summary.passed}/${workflowAudit.summary.checks}`,
+    },
+    {
+      name: "autopilot executive brief summarizes immediate execution priorities",
+      ok:
+        executiveBrief.guardrails.autoEditArticles === false &&
+        executiveBrief.guardrails.autoMarkReview === false &&
+        executiveBrief.guardrails.autoPublish === false &&
+        executiveBrief.guardrails.trafficClaim === "not-included" &&
+        executiveBrief.summary.publicArticles === projectStatus.articles.publicPublished &&
+        executiveBrief.summary.automationRunsPerDay >= 4 &&
+        executiveBrief.summary.immediateApprovalItems >= 3 &&
+        executiveBrief.summary.immediateApprovalReadyItems === executiveBrief.summary.immediateApprovalItems &&
+        executiveBrief.summary.boardActionItems >= 5 &&
+        Boolean(executiveBrief.topApprovalActions?.length && executiveBrief.topApprovalActions.length >= 3),
+      detail: `public=${executiveBrief.summary.publicArticles}, immediate=${executiveBrief.summary.immediateApprovalReadyItems}/${executiveBrief.summary.immediateApprovalItems}, boards=${executiveBrief.summary.boardActionItems}`,
+    },
+    {
+      name: "autopilot executive brief stays human-gated and publish-safe",
+      ok:
+        executiveBrief.summary.unsafeItems === 0 &&
+        (executiveBrief.unsafeReasons?.length || 0) === 0 &&
+        executiveBrief.summary.publishConfirmCommandsIncluded === 0 &&
+        executiveBrief.summary.currentPublishableNow === 0 &&
+        executiveBrief.summary.forbiddenWorkflowCommands === 0 &&
+        executiveBrief.summary.trafficDataAvailable === false &&
+        Boolean(executiveBrief.topApprovalActions?.every((item) => item.humanGate === "explicit human approval required" && typeof item.priority === "number")) &&
+        Boolean(executiveBrief.boardActions?.every((item) => item.publishConfirm === "not-included")),
+      detail: `unsafe=${executiveBrief.summary.unsafeItems}, publishConfirm=${executiveBrief.summary.publishConfirmCommandsIncluded}, publishableNow=${executiveBrief.summary.currentPublishableNow}, routeWarnings=${executiveBrief.summary.routeWarningItems}`,
     },
     {
       name: "no non-published article is indexable",

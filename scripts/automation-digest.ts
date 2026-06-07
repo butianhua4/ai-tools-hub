@@ -25,6 +25,34 @@ type WorkflowAudit = {
   };
 };
 
+type ExecutiveBrief = {
+  boardActions: Array<{ action: string; publishConfirm: string; title: string }>;
+  routeWarnings: Array<{ file: string; priorityScore: number; title: string; warnings: string[] }>;
+  summary: {
+    approvalBacklogItems: number;
+    automationRunsPerDay: number;
+    boardActionItems: number;
+    broadClustersWithoutPublicCoverage: number;
+    currentPublishableNow: number;
+    forbiddenWorkflowCommands: number;
+    immediateApprovalItems: number;
+    immediateApprovalReadyItems: number;
+    publicArticles: number;
+    publishConfirmCommandsIncluded: number;
+    routeWarningItems: number;
+    trafficDataAvailable: boolean;
+    unsafeItems: number;
+  };
+  topApprovalActions: Array<{
+    action: string;
+    file?: string;
+    humanGate: string;
+    priority: number;
+    reason: string;
+    title: string;
+  }>;
+};
+
 type ReviewCandidate = {
   cluster: string;
   file: string;
@@ -2169,6 +2197,7 @@ const reports = {
     "content/automation/content-freshness.json",
   ),
   workflowAudit: readJson<WorkflowAudit>("content/automation/project-automation-workflow-audit.json"),
+  executiveBrief: readJson<ExecutiveBrief>("content/automation/autopilot-executive-brief.json"),
   contentBacklog: readJson<{ opportunities: ContentOpportunity[]; totals: { topics: number; topicsWithReadyCandidates: number } }>(
     "content/automation/content-opportunity-backlog.json",
   ),
@@ -2312,6 +2341,24 @@ const payload = {
     scheduledReportCommitGated: reports.workflowAudit.data?.summary.scheduledReportCommitGated ?? null,
     scheduleCount: reports.workflowAudit.data?.summary.scheduleCount ?? null,
     trafficDataAvailable: reports.workflowAudit.data?.summary.trafficDataAvailable ?? null,
+  },
+  executiveBrief: {
+    approvalBacklogItems: reports.executiveBrief.data?.summary.approvalBacklogItems ?? null,
+    automationRunsPerDay: reports.executiveBrief.data?.summary.automationRunsPerDay ?? null,
+    boardActionItems: reports.executiveBrief.data?.summary.boardActionItems ?? null,
+    broadClustersWithoutPublicCoverage: reports.executiveBrief.data?.summary.broadClustersWithoutPublicCoverage ?? null,
+    currentPublishableNow: reports.executiveBrief.data?.summary.currentPublishableNow ?? null,
+    forbiddenWorkflowCommands: reports.executiveBrief.data?.summary.forbiddenWorkflowCommands ?? null,
+    immediateApprovalItems: reports.executiveBrief.data?.summary.immediateApprovalItems ?? null,
+    immediateApprovalReadyItems: reports.executiveBrief.data?.summary.immediateApprovalReadyItems ?? null,
+    publicArticles: reports.executiveBrief.data?.summary.publicArticles ?? null,
+    publishConfirmCommandsIncluded: reports.executiveBrief.data?.summary.publishConfirmCommandsIncluded ?? null,
+    routeWarningItems: reports.executiveBrief.data?.summary.routeWarningItems ?? null,
+    trafficDataAvailable: reports.executiveBrief.data?.summary.trafficDataAvailable ?? null,
+    unsafeItems: reports.executiveBrief.data?.summary.unsafeItems ?? null,
+    boardActions: reports.executiveBrief.data?.boardActions ?? [],
+    routeWarnings: reports.executiveBrief.data?.routeWarnings ?? [],
+    topApprovalActions: reports.executiveBrief.data?.topApprovalActions ?? [],
   },
   contentIntegrity: reports.contentIntegrity.data?.summary ?? null,
   internalLinks: reports.internalLinks.data?.summary ?? null,
@@ -3359,6 +3406,9 @@ function buildNextActions() {
   if (!reports.workflowAudit.data || reports.workflowAudit.data.summary.failed > 0 || reports.workflowAudit.data.summary.forbiddenWorkflowCommands > 0) {
     return ["Open docs/project-automation-workflow-audit.md and fix scheduled automation workflow safety before relying on autopilot runs."];
   }
+  if (!reports.executiveBrief.data || reports.executiveBrief.data.summary.unsafeItems > 0 || reports.executiveBrief.data.summary.publishConfirmCommandsIncluded > 0) {
+    return ["Open docs/autopilot-executive-brief.md and resolve executive brief safety issues before assigning review work."];
+  }
   if (!reports.preflight.data?.ok) return ["Open docs/review-preflight.md and resolve candidate issues before marking review."];
   if (!reports.nextReviewSourcePack.data || reports.nextReviewSourcePack.data.summary.unsafeItems > 0) {
     return ["Open docs/next-review-source-pack.md and resolve source-pack guardrail issues before manual review."];
@@ -3611,6 +3661,7 @@ function buildNextActions() {
     return ["Open docs/review-coverage-report.md and regenerate coverage for all planned review candidates."];
   }
   return [
+    "Use docs/autopilot-executive-brief.md as the short daily execution brief before opening the long automation digest.",
     "Use docs/project-automation-workflow-audit.md to confirm scheduled project automation is active and still publish-safe.",
     "Manually review the three recommended drafts in docs/review-preflight.md.",
     "Use docs/wave-approval-packet.md as the focused Wave 1 approval packet.",
@@ -3680,6 +3731,30 @@ function toMarkdown(data: typeof payload) {
     `- Forbidden workflow commands: ${data.workflowAudit.forbiddenWorkflowCommands}`,
     `- Checks passed: ${data.workflowAudit.passed}/${data.workflowAudit.checks}`,
     `- Traffic data available: ${data.workflowAudit.trafficDataAvailable}`,
+    "",
+    "## Autopilot Executive Brief",
+    "",
+    `- Public articles: ${data.executiveBrief.publicArticles}`,
+    `- Immediate approval items: ${data.executiveBrief.immediateApprovalReadyItems}/${data.executiveBrief.immediateApprovalItems}`,
+    `- Approval backlog items: ${data.executiveBrief.approvalBacklogItems}`,
+    `- Board action items: ${data.executiveBrief.boardActionItems}`,
+    `- Broad clusters without public coverage: ${data.executiveBrief.broadClustersWithoutPublicCoverage}`,
+    `- Current publishable now: ${data.executiveBrief.currentPublishableNow}`,
+    `- Publish confirm commands included: ${data.executiveBrief.publishConfirmCommandsIncluded}`,
+    `- Forbidden workflow commands: ${data.executiveBrief.forbiddenWorkflowCommands}`,
+    `- Route warning items: ${data.executiveBrief.routeWarningItems}`,
+    `- Traffic data available: ${data.executiveBrief.trafficDataAvailable}`,
+    `- Unsafe items: ${data.executiveBrief.unsafeItems}`,
+    "",
+    "| Priority | Human gate | Title | File | Reason |",
+    "| ---: | --- | --- | --- | --- |",
+    ...data.executiveBrief.topApprovalActions.map(
+      (item) => `| ${item.priority} | ${item.humanGate} | ${item.title} | ${item.file || ""} | ${item.reason} |`,
+    ),
+    "",
+    "| Board | Action |",
+    "| --- | --- |",
+    ...data.executiveBrief.boardActions.map((item) => `| ${item.title} | ${item.action} |`),
     "",
     "## Content Integrity",
     "",

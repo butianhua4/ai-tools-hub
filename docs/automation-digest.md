@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T20:39:20.266Z
+Generated at: 2026-06-07T20:48:50.217Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -26,6 +26,34 @@ This digest is read-only. It summarizes automation reports and does not publish 
 - Forbidden workflow commands: 0
 - Checks passed: 10/10
 - Traffic data available: false
+
+## Autopilot Executive Brief
+
+- Public articles: 15
+- Immediate approval items: 3/3
+- Approval backlog items: 5
+- Board action items: 5
+- Broad clusters without public coverage: 8
+- Current publishable now: 0
+- Publish confirm commands included: 0
+- Forbidden workflow commands: 0
+- Route warning items: 2
+- Traffic data available: false
+- Unsafe items: 0
+
+| Priority | Human gate | Title | File | Reason |
+| ---: | --- | --- | --- | --- |
+| 777 | explicit human approval required | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx | Immediate Wave 1; projected public count after human approval is 18. |
+| 773 | explicit human approval required | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | Immediate Wave 1; projected public count after human approval is 18. |
+| 769 | explicit human approval required | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx | Immediate Wave 1; projected public count after human approval is 18. |
+
+| Board | Action |
+| --- | --- |
+| Internal links | Use docs/internal-link-sprint-board.md to add one contextual public link per candidate during manual review. |
+| Public refresh | Use docs/public-refresh-sprint-board.md to refresh existing public articles without claiming traffic. |
+| AI deployment | Use docs/ai-deployment-sprint-board.md to prioritize deployment, Agent, model-serving, and API tutorial candidates. |
+| Memory/RAG | Use docs/memory-rag-sprint-board.md to prioritize RAG, knowledge base, vector search, memory, evaluation, and privacy lanes. |
+| Popular prompts | Use docs/popular-prompt-sprint-board.md to prioritize high-demand prompt playbook lanes. |
 
 ## Content Integrity
 
@@ -1194,8 +1222,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 191
-- Traffic claim watch mentions: 3479
+- Traffic claim files scanned: 193
+- Traffic claim watch mentions: 3499
 
 ## Public Surface Inventory
 
@@ -1976,6 +2004,7 @@ Public categories:
 
 ## Next Actions
 
+- Use docs/autopilot-executive-brief.md as the short daily execution brief before opening the long automation digest.
 - Use docs/project-automation-workflow-audit.md to confirm scheduled project automation is active and still publish-safe.
 - Manually review the three recommended drafts in docs/review-preflight.md.
 - Use docs/wave-approval-packet.md as the focused Wave 1 approval packet.

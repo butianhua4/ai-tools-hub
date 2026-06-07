@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-07T20:39:19.707Z
+Generated at: 2026-06-07T20:48:49.662Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 175
-- Passed: 175
+- Checks: 177
+- Passed: 177
 - Failed: 0
 
 ## Checks
@@ -27,12 +27,14 @@ Overall: PASS
 | draft guardrail sanitizer is clean | PASS | changedFiles=0, totalReplacements=0 |
 | project automation workflow is scheduled and report-visible | PASS | scheduleCount=4, artifact=true, reportCommitGated=true |
 | project automation workflow excludes review and publish commands | PASS | forbiddenWorkflowCommands=0, checks=10/10 |
+| autopilot executive brief summarizes immediate execution priorities | PASS | public=15, immediate=3/3, boards=5 |
+| autopilot executive brief stays human-gated and publish-safe | PASS | unsafe=0, publishConfirm=0, publishableNow=0, routeWarnings=2 |
 | no non-published article is indexable | PASS |  |
 | all published articles are indexable | PASS |  |
 | project status still stops before publishing | PASS | publicPublished=15, publishableNow=0 |
 | traffic evidence audit passed and is read-only | PASS | failedChecks=0, measuredTrafficSources=0 |
 | traffic is not claimed without measured metrics | PASS | trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 |
-| traffic claim guard found no unsupported claims | PASS | filesScanned=191, unsafeClaims=0, watchMentions=3479 |
+| traffic claim guard found no unsupported claims | PASS | filesScanned=193, unsafeClaims=0, watchMentions=3499 |
 | content integrity audit is read-only and clean | PASS | filesScanned=669, blockingItems=0 |
 | content integrity audit covers public, recommended, and Wave 1 items | PASS | public=15, recommended=3, wave=3 |
 | internal link opportunity audit is read-only and covers expansion candidates | PASS | public=15, expansion=19, broadFirst=8, candidates=22 |
