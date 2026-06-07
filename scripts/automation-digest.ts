@@ -617,6 +617,52 @@ type NextBatchApprovalRoute = {
   };
 };
 
+type NextBatchRouteRemediationPack = {
+  items: Array<{
+    actionCount: number;
+    file: string;
+    manualRemediationActions: string[];
+    priorityScore: number;
+    publishConfirm: string;
+    readyForRemediationReview: boolean;
+    remediationKinds: string[];
+    routeWarnings: string[];
+    title: string;
+    unsafeReasons: string[];
+  }>;
+  nextBatch: { batch: number; candidates: number; topic: string } | null;
+  publishingBoundary: {
+    currentPublicPublished: number;
+    currentPublishableNow: number;
+    publishConfirmCommandsIncluded: number;
+  };
+  summary: {
+    actionItems: number;
+    batchItems: number;
+    clearanceGapItems: number;
+    copydeskGapItems: number;
+    freshnessWarningItems: number;
+    itemsReadyForRemediationReview: number;
+    publishConfirmCommandsIncluded: number;
+    queryWarningItems: number;
+    routeWarnings: number;
+    seoWarningItems: number;
+    trafficDataAvailable: boolean;
+    unsafeItems: number;
+    warningItems: number;
+  };
+  warningItems: Array<{
+    actionCount: number;
+    file: string;
+    priorityScore: number;
+    publishConfirm: string;
+    readyForRemediationReview: boolean;
+    remediationKinds: string[];
+    routeWarnings: string[];
+    title: string;
+  }>;
+};
+
 type ContentIntegrity = {
   summary: {
     allIssueItems: number;
@@ -1938,6 +1984,7 @@ const reports = {
   humanApprovalQueue: readJson<HumanApprovalQueue>("content/automation/human-approval-execution-queue.json"),
   humanApprovalClearancePack: readJson<HumanApprovalClearancePack>("content/automation/human-approval-clearance-pack.json"),
   nextBatchApprovalRoute: readJson<NextBatchApprovalRoute>("content/automation/next-batch-approval-route.json"),
+  nextBatchRouteRemediationPack: readJson<NextBatchRouteRemediationPack>("content/automation/next-batch-route-remediation-pack.json"),
   reviewOptimizationBrief: readJson<ReviewOptimizationBrief>("content/automation/review-optimization-brief.json"),
   reviewCannibalizationBrief: readJson<ReviewCannibalizationBrief>("content/automation/review-cannibalization-brief.json"),
   reviewCollisionDecisionPack: readJson<ReviewCollisionDecisionPack>("content/automation/review-collision-decision-pack.json"),
@@ -2605,6 +2652,25 @@ const payload = {
     trafficDataAvailable: reports.nextBatchApprovalRoute.data?.summary.trafficDataAvailable ?? null,
     unsafeItems: reports.nextBatchApprovalRoute.data?.summary.unsafeItems ?? null,
   },
+  nextBatchRouteRemediationPack: {
+    actionItems: reports.nextBatchRouteRemediationPack.data?.summary.actionItems ?? null,
+    batchItems: reports.nextBatchRouteRemediationPack.data?.summary.batchItems ?? null,
+    clearanceGapItems: reports.nextBatchRouteRemediationPack.data?.summary.clearanceGapItems ?? null,
+    copydeskGapItems: reports.nextBatchRouteRemediationPack.data?.summary.copydeskGapItems ?? null,
+    currentPublicPublished: reports.nextBatchRouteRemediationPack.data?.publishingBoundary.currentPublicPublished ?? null,
+    currentPublishableNow: reports.nextBatchRouteRemediationPack.data?.publishingBoundary.currentPublishableNow ?? null,
+    freshnessWarningItems: reports.nextBatchRouteRemediationPack.data?.summary.freshnessWarningItems ?? null,
+    itemsReadyForRemediationReview: reports.nextBatchRouteRemediationPack.data?.summary.itemsReadyForRemediationReview ?? null,
+    nextBatch: reports.nextBatchRouteRemediationPack.data?.nextBatch ?? null,
+    publishConfirmCommandsIncluded: reports.nextBatchRouteRemediationPack.data?.summary.publishConfirmCommandsIncluded ?? null,
+    queryWarningItems: reports.nextBatchRouteRemediationPack.data?.summary.queryWarningItems ?? null,
+    routeWarnings: reports.nextBatchRouteRemediationPack.data?.summary.routeWarnings ?? null,
+    seoWarningItems: reports.nextBatchRouteRemediationPack.data?.summary.seoWarningItems ?? null,
+    top: reports.nextBatchRouteRemediationPack.data?.warningItems ?? [],
+    trafficDataAvailable: reports.nextBatchRouteRemediationPack.data?.summary.trafficDataAvailable ?? null,
+    unsafeItems: reports.nextBatchRouteRemediationPack.data?.summary.unsafeItems ?? null,
+    warningItems: reports.nextBatchRouteRemediationPack.data?.summary.warningItems ?? null,
+  },
   preflight: {
     checked: reports.preflight.data?.summary.checked ?? null,
     failed: reports.preflight.data?.summary.failed ?? null,
@@ -3050,6 +3116,13 @@ function buildNextActions() {
     reports.nextBatchApprovalRoute.data.summary.publishConfirmCommandsIncluded > 0
   ) {
     return ["Open docs/next-batch-approval-route.md and resolve next-batch route issues before any mark:review action."];
+  }
+  if (
+    !reports.nextBatchRouteRemediationPack.data ||
+    reports.nextBatchRouteRemediationPack.data.summary.unsafeItems > 0 ||
+    reports.nextBatchRouteRemediationPack.data.summary.publishConfirmCommandsIncluded > 0
+  ) {
+    return ["Open docs/next-batch-route-remediation-pack.md and resolve next-batch remediation issues before any mark:review action."];
   }
   if (!reports.reviewOptimizationBrief.data || reports.reviewOptimizationBrief.data.summary.unsafeCommands > 0) {
     return ["Open docs/review-optimization-brief.md and resolve unsafe or missing copydesk guidance before manual review."];
@@ -3944,6 +4017,32 @@ function toMarkdown(data: typeof payload) {
     ...data.nextBatchApprovalRoute.top.map(
       (item) =>
         `| ${item.readyForHumanRouteReview} | ${item.priorityScore} | ${item.actions.length} | ${item.routeWarnings.length} | ${item.sourcePack?.officialSourceTargets?.length || 0} | ${item.queryCoverage?.queryCount || 0} | ${Boolean(item.seoWarning)} | ${item.commandBoundary.publishConfirm} | ${item.title} | ${item.file} |`,
+    ),
+    "",
+    "## Next Batch Route Remediation Pack",
+    "",
+    `- Next batch: ${data.nextBatchRouteRemediationPack.nextBatch ? `${data.nextBatchRouteRemediationPack.nextBatch.batch} - ${data.nextBatchRouteRemediationPack.nextBatch.topic}` : "missing"}`,
+    `- Batch items: ${data.nextBatchRouteRemediationPack.batchItems}`,
+    `- Warning items: ${data.nextBatchRouteRemediationPack.warningItems}`,
+    `- Ready for remediation review: ${data.nextBatchRouteRemediationPack.itemsReadyForRemediationReview}`,
+    `- Action items: ${data.nextBatchRouteRemediationPack.actionItems}`,
+    `- Clearance gap items: ${data.nextBatchRouteRemediationPack.clearanceGapItems}`,
+    `- Copydesk gap items: ${data.nextBatchRouteRemediationPack.copydeskGapItems}`,
+    `- Query warning items: ${data.nextBatchRouteRemediationPack.queryWarningItems}`,
+    `- SEO warning items: ${data.nextBatchRouteRemediationPack.seoWarningItems}`,
+    `- Freshness warning items: ${data.nextBatchRouteRemediationPack.freshnessWarningItems}`,
+    `- Route warnings: ${data.nextBatchRouteRemediationPack.routeWarnings}`,
+    `- Current public published: ${data.nextBatchRouteRemediationPack.currentPublicPublished}`,
+    `- Current publishable now: ${data.nextBatchRouteRemediationPack.currentPublishableNow}`,
+    `- Publish confirm commands included: ${data.nextBatchRouteRemediationPack.publishConfirmCommandsIncluded}`,
+    `- Traffic data available: ${data.nextBatchRouteRemediationPack.trafficDataAvailable}`,
+    `- Unsafe items: ${data.nextBatchRouteRemediationPack.unsafeItems}`,
+    "",
+    "| Ready | Score | Actions | Kinds | Warnings | Publish confirm | Title | File |",
+    "| --- | ---: | ---: | --- | ---: | --- | --- | --- |",
+    ...data.nextBatchRouteRemediationPack.top.map(
+      (item) =>
+        `| ${item.readyForRemediationReview} | ${item.priorityScore} | ${item.actionCount} | ${item.remediationKinds.join(", ") || "none"} | ${item.routeWarnings.length} | ${item.publishConfirm} | ${item.title} | ${item.file} |`,
     ),
     "",
     "## Review Optimization Brief",

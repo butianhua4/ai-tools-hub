@@ -1578,6 +1578,41 @@ async function main() {
     };
     unsafeItems?: unknown[];
   }>("content/automation/next-batch-approval-route.json");
+  const nextBatchRouteRemediationPack = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    items?: Array<{
+      actionCount?: number;
+      manualRemediationActions?: unknown[];
+      publishConfirm?: string;
+      readyForRemediationReview?: boolean;
+      remediationKinds?: unknown[];
+      routeWarnings?: unknown[];
+      unsafeReasons?: unknown[];
+    }>;
+    nextBatch: { batch: number; candidates: number; topic: string } | null;
+    publishingBoundary: {
+      currentPublicPublished: number;
+      currentPublishableNow: number;
+      publishConfirmCommandsIncluded: number;
+    };
+    summary: {
+      actionItems: number;
+      batchItems: number;
+      clearanceGapItems: number;
+      copydeskGapItems: number;
+      freshnessWarningItems: number;
+      itemsReadyForRemediationReview: number;
+      publishConfirmCommandsIncluded: number;
+      queryWarningItems: number;
+      routeWarnings: number;
+      seoWarningItems: number;
+      trafficDataAvailable: boolean;
+      unsafeItems: number;
+      warningItems: number;
+    };
+    unsafeItems?: unknown[];
+    warningItems?: unknown[];
+  }>("content/automation/next-batch-route-remediation-pack.json");
   const reviewOptimizationBrief = readJson<{
     briefs?: Array<{
       file: string;
@@ -4145,6 +4180,42 @@ async function main() {
           ),
         ),
       detail: `ready=${nextBatchApprovalRoute.summary.itemsReadyForHumanRouteReview}, actions=${nextBatchApprovalRoute.summary.actionItems}, sourcePack=${nextBatchApprovalRoute.summary.sourcePackMatchedItems}, queryCoverage=${nextBatchApprovalRoute.summary.queryCoverageMatchedItems}, warnings=${nextBatchApprovalRoute.summary.routeWarnings}, publishConfirm=${nextBatchApprovalRoute.summary.publishConfirmCommandsIncluded}`,
+    },
+    {
+      name: "next batch route remediation pack covers route warnings",
+      ok:
+        nextBatchRouteRemediationPack.guardrails.autoEditArticles === false &&
+        nextBatchRouteRemediationPack.guardrails.autoMarkReview === false &&
+        nextBatchRouteRemediationPack.guardrails.autoPublish === false &&
+        nextBatchRouteRemediationPack.guardrails.trafficClaim === "not-included" &&
+        nextBatchRouteRemediationPack.nextBatch?.batch === nextBatchApprovalRoute.nextBatch?.batch &&
+        nextBatchRouteRemediationPack.summary.batchItems === nextBatchApprovalRoute.summary.batchItems &&
+        nextBatchRouteRemediationPack.summary.routeWarnings === nextBatchApprovalRoute.summary.routeWarnings &&
+        nextBatchRouteRemediationPack.summary.warningItems > 0 &&
+        nextBatchRouteRemediationPack.summary.actionItems >= nextBatchRouteRemediationPack.summary.warningItems * 8 &&
+        nextBatchRouteRemediationPack.publishingBoundary.currentPublicPublished === nextBatchApprovalRoute.publishingBoundary.currentPublicPublished &&
+        nextBatchRouteRemediationPack.publishingBoundary.currentPublishableNow === nextBatchApprovalRoute.publishingBoundary.currentPublishableNow &&
+        nextBatchRouteRemediationPack.summary.trafficDataAvailable === false,
+      detail: `batch=${nextBatchRouteRemediationPack.nextBatch?.batch ?? "missing"}, items=${nextBatchRouteRemediationPack.summary.batchItems}, warningItems=${nextBatchRouteRemediationPack.summary.warningItems}, routeWarnings=${nextBatchRouteRemediationPack.summary.routeWarnings}, actions=${nextBatchRouteRemediationPack.summary.actionItems}`,
+    },
+    {
+      name: "next batch route remediation pack stays safe and publish-confirm-free",
+      ok:
+        nextBatchRouteRemediationPack.summary.unsafeItems === 0 &&
+        (nextBatchRouteRemediationPack.unsafeItems?.length || 0) === 0 &&
+        nextBatchRouteRemediationPack.summary.itemsReadyForRemediationReview === nextBatchRouteRemediationPack.summary.batchItems &&
+        nextBatchRouteRemediationPack.summary.publishConfirmCommandsIncluded === 0 &&
+        nextBatchRouteRemediationPack.publishingBoundary.publishConfirmCommandsIncluded === 0 &&
+        Boolean(
+          nextBatchRouteRemediationPack.items?.every(
+            (item) =>
+              item.readyForRemediationReview === true &&
+              (item.unsafeReasons?.length || 0) === 0 &&
+              (item.manualRemediationActions?.length || item.actionCount || 0) >= 8 &&
+              item.publishConfirm === "not-included",
+          ),
+        ),
+      detail: `ready=${nextBatchRouteRemediationPack.summary.itemsReadyForRemediationReview}, unsafe=${nextBatchRouteRemediationPack.summary.unsafeItems}, publishConfirm=${nextBatchRouteRemediationPack.summary.publishConfirmCommandsIncluded}, clearanceGaps=${nextBatchRouteRemediationPack.summary.clearanceGapItems}, copydeskGaps=${nextBatchRouteRemediationPack.summary.copydeskGapItems}, queryWarnings=${nextBatchRouteRemediationPack.summary.queryWarningItems}, seoWarnings=${nextBatchRouteRemediationPack.summary.seoWarningItems}`,
     },
   ];
 

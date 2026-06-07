@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-07T19:22:14.172Z",
+  "generatedAt": "2026-06-07T19:31:27.724Z",
   "ok": true,
   "summary": {
-    "checks": 161,
+    "checks": 163,
     "failed": 0,
-    "passed": 161
+    "passed": 163
   },
   "failed": [],
   "checks": [
@@ -90,7 +90,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=177, unsafeClaims=0, watchMentions=3227"
+      "detail": "filesScanned=179, unsafeClaims=0, watchMentions=3239"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -811,6 +811,16 @@
       "name": "next batch approval route is human-gated and action-ready",
       "ok": true,
       "detail": "ready=3, actions=38, sourcePack=3, queryCoverage=3, warnings=4, publishConfirm=0"
+    },
+    {
+      "name": "next batch route remediation pack covers route warnings",
+      "ok": true,
+      "detail": "batch=1, items=3, warningItems=3, routeWarnings=4, actions=34"
+    },
+    {
+      "name": "next batch route remediation pack stays safe and publish-confirm-free",
+      "ok": true,
+      "detail": "ready=3, unsafe=0, publishConfirm=0, clearanceGaps=2, copydeskGaps=1, queryWarnings=1, seoWarnings=1"
     }
   ]
 }

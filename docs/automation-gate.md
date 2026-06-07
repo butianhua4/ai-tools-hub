@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-07T19:22:14.172Z
+Generated at: 2026-06-07T19:31:27.724Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 161
-- Passed: 161
+- Checks: 163
+- Passed: 163
 - Failed: 0
 
 ## Checks
@@ -30,7 +30,7 @@ Overall: PASS
 | project status still stops before publishing | PASS | publicPublished=15, publishableNow=0 |
 | traffic evidence audit passed and is read-only | PASS | failedChecks=0, measuredTrafficSources=0 |
 | traffic is not claimed without measured metrics | PASS | trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 |
-| traffic claim guard found no unsupported claims | PASS | filesScanned=177, unsafeClaims=0, watchMentions=3227 |
+| traffic claim guard found no unsupported claims | PASS | filesScanned=179, unsafeClaims=0, watchMentions=3239 |
 | content integrity audit is read-only and clean | PASS | filesScanned=669, blockingItems=0 |
 | content integrity audit covers public, recommended, and Wave 1 items | PASS | public=15, recommended=3, wave=3 |
 | internal link opportunity audit is read-only and covers expansion candidates | PASS | public=15, expansion=19, broadFirst=8, candidates=22 |
@@ -175,3 +175,5 @@ Overall: PASS
 | manual review workbench includes SEO warning remediation | PASS | workbenchSeo=16, remediation=16, unsafe=0 |
 | next batch approval route matches manual review workbench | PASS | batch=1, items=3, workbenchItems=3, public=15, publishable=0 |
 | next batch approval route is human-gated and action-ready | PASS | ready=3, actions=38, sourcePack=3, queryCoverage=3, warnings=4, publishConfirm=0 |
+| next batch route remediation pack covers route warnings | PASS | batch=1, items=3, warningItems=3, routeWarnings=4, actions=34 |
+| next batch route remediation pack stays safe and publish-confirm-free | PASS | ready=3, unsafe=0, publishConfirm=0, clearanceGaps=2, copydeskGaps=1, queryWarnings=1, seoWarnings=1 |

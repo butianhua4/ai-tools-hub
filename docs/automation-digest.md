@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T19:22:14.053Z
+Generated at: 2026-06-07T19:31:28.276Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -54,7 +54,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=fa
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/ -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
@@ -875,6 +875,31 @@ Unsafe first coverage launch items:
 | true | 750 | 13 | 1 | 8 | 35 | false | not-included | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
 | true | 722 | 13 | 3 | 10 | 35 | true | not-included | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
 
+## Next Batch Route Remediation Pack
+
+- Next batch: 1 - Agent 部署、工具调用和记忆
+- Batch items: 3
+- Warning items: 3
+- Ready for remediation review: 3
+- Action items: 34
+- Clearance gap items: 2
+- Copydesk gap items: 1
+- Query warning items: 1
+- SEO warning items: 1
+- Freshness warning items: 3
+- Route warnings: 4
+- Current public published: 15
+- Current publishable now: 0
+- Publish confirm commands included: 0
+- Traffic data available: false
+- Unsafe items: 0
+
+| Ready | Score | Actions | Kinds | Warnings | Publish confirm | Title | File |
+| --- | ---: | ---: | --- | ---: | --- | --- | --- |
+| true | 872 | 15 | clearance-gap, copydesk-gap, query-warning, seo-warning, freshness-warning, route-warning | 3 | not-included | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+| true | 820 | 10 | clearance-gap, freshness-warning, route-warning | 1 | not-included | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| true | 798 | 9 | freshness-warning | 0 | not-included | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+
 ## Review Optimization Brief
 
 - Briefs: 16
@@ -1117,8 +1142,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 177
-- Traffic claim watch mentions: 3227
+- Traffic claim files scanned: 179
+- Traffic claim watch mentions: 3239
 
 ## Public Surface Inventory
 
