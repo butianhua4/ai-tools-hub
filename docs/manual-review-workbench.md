@@ -1,6 +1,6 @@
 # Manual Review Workbench
 
-Generated at: 2026-06-07T17:14:47.896Z
+Generated at: 2026-06-07T17:23:13.144Z
 
 This workbench is read-only. It does not publish articles or mark drafts for review.
 
@@ -193,7 +193,7 @@ Next review files:
 - Failed checks: 0
 - Unsupported traffic claims: 0
 - Traffic claim files scanned: 159
-- Traffic claim watch mentions: 2048
+- Traffic claim watch mentions: 2051
 
 ## Content Integrity
 
@@ -247,6 +247,29 @@ Next review files:
 | 2026-06-06 | 2026-06-06 | AI Agent, Vercel AI SDK, 工具调用, AI 部署 | tutorial | intermediate | none | none | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
 | 2026-06-06 | 2026-06-06 | 客服 AI, 模型选型, RAG, AI Agent | tutorial | beginner | none | none | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
 | 2026-06-06 | 2026-06-06 | AI 提示词, 提示词模板, 行业 AI, SOP | tutorial | beginner | none | none | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+
+## SEO Warning Remediation
+
+- Items: 16
+- Public items: 8
+- Draft items: 8
+- Recommended items: 1
+- Wave items: 1
+- Human-gated items: 16
+- Unsafe items: 0
+- Snippet warning items: 13
+- Schema warning items: 7
+
+| Priority | Ready | Status | Scope | Snippet warnings | Schema warnings | Actions | Title | File |
+| ---: | --- | --- | --- | ---: | ---: | --- | --- | --- |
+| 86 | true | draft | expansion, recommended, wave-1 | 2 | 0 | Expand the meta description with the user problem, outcome, and one concrete workflow term.<br>Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.<br>Confirm description length remains suitable for search snippets after editing.<br>Check whether the title can naturally include the exact primary keyword: 客服 AI 模型选型. | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| 63 | true | published | public | 1 | 1 | Check whether the title can naturally include the exact primary keyword: Codex npm install 报错怎么办.<br>If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.<br>Confirm the H1/title/description still answer the same search intent after any metadata change.<br>Confirm the contentType value matches the actual article format and category. | Codex 项目 npm install 报错怎么办：新手排查步骤 | content/blog/codex-npm-install-error-beginner-fix.mdx |
+| 63 | true | published | public | 1 | 1 | Check whether the title can naturally include the exact primary keyword: 第一个 Upwork 项目怎么报价.<br>If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.<br>Confirm the H1/title/description still answer the same search intent after any metadata change.<br>Confirm the contentType value matches the actual article format and category. | 第一个 Upwork 小项目怎么报价：新手范围和底价检查 | content/blog/first-upwork-project-pricing-checklist.mdx |
+| 63 | true | published | public | 1 | 1 | Check whether the title can naturally include the exact primary keyword: Payoneer Wise PayPal 区别.<br>If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.<br>Confirm the H1/title/description still answer the same search intent after any metadata change.<br>Confirm the contentType value matches the actual article format and category. | Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看 | content/blog/payoneer-wise-paypal-beginner-comparison.mdx |
+| 63 | true | published | public | 1 | 1 | Check whether the title can naturally include the exact primary keyword: Vercel 环境变量缺失怎么办.<br>If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.<br>Confirm the H1/title/description still answer the same search intent after any metadata change.<br>Confirm the contentType value matches the actual article format and category. | Vercel 提示环境变量缺失怎么办：新手部署检查流程 | content/blog/vercel-env-variable-missing-beginner-guide.mdx |
+| 58 | true | published | public | 1 | 0 | Check whether the title can naturally include the exact primary keyword: Upwork Proposal 没人回怎么办.<br>If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.<br>Confirm the H1/title/description still answer the same search intent after any metadata change.<br>For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable. | Upwork Proposal 发出去没人回怎么办：新手检查清单 | content/blog/upwork-proposal-no-reply-checklist.mdx |
+| 55 | true | published | public | 0 | 1 | Confirm the contentType value matches the actual article format and category.<br>If the value is intentionally uncommon, document that decision during human review.<br>If the value is accidental, replace it with the closest established content type before approval.<br>For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable. | Codex 和 GitHub 怎么配合：提交代码前检查 | content/blog/codex-github-before-commit-checklist.mdx |
+| 55 | true | published | public | 0 | 1 | Confirm the contentType value matches the actual article format and category.<br>If the value is intentionally uncommon, document that decision during human review.<br>If the value is accidental, replace it with the closest established content type before approval.<br>For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable. | Codex 部署 Vercel 前检查什么：上线前清单 | content/blog/codex-vercel-deploy-preflight-checklist.mdx |
 
 ## AI Deployment Coverage
 
@@ -398,6 +421,7 @@ Next review files:
 - Use docs/internal-link-opportunity-audit.md to add public internal links during manual review.
 - Use docs/search-snippet-readiness-audit.md to review title, description, and slug snippet quality.
 - Use docs/structured-data-readiness-audit.md to review metadata and JSON-LD readiness.
+- Use docs/seo-warning-remediation-pack.md to turn snippet and structured-data warnings into manual metadata decisions.
 - Use docs/search-intent-lane-map.md to choose broad, high-search-intent lanes beyond basic web deployment.
 - Use docs/search-intent-approval-packet.md as the concrete current-wave and next-gap approval queue.
 - Use docs/search-intent-wave-planner.md as the continuous multi-wave review queue across prompt, Agent, RAG, and model deployment lanes.

@@ -1557,6 +1557,10 @@ const reports = {
   workbench: readJson<{
     publishReadiness: { currentItemsCovered: number };
     reviewPlan: { nextBatch: { batch: number; topic: string } | null };
+    seoWarningRemediation?: {
+      summary?: { draftItems: number; humanGatedItems: number; items: number; publicItems: number; unsafeItems: number };
+      topItems?: unknown[];
+    };
   }>("content/automation/manual-review-workbench.json"),
   preflight: readJson<{ ok: boolean; summary: { checked: number; failed: number; passed: number }; items: PreflightItem[] }>(
     "content/automation/review-preflight.json",
@@ -2364,6 +2368,12 @@ const payload = {
   workbench: {
     currentItemsCovered: reports.workbench.data?.publishReadiness.currentItemsCovered ?? null,
     nextBatch: reports.workbench.data?.reviewPlan.nextBatch ?? null,
+    seoWarningDraftItems: reports.workbench.data?.seoWarningRemediation?.summary?.draftItems ?? null,
+    seoWarningHumanGatedItems: reports.workbench.data?.seoWarningRemediation?.summary?.humanGatedItems ?? null,
+    seoWarningItems: reports.workbench.data?.seoWarningRemediation?.summary?.items ?? null,
+    seoWarningPublicItems: reports.workbench.data?.seoWarningRemediation?.summary?.publicItems ?? null,
+    seoWarningTopItems: reports.workbench.data?.seoWarningRemediation?.topItems?.length ?? null,
+    seoWarningUnsafeItems: reports.workbench.data?.seoWarningRemediation?.summary?.unsafeItems ?? null,
   },
   nextActions: buildNextActions(),
 };
@@ -3889,6 +3899,11 @@ function toMarkdown(data: typeof payload) {
     "",
     `- Next batch: ${data.workbench.nextBatch ? `${data.workbench.nextBatch.batch} - ${data.workbench.nextBatch.topic}` : "missing"}`,
     `- Current publish readiness items: ${data.workbench.currentItemsCovered}`,
+    `- SEO warning remediation items: ${data.workbench.seoWarningItems}`,
+    `- SEO warning public/draft items: ${data.workbench.seoWarningPublicItems}/${data.workbench.seoWarningDraftItems}`,
+    `- SEO warning human-gated items: ${data.workbench.seoWarningHumanGatedItems}`,
+    `- SEO warning unsafe items: ${data.workbench.seoWarningUnsafeItems}`,
+    `- SEO warning top items shown: ${data.workbench.seoWarningTopItems}`,
     "",
     "## Next Actions",
     "",

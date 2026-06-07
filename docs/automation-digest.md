@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T17:14:50.981Z
+Generated at: 2026-06-07T17:23:16.423Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -54,7 +54,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=ja
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/ -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
@@ -1006,7 +1006,7 @@ Next review files:
 - Failed checks: 0
 - Unsupported traffic claims: 0
 - Traffic claim files scanned: 159
-- Traffic claim watch mentions: 2048
+- Traffic claim watch mentions: 2051
 
 ## Public Surface Inventory
 
@@ -1457,6 +1457,11 @@ Public categories:
 
 - Next batch: 1 - Agent 部署、工具调用和记忆
 - Current publish readiness items: 3
+- SEO warning remediation items: 16
+- SEO warning public/draft items: 8/8
+- SEO warning human-gated items: 16
+- SEO warning unsafe items: 0
+- SEO warning top items shown: 8
 
 ## Next Actions
 

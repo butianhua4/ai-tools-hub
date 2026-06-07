@@ -485,6 +485,16 @@ async function main() {
     publishReadiness: { currentItemsCovered: number };
     publishingBoundary: { publishableNow: number };
     reviewPlan: { nextBatch: unknown };
+    seoWarningRemediation?: {
+      summary?: {
+        humanGatedItems?: number;
+        items?: number;
+        publicItems?: number;
+        draftItems?: number;
+        unsafeItems?: number;
+      };
+      topItems?: unknown[];
+    };
   }>("content/automation/manual-review-workbench.json");
   const projectStatus = readJson<{ articles: { publicPublished: number; publishableNow: unknown[] } }>("content/automation/project-status.json");
   const publicSurfaceInventory = readJson<{
@@ -3364,6 +3374,17 @@ async function main() {
         Boolean(workbench.reviewPlan.nextBatch) &&
         workbench.publishReadiness.currentItemsCovered > 0,
       detail: `currentItemsCovered=${workbench.publishReadiness.currentItemsCovered}, publishableNow=${workbench.publishingBoundary.publishableNow}`,
+    },
+    {
+      name: "manual review workbench includes SEO warning remediation",
+      ok:
+        workbench.seoWarningRemediation?.summary?.items === seoWarningRemediation.summary.items &&
+        workbench.seoWarningRemediation.summary.humanGatedItems === seoWarningRemediation.summary.humanGatedItems &&
+        workbench.seoWarningRemediation.summary.publicItems === seoWarningRemediation.summary.publicItems &&
+        workbench.seoWarningRemediation.summary.draftItems === seoWarningRemediation.summary.draftItems &&
+        workbench.seoWarningRemediation.summary.unsafeItems === 0 &&
+        (workbench.seoWarningRemediation.topItems?.length || 0) > 0,
+      detail: `workbenchSeo=${workbench.seoWarningRemediation?.summary?.items ?? "missing"}, remediation=${seoWarningRemediation.summary.items}, unsafe=${workbench.seoWarningRemediation?.summary?.unsafeItems ?? "missing"}`,
     },
   ];
 

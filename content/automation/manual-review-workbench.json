@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T17:14:47.896Z",
+  "generatedAt": "2026-06-07T17:23:13.144Z",
   "guardrails": {
     "autoMarkReview": false,
     "autoPublish": false,
@@ -818,7 +818,7 @@
     "filesScanned": 159,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 2048
+    "watchMentions": 2051
   },
   "contentIntegrity": {
     "allIssueItems": 0,
@@ -1009,6 +1009,197 @@
         "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
         "updatedAt": "2026-06-06",
         "warnings": []
+      }
+    ]
+  },
+  "seoWarningRemediation": {
+    "summary": {
+      "blockingItems": 0,
+      "draftItems": 8,
+      "humanGatedItems": 16,
+      "items": 16,
+      "itemsWithHumanChecklist": 16,
+      "itemsWithManualActions": 16,
+      "publicItems": 8,
+      "recommendedItems": 1,
+      "schemaWarningItems": 7,
+      "snippetWarningItems": 13,
+      "trafficDataAvailable": false,
+      "unsafeItems": 0,
+      "warningItems": 16,
+      "waveItems": 1
+    },
+    "topItems": [
+      {
+        "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+        "manualActions": [
+          "Expand the meta description with the user problem, outcome, and one concrete workflow term.",
+          "Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.",
+          "Confirm description length remains suitable for search snippets after editing.",
+          "Check whether the title can naturally include the exact primary keyword: 客服 AI 模型选型."
+        ],
+        "manualFixReady": true,
+        "priority": 86,
+        "schemaWarnings": [],
+        "scope": [
+          "expansion",
+          "recommended",
+          "wave-1"
+        ],
+        "snippetWarnings": [
+          "description may be thin for search snippets",
+          "primary keyword is not an exact title substring"
+        ],
+        "status": "draft",
+        "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检"
+      },
+      {
+        "file": "content/blog/codex-npm-install-error-beginner-fix.mdx",
+        "manualActions": [
+          "Check whether the title can naturally include the exact primary keyword: Codex npm install 报错怎么办.",
+          "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+          "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+          "Confirm the contentType value matches the actual article format and category."
+        ],
+        "manualFixReady": true,
+        "priority": 63,
+        "schemaWarnings": [
+          "contentType is uncommon: troubleshooting"
+        ],
+        "scope": [
+          "public"
+        ],
+        "snippetWarnings": [
+          "primary keyword is not an exact title substring"
+        ],
+        "status": "published",
+        "title": "Codex 项目 npm install 报错怎么办：新手排查步骤"
+      },
+      {
+        "file": "content/blog/first-upwork-project-pricing-checklist.mdx",
+        "manualActions": [
+          "Check whether the title can naturally include the exact primary keyword: 第一个 Upwork 项目怎么报价.",
+          "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+          "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+          "Confirm the contentType value matches the actual article format and category."
+        ],
+        "manualFixReady": true,
+        "priority": 63,
+        "schemaWarnings": [
+          "contentType is uncommon: pricing-guide"
+        ],
+        "scope": [
+          "public"
+        ],
+        "snippetWarnings": [
+          "primary keyword is not an exact title substring"
+        ],
+        "status": "published",
+        "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查"
+      },
+      {
+        "file": "content/blog/payoneer-wise-paypal-beginner-comparison.mdx",
+        "manualActions": [
+          "Check whether the title can naturally include the exact primary keyword: Payoneer Wise PayPal 区别.",
+          "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+          "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+          "Confirm the contentType value matches the actual article format and category."
+        ],
+        "manualFixReady": true,
+        "priority": 63,
+        "schemaWarnings": [
+          "contentType is uncommon: comparison"
+        ],
+        "scope": [
+          "public"
+        ],
+        "snippetWarnings": [
+          "primary keyword is not an exact title substring"
+        ],
+        "status": "published",
+        "title": "Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看"
+      },
+      {
+        "file": "content/blog/vercel-env-variable-missing-beginner-guide.mdx",
+        "manualActions": [
+          "Check whether the title can naturally include the exact primary keyword: Vercel 环境变量缺失怎么办.",
+          "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+          "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+          "Confirm the contentType value matches the actual article format and category."
+        ],
+        "manualFixReady": true,
+        "priority": 63,
+        "schemaWarnings": [
+          "contentType is uncommon: troubleshooting"
+        ],
+        "scope": [
+          "public"
+        ],
+        "snippetWarnings": [
+          "primary keyword is not an exact title substring"
+        ],
+        "status": "published",
+        "title": "Vercel 提示环境变量缺失怎么办：新手部署检查流程"
+      },
+      {
+        "file": "content/blog/upwork-proposal-no-reply-checklist.mdx",
+        "manualActions": [
+          "Check whether the title can naturally include the exact primary keyword: Upwork Proposal 没人回怎么办.",
+          "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+          "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+          "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+        ],
+        "manualFixReady": true,
+        "priority": 58,
+        "schemaWarnings": [],
+        "scope": [
+          "public"
+        ],
+        "snippetWarnings": [
+          "primary keyword is not an exact title substring"
+        ],
+        "status": "published",
+        "title": "Upwork Proposal 发出去没人回怎么办：新手检查清单"
+      },
+      {
+        "file": "content/blog/codex-github-before-commit-checklist.mdx",
+        "manualActions": [
+          "Confirm the contentType value matches the actual article format and category.",
+          "If the value is intentionally uncommon, document that decision during human review.",
+          "If the value is accidental, replace it with the closest established content type before approval.",
+          "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+        ],
+        "manualFixReady": true,
+        "priority": 55,
+        "schemaWarnings": [
+          "contentType is uncommon: pricing-guide"
+        ],
+        "scope": [
+          "public"
+        ],
+        "snippetWarnings": [],
+        "status": "published",
+        "title": "Codex 和 GitHub 怎么配合：提交代码前检查"
+      },
+      {
+        "file": "content/blog/codex-vercel-deploy-preflight-checklist.mdx",
+        "manualActions": [
+          "Confirm the contentType value matches the actual article format and category.",
+          "If the value is intentionally uncommon, document that decision during human review.",
+          "If the value is accidental, replace it with the closest established content type before approval.",
+          "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+        ],
+        "manualFixReady": true,
+        "priority": 55,
+        "schemaWarnings": [
+          "contentType is uncommon: roadmap"
+        ],
+        "scope": [
+          "public"
+        ],
+        "snippetWarnings": [],
+        "status": "published",
+        "title": "Codex 部署 Vercel 前检查什么：上线前清单"
       }
     ]
   },
@@ -1673,6 +1864,7 @@
     "Use docs/internal-link-opportunity-audit.md to add public internal links during manual review.",
     "Use docs/search-snippet-readiness-audit.md to review title, description, and slug snippet quality.",
     "Use docs/structured-data-readiness-audit.md to review metadata and JSON-LD readiness.",
+    "Use docs/seo-warning-remediation-pack.md to turn snippet and structured-data warnings into manual metadata decisions.",
     "Use docs/search-intent-lane-map.md to choose broad, high-search-intent lanes beyond basic web deployment.",
     "Use docs/search-intent-approval-packet.md as the concrete current-wave and next-gap approval queue.",
     "Use docs/search-intent-wave-planner.md as the continuous multi-wave review queue across prompt, Agent, RAG, and model deployment lanes.",

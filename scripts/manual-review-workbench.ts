@@ -259,6 +259,31 @@ type StructuredData = {
   }>;
 };
 
+type SeoWarningRemediation = {
+  items: Array<{
+    file: string;
+    manualActions: string[];
+    manualFixReady: boolean;
+    priority: number;
+    schemaWarnings: string[];
+    scope: string[];
+    snippetWarnings: string[];
+    status: string;
+    title: string;
+  }>;
+  summary: {
+    draftItems: number;
+    humanGatedItems: number;
+    items: number;
+    publicItems: number;
+    recommendedItems: number;
+    schemaWarningItems: number;
+    snippetWarningItems: number;
+    unsafeItems: number;
+    waveItems: number;
+  };
+};
+
 type SearchIntentLanes = {
   summary: {
     highPriorityLanes: number;
@@ -388,6 +413,7 @@ function main() {
   const internalLinks = readJson<InternalLinks>("content/automation/internal-link-opportunity-audit.json");
   const searchSnippets = readJson<SearchSnippets>("content/automation/search-snippet-readiness-audit.json");
   const structuredData = readJson<StructuredData>("content/automation/structured-data-readiness-audit.json");
+  const seoWarningRemediation = readJson<SeoWarningRemediation>("content/automation/seo-warning-remediation-pack.json");
   const searchIntentLanes = readJson<SearchIntentLanes>("content/automation/search-intent-lane-map.json");
   const searchIntentApproval = readJson<SearchIntentApproval>("content/automation/search-intent-approval-packet.json");
   const searchIntentWaves = readJson<SearchIntentWaves>("content/automation/search-intent-wave-planner.json");
@@ -554,6 +580,20 @@ function main() {
         warnings: item.warnings,
       })),
     },
+    seoWarningRemediation: {
+      summary: seoWarningRemediation.summary,
+      topItems: seoWarningRemediation.items.slice(0, 8).map((item) => ({
+        file: item.file,
+        manualActions: item.manualActions.slice(0, 4),
+        manualFixReady: item.manualFixReady,
+        priority: item.priority,
+        schemaWarnings: item.schemaWarnings,
+        scope: item.scope,
+        snippetWarnings: item.snippetWarnings,
+        status: item.status,
+        title: item.title,
+      })),
+    },
     deploymentCoverage: {
       summary: deploymentCoverage.summary,
       topTopics: deploymentCoverage.coverage.slice(0, 6).map((item) => ({
@@ -649,6 +689,7 @@ function main() {
       internalLinks,
       searchSnippets,
       structuredData,
+      seoWarningRemediation,
       searchIntentLanes,
       searchIntentApproval,
       searchIntentWaves,
@@ -682,6 +723,7 @@ function buildNextActions(
   internalLinks: InternalLinks,
   searchSnippets: SearchSnippets,
   structuredData: StructuredData,
+  seoWarningRemediation: SeoWarningRemediation,
   searchIntentLanes: SearchIntentLanes,
   searchIntentApproval: SearchIntentApproval,
   searchIntentWaves: SearchIntentWaves,
@@ -716,6 +758,7 @@ function buildNextActions(
   if (internalLinks.summary.waveItemsMissingPublicLinkSuggestion > 0) return ["Resolve Wave 1 internal link suggestion gaps before publishing."];
   if (searchSnippets.summary.waveItemsWithBlockingIssues > 0) return ["Fix Wave 1 search snippet blockers before publishing."];
   if (structuredData.summary.waveItemsWithBlockingIssues > 0) return ["Fix Wave 1 structured data readiness blockers before publishing."];
+  if (seoWarningRemediation.summary.unsafeItems > 0) return ["Resolve SEO warning remediation safety issues before manual review."];
   if (searchIntentLanes.summary.lanesWithReadyDrafts !== searchIntentLanes.summary.lanes) return ["Regenerate search intent lane map and ensure every broad lane has ready draft candidates."];
   if (searchIntentApproval.summary.unsafeItems > 0) return ["Resolve search intent approval packet safety issues before manual review."];
   if (searchIntentWaves.summary.unsafeItems > 0) return ["Resolve search intent wave planner safety issues before manual review."];
@@ -736,6 +779,7 @@ function buildNextActions(
     "Use docs/internal-link-opportunity-audit.md to add public internal links during manual review.",
     "Use docs/search-snippet-readiness-audit.md to review title, description, and slug snippet quality.",
     "Use docs/structured-data-readiness-audit.md to review metadata and JSON-LD readiness.",
+    "Use docs/seo-warning-remediation-pack.md to turn snippet and structured-data warnings into manual metadata decisions.",
     "Use docs/search-intent-lane-map.md to choose broad, high-search-intent lanes beyond basic web deployment.",
     "Use docs/search-intent-approval-packet.md as the concrete current-wave and next-gap approval queue.",
     "Use docs/search-intent-wave-planner.md as the continuous multi-wave review queue across prompt, Agent, RAG, and model deployment lanes.",
@@ -861,6 +905,20 @@ function toMarkdown(payload: {
       title: string;
       updatedAt: string;
       warnings: string[];
+    }>;
+  };
+  seoWarningRemediation: {
+    summary: SeoWarningRemediation["summary"];
+    topItems: Array<{
+      file: string;
+      manualActions: string[];
+      manualFixReady: boolean;
+      priority: number;
+      schemaWarnings: string[];
+      scope: string[];
+      snippetWarnings: string[];
+      status: string;
+      title: string;
     }>;
   };
   deploymentCoverage: {
@@ -1153,6 +1211,24 @@ function toMarkdown(payload: {
     "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ...payload.structuredData.waveItems.map((item) => (
       `| ${item.date} | ${item.updatedAt} | ${item.tags.join(", ")} | ${item.contentType} | ${item.difficulty} | ${item.issues.length ? item.issues.join("<br>") : "none"} | ${item.warnings.length ? item.warnings.join("<br>") : "none"} | ${item.title} | ${item.file} |`
+    )),
+    "",
+    "## SEO Warning Remediation",
+    "",
+    `- Items: ${payload.seoWarningRemediation.summary.items}`,
+    `- Public items: ${payload.seoWarningRemediation.summary.publicItems}`,
+    `- Draft items: ${payload.seoWarningRemediation.summary.draftItems}`,
+    `- Recommended items: ${payload.seoWarningRemediation.summary.recommendedItems}`,
+    `- Wave items: ${payload.seoWarningRemediation.summary.waveItems}`,
+    `- Human-gated items: ${payload.seoWarningRemediation.summary.humanGatedItems}`,
+    `- Unsafe items: ${payload.seoWarningRemediation.summary.unsafeItems}`,
+    `- Snippet warning items: ${payload.seoWarningRemediation.summary.snippetWarningItems}`,
+    `- Schema warning items: ${payload.seoWarningRemediation.summary.schemaWarningItems}`,
+    "",
+    "| Priority | Ready | Status | Scope | Snippet warnings | Schema warnings | Actions | Title | File |",
+    "| ---: | --- | --- | --- | ---: | ---: | --- | --- | --- |",
+    ...payload.seoWarningRemediation.topItems.map((item) => (
+      `| ${item.priority} | ${item.manualFixReady} | ${item.status} | ${item.scope.join(", ")} | ${item.snippetWarnings.length} | ${item.schemaWarnings.length} | ${item.manualActions.join("<br>")} | ${item.title} | ${item.file} |`
     )),
     "",
     "## AI Deployment Coverage",

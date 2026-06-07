@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T17:14:31.687Z",
+  "generatedAt": "2026-06-07T17:22:57.440Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -268,7 +268,7 @@
       "url": "https://ai-sdk.dev/docs"
     },
     {
-      "finalUrl": "https://ai.google.dev/gemini-api/docs",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=ja",
       "ok": true,
       "references": [
         {
@@ -347,7 +347,6 @@
       "url": "https://docs.anthropic.com"
     },
     {
-      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/home",
       "ok": true,
       "references": [
@@ -370,7 +369,6 @@
       "url": "https://docs.anthropic.com/"
     },
     {
-      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
       "ok": true,
       "references": [
@@ -2395,7 +2393,7 @@
       "url": "https://ai-sdk.dev/docs"
     },
     {
-      "finalUrl": "https://ai.google.dev/gemini-api/docs",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=ja",
       "ok": true,
       "references": [
         {
@@ -2540,7 +2538,6 @@
       "url": "https://docs.anthropic.com"
     },
     {
-      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/home",
       "ok": true,
       "references": [
@@ -2563,7 +2560,6 @@
       "url": "https://docs.anthropic.com/"
     },
     {
-      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
       "ok": true,
       "references": [

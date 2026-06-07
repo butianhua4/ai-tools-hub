@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T17:14:50.981Z",
+  "generatedAt": "2026-06-07T17:23:16.423Z",
   "guardrails": {
     "autoPublish": false,
     "note": "Digest is read-only. It summarizes local automation reports and does not use traffic, impressions, or Search Console performance data."
@@ -290,7 +290,7 @@
         "url": "https://ai-sdk.dev/docs"
       },
       {
-        "finalUrl": "https://ai.google.dev/gemini-api/docs",
+        "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=ja",
         "ok": true,
         "references": [
           {
@@ -369,7 +369,6 @@
         "url": "https://docs.anthropic.com"
       },
       {
-        "error": "TimeoutError",
         "finalUrl": "https://platform.claude.com/docs/en/home",
         "ok": true,
         "references": [
@@ -392,7 +391,6 @@
         "url": "https://docs.anthropic.com/"
       },
       {
-        "error": "TimeoutError",
         "finalUrl": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
         "ok": true,
         "references": [
@@ -21769,7 +21767,7 @@
     "filesScanned": 159,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 2048
+    "watchMentions": 2051
   },
   "publicSurfaceInventory": {
     "broadCoverage": [
@@ -33895,7 +33893,13 @@
         }
       ],
       "topic": "Agent 部署、工具调用和记忆"
-    }
+    },
+    "seoWarningDraftItems": 8,
+    "seoWarningHumanGatedItems": 16,
+    "seoWarningItems": 16,
+    "seoWarningPublicItems": 8,
+    "seoWarningTopItems": 8,
+    "seoWarningUnsafeItems": 0
   },
   "nextActions": [
     "Manually review the three recommended drafts in docs/review-preflight.md.",

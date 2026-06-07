@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T17:14:32.193Z",
+  "generatedAt": "2026-06-07T17:22:57.961Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "sourceHealthGeneratedAt": "2026-06-07T17:14:31.687Z",
+    "sourceHealthGeneratedAt": "2026-06-07T17:22:57.440Z",
     "sourceHealthGuardrails": {
       "autoEditArticles": false,
       "autoMarkReview": false,
@@ -2142,13 +2142,11 @@
         "客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断",
         "电商 AI 提示词模板：商品标题、详情页、评价分析和售后回复"
       ],
-      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
       "humanChecklist": [
         "Review URL: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview.",
         "Review final URL: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview.",
         "HTTP status observed by automation: 200.",
-        "Automation error observed: TimeoutError.",
         "Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.",
         "If the final URL is the canonical destination, update the source target during human review.",
         "If the redirect lands on a generic, tracked, or unrelated page, replace it with a more specific official source.",
@@ -2230,10 +2228,10 @@
         "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
         "Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型"
       ],
-      "finalUrl": "https://ai.google.dev/gemini-api/docs",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=ja",
       "humanChecklist": [
         "Review URL: https://ai.google.dev/docs.",
-        "Review final URL: https://ai.google.dev/gemini-api/docs.",
+        "Review final URL: https://ai.google.dev/gemini-api/docs?hl=ja.",
         "HTTP status observed by automation: 200.",
         "Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.",
         "If the final URL is the canonical destination, update the source target during human review.",
@@ -2306,13 +2304,11 @@
       "affectedTitles": [
         "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急"
       ],
-      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/home",
       "humanChecklist": [
         "Review URL: https://docs.anthropic.com/.",
         "Review final URL: https://platform.claude.com/docs/en/home.",
         "HTTP status observed by automation: 200.",
-        "Automation error observed: TimeoutError.",
         "Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.",
         "If the final URL is the canonical destination, update the source target during human review.",
         "If the redirect lands on a generic, tracked, or unrelated page, replace it with a more specific official source.",
