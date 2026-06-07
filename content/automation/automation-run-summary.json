@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T03:16:42.148Z",
+  "generatedAt": "2026-06-07T03:28:30.769Z",
   "failures": [],
   "ok": true,
   "tasks": [
@@ -59,6 +59,7 @@
     "Generate autopilot broad publish waves",
     "Generate autopilot broad wave optimization",
     "Generate broad first coverage launch pack",
+    "Generate broad first coverage readiness matrix",
     "Generate review coverage report",
     "Generate manual review workbench",
     "Run searchability check",

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-07T03:17:58.611Z",
+  "generatedAt": "2026-06-07T03:29:45.559Z",
   "ok": true,
   "summary": {
-    "checks": 119,
+    "checks": 121,
     "failed": 0,
-    "passed": 119
+    "passed": 121
   },
   "failed": [],
   "checks": [
@@ -90,7 +90,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=137, unsafeClaims=0, watchMentions=1376"
+      "detail": "filesScanned=139, unsafeClaims=0, watchMentions=1448"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -281,6 +281,16 @@
       "name": "broad first coverage launch pack preserves human review boundaries",
       "ok": true,
       "detail": "safe=8, commands=8, sources=8, checks=8"
+    },
+    {
+      "name": "broad first coverage readiness matrix is read-only and covers launch pack",
+      "ok": true,
+      "detail": "items=8, unique=8, blocking=0, unsafe=0"
+    },
+    {
+      "name": "broad first coverage readiness matrix has review evidence and command boundaries",
+      "ok": true,
+      "detail": "commands=8, preflight=3, source=5, links=5"
     },
     {
       "name": "review optimization brief is read-only and covers ready action-board tasks",

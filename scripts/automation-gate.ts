@@ -903,6 +903,47 @@ async function main() {
       zeroPublicClusters: number;
     };
   }>("content/automation/broad-first-coverage-launch-pack.json");
+  const broadFirstCoverageReadinessMatrix = readJson<{
+    guardrails: {
+      autoCreateArticles: boolean;
+      autoEditArticles: boolean;
+      autoMarkReview: boolean;
+      autoPublish: boolean;
+      trafficClaim: string;
+    };
+    items?: Array<{
+      blockingIssues?: unknown[];
+      commandBoundary?: { markReviewAfterHumanApproval?: string; publishConfirm?: string; publishDryRunAfterReview?: string };
+      launchReady?: boolean;
+      readiness?: {
+        hasPublicLinkPath?: boolean;
+        integrityReady?: boolean;
+        preflightReady?: boolean;
+        schemaReady?: boolean;
+        snippetReady?: boolean;
+        sourceReady?: boolean;
+      };
+      reviewActions?: unknown[];
+      warningIssues?: unknown[];
+    }>;
+    summary: {
+      blockingItems: number;
+      commandBoundaries: number;
+      firstCoverageItems: number;
+      integrityReadyItems: number;
+      itemsWithPublicLinkPath: number;
+      launchPackItems: number;
+      preflightReadyItems: number;
+      schemaReadyItems: number;
+      snippetReadyItems: number;
+      sourceReadyItems: number;
+      trafficDataAvailable: boolean;
+      uniqueFiles: number;
+      unsafeItems: number;
+      warningItems: number;
+      zeroPublicClusters: number;
+    };
+  }>("content/automation/broad-first-coverage-readiness-matrix.json");
   const reviewOptimizationBrief = readJson<{
     briefs?: Array<{
       file: string;
@@ -1753,6 +1794,44 @@ async function main() {
           ),
         ),
       detail: `safe=${broadFirstCoverageLaunchPack.summary.safeDraftItems}, commands=${broadFirstCoverageLaunchPack.summary.commandBoundaries}, sources=${broadFirstCoverageLaunchPack.summary.itemsWithSourceTargets}, checks=${broadFirstCoverageLaunchPack.summary.itemsWithFactCheckChecklist}`,
+    },
+    {
+      name: "broad first coverage readiness matrix is read-only and covers launch pack",
+      ok:
+        broadFirstCoverageReadinessMatrix.guardrails.autoCreateArticles === false &&
+        broadFirstCoverageReadinessMatrix.guardrails.autoEditArticles === false &&
+        broadFirstCoverageReadinessMatrix.guardrails.autoMarkReview === false &&
+        broadFirstCoverageReadinessMatrix.guardrails.autoPublish === false &&
+        broadFirstCoverageReadinessMatrix.guardrails.trafficClaim === "not-included" &&
+        broadFirstCoverageReadinessMatrix.summary.launchPackItems === broadFirstCoverageLaunchPack.summary.clustersSelected &&
+        broadFirstCoverageReadinessMatrix.summary.firstCoverageItems === broadFirstCoverageLaunchPack.summary.clustersSelected &&
+        broadFirstCoverageReadinessMatrix.summary.zeroPublicClusters === broadFirstCoverageLaunchPack.summary.zeroPublicClusters &&
+        broadFirstCoverageReadinessMatrix.summary.uniqueFiles === broadFirstCoverageReadinessMatrix.summary.firstCoverageItems &&
+        broadFirstCoverageReadinessMatrix.summary.unsafeItems === 0 &&
+        broadFirstCoverageReadinessMatrix.summary.trafficDataAvailable === false,
+      detail: `items=${broadFirstCoverageReadinessMatrix.summary.firstCoverageItems}, unique=${broadFirstCoverageReadinessMatrix.summary.uniqueFiles}, blocking=${broadFirstCoverageReadinessMatrix.summary.blockingItems}, unsafe=${broadFirstCoverageReadinessMatrix.summary.unsafeItems}`,
+    },
+    {
+      name: "broad first coverage readiness matrix has review evidence and command boundaries",
+      ok:
+        broadFirstCoverageReadinessMatrix.summary.commandBoundaries === broadFirstCoverageReadinessMatrix.summary.firstCoverageItems &&
+        broadFirstCoverageReadinessMatrix.summary.snippetReadyItems === broadFirstCoverageReadinessMatrix.summary.firstCoverageItems &&
+        broadFirstCoverageReadinessMatrix.summary.schemaReadyItems === broadFirstCoverageReadinessMatrix.summary.firstCoverageItems &&
+        broadFirstCoverageReadinessMatrix.summary.integrityReadyItems === broadFirstCoverageReadinessMatrix.summary.firstCoverageItems &&
+        Boolean(
+          broadFirstCoverageReadinessMatrix.items?.every(
+            (item) =>
+              item.launchReady === true &&
+              (item.reviewActions?.length || 0) >= 6 &&
+              item.readiness?.snippetReady === true &&
+              item.readiness?.schemaReady === true &&
+              item.readiness?.integrityReady === true &&
+              item.commandBoundary?.markReviewAfterHumanApproval?.includes("--confirm-human") &&
+              !item.commandBoundary?.publishDryRunAfterReview?.includes("--confirm") &&
+              item.commandBoundary?.publishConfirm === "not-included",
+          ),
+        ),
+      detail: `commands=${broadFirstCoverageReadinessMatrix.summary.commandBoundaries}, preflight=${broadFirstCoverageReadinessMatrix.summary.preflightReadyItems}, source=${broadFirstCoverageReadinessMatrix.summary.sourceReadyItems}, links=${broadFirstCoverageReadinessMatrix.summary.itemsWithPublicLinkPath}`,
     },
     {
       name: "review optimization brief is read-only and covers ready action-board tasks",

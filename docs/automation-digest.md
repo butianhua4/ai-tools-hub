@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T03:17:59.152Z
+Generated at: 2026-06-07T03:29:46.042Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -53,7 +53,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=it
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
 - https://docs.dify.ai -> https://docs.dify.ai/en/use-dify/getting-started/introduction
@@ -499,6 +499,44 @@ Unsafe first coverage launch items:
 | AI API 接入、限流、成本和多模型路由 | `npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human` | `npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx` | not-included |
 | LLM 观测、评测、日志和上线后质量 | `npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human` | `npm run publish:articles -- --file=content/blog/agent-tool-permission-safety-guide.mdx` | not-included |
 
+## Broad First Coverage Readiness Matrix
+
+- First coverage items: 8
+- Launch pack items: 8
+- Unique files: 8
+- Preflight ready items: 3
+- Source ready items: 5
+- Snippet ready items: 8
+- Schema ready items: 8
+- Items with public link path: 5
+- Query ready items: 8
+- Command boundaries: 8
+- Blocking items: 0
+- Warning items: 8
+- Unsafe items: 0
+
+| Score | Preflight | Source | Snippet | Schema | Link | Query | Freshness | Warnings | Cluster | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 66 | false | true | true | true | true | true | n/a | 2 | 开源大模型部署：Ollama、vLLM、TGI、RunPod | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
+| 66 | true | true | true | true | true | true | true | 4 | Agent 部署、工具调用和生产安全 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 40 | false | false | true | true | false | n/a | n/a | 5 | Agent 记忆：短期记忆、长期记忆、RAG、Postgres | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
+| 62 | false | true | true | true | true | true | true | 4 | RAG、知识库、向量数据库和引用溯源 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| 66 | true | true | true | true | true | true | true | 4 | 全行业 AI 提示词和工作流模板 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| 40 | false | false | true | true | false | n/a | n/a | 5 | Dify、n8n、Coze、Flowise、MCP 自动化部署 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
+| 60 | true | true | true | true | true | n/a | true | 5 | AI API 接入、限流、成本和多模型路由 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
+| 40 | false | false | true | true | false | n/a | n/a | 5 | LLM 观测、评测、日志和上线后质量 | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
+
+| Cluster | Exact seeds | Exact queries | Source targets | Reachable sources | Review actions |
+| --- | --- | --- | --- | --- | --- |
+| 开源大模型部署：Ollama、vLLM、TGI、RunPod | n/a | 2 | 7 | 7 | 11 |
+| Agent 部署、工具调用和生产安全 | 0 | 4 | 10 | 10 | 12 |
+| Agent 记忆：短期记忆、长期记忆、RAG、Postgres | n/a | n/a | 3 | n/a | 14 |
+| RAG、知识库、向量数据库和引用溯源 | n/a | 0 | 9 | 9 | 14 |
+| 全行业 AI 提示词和工作流模板 | 0 | 4 | 8 | 8 | 12 |
+| Dify、n8n、Coze、Flowise、MCP 自动化部署 | n/a | n/a | 3 | n/a | 14 |
+| AI API 接入、限流、成本和多模型路由 | 0 | n/a | 12 | 12 | 14 |
+| LLM 观测、评测、日志和上线后质量 | n/a | n/a | 3 | n/a | 14 |
+
 ## Review Optimization Brief
 
 - Briefs: 11
@@ -694,8 +732,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 137
-- Traffic claim watch mentions: 1376
+- Traffic claim files scanned: 139
+- Traffic claim watch mentions: 1448
 
 ## Public Surface Inventory
 
@@ -1109,7 +1147,7 @@ Public categories:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-07T03:17:46.305Z
+- Latest check: 2026-06-07T03:29:33.434Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85
@@ -1148,6 +1186,7 @@ Public categories:
 - Use docs/autopilot-broad-publish-waves.md to review 1-3 high-demand AI drafts per human-approved batch.
 - Use docs/autopilot-broad-wave-optimization.md to apply SEO snippet, opening, internal-link, and risk-language improvements during human review.
 - Use docs/broad-first-coverage-launch-pack.md to review one first-coverage candidate for each broad AI cluster with zero public coverage.
+- Use docs/broad-first-coverage-readiness-matrix.md to resolve source, snippet, schema, link, query, and freshness warnings for the first-coverage candidates.
 - Use docs/review-coverage-report.md to inspect source, freshness, risk, and approval checks for all planned batches.
 - If approved by a human, run mark:review with --confirm-human for approved files only.
 - Publish only status=review articles in a 1-3 article batch after a dry-run.

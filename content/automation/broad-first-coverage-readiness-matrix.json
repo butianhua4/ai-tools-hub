@@ -1,0 +1,1010 @@
+{
+  "generatedAt": "2026-06-07T03:29:44.957Z",
+  "guardrails": {
+    "autoCreateArticles": false,
+    "autoEditArticles": false,
+    "autoMarkReview": false,
+    "autoPublish": false,
+    "note": "Read-only readiness matrix for first-coverage launch candidates. It cross-checks existing automation reports and never edits articles or changes review/publish state.",
+    "stopBefore": "Stop before mark:review and publish. Human approval is required for every file.",
+    "trafficClaim": "not-included"
+  },
+  "sourceEvidence": {
+    "launchPackGeneratedAt": "2026-06-07T03:29:44.480Z",
+    "launchPackGuardrails": {
+      "autoCreateArticles": false,
+      "autoEditArticles": false,
+      "autoMarkReview": false,
+      "autoPublish": false,
+      "note": "Read-only first coverage launch pack. It selects one unique human-review candidate for each broad AI cluster with zero public coverage and never edits articles or changes review/publish state.",
+      "stopBefore": "Stop before mark:review and publish. Human approval is required for every selected file.",
+      "trafficClaim": "not-included"
+    },
+    "launchPackSummary": {
+      "clustersSelected": 8,
+      "commandBoundaries": 8,
+      "firstCoverageTarget": 8,
+      "humanReviewRequiredItems": 8,
+      "itemsWithContentAngles": 8,
+      "itemsWithFactCheckChecklist": 8,
+      "itemsWithReviewFocus": 8,
+      "itemsWithSearchQueries": 8,
+      "itemsWithSourceTargets": 8,
+      "publicArticlesBeforeLaunch": 15,
+      "safeDraftItems": 8,
+      "trafficDataAvailable": false,
+      "uniqueFiles": 8,
+      "unsafeItems": 0,
+      "zeroPublicClusters": 8
+    },
+    "reportsUsed": [
+      "content/automation/public-coverage-gap-preflight.json",
+      "content/automation/source-target-health-audit.json",
+      "content/automation/search-snippet-readiness-audit.json",
+      "content/automation/structured-data-readiness-audit.json",
+      "content/automation/internal-link-opportunity-audit.json",
+      "content/automation/search-query-match-audit.json",
+      "content/automation/review-freshness-brief.json",
+      "content/automation/content-integrity-audit.json"
+    ],
+    "trafficNote": "This matrix does not use measured traffic, rankings, impressions, clicks, or revenue data."
+  },
+  "summary": {
+    "blockingItems": 0,
+    "commandBoundaries": 8,
+    "firstCoverageItems": 8,
+    "freshnessReadyItems": 8,
+    "integrityReadyItems": 8,
+    "itemsWithPublicLinkPath": 5,
+    "launchPackItems": 8,
+    "preflightReadyItems": 3,
+    "queryReadyItems": 8,
+    "schemaReadyItems": 8,
+    "snippetReadyItems": 8,
+    "sourceReadyItems": 5,
+    "trafficDataAvailable": false,
+    "uniqueFiles": 8,
+    "unsafeItems": 0,
+    "warningItems": 8,
+    "zeroPublicClusters": 8
+  },
+  "blockingItems": [],
+  "warningItems": [
+    {
+      "blockingIssues": [],
+      "cluster": "开源大模型部署：Ollama、vLLM、TGI、RunPod",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
+      "gapScore": 321,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": null,
+        "hasPublicLinkPath": true,
+        "integrityReady": true,
+        "preflightReady": false,
+        "queryReady": true,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": true
+      },
+      "readinessScore": 66,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Choose one suggested public internal link during review or document why it should remain unlinked.",
+        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
+        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
+        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": 2,
+        "exactSeedMatches": null,
+        "matchedFamilies": 7,
+        "searchQueries": 5,
+        "seedFamilyMatches": null
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 10,
+        "reachableSources": 7,
+        "sourceTargets": 7
+      },
+      "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查",
+      "warningIssues": [
+        "no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval",
+        "no review-freshness record; rely on launch fact-check checklist"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "Agent 部署、工具调用和生产安全",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "gapScore": 317,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": true,
+        "hasPublicLinkPath": true,
+        "integrityReady": true,
+        "preflightReady": true,
+        "queryReady": true,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": true
+      },
+      "readinessScore": 66,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Choose one suggested public internal link during review or document why it should remain unlinked.",
+        "Decide whether title, description, or opening copy should naturally include one search-seed phrase.",
+        "Resolve or explicitly accept warning: no exact search-seed phrase appears in title, description, or body.",
+        "Resolve or explicitly accept warning: article currently has no links to published articles.",
+        "Resolve or explicitly accept warning: theme still has missing subtopics: tool calling, human review, permissions, logs.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": 4,
+        "exactSeedMatches": 0,
+        "matchedFamilies": 7,
+        "searchQueries": 5,
+        "seedFamilyMatches": 4
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 8,
+        "reachableSources": 10,
+        "sourceTargets": 10
+      },
+      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+      "warningIssues": [
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: tool calling, human review, permissions, logs",
+        "candidate has no current links to public articles; use suggested public link during review"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "Agent 记忆：短期记忆、长期记忆、RAG、Postgres",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
+      "gapScore": 315,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": null,
+        "hasPublicLinkPath": false,
+        "integrityReady": true,
+        "preflightReady": false,
+        "queryReady": null,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": false
+      },
+      "readinessScore": 40,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Add or replace official source targets before manual approval.",
+        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
+        "Resolve or explicitly accept warning: source-health report does not show a reachable source for this file; verify launch-pack source targets manually.",
+        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
+        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
+        "Resolve or explicitly accept warning: no search-query-match record; rely on launch search queries and public-gap seed evidence.",
+        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": null,
+        "exactSeedMatches": null,
+        "matchedFamilies": null,
+        "searchQueries": 5,
+        "seedFamilyMatches": null
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 3,
+        "reachableSources": null,
+        "sourceTargets": null
+      },
+      "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储",
+      "warningIssues": [
+        "source-health report does not show a reachable source for this file; verify launch-pack source targets manually",
+        "no public internal-link suggestion found in the internal-link audit; add or document one during review",
+        "no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval",
+        "no search-query-match record; rely on launch search queries and public-gap seed evidence",
+        "no review-freshness record; rely on launch fact-check checklist"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "RAG、知识库、向量数据库和引用溯源",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "gapScore": 313,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": true,
+        "hasPublicLinkPath": true,
+        "integrityReady": true,
+        "preflightReady": false,
+        "queryReady": true,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": true
+      },
+      "readinessScore": 62,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Choose one suggested public internal link during review or document why it should remain unlinked.",
+        "Improve exact query alignment without keyword stuffing.",
+        "Review snippet warnings for title, description, slug, and primary keyword alignment.",
+        "Resolve or explicitly accept warning: description may be thin for search snippets.",
+        "Resolve or explicitly accept warning: primary keyword is not an exact title substring.",
+        "Resolve or explicitly accept warning: few exact query variant matches in article text.",
+        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": 0,
+        "exactSeedMatches": null,
+        "matchedFamilies": 7,
+        "searchQueries": 5,
+        "seedFamilyMatches": null
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 10,
+        "reachableSources": 9,
+        "sourceTargets": 9
+      },
+      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+      "warningIssues": [
+        "description may be thin for search snippets",
+        "primary keyword is not an exact title substring",
+        "few exact query variant matches in article text",
+        "no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "全行业 AI 提示词和工作流模板",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "gapScore": 311,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": true,
+        "hasPublicLinkPath": true,
+        "integrityReady": true,
+        "preflightReady": true,
+        "queryReady": true,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": true
+      },
+      "readinessScore": 66,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Choose one suggested public internal link during review or document why it should remain unlinked.",
+        "Decide whether title, description, or opening copy should naturally include one search-seed phrase.",
+        "Resolve or explicitly accept warning: no exact search-seed phrase appears in title, description, or body.",
+        "Resolve or explicitly accept warning: article currently has no links to published articles.",
+        "Resolve or explicitly accept warning: theme still has missing subtopics: customer service.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": 4,
+        "exactSeedMatches": 0,
+        "matchedFamilies": 7,
+        "searchQueries": 6,
+        "seedFamilyMatches": 3
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 8,
+        "reachableSources": 8,
+        "sourceTargets": 8
+      },
+      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+      "warningIssues": [
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: customer service",
+        "candidate has no current links to public articles; use suggested public link during review"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "Dify、n8n、Coze、Flowise、MCP 自动化部署",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/mcp-server-deployment-security-checklist.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
+      "gapScore": 307,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": null,
+        "hasPublicLinkPath": false,
+        "integrityReady": true,
+        "preflightReady": false,
+        "queryReady": null,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": false
+      },
+      "readinessScore": 40,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Add or replace official source targets before manual approval.",
+        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
+        "Resolve or explicitly accept warning: source-health report does not show a reachable source for this file; verify launch-pack source targets manually.",
+        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
+        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
+        "Resolve or explicitly accept warning: no search-query-match record; rely on launch search queries and public-gap seed evidence.",
+        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": null,
+        "exactSeedMatches": null,
+        "matchedFamilies": null,
+        "searchQueries": 5,
+        "seedFamilyMatches": null
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 3,
+        "reachableSources": null,
+        "sourceTargets": null
+      },
+      "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单",
+      "warningIssues": [
+        "source-health report does not show a reachable source for this file; verify launch-pack source targets manually",
+        "no public internal-link suggestion found in the internal-link audit; add or document one during review",
+        "no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval",
+        "no search-query-match record; rely on launch search queries and public-gap seed evidence",
+        "no review-freshness record; rely on launch fact-check checklist"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "AI API 接入、限流、成本和多模型路由",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+      "gapScore": 293,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": true,
+        "hasPublicLinkPath": true,
+        "integrityReady": true,
+        "preflightReady": true,
+        "queryReady": null,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": true
+      },
+      "readinessScore": 60,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Choose one suggested public internal link during review or document why it should remain unlinked.",
+        "Decide whether title, description, or opening copy should naturally include one search-seed phrase.",
+        "Review snippet warnings for title, description, slug, and primary keyword alignment.",
+        "Resolve or explicitly accept warning: primary keyword is not an exact title substring.",
+        "Resolve or explicitly accept warning: no exact search-seed phrase appears in title, description, or body.",
+        "Resolve or explicitly accept warning: few search-seed token families appear in article text.",
+        "Resolve or explicitly accept warning: theme still has missing subtopics: logs, prompt injection, cost tracking.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": null,
+        "exactSeedMatches": 0,
+        "matchedFamilies": null,
+        "searchQueries": 5,
+        "seedFamilyMatches": 1
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 12,
+        "reachableSources": 12,
+        "sourceTargets": 12
+      },
+      "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
+      "warningIssues": [
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "few search-seed token families appear in article text",
+        "theme still has missing subtopics: logs, prompt injection, cost tracking",
+        "no search-query-match record; rely on launch search queries and public-gap seed evidence"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "LLM 观测、评测、日志和上线后质量",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/agent-tool-permission-safety-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/agent-tool-permission-safety-guide.mdx",
+      "gapScore": 287,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": null,
+        "hasPublicLinkPath": false,
+        "integrityReady": true,
+        "preflightReady": false,
+        "queryReady": null,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": false
+      },
+      "readinessScore": 40,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Add or replace official source targets before manual approval.",
+        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
+        "Resolve or explicitly accept warning: source-health report does not show a reachable source for this file; verify launch-pack source targets manually.",
+        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
+        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
+        "Resolve or explicitly accept warning: no search-query-match record; rely on launch search queries and public-gap seed evidence.",
+        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": null,
+        "exactSeedMatches": null,
+        "matchedFamilies": null,
+        "searchQueries": 5,
+        "seedFamilyMatches": null
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 3,
+        "reachableSources": null,
+        "sourceTargets": null
+      },
+      "title": "Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志",
+      "warningIssues": [
+        "source-health report does not show a reachable source for this file; verify launch-pack source targets manually",
+        "no public internal-link suggestion found in the internal-link audit; add or document one during review",
+        "no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval",
+        "no search-query-match record; rely on launch search queries and public-gap seed evidence",
+        "no review-freshness record; rely on launch fact-check checklist"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "blockingIssues": [],
+      "cluster": "开源大模型部署：Ollama、vLLM、TGI、RunPod",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
+      "gapScore": 321,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": null,
+        "hasPublicLinkPath": true,
+        "integrityReady": true,
+        "preflightReady": false,
+        "queryReady": true,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": true
+      },
+      "readinessScore": 66,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Choose one suggested public internal link during review or document why it should remain unlinked.",
+        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
+        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
+        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": 2,
+        "exactSeedMatches": null,
+        "matchedFamilies": 7,
+        "searchQueries": 5,
+        "seedFamilyMatches": null
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 10,
+        "reachableSources": 7,
+        "sourceTargets": 7
+      },
+      "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查",
+      "warningIssues": [
+        "no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval",
+        "no review-freshness record; rely on launch fact-check checklist"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "Agent 部署、工具调用和生产安全",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "gapScore": 317,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": true,
+        "hasPublicLinkPath": true,
+        "integrityReady": true,
+        "preflightReady": true,
+        "queryReady": true,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": true
+      },
+      "readinessScore": 66,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Choose one suggested public internal link during review or document why it should remain unlinked.",
+        "Decide whether title, description, or opening copy should naturally include one search-seed phrase.",
+        "Resolve or explicitly accept warning: no exact search-seed phrase appears in title, description, or body.",
+        "Resolve or explicitly accept warning: article currently has no links to published articles.",
+        "Resolve or explicitly accept warning: theme still has missing subtopics: tool calling, human review, permissions, logs.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": 4,
+        "exactSeedMatches": 0,
+        "matchedFamilies": 7,
+        "searchQueries": 5,
+        "seedFamilyMatches": 4
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 8,
+        "reachableSources": 10,
+        "sourceTargets": 10
+      },
+      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+      "warningIssues": [
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: tool calling, human review, permissions, logs",
+        "candidate has no current links to public articles; use suggested public link during review"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "Agent 记忆：短期记忆、长期记忆、RAG、Postgres",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
+      "gapScore": 315,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": null,
+        "hasPublicLinkPath": false,
+        "integrityReady": true,
+        "preflightReady": false,
+        "queryReady": null,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": false
+      },
+      "readinessScore": 40,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Add or replace official source targets before manual approval.",
+        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
+        "Resolve or explicitly accept warning: source-health report does not show a reachable source for this file; verify launch-pack source targets manually.",
+        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
+        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
+        "Resolve or explicitly accept warning: no search-query-match record; rely on launch search queries and public-gap seed evidence.",
+        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": null,
+        "exactSeedMatches": null,
+        "matchedFamilies": null,
+        "searchQueries": 5,
+        "seedFamilyMatches": null
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 3,
+        "reachableSources": null,
+        "sourceTargets": null
+      },
+      "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储",
+      "warningIssues": [
+        "source-health report does not show a reachable source for this file; verify launch-pack source targets manually",
+        "no public internal-link suggestion found in the internal-link audit; add or document one during review",
+        "no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval",
+        "no search-query-match record; rely on launch search queries and public-gap seed evidence",
+        "no review-freshness record; rely on launch fact-check checklist"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "RAG、知识库、向量数据库和引用溯源",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "gapScore": 313,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": true,
+        "hasPublicLinkPath": true,
+        "integrityReady": true,
+        "preflightReady": false,
+        "queryReady": true,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": true
+      },
+      "readinessScore": 62,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Choose one suggested public internal link during review or document why it should remain unlinked.",
+        "Improve exact query alignment without keyword stuffing.",
+        "Review snippet warnings for title, description, slug, and primary keyword alignment.",
+        "Resolve or explicitly accept warning: description may be thin for search snippets.",
+        "Resolve or explicitly accept warning: primary keyword is not an exact title substring.",
+        "Resolve or explicitly accept warning: few exact query variant matches in article text.",
+        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": 0,
+        "exactSeedMatches": null,
+        "matchedFamilies": 7,
+        "searchQueries": 5,
+        "seedFamilyMatches": null
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 10,
+        "reachableSources": 9,
+        "sourceTargets": 9
+      },
+      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+      "warningIssues": [
+        "description may be thin for search snippets",
+        "primary keyword is not an exact title substring",
+        "few exact query variant matches in article text",
+        "no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "全行业 AI 提示词和工作流模板",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "gapScore": 311,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": true,
+        "hasPublicLinkPath": true,
+        "integrityReady": true,
+        "preflightReady": true,
+        "queryReady": true,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": true
+      },
+      "readinessScore": 66,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Choose one suggested public internal link during review or document why it should remain unlinked.",
+        "Decide whether title, description, or opening copy should naturally include one search-seed phrase.",
+        "Resolve or explicitly accept warning: no exact search-seed phrase appears in title, description, or body.",
+        "Resolve or explicitly accept warning: article currently has no links to published articles.",
+        "Resolve or explicitly accept warning: theme still has missing subtopics: customer service.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": 4,
+        "exactSeedMatches": 0,
+        "matchedFamilies": 7,
+        "searchQueries": 6,
+        "seedFamilyMatches": 3
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 8,
+        "reachableSources": 8,
+        "sourceTargets": 8
+      },
+      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+      "warningIssues": [
+        "no exact search-seed phrase appears in title, description, or body",
+        "article currently has no links to published articles",
+        "theme still has missing subtopics: customer service",
+        "candidate has no current links to public articles; use suggested public link during review"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "Dify、n8n、Coze、Flowise、MCP 自动化部署",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/mcp-server-deployment-security-checklist.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
+      "gapScore": 307,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": null,
+        "hasPublicLinkPath": false,
+        "integrityReady": true,
+        "preflightReady": false,
+        "queryReady": null,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": false
+      },
+      "readinessScore": 40,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Add or replace official source targets before manual approval.",
+        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
+        "Resolve or explicitly accept warning: source-health report does not show a reachable source for this file; verify launch-pack source targets manually.",
+        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
+        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
+        "Resolve or explicitly accept warning: no search-query-match record; rely on launch search queries and public-gap seed evidence.",
+        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": null,
+        "exactSeedMatches": null,
+        "matchedFamilies": null,
+        "searchQueries": 5,
+        "seedFamilyMatches": null
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 3,
+        "reachableSources": null,
+        "sourceTargets": null
+      },
+      "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单",
+      "warningIssues": [
+        "source-health report does not show a reachable source for this file; verify launch-pack source targets manually",
+        "no public internal-link suggestion found in the internal-link audit; add or document one during review",
+        "no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval",
+        "no search-query-match record; rely on launch search queries and public-gap seed evidence",
+        "no review-freshness record; rely on launch fact-check checklist"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "AI API 接入、限流、成本和多模型路由",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+      "gapScore": 293,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": true,
+        "hasPublicLinkPath": true,
+        "integrityReady": true,
+        "preflightReady": true,
+        "queryReady": null,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": true
+      },
+      "readinessScore": 60,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Choose one suggested public internal link during review or document why it should remain unlinked.",
+        "Decide whether title, description, or opening copy should naturally include one search-seed phrase.",
+        "Review snippet warnings for title, description, slug, and primary keyword alignment.",
+        "Resolve or explicitly accept warning: primary keyword is not an exact title substring.",
+        "Resolve or explicitly accept warning: no exact search-seed phrase appears in title, description, or body.",
+        "Resolve or explicitly accept warning: few search-seed token families appear in article text.",
+        "Resolve or explicitly accept warning: theme still has missing subtopics: logs, prompt injection, cost tracking.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": null,
+        "exactSeedMatches": 0,
+        "matchedFamilies": null,
+        "searchQueries": 5,
+        "seedFamilyMatches": 1
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 12,
+        "reachableSources": 12,
+        "sourceTargets": 12
+      },
+      "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
+      "warningIssues": [
+        "primary keyword is not an exact title substring",
+        "no exact search-seed phrase appears in title, description, or body",
+        "few search-seed token families appear in article text",
+        "theme still has missing subtopics: logs, prompt injection, cost tracking",
+        "no search-query-match record; rely on launch search queries and public-gap seed evidence"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "cluster": "LLM 观测、评测、日志和上线后质量",
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/agent-tool-permission-safety-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
+      },
+      "file": "content/blog/agent-tool-permission-safety-guide.mdx",
+      "gapScore": 287,
+      "launchReady": true,
+      "readiness": {
+        "freshnessReady": null,
+        "hasPublicLinkPath": false,
+        "integrityReady": true,
+        "preflightReady": false,
+        "queryReady": null,
+        "schemaReady": true,
+        "snippetReady": true,
+        "sourceReady": false
+      },
+      "readinessScore": 40,
+      "reviewActions": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
+        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
+        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
+        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
+        "Add or replace official source targets before manual approval.",
+        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
+        "Resolve or explicitly accept warning: source-health report does not show a reachable source for this file; verify launch-pack source targets manually.",
+        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
+        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
+        "Resolve or explicitly accept warning: no search-query-match record; rely on launch search queries and public-gap seed evidence.",
+        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
+        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
+        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
+        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
+      ],
+      "searchSignals": {
+        "exactQueryMatches": null,
+        "exactSeedMatches": null,
+        "matchedFamilies": null,
+        "searchQueries": 5,
+        "seedFamilyMatches": null
+      },
+      "sourceSignals": {
+        "launchSourceTargets": 3,
+        "reachableSources": null,
+        "sourceTargets": null
+      },
+      "title": "Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志",
+      "warningIssues": [
+        "source-health report does not show a reachable source for this file; verify launch-pack source targets manually",
+        "no public internal-link suggestion found in the internal-link audit; add or document one during review",
+        "no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval",
+        "no search-query-match record; rely on launch search queries and public-gap seed evidence",
+        "no review-freshness record; rely on launch fact-check checklist"
+      ]
+    }
+  ]
+}
