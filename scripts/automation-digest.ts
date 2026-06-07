@@ -570,6 +570,53 @@ type HumanApprovalClearancePack = {
   };
 };
 
+type NextBatchApprovalRoute = {
+  items: Array<{
+    actions: string[];
+    commandBoundary: {
+      dryRunMarkReview: string;
+      markReviewAfterHumanApproval: string;
+      publishConfirm: string;
+      publishDryRun: string;
+    };
+    file: string;
+    priorityScore: number;
+    queryCoverage: { queryCount?: number } | null;
+    readyForHumanRouteReview: boolean;
+    routeWarnings: string[];
+    seoWarning: unknown | null;
+    sourcePack: { officialSourceTargets?: unknown[] } | null;
+    title: string;
+    unsafeReasons: string[];
+  }>;
+  nextBatch: { batch: number; candidates: number; plannedBatchTopic: string | null; topic: string } | null;
+  publishingBoundary: {
+    currentPublicPublished: number;
+    currentPublishableNow: number;
+    publishConfirmCommandsIncluded: number;
+  };
+  summary: {
+    actionItems: number;
+    batchItems: number;
+    clearanceMatchedItems: number;
+    commandBoundaries: number;
+    copydeskMatchedItems: number;
+    currentPublicPublished: number;
+    currentPublishableNow: number;
+    freshnessMatchedItems: number;
+    itemsReadyForHumanRouteReview: number;
+    plannedBatchCandidates: number;
+    publishConfirmCommandsIncluded: number;
+    queryCoverageMatchedItems: number;
+    queryMatchWarningItems: number;
+    routeWarnings: number;
+    seoWarningItems: number;
+    sourcePackMatchedItems: number;
+    trafficDataAvailable: boolean;
+    unsafeItems: number;
+  };
+};
+
 type ContentIntegrity = {
   summary: {
     allIssueItems: number;
@@ -1890,6 +1937,7 @@ const reports = {
   broadFirstCoverageReadinessMatrix: readJson<BroadFirstCoverageReadinessMatrix>("content/automation/broad-first-coverage-readiness-matrix.json"),
   humanApprovalQueue: readJson<HumanApprovalQueue>("content/automation/human-approval-execution-queue.json"),
   humanApprovalClearancePack: readJson<HumanApprovalClearancePack>("content/automation/human-approval-clearance-pack.json"),
+  nextBatchApprovalRoute: readJson<NextBatchApprovalRoute>("content/automation/next-batch-approval-route.json"),
   reviewOptimizationBrief: readJson<ReviewOptimizationBrief>("content/automation/review-optimization-brief.json"),
   reviewCannibalizationBrief: readJson<ReviewCannibalizationBrief>("content/automation/review-cannibalization-brief.json"),
   reviewCollisionDecisionPack: readJson<ReviewCollisionDecisionPack>("content/automation/review-collision-decision-pack.json"),
@@ -2535,6 +2583,28 @@ const payload = {
     trafficDataAvailable: reports.humanApprovalClearancePack.data?.summary.trafficDataAvailable ?? null,
     unsafeItems: reports.humanApprovalClearancePack.data?.summary.unsafeItems ?? null,
   },
+  nextBatchApprovalRoute: {
+    actionItems: reports.nextBatchApprovalRoute.data?.summary.actionItems ?? null,
+    batchItems: reports.nextBatchApprovalRoute.data?.summary.batchItems ?? null,
+    clearanceMatchedItems: reports.nextBatchApprovalRoute.data?.summary.clearanceMatchedItems ?? null,
+    commandBoundaries: reports.nextBatchApprovalRoute.data?.summary.commandBoundaries ?? null,
+    copydeskMatchedItems: reports.nextBatchApprovalRoute.data?.summary.copydeskMatchedItems ?? null,
+    currentPublicPublished: reports.nextBatchApprovalRoute.data?.summary.currentPublicPublished ?? null,
+    currentPublishableNow: reports.nextBatchApprovalRoute.data?.summary.currentPublishableNow ?? null,
+    freshnessMatchedItems: reports.nextBatchApprovalRoute.data?.summary.freshnessMatchedItems ?? null,
+    itemsReadyForHumanRouteReview: reports.nextBatchApprovalRoute.data?.summary.itemsReadyForHumanRouteReview ?? null,
+    nextBatch: reports.nextBatchApprovalRoute.data?.nextBatch ?? null,
+    plannedBatchCandidates: reports.nextBatchApprovalRoute.data?.summary.plannedBatchCandidates ?? null,
+    publishConfirmCommandsIncluded: reports.nextBatchApprovalRoute.data?.summary.publishConfirmCommandsIncluded ?? null,
+    queryCoverageMatchedItems: reports.nextBatchApprovalRoute.data?.summary.queryCoverageMatchedItems ?? null,
+    queryMatchWarningItems: reports.nextBatchApprovalRoute.data?.summary.queryMatchWarningItems ?? null,
+    routeWarnings: reports.nextBatchApprovalRoute.data?.summary.routeWarnings ?? null,
+    seoWarningItems: reports.nextBatchApprovalRoute.data?.summary.seoWarningItems ?? null,
+    sourcePackMatchedItems: reports.nextBatchApprovalRoute.data?.summary.sourcePackMatchedItems ?? null,
+    top: reports.nextBatchApprovalRoute.data?.items ?? [],
+    trafficDataAvailable: reports.nextBatchApprovalRoute.data?.summary.trafficDataAvailable ?? null,
+    unsafeItems: reports.nextBatchApprovalRoute.data?.summary.unsafeItems ?? null,
+  },
   preflight: {
     checked: reports.preflight.data?.summary.checked ?? null,
     failed: reports.preflight.data?.summary.failed ?? null,
@@ -2973,6 +3043,13 @@ function buildNextActions() {
     reports.humanApprovalClearancePack.data.summary.publishConfirmCommandsIncluded > 0
   ) {
     return ["Open docs/human-approval-clearance-pack.md and resolve approval clearance issues before any mark:review action."];
+  }
+  if (
+    !reports.nextBatchApprovalRoute.data ||
+    reports.nextBatchApprovalRoute.data.summary.unsafeItems > 0 ||
+    reports.nextBatchApprovalRoute.data.summary.publishConfirmCommandsIncluded > 0
+  ) {
+    return ["Open docs/next-batch-approval-route.md and resolve next-batch route issues before any mark:review action."];
   }
   if (!reports.reviewOptimizationBrief.data || reports.reviewOptimizationBrief.data.summary.unsafeCommands > 0) {
     return ["Open docs/review-optimization-brief.md and resolve unsafe or missing copydesk guidance before manual review."];
@@ -3840,6 +3917,33 @@ function toMarkdown(data: typeof payload) {
     ...data.humanApprovalClearancePack.top.map(
       (item) =>
         `| ${item.immediate} | ${item.readyForClearanceReview} | ${item.priorityScore} | ${item.clearanceActions.length} | ${item.sourceDecisions.length} | ${item.hasFailedSourceDecision} | ${Boolean(item.seoWarning)} | ${Boolean(item.copydeskBrief)} | ${item.popularPromptLanes} | ${item.massSearchThemes} | ${item.title} | ${item.file} |`,
+    ),
+    "",
+    "## Next Batch Approval Route",
+    "",
+    `- Next batch: ${data.nextBatchApprovalRoute.nextBatch ? `${data.nextBatchApprovalRoute.nextBatch.batch} - ${data.nextBatchApprovalRoute.nextBatch.topic}` : "missing"}`,
+    `- Batch items: ${data.nextBatchApprovalRoute.batchItems}`,
+    `- Ready for human route review: ${data.nextBatchApprovalRoute.itemsReadyForHumanRouteReview}`,
+    `- Action items: ${data.nextBatchApprovalRoute.actionItems}`,
+    `- Source-pack matched items: ${data.nextBatchApprovalRoute.sourcePackMatchedItems}`,
+    `- Query coverage matched items: ${data.nextBatchApprovalRoute.queryCoverageMatchedItems}`,
+    `- Clearance matched items: ${data.nextBatchApprovalRoute.clearanceMatchedItems}`,
+    `- Copydesk matched items: ${data.nextBatchApprovalRoute.copydeskMatchedItems}`,
+    `- Freshness matched items: ${data.nextBatchApprovalRoute.freshnessMatchedItems}`,
+    `- SEO warning items: ${data.nextBatchApprovalRoute.seoWarningItems}`,
+    `- Query match warning items: ${data.nextBatchApprovalRoute.queryMatchWarningItems}`,
+    `- Route warnings: ${data.nextBatchApprovalRoute.routeWarnings}`,
+    `- Current public published: ${data.nextBatchApprovalRoute.currentPublicPublished}`,
+    `- Current publishable now: ${data.nextBatchApprovalRoute.currentPublishableNow}`,
+    `- Publish confirm commands included: ${data.nextBatchApprovalRoute.publishConfirmCommandsIncluded}`,
+    `- Traffic data available: ${data.nextBatchApprovalRoute.trafficDataAvailable}`,
+    `- Unsafe items: ${data.nextBatchApprovalRoute.unsafeItems}`,
+    "",
+    "| Ready | Score | Actions | Warnings | Sources | Queries | SEO | Publish confirm | Title | File |",
+    "| --- | ---: | ---: | ---: | ---: | ---: | --- | --- | --- | --- |",
+    ...data.nextBatchApprovalRoute.top.map(
+      (item) =>
+        `| ${item.readyForHumanRouteReview} | ${item.priorityScore} | ${item.actions.length} | ${item.routeWarnings.length} | ${item.sourcePack?.officialSourceTargets?.length || 0} | ${item.queryCoverage?.queryCount || 0} | ${Boolean(item.seoWarning)} | ${item.commandBoundary.publishConfirm} | ${item.title} | ${item.file} |`,
     ),
     "",
     "## Review Optimization Brief",

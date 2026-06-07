@@ -627,8 +627,8 @@ async function main() {
   const workbench = readJson<{
     guardrails: { autoMarkReview: boolean; autoPublish: boolean };
     publishReadiness: { currentItemsCovered: number };
-    publishingBoundary: { publishableNow: number };
-    reviewPlan: { nextBatch: unknown };
+    publishingBoundary: { publicPublished: number; publishableNow: number };
+    reviewPlan: { nextBatch: { batch: number; candidates: unknown[]; topic: string } | null };
     seoWarningRemediation?: {
       summary?: {
         humanGatedItems?: number;
@@ -1534,6 +1534,50 @@ async function main() {
       unsafeItems: number;
     };
   }>("content/automation/human-approval-clearance-pack.json");
+  const nextBatchApprovalRoute = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    items?: Array<{
+      actions?: unknown[];
+      commandBoundary?: {
+        dryRunMarkReview?: string;
+        markReviewAfterHumanApproval?: string;
+        publishConfirm?: string;
+        publishDryRun?: string;
+      };
+      clearance?: unknown | null;
+      queryCoverage?: unknown | null;
+      readyForHumanRouteReview?: boolean;
+      routeWarnings?: unknown[];
+      sourcePack?: { officialSourceTargets?: unknown[] } | null;
+      unsafeReasons?: unknown[];
+    }>;
+    nextBatch: { batch: number; candidates: number; plannedBatchTopic: string | null; topic: string } | null;
+    publishingBoundary: {
+      currentPublicPublished: number;
+      currentPublishableNow: number;
+      publishConfirmCommandsIncluded: number;
+    };
+    summary: {
+      actionItems: number;
+      batchItems: number;
+      clearanceMatchedItems: number;
+      commandBoundaries: number;
+      copydeskMatchedItems: number;
+      currentPublicPublished: number;
+      currentPublishableNow: number;
+      freshnessMatchedItems: number;
+      itemsReadyForHumanRouteReview: number;
+      plannedBatchCandidates: number;
+      publishConfirmCommandsIncluded: number;
+      queryCoverageMatchedItems: number;
+      routeWarnings: number;
+      seoWarningItems: number;
+      sourcePackMatchedItems: number;
+      trafficDataAvailable: boolean;
+      unsafeItems: number;
+    };
+    unsafeItems?: unknown[];
+  }>("content/automation/next-batch-approval-route.json");
   const reviewOptimizationBrief = readJson<{
     briefs?: Array<{
       file: string;
@@ -4054,6 +4098,53 @@ async function main() {
         workbench.seoWarningRemediation.summary.unsafeItems === 0 &&
         (workbench.seoWarningRemediation.topItems?.length || 0) > 0,
       detail: `workbenchSeo=${workbench.seoWarningRemediation?.summary?.items ?? "missing"}, remediation=${seoWarningRemediation.summary.items}, unsafe=${workbench.seoWarningRemediation?.summary?.unsafeItems ?? "missing"}`,
+    },
+    {
+      name: "next batch approval route matches manual review workbench",
+      ok:
+        nextBatchApprovalRoute.guardrails.autoEditArticles === false &&
+        nextBatchApprovalRoute.guardrails.autoMarkReview === false &&
+        nextBatchApprovalRoute.guardrails.autoPublish === false &&
+        nextBatchApprovalRoute.guardrails.trafficClaim === "not-included" &&
+        nextBatchApprovalRoute.nextBatch?.batch === workbench.reviewPlan.nextBatch?.batch &&
+        nextBatchApprovalRoute.nextBatch?.candidates === (workbench.reviewPlan.nextBatch?.candidates.length || 0) &&
+        nextBatchApprovalRoute.summary.batchItems === (workbench.reviewPlan.nextBatch?.candidates.length || 0) &&
+        nextBatchApprovalRoute.summary.plannedBatchCandidates === nextBatchApprovalRoute.summary.batchItems &&
+        nextBatchApprovalRoute.summary.currentPublicPublished === workbench.publishingBoundary.publicPublished &&
+        nextBatchApprovalRoute.summary.currentPublishableNow === workbench.publishingBoundary.publishableNow &&
+        nextBatchApprovalRoute.publishingBoundary.currentPublicPublished === projectStatus.articles.publicPublished &&
+        nextBatchApprovalRoute.publishingBoundary.currentPublishableNow === 0 &&
+        nextBatchApprovalRoute.summary.trafficDataAvailable === false,
+      detail: `batch=${nextBatchApprovalRoute.nextBatch?.batch ?? "missing"}, items=${nextBatchApprovalRoute.summary.batchItems}, workbenchItems=${workbench.reviewPlan.nextBatch?.candidates.length || 0}, public=${nextBatchApprovalRoute.summary.currentPublicPublished}, publishable=${nextBatchApprovalRoute.summary.currentPublishableNow}`,
+    },
+    {
+      name: "next batch approval route is human-gated and action-ready",
+      ok:
+        nextBatchApprovalRoute.summary.unsafeItems === 0 &&
+        (nextBatchApprovalRoute.unsafeItems?.length || 0) === 0 &&
+        nextBatchApprovalRoute.summary.itemsReadyForHumanRouteReview === nextBatchApprovalRoute.summary.batchItems &&
+        nextBatchApprovalRoute.summary.commandBoundaries === nextBatchApprovalRoute.summary.batchItems &&
+        nextBatchApprovalRoute.summary.sourcePackMatchedItems === nextBatchApprovalRoute.summary.batchItems &&
+        nextBatchApprovalRoute.summary.queryCoverageMatchedItems === nextBatchApprovalRoute.summary.batchItems &&
+        nextBatchApprovalRoute.summary.actionItems >= nextBatchApprovalRoute.summary.batchItems * 8 &&
+        nextBatchApprovalRoute.summary.publishConfirmCommandsIncluded === 0 &&
+        nextBatchApprovalRoute.publishingBoundary.publishConfirmCommandsIncluded === 0 &&
+        Boolean(
+          nextBatchApprovalRoute.items?.every(
+            (item) =>
+              item.readyForHumanRouteReview === true &&
+              (item.unsafeReasons?.length || 0) === 0 &&
+              (item.actions?.length || 0) >= 8 &&
+              item.commandBoundary?.dryRunMarkReview?.includes("mark:review") &&
+              !item.commandBoundary?.dryRunMarkReview?.includes("--confirm-human") &&
+              item.commandBoundary?.markReviewAfterHumanApproval?.includes("--confirm-human") &&
+              item.commandBoundary?.publishConfirm === "not-included" &&
+              !item.commandBoundary?.publishDryRun?.includes("--confirm") &&
+              Boolean(item.sourcePack) &&
+              Boolean(item.queryCoverage),
+          ),
+        ),
+      detail: `ready=${nextBatchApprovalRoute.summary.itemsReadyForHumanRouteReview}, actions=${nextBatchApprovalRoute.summary.actionItems}, sourcePack=${nextBatchApprovalRoute.summary.sourcePackMatchedItems}, queryCoverage=${nextBatchApprovalRoute.summary.queryCoverageMatchedItems}, warnings=${nextBatchApprovalRoute.summary.routeWarnings}, publishConfirm=${nextBatchApprovalRoute.summary.publishConfirmCommandsIncluded}`,
     },
   ];
 

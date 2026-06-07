@@ -95,6 +95,7 @@ const tasks: Task[] = [
   { title: "Generate human approval clearance pack", args: ["run", "automation:human-approval-clearance"] },
   { title: "Generate review coverage report", args: ["run", "automation:review-coverage"] },
   { title: "Generate manual review workbench", args: ["run", "automation:workbench"] },
+  { title: "Generate next batch approval route", args: ["run", "automation:next-batch-approval-route"] },
   { title: "Run searchability check", args: ["run", "--silent", "searchability:check"], outputFile: "content/automation/searchability-check.json" },
   { title: "Run automation gate", args: ["run", "automation:gate"] },
 ];

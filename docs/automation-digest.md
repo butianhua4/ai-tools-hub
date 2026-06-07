@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T19:07:59.130Z
+Generated at: 2026-06-07T19:22:14.053Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -54,7 +54,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=es-419
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=fa
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/ -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
@@ -849,6 +849,32 @@ Unsafe first coverage launch items:
 | false | true | 68 | 8 | 0 | false | true | false | 0 | 1 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
 | false | true | 60 | 6 | 2 | false | false | false | 0 | 0 | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
 
+## Next Batch Approval Route
+
+- Next batch: 1 - Agent 部署、工具调用和记忆
+- Batch items: 3
+- Ready for human route review: 3
+- Action items: 38
+- Source-pack matched items: 3
+- Query coverage matched items: 3
+- Clearance matched items: 1
+- Copydesk matched items: 2
+- Freshness matched items: 3
+- SEO warning items: 1
+- Query match warning items: 1
+- Route warnings: 4
+- Current public published: 15
+- Current publishable now: 0
+- Publish confirm commands included: 0
+- Traffic data available: false
+- Unsafe items: 0
+
+| Ready | Score | Actions | Warnings | Sources | Queries | SEO | Publish confirm | Title | File |
+| --- | ---: | ---: | ---: | ---: | ---: | --- | --- | --- | --- |
+| true | 778 | 12 | 0 | 6 | 35 | false | not-included | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| true | 750 | 13 | 1 | 8 | 35 | false | not-included | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| true | 722 | 13 | 3 | 10 | 35 | true | not-included | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+
 ## Review Optimization Brief
 
 - Briefs: 16
@@ -1091,8 +1117,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 175
-- Traffic claim watch mentions: 3206
+- Traffic claim files scanned: 177
+- Traffic claim watch mentions: 3227
 
 ## Public Surface Inventory
 
