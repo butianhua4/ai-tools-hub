@@ -1,6 +1,6 @@
 # Search Intent Approval Packet
 
-Generated at: 2026-06-07T04:37:11.105Z
+Generated at: 2026-06-07T06:02:43.686Z
 
 This packet is read-only. It turns the broad search-intent lane map into a focused human approval queue. It does not mark review, publish, or change noindex.
 
