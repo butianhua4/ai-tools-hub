@@ -1,5 +1,5 @@
 # Traffic Claim Guard
-Generated at: 2026-06-07T06:03:22.183Z
+Generated at: 2026-06-07T10:13:46.196Z
 This guard scans operational reports and docs for unsupported claims that real traffic, clicks, impressions, or visits already exist.
 ## Guardrails
 - Auto publish: false
