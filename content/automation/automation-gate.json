@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-07T19:54:12.016Z",
+  "generatedAt": "2026-06-07T20:07:15.336Z",
   "ok": true,
   "summary": {
-    "checks": 167,
+    "checks": 169,
     "failed": 0,
-    "passed": 167
+    "passed": 169
   },
   "failed": [],
   "checks": [
@@ -90,7 +90,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=183, unsafeClaims=0, watchMentions=3382"
+      "detail": "filesScanned=185, unsafeClaims=0, watchMentions=3429"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -441,6 +441,16 @@
       "name": "AI deployment review pack has source-backed human review boundaries",
       "ok": true,
       "detail": "safe=10, sources=10, commands=10"
+    },
+    {
+      "name": "AI deployment sprint board covers deployment tutorials across lanes",
+      "ok": true,
+      "detail": "items=10, lanes=7, modes=7, queries=40, sources=12"
+    },
+    {
+      "name": "AI deployment sprint board keeps deployment work human-gated and publish-safe",
+      "ok": true,
+      "detail": "ready=10, actions=147, unsafe=0, publishConfirm=0"
     },
     {
       "name": "industry prompt coverage has broad reviewable coverage",

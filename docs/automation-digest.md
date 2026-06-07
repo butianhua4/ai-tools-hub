@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T19:54:11.906Z
+Generated at: 2026-06-07T20:07:15.897Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -54,7 +54,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=fa
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/ -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
@@ -1142,8 +1142,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 183
-- Traffic claim watch mentions: 3382
+- Traffic claim files scanned: 185
+- Traffic claim watch mentions: 3429
 
 ## Public Surface Inventory
 
@@ -1350,6 +1350,50 @@ Public categories:
 | true | true | 370 | 0 | 2 | 4 | Dify、n8n、Flowise 和无代码 AI 自动化 | 接单报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
 | true | true | 368 | 0 | 2 | 4 | 模型 API 接入、限流和多模型降级 | AI 部署 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
 | true | true | 367 | 0 | 2 | 4 | LLM Serving、GPU 和托管推理 | AI 基建 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
+
+## AI Deployment Sprint Board
+
+- Items: 10
+- Review pack items: 10
+- Waves: 5
+- Items per wave: 2
+- Ready for deployment sprint: 10
+- High-priority items: 8
+- Deployment lanes: 7
+- Implementation modes: 7
+- Agent items: 1
+- Memory/RAG items: 1
+- Model serving items: 2
+- Local model items: 1
+- Automation platform items: 1
+- API integration items: 1
+- Search queries: 40
+- Source targets: 12
+- Action items: 147
+- Publish confirm commands included: 0
+- Traffic data available: false
+- Unsafe items: 0
+
+| Wave | Ready | High priority | Actions | Lanes | Modes | Files | Search queries |
+| ---: | ---: | ---: | ---: | --- | --- | --- | --- |
+| 1 | 2/2 | 2 | 30 | agent-deployment, rag-memory | managed-web-runtime, retrieval-memory-system | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx | AI Agent 部署教程<br>Agent 工具调用教程<br>AI 工作流部署<br>Agent 人工审核流程 |
+| 2 | 2/2 | 2 | 30 | local-model-serving, workflow-automation | local-runtime, low-code-workflow | content/blog/open-webui-functions-pipelines-deployment-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx | 本地部署大模型教程<br>Ollama 本地部署<br>Open WebUI Ollama 部署<br>本地大模型显存不够 |
+| 3 | 2/2 | 2 | 29 | deployment-ops, model-serving | manual-deployment-review, model-serving-runtime | content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/bentoml-llm-deployment-beginner-guide.mdx | OpenAI API Next.js<br>Claude API 接入<br>Gemini API Next.js<br>API rate limit 怎么办 |
+| 4 | 2/2 | 2 | 28 | deployment-ops | manual-deployment-review | content/blog/mcp-server-deployment-security-checklist.mdx<br>content/blog/enterprise-im-ai-agent-integration-guide.mdx | LLM observability 教程<br>Agent 可观测性<br>RAG 评测<br>promptfoo LLM 评测 |
+| 5 | 2/2 | 0 | 30 | model-serving, api-integration | model-serving-runtime, api-service-integration | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/claude-code-error-debug.mdx | 大模型部署教程<br>AI 应用部署教程<br>OpenAI API 部署教程<br>Vercel AI SDK 部署 |
+
+| Wave | Ready | Score | Lane | Mode | Public | Actions | Queries | Sources | Title | File |
+| ---: | --- | ---: | --- | --- | ---: | ---: | ---: | ---: | --- | --- |
+| 1 | true | 380 | agent-deployment | managed-web-runtime | 0 | 15 | 4 | 3 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 1 | true | 378 | rag-memory | retrieval-memory-system | 0 | 15 | 4 | 4 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| 2 | true | 374 | local-model-serving | local-runtime | 0 | 15 | 4 | 3 | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
+| 2 | true | 370 | workflow-automation | low-code-workflow | 0 | 15 | 4 | 2 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+| 3 | true | 368 | deployment-ops | manual-deployment-review | 0 | 14 | 4 | 2 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
+| 3 | true | 367 | model-serving | model-serving-runtime | 0 | 15 | 4 | 2 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
+| 4 | true | 366 | deployment-ops | manual-deployment-review | 0 | 14 | 4 | 3 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
+| 4 | true | 364 | deployment-ops | manual-deployment-review | 0 | 14 | 4 | 2 | 企业微信、飞书、Slack 怎么接 AI Agent：消息入口、权限和人工接管 | content/blog/enterprise-im-ai-agent-integration-guide.mdx |
+| 5 | true | 274 | model-serving | model-serving-runtime | 2 | 15 | 4 | 3 | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
+| 5 | true | 252 | api-integration | api-service-integration | 2 | 15 | 4 | 2 | 用 Claude Code 排查客户报错时怎么做才稳 | content/blog/claude-code-error-debug.mdx |
 
 ## Broad Search Demand Map
 

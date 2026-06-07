@@ -72,6 +72,7 @@ async function main() {
       sourceTargets?: unknown[];
     }>;
     summary: {
+      deploymentPublicArticles: number;
       duplicateFiles: number;
       items: number;
       itemsWithChecklists: number;
@@ -84,6 +85,46 @@ async function main() {
       uniqueFiles: number;
     };
   }>("content/automation/ai-deployment-review-pack.json");
+  const deploymentSprintBoard = readJson<{
+    guardrails: { autoCreateArticles: boolean; autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    items?: Array<{
+      actionCount?: number;
+      deploymentChecks?: unknown[];
+      deploymentLane?: string;
+      humanReviewActions?: unknown[];
+      publishConfirm?: string;
+      readyForDeploymentSprint?: boolean;
+      searchQueries?: unknown[];
+      sourceTargets?: unknown[];
+      unsafeReasons?: unknown[];
+    }>;
+    summary: {
+      actionItems: number;
+      agentItems: number;
+      apiIntegrationItems: number;
+      automationPlatformItems: number;
+      deploymentPublicArticles: number;
+      highPriorityItems: number;
+      implementationModes: number;
+      items: number;
+      itemsPerWave: number;
+      lanes: number;
+      localModelItems: number;
+      memoryItems: number;
+      modelServingItems: number;
+      publishConfirmCommandsIncluded: number;
+      readyForDeploymentSprint: number;
+      reviewPackItems: number;
+      searchQueries: number;
+      sourceTargets: number;
+      topicsWithoutPublicCoverage: number;
+      trafficDataAvailable: boolean;
+      unsafeItems: number;
+      waves: number;
+    };
+    unsafeItems?: unknown[];
+    waves?: Array<{ actionItems?: number; items?: number; readyItems?: number; unsafeItems?: number }>;
+  }>("content/automation/ai-deployment-sprint-board.json");
   const promptCoverage = readJson<{
     coverage?: Array<{ candidates?: unknown[]; searchQueries?: unknown[]; sourceTargets?: unknown[] }>;
     guardrails: { autoMarkReview: boolean; autoPublish: boolean };
@@ -3151,6 +3192,54 @@ async function main() {
           ),
         ),
       detail: `safe=${deploymentReviewPack.summary.safeDraftItems}, sources=${deploymentReviewPack.summary.itemsWithOfficialSources}, commands=${deploymentReviewPack.summary.itemsWithCommandBoundary}`,
+    },
+    {
+      name: "AI deployment sprint board covers deployment tutorials across lanes",
+      ok:
+        deploymentSprintBoard.guardrails.autoCreateArticles === false &&
+        deploymentSprintBoard.guardrails.autoEditArticles === false &&
+        deploymentSprintBoard.guardrails.autoMarkReview === false &&
+        deploymentSprintBoard.guardrails.autoPublish === false &&
+        deploymentSprintBoard.guardrails.trafficClaim === "not-included" &&
+        deploymentSprintBoard.summary.items === deploymentReviewPack.summary.items &&
+        deploymentSprintBoard.summary.reviewPackItems === deploymentReviewPack.summary.items &&
+        deploymentSprintBoard.summary.deploymentPublicArticles === deploymentReviewPack.summary.deploymentPublicArticles &&
+        deploymentSprintBoard.summary.readyForDeploymentSprint === deploymentSprintBoard.summary.items &&
+        deploymentSprintBoard.summary.lanes >= 5 &&
+        deploymentSprintBoard.summary.implementationModes >= 5 &&
+        deploymentSprintBoard.summary.searchQueries >= 30 &&
+        deploymentSprintBoard.summary.sourceTargets >= 10 &&
+        deploymentSprintBoard.summary.waves >= 5 &&
+        deploymentSprintBoard.summary.trafficDataAvailable === false,
+      detail: `items=${deploymentSprintBoard.summary.items}, lanes=${deploymentSprintBoard.summary.lanes}, modes=${deploymentSprintBoard.summary.implementationModes}, queries=${deploymentSprintBoard.summary.searchQueries}, sources=${deploymentSprintBoard.summary.sourceTargets}`,
+    },
+    {
+      name: "AI deployment sprint board keeps deployment work human-gated and publish-safe",
+      ok:
+        deploymentSprintBoard.summary.unsafeItems === 0 &&
+        (deploymentSprintBoard.unsafeItems?.length || 0) === 0 &&
+        deploymentSprintBoard.summary.publishConfirmCommandsIncluded === 0 &&
+        deploymentSprintBoard.summary.actionItems >= deploymentSprintBoard.summary.items * 10 &&
+        deploymentSprintBoard.summary.agentItems > 0 &&
+        deploymentSprintBoard.summary.memoryItems > 0 &&
+        deploymentSprintBoard.summary.modelServingItems > 0 &&
+        deploymentSprintBoard.summary.localModelItems > 0 &&
+        deploymentSprintBoard.summary.automationPlatformItems > 0 &&
+        Boolean(
+          deploymentSprintBoard.items?.every(
+            (item) =>
+              item.readyForDeploymentSprint === true &&
+              item.publishConfirm === "not-included" &&
+              (item.unsafeReasons?.length || 0) === 0 &&
+              (item.actionCount || 0) >= 10 &&
+              (item.deploymentChecks?.length || 0) >= 6 &&
+              (item.humanReviewActions?.length || 0) >= 6 &&
+              (item.searchQueries?.length || 0) >= 3 &&
+              (item.sourceTargets?.length || 0) >= 2,
+          ),
+        ) &&
+        Boolean(deploymentSprintBoard.waves?.every((wave) => wave.readyItems === wave.items && (wave.unsafeItems || 0) === 0 && (wave.actionItems || 0) >= (wave.items || 0) * 10)),
+      detail: `ready=${deploymentSprintBoard.summary.readyForDeploymentSprint}, actions=${deploymentSprintBoard.summary.actionItems}, unsafe=${deploymentSprintBoard.summary.unsafeItems}, publishConfirm=${deploymentSprintBoard.summary.publishConfirmCommandsIncluded}`,
     },
     {
       name: "industry prompt coverage has broad reviewable coverage",

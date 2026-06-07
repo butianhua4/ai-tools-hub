@@ -197,6 +197,62 @@ type DeploymentReviewPack = {
   };
 };
 
+type DeploymentSprintBoard = {
+  items: Array<{
+    actionCount: number;
+    deploymentLane: string;
+    file: string;
+    implementationMode: string;
+    priorityScore: number;
+    publicMatches: number;
+    publishConfirm: string;
+    readyForDeploymentSprint: boolean;
+    searchQueries: string[];
+    sourceTargets: string[];
+    sprintWave: number;
+    title: string;
+    topic: string;
+    unsafeReasons: string[];
+  }>;
+  summary: {
+    actionItems: number;
+    agentItems: number;
+    apiIntegrationItems: number;
+    automationPlatformItems: number;
+    deploymentPublicArticles: number;
+    highPriorityItems: number;
+    implementationModes: number;
+    items: number;
+    itemsPerWave: number;
+    lanes: number;
+    localModelItems: number;
+    memoryItems: number;
+    modelServingItems: number;
+    publishConfirmCommandsIncluded: number;
+    readyForDeploymentSprint: number;
+    reviewPackItems: number;
+    searchQueries: number;
+    sourceTargets: number;
+    topicsWithoutPublicCoverage: number;
+    trafficDataAvailable: boolean;
+    unsafeItems: number;
+    waves: number;
+  };
+  waves: Array<{
+    actionItems: number;
+    deploymentLanes: string[];
+    files: string[];
+    highPriorityItems: number;
+    implementationModes: string[];
+    items: number;
+    readyItems: number;
+    searchQueries: string[];
+    sourceTargets: string[];
+    unsafeItems: number;
+    wave: number;
+  }>;
+};
+
 type ReviewRoadmap = {
   lanes: Array<{
     candidates: unknown[];
@@ -1999,6 +2055,7 @@ const reports = {
   ),
   deploymentCoverage: readJson<DeploymentCoverage>("content/automation/ai-deployment-coverage.json"),
   deploymentReviewPack: readJson<DeploymentReviewPack>("content/automation/ai-deployment-review-pack.json"),
+  deploymentSprintBoard: readJson<DeploymentSprintBoard>("content/automation/ai-deployment-sprint-board.json"),
   searchDemandIntake: readJson<SearchDemandIntake>("content/automation/search-demand-intake.json"),
   broadSearchDemand: readJson<BroadSearchDemand>("content/automation/broad-search-demand-map.json"),
   massAiSearchMatrix: readJson<MassAiSearchMatrix>("content/automation/mass-ai-search-action-matrix.json"),
@@ -2818,6 +2875,31 @@ const payload = {
     unsafeItems: reports.deploymentReviewPack.data?.summary.unsafeItems ?? null,
     uniqueFiles: reports.deploymentReviewPack.data?.summary.uniqueFiles ?? null,
   },
+  deploymentSprintBoard: {
+    actionItems: reports.deploymentSprintBoard.data?.summary.actionItems ?? null,
+    agentItems: reports.deploymentSprintBoard.data?.summary.agentItems ?? null,
+    apiIntegrationItems: reports.deploymentSprintBoard.data?.summary.apiIntegrationItems ?? null,
+    automationPlatformItems: reports.deploymentSprintBoard.data?.summary.automationPlatformItems ?? null,
+    deploymentPublicArticles: reports.deploymentSprintBoard.data?.summary.deploymentPublicArticles ?? null,
+    highPriorityItems: reports.deploymentSprintBoard.data?.summary.highPriorityItems ?? null,
+    implementationModes: reports.deploymentSprintBoard.data?.summary.implementationModes ?? null,
+    items: reports.deploymentSprintBoard.data?.summary.items ?? null,
+    itemsPerWave: reports.deploymentSprintBoard.data?.summary.itemsPerWave ?? null,
+    lanes: reports.deploymentSprintBoard.data?.summary.lanes ?? null,
+    localModelItems: reports.deploymentSprintBoard.data?.summary.localModelItems ?? null,
+    memoryItems: reports.deploymentSprintBoard.data?.summary.memoryItems ?? null,
+    modelServingItems: reports.deploymentSprintBoard.data?.summary.modelServingItems ?? null,
+    publishConfirmCommandsIncluded: reports.deploymentSprintBoard.data?.summary.publishConfirmCommandsIncluded ?? null,
+    readyForDeploymentSprint: reports.deploymentSprintBoard.data?.summary.readyForDeploymentSprint ?? null,
+    reviewPackItems: reports.deploymentSprintBoard.data?.summary.reviewPackItems ?? null,
+    searchQueries: reports.deploymentSprintBoard.data?.summary.searchQueries ?? null,
+    sourceTargets: reports.deploymentSprintBoard.data?.summary.sourceTargets ?? null,
+    top: reports.deploymentSprintBoard.data?.items.slice(0, 10) ?? [],
+    topicsWithoutPublicCoverage: reports.deploymentSprintBoard.data?.summary.topicsWithoutPublicCoverage ?? null,
+    trafficDataAvailable: reports.deploymentSprintBoard.data?.summary.trafficDataAvailable ?? null,
+    unsafeItems: reports.deploymentSprintBoard.data?.summary.unsafeItems ?? null,
+    waves: reports.deploymentSprintBoard.data?.waves ?? [],
+  },
   broadSearchDemand: {
     maxGapScore: reports.broadSearchDemand.data?.summary.maxGapScore ?? null,
     missingSubtopics: reports.broadSearchDemand.data?.summary.missingSubtopics ?? null,
@@ -3307,6 +3389,13 @@ function buildNextActions() {
   }
   if (!reports.deploymentReviewPack.data || reports.deploymentReviewPack.data.summary.unsafeItems > 0 || reports.deploymentReviewPack.data.summary.duplicateFiles > 0) {
     return ["Open docs/ai-deployment-review-pack.md and resolve deployment review pack safety or duplicate-file issues before manual review."];
+  }
+  if (
+    !reports.deploymentSprintBoard.data ||
+    reports.deploymentSprintBoard.data.summary.unsafeItems > 0 ||
+    reports.deploymentSprintBoard.data.summary.publishConfirmCommandsIncluded > 0
+  ) {
+    return ["Open docs/ai-deployment-sprint-board.md and resolve deployment sprint issues before manual review."];
   }
   if (!reports.promptReviewPack.data || reports.promptReviewPack.data.summary.unsafeItems > 0 || reports.promptReviewPack.data.summary.duplicateFiles > 0) {
     return ["Open docs/industry-prompt-review-pack.md and resolve prompt review pack safety or duplicate-file issues before manual review."];
@@ -4585,6 +4674,43 @@ function toMarkdown(data: typeof payload) {
     ...data.deploymentReviewPack.top.map((item) => (
       `| ${item.readyForHumanReview} | ${item.safeDraft} | ${item.priorityScore} | ${item.publicMatches} | ${item.sourceTargets.length} | ${item.searchQueries.length} | ${item.topic} | ${item.category} | ${item.title} | ${item.file} |`
     )),
+    "",
+    "## AI Deployment Sprint Board",
+    "",
+    `- Items: ${data.deploymentSprintBoard.items}`,
+    `- Review pack items: ${data.deploymentSprintBoard.reviewPackItems}`,
+    `- Waves: ${data.deploymentSprintBoard.waves.length}`,
+    `- Items per wave: ${data.deploymentSprintBoard.itemsPerWave}`,
+    `- Ready for deployment sprint: ${data.deploymentSprintBoard.readyForDeploymentSprint}`,
+    `- High-priority items: ${data.deploymentSprintBoard.highPriorityItems}`,
+    `- Deployment lanes: ${data.deploymentSprintBoard.lanes}`,
+    `- Implementation modes: ${data.deploymentSprintBoard.implementationModes}`,
+    `- Agent items: ${data.deploymentSprintBoard.agentItems}`,
+    `- Memory/RAG items: ${data.deploymentSprintBoard.memoryItems}`,
+    `- Model serving items: ${data.deploymentSprintBoard.modelServingItems}`,
+    `- Local model items: ${data.deploymentSprintBoard.localModelItems}`,
+    `- Automation platform items: ${data.deploymentSprintBoard.automationPlatformItems}`,
+    `- API integration items: ${data.deploymentSprintBoard.apiIntegrationItems}`,
+    `- Search queries: ${data.deploymentSprintBoard.searchQueries}`,
+    `- Source targets: ${data.deploymentSprintBoard.sourceTargets}`,
+    `- Action items: ${data.deploymentSprintBoard.actionItems}`,
+    `- Publish confirm commands included: ${data.deploymentSprintBoard.publishConfirmCommandsIncluded}`,
+    `- Traffic data available: ${data.deploymentSprintBoard.trafficDataAvailable}`,
+    `- Unsafe items: ${data.deploymentSprintBoard.unsafeItems}`,
+    "",
+    "| Wave | Ready | High priority | Actions | Lanes | Modes | Files | Search queries |",
+    "| ---: | ---: | ---: | ---: | --- | --- | --- | --- |",
+    ...data.deploymentSprintBoard.waves.map(
+      (wave) =>
+        `| ${wave.wave} | ${wave.readyItems}/${wave.items} | ${wave.highPriorityItems} | ${wave.actionItems} | ${wave.deploymentLanes.join(", ")} | ${wave.implementationModes.join(", ")} | ${wave.files.join("<br>")} | ${wave.searchQueries.slice(0, 4).join("<br>") || "none"} |`,
+    ),
+    "",
+    "| Wave | Ready | Score | Lane | Mode | Public | Actions | Queries | Sources | Title | File |",
+    "| ---: | --- | ---: | --- | --- | ---: | ---: | ---: | ---: | --- | --- |",
+    ...data.deploymentSprintBoard.top.map(
+      (item) =>
+        `| ${item.sprintWave} | ${item.readyForDeploymentSprint} | ${item.priorityScore} | ${item.deploymentLane} | ${item.implementationMode} | ${item.publicMatches} | ${item.actionCount} | ${item.searchQueries.length} | ${item.sourceTargets.length} | ${item.title} | ${item.file} |`,
+    ),
     "",
     "## Broad Search Demand Map",
     "",

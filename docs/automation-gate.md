@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-07T19:54:12.016Z
+Generated at: 2026-06-07T20:07:15.336Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 167
-- Passed: 167
+- Checks: 169
+- Passed: 169
 - Failed: 0
 
 ## Checks
@@ -30,7 +30,7 @@ Overall: PASS
 | project status still stops before publishing | PASS | publicPublished=15, publishableNow=0 |
 | traffic evidence audit passed and is read-only | PASS | failedChecks=0, measuredTrafficSources=0 |
 | traffic is not claimed without measured metrics | PASS | trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 |
-| traffic claim guard found no unsupported claims | PASS | filesScanned=183, unsafeClaims=0, watchMentions=3382 |
+| traffic claim guard found no unsupported claims | PASS | filesScanned=185, unsafeClaims=0, watchMentions=3429 |
 | content integrity audit is read-only and clean | PASS | filesScanned=669, blockingItems=0 |
 | content integrity audit covers public, recommended, and Wave 1 items | PASS | public=15, recommended=3, wave=3 |
 | internal link opportunity audit is read-only and covers expansion candidates | PASS | public=15, expansion=19, broadFirst=8, candidates=22 |
@@ -101,6 +101,8 @@ Overall: PASS
 | AI deployment candidates stay draft and non-indexable | PASS | unsafeCandidateItems=0 |
 | AI deployment review pack is read-only and covers deployment topics | PASS | items=10, topics=10/10, unique=10, duplicates=0 |
 | AI deployment review pack has source-backed human review boundaries | PASS | safe=10, sources=10, commands=10 |
+| AI deployment sprint board covers deployment tutorials across lanes | PASS | items=10, lanes=7, modes=7, queries=40, sources=12 |
+| AI deployment sprint board keeps deployment work human-gated and publish-safe | PASS | ready=10, actions=147, unsafe=0, publishConfirm=0 |
 | industry prompt coverage has broad reviewable coverage | PASS | industries=16, withCandidates=16, reviewReady=25, unique=19 |
 | industry prompt coverage includes source and search review tasks | PASS | officialSources=5, industries=16 |
 | industry prompt candidates stay draft and non-indexable | PASS | unsafeCandidateItems=0 |

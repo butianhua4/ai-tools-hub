@@ -95,6 +95,7 @@
     "automation:broad-search-demand": "tsx scripts/broad-search-demand-map.ts",
     "automation:mass-ai-search-matrix": "tsx scripts/mass-ai-search-action-matrix.ts",
     "automation:ai-deployment-review-pack": "tsx scripts/ai-deployment-review-pack.ts",
+    "automation:ai-deployment-sprint": "tsx scripts/ai-deployment-sprint-board.ts",
     "automation:industry-prompt-review-pack": "tsx scripts/industry-prompt-review-pack.ts",
     "automation:industry-prompt-opportunity-board": "tsx scripts/industry-prompt-opportunity-board.ts",
     "automation:industry-prompt-module-pack": "tsx scripts/industry-prompt-module-pack.ts",
