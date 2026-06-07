@@ -193,6 +193,29 @@ async function main() {
       warningItems: number;
     };
   }>("content/automation/search-query-match-audit.json");
+  const searchDemandIntake = readJson<{
+    guardrails: { autoCreateArticles: boolean; autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    lanes?: Array<{
+      contentFormats?: unknown[];
+      manualReviewFocus?: unknown[];
+      officialSourceTargets?: unknown[];
+      readyCandidates?: unknown[];
+      searchQueries?: unknown[];
+    }>;
+    summary: {
+      contentFormats: number;
+      lanes: number;
+      lanesWithPublicCoverage: number;
+      lanesWithoutPublicCoverage: number;
+      lanesWithReadyCandidates: number;
+      officialSourceTargets: number;
+      readyCandidateFiles: number;
+      reviewQueueMatches: number;
+      searchQueries: number;
+      unsafeLanes: number;
+    };
+    unsafeLanes?: unknown[];
+  }>("content/automation/search-demand-intake.json");
   const broadSearchDemand = readJson<{
     guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
     sourceEvidence?: { officialSources?: unknown[] };
@@ -2183,6 +2206,39 @@ async function main() {
         searchQueryMatch.summary.averageMatchedFamilies >= 3 &&
         Boolean(searchQueryMatch.items?.every((item) => item.readyForManualReview === true && item.titleHit === true && item.descriptionHit === true)),
       detail: `blocking=${searchQueryMatch.summary.blockingItems}, averageFamilies=${searchQueryMatch.summary.averageMatchedFamilies}`,
+    },
+    {
+      name: "search demand intake is read-only and covers broad user-search lanes",
+      ok:
+        searchDemandIntake.guardrails.autoCreateArticles === false &&
+        searchDemandIntake.guardrails.autoEditArticles === false &&
+        searchDemandIntake.guardrails.autoMarkReview === false &&
+        searchDemandIntake.guardrails.autoPublish === false &&
+        searchDemandIntake.guardrails.trafficClaim === "not-included" &&
+        searchDemandIntake.summary.lanes >= 8 &&
+        searchDemandIntake.summary.lanesWithReadyCandidates === searchDemandIntake.summary.lanes &&
+        searchDemandIntake.summary.readyCandidateFiles >= 40 &&
+        searchDemandIntake.summary.unsafeLanes === 0,
+      detail: `lanes=${searchDemandIntake.summary.lanes}, readyLanes=${searchDemandIntake.summary.lanesWithReadyCandidates}, readyFiles=${searchDemandIntake.summary.readyCandidateFiles}, unsafe=${searchDemandIntake.summary.unsafeLanes}`,
+    },
+    {
+      name: "search demand intake packages sources, formats, and manual review boundaries",
+      ok:
+        searchDemandIntake.summary.searchQueries >= 70 &&
+        searchDemandIntake.summary.officialSourceTargets >= 20 &&
+        searchDemandIntake.summary.contentFormats >= 24 &&
+        searchDemandIntake.summary.reviewQueueMatches >= 20 &&
+        Boolean(
+          searchDemandIntake.lanes?.every(
+            (lane) =>
+              (lane.searchQueries?.length || 0) >= 8 &&
+              (lane.officialSourceTargets?.length || 0) >= 3 &&
+              (lane.contentFormats?.length || 0) >= 3 &&
+              (lane.manualReviewFocus?.length || 0) >= 4 &&
+              (lane.readyCandidates?.length || 0) > 0,
+          ),
+        ),
+      detail: `queries=${searchDemandIntake.summary.searchQueries}, sources=${searchDemandIntake.summary.officialSourceTargets}, formats=${searchDemandIntake.summary.contentFormats}, queueMatches=${searchDemandIntake.summary.reviewQueueMatches}`,
     },
     {
       name: "broad search demand map is read-only and covers major demand themes",

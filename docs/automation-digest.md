@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T03:47:36.262Z
+Generated at: 2026-06-07T03:59:43.144Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -54,7 +54,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=es-419
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=pt-br
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/ -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
@@ -330,6 +330,33 @@ Unsafe queued playbook items:
 | 8 | true | true | 12/8 | 10/14 | 3 | 36 | true | not-included | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
 | 9 | true | true | 8/8 | 2/6 | 1 | 28 | true | not-included | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
 | 10 | true | true | 5/5 | 3/7 | 3 | 16 | true | not-included | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
+
+## Search Demand Intake
+
+- Lanes: 8
+- Lanes with ready candidates: 8
+- Lanes without public coverage: 6
+- Search queries: 81
+- Official source targets: 29
+- Content formats: 32
+- Ready candidate files: 45
+- Review queue matches: 33
+- Unsafe lanes: 0
+
+Unsafe search-demand lanes:
+
+- none
+
+| Score | Public | Drafts | Ready | Queue | Queries | Sources | Lane | User problem |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 444 | 0 | 47 | 8 | 7 | 10 | 4 | agent-deployment-tools-mcp | People want agents to act, but production content must start with permissions, tools, logs, and human gates. |
+| 440 | 0 | 73 | 8 | 5 | 12 | 4 | cross-industry-ai-prompts | People search for ready-to-use AI prompts by role, but useful articles need workflow context and review boundaries. |
+| 432 | 0 | 43 | 8 | 5 | 10 | 4 | llm-deployment-and-serving | Searchers want a model running, then need API access, cost control, and failure handling. |
+| 424 | 0 | 34 | 8 | 5 | 10 | 4 | rag-knowledge-base-agent-memory | Searchers mix RAG, vector databases, and memory, so content needs clear boundaries and safety controls. |
+| 404 | 0 | 30 | 8 | 4 | 10 | 4 | nocode-ai-automation-deployment | This lane connects search traffic to services people can buy: automation setup, deployment, acceptance, and maintenance. |
+| 372 | 0 | 14 | 8 | 2 | 10 | 4 | llm-evals-observability-security | As content moves past deployment, searchers need quality, logs, evals, and security operations. |
+| 325 | 1 | 97 | 8 | 2 | 10 | 4 | ai-api-keys-limits-routing | API integration is a beginner search lane and a production risk lane at the same time. |
+| 306 | 4 | 222 | 8 | 3 | 10 | 4 | ai-service-pricing-delivery | This lane turns search demand into services without pretending the site already has traffic or revenue proof. |
 
 ## Autopilot Broad AI Demand Brief
 
@@ -734,8 +761,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 139
-- Traffic claim watch mentions: 1499
+- Traffic claim files scanned: 141
+- Traffic claim watch mentions: 1521
 
 ## Public Surface Inventory
 
@@ -1152,7 +1179,7 @@ Public categories:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-07T03:47:31.677Z
+- Latest check: 2026-06-07T03:59:39.303Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85

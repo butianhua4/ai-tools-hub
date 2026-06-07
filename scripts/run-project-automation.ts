@@ -38,6 +38,7 @@ const tasks: Task[] = [
   { title: "Generate search intent wave planner", args: ["run", "automation:search-intent-waves"] },
   { title: "Generate search query coverage", args: ["run", "automation:search-query-coverage"] },
   { title: "Run search query match audit", args: ["run", "automation:search-query-match"] },
+  { title: "Generate search demand intake", args: ["run", "automation:search-demand-intake"] },
   { title: "Generate broad search demand map", args: ["run", "automation:broad-search-demand"] },
   { title: "Generate AI deployment review pack", args: ["run", "automation:ai-deployment-review-pack"] },
   { title: "Generate industry prompt review pack", args: ["run", "automation:industry-prompt-review-pack"] },

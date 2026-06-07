@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-07T03:47:35.757Z",
+  "generatedAt": "2026-06-07T03:59:42.641Z",
   "ok": true,
   "summary": {
-    "checks": 121,
+    "checks": 123,
     "failed": 0,
-    "passed": 121
+    "passed": 123
   },
   "failed": [],
   "checks": [
@@ -90,7 +90,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=139, unsafeClaims=0, watchMentions=1499"
+      "detail": "filesScanned=141, unsafeClaims=0, watchMentions=1521"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -436,6 +436,16 @@
       "name": "search query match audit has no blocking search-alignment issues",
       "ok": true,
       "detail": "blocking=0, averageFamilies=7"
+    },
+    {
+      "name": "search demand intake is read-only and covers broad user-search lanes",
+      "ok": true,
+      "detail": "lanes=8, readyLanes=8, readyFiles=45, unsafe=0"
+    },
+    {
+      "name": "search demand intake packages sources, formats, and manual review boundaries",
+      "ok": true,
+      "detail": "queries=81, sources=29, formats=32, queueMatches=33"
     },
     {
       "name": "broad search demand map is read-only and covers major demand themes",

@@ -76,6 +76,7 @@
     "automation:search-intent-waves": "tsx scripts/search-intent-wave-planner.ts",
     "automation:search-query-coverage": "tsx scripts/search-query-coverage.ts",
     "automation:search-query-match": "tsx scripts/search-query-match-audit.ts",
+    "automation:search-demand-intake": "tsx scripts/search-demand-intake.ts",
     "automation:broad-search-demand": "tsx scripts/broad-search-demand-map.ts",
     "automation:ai-deployment-review-pack": "tsx scripts/ai-deployment-review-pack.ts",
     "automation:industry-prompt-review-pack": "tsx scripts/industry-prompt-review-pack.ts",
