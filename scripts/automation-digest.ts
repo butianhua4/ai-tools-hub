@@ -486,6 +486,7 @@ type SourceTargetRemediationPack = {
     manualActions: string[];
     manualFixReady: boolean;
     referenceCount: number;
+    replacementCandidates: Array<{ sourceType: string; title: string; url: string }>;
     replacementPlan: string[];
     stopBefore: string;
     unsafeReasons: string[];
@@ -499,9 +500,12 @@ type SourceTargetRemediationPack = {
     itemsWithAffectedFiles: number;
     itemsWithHumanChecklist: number;
     itemsWithManualActions: number;
+    itemsWithReplacementCandidates: number;
     itemsWithReferences: number;
     itemsWithReplacementPlan: number;
     manualFixReadyItems: number;
+    failedItemsWithReplacementCandidates: number;
+    replacementCandidateOptions: number;
     redirectedUrlItems: number;
     redirectedUrls: number;
     sourceHealthCheckedUrls: number;
@@ -1632,9 +1636,12 @@ const payload = {
     failedUrlItems: reports.sourceTargetRemediation.data?.summary.failedUrlItems ?? null,
     failedUrls: reports.sourceTargetRemediation.data?.summary.failedUrls ?? null,
     humanGatedItems: reports.sourceTargetRemediation.data?.summary.humanGatedItems ?? null,
+    failedItemsWithReplacementCandidates: reports.sourceTargetRemediation.data?.summary.failedItemsWithReplacementCandidates ?? null,
     items: reports.sourceTargetRemediation.data?.summary.items ?? null,
+    itemsWithReplacementCandidates: reports.sourceTargetRemediation.data?.summary.itemsWithReplacementCandidates ?? null,
     itemsList: reports.sourceTargetRemediation.data?.items.slice(0, 8) ?? [],
     manualFixReadyItems: reports.sourceTargetRemediation.data?.summary.manualFixReadyItems ?? null,
+    replacementCandidateOptions: reports.sourceTargetRemediation.data?.summary.replacementCandidateOptions ?? null,
     redirectedUrlItems: reports.sourceTargetRemediation.data?.summary.redirectedUrlItems ?? null,
     redirectedUrls: reports.sourceTargetRemediation.data?.summary.redirectedUrls ?? null,
     sourceHealthCheckedUrls: reports.sourceTargetRemediation.data?.summary.sourceHealthCheckedUrls ?? null,
@@ -2619,6 +2626,8 @@ function toMarkdown(data: typeof payload) {
     "",
     `- Items: ${data.sourceTargetRemediation.items}`,
     `- Failed URL items: ${data.sourceTargetRemediation.failedUrlItems}`,
+    `- Failed URL items with replacement candidates: ${data.sourceTargetRemediation.failedItemsWithReplacementCandidates}`,
+    `- Replacement candidate options: ${data.sourceTargetRemediation.replacementCandidateOptions}`,
     `- Redirected URL items: ${data.sourceTargetRemediation.redirectedUrlItems}`,
     `- Manual-fix-ready items: ${data.sourceTargetRemediation.manualFixReadyItems}`,
     `- Human-gated items: ${data.sourceTargetRemediation.humanGatedItems}`,
@@ -2631,11 +2640,11 @@ function toMarkdown(data: typeof payload) {
       ? data.sourceTargetRemediation.unsafeItemList.map((item) => `- ${JSON.stringify(item)}`)
       : ["- none"]),
     "",
-    "| Ready | Kind | References | Files | URL | Final URL / Issue |",
-    "| --- | --- | ---: | --- | --- | --- |",
+    "| Ready | Kind | References | Replacement candidates | Files | URL | Final URL / Issue |",
+    "| --- | --- | ---: | ---: | --- | --- | --- |",
     ...data.sourceTargetRemediation.itemsList.map(
       (item) =>
-        `| ${item.manualFixReady} | ${item.kind} | ${item.referenceCount} | ${item.affectedFiles.join("<br>")} | ${item.url} | ${item.finalUrl || item.error || "review manually"} |`,
+        `| ${item.manualFixReady} | ${item.kind} | ${item.referenceCount} | ${item.replacementCandidates?.length || 0} | ${item.affectedFiles.join("<br>")} | ${item.url} | ${item.finalUrl || item.error || "review manually"} |`,
     ),
     "",
     "## Review Action Board",

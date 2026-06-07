@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-07T16:29:03.366Z",
+  "generatedAt": "2026-06-07T17:05:17.276Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
     "autoPublish": false,
     "note": "Read-only source target health audit. It checks source URLs for human fact review and does not edit articles, status, noindex, review, or publishing state.",
-    "timeoutMs": 8000
+    "timeoutMs": 6000
   },
   "summary": {
     "checkedUrls": 40,
@@ -268,7 +268,7 @@
       "url": "https://ai-sdk.dev/docs"
     },
     {
-      "finalUrl": "https://ai.google.dev/gemini-api/docs",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=it",
       "ok": true,
       "references": [
         {
@@ -369,6 +369,7 @@
       "url": "https://docs.anthropic.com/"
     },
     {
+      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
       "ok": true,
       "references": [
@@ -513,7 +514,6 @@
       "url": "https://docs.helicone.ai/"
     },
     {
-      "error": "AbortError",
       "finalUrl": "https://developers.llamaindex.ai/python/framework/",
       "ok": true,
       "references": [
@@ -2394,7 +2394,7 @@
       "url": "https://ai-sdk.dev/docs"
     },
     {
-      "finalUrl": "https://ai.google.dev/gemini-api/docs",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=it",
       "ok": true,
       "references": [
         {
@@ -2561,6 +2561,7 @@
       "url": "https://docs.anthropic.com/"
     },
     {
+      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
       "ok": true,
       "references": [
@@ -2705,7 +2706,6 @@
       "url": "https://docs.helicone.ai/"
     },
     {
-      "error": "AbortError",
       "finalUrl": "https://developers.llamaindex.ai/python/framework/",
       "ok": true,
       "references": [

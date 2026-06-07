@@ -1,5 +1,5 @@
 # Traffic Claim Guard
-Generated at: 2026-06-07T16:28:25.575Z
+Generated at: 2026-06-07T17:04:49.096Z
 This guard scans operational reports and docs for unsupported claims that real traffic, clicks, impressions, or visits already exist.
 ## Guardrails
 - Auto publish: false
@@ -45,12 +45,12 @@ None.
 | docs/automation-digest.md | 975 | - Search Console verification evidence: false |
 | docs/automation-digest.md | 978 | - Unsupported traffic claims: 0 |
 | docs/automation-digest.md | 979 | - Traffic claim files scanned: 157 |
-| docs/automation-digest.md | 980 | - Traffic claim watch mentions: 2030 |
+| docs/automation-digest.md | 980 | - Traffic claim watch mentions: 2029 |
 | docs/automation-digest.md | 993 | - Traffic data available: false |
 | docs/automation-digest.md | 1068 | \| Dify、n8n、MCP 和无代码 AI 自动化 \| 258 \| 0 \| 5 \| 无代码 AI 自动化容易吸引搜索流量，也最需要平台规则和权限边界提醒。 \| |
 | docs/automation-gate.md | 31 | \| traffic evidence audit passed and is read-only \| PASS \| failedChecks=0, measuredTrafficSources=0 \| |
 | docs/automation-gate.md | 32 | \| traffic is not claimed without measured metrics \| PASS \| trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 \| |
-| docs/automation-gate.md | 33 | \| traffic claim guard found no unsupported claims \| PASS \| filesScanned=157, unsafeClaims=0, watchMentions=2030 \| |
+| docs/automation-gate.md | 33 | \| traffic claim guard found no unsupported claims \| PASS \| filesScanned=157, unsafeClaims=0, watchMentions=2029 \| |
 | docs/autopilot-approval-packet.md | 18 | - Traffic data available: false |
 | docs/autopilot-approval-packet.md | 19 | - Can claim traffic: false |
 | docs/autopilot-approval-packet.md | 102 | - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence. |

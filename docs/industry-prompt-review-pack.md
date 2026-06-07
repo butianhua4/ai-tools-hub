@@ -1,6 +1,6 @@
 # Industry Prompt Review Pack
 
-Generated at: 2026-06-07T16:28:41.367Z
+Generated at: 2026-06-07T17:05:05.000Z
 
 This report is read-only. It turns broad industry AI prompt coverage into a deduplicated human review queue.
 

@@ -35,6 +35,13 @@ type UrlHealth = {
   url: string;
 };
 
+type FetchResult = {
+  error?: string;
+  finalUrl?: string;
+  ok: boolean;
+  status?: number;
+};
+
 const timeoutMs = Number(process.env.SOURCE_TARGET_HEALTH_TIMEOUT_MS || 8000);
 const concurrency = Number(process.env.SOURCE_TARGET_HEALTH_CONCURRENCY || 8);
 
@@ -155,27 +162,34 @@ async function checkUrl(url: string, references: SourceReference[]): Promise<Url
   };
 }
 
-async function fetchWithTimeout(url: string) {
+async function fetchWithTimeout(url: string): Promise<FetchResult> {
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+  let timeout: ReturnType<typeof setTimeout> | undefined;
   try {
-    const response = await fetch(url, {
+    const request = fetch(url, {
       headers: { "user-agent": "ai-jiedan-lab-source-target-health-audit" },
       redirect: "follow",
       signal: controller.signal,
+    })
+      .then((response): FetchResult => ({
+        finalUrl: response.url,
+        ok: response.status >= 200 && response.status < 500,
+        status: response.status,
+      }))
+      .catch((error): FetchResult => ({
+        error: error instanceof Error ? error.name : String(error),
+        ok: false,
+      }));
+    const hardTimeout = new Promise<FetchResult>((resolve) => {
+      timeout = setTimeout(() => {
+        controller.abort();
+        resolve({ error: "TimeoutError", ok: false });
+      }, timeoutMs);
     });
-    return {
-      finalUrl: response.url,
-      ok: response.status >= 200 && response.status < 500,
-      status: response.status,
-    };
-  } catch (error) {
-    return {
-      error: error instanceof Error ? error.name : String(error),
-      ok: false,
-    };
+
+    return await Promise.race([request, hardTimeout]);
   } finally {
-    clearTimeout(timeout);
+    if (timeout) clearTimeout(timeout);
   }
 }
 
@@ -278,4 +292,11 @@ function urlTable(items: UrlHealth[]) {
   ];
 }
 
-void main();
+main()
+  .catch((error) => {
+    console.error(error instanceof Error ? error.stack || error.message : String(error));
+    process.exitCode = 1;
+  })
+  .finally(() => {
+    process.exit(process.exitCode || 0);
+  });

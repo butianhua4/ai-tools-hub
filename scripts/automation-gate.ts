@@ -574,9 +574,11 @@ async function main() {
     items?: Array<{
       affectedFiles?: unknown[];
       humanChecklist?: unknown[];
+      kind?: string;
       manualActions?: unknown[];
       manualFixReady?: boolean;
       referenceCount?: number;
+      replacementCandidates?: unknown[];
       replacementPlan?: unknown[];
       stopBefore?: string;
       unsafeReasons?: unknown[];
@@ -596,9 +598,12 @@ async function main() {
       itemsWithAffectedFiles: number;
       itemsWithHumanChecklist: number;
       itemsWithManualActions: number;
+      itemsWithReplacementCandidates: number;
       itemsWithReferences: number;
       itemsWithReplacementPlan: number;
       manualFixReadyItems: number;
+      failedItemsWithReplacementCandidates: number;
+      replacementCandidateOptions: number;
       redirectedUrlItems: number;
       redirectedUrls: number;
       sourceHealthCheckedUrls: number;
@@ -1571,6 +1576,8 @@ async function main() {
         sourceTargetRemediationPack.summary.itemsWithReplacementPlan === sourceTargetRemediationPack.summary.items &&
         sourceTargetRemediationPack.summary.itemsWithHumanChecklist === sourceTargetRemediationPack.summary.items &&
         sourceTargetRemediationPack.summary.humanGatedItems === sourceTargetRemediationPack.summary.items &&
+        sourceTargetRemediationPack.summary.failedItemsWithReplacementCandidates === sourceTargetRemediationPack.summary.failedUrlItems &&
+        sourceTargetRemediationPack.summary.replacementCandidateOptions >= sourceTargetRemediationPack.summary.failedUrlItems &&
         (sourceTargetRemediationPack.unsafeItems?.length || 0) === 0 &&
         Boolean(
           sourceTargetRemediationPack.items?.every(
@@ -1580,12 +1587,13 @@ async function main() {
               (item.affectedFiles?.length || 0) > 0 &&
               (item.manualActions?.length || 0) >= 3 &&
               (item.replacementPlan?.length || 0) > 0 &&
+              (item.kind !== "failed-url" || (item.replacementCandidates?.length || 0) > 0) &&
               (item.humanChecklist?.length || 0) >= 5 &&
               (item.unsafeReasons?.length || 0) === 0 &&
               item.stopBefore?.toLowerCase().includes("human"),
           ),
         ),
-      detail: `ready=${sourceTargetRemediationPack.summary.manualFixReadyItems}, unsafe=${sourceTargetRemediationPack.summary.unsafeItems}, gated=${sourceTargetRemediationPack.summary.humanGatedItems}`,
+      detail: `ready=${sourceTargetRemediationPack.summary.manualFixReadyItems}, unsafe=${sourceTargetRemediationPack.summary.unsafeItems}, gated=${sourceTargetRemediationPack.summary.humanGatedItems}, replacementCandidates=${sourceTargetRemediationPack.summary.replacementCandidateOptions}`,
     },
     {
       name: "review action board is read-only and covers active review queues",

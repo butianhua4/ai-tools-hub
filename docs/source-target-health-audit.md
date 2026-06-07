@@ -1,6 +1,6 @@
 # Source Target Health Audit
 
-Generated at: 2026-06-07T16:29:03.366Z
+Generated at: 2026-06-07T17:05:17.276Z
 
 This report is read-only. It verifies official source URLs used by review and public-gap candidates before any human approval step.
 
@@ -9,7 +9,7 @@ This report is read-only. It verifies official source URLs used by review and pu
 - Auto edit articles: false
 - Auto mark review: false
 - Auto publish: false
-- Timeout ms: 8000
+- Timeout ms: 6000
 - Note: Read-only source target health audit. It checks source URLs for human fact review and does not edit articles, status, noindex, review, or publishing state.
 
 ## Summary
@@ -44,14 +44,14 @@ This report is read-only. It verifies official source URLs used by review and pu
 | OK | Status | URL | Final URL | References | Error |
 | --- | --- | --- | --- | --- | --- |
 | true | 200 | https://ai-sdk.dev/docs | https://ai-sdk.dev/docs/introduction | 30 |  |
-| true | 200 | https://ai.google.dev/docs | https://ai.google.dev/gemini-api/docs | 4 |  |
+| true | 200 | https://ai.google.dev/docs | https://ai.google.dev/gemini-api/docs?hl=it | 4 |  |
 | true | 200 | https://docs.anthropic.com | https://platform.claude.com/docs/en/home | 5 |  |
 | true | 200 | https://docs.anthropic.com/ | https://platform.claude.com/docs/en/home | 2 |  |
-| true | 200 | https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview | 5 |  |
+| true | 200 | https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview | 5 | TimeoutError |
 | true | 200 | https://docs.dify.ai | https://docs.dify.ai/en/use-dify/getting-started/introduction | 7 |  |
 | true | 200 | https://docs.dify.ai/ | https://docs.dify.ai/en/use-dify/getting-started/introduction | 2 |  |
 | true | 200 | https://docs.helicone.ai/ | https://docs.helicone.ai/getting-started/quick-start | 2 |  |
-| true | 200 | https://docs.llamaindex.ai | https://developers.llamaindex.ai/python/framework/ | 7 | AbortError |
+| true | 200 | https://docs.llamaindex.ai | https://developers.llamaindex.ai/python/framework/ | 7 |  |
 | true | 200 | https://docs.ragas.io/ | https://docs.ragas.io/en/stable/ | 2 |  |
 | true | 200 | https://docs.vllm.ai | https://docs.vllm.ai/en/latest/ | 7 |  |
 | true | 200 | https://modelcontextprotocol.io/docs | https://modelcontextprotocol.io/docs/getting-started/intro | 2 |  |
@@ -97,17 +97,17 @@ This report is read-only. It verifies official source URLs used by review and pu
 | true | 200 | https://adoption.microsoft.com/en-us/copilot/prompt-gallery/ | https://adoption.microsoft.com/en-us/copilot/prompt-gallery/ | 2 |  |
 | false |  | https://ai-prompts-pro.com/blog/ai-prompt-templates-business |  | 2 | TypeError |
 | true | 200 | https://ai-sdk.dev/docs | https://ai-sdk.dev/docs/introduction | 30 |  |
-| true | 200 | https://ai.google.dev/docs | https://ai.google.dev/gemini-api/docs | 4 |  |
+| true | 200 | https://ai.google.dev/docs | https://ai.google.dev/gemini-api/docs?hl=it | 4 |  |
 | true | 200 | https://arxiv.org/abs/2603.10700 | https://arxiv.org/abs/2603.10700 | 2 |  |
 | true | 200 | https://arxiv.org/abs/2604.20598 | https://arxiv.org/abs/2604.20598 | 2 |  |
 | true | 200 | https://docs.agenticgokit.com/tutorials/getting-started/memory-and-rag | https://docs.agenticgokit.com/tutorials/getting-started/memory-and-rag | 2 |  |
 | true | 200 | https://docs.anthropic.com | https://platform.claude.com/docs/en/home | 5 |  |
 | true | 200 | https://docs.anthropic.com/ | https://platform.claude.com/docs/en/home | 2 |  |
-| true | 200 | https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview | 5 |  |
+| true | 200 | https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview | 5 | TimeoutError |
 | true | 200 | https://docs.dify.ai | https://docs.dify.ai/en/use-dify/getting-started/introduction | 7 |  |
 | true | 200 | https://docs.dify.ai/ | https://docs.dify.ai/en/use-dify/getting-started/introduction | 2 |  |
 | true | 200 | https://docs.helicone.ai/ | https://docs.helicone.ai/getting-started/quick-start | 2 |  |
-| true | 200 | https://docs.llamaindex.ai | https://developers.llamaindex.ai/python/framework/ | 7 | AbortError |
+| true | 200 | https://docs.llamaindex.ai | https://developers.llamaindex.ai/python/framework/ | 7 |  |
 | true | 200 | https://docs.n8n.io | https://docs.n8n.io/ | 6 |  |
 | true | 200 | https://docs.n8n.io/ | https://docs.n8n.io/ | 2 |  |
 | true | 200 | https://docs.ollama.com | https://docs.ollama.com/ | 4 |  |

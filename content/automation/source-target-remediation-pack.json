@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T16:38:59.927Z",
+  "generatedAt": "2026-06-07T17:05:17.803Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,13 +9,13 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "sourceHealthGeneratedAt": "2026-06-07T16:29:03.366Z",
+    "sourceHealthGeneratedAt": "2026-06-07T17:05:17.276Z",
     "sourceHealthGuardrails": {
       "autoEditArticles": false,
       "autoMarkReview": false,
       "autoPublish": false,
       "note": "Read-only source target health audit. It checks source URLs for human fact review and does not edit articles, status, noindex, review, or publishing state.",
-      "timeoutMs": 8000
+      "timeoutMs": 6000
     },
     "sourceHealthSummary": {
       "checkedUrls": 40,
@@ -42,9 +42,12 @@
     "itemsWithAffectedFiles": 19,
     "itemsWithHumanChecklist": 19,
     "itemsWithManualActions": 19,
+    "itemsWithReplacementCandidates": 1,
     "itemsWithReferences": 19,
     "itemsWithReplacementPlan": 19,
     "manualFixReadyItems": 19,
+    "failedItemsWithReplacementCandidates": 1,
+    "replacementCandidateOptions": 8,
     "redirectedUrlItems": 18,
     "redirectedUrls": 18,
     "sourceHealthCheckedUrls": 40,
@@ -77,6 +80,14 @@
         "Prefer another reachable official source already present for the same affected file when it covers the same claim.",
         "If no existing source covers the claim, manually find a current official source before approval.",
         "If no reliable source exists, rewrite or remove the dependent claim instead of substituting a weak source.",
+        "Review replacement candidate: Microsoft Copilot Prompt Gallery (https://adoption.microsoft.com/en-us/copilot/prompt-gallery/) - Official Microsoft prompt gallery; useful for validating business prompt patterns and workplace use cases.",
+        "Review replacement candidate: OpenAI prompt engineering guide (https://platform.openai.com/docs/guides/prompt-engineering) - Official OpenAI prompting guidance; useful for replacing generic prompt-template claims with source-backed practice notes.",
+        "Review replacement candidate: OpenAI prompt generation guide (https://platform.openai.com/docs/guides/prompt-generation) - Official OpenAI guide for generating and improving prompts; useful for template-building and prompt-iteration claims.",
+        "Review replacement candidate: Google Workspace Gemini prompting guide (https://support.google.com/docs/answer/15013615) - Official Google Workspace support page; useful for cross-checking business prompting language in Docs/Gemini workflows.",
+        "Review replacement candidate: FwdSlash prompt template (https://www.fwdslash.ai/prompt-template) - Prompt-template library signal; useful only as market/category evidence after official-source claims are separately covered.",
+        "Review replacement candidate: PromptFluent prompt browser (https://www.promptfluent.com/browse) - Prompt-library category signal; useful for seeing common prompt taxonomy and searchable user intent.",
+        "Review replacement candidate: Sensara prompt library (https://sensara.io/prompts/) - Prompt-library market signal; useful for validating that prompt-template content maps to discoverable query families.",
+        "Review replacement candidate: Pmtly prompt library (https://pmtly.com/) - Prompt-library market signal; useful only as supplemental evidence for category demand, not as authority for technical claims.",
         "Keep article status, noindex, and humanReviewRequired unchanged until explicit approval.",
         "Publishing remains separate and is not included in this remediation pack."
       ],
@@ -103,6 +114,80 @@
           "scope": "broad-first-coverage",
           "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
           "url": "https://ai-prompts-pro.com/blog/ai-prompt-templates-business"
+        }
+      ],
+      "replacementCandidates": [
+        {
+          "title": "Microsoft Copilot Prompt Gallery",
+          "url": "https://adoption.microsoft.com/en-us/copilot/prompt-gallery/",
+          "sourceType": "official-doc",
+          "reason": "Official Microsoft prompt gallery; useful for validating business prompt patterns and workplace use cases.",
+          "appliesTo": [
+            "content/blog/industry-ai-prompts-template-library-2026.mdx"
+          ]
+        },
+        {
+          "title": "OpenAI prompt engineering guide",
+          "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+          "sourceType": "official-doc",
+          "reason": "Official OpenAI prompting guidance; useful for replacing generic prompt-template claims with source-backed practice notes.",
+          "appliesTo": [
+            "content/blog/industry-ai-prompts-template-library-2026.mdx"
+          ]
+        },
+        {
+          "title": "OpenAI prompt generation guide",
+          "url": "https://platform.openai.com/docs/guides/prompt-generation",
+          "sourceType": "official-doc",
+          "reason": "Official OpenAI guide for generating and improving prompts; useful for template-building and prompt-iteration claims.",
+          "appliesTo": [
+            "content/blog/industry-ai-prompts-template-library-2026.mdx"
+          ]
+        },
+        {
+          "title": "Google Workspace Gemini prompting guide",
+          "url": "https://support.google.com/docs/answer/15013615",
+          "sourceType": "official-doc",
+          "reason": "Official Google Workspace support page; useful for cross-checking business prompting language in Docs/Gemini workflows.",
+          "appliesTo": [
+            "content/blog/industry-ai-prompts-template-library-2026.mdx"
+          ]
+        },
+        {
+          "title": "FwdSlash prompt template",
+          "url": "https://www.fwdslash.ai/prompt-template",
+          "sourceType": "prompt-library",
+          "reason": "Prompt-template library signal; useful only as market/category evidence after official-source claims are separately covered.",
+          "appliesTo": [
+            "content/blog/industry-ai-prompts-template-library-2026.mdx"
+          ]
+        },
+        {
+          "title": "PromptFluent prompt browser",
+          "url": "https://www.promptfluent.com/browse",
+          "sourceType": "prompt-library",
+          "reason": "Prompt-library category signal; useful for seeing common prompt taxonomy and searchable user intent.",
+          "appliesTo": [
+            "content/blog/industry-ai-prompts-template-library-2026.mdx"
+          ]
+        },
+        {
+          "title": "Sensara prompt library",
+          "url": "https://sensara.io/prompts/",
+          "sourceType": "prompt-library",
+          "reason": "Prompt-library market signal; useful for validating that prompt-template content maps to discoverable query families.",
+          "appliesTo": [
+            "content/blog/industry-ai-prompts-template-library-2026.mdx"
+          ]
+        },
+        {
+          "title": "Pmtly prompt library",
+          "url": "https://pmtly.com/",
+          "sourceType": "prompt-library",
+          "reason": "Prompt-library market signal; useful only as supplemental evidence for category demand, not as authority for technical claims.",
+          "appliesTo": [
+            "content/blog/industry-ai-prompts-template-library-2026.mdx"
+          ]
         }
       ],
       "replacementPlan": [
@@ -395,6 +480,7 @@
           "url": "https://ai-sdk.dev/docs"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -690,6 +776,7 @@
           "url": "https://platform.openai.com/docs"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -975,6 +1062,7 @@
           "url": "https://platform.openai.com/docs/guides/prompt-engineering"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -1257,6 +1345,7 @@
           "url": "https://platform.openai.com/docs/guides/retrieval"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -1449,6 +1538,7 @@
           "url": "https://platform.openai.com/docs/guides/agents"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -1623,6 +1713,7 @@
           "url": "https://python.langchain.com/docs"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -1726,6 +1817,7 @@
           "url": "https://docs.dify.ai"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -1754,13 +1846,11 @@
         "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
         "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
       ],
-      "error": "AbortError",
       "finalUrl": "https://developers.llamaindex.ai/python/framework/",
       "humanChecklist": [
         "Review URL: https://docs.llamaindex.ai.",
         "Review final URL: https://developers.llamaindex.ai/python/framework/.",
         "HTTP status observed by automation: 200.",
-        "Automation error observed: AbortError.",
         "Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.",
         "If the final URL is the canonical destination, update the source target during human review.",
         "If the redirect lands on a generic, tracked, or unrelated page, replace it with a more specific official source.",
@@ -1831,6 +1921,7 @@
           "url": "https://docs.llamaindex.ai"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -1936,6 +2027,7 @@
           "url": "https://docs.vllm.ai"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -2023,6 +2115,7 @@
           "url": "https://docs.anthropic.com"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -2049,11 +2142,13 @@
         "客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断",
         "电商 AI 提示词模板：商品标题、详情页、评价分析和售后回复"
       ],
+      "error": "TimeoutError",
       "finalUrl": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
       "humanChecklist": [
         "Review URL: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview.",
         "Review final URL: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview.",
         "HTTP status observed by automation: 200.",
+        "Automation error observed: TimeoutError.",
         "Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.",
         "If the final URL is the canonical destination, update the source target during human review.",
         "If the redirect lands on a generic, tracked, or unrelated page, replace it with a more specific official source.",
@@ -2110,6 +2205,7 @@
           "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -2134,10 +2230,10 @@
         "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
         "Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型"
       ],
-      "finalUrl": "https://ai.google.dev/gemini-api/docs",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=it",
       "humanChecklist": [
         "Review URL: https://ai.google.dev/docs.",
-        "Review final URL: https://ai.google.dev/gemini-api/docs.",
+        "Review final URL: https://ai.google.dev/gemini-api/docs?hl=it.",
         "HTTP status observed by automation: 200.",
         "Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.",
         "If the final URL is the canonical destination, update the source target during human review.",
@@ -2188,6 +2284,7 @@
           "url": "https://ai.google.dev/docs"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -2249,6 +2346,7 @@
           "url": "https://docs.anthropic.com/"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -2310,6 +2408,7 @@
           "url": "https://docs.dify.ai/"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -2371,6 +2470,7 @@
           "url": "https://docs.helicone.ai/"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -2432,6 +2532,7 @@
           "url": "https://docs.ragas.io/"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -2493,6 +2594,7 @@
           "url": "https://modelcontextprotocol.io/docs"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
@@ -2555,6 +2657,7 @@
           "url": "https://platform.openai.com/docs/guides/prompt-generation"
         }
       ],
+      "replacementCandidates": [],
       "replacementPlan": [
         "Prefer the final URL when it is canonical, current, and content-equivalent.",
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",

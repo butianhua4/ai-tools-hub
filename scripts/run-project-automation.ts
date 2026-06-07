@@ -4,7 +4,9 @@ import path from "path";
 
 type Task = {
   args: string[];
+  env?: Record<string, string>;
   outputFile?: string;
+  timeoutMs?: number;
   title: string;
 };
 
@@ -48,7 +50,12 @@ const tasks: Task[] = [
   { title: "Generate public coverage gap plan", args: ["run", "automation:public-gap-plan"] },
   { title: "Run public coverage gap preflight", args: ["run", "automation:public-gap-preflight"] },
   { title: "Generate public coverage gap decision pack", args: ["run", "automation:public-gap-decision-pack"] },
-  { title: "Run source target health audit", args: ["run", "content:source-health"] },
+  {
+    title: "Run source target health audit",
+    args: ["run", "content:source-health"],
+    env: { SOURCE_TARGET_HEALTH_CONCURRENCY: "10", SOURCE_TARGET_HEALTH_TIMEOUT_MS: "6000" },
+    timeoutMs: 180000,
+  },
   { title: "Generate source target remediation pack", args: ["run", "automation:source-remediation"] },
   { title: "Generate review action board", args: ["run", "automation:review-action-board"] },
   { title: "Generate review portfolio board", args: ["run", "automation:review-portfolio-board"] },
@@ -109,8 +116,11 @@ function runTask(task: Task) {
   const result = spawnSync(command, args, {
     cwd: process.cwd(),
     encoding: "utf8",
+    env: { ...process.env, ...(task.env || {}) },
     shell: false,
+    timeout: task.timeoutMs,
   });
+  if (result.error && isWindows && result.pid) cleanupProcessTree(result.pid);
 
   if (task.outputFile) {
     writeOutput(task.outputFile, result.stdout || "");
@@ -123,6 +133,13 @@ function runTask(task: Task) {
   if (result.status !== 0) {
     failures.push(`${task.title} exited ${result.status}${result.error ? `: ${result.error.message}` : ""}`);
   }
+}
+
+function cleanupProcessTree(pid: number) {
+  spawnSync("taskkill.exe", ["/PID", String(pid), "/T", "/F"], {
+    encoding: "utf8",
+    shell: false,
+  });
 }
 
 function writeOutput(relativeFile: string, output: string) {

@@ -1,6 +1,6 @@
 # Review Action Board
 
-Generated at: 2026-06-07T16:39:00.481Z
+Generated at: 2026-06-07T17:05:18.303Z
 
 This board is read-only. It turns review automation reports into a prioritized human task queue.
 

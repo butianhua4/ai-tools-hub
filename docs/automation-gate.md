@@ -1,6 +1,6 @@
 # Automation Gate
 
-Generated at: 2026-06-07T16:39:17.982Z
+Generated at: 2026-06-07T17:05:35.568Z
 
 Overall: PASS
 
@@ -38,7 +38,7 @@ Overall: PASS
 | source target health audit is read-only and covers review source scopes | PASS | broadFirst=8, current=3, publicGap=13, next=19, files=23 |
 | source target health audit has reachable URLs for every covered review file | PASS | checked=40, ok=39, failed=1, missingTargets=0, filesWithoutReachable=0 |
 | source target remediation pack is read-only and mirrors source health counts | PASS | items=19, failed=1/1, redirected=18/18 |
-| source target remediation pack keeps every source fix human-gated | PASS | ready=19, unsafe=0, gated=19 |
+| source target remediation pack keeps every source fix human-gated | PASS | ready=19, unsafe=0, gated=19, replacementCandidates=8 |
 | review action board is read-only and covers active review queues | PASS | tasks=16, wave=3, publicGap=13 |
 | review action board tasks are ready and preserve command boundaries | PASS | ready=16, unsafe=0 |
 | review portfolio board deduplicates all review packs | PASS | sourceCandidates=38, uniqueItems=26, duplicates=12, multiSource=10 |

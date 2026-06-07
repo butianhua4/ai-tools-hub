@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T16:39:17.982Z",
+  "generatedAt": "2026-06-07T17:05:35.568Z",
   "ok": true,
   "summary": {
     "checks": 140,
@@ -130,7 +130,7 @@
     {
       "name": "source target remediation pack keeps every source fix human-gated",
       "ok": true,
-      "detail": "ready=19, unsafe=0, gated=19"
+      "detail": "ready=19, unsafe=0, gated=19, replacementCandidates=8"
     },
     {
       "name": "review action board is read-only and covers active review queues",

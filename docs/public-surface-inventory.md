@@ -1,6 +1,6 @@
 # Public Surface Inventory
 
-Generated at: 2026-06-07T16:28:26.196Z
+Generated at: 2026-06-07T17:04:49.707Z
 
 ## Guardrails
 

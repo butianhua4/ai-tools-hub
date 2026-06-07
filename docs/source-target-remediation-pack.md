@@ -1,6 +1,6 @@
 # Source Target Remediation Pack
 
-Generated at: 2026-06-07T16:38:59.927Z
+Generated at: 2026-06-07T17:05:17.803Z
 
 This pack is read-only. It does not edit articles, mark review, publish, or claim traffic.
 
@@ -8,6 +8,8 @@ This pack is read-only. It does not edit articles, mark review, publish, or clai
 
 - Items: 19
 - Failed URL items: 1
+- Failed URL items with replacement candidates: 1
+- Replacement candidate options: 8
 - Redirected URL items: 18
 - Manual-fix-ready items: 19
 - Unsafe items: 0
@@ -17,27 +19,27 @@ This pack is read-only. It does not edit articles, mark review, publish, or clai
 
 ## Items
 
-| Ready | Kind | References | Files | URL | Final URL / Issue |
-| --- | --- | ---: | --- | --- | --- |
-| true | failed-url | 2 | content/blog/industry-ai-prompts-template-library-2026.mdx | https://ai-prompts-pro.com/blog/ai-prompt-templates-business | TypeError |
-| true | redirected-url | 30 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/ai-prompt-library-team-knowledge-base-guide.mdx<br>content/blog/data-analysis-ai-prompts-guide.mdx<br>content/blog/education-ai-prompts-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx<br>content/blog/open-webui-functions-pipelines-deployment-guide.mdx<br>content/blog/local-llm-vram-not-enough-guide.mdx<br>content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx | https://ai-sdk.dev/docs | https://ai-sdk.dev/docs/introduction |
-| true | redirected-url | 30 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/ai-prompt-library-team-knowledge-base-guide.mdx<br>content/blog/data-analysis-ai-prompts-guide.mdx<br>content/blog/education-ai-prompts-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx<br>content/blog/open-webui-functions-pipelines-deployment-guide.mdx<br>content/blog/local-llm-vram-not-enough-guide.mdx<br>content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx<br>content/blog/customer-service-ai-prompts-guide.mdx<br>content/blog/ecommerce-ai-prompts-guide.mdx | https://platform.openai.com/docs | https://developers.openai.com/api/docs |
-| true | redirected-url | 30 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/ai-prompt-library-team-knowledge-base-guide.mdx<br>content/blog/data-analysis-ai-prompts-guide.mdx<br>content/blog/education-ai-prompts-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/customer-service-ai-prompts-guide.mdx<br>content/blog/ecommerce-ai-prompts-guide.mdx | https://platform.openai.com/docs/guides/prompt-engineering | https://developers.openai.com/api/docs/guides/prompt-engineering |
-| true | redirected-url | 29 | content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/ai-prompt-library-team-knowledge-base-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx<br>content/blog/open-webui-functions-pipelines-deployment-guide.mdx<br>content/blog/local-llm-vram-not-enough-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx<br>content/blog/customer-service-ai-prompts-guide.mdx<br>content/blog/ecommerce-ai-prompts-guide.mdx | https://platform.openai.com/docs/guides/retrieval | https://developers.openai.com/api/docs/guides/retrieval |
-| true | redirected-url | 18 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx<br>content/blog/local-llm-vram-not-enough-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx | https://platform.openai.com/docs/guides/agents | https://developers.openai.com/api/docs/guides/agents |
-| true | redirected-url | 16 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx<br>content/blog/open-webui-functions-pipelines-deployment-guide.mdx | https://python.langchain.com/docs | https://docs.langchain.com/oss/python/langchain/overview |
-| true | redirected-url | 7 | content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx | https://docs.dify.ai | https://docs.dify.ai/en/use-dify/getting-started/introduction |
-| true | redirected-url | 7 | content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/open-webui-functions-pipelines-deployment-guide.mdx | https://docs.llamaindex.ai | https://developers.llamaindex.ai/python/framework/ |
-| true | redirected-url | 7 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/bentoml-llm-deployment-beginner-guide.mdx<br>content/blog/local-llm-vram-not-enough-guide.mdx<br>content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx | https://docs.vllm.ai | https://docs.vllm.ai/en/latest/ |
-| true | redirected-url | 5 | content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx | https://docs.anthropic.com | https://platform.claude.com/docs/en/home |
-| true | redirected-url | 5 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/customer-service-ai-prompts-guide.mdx<br>content/blog/ecommerce-ai-prompts-guide.mdx | https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview |
-| true | redirected-url | 4 | content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx | https://ai.google.dev/docs | https://ai.google.dev/gemini-api/docs |
-| true | redirected-url | 2 | content/blog/ai-api-key-security-rotation-guide.mdx | https://docs.anthropic.com/ | https://platform.claude.com/docs/en/home |
-| true | redirected-url | 2 | content/blog/mcp-server-deployment-security-checklist.mdx | https://docs.dify.ai/ | https://docs.dify.ai/en/use-dify/getting-started/introduction |
-| true | redirected-url | 2 | content/blog/agent-tool-permission-safety-guide.mdx | https://docs.helicone.ai/ | https://docs.helicone.ai/getting-started/quick-start |
-| true | redirected-url | 2 | content/blog/agent-tool-permission-safety-guide.mdx | https://docs.ragas.io/ | https://docs.ragas.io/en/stable/ |
-| true | redirected-url | 2 | content/blog/mcp-server-deployment-security-checklist.mdx | https://modelcontextprotocol.io/docs | https://modelcontextprotocol.io/docs/getting-started/intro |
-| true | redirected-url | 2 | content/blog/customer-service-ai-prompts-guide.mdx<br>content/blog/ecommerce-ai-prompts-guide.mdx | https://platform.openai.com/docs/guides/prompt-generation | https://developers.openai.com/api/docs/guides/prompt-generation |
+| Ready | Kind | References | Replacement candidates | Files | URL | Final URL / Issue |
+| --- | --- | ---: | ---: | --- | --- | --- |
+| true | failed-url | 2 | 8 | content/blog/industry-ai-prompts-template-library-2026.mdx | https://ai-prompts-pro.com/blog/ai-prompt-templates-business | TypeError |
+| true | redirected-url | 30 | 0 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/ai-prompt-library-team-knowledge-base-guide.mdx<br>content/blog/data-analysis-ai-prompts-guide.mdx<br>content/blog/education-ai-prompts-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx<br>content/blog/open-webui-functions-pipelines-deployment-guide.mdx<br>content/blog/local-llm-vram-not-enough-guide.mdx<br>content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx | https://ai-sdk.dev/docs | https://ai-sdk.dev/docs/introduction |
+| true | redirected-url | 30 | 0 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/ai-prompt-library-team-knowledge-base-guide.mdx<br>content/blog/data-analysis-ai-prompts-guide.mdx<br>content/blog/education-ai-prompts-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx<br>content/blog/open-webui-functions-pipelines-deployment-guide.mdx<br>content/blog/local-llm-vram-not-enough-guide.mdx<br>content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx<br>content/blog/customer-service-ai-prompts-guide.mdx<br>content/blog/ecommerce-ai-prompts-guide.mdx | https://platform.openai.com/docs | https://developers.openai.com/api/docs |
+| true | redirected-url | 30 | 0 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/ai-prompt-library-team-knowledge-base-guide.mdx<br>content/blog/data-analysis-ai-prompts-guide.mdx<br>content/blog/education-ai-prompts-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/customer-service-ai-prompts-guide.mdx<br>content/blog/ecommerce-ai-prompts-guide.mdx | https://platform.openai.com/docs/guides/prompt-engineering | https://developers.openai.com/api/docs/guides/prompt-engineering |
+| true | redirected-url | 29 | 0 | content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/ai-prompt-library-team-knowledge-base-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx<br>content/blog/open-webui-functions-pipelines-deployment-guide.mdx<br>content/blog/local-llm-vram-not-enough-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx<br>content/blog/customer-service-ai-prompts-guide.mdx<br>content/blog/ecommerce-ai-prompts-guide.mdx | https://platform.openai.com/docs/guides/retrieval | https://developers.openai.com/api/docs/guides/retrieval |
+| true | redirected-url | 18 | 0 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx<br>content/blog/local-llm-vram-not-enough-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx | https://platform.openai.com/docs/guides/agents | https://developers.openai.com/api/docs/guides/agents |
+| true | redirected-url | 16 | 0 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx<br>content/blog/open-webui-functions-pipelines-deployment-guide.mdx | https://python.langchain.com/docs | https://docs.langchain.com/oss/python/langchain/overview |
+| true | redirected-url | 7 | 0 | content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/dify-workflow-vs-agent-guide.mdx | https://docs.dify.ai | https://docs.dify.ai/en/use-dify/getting-started/introduction |
+| true | redirected-url | 7 | 0 | content/blog/ai-agent-memory-rag-design-guide.mdx<br>content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx<br>content/blog/open-webui-functions-pipelines-deployment-guide.mdx | https://docs.llamaindex.ai | https://developers.llamaindex.ai/python/framework/ |
+| true | redirected-url | 7 | 0 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx<br>content/blog/bentoml-llm-deployment-beginner-guide.mdx<br>content/blog/local-llm-vram-not-enough-guide.mdx<br>content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx | https://docs.vllm.ai | https://docs.vllm.ai/en/latest/ |
+| true | redirected-url | 5 | 0 | content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/claude-api-rate-limit-debug-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx | https://docs.anthropic.com | https://platform.claude.com/docs/en/home |
+| true | redirected-url | 5 | 0 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/customer-service-ai-prompts-guide.mdx<br>content/blog/ecommerce-ai-prompts-guide.mdx | https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview |
+| true | redirected-url | 4 | 0 | content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/gemini-api-rate-limit-debug-guide.mdx | https://ai.google.dev/docs | https://ai.google.dev/gemini-api/docs?hl=it |
+| true | redirected-url | 2 | 0 | content/blog/ai-api-key-security-rotation-guide.mdx | https://docs.anthropic.com/ | https://platform.claude.com/docs/en/home |
+| true | redirected-url | 2 | 0 | content/blog/mcp-server-deployment-security-checklist.mdx | https://docs.dify.ai/ | https://docs.dify.ai/en/use-dify/getting-started/introduction |
+| true | redirected-url | 2 | 0 | content/blog/agent-tool-permission-safety-guide.mdx | https://docs.helicone.ai/ | https://docs.helicone.ai/getting-started/quick-start |
+| true | redirected-url | 2 | 0 | content/blog/agent-tool-permission-safety-guide.mdx | https://docs.ragas.io/ | https://docs.ragas.io/en/stable/ |
+| true | redirected-url | 2 | 0 | content/blog/mcp-server-deployment-security-checklist.mdx | https://modelcontextprotocol.io/docs | https://modelcontextprotocol.io/docs/getting-started/intro |
+| true | redirected-url | 2 | 0 | content/blog/customer-service-ai-prompts-guide.mdx<br>content/blog/ecommerce-ai-prompts-guide.mdx | https://platform.openai.com/docs/guides/prompt-generation | https://developers.openai.com/api/docs/guides/prompt-generation |
 
 ## Manual Actions
 
@@ -59,6 +61,17 @@ Replacement plan:
 - If no existing source covers the claim, manually find a current official source before approval.
 - If no reliable source exists, rewrite or remove the dependent claim instead of substituting a weak source.
 
+Replacement candidates:
+
+- Microsoft Copilot Prompt Gallery (official-doc): https://adoption.microsoft.com/en-us/copilot/prompt-gallery/ - Official Microsoft prompt gallery; useful for validating business prompt patterns and workplace use cases.
+- OpenAI prompt engineering guide (official-doc): https://platform.openai.com/docs/guides/prompt-engineering - Official OpenAI prompting guidance; useful for replacing generic prompt-template claims with source-backed practice notes.
+- OpenAI prompt generation guide (official-doc): https://platform.openai.com/docs/guides/prompt-generation - Official OpenAI guide for generating and improving prompts; useful for template-building and prompt-iteration claims.
+- Google Workspace Gemini prompting guide (official-doc): https://support.google.com/docs/answer/15013615 - Official Google Workspace support page; useful for cross-checking business prompting language in Docs/Gemini workflows.
+- FwdSlash prompt template (prompt-library): https://www.fwdslash.ai/prompt-template - Prompt-template library signal; useful only as market/category evidence after official-source claims are separately covered.
+- PromptFluent prompt browser (prompt-library): https://www.promptfluent.com/browse - Prompt-library category signal; useful for seeing common prompt taxonomy and searchable user intent.
+- Sensara prompt library (prompt-library): https://sensara.io/prompts/ - Prompt-library market signal; useful for validating that prompt-template content maps to discoverable query families.
+- Pmtly prompt library (prompt-library): https://pmtly.com/ - Prompt-library market signal; useful only as supplemental evidence for category demand, not as authority for technical claims.
+
 Human checklist:
 
 - Review URL: https://ai-prompts-pro.com/blog/ai-prompt-templates-business.
@@ -70,6 +83,14 @@ Human checklist:
 - Prefer another reachable official source already present for the same affected file when it covers the same claim.
 - If no existing source covers the claim, manually find a current official source before approval.
 - If no reliable source exists, rewrite or remove the dependent claim instead of substituting a weak source.
+- Review replacement candidate: Microsoft Copilot Prompt Gallery (https://adoption.microsoft.com/en-us/copilot/prompt-gallery/) - Official Microsoft prompt gallery; useful for validating business prompt patterns and workplace use cases.
+- Review replacement candidate: OpenAI prompt engineering guide (https://platform.openai.com/docs/guides/prompt-engineering) - Official OpenAI prompting guidance; useful for replacing generic prompt-template claims with source-backed practice notes.
+- Review replacement candidate: OpenAI prompt generation guide (https://platform.openai.com/docs/guides/prompt-generation) - Official OpenAI guide for generating and improving prompts; useful for template-building and prompt-iteration claims.
+- Review replacement candidate: Google Workspace Gemini prompting guide (https://support.google.com/docs/answer/15013615) - Official Google Workspace support page; useful for cross-checking business prompting language in Docs/Gemini workflows.
+- Review replacement candidate: FwdSlash prompt template (https://www.fwdslash.ai/prompt-template) - Prompt-template library signal; useful only as market/category evidence after official-source claims are separately covered.
+- Review replacement candidate: PromptFluent prompt browser (https://www.promptfluent.com/browse) - Prompt-library category signal; useful for seeing common prompt taxonomy and searchable user intent.
+- Review replacement candidate: Sensara prompt library (https://sensara.io/prompts/) - Prompt-library market signal; useful for validating that prompt-template content maps to discoverable query families.
+- Review replacement candidate: Pmtly prompt library (https://pmtly.com/) - Prompt-library market signal; useful only as supplemental evidence for category demand, not as authority for technical claims.
 - Keep article status, noindex, and humanReviewRequired unchanged until explicit approval.
 - Publishing remains separate and is not included in this remediation pack.
 
@@ -90,6 +111,10 @@ Replacement plan:
 - Prefer the final URL when it is canonical, current, and content-equivalent.
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
+
+Replacement candidates:
+
+- none
 
 Human checklist:
 
@@ -124,6 +149,10 @@ Replacement plan:
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
 
+Replacement candidates:
+
+- none
+
 Human checklist:
 
 - Review URL: https://platform.openai.com/docs.
@@ -156,6 +185,10 @@ Replacement plan:
 - Prefer the final URL when it is canonical, current, and content-equivalent.
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
+
+Replacement candidates:
+
+- none
 
 Human checklist:
 
@@ -190,6 +223,10 @@ Replacement plan:
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
 
+Replacement candidates:
+
+- none
+
 Human checklist:
 
 - Review URL: https://platform.openai.com/docs/guides/retrieval.
@@ -222,6 +259,10 @@ Replacement plan:
 - Prefer the final URL when it is canonical, current, and content-equivalent.
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
+
+Replacement candidates:
+
+- none
 
 Human checklist:
 
@@ -256,6 +297,10 @@ Replacement plan:
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
 
+Replacement candidates:
+
+- none
+
 Human checklist:
 
 - Review URL: https://python.langchain.com/docs.
@@ -288,6 +333,10 @@ Replacement plan:
 - Prefer the final URL when it is canonical, current, and content-equivalent.
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
+
+Replacement candidates:
+
+- none
 
 Human checklist:
 
@@ -322,12 +371,15 @@ Replacement plan:
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
 
+Replacement candidates:
+
+- none
+
 Human checklist:
 
 - Review URL: https://docs.llamaindex.ai.
 - Review final URL: https://developers.llamaindex.ai/python/framework/.
 - HTTP status observed by automation: 200.
-- Automation error observed: AbortError.
 - Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.
 - If the final URL is the canonical destination, update the source target during human review.
 - If the redirect lands on a generic, tracked, or unrelated page, replace it with a more specific official source.
@@ -355,6 +407,10 @@ Replacement plan:
 - Prefer the final URL when it is canonical, current, and content-equivalent.
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
+
+Replacement candidates:
+
+- none
 
 Human checklist:
 
@@ -389,6 +445,10 @@ Replacement plan:
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
 
+Replacement candidates:
+
+- none
+
 Human checklist:
 
 - Review URL: https://docs.anthropic.com.
@@ -422,11 +482,16 @@ Replacement plan:
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
 
+Replacement candidates:
+
+- none
+
 Human checklist:
 
 - Review URL: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview.
 - Review final URL: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview.
 - HTTP status observed by automation: 200.
+- Automation error observed: TimeoutError.
 - Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.
 - If the final URL is the canonical destination, update the source target during human review.
 - If the redirect lands on a generic, tracked, or unrelated page, replace it with a more specific official source.
@@ -455,10 +520,14 @@ Replacement plan:
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
 
+Replacement candidates:
+
+- none
+
 Human checklist:
 
 - Review URL: https://ai.google.dev/docs.
-- Review final URL: https://ai.google.dev/gemini-api/docs.
+- Review final URL: https://ai.google.dev/gemini-api/docs?hl=it.
 - HTTP status observed by automation: 200.
 - Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.
 - If the final URL is the canonical destination, update the source target during human review.
@@ -487,6 +556,10 @@ Replacement plan:
 - Prefer the final URL when it is canonical, current, and content-equivalent.
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
+
+Replacement candidates:
+
+- none
 
 Human checklist:
 
@@ -521,6 +594,10 @@ Replacement plan:
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
 
+Replacement candidates:
+
+- none
+
 Human checklist:
 
 - Review URL: https://docs.dify.ai/.
@@ -553,6 +630,10 @@ Replacement plan:
 - Prefer the final URL when it is canonical, current, and content-equivalent.
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
+
+Replacement candidates:
+
+- none
 
 Human checklist:
 
@@ -587,6 +668,10 @@ Replacement plan:
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
 
+Replacement candidates:
+
+- none
+
 Human checklist:
 
 - Review URL: https://docs.ragas.io/.
@@ -620,6 +705,10 @@ Replacement plan:
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
 
+Replacement candidates:
+
+- none
+
 Human checklist:
 
 - Review URL: https://modelcontextprotocol.io/docs.
@@ -652,6 +741,10 @@ Replacement plan:
 - Prefer the final URL when it is canonical, current, and content-equivalent.
 - Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Replace the source if the redirect weakens specificity or points to a general landing page.
+
+Replacement candidates:
+
+- none
 
 Human checklist:
 
