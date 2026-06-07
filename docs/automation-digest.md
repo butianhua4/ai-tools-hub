@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T18:05:22.236Z
+Generated at: 2026-06-07T18:22:15.963Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -54,7 +54,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=vi
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/ -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
@@ -1060,8 +1060,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 167
-- Traffic claim watch mentions: 2622
+- Traffic claim files scanned: 169
+- Traffic claim watch mentions: 2995
 
 ## Public Surface Inventory
 
@@ -1238,6 +1238,37 @@ Public categories:
 | 2 | true | 0 | 8 | 7 | 14 | 0 | 2 | broad-ai-operations | Business AI workflows and SOP templates |
 | 3 | true | 0 | 8 | 2 | 8 | 1 | 0 | model-deployment | LLM serving, GPU, and managed inference |
 | 3 | true | 0 | 8 | 5 | 8 | 1 | 0 | prompt-library | LLM evaluation, observability, and security |
+
+## Popular AI Prompt Playbook
+
+- Items: 10
+- Ready for human review prep: 10
+- Human-gated items: 10
+- Prompt templates: 50
+- Search queries: 127
+- Official sources: 12
+- Unique candidate files: 21
+- Broad work prompt lanes: 3
+- Agent/deployment lanes: 3
+- Memory lanes: 1
+- Deployment bridge items: 6
+- Prompt module bridge items: 7
+- Publish confirm commands included: 0
+- Traffic data available: false
+- Unsafe items: 0
+
+| Ready | Candidates | Templates | Queries | Sources | Public | Lane | Audience |
+| --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| true | 10 | 5 | 18 | 12 | 0 | ChatGPT 提示词大全和万能公式 | 刚开始用 AI 的普通用户、学生、职场新人和小团队老板 |
+| true | 2 | 5 | 14 | 8 | 0 | AI 办公提示词：Word、Excel、PPT、邮件和会议 | 办公室职员、行政、运营、项目经理、创业团队 |
+| true | 10 | 5 | 18 | 12 | 0 | Excel 和数据分析 AI 提示词 | 运营、财务助理、电商数据、销售管理和数据分析初学者 |
+| true | 2 | 5 | 18 | 7 | 0 | 小红书、短视频和直播脚本 AI 提示词 | 自媒体、短视频运营、电商主播、本地生活商家 |
+| true | 10 | 5 | 18 | 11 | 0 | 电商客服、售后和直播卖货 AI 提示词 | 淘宝、拼多多、抖店、独立站商家和客服团队 |
+| true | 10 | 5 | 18 | 12 | 0 | 销售话术、报价和方案书 AI 提示词 | 销售、BD、自由职业者、咨询顾问和接单人 |
+| true | 9 | 5 | 18 | 9 | 0 | 简历优化、招聘和 HR AI 提示词 | 求职者、HR、招聘负责人和团队管理者 |
+| true | 10 | 5 | 18 | 12 | 0 | AI Agent 部署、工具调用和上线排错提示词 | 想部署 Agent 的独立开发者、创业团队和技术运营 |
+| true | 10 | 5 | 18 | 12 | 0 | 大模型部署、本地模型和 API 排错提示词 | 部署大模型 API、本地模型、推理服务和 AI 应用的开发者 |
+| true | 10 | 5 | 18 | 12 | 0 | Agent 记忆、知识库和 RAG 提示词 | 做客服 Agent、个人助理、知识库问答和长期任务 Agent 的团队 |
 
 ## Public Coverage Gap Plan
 

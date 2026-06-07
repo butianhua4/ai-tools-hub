@@ -1,13 +1,13 @@
 # Automation Gate
 
-Generated at: 2026-06-07T18:05:21.691Z
+Generated at: 2026-06-07T18:22:15.431Z
 
 Overall: PASS
 
 ## Summary
 
-- Checks: 151
-- Passed: 151
+- Checks: 153
+- Passed: 153
 - Failed: 0
 
 ## Checks
@@ -30,7 +30,7 @@ Overall: PASS
 | project status still stops before publishing | PASS | publicPublished=15, publishableNow=0 |
 | traffic evidence audit passed and is read-only | PASS | failedChecks=0, measuredTrafficSources=0 |
 | traffic is not claimed without measured metrics | PASS | trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 |
-| traffic claim guard found no unsupported claims | PASS | filesScanned=167, unsafeClaims=0, watchMentions=2622 |
+| traffic claim guard found no unsupported claims | PASS | filesScanned=169, unsafeClaims=0, watchMentions=2995 |
 | content integrity audit is read-only and clean | PASS | filesScanned=669, blockingItems=0 |
 | content integrity audit covers public, recommended, and Wave 1 items | PASS | public=15, recommended=3, wave=3 |
 | internal link opportunity audit is read-only and covers expansion candidates | PASS | public=15, expansion=19, broadFirst=8, candidates=22 |
@@ -129,6 +129,8 @@ Overall: PASS
 | broad search demand map links demand, sources, and planned review waves | PASS | officialSources=13, reviewPackMatches=4, waveMatches=24, readyMatches=417 |
 | mass AI search action matrix is read-only and covers broad themes | PASS | items=8/8, broad=10, unique=45, traffic=false |
 | mass AI search action matrix keeps prompt and deployment work human-gated | PASS | ready=8, deploy=6, prompt=2, unsafe=0 |
+| popular AI prompt playbook is read-only and covers broad prompt demand | PASS | items=10, work=3, agent=3, memory=1, sources=12 |
+| popular AI prompt playbook keeps templates human-gated and publish-safe | PASS | ready=10, templates=50, queries=127, uniqueFiles=21, publishConfirm=0 |
 | public coverage gap plan is read-only and covers every no-public broad theme | PASS | gapThemes=8, items=8, uniqueFiles=8, duplicateFiles=0 |
 | public coverage gap plan keeps candidates safe for manual review | PASS | ready=8, unsafe=0, waves=4 |
 | public coverage gap preflight is read-only and covers gap plan items | PASS | items=13, planItems=8, broadFirst=8, uniqueFiles=13 |

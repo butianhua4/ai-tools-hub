@@ -1556,6 +1556,40 @@ type MassAiSearchMatrix = {
   }>;
 };
 
+type PopularAiPromptPlaybook = {
+  summary: {
+    agentDeploymentLanes: number;
+    broadWorkPromptLanes: number;
+    deploymentBridgeItems: number;
+    humanGatedItems: number;
+    items: number;
+    itemsReadyForHumanReviewPrep: number;
+    itemsWithCandidateFiles: number;
+    memoryLanes: number;
+    officialSources: number;
+    promptModuleBridgeItems: number;
+    promptTemplates: number;
+    publishConfirmCommandsIncluded: number;
+    searchQueries: number;
+    trafficDataAvailable: boolean;
+    uniqueCandidateFiles: number;
+    unsafeItems: number;
+  };
+  topItems: Array<{
+    audience: string;
+    candidateFiles: string[];
+    deploymentBridgeFiles: string[];
+    laneId: string;
+    promptModuleBridgeFiles: string[];
+    promptTemplates: unknown[];
+    publicMatches: number;
+    readyForHumanReviewPrep: boolean;
+    searchQueries: string[];
+    sourceTargets: string[];
+    title: string;
+  }>;
+};
+
 type PublicCoverageGapPlan = {
   items: Array<{
     file: string;
@@ -1672,6 +1706,7 @@ const reports = {
   searchDemandIntake: readJson<SearchDemandIntake>("content/automation/search-demand-intake.json"),
   broadSearchDemand: readJson<BroadSearchDemand>("content/automation/broad-search-demand-map.json"),
   massAiSearchMatrix: readJson<MassAiSearchMatrix>("content/automation/mass-ai-search-action-matrix.json"),
+  popularAiPromptPlaybook: readJson<PopularAiPromptPlaybook>("content/automation/popular-ai-prompt-playbook.json"),
   publicCoverageGapPlan: readJson<PublicCoverageGapPlan>("content/automation/public-coverage-gap-plan.json"),
   publicCoverageGapPreflight: readJson<PublicCoverageGapPreflight>("content/automation/public-coverage-gap-preflight.json"),
   publicCoverageGapDecisionPack: readJson<PublicCoverageGapDecisionPack>("content/automation/public-coverage-gap-decision-pack.json"),
@@ -2414,6 +2449,25 @@ const payload = {
     unsafeItems: reports.massAiSearchMatrix.data?.summary.unsafeItems ?? null,
     waves: reports.massAiSearchMatrix.data?.summary.waves ?? null,
   },
+  popularAiPromptPlaybook: {
+    agentDeploymentLanes: reports.popularAiPromptPlaybook.data?.summary.agentDeploymentLanes ?? null,
+    broadWorkPromptLanes: reports.popularAiPromptPlaybook.data?.summary.broadWorkPromptLanes ?? null,
+    deploymentBridgeItems: reports.popularAiPromptPlaybook.data?.summary.deploymentBridgeItems ?? null,
+    humanGatedItems: reports.popularAiPromptPlaybook.data?.summary.humanGatedItems ?? null,
+    items: reports.popularAiPromptPlaybook.data?.summary.items ?? null,
+    itemsReadyForHumanReviewPrep: reports.popularAiPromptPlaybook.data?.summary.itemsReadyForHumanReviewPrep ?? null,
+    itemsWithCandidateFiles: reports.popularAiPromptPlaybook.data?.summary.itemsWithCandidateFiles ?? null,
+    memoryLanes: reports.popularAiPromptPlaybook.data?.summary.memoryLanes ?? null,
+    officialSources: reports.popularAiPromptPlaybook.data?.summary.officialSources ?? null,
+    promptModuleBridgeItems: reports.popularAiPromptPlaybook.data?.summary.promptModuleBridgeItems ?? null,
+    promptTemplates: reports.popularAiPromptPlaybook.data?.summary.promptTemplates ?? null,
+    publishConfirmCommandsIncluded: reports.popularAiPromptPlaybook.data?.summary.publishConfirmCommandsIncluded ?? null,
+    searchQueries: reports.popularAiPromptPlaybook.data?.summary.searchQueries ?? null,
+    top: reports.popularAiPromptPlaybook.data?.topItems ?? [],
+    trafficDataAvailable: reports.popularAiPromptPlaybook.data?.summary.trafficDataAvailable ?? null,
+    uniqueCandidateFiles: reports.popularAiPromptPlaybook.data?.summary.uniqueCandidateFiles ?? null,
+    unsafeItems: reports.popularAiPromptPlaybook.data?.summary.unsafeItems ?? null,
+  },
   publicCoverageGapPlan: {
     duplicateFiles: reports.publicCoverageGapPlan.data?.summary.duplicateFiles ?? null,
     gapThemes: reports.publicCoverageGapPlan.data?.summary.gapThemes ?? null,
@@ -2709,6 +2763,13 @@ function buildNextActions() {
   }
   if (!reports.massAiSearchMatrix.data || reports.massAiSearchMatrix.data.summary.unsafeItems > 0) {
     return ["Open docs/mass-ai-search-action-matrix.md and resolve unsafe broad AI search action items before manual review."];
+  }
+  if (
+    !reports.popularAiPromptPlaybook.data ||
+    reports.popularAiPromptPlaybook.data.summary.unsafeItems > 0 ||
+    reports.popularAiPromptPlaybook.data.summary.publishConfirmCommandsIncluded > 0
+  ) {
+    return ["Open docs/popular-ai-prompt-playbook.md and resolve popular AI prompt playbook guardrail issues before manual review."];
   }
   if (!reports.broadFirstCoverageLaunchPack.data || reports.broadFirstCoverageLaunchPack.data.summary.unsafeItems > 0) {
     return ["Open docs/broad-first-coverage-launch-pack.md and resolve unsafe first-coverage launch candidates before any approval action."];
@@ -3937,6 +3998,30 @@ function toMarkdown(data: typeof payload) {
     "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ...data.massAiSearchMatrix.top.map((item) => (
       `| ${item.editorialWave} | ${item.readyForHumanReviewPrep} | ${item.publicMatches} | ${item.candidateFiles.length} | ${item.sourceTargets.length} | ${item.searchSeeds.length} | ${item.deploymentMatches} | ${item.promptModuleMatches} | ${item.lane} | ${item.themeTitle} |`
+    )),
+    "",
+    "## Popular AI Prompt Playbook",
+    "",
+    `- Items: ${data.popularAiPromptPlaybook.items}`,
+    `- Ready for human review prep: ${data.popularAiPromptPlaybook.itemsReadyForHumanReviewPrep}`,
+    `- Human-gated items: ${data.popularAiPromptPlaybook.humanGatedItems}`,
+    `- Prompt templates: ${data.popularAiPromptPlaybook.promptTemplates}`,
+    `- Search queries: ${data.popularAiPromptPlaybook.searchQueries}`,
+    `- Official sources: ${data.popularAiPromptPlaybook.officialSources}`,
+    `- Unique candidate files: ${data.popularAiPromptPlaybook.uniqueCandidateFiles}`,
+    `- Broad work prompt lanes: ${data.popularAiPromptPlaybook.broadWorkPromptLanes}`,
+    `- Agent/deployment lanes: ${data.popularAiPromptPlaybook.agentDeploymentLanes}`,
+    `- Memory lanes: ${data.popularAiPromptPlaybook.memoryLanes}`,
+    `- Deployment bridge items: ${data.popularAiPromptPlaybook.deploymentBridgeItems}`,
+    `- Prompt module bridge items: ${data.popularAiPromptPlaybook.promptModuleBridgeItems}`,
+    `- Publish confirm commands included: ${data.popularAiPromptPlaybook.publishConfirmCommandsIncluded}`,
+    `- Traffic data available: ${data.popularAiPromptPlaybook.trafficDataAvailable}`,
+    `- Unsafe items: ${data.popularAiPromptPlaybook.unsafeItems}`,
+    "",
+    "| Ready | Candidates | Templates | Queries | Sources | Public | Lane | Audience |",
+    "| --- | ---: | ---: | ---: | ---: | ---: | --- | --- |",
+    ...data.popularAiPromptPlaybook.top.map((item) => (
+      `| ${item.readyForHumanReviewPrep} | ${item.candidateFiles.length} | ${item.promptTemplates.length} | ${item.searchQueries.length} | ${item.sourceTargets.length} | ${item.publicMatches} | ${item.title} | ${item.audience} |`
     )),
     "",
     "## Public Coverage Gap Plan",

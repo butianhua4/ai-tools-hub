@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-07T18:05:21.691Z",
+  "generatedAt": "2026-06-07T18:22:15.431Z",
   "ok": true,
   "summary": {
-    "checks": 151,
+    "checks": 153,
     "failed": 0,
-    "passed": 151
+    "passed": 153
   },
   "failed": [],
   "checks": [
@@ -90,7 +90,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=167, unsafeClaims=0, watchMentions=2622"
+      "detail": "filesScanned=169, unsafeClaims=0, watchMentions=2995"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -581,6 +581,16 @@
       "name": "mass AI search action matrix keeps prompt and deployment work human-gated",
       "ok": true,
       "detail": "ready=8, deploy=6, prompt=2, unsafe=0"
+    },
+    {
+      "name": "popular AI prompt playbook is read-only and covers broad prompt demand",
+      "ok": true,
+      "detail": "items=10, work=3, agent=3, memory=1, sources=12"
+    },
+    {
+      "name": "popular AI prompt playbook keeps templates human-gated and publish-safe",
+      "ok": true,
+      "detail": "ready=10, templates=50, queries=127, uniqueFiles=21, publishConfirm=0"
     },
     {
       "name": "public coverage gap plan is read-only and covers every no-public broad theme",

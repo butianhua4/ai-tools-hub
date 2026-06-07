@@ -402,6 +402,43 @@ async function main() {
       waves: number;
     };
   }>("content/automation/mass-ai-search-action-matrix.json");
+  const popularAiPromptPlaybook = readJson<{
+    guardrails: { autoCreateArticles: boolean; autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    items?: Array<{
+      candidateFiles?: unknown[];
+      commandBoundary?: { markReviewAfterHumanApproval?: string; publishConfirm?: string; publishDryRunAfterReview?: string; stopBefore?: string };
+      deploymentBridgeFiles?: unknown[];
+      promptModuleBridgeFiles?: unknown[];
+      promptTemplates?: Array<{ copyPrompt?: string; inputFields?: unknown[]; outputBlocks?: unknown[]; qualityChecklist?: unknown[]; riskControls?: unknown[] }>;
+      readyForHumanReviewPrep?: boolean;
+      searchQueries?: unknown[];
+      sourceTargets?: unknown[];
+      trafficClaim?: string;
+      unsafeReasons?: unknown[];
+    }>;
+    sourceEvidence?: { officialSources?: unknown[] };
+    summary: {
+      agentDeploymentLanes: number;
+      broadWorkPromptLanes: number;
+      commandBoundaries: number;
+      deploymentBridgeItems: number;
+      humanGatedItems: number;
+      items: number;
+      itemsReadyForHumanReviewPrep: number;
+      itemsWithCandidateFiles: number;
+      itemsWithOfficialSources: number;
+      memoryLanes: number;
+      officialSources: number;
+      promptModuleBridgeItems: number;
+      promptTemplates: number;
+      publishConfirmCommandsIncluded: number;
+      searchQueries: number;
+      sourceTargets: number;
+      trafficDataAvailable: boolean;
+      uniqueCandidateFiles: number;
+      unsafeItems: number;
+    };
+  }>("content/automation/popular-ai-prompt-playbook.json");
   const publicCoverageGapPlan = readJson<{
     guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
     items?: Array<{ noindex?: boolean; readyForManualReview?: boolean; safeDraft?: boolean; searchSeeds?: unknown[]; sourceTargets?: unknown[] }>;
@@ -3295,6 +3332,64 @@ async function main() {
           ),
         ),
       detail: `ready=${massAiSearchMatrix.summary.itemsReadyForHumanReviewPrep}, deploy=${massAiSearchMatrix.summary.deploymentBridgedThemes}, prompt=${massAiSearchMatrix.summary.promptBridgedThemes}, unsafe=${massAiSearchMatrix.summary.unsafeItems}`,
+    },
+    {
+      name: "popular AI prompt playbook is read-only and covers broad prompt demand",
+      ok:
+        popularAiPromptPlaybook.guardrails.autoCreateArticles === false &&
+        popularAiPromptPlaybook.guardrails.autoEditArticles === false &&
+        popularAiPromptPlaybook.guardrails.autoMarkReview === false &&
+        popularAiPromptPlaybook.guardrails.autoPublish === false &&
+        popularAiPromptPlaybook.guardrails.trafficClaim === "not-included" &&
+        popularAiPromptPlaybook.summary.items >= 10 &&
+        popularAiPromptPlaybook.summary.broadWorkPromptLanes >= 3 &&
+        popularAiPromptPlaybook.summary.agentDeploymentLanes >= 3 &&
+        popularAiPromptPlaybook.summary.memoryLanes >= 1 &&
+        popularAiPromptPlaybook.summary.officialSources >= 10 &&
+        (popularAiPromptPlaybook.sourceEvidence?.officialSources?.length || 0) >= 10 &&
+        popularAiPromptPlaybook.summary.trafficDataAvailable === false,
+      detail: `items=${popularAiPromptPlaybook.summary.items}, work=${popularAiPromptPlaybook.summary.broadWorkPromptLanes}, agent=${popularAiPromptPlaybook.summary.agentDeploymentLanes}, memory=${popularAiPromptPlaybook.summary.memoryLanes}, sources=${popularAiPromptPlaybook.summary.officialSources}`,
+    },
+    {
+      name: "popular AI prompt playbook keeps templates human-gated and publish-safe",
+      ok:
+        popularAiPromptPlaybook.summary.unsafeItems === 0 &&
+        popularAiPromptPlaybook.summary.humanGatedItems === popularAiPromptPlaybook.summary.items &&
+        popularAiPromptPlaybook.summary.itemsReadyForHumanReviewPrep === popularAiPromptPlaybook.summary.items &&
+        popularAiPromptPlaybook.summary.itemsWithCandidateFiles === popularAiPromptPlaybook.summary.items &&
+        popularAiPromptPlaybook.summary.itemsWithOfficialSources === popularAiPromptPlaybook.summary.items &&
+        popularAiPromptPlaybook.summary.commandBoundaries === popularAiPromptPlaybook.summary.items &&
+        popularAiPromptPlaybook.summary.publishConfirmCommandsIncluded === 0 &&
+        popularAiPromptPlaybook.summary.promptTemplates >= popularAiPromptPlaybook.summary.items * 5 &&
+        popularAiPromptPlaybook.summary.searchQueries >= 100 &&
+        popularAiPromptPlaybook.summary.uniqueCandidateFiles >= 20 &&
+        popularAiPromptPlaybook.summary.deploymentBridgeItems >= 5 &&
+        popularAiPromptPlaybook.summary.promptModuleBridgeItems >= 5 &&
+        Boolean(
+          popularAiPromptPlaybook.items?.every(
+            (item) =>
+              item.readyForHumanReviewPrep === true &&
+              item.trafficClaim === "not-included" &&
+              (item.unsafeReasons?.length || 0) === 0 &&
+              (item.candidateFiles?.length || 0) > 0 &&
+              (item.searchQueries?.length || 0) >= 10 &&
+              (item.sourceTargets?.length || 0) >= 5 &&
+              (item.promptTemplates?.length || 0) >= 5 &&
+              item.commandBoundary?.markReviewAfterHumanApproval?.includes("--confirm-human") &&
+              !item.commandBoundary?.publishDryRunAfterReview?.includes("--confirm") &&
+              item.commandBoundary?.publishConfirm === "not-included" &&
+              item.commandBoundary?.stopBefore?.includes("explicit human approval") &&
+              (item.promptTemplates || []).every(
+                (template) =>
+                  (template.copyPrompt?.length || 0) >= 300 &&
+                  (template.inputFields?.length || 0) >= 5 &&
+                  (template.outputBlocks?.length || 0) >= 5 &&
+                  (template.qualityChecklist?.length || 0) >= 5 &&
+                  (template.riskControls?.length || 0) >= 4,
+              ),
+          ),
+        ),
+      detail: `ready=${popularAiPromptPlaybook.summary.itemsReadyForHumanReviewPrep}, templates=${popularAiPromptPlaybook.summary.promptTemplates}, queries=${popularAiPromptPlaybook.summary.searchQueries}, uniqueFiles=${popularAiPromptPlaybook.summary.uniqueCandidateFiles}, publishConfirm=${popularAiPromptPlaybook.summary.publishConfirmCommandsIncluded}`,
     },
     {
       name: "public coverage gap plan is read-only and covers every no-public broad theme",
