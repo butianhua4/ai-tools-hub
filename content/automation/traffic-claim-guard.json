@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T01:27:10.269Z",
+  "generatedAt": "2026-06-07T01:36:17.338Z",
   "guardrails": {
     "autoPublish": false,
     "note": "This guard scans operational docs and automation reports for unsupported traffic claims. It does not scan draft article teaching examples."
@@ -47,6 +47,30 @@
       "line": 47,
       "reason": "traffic-related mention",
       "text": "\"- The site does not claim real traffic, impressions, income guarantees, or automatic publishing.\","
+    },
+    {
+      "file": "docs/NEXT_ACTIONS.md",
+      "line": 24,
+      "reason": "traffic-related mention",
+      "text": "## 4. 收款和流量收益"
+    },
+    {
+      "file": "docs/NEXT_ACTIONS.md",
+      "line": 29,
+      "reason": "traffic-related mention",
+      "text": "- 稳定流量后再接联盟链接和广告。"
+    },
+    {
+      "file": "docs/NEXT_ACTIONS.md",
+      "line": 46,
+      "reason": "traffic-related mention",
+      "text": "- 有 5 篇以上人工审核公开文章：注册 Google Search Console。"
+    },
+    {
+      "file": "docs/NEXT_ACTIONS.md",
+      "line": 47,
+      "reason": "traffic-related mention",
+      "text": "- 有稳定访问：开启 Vercel Web Analytics 或 Google Analytics。"
     },
     {
       "file": "docs/ai-deployment-coverage.md",
@@ -465,30 +489,6 @@
     {
       "file": "docs/content-opportunity-backlog.md",
       "line": 96,
-      "reason": "traffic-related mention",
-      "text": "- Search demand note: Broad search-intent theme, not measured traffic or keyword volume."
-    },
-    {
-      "file": "docs/content-opportunity-backlog.md",
-      "line": 127,
-      "reason": "traffic-related mention",
-      "text": "- Search demand note: Broad search-intent theme, not measured traffic or keyword volume."
-    },
-    {
-      "file": "docs/content-opportunity-backlog.md",
-      "line": 157,
-      "reason": "traffic-related mention",
-      "text": "- Search demand note: Broad search-intent theme, not measured traffic or keyword volume."
-    },
-    {
-      "file": "docs/content-opportunity-backlog.md",
-      "line": 187,
-      "reason": "traffic-related mention",
-      "text": "- Search demand note: Broad search-intent theme, not measured traffic or keyword volume."
-    },
-    {
-      "file": "docs/content-opportunity-backlog.md",
-      "line": 217,
       "reason": "traffic-related mention",
       "text": "- Search demand note: Broad search-intent theme, not measured traffic or keyword volume."
     }

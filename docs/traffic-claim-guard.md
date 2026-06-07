@@ -1,5 +1,5 @@
 # Traffic Claim Guard
-Generated at: 2026-06-07T01:27:10.269Z
+Generated at: 2026-06-07T01:36:17.338Z
 This guard scans operational reports and docs for unsupported claims that real traffic, clicks, impressions, or visits already exist.
 ## Guardrails
 - Auto publish: false
@@ -20,6 +20,10 @@ None.
 | README.md | 250 | 4. 每次只发布 1-3 篇人工审核文章，观察收录和点击。 |
 | README.md | 276 | - Google Search Console 提交清单：`docs/search-console-setup.md` |
 | app/llms.txt/route.ts | 47 | "- The site does not claim real traffic, impressions, income guarantees, or automatic publishing.", |
+| docs/NEXT_ACTIONS.md | 24 | ## 4. 收款和流量收益 |
+| docs/NEXT_ACTIONS.md | 29 | - 稳定流量后再接联盟链接和广告。 |
+| docs/NEXT_ACTIONS.md | 46 | - 有 5 篇以上人工审核公开文章：注册 Google Search Console。 |
+| docs/NEXT_ACTIONS.md | 47 | - 有稳定访问：开启 Vercel Web Analytics 或 Google Analytics。 |
 | docs/ai-deployment-coverage.md | 11 | - Note: This coverage matrix is read-only. It organizes deployment, Agent, RAG, and model infrastructure drafts for manual review and does not claim measured traffic. |
 | docs/ai-deployment-review-pack.md | 17 | - Traffic note: Search queries are broad intent seeds, not measured traffic, rankings, clicks, impressions, or income. |
 | docs/ai-deployment-review-pack.md | 113 | - No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim. |
@@ -90,10 +94,6 @@ None.
 | docs/content-opportunity-backlog.md | 36 | - Search demand note: Broad search-intent theme, not measured traffic or keyword volume. |
 | docs/content-opportunity-backlog.md | 66 | - Search demand note: Broad search-intent theme, not measured traffic or keyword volume. |
 | docs/content-opportunity-backlog.md | 96 | - Search demand note: Broad search-intent theme, not measured traffic or keyword volume. |
-| docs/content-opportunity-backlog.md | 127 | - Search demand note: Broad search-intent theme, not measured traffic or keyword volume. |
-| docs/content-opportunity-backlog.md | 157 | - Search demand note: Broad search-intent theme, not measured traffic or keyword volume. |
-| docs/content-opportunity-backlog.md | 187 | - Search demand note: Broad search-intent theme, not measured traffic or keyword volume. |
-| docs/content-opportunity-backlog.md | 217 | - Search demand note: Broad search-intent theme, not measured traffic or keyword volume. |
 ## Next Actions
 - Keep saying that live/search surfaces are healthy, not that traffic exists.
 - Only report traffic after an audited source provides clicks, impressions, visits, or pageviews.

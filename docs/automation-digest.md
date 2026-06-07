@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T01:27:20.640Z
+Generated at: 2026-06-07T01:36:18.250Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -53,7 +53,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=it
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=zh-cn
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
 - https://docs.dify.ai -> https://docs.dify.ai/en/use-dify/getting-started/introduction
@@ -345,8 +345,8 @@ Unsafe human-review playbook items:
 | deployment: RAG、知识库和向量检索 | 348 | 0 | 5 |
 | content-backlog: RAG、知识库和向量检索 | 342 | 0 | 5 |
 | deployment: Agent 部署、工具调用和工作流 | 338 | 0 | 5 |
-| content-backlog: 全行业 AI 提示词和工作流模板 | 334 | 0 | 5 |
 | content-backlog: Agent 部署、工具调用和记忆 | 334 | 0 | 5 |
+| content-backlog: 全行业 AI 提示词和工作流模板 | 334 | 0 | 5 |
 | industry-prompt: 全行业提示词模板库 | 324 | 0 | 4 |
 
 Next review files:
@@ -806,7 +806,7 @@ Next review files:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-07T01:26:44.697Z
+- Latest check: 2026-06-07T01:36:16.328Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85
