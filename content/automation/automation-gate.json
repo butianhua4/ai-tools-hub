@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-07T17:54:54.727Z",
+  "generatedAt": "2026-06-07T18:05:21.691Z",
   "ok": true,
   "summary": {
-    "checks": 149,
+    "checks": 151,
     "failed": 0,
-    "passed": 149
+    "passed": 151
   },
   "failed": [],
   "checks": [
@@ -90,7 +90,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=165, unsafeClaims=0, watchMentions=2565"
+      "detail": "filesScanned=167, unsafeClaims=0, watchMentions=2622"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -341,6 +341,16 @@
       "name": "broad first coverage readiness matrix has review evidence and command boundaries",
       "ok": true,
       "detail": "commands=8, preflight=8, source=8, links=8"
+    },
+    {
+      "name": "human approval execution queue is read-only and covers approval wave",
+      "ok": true,
+      "detail": "items=8, immediate=3, backlog=5, projected=18"
+    },
+    {
+      "name": "human approval execution queue stays human-gated and excludes publish confirm",
+      "ok": true,
+      "detail": "ready=8, sourceDecisions=7, seoWarnings=2, publishConfirm=0"
     },
     {
       "name": "review optimization brief is read-only and covers ready action-board tasks",

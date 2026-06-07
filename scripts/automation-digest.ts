@@ -454,6 +454,46 @@ type BroadFirstCoverageReadinessMatrix = {
   };
 };
 
+type HumanApprovalQueue = {
+  items: Array<{
+    articleState: { humanReviewRequired: boolean; noindex: boolean; qualityScore: number; sourceNotes: boolean; status: string };
+    commandBoundary: { markReviewAfterHumanApproval: string; publishConfirm: string; publishDryRunAfterReview: string };
+    currentStage: string;
+    file: string;
+    humanChecklist: unknown[];
+    massSearchThemes: unknown[];
+    priorityScore: number;
+    projectedPublishableAfterHumanApproval: boolean;
+    readyForHumanApproval: boolean;
+    seoWarnings: unknown[];
+    sourceReplacementDecisions: unknown[];
+    title: string;
+    unsafeReasons: unknown[];
+  }>;
+  publishingBoundary: {
+    currentPublicPublished: number;
+    currentPublishableNow: number;
+    projectedPublicPublishedAfterImmediateHumanApproval: number;
+    publishConfirmCommandsIncluded: number;
+  };
+  summary: {
+    backlogItems: number;
+    commandBoundaries: number;
+    humanGatedItems: number;
+    immediateApprovalItems: number;
+    immediateApprovalReadyItems: number;
+    items: number;
+    itemsReadyForHumanApproval: number;
+    itemsWithFailedSourceDecision: number;
+    itemsWithMassSearchTheme: number;
+    itemsWithSeoWarnings: number;
+    itemsWithSourceReplacementDecisions: number;
+    publishConfirmCommandsIncluded: number;
+    trafficDataAvailable: boolean;
+    unsafeItems: number;
+  };
+};
+
 type ContentIntegrity = {
   summary: {
     allIssueItems: number;
@@ -1700,6 +1740,7 @@ const reports = {
   autopilotBroadWaveRemediation: readJson<AutopilotBroadWaveRemediationPack>("content/automation/autopilot-broad-wave-remediation-pack.json"),
   broadFirstCoverageLaunchPack: readJson<BroadFirstCoverageLaunchPack>("content/automation/broad-first-coverage-launch-pack.json"),
   broadFirstCoverageReadinessMatrix: readJson<BroadFirstCoverageReadinessMatrix>("content/automation/broad-first-coverage-readiness-matrix.json"),
+  humanApprovalQueue: readJson<HumanApprovalQueue>("content/automation/human-approval-execution-queue.json"),
   reviewOptimizationBrief: readJson<ReviewOptimizationBrief>("content/automation/review-optimization-brief.json"),
   reviewCannibalizationBrief: readJson<ReviewCannibalizationBrief>("content/automation/review-cannibalization-brief.json"),
   reviewCollisionDecisionPack: readJson<ReviewCollisionDecisionPack>("content/automation/review-collision-decision-pack.json"),
@@ -2286,6 +2327,27 @@ const payload = {
     warningItems: reports.broadFirstCoverageReadinessMatrix.data?.summary.warningItems ?? null,
     zeroPublicClusters: reports.broadFirstCoverageReadinessMatrix.data?.summary.zeroPublicClusters ?? null,
   },
+  humanApprovalQueue: {
+    backlogItems: reports.humanApprovalQueue.data?.summary.backlogItems ?? null,
+    commandBoundaries: reports.humanApprovalQueue.data?.summary.commandBoundaries ?? null,
+    currentPublicPublished: reports.humanApprovalQueue.data?.publishingBoundary.currentPublicPublished ?? null,
+    currentPublishableNow: reports.humanApprovalQueue.data?.publishingBoundary.currentPublishableNow ?? null,
+    humanGatedItems: reports.humanApprovalQueue.data?.summary.humanGatedItems ?? null,
+    immediateApprovalItems: reports.humanApprovalQueue.data?.summary.immediateApprovalItems ?? null,
+    immediateApprovalReadyItems: reports.humanApprovalQueue.data?.summary.immediateApprovalReadyItems ?? null,
+    items: reports.humanApprovalQueue.data?.summary.items ?? null,
+    itemsReadyForHumanApproval: reports.humanApprovalQueue.data?.summary.itemsReadyForHumanApproval ?? null,
+    itemsWithFailedSourceDecision: reports.humanApprovalQueue.data?.summary.itemsWithFailedSourceDecision ?? null,
+    itemsWithMassSearchTheme: reports.humanApprovalQueue.data?.summary.itemsWithMassSearchTheme ?? null,
+    itemsWithSeoWarnings: reports.humanApprovalQueue.data?.summary.itemsWithSeoWarnings ?? null,
+    itemsWithSourceReplacementDecisions: reports.humanApprovalQueue.data?.summary.itemsWithSourceReplacementDecisions ?? null,
+    projectedPublicPublishedAfterImmediateHumanApproval:
+      reports.humanApprovalQueue.data?.publishingBoundary.projectedPublicPublishedAfterImmediateHumanApproval ?? null,
+    publishConfirmCommandsIncluded: reports.humanApprovalQueue.data?.summary.publishConfirmCommandsIncluded ?? null,
+    top: reports.humanApprovalQueue.data?.items ?? [],
+    trafficDataAvailable: reports.humanApprovalQueue.data?.summary.trafficDataAvailable ?? null,
+    unsafeItems: reports.humanApprovalQueue.data?.summary.unsafeItems ?? null,
+  },
   preflight: {
     checked: reports.preflight.data?.summary.checked ?? null,
     failed: reports.preflight.data?.summary.failed ?? null,
@@ -2653,6 +2715,9 @@ function buildNextActions() {
   }
   if (!reports.broadFirstCoverageReadinessMatrix.data || reports.broadFirstCoverageReadinessMatrix.data.summary.unsafeItems > 0) {
     return ["Open docs/broad-first-coverage-readiness-matrix.md and resolve first-coverage readiness blockers before any approval action."];
+  }
+  if (!reports.humanApprovalQueue.data || reports.humanApprovalQueue.data.summary.unsafeItems > 0 || reports.humanApprovalQueue.data.summary.publishConfirmCommandsIncluded > 0) {
+    return ["Open docs/human-approval-execution-queue.md and resolve approval queue guardrail issues before any approval action."];
   }
   if (!reports.reviewOptimizationBrief.data || reports.reviewOptimizationBrief.data.summary.unsafeCommands > 0) {
     return ["Open docs/review-optimization-brief.md and resolve unsafe or missing copydesk guidance before manual review."];
@@ -3469,6 +3534,30 @@ function toMarkdown(data: typeof payload) {
     ...data.broadFirstCoverageReadinessMatrix.items.map(
       (item) =>
         `| ${item.cluster} | ${item.searchSignals.exactSeedMatches ?? "n/a"} | ${item.searchSignals.exactQueryMatches ?? "n/a"} | ${item.sourceSignals.sourceTargets ?? item.sourceSignals.launchSourceTargets} | ${item.sourceSignals.reachableSources ?? "n/a"} | ${item.reviewActions.length} |`,
+    ),
+    "",
+    "## Human Approval Execution Queue",
+    "",
+    `- Current public published: ${data.humanApprovalQueue.currentPublicPublished}`,
+    `- Current publishable now: ${data.humanApprovalQueue.currentPublishableNow}`,
+    `- Projected public after immediate human approval: ${data.humanApprovalQueue.projectedPublicPublishedAfterImmediateHumanApproval}`,
+    `- Immediate approval items: ${data.humanApprovalQueue.immediateApprovalItems}`,
+    `- Immediate approval ready items: ${data.humanApprovalQueue.immediateApprovalReadyItems}`,
+    `- Backlog items: ${data.humanApprovalQueue.backlogItems}`,
+    `- Items ready for human approval: ${data.humanApprovalQueue.itemsReadyForHumanApproval}`,
+    `- Items with source replacement decisions: ${data.humanApprovalQueue.itemsWithSourceReplacementDecisions}`,
+    `- Items with failed source decision: ${data.humanApprovalQueue.itemsWithFailedSourceDecision}`,
+    `- Items with SEO warnings: ${data.humanApprovalQueue.itemsWithSeoWarnings}`,
+    `- Items with mass search theme: ${data.humanApprovalQueue.itemsWithMassSearchTheme}`,
+    `- Publish confirm commands included: ${data.humanApprovalQueue.publishConfirmCommandsIncluded}`,
+    `- Traffic data available: ${data.humanApprovalQueue.trafficDataAvailable}`,
+    `- Unsafe items: ${data.humanApprovalQueue.unsafeItems}`,
+    "",
+    "| Stage | Ready | Priority | SEO | Source decisions | Mass themes | Status | Title | File |",
+    "| --- | --- | ---: | ---: | ---: | ---: | --- | --- | --- |",
+    ...data.humanApprovalQueue.top.map(
+      (item) =>
+        `| ${item.currentStage} | ${item.readyForHumanApproval} | ${item.priorityScore} | ${item.seoWarnings.length} | ${item.sourceReplacementDecisions.length} | ${item.massSearchThemes.length} | ${item.articleState.status} | ${item.title} | ${item.file} |`,
     ),
     "",
     "## Review Optimization Brief",

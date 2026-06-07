@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-07T17:54:03.518Z",
+  "generatedAt": "2026-06-07T18:04:34.162Z",
   "guardrails": {
     "autoPublish": false,
     "note": "This guard scans operational docs and automation reports for unsupported traffic claims. It does not scan draft article teaching examples."
   },
   "summary": {
-    "filesScanned": 165,
+    "filesScanned": 167,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
-    "watchMentions": 2565
+    "watchMentions": 2622
   },
   "unsafeClaims": [],
   "watchMentions": [
@@ -158,73 +158,79 @@
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 873,
+      "line": 807,
       "reason": "traffic-related mention",
       "text": "- Traffic data available: false"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 1025,
+      "line": 901,
+      "reason": "traffic-related mention",
+      "text": "- Traffic data available: false"
+    },
+    {
+      "file": "docs/automation-digest.md",
+      "line": 1053,
       "reason": "traffic-related mention",
       "text": "## Traffic Evidence"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 1027,
+      "line": 1055,
       "reason": "traffic-related mention",
       "text": "- Traffic data available: false"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 1028,
+      "line": 1056,
       "reason": "traffic-related mention",
       "text": "- Can claim traffic: false"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 1030,
+      "line": 1058,
       "reason": "traffic-related mention",
       "text": "- Measured traffic sources: none"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 1031,
+      "line": 1059,
       "reason": "traffic-related mention",
       "text": "- Search Console verification evidence: false"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 1034,
+      "line": 1062,
       "reason": "traffic-related mention",
       "text": "- Unsupported traffic claims: 0"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 1035,
+      "line": 1063,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim files scanned: 163"
+      "text": "- Traffic claim files scanned: 165"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 1036,
+      "line": 1064,
       "reason": "traffic-related mention",
-      "text": "- Traffic claim watch mentions: 2489"
+      "text": "- Traffic claim watch mentions: 2565"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 1049,
+      "line": 1077,
       "reason": "traffic-related mention",
       "text": "- Traffic data available: false"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 1124,
+      "line": 1152,
       "reason": "traffic-related mention",
       "text": "| Dify、n8n、MCP 和无代码 AI 自动化 | 258 | 0 | 5 | 无代码 AI 自动化容易吸引搜索流量，也最需要平台规则和权限边界提醒。 |"
     },
     {
       "file": "docs/automation-digest.md",
-      "line": 1200,
+      "line": 1228,
       "reason": "traffic-related mention",
       "text": "- Traffic data available: false"
     },
@@ -244,11 +250,11 @@
       "file": "docs/automation-gate.md",
       "line": 33,
       "reason": "traffic-related mention",
-      "text": "| traffic claim guard found no unsupported claims | PASS | filesScanned=163, unsafeClaims=0, watchMentions=2489 |"
+      "text": "| traffic claim guard found no unsupported claims | PASS | filesScanned=165, unsafeClaims=0, watchMentions=2565 |"
     },
     {
       "file": "docs/automation-gate.md",
-      "line": 128,
+      "line": 130,
       "reason": "traffic-related mention",
       "text": "| mass AI search action matrix is read-only and covers broad themes | PASS | items=8/8, broad=10, unique=45, traffic=false |"
     },
@@ -483,12 +489,6 @@
     {
       "file": "docs/autopilot-broad-freshness-triage.md",
       "line": 603,
-      "reason": "traffic-related mention",
-      "text": "- Check that pricing, quota, latency, benchmark, ranking, traffic, and revenue language is absent unless backed by current evidence."
-    },
-    {
-      "file": "docs/autopilot-broad-freshness-triage.md",
-      "line": 661,
       "reason": "traffic-related mention",
       "text": "- Check that pricing, quota, latency, benchmark, ranking, traffic, and revenue language is absent unless backed by current evidence."
     }

@@ -1356,6 +1356,39 @@ async function main() {
       zeroPublicClusters: number;
     };
   }>("content/automation/broad-first-coverage-readiness-matrix.json");
+  const humanApprovalQueue = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    items?: Array<{
+      articleState?: { humanReviewRequired?: boolean; noindex?: boolean; qualityScore?: number; sourceNotes?: boolean; status?: string };
+      blockers?: unknown[];
+      commandBoundary?: { markReviewAfterHumanApproval?: string; publishConfirm?: string; publishDryRunAfterReview?: string };
+      humanChecklist?: unknown[];
+      readyForHumanApproval?: boolean;
+      unsafeReasons?: unknown[];
+    }>;
+    publishingBoundary: {
+      currentPublicPublished: number;
+      currentPublishableNow: number;
+      projectedPublicPublishedAfterImmediateHumanApproval: number;
+      publishConfirmCommandsIncluded: number;
+    };
+    summary: {
+      backlogItems: number;
+      commandBoundaries: number;
+      humanGatedItems: number;
+      immediateApprovalItems: number;
+      immediateApprovalReadyItems: number;
+      items: number;
+      itemsReadyForHumanApproval: number;
+      itemsWithFailedSourceDecision: number;
+      itemsWithMassSearchTheme: number;
+      itemsWithSeoWarnings: number;
+      itemsWithSourceReplacementDecisions: number;
+      publishConfirmCommandsIncluded: number;
+      trafficDataAvailable: boolean;
+      unsafeItems: number;
+    };
+  }>("content/automation/human-approval-execution-queue.json");
   const reviewOptimizationBrief = readJson<{
     briefs?: Array<{
       file: string;
@@ -2547,6 +2580,50 @@ async function main() {
           ),
         ),
       detail: `commands=${broadFirstCoverageReadinessMatrix.summary.commandBoundaries}, preflight=${broadFirstCoverageReadinessMatrix.summary.preflightReadyItems}, source=${broadFirstCoverageReadinessMatrix.summary.sourceReadyItems}, links=${broadFirstCoverageReadinessMatrix.summary.itemsWithPublicLinkPath}`,
+    },
+    {
+      name: "human approval execution queue is read-only and covers approval wave",
+      ok:
+        humanApprovalQueue.guardrails.autoEditArticles === false &&
+        humanApprovalQueue.guardrails.autoMarkReview === false &&
+        humanApprovalQueue.guardrails.autoPublish === false &&
+        humanApprovalQueue.guardrails.trafficClaim === "not-included" &&
+        humanApprovalQueue.summary.immediateApprovalItems === waveApprovalPacket.summary.items &&
+        humanApprovalQueue.summary.immediateApprovalReadyItems === waveApprovalPacket.summary.readyForHumanReview &&
+        humanApprovalQueue.summary.backlogItems > 0 &&
+        humanApprovalQueue.summary.items === humanApprovalQueue.summary.immediateApprovalItems + humanApprovalQueue.summary.backlogItems &&
+        humanApprovalQueue.publishingBoundary.currentPublicPublished === wavePublishSimulation.summary.publicPublishedBeforeWave &&
+        humanApprovalQueue.publishingBoundary.projectedPublicPublishedAfterImmediateHumanApproval === wavePublishSimulation.summary.projectedPublicPublishedAfterWave,
+      detail: `items=${humanApprovalQueue.summary.items}, immediate=${humanApprovalQueue.summary.immediateApprovalItems}, backlog=${humanApprovalQueue.summary.backlogItems}, projected=${humanApprovalQueue.publishingBoundary.projectedPublicPublishedAfterImmediateHumanApproval}`,
+    },
+    {
+      name: "human approval execution queue stays human-gated and excludes publish confirm",
+      ok:
+        humanApprovalQueue.summary.unsafeItems === 0 &&
+        humanApprovalQueue.summary.humanGatedItems === humanApprovalQueue.summary.items &&
+        humanApprovalQueue.summary.itemsReadyForHumanApproval === humanApprovalQueue.summary.items &&
+        humanApprovalQueue.summary.commandBoundaries === humanApprovalQueue.summary.items &&
+        humanApprovalQueue.summary.publishConfirmCommandsIncluded === 0 &&
+        humanApprovalQueue.publishingBoundary.publishConfirmCommandsIncluded === 0 &&
+        humanApprovalQueue.summary.trafficDataAvailable === false &&
+        Boolean(
+          humanApprovalQueue.items?.every(
+            (item) =>
+              item.readyForHumanApproval === true &&
+              (item.blockers?.length || 0) === 0 &&
+              (item.unsafeReasons?.length || 0) === 0 &&
+              (item.humanChecklist?.length || 0) >= 6 &&
+              item.articleState?.status === "draft" &&
+              item.articleState.noindex === true &&
+              item.articleState.humanReviewRequired === true &&
+              item.articleState.sourceNotes === true &&
+              (item.articleState.qualityScore || 0) >= 100 &&
+              item.commandBoundary?.markReviewAfterHumanApproval?.includes("--confirm-human") &&
+              !item.commandBoundary?.publishDryRunAfterReview?.includes("--confirm") &&
+              item.commandBoundary?.publishConfirm === "not-included",
+          ),
+        ),
+      detail: `ready=${humanApprovalQueue.summary.itemsReadyForHumanApproval}, sourceDecisions=${humanApprovalQueue.summary.itemsWithSourceReplacementDecisions}, seoWarnings=${humanApprovalQueue.summary.itemsWithSeoWarnings}, publishConfirm=${humanApprovalQueue.summary.publishConfirmCommandsIncluded}`,
     },
     {
       name: "review optimization brief is read-only and covers ready action-board tasks",
