@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T10:13:48.409Z
+Generated at: 2026-06-07T14:28:50.834Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -352,6 +352,33 @@ Unsafe queued playbook items:
 | 8 | true | true | 12/8 | 10/14 | 3 | 36 | true | not-included | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
 | 9 | true | true | 8/8 | 2/6 | 1 | 28 | true | not-included | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
 | 10 | true | true | 5/5 | 3/7 | 3 | 16 | true | not-included | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
+
+## Autopilot Queued Remediation Pack
+
+- Items: 7
+- Queued items: 7
+- Manual fix ready items: 7
+- Items with remediation reasons: 7
+- Items with command boundary: 7
+- Items with internal-link fixes: 7
+- Items with search fixes: 7
+- Items with source checks: 7
+- Items with risk checks: 7
+- Unsafe items: 0
+
+Unsafe queued remediation items:
+
+- none
+
+| Order | Ready | Reasons | Search fixes | Source checks | Link fixes | Risk checks | Mark-review gated | Publish confirm | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 4 | true | 5 | 17 | 40 | 4 | 50 | true | not-included | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
+| 5 | true | 5 | 17 | 22 | 4 | 43 | true | not-included | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
+| 6 | true | 5 | 17 | 26 | 4 | 55 | true | not-included | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| 7 | true | 5 | 17 | 27 | 4 | 57 | true | not-included | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
+| 8 | true | 5 | 17 | 28 | 4 | 60 | true | not-included | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
+| 9 | true | 5 | 17 | 14 | 2 | 47 | true | not-included | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
+| 10 | true | 5 | 10 | 15 | 4 | 34 | true | not-included | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
 
 ## Search Demand Intake
 
@@ -779,8 +806,8 @@ Unsafe first coverage launch items:
 | deployment: RAG、知识库和向量检索 | 348 | 0 | 5 |
 | content-backlog: RAG、知识库和向量检索 | 342 | 0 | 5 |
 | deployment: Agent 部署、工具调用和工作流 | 338 | 0 | 5 |
-| content-backlog: Agent 部署、工具调用和记忆 | 334 | 0 | 5 |
 | content-backlog: 全行业 AI 提示词和工作流模板 | 334 | 0 | 5 |
+| content-backlog: Agent 部署、工具调用和记忆 | 334 | 0 | 5 |
 | industry-prompt: 全行业提示词模板库 | 324 | 0 | 4 |
 
 Next review files:
@@ -877,8 +904,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 149
-- Traffic claim watch mentions: 1694
+- Traffic claim files scanned: 151
+- Traffic claim watch mentions: 1730
 
 ## Public Surface Inventory
 
@@ -898,13 +925,17 @@ Public categories:
 
 - Codex 新手教程: 9
 - Upwork 新手: 2
-- 报价指南: 1
 - 报错解决: 1
-- 收款工具: 1
+- 报价指南: 1
 - 部署教程: 1
+- 收款工具: 1
 
 | Category | Updated | Tags | Title | URL |
 | --- | --- | --- | --- | --- |
+| 报错解决 | 2026-06-02 | 4 | Codex 项目 npm install 报错怎么办：新手排查步骤 | /blog/codex-npm-install-error-beginner-fix |
+| 报价指南 | 2026-06-02 | 4 | 第一个 Upwork 小项目怎么报价：新手范围和底价检查 | /blog/first-upwork-project-pricing-checklist |
+| 部署教程 | 2026-06-02 | 4 | Vercel 提示环境变量缺失怎么办：新手部署检查流程 | /blog/vercel-env-variable-missing-beginner-guide |
+| 收款工具 | 2026-06-02 | 4 | Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看 | /blog/payoneer-wise-paypal-beginner-comparison |
 | Codex 新手教程 | 2026-06-01 | 4 | Codex 怎么做第一个网页 | /blog/build-first-webpage-with-codex |
 | Codex 新手教程 | 2026-06-01 | 4 | Codex 生成代码后怎么审核：交付前检查清单 | /blog/codex-code-review-delivery-checklist |
 | Codex 新手教程 | 2026-06-01 | 4 | Codex 生成代码后怎么审核 | /blog/codex-generated-code-review-guide |
@@ -916,10 +947,6 @@ Public categories:
 | Codex 新手教程 | 2026-06-01 | 4 | Codex 是什么新手怎么开始 | /blog/what-is-codex-beginner-start |
 | Upwork 新手 | 2026-06-02 | 4 | Upwork 客户需求太模糊怎么办：新手分析和追问清单 | /blog/upwork-client-requirements-analysis-beginner |
 | Upwork 新手 | 2026-06-02 | 4 | Upwork Proposal 发出去没人回怎么办：新手检查清单 | /blog/upwork-proposal-no-reply-checklist |
-| 报价指南 | 2026-06-02 | 4 | 第一个 Upwork 小项目怎么报价：新手范围和底价检查 | /blog/first-upwork-project-pricing-checklist |
-| 报错解决 | 2026-06-02 | 4 | Codex 项目 npm install 报错怎么办：新手排查步骤 | /blog/codex-npm-install-error-beginner-fix |
-| 收款工具 | 2026-06-02 | 4 | Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看 | /blog/payoneer-wise-paypal-beginner-comparison |
-| 部署教程 | 2026-06-02 | 4 | Vercel 提示环境变量缺失怎么办：新手部署检查流程 | /blog/vercel-env-variable-missing-beginner-guide |
 
 | Gap score | Public | Ready candidates | Cluster | Suggested files |
 | --- | --- | --- | --- | --- |

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T10:13:16.273Z",
+  "generatedAt": "2026-06-07T14:18:40.950Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -1474,6 +1474,7 @@
       "url": "https://platform.openai.com/docs/guides/retrieval"
     },
     {
+      "error": "AbortError",
       "finalUrl": "https://docs.langchain.com/oss/python/langchain/overview",
       "ok": true,
       "references": [
@@ -3938,6 +3939,7 @@
       "url": "https://platform.openai.com/docs/guides/retrieval"
     },
     {
+      "error": "AbortError",
       "finalUrl": "https://docs.langchain.com/oss/python/langchain/overview",
       "ok": true,
       "references": [
@@ -4208,7 +4210,7 @@
           "url": "https://www.reddit.com/r/Rag/comments/1qjvqd4/vector_dbs_arent_memory_learned_this_the_hard_way/"
         }
       ],
-      "status": 403,
+      "status": 200,
       "url": "https://www.reddit.com/r/Rag/comments/1qjvqd4/vector_dbs_arent_memory_learned_this_the_hard_way/"
     },
     {
@@ -4230,7 +4232,7 @@
           "url": "https://www.reddit.com/r/Rag/comments/1t9v93f/is_anyone_still_running_pure_vector_rag_in/"
         }
       ],
-      "status": 403,
+      "status": 200,
       "url": "https://www.reddit.com/r/Rag/comments/1t9v93f/is_anyone_still_running_pure_vector_rag_in/"
     },
     {

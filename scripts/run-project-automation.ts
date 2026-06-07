@@ -67,6 +67,7 @@ const tasks: Task[] = [
   { title: "Generate autopilot review sprint board", args: ["run", "automation:autopilot-review-sprint"] },
   { title: "Generate autopilot search query gap brief", args: ["run", "automation:autopilot-search-query-gap"] },
   { title: "Generate autopilot queued playbook brief", args: ["run", "automation:autopilot-queued-playbook"] },
+  { title: "Generate autopilot queued remediation pack", args: ["run", "automation:autopilot-queued-remediation"] },
   { title: "Generate autopilot broad AI demand brief", args: ["run", "automation:autopilot-broad-ai-demand"] },
   { title: "Generate autopilot broad freshness triage", args: ["run", "automation:autopilot-broad-freshness"] },
   { title: "Generate autopilot broad publish waves", args: ["run", "automation:autopilot-broad-waves"] },

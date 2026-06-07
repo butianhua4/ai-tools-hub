@@ -780,6 +780,36 @@ type AutopilotQueuedPlaybookBrief = {
   unsafeItems: unknown[];
 };
 
+type AutopilotQueuedRemediationPack = {
+  items: Array<{
+    commandBoundary: { markReviewAfterHumanApproval: string; publishConfirm: string; publishDryRunAfterReview: string };
+    file: string;
+    humanChecklist: unknown[];
+    internalLinkFixes: unknown[];
+    manualFixReady: boolean;
+    remediationReasons: unknown[];
+    riskChecks: unknown[];
+    searchFixes: unknown[];
+    sourceChecks: unknown[];
+    sourceEvidence: unknown[];
+    sprintOrder: number;
+    title: string;
+  }>;
+  summary: {
+    items: number;
+    itemsWithCommandBoundary: number;
+    itemsWithInternalLinkFixes: number;
+    itemsWithRemediationReasons: number;
+    itemsWithRiskChecks: number;
+    itemsWithSearchFixes: number;
+    itemsWithSourceChecks: number;
+    manualFixReadyItems: number;
+    queuedItems: number;
+    unsafeItems: number;
+  };
+  unsafeItems: unknown[];
+};
+
 type AutopilotBroadAiDemandBrief = {
   clusters: Array<{
     audience: string;
@@ -1417,6 +1447,7 @@ const reports = {
   autopilotReviewSprintBoard: readJson<AutopilotReviewSprintBoard>("content/automation/autopilot-review-sprint-board.json"),
   autopilotSearchQueryGapBrief: readJson<AutopilotSearchQueryGapBrief>("content/automation/autopilot-search-query-gap-brief.json"),
   autopilotQueuedPlaybookBrief: readJson<AutopilotQueuedPlaybookBrief>("content/automation/autopilot-queued-playbook-brief.json"),
+  autopilotQueuedRemediation: readJson<AutopilotQueuedRemediationPack>("content/automation/autopilot-queued-remediation-pack.json"),
   autopilotBroadAiDemandBrief: readJson<AutopilotBroadAiDemandBrief>("content/automation/autopilot-broad-ai-demand-brief.json"),
   searchDemandReviewPack: readJson<SearchDemandReviewPack>("content/automation/search-demand-review-pack.json"),
   searchDemandPublicationBridge: readJson<SearchDemandPublicationBridge>("content/automation/search-demand-publication-bridge.json"),
@@ -1638,6 +1669,20 @@ const payload = {
     safeDraftItems: reports.autopilotQueuedPlaybookBrief.data?.summary.safeDraftItems ?? null,
     unsafeItems: reports.autopilotQueuedPlaybookBrief.data?.summary.unsafeItems ?? null,
     unsafeItemList: reports.autopilotQueuedPlaybookBrief.data?.unsafeItems.slice(0, 8) ?? [],
+  },
+  autopilotQueuedRemediation: {
+    items: reports.autopilotQueuedRemediation.data?.summary.items ?? null,
+    itemsList: reports.autopilotQueuedRemediation.data?.items.slice(0, 7) ?? [],
+    itemsWithCommandBoundary: reports.autopilotQueuedRemediation.data?.summary.itemsWithCommandBoundary ?? null,
+    itemsWithInternalLinkFixes: reports.autopilotQueuedRemediation.data?.summary.itemsWithInternalLinkFixes ?? null,
+    itemsWithRemediationReasons: reports.autopilotQueuedRemediation.data?.summary.itemsWithRemediationReasons ?? null,
+    itemsWithRiskChecks: reports.autopilotQueuedRemediation.data?.summary.itemsWithRiskChecks ?? null,
+    itemsWithSearchFixes: reports.autopilotQueuedRemediation.data?.summary.itemsWithSearchFixes ?? null,
+    itemsWithSourceChecks: reports.autopilotQueuedRemediation.data?.summary.itemsWithSourceChecks ?? null,
+    manualFixReadyItems: reports.autopilotQueuedRemediation.data?.summary.manualFixReadyItems ?? null,
+    queuedItems: reports.autopilotQueuedRemediation.data?.summary.queuedItems ?? null,
+    unsafeItems: reports.autopilotQueuedRemediation.data?.summary.unsafeItems ?? null,
+    unsafeItemList: reports.autopilotQueuedRemediation.data?.unsafeItems.slice(0, 8) ?? [],
   },
   searchDemandIntake: {
     contentFormats: reports.searchDemandIntake.data?.summary.contentFormats ?? null,
@@ -2198,6 +2243,9 @@ function buildNextActions() {
   if (!reports.autopilotQueuedPlaybookBrief.data || reports.autopilotQueuedPlaybookBrief.data.summary.unsafeItems > 0) {
     return ["Open docs/autopilot-queued-playbook-brief.md and resolve unsafe queued playbook items before manual review."];
   }
+  if (!reports.autopilotQueuedRemediation.data || reports.autopilotQueuedRemediation.data.summary.unsafeItems > 0) {
+    return ["Open docs/autopilot-queued-remediation-pack.md and resolve unsafe queued remediation items before any mark:review command."];
+  }
   if (!reports.searchDemandIntake.data || reports.searchDemandIntake.data.summary.unsafeLanes > 0) {
     return ["Open docs/search-demand-intake.md and resolve unsafe search-demand lanes before expanding review work."];
   }
@@ -2671,6 +2719,30 @@ function toMarkdown(data: typeof payload) {
     ...data.autopilotQueuedPlaybookBrief.itemsList.map(
       (item) =>
         `| ${item.sprintOrder} | ${item.readyForHumanReview} | ${item.safeDraft} | ${item.searchQueries.length}/${item.searchActions.length} | ${item.sourceTargets.length}/${item.sourceActions.length} | ${item.internalLinkSuggestions.length} | ${item.riskReviewChecklist.length} | ${item.manualOnlyCommands.markReviewAfterHumanApproval.includes("--confirm-human")} | ${item.manualOnlyCommands.publishConfirm} | ${item.title} | ${item.file} |`,
+    ),
+    "",
+    "## Autopilot Queued Remediation Pack",
+    "",
+    `- Items: ${data.autopilotQueuedRemediation.items}`,
+    `- Queued items: ${data.autopilotQueuedRemediation.queuedItems}`,
+    `- Manual fix ready items: ${data.autopilotQueuedRemediation.manualFixReadyItems}`,
+    `- Items with remediation reasons: ${data.autopilotQueuedRemediation.itemsWithRemediationReasons}`,
+    `- Items with command boundary: ${data.autopilotQueuedRemediation.itemsWithCommandBoundary}`,
+    `- Items with internal-link fixes: ${data.autopilotQueuedRemediation.itemsWithInternalLinkFixes}`,
+    `- Items with search fixes: ${data.autopilotQueuedRemediation.itemsWithSearchFixes}`,
+    `- Items with source checks: ${data.autopilotQueuedRemediation.itemsWithSourceChecks}`,
+    `- Items with risk checks: ${data.autopilotQueuedRemediation.itemsWithRiskChecks}`,
+    `- Unsafe items: ${data.autopilotQueuedRemediation.unsafeItems}`,
+    "",
+    "Unsafe queued remediation items:",
+    "",
+    ...(data.autopilotQueuedRemediation.unsafeItemList.length ? data.autopilotQueuedRemediation.unsafeItemList.map((item) => `- ${JSON.stringify(item)}`) : ["- none"]),
+    "",
+    "| Order | Ready | Reasons | Search fixes | Source checks | Link fixes | Risk checks | Mark-review gated | Publish confirm | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...data.autopilotQueuedRemediation.itemsList.map(
+      (item) =>
+        `| ${item.sprintOrder} | ${item.manualFixReady} | ${item.remediationReasons.length} | ${item.searchFixes.length} | ${item.sourceChecks.length} | ${item.internalLinkFixes.length} | ${item.riskChecks.length} | ${item.commandBoundary.markReviewAfterHumanApproval.includes("--confirm-human")} | ${item.commandBoundary.publishConfirm} | ${item.title} | ${item.file} |`,
     ),
     "",
     "## Search Demand Intake",

@@ -1,6 +1,6 @@
 # Source Target Health Audit
 
-Generated at: 2026-06-07T10:13:16.273Z
+Generated at: 2026-06-07T14:18:40.950Z
 
 This report is read-only. It verifies official source URLs used by review and public-gap candidates before any human approval step.
 
@@ -60,7 +60,7 @@ This report is read-only. It verifies official source URLs used by review and pu
 | true | 200 | https://platform.openai.com/docs/guides/prompt-engineering | https://developers.openai.com/api/docs/guides/prompt-engineering | 30 |  |
 | true | 200 | https://platform.openai.com/docs/guides/prompt-generation | https://developers.openai.com/api/docs/guides/prompt-generation | 2 |  |
 | true | 200 | https://platform.openai.com/docs/guides/retrieval | https://developers.openai.com/api/docs/guides/retrieval | 29 |  |
-| true | 200 | https://python.langchain.com/docs | https://docs.langchain.com/oss/python/langchain/overview | 16 |  |
+| true | 200 | https://python.langchain.com/docs | https://docs.langchain.com/oss/python/langchain/overview | 16 | AbortError |
 
 ## File Coverage
 
@@ -123,14 +123,14 @@ This report is read-only. It verifies official source URLs used by review and pu
 | true | 200 | https://platform.openai.com/docs/guides/prompt-engineering | https://developers.openai.com/api/docs/guides/prompt-engineering | 30 |  |
 | true | 200 | https://platform.openai.com/docs/guides/prompt-generation | https://developers.openai.com/api/docs/guides/prompt-generation | 2 |  |
 | true | 200 | https://platform.openai.com/docs/guides/retrieval | https://developers.openai.com/api/docs/guides/retrieval | 29 |  |
-| true | 200 | https://python.langchain.com/docs | https://docs.langchain.com/oss/python/langchain/overview | 16 |  |
+| true | 200 | https://python.langchain.com/docs | https://docs.langchain.com/oss/python/langchain/overview | 16 | AbortError |
 | true | 200 | https://sensara.io/prompts/ | https://sensara.io/prompts/ | 2 |  |
 | true | 200 | https://support.google.com/docs/answer/15013615 | https://support.google.com/docs/answer/15013615 | 2 |  |
 | true | 200 | https://vercel.com/docs/ai-gateway | https://vercel.com/docs/ai-gateway | 2 |  |
 | true | 200 | https://www.mrprompts.ai/learn/ai-prompts-for-sales | https://www.mrprompts.ai/learn/ai-prompts-for-sales | 2 |  |
 | true | 200 | https://www.pinecone.io/learn/retrieval-augmented-generation/ | https://www.pinecone.io/learn/retrieval-augmented-generation/ | 2 |  |
 | true | 200 | https://www.promptfoo.dev/docs/intro/ | https://www.promptfoo.dev/docs/intro/ | 2 |  |
-| true | 403 | https://www.reddit.com/r/Rag/comments/1qjvqd4/vector_dbs_arent_memory_learned_this_the_hard_way/ | https://www.reddit.com/r/Rag/comments/1qjvqd4/vector_dbs_arent_memory_learned_this_the_hard_way/ | 2 |  |
-| true | 403 | https://www.reddit.com/r/Rag/comments/1t9v93f/is_anyone_still_running_pure_vector_rag_in/ | https://www.reddit.com/r/Rag/comments/1t9v93f/is_anyone_still_running_pure_vector_rag_in/ | 2 |  |
+| true | 200 | https://www.reddit.com/r/Rag/comments/1qjvqd4/vector_dbs_arent_memory_learned_this_the_hard_way/ | https://www.reddit.com/r/Rag/comments/1qjvqd4/vector_dbs_arent_memory_learned_this_the_hard_way/ | 2 |  |
+| true | 200 | https://www.reddit.com/r/Rag/comments/1t9v93f/is_anyone_still_running_pure_vector_rag_in/ | https://www.reddit.com/r/Rag/comments/1t9v93f/is_anyone_still_running_pure_vector_rag_in/ | 2 |  |
 | true | 200 | https://www.runpod.io/articles/guides/deploy-vllm-runpod-docker | https://www.runpod.io/articles/guides/deploy-vllm-runpod-docker | 2 |  |
 | true | 200 | https://www.spheron.network/blog/llm-deployment-guide/ | https://www.spheron.network/blog/llm-deployment-guide/ | 2 |  |

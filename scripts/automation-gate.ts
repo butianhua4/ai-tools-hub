@@ -875,6 +875,39 @@ async function main() {
     };
     unsafeItems?: unknown[];
   }>("content/automation/autopilot-queued-playbook-brief.json");
+  const autopilotQueuedRemediation = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    items?: Array<{
+      commandBoundary?: { markReviewAfterHumanApproval?: string; publishConfirm?: string; publishDryRunAfterReview?: string };
+      humanChecklist?: unknown[];
+      internalLinkFixes?: unknown[];
+      manualFixReady?: boolean;
+      remediationReasons?: unknown[];
+      riskChecks?: unknown[];
+      searchFixes?: unknown[];
+      sourceChecks?: unknown[];
+      sourceEvidence?: unknown[];
+      unsafeReasons?: unknown[];
+    }>;
+    sourceEvidence: {
+      queuedPlaybookUnsafeItems: number;
+      queuedForPlaybook: number;
+      sprintBoardUnsafeItems: number;
+    };
+    summary: {
+      items: number;
+      itemsWithCommandBoundary: number;
+      itemsWithInternalLinkFixes: number;
+      itemsWithRemediationReasons: number;
+      itemsWithRiskChecks: number;
+      itemsWithSearchFixes: number;
+      itemsWithSourceChecks: number;
+      manualFixReadyItems: number;
+      queuedItems: number;
+      unsafeItems: number;
+    };
+    unsafeItems?: unknown[];
+  }>("content/automation/autopilot-queued-remediation-pack.json");
   const autopilotBroadAiDemandBrief = readJson<{
     clusters?: Array<{
       contentAngles?: unknown[];
@@ -1817,6 +1850,50 @@ async function main() {
           ),
         ),
       detail: `ready=${autopilotQueuedPlaybookBrief.summary.readyItems}, search=${autopilotQueuedPlaybookBrief.summary.itemsWithSearchActions}, source=${autopilotQueuedPlaybookBrief.summary.itemsWithSourceActions}, links=${autopilotQueuedPlaybookBrief.summary.itemsWithInternalLinkSuggestions}`,
+    },
+    {
+      name: "autopilot queued remediation pack covers queued playbook items",
+      ok:
+        autopilotQueuedRemediation.guardrails.autoEditArticles === false &&
+        autopilotQueuedRemediation.guardrails.autoMarkReview === false &&
+        autopilotQueuedRemediation.guardrails.autoPublish === false &&
+        autopilotQueuedRemediation.guardrails.trafficClaim === "not-included" &&
+        autopilotQueuedRemediation.sourceEvidence.queuedPlaybookUnsafeItems === 0 &&
+        autopilotQueuedRemediation.sourceEvidence.sprintBoardUnsafeItems === 0 &&
+        autopilotQueuedRemediation.sourceEvidence.queuedForPlaybook === autopilotQueuedPlaybookBrief.sourceEvidence.queuedForPlaybook &&
+        autopilotQueuedRemediation.summary.queuedItems === autopilotQueuedPlaybookBrief.summary.items &&
+        autopilotQueuedRemediation.summary.items === autopilotQueuedPlaybookBrief.summary.items &&
+        autopilotQueuedRemediation.summary.unsafeItems === 0,
+      detail: `items=${autopilotQueuedRemediation.summary.items}, queued=${autopilotQueuedPlaybookBrief.summary.items}, unsafe=${autopilotQueuedRemediation.summary.unsafeItems}`,
+    },
+    {
+      name: "autopilot queued remediation pack has actionable human fixes",
+      ok:
+        autopilotQueuedRemediation.summary.manualFixReadyItems === autopilotQueuedRemediation.summary.items &&
+        autopilotQueuedRemediation.summary.itemsWithCommandBoundary === autopilotQueuedRemediation.summary.items &&
+        autopilotQueuedRemediation.summary.itemsWithInternalLinkFixes === autopilotQueuedRemediation.summary.items &&
+        autopilotQueuedRemediation.summary.itemsWithRemediationReasons === autopilotQueuedRemediation.summary.items &&
+        autopilotQueuedRemediation.summary.itemsWithRiskChecks === autopilotQueuedRemediation.summary.items &&
+        autopilotQueuedRemediation.summary.itemsWithSearchFixes === autopilotQueuedRemediation.summary.items &&
+        autopilotQueuedRemediation.summary.itemsWithSourceChecks === autopilotQueuedRemediation.summary.items &&
+        Boolean(
+          autopilotQueuedRemediation.items?.every(
+            (item) =>
+              item.manualFixReady === true &&
+              (item.unsafeReasons?.length || 0) === 0 &&
+              (item.humanChecklist?.length || 0) >= 5 &&
+              (item.internalLinkFixes?.length || 0) > 0 &&
+              (item.remediationReasons?.length || 0) > 0 &&
+              (item.riskChecks?.length || 0) >= 4 &&
+              (item.searchFixes?.length || 0) > 0 &&
+              (item.sourceChecks?.length || 0) > 0 &&
+              (item.sourceEvidence?.length || 0) >= 3 &&
+              item.commandBoundary?.markReviewAfterHumanApproval?.includes("--confirm-human") &&
+              !item.commandBoundary?.publishDryRunAfterReview?.includes("--confirm") &&
+              item.commandBoundary?.publishConfirm === "not-included",
+          ),
+        ),
+      detail: `ready=${autopilotQueuedRemediation.summary.manualFixReadyItems}, search=${autopilotQueuedRemediation.summary.itemsWithSearchFixes}, source=${autopilotQueuedRemediation.summary.itemsWithSourceChecks}, links=${autopilotQueuedRemediation.summary.itemsWithInternalLinkFixes}`,
     },
     {
       name: "autopilot broad AI demand brief is read-only and source-backed",
