@@ -737,6 +737,43 @@ async function main() {
       unsafeItems: number;
     };
   }>("content/automation/autopilot-human-review-playbook.json");
+  const autopilotApprovalRemediation = readJson<{
+    guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean; trafficClaim: string };
+    items?: Array<{
+      commandBoundary?: {
+        markReviewAfterHumanApproval?: string;
+        publishConfirm?: string;
+        publishDryRunAfterReview?: string;
+        stopBefore?: string;
+      };
+      humanChecklist?: unknown[];
+      internalLinkFixes?: unknown[];
+      manualFixReady?: boolean;
+      remediationReasons?: unknown[];
+      searchFixes?: unknown[];
+      sourceChecks?: unknown[];
+      unsafeReasons?: unknown[];
+    }>;
+    sourceEvidence: {
+      approvalPacketUnsafeItems: number;
+      humanReviewPlaybookUnsafeItems: number;
+      internalLinkUnsafeItems: number;
+      optimizationUnsafeCommands: number;
+      searchIntentUnsafeItems: number;
+      sourceVerificationUnsafeItems: number;
+    };
+    summary: {
+      approvalItems: number;
+      items: number;
+      itemsWithCommandBoundary: number;
+      itemsWithInternalLinkFixes: number;
+      itemsWithRemediationReasons: number;
+      itemsWithSearchFixes: number;
+      itemsWithSourceChecks: number;
+      manualFixReadyItems: number;
+      unsafeItems: number;
+    };
+  }>("content/automation/autopilot-approval-remediation-pack.json");
   const autopilotReviewSprintBoard = readJson<{
     guardrails: { autoEditArticles: boolean; autoMarkReview: boolean; autoPublish: boolean };
     items?: Array<{
@@ -1612,6 +1649,50 @@ async function main() {
           ),
         ),
       detail: `commands=${autopilotHumanReviewPlaybook.summary.itemsWithCommandBoundary}, search=${autopilotHumanReviewPlaybook.summary.itemsWithSearchActions}, source=${autopilotHumanReviewPlaybook.summary.itemsWithSourceActions}, links=${autopilotHumanReviewPlaybook.summary.itemsWithInternalLinkActions}`,
+    },
+    {
+      name: "autopilot approval remediation pack covers approval packet",
+      ok:
+        autopilotApprovalRemediation.guardrails.autoEditArticles === false &&
+        autopilotApprovalRemediation.guardrails.autoMarkReview === false &&
+        autopilotApprovalRemediation.guardrails.autoPublish === false &&
+        autopilotApprovalRemediation.guardrails.trafficClaim === "not-included" &&
+        autopilotApprovalRemediation.summary.approvalItems === autopilotApprovalPacket.summary.items &&
+        autopilotApprovalRemediation.summary.items === autopilotApprovalPacket.summary.items &&
+        autopilotApprovalRemediation.sourceEvidence.approvalPacketUnsafeItems === 0 &&
+        autopilotApprovalRemediation.sourceEvidence.searchIntentUnsafeItems === 0 &&
+        autopilotApprovalRemediation.sourceEvidence.internalLinkUnsafeItems === 0 &&
+        autopilotApprovalRemediation.sourceEvidence.sourceVerificationUnsafeItems === 0 &&
+        autopilotApprovalRemediation.sourceEvidence.humanReviewPlaybookUnsafeItems === 0 &&
+        autopilotApprovalRemediation.sourceEvidence.optimizationUnsafeCommands === 0 &&
+        autopilotApprovalRemediation.summary.unsafeItems === 0,
+      detail: `items=${autopilotApprovalRemediation.summary.items}, ready=${autopilotApprovalRemediation.summary.manualFixReadyItems}, unsafe=${autopilotApprovalRemediation.summary.unsafeItems}`,
+    },
+    {
+      name: "autopilot approval remediation pack has actionable human fixes",
+      ok:
+        autopilotApprovalRemediation.summary.manualFixReadyItems === autopilotApprovalRemediation.summary.items &&
+        autopilotApprovalRemediation.summary.itemsWithCommandBoundary === autopilotApprovalRemediation.summary.items &&
+        autopilotApprovalRemediation.summary.itemsWithInternalLinkFixes === autopilotApprovalRemediation.summary.items &&
+        autopilotApprovalRemediation.summary.itemsWithSearchFixes === autopilotApprovalRemediation.summary.items &&
+        autopilotApprovalRemediation.summary.itemsWithSourceChecks === autopilotApprovalRemediation.summary.items &&
+        autopilotApprovalRemediation.summary.itemsWithRemediationReasons === autopilotApprovalRemediation.summary.items &&
+        Boolean(
+          autopilotApprovalRemediation.items?.every(
+            (item) =>
+              item.manualFixReady === true &&
+              (item.unsafeReasons?.length || 0) === 0 &&
+              (item.humanChecklist?.length || 0) >= 5 &&
+              (item.internalLinkFixes?.length || 0) > 0 &&
+              (item.searchFixes?.length || 0) > 0 &&
+              (item.sourceChecks?.length || 0) > 0 &&
+              item.commandBoundary?.markReviewAfterHumanApproval?.includes("--confirm-human") &&
+              !item.commandBoundary?.publishDryRunAfterReview?.includes("--confirm") &&
+              item.commandBoundary?.publishConfirm === "not-included" &&
+              item.commandBoundary?.stopBefore?.includes("explicit"),
+          ),
+        ),
+      detail: `commands=${autopilotApprovalRemediation.summary.itemsWithCommandBoundary}, links=${autopilotApprovalRemediation.summary.itemsWithInternalLinkFixes}, search=${autopilotApprovalRemediation.summary.itemsWithSearchFixes}, source=${autopilotApprovalRemediation.summary.itemsWithSourceChecks}`,
     },
     {
       name: "autopilot review sprint board covers next assignments",

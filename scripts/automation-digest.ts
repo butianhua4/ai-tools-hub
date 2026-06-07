@@ -658,6 +658,31 @@ type AutopilotHumanReviewPlaybook = {
   unsafeItems: unknown[];
 };
 
+type AutopilotApprovalRemediationPack = {
+  items: Array<{
+    commandBoundary: { markReviewAfterHumanApproval: string; publishConfirm: string; publishDryRunAfterReview: string };
+    file: string;
+    internalLinkFixes: unknown[];
+    manualFixReady: boolean;
+    remediationReasons: unknown[];
+    searchFixes: unknown[];
+    sourceChecks: unknown[];
+    title: string;
+  }>;
+  summary: {
+    approvalItems: number;
+    items: number;
+    itemsWithCommandBoundary: number;
+    itemsWithInternalLinkFixes: number;
+    itemsWithRemediationReasons: number;
+    itemsWithSearchFixes: number;
+    itemsWithSourceChecks: number;
+    manualFixReadyItems: number;
+    unsafeItems: number;
+  };
+  unsafeItems: unknown[];
+};
+
 type AutopilotReviewSprintBoard = {
   items: Array<{
     commandBoundary: { markReviewAfterHumanApproval: string; publishConfirm: string; publishDryRunAfterReview: string };
@@ -1388,6 +1413,7 @@ const reports = {
   autopilotInternalLinkBrief: readJson<AutopilotInternalLinkBrief>("content/automation/autopilot-internal-link-brief.json"),
   autopilotSourceVerificationBrief: readJson<AutopilotSourceVerificationBrief>("content/automation/autopilot-source-verification-brief.json"),
   autopilotHumanReviewPlaybook: readJson<AutopilotHumanReviewPlaybook>("content/automation/autopilot-human-review-playbook.json"),
+  autopilotApprovalRemediation: readJson<AutopilotApprovalRemediationPack>("content/automation/autopilot-approval-remediation-pack.json"),
   autopilotReviewSprintBoard: readJson<AutopilotReviewSprintBoard>("content/automation/autopilot-review-sprint-board.json"),
   autopilotSearchQueryGapBrief: readJson<AutopilotSearchQueryGapBrief>("content/automation/autopilot-search-query-gap-brief.json"),
   autopilotQueuedPlaybookBrief: readJson<AutopilotQueuedPlaybookBrief>("content/automation/autopilot-queued-playbook-brief.json"),
@@ -1553,6 +1579,19 @@ const payload = {
     safeDraftItems: reports.autopilotHumanReviewPlaybook.data?.summary.safeDraftItems ?? null,
     unsafeItems: reports.autopilotHumanReviewPlaybook.data?.summary.unsafeItems ?? null,
     unsafeItemList: reports.autopilotHumanReviewPlaybook.data?.unsafeItems.slice(0, 8) ?? [],
+  },
+  autopilotApprovalRemediation: {
+    approvalItems: reports.autopilotApprovalRemediation.data?.summary.approvalItems ?? null,
+    items: reports.autopilotApprovalRemediation.data?.summary.items ?? null,
+    itemsList: reports.autopilotApprovalRemediation.data?.items.slice(0, 3) ?? [],
+    itemsWithCommandBoundary: reports.autopilotApprovalRemediation.data?.summary.itemsWithCommandBoundary ?? null,
+    itemsWithInternalLinkFixes: reports.autopilotApprovalRemediation.data?.summary.itemsWithInternalLinkFixes ?? null,
+    itemsWithRemediationReasons: reports.autopilotApprovalRemediation.data?.summary.itemsWithRemediationReasons ?? null,
+    itemsWithSearchFixes: reports.autopilotApprovalRemediation.data?.summary.itemsWithSearchFixes ?? null,
+    itemsWithSourceChecks: reports.autopilotApprovalRemediation.data?.summary.itemsWithSourceChecks ?? null,
+    manualFixReadyItems: reports.autopilotApprovalRemediation.data?.summary.manualFixReadyItems ?? null,
+    unsafeItems: reports.autopilotApprovalRemediation.data?.summary.unsafeItems ?? null,
+    unsafeItemList: reports.autopilotApprovalRemediation.data?.unsafeItems.slice(0, 8) ?? [],
   },
   autopilotReviewSprintBoard: {
     items: reports.autopilotReviewSprintBoard.data?.summary.items ?? null,
@@ -2147,6 +2186,9 @@ function buildNextActions() {
   if (!reports.autopilotHumanReviewPlaybook.data || reports.autopilotHumanReviewPlaybook.data.summary.unsafeItems > 0) {
     return ["Open docs/autopilot-human-review-playbook.md and resolve unsafe human-review playbook items before any mark:review command."];
   }
+  if (!reports.autopilotApprovalRemediation.data || reports.autopilotApprovalRemediation.data.summary.unsafeItems > 0) {
+    return ["Open docs/autopilot-approval-remediation-pack.md and resolve unsafe approval remediation items before any mark:review command."];
+  }
   if (!reports.autopilotReviewSprintBoard.data || reports.autopilotReviewSprintBoard.data.summary.unsafeItems > 0) {
     return ["Open docs/autopilot-review-sprint-board.md and resolve unsafe sprint items before assigning manual review work."];
   }
@@ -2530,6 +2572,29 @@ function toMarkdown(data: typeof payload) {
     ...data.autopilotHumanReviewPlaybook.itemsList.map(
       (item) =>
         `| ${item.readyForHumanReview} | ${item.safeDraft} | ${item.searchActions.length} | ${item.sourceActions.length} | ${item.internalLinkActions.length} | ${item.manualOnlyCommands.markReviewAfterHumanApproval.includes("--confirm-human")} | ${item.manualOnlyCommands.publishConfirm} | ${item.title} | ${item.file} |`,
+    ),
+    "",
+    "## Autopilot Approval Remediation Pack",
+    "",
+    `- Items: ${data.autopilotApprovalRemediation.items}`,
+    `- Approval items: ${data.autopilotApprovalRemediation.approvalItems}`,
+    `- Manual fix ready items: ${data.autopilotApprovalRemediation.manualFixReadyItems}`,
+    `- Items with remediation reasons: ${data.autopilotApprovalRemediation.itemsWithRemediationReasons}`,
+    `- Items with command boundary: ${data.autopilotApprovalRemediation.itemsWithCommandBoundary}`,
+    `- Items with internal-link fixes: ${data.autopilotApprovalRemediation.itemsWithInternalLinkFixes}`,
+    `- Items with search fixes: ${data.autopilotApprovalRemediation.itemsWithSearchFixes}`,
+    `- Items with source checks: ${data.autopilotApprovalRemediation.itemsWithSourceChecks}`,
+    `- Unsafe items: ${data.autopilotApprovalRemediation.unsafeItems}`,
+    "",
+    "Unsafe approval remediation items:",
+    "",
+    ...(data.autopilotApprovalRemediation.unsafeItemList.length ? data.autopilotApprovalRemediation.unsafeItemList.map((item) => `- ${JSON.stringify(item)}`) : ["- none"]),
+    "",
+    "| Ready | Reasons | Search fixes | Link fixes | Source checks | Mark-review gated | Publish confirm | Title | File |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...data.autopilotApprovalRemediation.itemsList.map(
+      (item) =>
+        `| ${item.manualFixReady} | ${item.remediationReasons.length} | ${item.searchFixes.length} | ${item.internalLinkFixes.length} | ${item.sourceChecks.length} | ${item.commandBoundary.markReviewAfterHumanApproval.includes("--confirm-human")} | ${item.commandBoundary.publishConfirm} | ${item.title} | ${item.file} |`,
     ),
     "",
     "## Autopilot Review Sprint Board",

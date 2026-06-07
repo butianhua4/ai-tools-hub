@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-07T04:28:39.558Z
+Generated at: 2026-06-07T04:38:59.503Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -249,6 +249,28 @@ Unsafe human-review playbook items:
 | true | true | 19 | 45 | 6 | true | not-included | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
 | true | true | 11 | 44 | 6 | true | not-included | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
 | true | true | 22 | 45 | 6 | true | not-included | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+
+## Autopilot Approval Remediation Pack
+
+- Items: 3
+- Approval items: 3
+- Manual fix ready items: 3
+- Items with remediation reasons: 3
+- Items with command boundary: 3
+- Items with internal-link fixes: 3
+- Items with search fixes: 3
+- Items with source checks: 3
+- Unsafe items: 0
+
+Unsafe approval remediation items:
+
+- none
+
+| Ready | Reasons | Search fixes | Link fixes | Source checks | Mark-review gated | Publish confirm | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| true | 3 | 15 | 9 | 21 | true | not-included | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| true | 2 | 10 | 9 | 21 | true | not-included | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| true | 3 | 15 | 9 | 21 | true | not-included | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
 
 ## Autopilot Review Sprint Board
 
@@ -855,8 +877,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 147
-- Traffic claim watch mentions: 1670
+- Traffic claim files scanned: 149
+- Traffic claim watch mentions: 1694
 
 ## Public Surface Inventory
 
@@ -1273,7 +1295,7 @@ Public categories:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-07T04:28:35.605Z
+- Latest check: 2026-06-07T04:38:55.563Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 85

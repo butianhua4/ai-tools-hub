@@ -40,6 +40,7 @@
     "automation:autopilot-internal-links": "tsx scripts/autopilot-internal-link-brief.ts",
     "automation:autopilot-source-verification": "tsx scripts/autopilot-source-verification-brief.ts",
     "automation:autopilot-human-review": "tsx scripts/autopilot-human-review-playbook.ts",
+    "automation:autopilot-approval-remediation": "tsx scripts/autopilot-approval-remediation-pack.ts",
     "automation:autopilot-review-sprint": "tsx scripts/autopilot-review-sprint-board.ts",
     "automation:autopilot-search-query-gap": "tsx scripts/autopilot-search-query-gap-brief.ts",
     "automation:autopilot-queued-playbook": "tsx scripts/autopilot-queued-playbook-brief.ts",

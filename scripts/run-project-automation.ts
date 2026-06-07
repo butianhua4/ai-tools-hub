@@ -63,6 +63,7 @@ const tasks: Task[] = [
   { title: "Generate autopilot internal link brief", args: ["run", "automation:autopilot-internal-links"] },
   { title: "Generate autopilot source verification brief", args: ["run", "automation:autopilot-source-verification"] },
   { title: "Generate autopilot human review playbook", args: ["run", "automation:autopilot-human-review"] },
+  { title: "Generate autopilot approval remediation pack", args: ["run", "automation:autopilot-approval-remediation"] },
   { title: "Generate autopilot review sprint board", args: ["run", "automation:autopilot-review-sprint"] },
   { title: "Generate autopilot search query gap brief", args: ["run", "automation:autopilot-search-query-gap"] },
   { title: "Generate autopilot queued playbook brief", args: ["run", "automation:autopilot-queued-playbook"] },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T04:27:28.719Z",
+  "generatedAt": "2026-06-07T04:37:51.986Z",
   "failures": [],
   "ok": true,
   "tasks": [
@@ -55,6 +55,7 @@
     "Generate autopilot internal link brief",
     "Generate autopilot source verification brief",
     "Generate autopilot human review playbook",
+    "Generate autopilot approval remediation pack",
     "Generate autopilot review sprint board",
     "Generate autopilot search query gap brief",
     "Generate autopilot queued playbook brief",
