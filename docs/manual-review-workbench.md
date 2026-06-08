@@ -1,6 +1,6 @@
 # Manual Review Workbench
 
-Generated at: 2026-06-08T12:15:52.869Z
+Generated at: 2026-06-08T16:57:55.569Z
 
 This workbench is read-only. It does not publish articles or mark drafts for review.
 
@@ -21,7 +21,7 @@ This workbench is read-only. It does not publish articles or mark drafts for rev
 
 - Ok: true
 - Public articles: 15
-- Sitemap URLs: 86
+- Sitemap URLs: 89
 - Failed checks: none
 
 ## Next Batch

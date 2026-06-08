@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T12:15:52.869Z",
+  "generatedAt": "2026-06-08T16:57:55.569Z",
   "guardrails": {
     "autoMarkReview": false,
     "autoPublish": false,
@@ -19,7 +19,7 @@
     "failedChecks": [],
     "ok": true,
     "publicCount": 15,
-    "sitemapUrlCount": 86
+    "sitemapUrlCount": 89
   },
   "reviewPlan": {
     "plannedBatches": 3,
