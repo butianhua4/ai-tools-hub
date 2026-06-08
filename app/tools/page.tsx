@@ -19,6 +19,11 @@ export default function ToolsPage() {
       href: "/tools/spreadsheet-cleaner",
     },
     {
+      title: "全行业 AI 提示词工作流生成器",
+      description: "按行业、岗位、任务、资料和输出格式，生成执行版、质检版和 SOP 版提示词。",
+      href: "/tools/industry-prompt-builder",
+    },
+    {
       title: "Upwork Proposal 生成器",
       description: "根据客户需求生成谨慎可改的英文投标草稿，并提示风险、追问问题和报价方向。",
       href: "/tools/proposal-generator",

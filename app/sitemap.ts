@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/tools/proposal-generator",
     "/tools/ppt-planner",
     "/tools/spreadsheet-cleaner",
+    "/tools/industry-prompt-builder",
     "/tools/error-explainer",
     "/tools/pricing-calculator",
     "/templates",
