@@ -1,6 +1,6 @@
 # Content Cannibalization Check
 
-Generated at: 2026-06-10T11:10:24.008Z
+Generated at: 2026-06-10T16:48:29.455Z
 
 This warning report helps manual reviewers avoid publishing multiple articles that compete for the same search intent.
 
