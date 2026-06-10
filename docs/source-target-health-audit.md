@@ -1,6 +1,6 @@
 # Source Target Health Audit
 
-Generated at: 2026-06-10T06:00:13.020Z
+Generated at: 2026-06-10T11:10:20.386Z
 
 This report is read-only. It verifies official source URLs used by review and public-gap candidates before any human approval step.
 

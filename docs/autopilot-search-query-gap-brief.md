@@ -1,6 +1,6 @@
 # Autopilot Search Query Gap Brief
 
-Generated at: 2026-06-10T06:00:27.642Z
+Generated at: 2026-06-10T11:10:35.257Z
 
 This report is read-only. It turns existing search-query evidence into a manual checklist for next-10 sprint items that currently have zero autopilot queue search queries.
 
