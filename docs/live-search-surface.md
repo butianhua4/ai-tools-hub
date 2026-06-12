@@ -1,6 +1,6 @@
 # Live Search Surface Check
 
-Generated at: 2026-06-12T06:13:52.402Z
+Generated at: 2026-06-12T14:42:58.382Z
 
 This report checks the live production search surfaces. It does not use Search Console traffic, impressions, or ranking data.
 
@@ -34,14 +34,14 @@ Overall: PASS
 
 | Path | Status | Result | Expected text |
 | --- | --- | --- | --- |
-| / | 200 | PASS | AI 接单实验室 |
+| / | 200 | PASS | AI 工具指南 |
 | /blog | 200 | PASS | 新手教程 |
 | /tools | 200 | PASS | AI 工具导航 |
 | /tools/proposal-generator | 200 | PASS | Upwork Proposal 生成器 |
 | /tools/error-explainer | 200 | PASS | Codex 报错解释器 |
 | /tools/pricing-calculator | 200 | PASS | 项目报价助手 |
 | /templates | 200 | PASS | 模板下载 |
-| /roadmap | 200 | PASS | AI 接单 30 天路线图 |
+| /roadmap | 200 | PASS | AI 工具学习 30 天路线图 |
 | /sitemap.xml | 200 | PASS | <urlset |
 | /robots.txt | 200 | PASS | Sitemap |
 | /llms.txt | 200 | PASS | Draft and noindex articles are intentionally excluded |

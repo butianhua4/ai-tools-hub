@@ -1253,7 +1253,7 @@ Unsafe SEO warning remediation items:
 | 86 | true | draft | expansion, recommended, wave-1 | 2 | 0 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
 | 63 | true | published | public | 1 | 1 | Codex 项目 npm install 报错怎么办：新手排查步骤 | content/blog/codex-npm-install-error-beginner-fix.mdx |
 | 63 | true | published | public | 1 | 1 | 第一个 Upwork 小项目怎么报价：新手范围和底价检查 | content/blog/first-upwork-project-pricing-checklist.mdx |
-| 63 | true | published | public | 1 | 1 | Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看 | content/blog/payoneer-wise-paypal-beginner-comparison.mdx |
+| 63 | true | published | public | 1 | 1 | Payoneer、Wise、PayPal 有什么区别：AI 工具新手收款前先看 | content/blog/payoneer-wise-paypal-beginner-comparison.mdx |
 | 63 | true | published | public | 1 | 1 | Vercel 提示环境变量缺失怎么办：新手部署检查流程 | content/blog/vercel-env-variable-missing-beginner-guide.mdx |
 | 58 | true | published | public | 1 | 0 | Upwork Proposal 发出去没人回怎么办：新手检查清单 | content/blog/upwork-proposal-no-reply-checklist.mdx |
 | 55 | true | published | public | 0 | 1 | Codex 和 GitHub 怎么配合：提交代码前检查 | content/blog/codex-github-before-commit-checklist.mdx |
@@ -1445,7 +1445,7 @@ Public categories:
 | Upwork 新手 | 2026-06-02 | 4 | Upwork Proposal 发出去没人回怎么办：新手检查清单 | /blog/upwork-proposal-no-reply-checklist |
 | 报价指南 | 2026-06-02 | 4 | 第一个 Upwork 小项目怎么报价：新手范围和底价检查 | /blog/first-upwork-project-pricing-checklist |
 | 报错解决 | 2026-06-02 | 4 | Codex 项目 npm install 报错怎么办：新手排查步骤 | /blog/codex-npm-install-error-beginner-fix |
-| 收款工具 | 2026-06-02 | 4 | Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看 | /blog/payoneer-wise-paypal-beginner-comparison |
+| 收款工具 | 2026-06-02 | 4 | Payoneer、Wise、PayPal 有什么区别：AI 工具新手收款前先看 | /blog/payoneer-wise-paypal-beginner-comparison |
 | 部署教程 | 2026-06-02 | 4 | Vercel 提示环境变量缺失怎么办：新手部署检查流程 | /blog/vercel-env-variable-missing-beginner-guide |
 
 | Gap score | Public | Ready candidates | Cluster | Suggested files |
@@ -1481,7 +1481,7 @@ Public categories:
 | true | 165 | 9 | true | high | 1 | 102 | 报错解决 | Codex 项目 npm install 报错怎么办：新手排查步骤 | content/blog/codex-npm-install-error-beginner-fix.mdx |
 | true | 165 | 9 | true | high | 1 | 104 | Codex 新手教程 | Codex 和 Claude Code 怎么选：新手对比清单 | content/blog/codex-vs-claude-code-beginner-checklist.mdx |
 | true | 160 | 9 | true | high | 0 | 72 | 报价指南 | 第一个 Upwork 小项目怎么报价：新手范围和底价检查 | content/blog/first-upwork-project-pricing-checklist.mdx |
-| true | 160 | 9 | true | high | 0 | 82 | 收款工具 | Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看 | content/blog/payoneer-wise-paypal-beginner-comparison.mdx |
+| true | 160 | 9 | true | high | 0 | 82 | 收款工具 | Payoneer、Wise、PayPal 有什么区别：AI 工具新手收款前先看 | content/blog/payoneer-wise-paypal-beginner-comparison.mdx |
 | true | 160 | 9 | true | high | 0 | 80 | Upwork 新手 | Upwork Proposal 发出去没人回怎么办：新手检查清单 | content/blog/upwork-proposal-no-reply-checklist.mdx |
 | true | 160 | 9 | true | high | 0 | 87 | 部署教程 | Vercel 提示环境变量缺失怎么办：新手部署检查流程 | content/blog/vercel-env-variable-missing-beginner-guide.mdx |
 | true | 150 | 8 | true | high | 0 | 101 | Codex 新手教程 | Codex 和 GitHub 怎么配合：提交代码前检查 | content/blog/codex-github-before-commit-checklist.mdx |
@@ -1533,7 +1533,7 @@ Public categories:
 | 3 | true | 200 | 11 | 97 | mojibake-public, freshness-high | not-included | Codex 生成代码后怎么审核：交付前检查清单 | content/blog/codex-code-review-delivery-checklist.mdx |
 | 3 | true | 200 | 11 | 102 | mojibake-public, freshness-high | not-included | Codex 接 Upwork 小单怎么判断：风险检查清单 | content/blog/codex-upwork-small-job-risk-checklist.mdx |
 | 4 | true | 165 | 11 | 102 | seo-warning, cannibalization, freshness-high, high-priority | not-included | Codex 项目 npm install 报错怎么办：新手排查步骤 | content/blog/codex-npm-install-error-beginner-fix.mdx |
-| 4 | true | 160 | 11 | 82 | seo-warning, short-description, freshness-high, high-priority | not-included | Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看 | content/blog/payoneer-wise-paypal-beginner-comparison.mdx |
+| 4 | true | 160 | 11 | 82 | seo-warning, short-description, freshness-high, high-priority | not-included | Payoneer、Wise、PayPal 有什么区别：AI 工具新手收款前先看 | content/blog/payoneer-wise-paypal-beginner-comparison.mdx |
 | 4 | true | 160 | 11 | 80 | seo-warning, short-description, freshness-high, high-priority | not-included | Upwork Proposal 发出去没人回怎么办：新手检查清单 | content/blog/upwork-proposal-no-reply-checklist.mdx |
 | 5 | true | 160 | 11 | 87 | seo-warning, short-description, freshness-high, high-priority | not-included | Vercel 提示环境变量缺失怎么办：新手部署检查流程 | content/blog/vercel-env-variable-missing-beginner-guide.mdx |
 | 5 | true | 145 | 12 | 89 | short-description, cannibalization, freshness-high, high-priority | not-included | Codex 生成代码后怎么审核 | content/blog/codex-generated-code-review-guide.mdx |

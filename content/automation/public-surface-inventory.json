@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T14:34:29.953Z",
+  "generatedAt": "2026-06-12T14:44:36.533Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -27,7 +27,7 @@
       "reviewReadyDrafts": 633,
       "unsafeClusters": 0
     },
-    "liveSearchGeneratedAt": "2026-06-12T06:13:52.402Z",
+    "liveSearchGeneratedAt": "2026-06-12T14:42:58.382Z",
     "liveSearchOk": true,
     "projectStatusPublicPublished": 15,
     "projectStatusTotalFiles": 669,

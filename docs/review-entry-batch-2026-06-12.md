@@ -53,4 +53,4 @@ After human approval, only these 3 should be considered for review status. Publi
 - Do not claim traffic until Search Console or Analytics data exists.
 - Do not publish drafts directly.
 - Do not mark review without reading the article and checking fast-changing official docs.
-- Do not let old "AI 接单实验室" positioning leak back into public pages.
+- Do not let old project positioning leak back into public pages.

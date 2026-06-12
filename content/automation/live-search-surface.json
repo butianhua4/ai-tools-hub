@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T06:13:52.402Z",
+  "generatedAt": "2026-06-12T14:42:58.382Z",
   "ok": true,
   "base": "https://ai-jiedan-lab.vercel.app",
   "fetchBase": "https://ai-jiedan-lab.vercel.app",
@@ -9,7 +9,7 @@
       "path": "/",
       "status": 200,
       "ok": true,
-      "expected": "AI 接单实验室"
+      "expected": "AI 工具指南"
     },
     {
       "path": "/blog",
@@ -51,7 +51,7 @@
       "path": "/roadmap",
       "status": 200,
       "ok": true,
-      "expected": "AI 接单 30 天路线图"
+      "expected": "AI 工具学习 30 天路线图"
     },
     {
       "path": "/sitemap.xml",

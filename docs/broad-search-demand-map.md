@@ -294,7 +294,7 @@ Ready draft candidates:
 | 31 | 100 | informational | 制造业 AI 提示词 | 制造业 AI 提示词模板：SOP、质检记录、设备故障和生产复盘 | content/blog/manufacturing-ai-prompts-guide.mdx |
 | 31 | 100 | informational | 运营 AI 提示词 | 运营 AI 提示词模板：周报、SOP、活动计划、复盘和数据解释 | content/blog/operations-ai-prompts-guide.mdx |
 | 30 | 100 | informational | 销售 AI 提示词 | 销售 AI 提示词模板：客户画像、跟进话术、异议处理和会议纪要 | content/blog/sales-ai-prompts-guide.mdx |
-| 20 | 100 | informational | ChatGPT Codex Claude 工作流 | ChatGPT、Codex 和 Claude 怎么分工做 AI 接单流程 | content/blog/chatgpt-codex-claude-workflow.mdx |
+| 20 | 100 | informational | ChatGPT Codex Claude 工作流 | ChatGPT、Codex 和 Claude 怎么分工做 AI 工具实践流程 | content/blog/chatgpt-codex-claude-workflow.mdx |
 | 20 | 100 | informational | ChatGPT Codex Claude 工作流检查清单 | ChatGPT、Codex 和 Claude 工作流检查清单 | content/blog/chatgpt-codex-claude-workflow-checklist.mdx |
 | 20 | 100 | informational | 小网站上线检查 SOP 怎么写 | 小网站上线检查 SOP 怎么写 | content/blog/small-site-launch-sop.mdx |
 

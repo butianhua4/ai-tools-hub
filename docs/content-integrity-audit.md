@@ -57,7 +57,7 @@ This report is read-only. It checks article metadata, encoding integrity, and in
 | published | public | 27 | 101 | none | possible mojibake or replacement character | Codex 部署 Vercel 前检查什么：上线前清单 | content/blog/codex-vercel-deploy-preflight-checklist.mdx |
 | published | public | 30 | 104 | none | possible mojibake or replacement character | Codex 和 Claude Code 怎么选：新手对比清单 | content/blog/codex-vs-claude-code-beginner-checklist.mdx |
 | published | public | 28 | 72 | none | possible mojibake or replacement character | 第一个 Upwork 小项目怎么报价：新手范围和底价检查 | content/blog/first-upwork-project-pricing-checklist.mdx |
-| published | public | 39 | 82 | none | none | Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看 | content/blog/payoneer-wise-paypal-beginner-comparison.mdx |
+| published | public | 39 | 82 | none | none | Payoneer、Wise、PayPal 有什么区别：AI 工具新手收款前先看 | content/blog/payoneer-wise-paypal-beginner-comparison.mdx |
 | published | public | 27 | 64 | none | none | Upwork 客户需求太模糊怎么办：新手分析和追问清单 | content/blog/upwork-client-requirements-analysis-beginner.mdx |
 | published | public | 32 | 80 | none | none | Upwork Proposal 发出去没人回怎么办：新手检查清单 | content/blog/upwork-proposal-no-reply-checklist.mdx |
 | published | public | 27 | 87 | none | none | Vercel 提示环境变量缺失怎么办：新手部署检查流程 | content/blog/vercel-env-variable-missing-beginner-guide.mdx |
@@ -72,7 +72,7 @@ This report is read-only. It checks article metadata, encoding integrity, and in
 | Status | Scope | Title chars | Description chars | Issues | Warnings | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | draft | all | 25 | 56 | none | possible mojibake or replacement character | AI 做 PPT 怎么开始：新手从大纲到成稿的流程 | content/blog/ai-ppt-beginner-guide.mdx |
-| draft | all | 16 | 52 | none | possible mojibake or replacement character | AI 接单练习小项目选题检查清单 | content/blog/ai-small-project-practice-topics-checklist.mdx |
+| draft | all | 16 | 52 | none | possible mojibake or replacement character | AI 工具练习小项目选题检查清单 | content/blog/ai-small-project-practice-topics-checklist.mdx |
 | draft | all | 20 | 54 | none | possible mojibake or replacement character | AI 工具推荐怎么选：新手别一开始买太多 | content/blog/ai-tools-recommendation-beginner.mdx |
 | draft | all | 16 | 56 | none | possible mojibake or replacement character | 第一次接 AI 小单前要准备什么 | content/blog/before-first-ai-freelance-job.mdx |
 | published | public | 14 | 88 | none | possible mojibake or replacement character | Codex 怎么做第一个网页 | content/blog/build-first-webpage-with-codex.mdx |

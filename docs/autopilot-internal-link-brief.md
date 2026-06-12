@@ -66,7 +66,7 @@ Suggested public links:
 - Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist) - keyword overlap: ai, vercel, 部署, 上线, 检查, 新手
 - Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex) - keyword overlap: ai, 怎么, 么做, 新手, 网页, 一个
 - 第一个 Upwork 小项目怎么报价：新手范围和底价检查 (/blog/first-upwork-project-pricing-checklist) - keyword overlap: 怎么, 检查, 项目, 新手, 一个, 第一
-- Payoneer、Wise、PayPal 有什么区别：AI 接单新手收款前先看 (/blog/payoneer-wise-paypal-beginner-comparison) - keyword overlap: ai, 工具, 新手, 什么, 有什, 么区
+- Payoneer、Wise、PayPal 有什么区别：AI 工具新手收款前先看 (/blog/payoneer-wise-paypal-beginner-comparison) - keyword overlap: ai, 工具, 新手, 什么, 有什, 么区
 - Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide) - keyword overlap: vercel, 部署, 怎么, 检查, 新手, 署检
 
 ### 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用
