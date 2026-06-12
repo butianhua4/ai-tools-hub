@@ -3,7 +3,7 @@ import { paymentOptions } from "@/data/payment-options";
 
 export const metadata = {
   title: "变现路线",
-  description: "AI 接单实验室的收款、流量收益、模板销售、联盟链接和少量服务引流规划。先做工具和内容，再按阶段接入平台。",
+  description: "AI 工具指南的流量收益、模板销售、联盟链接和少量服务引流规划。先做工具和内容，再按阶段接入平台。",
   alternates: { canonical: "/monetization" },
 };
 

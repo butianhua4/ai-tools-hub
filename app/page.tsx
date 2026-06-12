@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   },
 };
 
-const trustItems = ["不承诺暴富", "不鼓励违规操作", "不做搬运洗稿", "只做真实交付"];
+const trustItems = ["面向搜索", "人工审核", "工具优先", "不夸大收益"];
 const workflow = [
-  ["01", "粘贴客户需求", "先判断项目范围、风险和需要追问的问题。"],
-  ["02", "生成谨慎草稿", "Proposal、报价和交付说明都要人工修改。"],
-  ["03", "排查报错交付", "用检查清单确认构建、部署、移动端和规则边界。"],
+  ["01", "找到任务场景", "先判断是办公、部署、提示词、RAG 还是接单交付问题。"],
+  ["02", "进入对应工具", "用工具生成草稿、清单、成本估算或排查步骤。"],
+  ["03", "人工复核上线", "检查事实、数据、隐私、平台规则和交付边界。"],
 ];
 
 export default function Home() {
@@ -38,22 +38,22 @@ export default function Home() {
       <section className="w-full max-w-full border-b bg-gradient-to-b from-sky-50 via-white to-white">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 px-4 py-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center lg:py-20">
           <div className="min-w-0 max-w-full">
-            <h1 className="break-words text-4xl font-bold tracking-tight text-ink md:text-6xl">AI 接单实验室</h1>
+            <h1 className="break-words text-4xl font-bold tracking-tight text-ink md:text-6xl">AI 工具指南</h1>
             <p className="mt-5 max-w-3xl break-words text-xl leading-8 text-gray-800 [overflow-wrap:anywhere]">
-              用 Codex、Claude Code 和 ChatGPT，从第一个小单开始建立自由职业收入。
+              面向 AI 搜索和普通用户的工具教程库，覆盖办公自动化、提示词、网页部署、大模型、Agent 和记忆/RAG。
             </p>
             <p className="mt-4 max-w-2xl break-words text-base leading-7 text-gray-600 [overflow-wrap:anywhere]">
-              专为不会编程的新手准备，拆解工具配置、Upwork 投标、项目报价、报错解决和交付流程。所有建议都强调真实能力、人工审核和平台规则。
+              先解决真实搜索问题，再顺带把工具、模板和服务入口做好。所有内容都强调人工审核、可复查步骤和风险边界，不承诺自动收入。
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link className="rounded-md bg-brand px-5 py-3 text-center text-sm font-semibold text-white shadow-sm shadow-blue-200 transition hover:bg-blue-700" href="/tools/proposal-generator">
-                免费生成 Proposal
+              <Link className="rounded-md bg-brand px-5 py-3 text-center text-sm font-semibold text-white shadow-sm shadow-blue-200 transition hover:bg-blue-700" href="/office-ai">
+                AI 办公自动化
               </Link>
-              <Link className="rounded-md border border-gray-300 bg-white px-5 py-3 text-center text-sm font-semibold text-ink transition hover:border-brand/50" href="/tools/error-explainer">
-                解释报错
+              <Link className="rounded-md border border-gray-300 bg-white px-5 py-3 text-center text-sm font-semibold text-ink transition hover:border-brand/50" href="/deployments">
+                AI 部署教程
               </Link>
-              <Link className="rounded-md border border-gray-300 bg-white px-5 py-3 text-center text-sm font-semibold text-ink transition hover:border-brand/50" href="/templates">
-                下载模板包
+              <Link className="rounded-md border border-gray-300 bg-white px-5 py-3 text-center text-sm font-semibold text-ink transition hover:border-brand/50" href="/prompts">
+                提示词库
               </Link>
             </div>
           </div>
@@ -61,8 +61,8 @@ export default function Home() {
           <div className="min-w-0 max-w-full rounded-lg border border-gray-200 bg-white p-5 shadow-xl shadow-blue-100/60">
             <div className="flex items-center justify-between border-b pb-4">
               <div>
-                <p className="text-sm font-semibold text-ink">新手接单工作台</p>
-                <p className="mt-1 text-xs text-gray-500">先判断，再生成，再交付</p>
+                <p className="text-sm font-semibold text-ink">AI 工具工作台</p>
+                <p className="mt-1 text-xs text-gray-500">先找场景，再用工具，再复核</p>
               </div>
               <span className="rounded-md bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">人工审核</span>
             </div>

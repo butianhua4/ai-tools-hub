@@ -4,12 +4,12 @@ export function HeroSection() {
   return (
     <section className="bg-gradient-to-b from-blue-50 to-white">
       <div className="mx-auto max-w-6xl px-4 py-20">
-        <h1 className="text-4xl font-bold tracking-tight md:text-6xl">AI 接单实验室</h1>
+        <h1 className="text-4xl font-bold tracking-tight md:text-6xl">AI 工具指南</h1>
         <p className="mt-5 max-w-3xl text-xl leading-8 text-gray-700">
-          用 Codex、Claude Code 和 ChatGPT，从第一个小单开始建立自由职业收入。
+          用 AI 工具完成办公自动化、提示词、部署、RAG 和项目交付判断。
         </p>
         <p className="mt-3 max-w-3xl text-gray-600">
-          专为不会编程的新手准备，拆解工具配置、Upwork 投标、项目报价、报错解决和交付流程。
+          面向中文用户整理可搜索、可执行、可人工复核的 AI 工具教程和模板。
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link className="rounded-md bg-brand px-5 py-3 text-white" href="/tools/proposal-generator">免费生成 Proposal</Link>

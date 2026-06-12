@@ -3,7 +3,7 @@ import { ToolsDirectoryClient } from "@/components/ToolsDirectoryClient";
 
 export const metadata = {
   title: "AI 工具导航",
-  description: "适合 AI 接单新手的工具导航、用途说明、风险提醒和官方链接。",
+  description: "适合 AI 工具新手的工具导航、用途说明、风险提醒和官方链接。",
 };
 
 export default function ToolsPage() {

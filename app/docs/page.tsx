@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "项目文档",
-  description: "AI 接单实验室的内容自动化、SEO 检查、发布流程、注册待办和变现路线文档。",
+  description: "AI 工具指南的内容自动化、SEO 检查、发布流程、注册待办和变现路线文档。",
   robots: { index: false, follow: true },
 };
 

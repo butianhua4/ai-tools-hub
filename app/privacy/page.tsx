@@ -1,6 +1,6 @@
 export const metadata = {
   title: "隐私政策",
-  description: "AI 接单实验室基础隐私政策。",
+  description: "AI 工具指南基础隐私政策。",
 };
 
 export default function PrivacyPage() {

@@ -1,6 +1,6 @@
 export const metadata = {
   title: "免责声明",
-  description: "AI 接单实验室内容仅供学习参考，不构成财务、法律或职业保证。",
+  description: "AI 工具指南内容仅供学习参考，不构成财务、法律或职业保证。",
 };
 
 export default function DisclaimerPage() {

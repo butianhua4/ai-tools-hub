@@ -3,7 +3,7 @@ import { ContactForm } from "@/components/ContactForm";
 
 export const metadata = {
   title: "联系我",
-  description: "联系 AI 接单实验室，咨询 Codex、Claude Code、GitHub、Vercel 配置、报错排查、Proposal 检查和新手项目判断。",
+  description: "联系 AI 工具指南，咨询 Codex、Claude Code、GitHub、Vercel 配置、报错排查、提示词、Proposal 检查和项目判断。",
   alternates: { canonical: "/contact" },
 };
 

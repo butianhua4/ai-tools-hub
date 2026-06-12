@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const category = posts[0]?.category || slug;
   return {
     title: `分类：${category}`,
-    description: `AI 接单实验室 ${category} 分类下的已发布文章，包含新手步骤、风险提醒和工具入口。`,
+    description: `AI 工具指南 ${category} 分类下的已发布文章，包含新手步骤、风险提醒和工具入口。`,
     alternates: { canonical: `/category/${slug}` },
   };
 }

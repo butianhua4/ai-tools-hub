@@ -6,7 +6,7 @@ import { templates } from "@/data/templates";
 
 export const metadata = {
   title: "模板下载",
-  description: "AI 接单新手可下载的 Proposal、报价、客户沟通、交付检查和部署模板。",
+  description: "AI 工具指南提供 Proposal、报价、客户沟通、交付检查、办公自动化和部署模板。",
   alternates: { canonical: "/templates" },
 };
 

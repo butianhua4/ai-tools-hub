@@ -8,7 +8,7 @@ const docs = {
   "publishing-workflow": {
     file: "publishing-workflow.md",
     title: "内容发布工作流",
-    description: "AI 接单实验室的内容发布、审核和部署流程。",
+    description: "AI 工具指南的内容发布、审核和部署流程。",
   },
   "seo-searchability-audit": {
     file: "seo-searchability-audit.md",

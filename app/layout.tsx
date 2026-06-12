@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: site.name,
-    template: "%s | AI 接单实验室",
+    template: "%s | AI 工具指南",
   },
   description: site.description,
   icons: {

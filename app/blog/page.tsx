@@ -5,7 +5,7 @@ import { getAllPosts, slugify } from "@/lib/blog";
 
 export const metadata = {
   title: "新手教程",
-  description: "AI 接单、Codex、Upwork、报价、收款和自由职业教程。这里只展示已经人工审核发布的文章。",
+  description: "AI 工具、部署、提示词、办公自动化、Codex、报价、收款和项目交付教程。这里只展示已经人工审核发布的文章。",
   alternates: { canonical: "/blog" },
 };
 
@@ -24,7 +24,7 @@ export default function BlogPage() {
         <p className="text-sm font-medium text-brand">内容库</p>
         <h1 className="mt-2 text-3xl font-bold text-ink md:text-4xl">新手教程</h1>
         <p className="mt-3 max-w-3xl text-gray-600">
-          这里只展示已经人工审核发布的文章。内容重点是工具配置、项目判断、Proposal、报价、收款和交付风险，不承诺收入结果，也不鼓励平台违规。
+          这里只展示已经人工审核发布的文章。内容重点是 AI 工具配置、办公自动化、部署、提示词、项目判断、报价、收款和交付风险，不承诺收入结果，也不鼓励平台违规。
         </p>
         <div className="mt-6 grid gap-3 sm:grid-cols-3">
           <Link className="rounded-md bg-brand px-4 py-3 text-center text-sm font-semibold text-white" href="/tools/proposal-generator">

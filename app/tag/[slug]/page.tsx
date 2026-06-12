@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   return {
     title: `标签：${slug}`,
-    description: `AI 接单实验室 ${slug} 标签下的已发布文章。`,
+    description: `AI 工具指南 ${slug} 标签下的已发布文章。`,
     alternates: { canonical: `/tag/${slug}` },
   };
 }
