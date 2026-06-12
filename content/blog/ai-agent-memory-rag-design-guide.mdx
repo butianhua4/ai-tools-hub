@@ -22,7 +22,7 @@ secondaryKeywords:
   - "长期记忆"
   - "短期记忆"
   - "AI 引用来源"
-sourceNotes: "参考 OpenAI Agents SDK memory 文档、OpenAI prompt engineering 中关于 RAG 和上下文的说明，以及知识库系统交付经验整理；正式公开前需要人工核对 SDK 版本和隐私建议。"
+sourceNotes: "已于 2026-06-12 对照 OpenAI Agents SDK Sessions / Memory、OpenAI file search、Vercel AI SDK Agents / tool calling / human-in-the-loop 文档补充边界；正式公开前仍需人工核对 SDK 版本、隐私建议和 API 名称。"
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -39,7 +39,7 @@ monetization:
   serviceCTA: "联系人工协助设计知识库和记忆方案"
   adSlots:
     - "article-bottom"
-qualityScore: 90
+qualityScore: 100
 publishBatch: 40
 canonical: "https://ai-jiedan-lab.vercel.app/blog/ai-agent-memory-rag-design-guide"
 noindex: true
@@ -69,6 +69,20 @@ noindex: true
 长期记忆是跨会话保存的稳定信息，例如用户偏好的输出格式、团队常用检查命令、项目约定、客户所在行业。OpenAI Agents SDK 的记忆文档提到，记忆可以通过摘要、索引和历史片段逐步披露，而不是一次性把所有内容塞进上下文。
 
 RAG 是知识库检索。它不是“记住用户”，而是从外部文档、FAQ、SOP、合同、产品手册中找相关片段，再让模型基于这些片段回答。
+
+还有一个容易混淆的概念：会话历史。OpenAI Agents SDK 的 Sessions 说明的是跨多轮运行保留对话历史，适合让同一个会话连续下去；这不等于把用户偏好永久写入长期记忆，也不等于给 Agent 接入企业知识库。设计时要把“当前会话能继续”“未来任务可复用”“从文档里查事实”分开验收。
+
+## 人工复核来源
+
+公开前建议按以下官方资料逐项核对，不要只看二手教程：
+
+- [OpenAI Agents SDK Sessions](https://openai.github.io/openai-agents-python/sessions/)：确认会话历史和 session memory 的定义。
+- [OpenAI Agents SDK memory reference](https://openai.github.io/openai-agents-python/ref/memory/)：确认记忆接口、会话项读取和实现边界。
+- [OpenAI file search / retrieval](https://platform.openai.com/docs/api-reference/run-steps/getRunStep)：确认文件检索结果和引用内容的当前能力。
+- [Vercel AI SDK Agents](https://ai-sdk.dev/docs/agents/overview)：确认 Agent、工具循环、loop control 和工具调用说法。
+- [Vercel AI SDK human-in-the-loop](https://ai-sdk.dev/cookbook/next/human-in-the-loop)：确认需要用户批准的工具执行边界。
+
+这些来源只能证明当前官方文档的设计方向，不能替你承诺某个记忆方案一定稳定、便宜或适合生产环境。
 
 ## 具体步骤
 
