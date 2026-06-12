@@ -1,5 +1,5 @@
 name: Tool bug or improvement
-description: Report or plan changes for proposal generator, error explainer, pricing calculator, templates, or tool directory.
+description: Report or plan changes for AI tools, prompt workflows, deployment planners, templates, or the tool directory.
 title: "[Tool] "
 labels:
   - tool
@@ -9,6 +9,11 @@ body:
     attributes:
       label: Tool area
       options:
+        - Office AI workflows
+        - Prompt library or prompt builder
+        - Deployment planners
+        - RAG or memory planner
+        - API routing cost checker
         - Proposal generator
         - Error explainer
         - Pricing calculator

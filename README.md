@@ -1,14 +1,62 @@
-# AI 接单实验室
+# AI 工具指南
 
-面向中文新手的工具型 SEO 网站，提供 AI 接单教程、Proposal 生成器、报错解释器、报价助手、工具导航、模板下载，以及“可审核、分批发布”的内容自动化系统。
+面向中文用户的 AI 工具教程、部署指南、提示词、办公自动化和内容安全工作流项目。
+
+这个仓库同时包含一个公开网站和一套内容生产/审核自动化系统。目标不是做一个只卖工具的页面，而是把真实用户会搜索的问题整理成可访问、可复查、可持续扩展的工具与教程库。
+
+Live site: https://ai-jiedan-lab.vercel.app
+
+## 项目定位
+
+AI 工具指南覆盖这些方向：
+
+- AI 办公自动化：PPT、Excel、周报、邮件、会议纪要
+- AI 提示词库：销售、客服、运营、HR、电商、教育、财务、开发
+- AI 部署教程：网页部署、大模型部署、Agent 部署、RAG 和记忆、API 路由
+- AI 工具导航：Codex、Claude Code、ChatGPT、Cursor、Vercel、GitHub 等工具说明
+- 内容工作流：草稿生成、质量检查、人工审核、小批量发布、搜索可见性检查
+
+这个项目适合用来观察一个 AI 内容站如何从零搭建，包括页面结构、工具入口、SEO 基础、GitHub 工作流、Vercel 部署和发布安全边界。
+
+## 已有公开入口
+
+- `/` 首页：AI 工具指南总入口
+- `/office-ai` AI 办公自动化工作流
+- `/prompts` 全行业 AI 提示词库
+- `/deployments` AI 部署教程入口
+- `/tools` AI 工具导航
+- `/blog` 已人工审核的公开文章
+- `/templates` 模板下载入口
+- `/llms.txt` 面向 AI 助手和搜索工具的站点索引
+- `/sitemap.xml` 公开可索引页面列表
+
+## 站内工具
+
+仓库内置了一批轻量工具页面：
+
+- Proposal 生成器
+- 报错解释器
+- 项目报价助手
+- AI PPT 策划与排版助手
+- AI 表格整理与清洗助手
+- 全行业 AI 提示词生成器
+- Agent 部署与权限规划器
+- 大模型部署成本选择器
+- Agent 记忆与 RAG 架构规划器
+- AI API 限流与成本路由检查器
+- 公开文章 SEO 刷新助手
+
+这些工具以教育和判断辅助为主，不替代人工决策，也不承诺收入、排名或交付结果。
 
 ## 技术栈
 
 - Next.js App Router
+- React
 - TypeScript
 - Tailwind CSS
 - Markdown/MDX 内容
 - Vercel 部署
+- GitHub Actions 自动化检查
 
 ## 本地运行
 
@@ -18,264 +66,92 @@ npm run dev
 npm run build
 ```
 
-如果 PowerShell 拦截 npm 脚本，可以使用：
+PowerShell 环境如果拦截 npm 脚本，可以使用：
 
 ```bash
 npm.cmd run dev
 npm.cmd run build
 ```
 
-## 上线后检查
-
-部署到 Vercel 后，使用正式域名检查公开页面、sitemap、robots 和草稿泄露：
+## 常用检查
 
 ```bash
-npm run live:check -- --url=https://ai-jiedan-lab.vercel.app
+npm run lint
+npm run build
+npm run project:status
 npm run searchability:check -- --url=https://ai-jiedan-lab.vercel.app
+npm run live:check -- --url=https://ai-jiedan-lab.vercel.app
 ```
 
-这个检查只读线上页面，不会发布文章，也不会调用真实 AI API。
+这些检查不会发布文章，也不会调用真实 AI API。
 
-`live:check` 负责确认主要页面、文章、sitemap 和 robots 能访问。`searchability:check` 负责更细的 SEO 可搜索度检查，包括英文 URL、canonical、Open Graph、JSON-LD、meta description、sitemap 收录范围和草稿泄漏。
+## 内容发布规则
 
-当前站点已通过基础可搜索度检查，但 Google 是否收录还需要提交 Google Search Console 后观察。相关记录见 `docs/seo-searchability-audit.md` 和 `docs/search-console-setup.md`。
+本项目故意把内容发布做成保守流程：
 
-拿到 Google Search Console HTML tag 的 `content` 验证码后，可以先检查验证准备度：
+- 新内容默认是 `draft`
+- draft 和 review 默认 `noindex: true`
+- 未审核文章不能进入 `/blog`
+- 未审核文章不能进入 `sitemap.xml`
+- 公开发布必须经过人工检查
+- 每次只允许小批量发布
 
-```bash
-npm run search-console:check -- --url=https://ai-jiedan-lab.vercel.app --token=你的验证码
+核心流程：
+
+```text
+draft -> content:check -> human review -> review -> publish --confirm
 ```
 
-如果已经把验证码写入 Vercel 环境变量并重新部署，也可以直接运行：
+没有人工确认时，发布脚本只做 dry run。
 
-```bash
-npm run search-console:check -- --url=https://ai-jiedan-lab.vercel.app
-```
+## 自动化脚本
 
-## 内容自动化
-
-500 篇选题计划在 `content/content-plan-500.ts`。选题分为 20 个 batch，每个 batch 最多 25 篇。文章生成后默认：
-
-- `status: draft`
-- `noindex: true`
-- 不能进入 sitemap
-- 不能出现在 `/blog`
-
-如需重建 500 篇选题计划，运行：
-
-```bash
-npm run content:plan
-```
-
-这个命令只刷新选题计划，不会发布文章，也不会调用真实 AI API。重建后要优先使用新计划继续生成草稿；旧的 `draft` 文章如果标题不够正式，必须人工打磨后才能进入 `review`。
-
-只有人工审核后进入 `review`，再通过发布脚本加 `--confirm`，才能变成：
-
-- `status: published`
-- `noindex: false`
-
-## 生成下一批草稿
-
-默认一次最多生成 5 篇，避免低质量批量内容：
-
-```bash
-npm run generate:drafts -- --batch=2 --limit=5
-npm run generate:drafts -- --category="Codex 新手教程"
-npm run generate:drafts -- --priority=5
-```
-
-已有文件默认不会覆盖。确实要重建时才使用：
-
-```bash
-npm run generate:drafts -- --batch=2 --limit=5 --force
-```
-
-## 检查文章质量
+常用脚本：
 
 ```bash
 npm run content:check
-npm run content:check -- --batch=1
-npm run content:check -- --file=content/blog/example.mdx
-```
-
-质量检查会输出：
-
-- `qualityScore`
-- `failedItems`
-- `warnings`
-- `suggestions`
-
-低于 80 分不能进入 review，也不能发布。
-
-## 生成人工审核队列
-
-500 篇正式选题补齐后，不要继续盲目生成文章。先用审核队列挑出优先级高、质量检查通过的 draft，人工抽查后再决定是否进入 review：
-
-```bash
 npm run content:review-queue
-npm run content:review-queue -- --priority=5 --limit=30
-npm run content:review-queue -- --batch=1 --format=md --write=docs/review-queue.md
-```
-
-审核队列只读，不会改文章状态，也不会发布文章。当前生成的参考队列在 `docs/review-queue.md`。
-
-如果想把前几篇候选文章的章节、节选和审核勾选项整理成一份人工审核包：
-
-```bash
 npm run content:review-pack
-npm run content:review-pack -- --priority=5 --limit=3 --write=docs/review-pack.md
+npm run automation:all
+npm run automation:gate
+npm run traffic:evidence
 ```
 
-审核包同样只读，不会改文章状态。它适合明天人工逐篇检查时使用。
-
-如果想先让脚本指出候选草稿的明显弱点，例如 sourceNotes 太泛、缺少真实验证痕迹、需要复核平台规则：
-
-```bash
-npm run content:review-opinions
-npm run content:review-opinions -- --priority=5 --limit=5 --write=docs/review-opinions.md
-npm run content:review-opinions -- --file=content/blog/example.mdx --write=docs/review-opinions.md
-```
-
-审核意见仍然只是辅助判断，不能替代人工审核。
-
-## 进入人工审核
-
-```bash
-npm run mark:review -- --batch=1 --limit=5
-npm run mark:review -- --file=content/blog/example.mdx
-npm run mark:review -- --file=content/blog/example.mdx --confirm-human
-```
-
-规则：
-
-- 只允许 `qualityScore >= 80` 的 draft 进入 review。
-- 进入 review 后仍然保持 `noindex: true`。
-- 人工需要检查事实、来源备注、平台规则、原创角度和 CTA。
-- 没有 `--confirm-human` 时只会 dry run，不会修改文章状态。
-
-## 发布文章
-
-dry run：
-
-```bash
-npm run publish:articles -- --batch=1 --limit=1
-```
-
-真正发布：
-
-```bash
-npm run publish:articles -- --batch=1 --limit=1 --confirm
-```
-
-规则：
-
-- 只能发布 `status=review` 的文章。
-- 只能发布 `qualityScore >= 80` 的文章。
-- 每次最多发布 5 篇。
-- 没有 `--confirm` 时不会修改文件。
-- 发布后自动更新 `status=published`、`noindex=false`、`updatedAt` 和 `content/publish-log.json`。
-
-## 开发环境内容页面
-
-```bash
-npm run content:dashboard
-```
-
-然后打开：
-
-- `/admin/content-dashboard`
-- `/drafts`
-
-这两个页面只在 development 环境用于查看内容状态。生产环境不会作为公开内容使用。
-
-## SEO 规则
-
-- `/blog` 只展示 `published && noindex=false` 的文章。
-- `/sitemap.xml` 只收录 `published && noindex=false` 的文章。
-- draft 和 review 默认不收录。
-- 每篇文章都有 canonical 字段。
-- 工具详情页输出 WebApplication/SoftwareApplication JSON-LD。
-- 文章详情页输出 BlogPosting JSON-LD。
-- 分类和标签 URL 使用英文 slug，不使用中文 URL。
-- 每次部署后运行 `npm run searchability:check -- --url=https://ai-jiedan-lab.vercel.app`。
-
-## GitHub / Vercel 部署
-
-```bash
-git init
-git add .
-git commit -m "Add AI content automation system"
-git branch -M main
-git remote add origin <your-repo-url>
-git push -u origin main
-```
-
-在 Vercel 导入仓库，构建命令使用：
-
-```bash
-npm run build
-```
-
-绑定域名后：
-
-1. 在 Vercel 设置 `NEXT_PUBLIC_SITE_URL`。
-2. 修改 `data/site.ts` 默认 URL。
-3. 重新部署。
-4. 检查 `/sitemap.xml` 和 `/robots.txt`。
-
-## 接入真实 AI API
-
-未来在 `lib/ai.ts` 接入真实模型，并让：
-
-- `app/api/generate-proposal/route.ts`
-- `app/api/explain-error/route.ts`
-
-调用真实 API。
-
-即使接入真实 AI，也必须保留：
-
-```text
-draft -> content:check -> 人工审核 -> review -> publish --confirm
-```
-
-禁止自动发布未经审核内容。
-
-## 运营顺序：先工具，再文章
-
-当前项目的推荐顺序是：
-
-1. 先把 Proposal 生成器、报错解释器、报价助手、模板下载页做成可用入口。
-2. 再用文章覆盖长尾 SEO 问题。
-3. 每篇文章都导流到一个工具、一个模板或一个服务 CTA。
-4. 每次只发布 1-3 篇人工审核文章，观察收录和点击。
-
-详细收款与变现路线见 `docs/monetization-and-payment-plan.md`。
-
-## 广告、联盟、邮箱和付费模板
-
-- 广告：接入 `AdSlot` 位置。
-- 联盟链接：使用工具数据里的 `affiliateUrl`。
-- 邮箱订阅：可接 Resend、Formspree 或 Supabase。
-- 付费模板：可接 Gumroad、Lemon Squeezy、Paddle 或 Stripe。
-
-## 常见报错
-
-- `npm` 在 PowerShell 被拦截：使用 `npm.cmd`。
-- Turbopack workspace root 推断错误：已在 `next.config.ts` 设置 `turbopack.root`。
-- 文章不进 sitemap：检查 `status` 是否为 `published` 且 `noindex` 是否为 `false`。
-- 发布失败：先运行 `npm run content:check -- --file=...`。
+禁止把未审核内容自动公开。这个仓库里的自动化主要用于生成报告、排查风险、整理审核队列和检查搜索可见性。
 
 ## GitHub 工作流
 
-当前阶段可以先不部署 Vercel，先把 GitHub 作为代码、内容和审核记录中心。
+公开仓库重点展示：
 
-- GitHub 维护说明：`docs/github-workflow.md`
-- 平台注册路线图：`docs/platform-registration-roadmap.md`
-- 上线后检查清单：`docs/post-deploy-checklist.md`
-- 人工审核清单：`docs/manual-review-checklist.md`
-- Google Search Console 提交清单：`docs/search-console-setup.md`
-- PR 模板：`.github/PULL_REQUEST_TEMPLATE.md`
-- 内容任务 Issue 模板：`.github/ISSUE_TEMPLATE/content-task.yml`
-- 工具改进 Issue 模板：`.github/ISSUE_TEMPLATE/tool-bug.yml`
+- 一个 AI 工具内容站的页面结构
+- 面向搜索和 AI 助手的 `llms.txt`
+- 内容审核和发布边界
+- GitHub Actions 自动化报告
+- Vercel 部署和上线后检查
+- 工具页、模板页、教程页之间的内链组织
 
-推荐顺序是：生成少量 draft -> 质量检查 -> 人工审核 -> review -> 少量发布 -> build -> commit -> push -> 等 GitHub Actions 通过。
+相关文件：
+
+- `.github/workflows/content-check.yml`
+- `.github/workflows/review-automation.yml`
+- `.github/PULL_REQUEST_TEMPLATE.md`
+- `.github/ISSUE_TEMPLATE/content-task.yml`
+- `docs/manual-review-checklist.md`
+- `docs/seo-searchability-audit.md`
+- `docs/search-console-setup.md`
+
+## 重要边界
+
+- 不承诺搜索排名、收入、接单成功率或平台曝光
+- 不鼓励平台违规、虚假案例、批量低质内容或绕过审核
+- 不把 AI 输出当作最终事实
+- 医疗、法律、财务、安全和生产系统相关内容必须人工复核
+- 外部工具价格、API、规则和模型能力会变化，正式使用前需要查官方文档
+
+## 后续方向
+
+- 增加更多可公开索引的高质量教程
+- 扩展 AI 工具对比和选型页
+- 增加行业 AI 工作流页面
+- 补充 AI 数据分析、AI 客服、AI 电商、AI 自动化入口
+- 在有真实数据后接入 Search Console、Analytics、模板销售和联盟链接

@@ -1,5 +1,5 @@
 name: Content task
-description: Plan one article, checklist, comparison, or template page.
+description: Plan one tutorial, tool guide, comparison, prompt page, checklist, or template page.
 title: "[Content] "
 labels:
   - content
@@ -9,7 +9,7 @@ body:
     attributes:
       label: Primary keyword
       description: The specific search query this page should answer.
-      placeholder: "Codex npm install 报错怎么办"
+      placeholder: "AI 做 PPT 怎么写提示词"
     validations:
       required: true
   - type: dropdown
@@ -24,6 +24,10 @@ body:
         - troubleshooting
         - tool-guide
         - pricing-guide
+        - prompt-library
+        - deployment-guide
+        - office-ai-workflow
+        - ai-tool-comparison
         - roadmap
     validations:
       required: true
@@ -38,7 +42,7 @@ body:
     id: outline
     attributes:
       label: Draft outline
-      description: Include suitable readers, unsuitable readers, steps, risks, CTA, and internal links.
+      description: Include suitable readers, unsuitable readers, steps, risks, tool CTA, and internal links.
     validations:
       required: true
   - type: checkboxes
@@ -50,7 +54,7 @@ body:
           required: true
         - label: The page will include actionable steps for beginners.
           required: true
-        - label: The page will include risk warnings and no income guarantee.
+        - label: The page will include risk warnings and no ranking, income, or result guarantee.
           required: true
         - label: The page will stay draft/noindex until human review.
           required: true

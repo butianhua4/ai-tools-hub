@@ -5,6 +5,7 @@
 ## Change Type
 
 - [ ] Tool or page update
+- [ ] Prompt, deployment, or office AI workflow
 - [ ] Blog/content draft
 - [ ] Content review or publishing
 - [ ] SEO or sitemap change
@@ -18,7 +19,7 @@
 - [ ] New articles are `status: draft` and `noindex: true`
 - [ ] Published articles were reviewed manually before changing to `published`
 - [ ] No copied, scraped, spun, or auto-translated article content
-- [ ] No income guarantees or platform-rule bypass advice
+- [ ] No ranking, income, result, or platform-rule bypass guarantees
 - [ ] No API keys, tokens, passwords, or private credentials
 
 ## Notes For Reviewer
