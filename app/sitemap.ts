@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/tools/agent-deployment-planner",
     "/tools/llm-deployment-cost-planner",
     "/tools/memory-rag-architecture-planner",
+    "/tools/api-routing-cost-checker",
     "/tools/error-explainer",
     "/tools/pricing-calculator",
     "/templates",

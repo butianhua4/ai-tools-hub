@@ -39,6 +39,11 @@ export default function ToolsPage() {
       href: "/tools/memory-rag-architecture-planner",
     },
     {
+      title: "AI API 接入、限流与成本路由检查器",
+      description: "按供应商、请求量、tokens、预算和限额，生成 API 路由、限流、降级、密钥和日志方案。",
+      href: "/tools/api-routing-cost-checker",
+    },
+    {
       title: "Upwork Proposal 生成器",
       description: "根据客户需求生成谨慎可改的英文投标草稿，并提示风险、追问问题和报价方向。",
       href: "/tools/proposal-generator",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T03:04:07.417Z",
+  "generatedAt": "2026-06-12T03:18:19.708Z",
   "guardrails": {
     "autoCreateArticles": false,
     "autoEditArticles": false,
@@ -41,6 +41,7 @@
   "currentSurface": {
     "existingTools": [
       "agent-deployment-planner",
+      "api-routing-cost-checker",
       "error-explainer",
       "industry-prompt-builder",
       "llm-deployment-cost-planner",
@@ -67,7 +68,7 @@
   "summary": {
     "cnFirstOpportunities": 2,
     "dualTrackOpportunities": 4,
-    "existingTools": 9,
+    "existingTools": 10,
     "globalFirstOpportunities": 2,
     "opportunities": 8,
     "platformRegistrationsNeedingHuman": 5,
@@ -822,10 +823,12 @@
           "title": "Dify 怎么接 OpenAI API：模型供应商、LLM 节点和费用边界"
         }
       ],
-      "existingToolMatches": [],
+      "existingToolMatches": [
+        "api-routing-cost-checker"
+      ],
       "publicMatches": [],
-      "priorityScore": 144,
-      "recommendedNextAsset": "Build a lightweight interactive tool page before expanding another generic article.",
+      "priorityScore": 134,
+      "recommendedNextAsset": "Refresh the existing tool page and add article-to-tool internal links.",
       "safetyBoundary": {
         "autoCreateArticles": false,
         "autoEditPublicArticles": false,
