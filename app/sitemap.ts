@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/blog",
     "/deployments",
+    "/office-ai",
     "/prompts",
     "/tools",
     "/tools/proposal-generator",

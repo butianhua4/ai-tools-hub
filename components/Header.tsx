@@ -3,7 +3,7 @@ import Link from "next/link";
 const nav = [
   ["/", "首页"],
   ["/blog", "新手教程"],
-  ["/tools/ppt-planner", "PPT 策划"],
+  ["/office-ai", "AI 办公"],
   ["/tools/spreadsheet-cleaner", "表格整理"],
   ["/prompts", "提示词库"],
   ["/deployments", "部署教程"],
