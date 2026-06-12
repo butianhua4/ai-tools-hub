@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T01:43:16.976Z",
+  "generatedAt": "2026-06-12T06:13:53.567Z",
   "guardrails": {
     "autoPublish": false,
     "note": "This guard scans operational docs and automation reports for unsupported traffic claims. It does not scan draft article teaching examples."
@@ -44,7 +44,7 @@
     },
     {
       "file": "app/llms.txt/route.ts",
-      "line": 47,
+      "line": 50,
       "reason": "traffic-related mention",
       "text": "\"- The site does not claim real traffic, impressions, income guarantees, or automatic publishing.\","
     },

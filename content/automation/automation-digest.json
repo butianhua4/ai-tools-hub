@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T01:43:19.451Z",
+  "generatedAt": "2026-06-12T06:13:56.064Z",
   "guardrails": {
     "autoPublish": false,
     "note": "Digest is read-only. It summarizes local automation reports and does not use traffic, impressions, or Search Console performance data."
@@ -8473,7 +8473,7 @@
         "url": "https://ai-sdk.dev/docs"
       },
       {
-        "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=fa",
+        "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=ko",
         "ok": true,
         "references": [
           {
@@ -30466,7 +30466,7 @@
     "broadClustersWithoutPublicCoverage": 8,
     "liveMissingFromSitemap": 0,
     "livePublicCount": 15,
-    "liveSitemapUrls": 89,
+    "liveSitemapUrls": 96,
     "projectPublicPublished": 15,
     "publicArticles": 15,
     "publicCategories": 6,
@@ -33422,7 +33422,7 @@
   "toolMarketOpportunityMap": {
     "cnFirstOpportunities": 2,
     "dualTrackOpportunities": 4,
-    "existingTools": 7,
+    "existingTools": 11,
     "globalFirstOpportunities": 2,
     "opportunities": 8,
     "platformRegistrationsNeedingHuman": 5,
@@ -33721,7 +33721,8 @@
         "existingToolTerms": [
           "agent",
           "mcp",
-          "deployment"
+          "langgraph",
+          "crewai"
         ],
         "cnQueries": [
           "AI Agent 部署教程",
@@ -33865,8 +33866,7 @@
           "vllm",
           "ollama",
           "runpod",
-          "huggingface",
-          "cost"
+          "huggingface"
         ],
         "cnQueries": [
           "大模型部署教程",
@@ -33945,10 +33945,12 @@
             "title": "Groq API 怎么接入：高速推理适合什么 AI 应用"
           }
         ],
-        "existingToolMatches": [],
+        "existingToolMatches": [
+          "llm-deployment-cost-planner"
+        ],
         "publicMatches": [],
-        "priorityScore": 146,
-        "recommendedNextAsset": "Build a lightweight interactive tool page before expanding another generic article.",
+        "priorityScore": 136,
+        "recommendedNextAsset": "Refresh the existing tool page and add article-to-tool internal links.",
         "safetyBoundary": {
           "autoCreateArticles": false,
           "autoEditPublicArticles": false,
@@ -34054,10 +34056,12 @@
             "title": "Dify metadata filtering 怎么用：让知识库检索更可控"
           }
         ],
-        "existingToolMatches": [],
+        "existingToolMatches": [
+          "memory-rag-architecture-planner"
+        ],
         "publicMatches": [],
-        "priorityScore": 149,
-        "recommendedNextAsset": "Build a lightweight interactive tool page before expanding another generic article.",
+        "priorityScore": 139,
+        "recommendedNextAsset": "Refresh the existing tool page and add article-to-tool internal links.",
         "safetyBoundary": {
           "autoCreateArticles": false,
           "autoEditPublicArticles": false,
@@ -34083,7 +34087,8 @@
         ],
         "existingToolTerms": [
           "api",
-          "cost",
+          "openrouter",
+          "rate-limit",
           "key",
           "route"
         ],
@@ -34164,10 +34169,12 @@
             "title": "Dify 怎么接 OpenAI API：模型供应商、LLM 节点和费用边界"
           }
         ],
-        "existingToolMatches": [],
+        "existingToolMatches": [
+          "api-routing-cost-checker"
+        ],
         "publicMatches": [],
-        "priorityScore": 144,
-        "recommendedNextAsset": "Build a lightweight interactive tool page before expanding another generic article.",
+        "priorityScore": 134,
+        "recommendedNextAsset": "Refresh the existing tool page and add article-to-tool internal links.",
         "safetyBoundary": {
           "autoCreateArticles": false,
           "autoEditPublicArticles": false,
@@ -34236,10 +34243,12 @@
             "title": "营销 AI 提示词模板：选题、广告文案、SEO 和活动复盘怎么写"
           }
         ],
-        "existingToolMatches": [],
+        "existingToolMatches": [
+          "public-seo-refresh-assistant"
+        ],
         "publicMatches": [],
-        "priorityScore": 143,
-        "recommendedNextAsset": "Build a lightweight interactive tool page before expanding another generic article.",
+        "priorityScore": 133,
+        "recommendedNextAsset": "Refresh the existing tool page and add article-to-tool internal links.",
         "safetyBoundary": {
           "autoCreateArticles": false,
           "autoEditPublicArticles": false,
@@ -58633,11 +58642,11 @@
   "liveSearch": {
     "checkedArticles": 15,
     "failedChecks": [],
-    "generatedAt": "2026-06-12T01:43:15.737Z",
+    "generatedAt": "2026-06-12T06:13:52.402Z",
     "missingFromSitemap": [],
     "ok": true,
     "publicArticles": 15,
-    "sitemapUrlCount": 89
+    "sitemapUrlCount": 96
   },
   "workbench": {
     "currentItemsCovered": 3,

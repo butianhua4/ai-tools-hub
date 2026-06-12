@@ -1,5 +1,5 @@
 # Traffic Claim Guard
-Generated at: 2026-06-12T01:43:16.976Z
+Generated at: 2026-06-12T06:13:53.567Z
 This guard scans operational reports and docs for unsupported claims that real traffic, clicks, impressions, or visits already exist.
 ## Guardrails
 - Auto publish: false
@@ -19,7 +19,7 @@ None.
 | README.md | 43 | 拿到 Google Search Console HTML tag 的 `content` 验证码后，可以先检查验证准备度： |
 | README.md | 250 | 4. 每次只发布 1-3 篇人工审核文章，观察收录和点击。 |
 | README.md | 276 | - Google Search Console 提交清单：`docs/search-console-setup.md` |
-| app/llms.txt/route.ts | 47 | "- The site does not claim real traffic, impressions, income guarantees, or automatic publishing.", |
+| app/llms.txt/route.ts | 50 | "- The site does not claim real traffic, impressions, income guarantees, or automatic publishing.", |
 | docs/NEXT_ACTIONS.md | 24 | ## 4. 收款和流量收益 |
 | docs/NEXT_ACTIONS.md | 29 | - 稳定流量后再接联盟链接和广告。 |
 | docs/NEXT_ACTIONS.md | 46 | - 有 5 篇以上人工审核公开文章：注册 Google Search Console。 |

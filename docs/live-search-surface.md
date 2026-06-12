@@ -1,6 +1,6 @@
 # Live Search Surface Check
 
-Generated at: 2026-06-12T01:43:15.737Z
+Generated at: 2026-06-12T06:13:52.402Z
 
 This report checks the live production search surfaces. It does not use Search Console traffic, impressions, or ranking data.
 
@@ -15,7 +15,7 @@ Overall: PASS
 
 ## Search Surfaces
 
-- Sitemap URL count: 89
+- Sitemap URL count: 96
 - Sitemap uses canonical base: true
 - Sitemap leaks drafts: false
 - Robots allows crawling: true
