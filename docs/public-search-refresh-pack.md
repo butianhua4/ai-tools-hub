@@ -1,6 +1,6 @@
 # Public Search Refresh Pack
 
-Generated at: 2026-06-13T01:37:23.229Z
+Generated at: 2026-06-13T05:57:15.145Z
 
 This report is read-only. It prioritizes public-page refresh work for search visibility without editing pages or claiming traffic.
 
