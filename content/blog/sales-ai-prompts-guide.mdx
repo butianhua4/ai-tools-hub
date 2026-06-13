@@ -123,6 +123,22 @@ noindex: true
 
 这个模板适合把聊天记录变成可执行下一步。
 
+## 质检标准和反例
+
+销售提示词交付前，至少检查四件事。第一，输入里是否有真实客户背景，而不是让 AI 自己猜。第二，输出是否把“事实、推测、待确认问题”分开。第三，是否明确禁止承诺价格、交期、结果和合同条款。第四，是否提醒人工确认后才能对外发送。
+
+反例是：“帮我写一段一定能成交的话术。”这个提示词方向不对，因为它要求 AI 承诺结果，还会鼓励夸张表达。更好的写法是：“请基于客户已确认需求，生成一版谨慎跟进草稿，并列出需要人工确认的问题。”
+
+## 人工复核来源
+
+公开前建议按以下官方资料核对提示词结构和安全边界：
+
+- [OpenAI prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)：核对角色、目标、上下文和约束写法。
+- [OpenAI text generation](https://developers.openai.com/api/docs/guides/text)：核对文本生成任务的输入、输出和模型响应边界。
+- [OpenAI safety best practices](https://developers.openai.com/api/docs/guides/safety-best-practices)：核对隐私、误导性输出和高影响场景的防护建议。
+
+这些来源不能证明某个销售模板一定提高成交，只能帮助人工审核提示词结构是否清楚、边界是否足够保守。
+
 ## 常见错误
 
 常见错误是让 AI 直接写“最强成交话术”。这种输出容易夸大，也容易让客户反感。

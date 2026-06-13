@@ -114,6 +114,22 @@ SQL 提示词要提供表结构，否则 AI 很容易编字段。
 
 报告摘要要根据受众调整，不同人关心的重点不同。
 
+## 质检标准和反例
+
+数据分析提示词至少要检查四个边界。第一，输入数据是否脱敏。第二，指标口径是否写清。第三，SQL 输出是否标注字段依赖和假设。第四，结论是否把事实、假设和建议动作分开。
+
+反例是：“帮我分析这个表，告诉我为什么收入下降。”如果没有时间范围、指标口径、渠道变化、活动记录和数据来源，AI 很容易编原因。更好的写法是：“请基于以下脱敏数据和业务背景，列出收入下降的可能假设、验证方法和需要补充的数据，不要直接下结论。”
+
+## 人工复核来源
+
+公开前建议按以下官方资料核对结构化输出和安全边界：
+
+- [OpenAI prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)：核对任务、上下文、约束和分步输出。
+- [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs)：核对结构化结果、字段约束和可解析输出。
+- [OpenAI safety best practices](https://developers.openai.com/api/docs/guides/safety-best-practices)：核对敏感数据、错误结论和人工复核边界。
+
+SQL、统计解释和业务结论必须由人用真实数据库、测试环境和业务口径复核，不能把 AI 草稿当最终分析。
+
 ## 常见错误
 
 常见错误是让 AI “写 SQL”，但不给表结构、字段和口径。这样生成的 SQL 看起来像，但不能用。
