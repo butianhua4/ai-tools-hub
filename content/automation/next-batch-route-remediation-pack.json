@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T06:16:32.529Z",
+  "generatedAt": "2026-06-14T10:39:27.873Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "nextBatchApprovalRouteGeneratedAt": "2026-06-14T06:16:32.066Z",
+    "nextBatchApprovalRouteGeneratedAt": "2026-06-14T10:39:27.407Z",
     "nextBatchApprovalRouteSummary": {
       "actionItems": 38,
       "batchItems": 3,
