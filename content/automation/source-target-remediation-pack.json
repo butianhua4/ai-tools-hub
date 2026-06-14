@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T15:18:45.206Z",
+  "generatedAt": "2026-06-14T01:41:31.687Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "sourceHealthGeneratedAt": "2026-06-13T15:18:44.700Z",
+    "sourceHealthGeneratedAt": "2026-06-14T01:41:31.191Z",
     "sourceHealthGuardrails": {
       "autoEditArticles": false,
       "autoMarkReview": false,
@@ -2002,7 +2002,7 @@
       "humanChecklist": [
         "Review URL: https://docs.vllm.ai.",
         "Review final URL: https://docs.vllm.ai/en/latest/.",
-        "HTTP status observed by automation: 200.",
+        "HTTP status observed by automation: 429.",
         "Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.",
         "If the final URL is the canonical destination, update the source target during human review.",
         "If the redirect lands on a generic, tracked, or unrelated page, replace it with a more specific official source.",
@@ -2079,7 +2079,7 @@
         "Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.",
         "Replace the source if the redirect weakens specificity or points to a general landing page."
       ],
-      "status": 200,
+      "status": 429,
       "stopBefore": "Stop before human approval until a reviewer confirms the final redirected URL is canonical and content-equivalent.",
       "unsafeReasons": [],
       "url": "https://docs.vllm.ai"
@@ -2274,10 +2274,10 @@
         "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
         "Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型"
       ],
-      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=fa",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs",
       "humanChecklist": [
         "Review URL: https://ai.google.dev/docs.",
-        "Review final URL: https://ai.google.dev/gemini-api/docs?hl=fa.",
+        "Review final URL: https://ai.google.dev/gemini-api/docs.",
         "HTTP status observed by automation: 200.",
         "Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.",
         "If the final URL is the canonical destination, update the source target during human review.",

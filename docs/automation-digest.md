@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-13T15:19:25.427Z
+Generated at: 2026-06-14T01:42:06.864Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -316,7 +316,7 @@ Failed checks:
 Redirect samples:
 
 - https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction
-- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=fa
+- https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs
 - https://docs.anthropic.com -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/ -> https://platform.claude.com/docs/en/home
 - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview -> https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
@@ -2229,7 +2229,7 @@ Public categories:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-13T15:19:21.565Z
+- Latest check: 2026-06-14T01:42:03.104Z
 - Ok: true
 - Public articles checked: 15
 - Sitemap URLs: 96
