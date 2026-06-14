@@ -1,28 +1,30 @@
 ---
-title: "dependency conflict 依赖冲突怎么处理"
-slug: "dependency-conflict-fix"
-description: "给中文新手的 dependency conflict 依赖冲突排查流程：先保存报错和锁文件状态，再看包管理器、peer dependency、版本范围、Node 版本和验证命令，不要一上来强制安装。"
-date: "2026-06-03"
-updatedAt: "2026-06-03"
-category: "报错解决"
+title: dependency conflict 依赖冲突怎么处理
+slug: dependency-conflict-fix
+description: >-
+  给中文新手的 dependency conflict 依赖冲突排查流程：先保存报错和锁文件状态，再看包管理器、peer
+  dependency、版本范围、Node 版本和验证命令，不要一上来强制安装。
+date: '2026-06-03'
+updatedAt: '2026-06-14'
+category: 报错解决
 tags:
-  - "报错解决"
-  - "依赖冲突"
-  - "npm"
-  - "AI 工具实践"
-author: "AI 工具指南"
-status: "draft"
-contentType: "tutorial"
-difficulty: "beginner"
-targetReader: "遇到 npm、yarn、pnpm 依赖冲突，不知道该先看什么的新手。"
-searchIntent: "informational"
-primaryKeyword: "dependency conflict 依赖冲突怎么处理"
+  - 报错解决
+  - 依赖冲突
+  - npm
+  - AI 工具实践
+author: AI 工具指南
+status: published
+contentType: tutorial
+difficulty: beginner
+targetReader: 遇到 npm、yarn、pnpm 依赖冲突，不知道该先看什么的新手。
+searchIntent: informational
+primaryKeyword: dependency conflict 依赖冲突怎么处理
 secondaryKeywords:
-  - "npm 依赖冲突"
-  - "peer dependency"
-  - "package-lock"
-  - "AI 工具实践"
-sourceNotes: "人工重写草稿；公开前仍需人工复核 npm、yarn、pnpm 版本差异、项目真实日志、官方文档和客户授权边界。"
+  - npm 依赖冲突
+  - peer dependency
+  - package-lock
+  - AI 工具实践
+sourceNotes: 人工重写草稿；公开前仍需人工复核 npm、yarn、pnpm 版本差异、项目真实日志、官方文档和客户授权边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +36,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 13
-canonical: "https://ai-jiedan-lab.vercel.app/blog/dependency-conflict-fix"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/dependency-conflict-fix'
+noindex: false
 ---
-
 # dependency conflict 依赖冲突怎么处理
 
 dependency conflict 通常不是“电脑坏了”，而是项目里的依赖版本互相不接受。常见场景包括 npm 提示 peer dependency 冲突、React 版本不符合插件要求、锁文件和 `package.json` 不一致、Node 版本太旧、或者你混用了 npm、yarn、pnpm。

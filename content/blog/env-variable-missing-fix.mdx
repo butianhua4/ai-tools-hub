@@ -1,28 +1,28 @@
 ---
-title: "环境变量 missing 怎么排查"
-slug: "env-variable-missing-fix"
-description: "给中文新手的环境变量 missing 排查流程：先确认缺哪个变量、在哪个环境缺、本地和部署平台是否一致，再处理公开变量、敏感密钥和客户授权边界。"
-date: "2026-06-03"
-updatedAt: "2026-06-03"
-category: "报错解决"
+title: 环境变量 missing 怎么排查
+slug: env-variable-missing-fix
+description: 给中文新手的环境变量 missing 排查流程：先确认缺哪个变量、在哪个环境缺、本地和部署平台是否一致，再处理公开变量、敏感密钥和客户授权边界。
+date: '2026-06-03'
+updatedAt: '2026-06-14'
+category: 报错解决
 tags:
-  - "报错解决"
-  - "环境变量"
-  - "Vercel"
-  - "AI 工具实践"
-author: "AI 工具指南"
-status: "draft"
-contentType: "tutorial"
-difficulty: "intermediate"
-targetReader: "遇到环境变量缺失、部署失败或本地能跑线上失败的新手。"
-searchIntent: "informational"
-primaryKeyword: "环境变量 missing 怎么排查"
+  - 报错解决
+  - 环境变量
+  - Vercel
+  - AI 工具实践
+author: AI 工具指南
+status: published
+contentType: tutorial
+difficulty: intermediate
+targetReader: 遇到环境变量缺失、部署失败或本地能跑线上失败的新手。
+searchIntent: informational
+primaryKeyword: 环境变量 missing 怎么排查
 secondaryKeywords:
-  - "环境变量缺失"
-  - ".env"
-  - "Vercel 环境变量"
-  - "AI 工具实践"
-sourceNotes: "人工重写草稿；公开前仍需人工复核 Next.js、Vercel、部署平台、环境变量规则、项目日志和客户授权边界。"
+  - 环境变量缺失
+  - .env
+  - Vercel 环境变量
+  - AI 工具实践
+sourceNotes: 人工重写草稿；公开前仍需人工复核 Next.js、Vercel、部署平台、环境变量规则、项目日志和客户授权边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +34,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 13
-canonical: "https://ai-jiedan-lab.vercel.app/blog/env-variable-missing-fix"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/env-variable-missing-fix'
+noindex: false
 ---
-
 # 环境变量 missing 怎么排查
 
 环境变量 missing 通常不是单纯“少一行配置”。它可能发生在本地、测试环境、预览部署、生产部署、服务端代码或客户端代码里。新手最容易犯的错误，是看到缺变量就让客户把密钥发过来，或者把真实密钥写进代码和聊天记录。

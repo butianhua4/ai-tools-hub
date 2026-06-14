@@ -1,28 +1,30 @@
 ---
-title: "ESLint error 常见错误和解决步骤"
-slug: "eslint-error-should-not-disable-mistakes"
-description: "整理 ESLint error 处理中的常见错误：全局关闭检查、批量加 eslint-disable、忽略 Hook 规则、只看 build 通过，以及更稳的解决顺序。"
-date: "2026-06-03"
-updatedAt: "2026-06-03"
-category: "报错解决"
+title: ESLint error 常见错误和解决步骤
+slug: eslint-error-should-not-disable-mistakes
+description: >-
+  整理 ESLint error 处理中的常见错误：全局关闭检查、批量加 eslint-disable、忽略 Hook 规则、只看 build
+  通过，以及更稳的解决顺序。
+date: '2026-06-03'
+updatedAt: '2026-06-14'
+category: 报错解决
 tags:
-  - "报错解决"
-  - "ESLint"
-  - "故障排查"
-  - "AI 工具实践"
-author: "AI 工具指南"
-status: "draft"
-contentType: "troubleshooting"
-difficulty: "beginner"
-targetReader: "ESLint 报错越修越乱，需要复盘错误顺序的新手。"
-searchIntent: "informational"
-primaryKeyword: "ESLint error 常见错误和解决步骤"
+  - 报错解决
+  - ESLint
+  - 故障排查
+  - AI 工具实践
+author: AI 工具指南
+status: published
+contentType: troubleshooting
+difficulty: beginner
+targetReader: ESLint 报错越修越乱，需要复盘错误顺序的新手。
+searchIntent: informational
+primaryKeyword: ESLint error 常见错误和解决步骤
 secondaryKeywords:
-  - "eslint-disable"
-  - "lint 失败"
-  - "React Hook lint"
-  - "AI 工具实践"
-sourceNotes: "人工重写草稿；公开前仍需人工复核 ESLint、Next.js、项目规则、CI 配置和客户授权边界。"
+  - eslint-disable
+  - lint 失败
+  - React Hook lint
+  - AI 工具实践
+sourceNotes: 人工重写草稿；公开前仍需人工复核 ESLint、Next.js、项目规则、CI 配置和客户授权边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +36,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 14
-canonical: "https://ai-jiedan-lab.vercel.app/blog/eslint-error-should-not-disable-mistakes"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/eslint-error-should-not-disable-mistakes'
+noindex: false
 ---
-
 # ESLint error 常见错误和解决步骤
 
 ESLint 报错最容易被当成“烦人的拦路石”。新手为了让 build 通过，可能直接关规则、删脚本、批量加 `eslint-disable`。短期看起来顺了，长期会让项目更难维护。

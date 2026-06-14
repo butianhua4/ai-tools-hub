@@ -1,28 +1,28 @@
 ---
-title: "npm run dev 能跑但 build 失败常见错误和解决步骤"
-slug: "dev-works-build-fails-mistakes"
-description: "整理 build 失败排查中的常见错误：只看 dev、不保存完整日志、关掉类型检查、忽略环境变量、忽略静态生成和路径大小写，以及更稳的解决顺序。"
-date: "2026-06-03"
-updatedAt: "2026-06-03"
-category: "报错解决"
+title: npm run dev 能跑但 build 失败常见错误和解决步骤
+slug: dev-works-build-fails-mistakes
+description: 整理 build 失败排查中的常见错误：只看 dev、不保存完整日志、关掉类型检查、忽略环境变量、忽略静态生成和路径大小写，以及更稳的解决顺序。
+date: '2026-06-03'
+updatedAt: '2026-06-14'
+category: 报错解决
 tags:
-  - "报错解决"
-  - "build 失败"
-  - "故障排查"
-  - "AI 工具实践"
-author: "AI 工具指南"
-status: "draft"
-contentType: "troubleshooting"
-difficulty: "beginner"
-targetReader: "build 失败越修越乱，需要复盘错误顺序的新手。"
-searchIntent: "informational"
-primaryKeyword: "npm run dev 能跑但 build 失败常见错误和解决步骤"
+  - 报错解决
+  - build 失败
+  - 故障排查
+  - AI 工具实践
+author: AI 工具指南
+status: published
+contentType: troubleshooting
+difficulty: beginner
+targetReader: build 失败越修越乱，需要复盘错误顺序的新手。
+searchIntent: informational
+primaryKeyword: npm run dev 能跑但 build 失败常见错误和解决步骤
 secondaryKeywords:
-  - "npm run build 失败"
-  - "Vercel build failed"
-  - "Next.js build error"
-  - "AI 工具实践"
-sourceNotes: "人工重写草稿；公开前仍需人工复核 Next.js、Vercel、包管理器、项目日志、环境变量和客户授权边界。"
+  - npm run build 失败
+  - Vercel build failed
+  - Next.js build error
+  - AI 工具实践
+sourceNotes: 人工重写草稿；公开前仍需人工复核 Next.js、Vercel、包管理器、项目日志、环境变量和客户授权边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +34,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 15
-canonical: "https://ai-jiedan-lab.vercel.app/blog/dev-works-build-fails-mistakes"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/dev-works-build-fails-mistakes'
+noindex: false
 ---
-
 # npm run dev 能跑但 build 失败常见错误和解决步骤
 
 build 失败最容易被误判。新手常说“本地能打开，为什么还失败”，然后开始删依赖、关规则、改部署平台。真正稳的顺序是先看完整日志，再找失败阶段，再决定是否修改代码、配置或环境。

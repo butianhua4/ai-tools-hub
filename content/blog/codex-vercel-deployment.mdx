@@ -1,28 +1,30 @@
 ---
-title: "用 Codex 检查 Vercel 部署问题"
-slug: "codex-vercel-deployment"
-description: "给 AI 工具新手的一套 Vercel 部署检查流程：用 Codex 辅助解释 build 日志，但由人工确认环境变量、预览环境、域名、账号授权、路由和上线后复查。"
-date: "2026-06-02"
-updatedAt: "2026-06-03"
-category: "Deployment"
+title: 用 Codex 检查 Vercel 部署问题
+slug: codex-vercel-deployment
+description: >-
+  给 AI 工具新手的一套 Vercel 部署检查流程：用 Codex 辅助解释 build
+  日志，但由人工确认环境变量、预览环境、域名、账号授权、路由和上线后复查。
+date: '2026-06-02'
+updatedAt: '2026-06-14'
+category: Deployment
 tags:
-  - "Codex"
-  - "Vercel"
-  - "部署检查"
-  - "AI 工具实践"
-author: "AI 工具指南"
-status: "draft"
-contentType: "tutorial"
-difficulty: "beginner"
-targetReader: "准备把小网站、Next.js 项目或 AI 辅助页面部署到 Vercel 的新手。"
-searchIntent: "informational"
-primaryKeyword: "用 Codex 检查 Vercel 部署问题"
+  - Codex
+  - Vercel
+  - 部署检查
+  - AI 工具实践
+author: AI 工具指南
+status: published
+contentType: tutorial
+difficulty: beginner
+targetReader: 准备把小网站、Next.js 项目或 AI 辅助页面部署到 Vercel 的新手。
+searchIntent: informational
+primaryKeyword: 用 Codex 检查 Vercel 部署问题
 secondaryKeywords:
-  - "Vercel 部署失败"
-  - "Codex 部署排查"
-  - "Next.js 部署"
-  - "AI 工具实践"
-sourceNotes: "人工重写草稿；发布前仍需人工复核真实案例、工具功能变化、平台规则和安全边界。"
+  - Vercel 部署失败
+  - Codex 部署排查
+  - Next.js 部署
+  - AI 工具实践
+sourceNotes: 人工重写草稿；发布前仍需人工复核真实案例、工具功能变化、平台规则和安全边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +36,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 2
-canonical: "https://ai-jiedan-lab.vercel.app/blog/codex-vercel-deployment"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/codex-vercel-deployment'
+noindex: false
 ---
-
 # 用 Codex 检查 Vercel 部署问题
 
 Vercel 部署失败时，新手很容易只看最后一行红字，然后不断改代码。实际上部署问题可能来自 build 命令、Node 版本、环境变量、路由、依赖、静态生成、域名、账号权限或平台配置。Codex 可以帮你解释日志、列可能原因和整理排查顺序，但最终要靠人工确认项目环境和客户授权。

@@ -1,28 +1,28 @@
 ---
-title: "ESLint error 要不要直接关闭"
-slug: "eslint-error-should-not-disable"
-description: "给中文新手的 ESLint 报错处理流程：先读规则名和报错文件，判断是代码问题、配置问题还是临时例外，再决定是否局部禁用，不要一上来全局关闭检查。"
-date: "2026-06-03"
-updatedAt: "2026-06-03"
-category: "报错解决"
+title: ESLint error 要不要直接关闭
+slug: eslint-error-should-not-disable
+description: 给中文新手的 ESLint 报错处理流程：先读规则名和报错文件，判断是代码问题、配置问题还是临时例外，再决定是否局部禁用，不要一上来全局关闭检查。
+date: '2026-06-03'
+updatedAt: '2026-06-14'
+category: 报错解决
 tags:
-  - "报错解决"
-  - "ESLint"
-  - "代码质量"
-  - "AI 工具实践"
-author: "AI 工具指南"
-status: "draft"
-contentType: "tutorial"
-difficulty: "beginner"
-targetReader: "遇到 ESLint error，不知道该修代码还是关闭规则的新手。"
-searchIntent: "informational"
-primaryKeyword: "ESLint error 要不要直接关闭"
+  - 报错解决
+  - ESLint
+  - 代码质量
+  - AI 工具实践
+author: AI 工具指南
+status: published
+contentType: tutorial
+difficulty: beginner
+targetReader: 遇到 ESLint error，不知道该修代码还是关闭规则的新手。
+searchIntent: informational
+primaryKeyword: ESLint error 要不要直接关闭
 secondaryKeywords:
-  - "ESLint 报错"
-  - "eslint-disable"
-  - "lint 失败"
-  - "AI 工具实践"
-sourceNotes: "人工重写草稿；公开前仍需人工复核 ESLint、Next.js、项目规则、CI 配置和客户授权边界。"
+  - ESLint 报错
+  - eslint-disable
+  - lint 失败
+  - AI 工具实践
+sourceNotes: 人工重写草稿；公开前仍需人工复核 ESLint、Next.js、项目规则、CI 配置和客户授权边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +34,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 14
-canonical: "https://ai-jiedan-lab.vercel.app/blog/eslint-error-should-not-disable"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/eslint-error-should-not-disable'
+noindex: false
 ---
-
 # ESLint error 要不要直接关闭
 
 ESLint 报错不应该默认直接关闭。它可能只是格式、未使用变量、Hook 依赖、可访问性、导入顺序，也可能是在提醒你代码有真实风险。新手最常见的误区，是为了让 `npm run build` 或部署通过，直接关掉规则、删除配置，或者在整份文件顶部加大范围禁用。

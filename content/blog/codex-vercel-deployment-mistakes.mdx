@@ -1,28 +1,28 @@
 ---
-title: "Vercel 部署常见错误和修复顺序"
-slug: "codex-vercel-deployment-mistakes"
-description: "整理新手排查 Vercel 部署问题时常见的错误：本地没 build、环境变量遗漏、混用包管理器、域名未确认、部署后不复查，以及更稳的修复顺序。"
-date: "2026-06-02"
-updatedAt: "2026-06-03"
-category: "Deployment"
+title: Vercel 部署常见错误和修复顺序
+slug: codex-vercel-deployment-mistakes
+description: 整理新手排查 Vercel 部署问题时常见的错误：本地没 build、环境变量遗漏、混用包管理器、域名未确认、部署后不复查，以及更稳的修复顺序。
+date: '2026-06-02'
+updatedAt: '2026-06-14'
+category: Deployment
 tags:
-  - "Codex"
-  - "Vercel"
-  - "部署检查"
-  - "故障排查"
-author: "AI 工具指南"
-status: "draft"
-contentType: "troubleshooting"
-difficulty: "beginner"
-targetReader: "Vercel 部署失败、线上和本地不一致、或部署后发现页面问题的新手。"
-searchIntent: "informational"
-primaryKeyword: "Vercel 部署常见错误和修复顺序"
+  - Codex
+  - Vercel
+  - 部署检查
+  - 故障排查
+author: AI 工具指南
+status: published
+contentType: troubleshooting
+difficulty: beginner
+targetReader: Vercel 部署失败、线上和本地不一致、或部署后发现页面问题的新手。
+searchIntent: informational
+primaryKeyword: Vercel 部署常见错误和修复顺序
 secondaryKeywords:
-  - "Vercel 部署失败"
-  - "Next.js build"
-  - "Codex"
-  - "AI 工具实践"
-sourceNotes: "人工重写草稿；发布前仍需人工复核真实案例、工具功能变化、平台规则和安全边界。"
+  - Vercel 部署失败
+  - Next.js build
+  - Codex
+  - AI 工具实践
+sourceNotes: 人工重写草稿；发布前仍需人工复核真实案例、工具功能变化、平台规则和安全边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +34,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 2
-canonical: "https://ai-jiedan-lab.vercel.app/blog/codex-vercel-deployment-mistakes"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/codex-vercel-deployment-mistakes'
+noindex: false
 ---
-
 # Vercel 部署常见错误和修复顺序
 
 Vercel 部署问题最怕乱试。新手看到 build 失败，可能立刻升级依赖、删除 lockfile、改环境变量、换构建命令。结果原始错误没解决，项目状态反而更难解释。更稳的做法是先保存日志、分类错误、本地复现，再决定是否修改。

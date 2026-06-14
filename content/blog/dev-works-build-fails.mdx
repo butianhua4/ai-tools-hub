@@ -1,28 +1,30 @@
 ---
-title: "npm run dev 能跑但 build 失败怎么办"
-slug: "dev-works-build-fails"
-description: "给中文新手的 build 失败排查流程：先区分 dev 和 build，再检查 TypeScript、lint、环境变量、静态生成、依赖版本、大小写路径和部署环境差异。"
-date: "2026-06-03"
-updatedAt: "2026-06-03"
-category: "报错解决"
+title: npm run dev 能跑但 build 失败怎么办
+slug: dev-works-build-fails
+description: >-
+  给中文新手的 build 失败排查流程：先区分 dev 和 build，再检查
+  TypeScript、lint、环境变量、静态生成、依赖版本、大小写路径和部署环境差异。
+date: '2026-06-03'
+updatedAt: '2026-06-14'
+category: 报错解决
 tags:
-  - "报错解决"
-  - "build 失败"
-  - "npm run dev"
-  - "AI 工具实践"
-author: "AI 工具指南"
-status: "draft"
-contentType: "tutorial"
-difficulty: "beginner"
-targetReader: "本地 dev 能启动，但 build、部署或 CI 失败的新手。"
-searchIntent: "informational"
-primaryKeyword: "npm run dev 能跑但 build 失败怎么办"
+  - 报错解决
+  - build 失败
+  - npm run dev
+  - AI 工具实践
+author: AI 工具指南
+status: published
+contentType: tutorial
+difficulty: beginner
+targetReader: 本地 dev 能启动，但 build、部署或 CI 失败的新手。
+searchIntent: informational
+primaryKeyword: npm run dev 能跑但 build 失败怎么办
 secondaryKeywords:
-  - "npm run build 失败"
-  - "Next.js build"
-  - "Vercel build failed"
-  - "AI 工具实践"
-sourceNotes: "人工重写草稿；公开前仍需人工复核 Next.js、Vercel、包管理器、项目日志、环境变量和客户授权边界。"
+  - npm run build 失败
+  - Next.js build
+  - Vercel build failed
+  - AI 工具实践
+sourceNotes: 人工重写草稿；公开前仍需人工复核 Next.js、Vercel、包管理器、项目日志、环境变量和客户授权边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +36,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 15
-canonical: "https://ai-jiedan-lab.vercel.app/blog/dev-works-build-fails"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/dev-works-build-fails'
+noindex: false
 ---
-
 # npm run dev 能跑但 build 失败怎么办
 
 `npm run dev` 能跑，不代表项目已经能上线。dev 模式通常更宽松，目标是让你本地开发；build 模式会做更严格的类型检查、lint、静态生成、依赖打包和生产配置校验。所以“本地页面能打开，但 build 失败”是新手很常见的卡点。

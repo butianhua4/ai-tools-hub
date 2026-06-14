@@ -1,28 +1,30 @@
 ---
-title: "用 Codex 排查 npm install 报错"
-slug: "codex-npm-install-errors"
-description: "给中文新手的一套 npm install 报错排查流程：用 Codex 辅助解释日志，但由人工确认项目目录、Node 版本、包管理器、权限、网络和可回退边界。"
-date: "2026-06-02"
-updatedAt: "2026-06-03"
-category: "Troubleshooting"
+title: 用 Codex 排查 npm install 报错
+slug: codex-npm-install-errors
+description: >-
+  给中文新手的一套 npm install 报错排查流程：用 Codex 辅助解释日志，但由人工确认项目目录、Node
+  版本、包管理器、权限、网络和可回退边界。
+date: '2026-06-02'
+updatedAt: '2026-06-14'
+category: Troubleshooting
 tags:
-  - "Codex"
-  - "npm install"
-  - "报错排查"
-  - "AI 工具实践"
-author: "AI 工具指南"
-status: "draft"
-contentType: "tutorial"
-difficulty: "beginner"
-targetReader: "遇到 npm install 失败、想用 Codex 辅助读日志并安全排查的新手。"
-searchIntent: "informational"
-primaryKeyword: "用 Codex 排查 npm install 报错"
+  - Codex
+  - npm install
+  - 报错排查
+  - AI 工具实践
+author: AI 工具指南
+status: published
+contentType: tutorial
+difficulty: beginner
+targetReader: 遇到 npm install 失败、想用 Codex 辅助读日志并安全排查的新手。
+searchIntent: informational
+primaryKeyword: 用 Codex 排查 npm install 报错
 secondaryKeywords:
-  - "npm install 报错"
-  - "Codex 报错排查"
-  - "Node 依赖安装"
-  - "AI 工具实践"
-sourceNotes: "人工重写草稿；发布前仍需人工复核真实案例、工具功能变化、平台规则和安全边界。"
+  - npm install 报错
+  - Codex 报错排查
+  - Node 依赖安装
+  - AI 工具实践
+sourceNotes: 人工重写草稿；发布前仍需人工复核真实案例、工具功能变化、平台规则和安全边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +36,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 2
-canonical: "https://ai-jiedan-lab.vercel.app/blog/codex-npm-install-errors"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/codex-npm-install-errors'
+noindex: false
 ---
-
 # 用 Codex 排查 npm install 报错
 
 `npm install` 失败是新手最常见的前端卡点之一。它可能来自 Node 版本、包管理器、lockfile、网络、权限、原生依赖、项目目录或私有包授权。Codex 能帮助你解释日志、列出可能原因、生成下一步验证命令，但不能替你跳过人工判断。排查 npm 报错的核心不是“多试几条命令”，而是少改变量、保留证据、逐步缩小范围。

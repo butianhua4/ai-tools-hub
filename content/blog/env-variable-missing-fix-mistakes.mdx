@@ -1,28 +1,28 @@
 ---
-title: "环境变量 missing 常见错误和解决步骤"
-slug: "env-variable-missing-fix-mistakes"
-description: "整理环境变量 missing 排查中的常见错误：泄露密钥、混淆本地和部署环境、把服务端密钥放到客户端、配置后不重新部署，以及更稳的解决顺序。"
-date: "2026-06-03"
-updatedAt: "2026-06-03"
-category: "报错解决"
+title: 环境变量 missing 常见错误和解决步骤
+slug: env-variable-missing-fix-mistakes
+description: 整理环境变量 missing 排查中的常见错误：泄露密钥、混淆本地和部署环境、把服务端密钥放到客户端、配置后不重新部署，以及更稳的解决顺序。
+date: '2026-06-03'
+updatedAt: '2026-06-14'
+category: 报错解决
 tags:
-  - "报错解决"
-  - "环境变量"
-  - "故障排查"
-  - "AI 工具实践"
-author: "AI 工具指南"
-status: "draft"
-contentType: "troubleshooting"
-difficulty: "intermediate"
-targetReader: "环境变量缺失越修越乱，需要复盘错误顺序的新手。"
-searchIntent: "informational"
-primaryKeyword: "环境变量 missing 常见错误和解决步骤"
+  - 报错解决
+  - 环境变量
+  - 故障排查
+  - AI 工具实践
+author: AI 工具指南
+status: published
+contentType: troubleshooting
+difficulty: intermediate
+targetReader: 环境变量缺失越修越乱，需要复盘错误顺序的新手。
+searchIntent: informational
+primaryKeyword: 环境变量 missing 常见错误和解决步骤
 secondaryKeywords:
-  - ".env 错误"
-  - "环境变量缺失"
-  - "Vercel env"
-  - "AI 工具实践"
-sourceNotes: "人工重写草稿；公开前仍需人工复核 Next.js、Vercel、部署平台、环境变量规则、项目日志和客户授权边界。"
+  - .env 错误
+  - 环境变量缺失
+  - Vercel env
+  - AI 工具实践
+sourceNotes: 人工重写草稿；公开前仍需人工复核 Next.js、Vercel、部署平台、环境变量规则、项目日志和客户授权边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +34,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 13
-canonical: "https://ai-jiedan-lab.vercel.app/blog/env-variable-missing-fix-mistakes"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/env-variable-missing-fix-mistakes'
+noindex: false
 ---
-
 # 环境变量 missing 常见错误和解决步骤
 
 环境变量 missing 的排查重点不是“快点拿到 key”，而是“在不泄露密钥的前提下确认缺什么、哪里缺、谁来配置”。新手一急，很容易把真实密钥贴进聊天、把服务端密钥暴露到客户端，或者只配置了本地却忘了部署平台。

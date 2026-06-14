@@ -1,28 +1,30 @@
 ---
-title: "failed to push some refs 怎么排查"
-slug: "failed-to-push-some-refs-fix"
-description: "新手遇到 failed to push some refs 时，先不要急着强制推送。本文按远端变更、本地分支、上游分支、权限和保护规则拆解排查顺序，帮助你在不覆盖别人代码的前提下恢复 Git 推送。"
-date: "2026-06-03"
-updatedAt: "2026-06-03"
-category: "报错解决"
+title: failed to push some refs 怎么排查
+slug: failed-to-push-some-refs-fix
+description: >-
+  新手遇到 failed to push some refs
+  时，先不要急着强制推送。本文按远端变更、本地分支、上游分支、权限和保护规则拆解排查顺序，帮助你在不覆盖别人代码的前提下恢复 Git 推送。
+date: '2026-06-03'
+updatedAt: '2026-06-14'
+category: 报错解决
 tags:
-  - "报错解决"
-  - "Git"
-  - "failed to push some refs"
-  - "AI 工具实践"
-author: "AI 工具指南"
-status: "draft"
-contentType: "tutorial"
-difficulty: "beginner"
-targetReader: "正在处理 Git 推送失败、需要谨慎排查远端分支和本地提交的新手"
-searchIntent: "informational"
-primaryKeyword: "failed to push some refs 怎么排查"
+  - 报错解决
+  - Git
+  - failed to push some refs
+  - AI 工具实践
+author: AI 工具指南
+status: published
+contentType: tutorial
+difficulty: beginner
+targetReader: 正在处理 Git 推送失败、需要谨慎排查远端分支和本地提交的新手
+searchIntent: informational
+primaryKeyword: failed to push some refs 怎么排查
 secondaryKeywords:
-  - "git push 报错"
-  - "远端分支"
-  - "non-fast-forward"
-  - "AI 工具实践"
-sourceNotes: "人工重写版本；公开前仍需人工复核 Git 版本、平台权限、客户仓库规则和命令示例。"
+  - git push 报错
+  - 远端分支
+  - non-fast-forward
+  - AI 工具实践
+sourceNotes: 人工重写版本；公开前仍需人工复核 Git 版本、平台权限、客户仓库规则和命令示例。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +36,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 13
-canonical: "https://ai-jiedan-lab.vercel.app/blog/failed-to-push-some-refs-fix"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/failed-to-push-some-refs-fix'
+noindex: false
 ---
-
 # failed to push some refs 怎么排查
 
 `failed to push some refs` 不是一个单独原因，而是 Git 在告诉你：本地提交暂时不能直接推到远端。最常见的情况是远端分支已经有了你本地没有的提交，也可能是分支名、上游分支、权限、保护规则或认证状态有问题。

@@ -1,28 +1,28 @@
 ---
-title: "Codex 代码审查常见错误和修复顺序"
-slug: "codex-review-generated-code-mistakes"
-description: "整理新手审核 Codex 生成代码时常见的错误，以及建议的修复顺序：先保住现场，再缩小范围、运行验证、记录风险。"
-date: "2026-06-02"
-updatedAt: "2026-06-03"
-category: "Codex 新手教程"
+title: Codex 代码审查常见错误和修复顺序
+slug: codex-review-generated-code-mistakes
+description: 整理新手审核 Codex 生成代码时常见的错误，以及建议的修复顺序：先保住现场，再缩小范围、运行验证、记录风险。
+date: '2026-06-02'
+updatedAt: '2026-06-14'
+category: Codex 新手教程
 tags:
-  - "Codex"
-  - "代码审查"
-  - "AI 工具实践"
-  - "故障排查"
-author: "AI 工具指南"
-status: "draft"
-contentType: "troubleshooting"
-difficulty: "beginner"
-targetReader: "用 Codex 改完代码后发现结果不稳定、测试失败或交付范围变大的新手。"
-searchIntent: "informational"
-primaryKeyword: "Codex 代码审查常见错误和修复顺序"
+  - Codex
+  - 代码审查
+  - AI 工具实践
+  - 故障排查
+author: AI 工具指南
+status: published
+contentType: troubleshooting
+difficulty: beginner
+targetReader: 用 Codex 改完代码后发现结果不稳定、测试失败或交付范围变大的新手。
+searchIntent: informational
+primaryKeyword: Codex 代码审查常见错误和修复顺序
 secondaryKeywords:
-  - "Codex 生成代码"
-  - "代码审查"
-  - "AI 工具实践"
-  - "修复顺序"
-sourceNotes: "人工重写草稿；发布前仍需人工复核真实案例、工具功能变化、平台规则和安全边界。"
+  - Codex 生成代码
+  - 代码审查
+  - AI 工具实践
+  - 修复顺序
+sourceNotes: 人工重写草稿；发布前仍需人工复核真实案例、工具功能变化、平台规则和安全边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +34,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 2
-canonical: "https://ai-jiedan-lab.vercel.app/blog/codex-review-generated-code-mistakes"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/codex-review-generated-code-mistakes'
+noindex: false
 ---
-
 # Codex 代码审查常见错误和修复顺序
 
 Codex 生成的代码不一定会“明显坏掉”。更常见的情况是：页面能打开，但某个边界状态错了；测试能跑一部分，但构建失败；客户看到效果，却发现需求被误解。新手做人工审核时，最危险的不是发现错误，而是发现错误后继续扩大修改范围，最后连原始问题都说不清。

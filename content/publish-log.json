@@ -706,5 +706,1205 @@
     "action": "publish",
     "slug": "claude-code-beginner-use-cases-freelance-scope",
     "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:46.552Z",
+    "action": "publish",
+    "slug": "claude-code-beginner-use-cases-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:46.553Z",
+    "action": "publish",
+    "slug": "claude-code-beginner-use-cases",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:46.555Z",
+    "action": "publish",
+    "slug": "claude-code-bug-prompt-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:46.557Z",
+    "action": "publish",
+    "slug": "claude-code-bug-prompt-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:46.558Z",
+    "action": "publish",
+    "slug": "claude-code-bug-prompt-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:48.973Z",
+    "action": "publish",
+    "slug": "claude-code-bug-prompt",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:48.974Z",
+    "action": "publish",
+    "slug": "claude-code-client-questions-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:48.975Z",
+    "action": "publish",
+    "slug": "claude-code-client-questions-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:48.977Z",
+    "action": "publish",
+    "slug": "claude-code-client-questions-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:48.978Z",
+    "action": "publish",
+    "slug": "claude-code-client-questions",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:51.430Z",
+    "action": "publish",
+    "slug": "claude-code-common-commands-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:51.431Z",
+    "action": "publish",
+    "slug": "claude-code-common-commands-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:51.432Z",
+    "action": "publish",
+    "slug": "claude-code-common-commands-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:51.434Z",
+    "action": "publish",
+    "slug": "claude-code-common-commands",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:51.435Z",
+    "action": "publish",
+    "slug": "claude-code-delivery-note-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:53.913Z",
+    "action": "publish",
+    "slug": "claude-code-delivery-note-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:53.914Z",
+    "action": "publish",
+    "slug": "claude-code-delivery-note-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:53.915Z",
+    "action": "publish",
+    "slug": "claude-code-delivery-note",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:53.917Z",
+    "action": "publish",
+    "slug": "claude-code-error-debug-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:53.918Z",
+    "action": "publish",
+    "slug": "claude-code-error-debug-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:56.273Z",
+    "action": "publish",
+    "slug": "claude-code-error-debug-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:56.275Z",
+    "action": "publish",
+    "slug": "claude-code-error-debug",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:56.278Z",
+    "action": "publish",
+    "slug": "claude-code-github-file-scope-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:56.280Z",
+    "action": "publish",
+    "slug": "claude-code-github-file-scope-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:56.281Z",
+    "action": "publish",
+    "slug": "claude-code-github-file-scope-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:58.646Z",
+    "action": "publish",
+    "slug": "claude-code-github-file-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:58.648Z",
+    "action": "publish",
+    "slug": "claude-code-install-prerequisites-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:58.649Z",
+    "action": "publish",
+    "slug": "claude-code-install-prerequisites-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:58.651Z",
+    "action": "publish",
+    "slug": "claude-code-install-prerequisites-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:16:58.652Z",
+    "action": "publish",
+    "slug": "claude-code-install-prerequisites",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:00.925Z",
+    "action": "publish",
+    "slug": "claude-code-low-risk-freelance-jobs-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:00.926Z",
+    "action": "publish",
+    "slug": "claude-code-low-risk-freelance-jobs-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:00.928Z",
+    "action": "publish",
+    "slug": "claude-code-low-risk-freelance-jobs-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:00.929Z",
+    "action": "publish",
+    "slug": "claude-code-low-risk-freelance-jobs",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:00.930Z",
+    "action": "publish",
+    "slug": "claude-code-nextjs-page-check-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:03.332Z",
+    "action": "publish",
+    "slug": "claude-code-nextjs-page-check-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:03.333Z",
+    "action": "publish",
+    "slug": "claude-code-nextjs-page-check-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:03.334Z",
+    "action": "publish",
+    "slug": "claude-code-nextjs-page-check",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:03.335Z",
+    "action": "publish",
+    "slug": "claude-code-proposal-review-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:03.336Z",
+    "action": "publish",
+    "slug": "claude-code-proposal-review-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:05.883Z",
+    "action": "publish",
+    "slug": "claude-code-proposal-review-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:05.886Z",
+    "action": "publish",
+    "slug": "claude-code-proposal-review",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:05.888Z",
+    "action": "publish",
+    "slug": "claude-code-small-project-tasks-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:05.890Z",
+    "action": "publish",
+    "slug": "claude-code-small-project-tasks-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:05.891Z",
+    "action": "publish",
+    "slug": "claude-code-small-project-tasks-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:08.416Z",
+    "action": "publish",
+    "slug": "claude-code-small-project-tasks",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:08.418Z",
+    "action": "publish",
+    "slug": "claude-code-vs-codex-web-editing-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:08.420Z",
+    "action": "publish",
+    "slug": "claude-code-vs-codex-web-editing-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:08.422Z",
+    "action": "publish",
+    "slug": "claude-code-vs-codex-web-editing-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:08.424Z",
+    "action": "publish",
+    "slug": "claude-code-vs-codex-web-editing",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:10.860Z",
+    "action": "publish",
+    "slug": "client-acceptance-checklist-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:10.861Z",
+    "action": "publish",
+    "slug": "client-acceptance-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:10.862Z",
+    "action": "publish",
+    "slug": "client-requirement-form-questions-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:10.864Z",
+    "action": "publish",
+    "slug": "client-requirement-form-questions",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:10.865Z",
+    "action": "publish",
+    "slug": "cloudflare-vs-namecheap-domain-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:13.255Z",
+    "action": "publish",
+    "slug": "cloudflare-vs-namecheap-domain",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:13.257Z",
+    "action": "publish",
+    "slug": "cloudflare-workers-ai-beginner-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:13.258Z",
+    "action": "publish",
+    "slug": "codex-automation-steps-not-skip-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:13.259Z",
+    "action": "publish",
+    "slug": "codex-automation-steps-not-skip-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:13.260Z",
+    "action": "publish",
+    "slug": "codex-automation-steps-not-skip-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:15.712Z",
+    "action": "publish",
+    "slug": "codex-automation-steps-not-skip",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:15.713Z",
+    "action": "publish",
+    "slug": "codex-avoid-secret-leak-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:15.714Z",
+    "action": "publish",
+    "slug": "codex-avoid-secret-leak-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:15.716Z",
+    "action": "publish",
+    "slug": "codex-avoid-secret-leak-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:15.718Z",
+    "action": "publish",
+    "slug": "codex-avoid-secret-leak",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:18.220Z",
+    "action": "publish",
+    "slug": "codex-bugfix-rollback-record-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:18.221Z",
+    "action": "publish",
+    "slug": "codex-bugfix-rollback-record-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:18.223Z",
+    "action": "publish",
+    "slug": "codex-bugfix-rollback-record-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:18.224Z",
+    "action": "publish",
+    "slug": "codex-bugfix-rollback-record",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:18.225Z",
+    "action": "publish",
+    "slug": "codex-client-requirement-questions-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:20.492Z",
+    "action": "publish",
+    "slug": "codex-client-requirement-questions-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:20.494Z",
+    "action": "publish",
+    "slug": "codex-client-requirement-questions-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:20.495Z",
+    "action": "publish",
+    "slug": "codex-client-requirement-questions",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:20.500Z",
+    "action": "publish",
+    "slug": "codex-codex-4-31",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:20.501Z",
+    "action": "publish",
+    "slug": "codex-codex-4-32",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:23.001Z",
+    "action": "publish",
+    "slug": "codex-codex-4-34",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:23.003Z",
+    "action": "publish",
+    "slug": "codex-codex-4-38",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:23.007Z",
+    "action": "publish",
+    "slug": "codex-codex-claude-code-4-40",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:23.011Z",
+    "action": "publish",
+    "slug": "codex-codex-css-bug-4-35",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:23.014Z",
+    "action": "publish",
+    "slug": "codex-codex-github-4-36",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:25.670Z",
+    "action": "publish",
+    "slug": "codex-codex-npm-install-4-33",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:25.673Z",
+    "action": "publish",
+    "slug": "codex-codex-upwork-4-39",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:25.676Z",
+    "action": "publish",
+    "slug": "codex-codex-vercel-4-37",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:25.679Z",
+    "action": "publish",
+    "slug": "codex-css-spacing-responsive-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:25.680Z",
+    "action": "publish",
+    "slug": "codex-css-spacing-responsive-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:28.055Z",
+    "action": "publish",
+    "slug": "codex-css-spacing-responsive-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:28.056Z",
+    "action": "publish",
+    "slug": "codex-css-spacing-responsive",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:28.057Z",
+    "action": "publish",
+    "slug": "codex-edit-existing-ui-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:28.058Z",
+    "action": "publish",
+    "slug": "codex-edit-existing-ui-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:28.059Z",
+    "action": "publish",
+    "slug": "codex-edit-existing-ui-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:30.461Z",
+    "action": "publish",
+    "slug": "codex-edit-existing-ui",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:30.463Z",
+    "action": "publish",
+    "slug": "codex-first-day-guide-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:30.464Z",
+    "action": "publish",
+    "slug": "codex-first-day-guide-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:30.466Z",
+    "action": "publish",
+    "slug": "codex-first-day-guide-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:30.467Z",
+    "action": "publish",
+    "slug": "codex-first-day-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:32.629Z",
+    "action": "publish",
+    "slug": "codex-first-landing-page-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:32.630Z",
+    "action": "publish",
+    "slug": "codex-first-landing-page-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:32.632Z",
+    "action": "publish",
+    "slug": "codex-first-landing-page-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:32.633Z",
+    "action": "publish",
+    "slug": "codex-first-landing-page",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:32.634Z",
+    "action": "publish",
+    "slug": "codex-github-workflow-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:34.807Z",
+    "action": "publish",
+    "slug": "codex-github-workflow-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:34.809Z",
+    "action": "publish",
+    "slug": "codex-github-workflow-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:34.810Z",
+    "action": "publish",
+    "slug": "codex-github-workflow",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:34.811Z",
+    "action": "publish",
+    "slug": "codex-install-prerequisites-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:34.812Z",
+    "action": "publish",
+    "slug": "codex-install-prerequisites-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:36.874Z",
+    "action": "publish",
+    "slug": "codex-install-prerequisites-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:36.875Z",
+    "action": "publish",
+    "slug": "codex-install-prerequisites",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:36.876Z",
+    "action": "publish",
+    "slug": "codex-npm-install-errors-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:36.878Z",
+    "action": "publish",
+    "slug": "codex-npm-install-errors-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:36.879Z",
+    "action": "publish",
+    "slug": "codex-npm-install-errors-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:38.942Z",
+    "action": "publish",
+    "slug": "codex-npm-install-errors",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:38.943Z",
+    "action": "publish",
+    "slug": "codex-portfolio-page-assets-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:38.944Z",
+    "action": "publish",
+    "slug": "codex-portfolio-page-assets-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:38.945Z",
+    "action": "publish",
+    "slug": "codex-portfolio-page-assets-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:38.946Z",
+    "action": "publish",
+    "slug": "codex-portfolio-page-assets",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:41.023Z",
+    "action": "publish",
+    "slug": "codex-project-start-checklist-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:41.024Z",
+    "action": "publish",
+    "slug": "codex-project-start-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:41.025Z",
+    "action": "publish",
+    "slug": "codex-readme-review-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:41.026Z",
+    "action": "publish",
+    "slug": "codex-readme-review-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:41.027Z",
+    "action": "publish",
+    "slug": "codex-readme-review-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:43.104Z",
+    "action": "publish",
+    "slug": "codex-readme-review",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:43.106Z",
+    "action": "publish",
+    "slug": "codex-review-generated-code-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:43.107Z",
+    "action": "publish",
+    "slug": "codex-review-generated-code-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:43.108Z",
+    "action": "publish",
+    "slug": "codex-review-generated-code-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:43.109Z",
+    "action": "publish",
+    "slug": "codex-review-generated-code",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:45.141Z",
+    "action": "publish",
+    "slug": "codex-small-website-delivery-check-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:45.142Z",
+    "action": "publish",
+    "slug": "codex-small-website-delivery-check-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:45.143Z",
+    "action": "publish",
+    "slug": "codex-small-website-delivery-check-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:45.144Z",
+    "action": "publish",
+    "slug": "codex-small-website-delivery-check",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:45.145Z",
+    "action": "publish",
+    "slug": "codex-tailwind-mobile-check-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:47.259Z",
+    "action": "publish",
+    "slug": "codex-tailwind-mobile-check-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:47.260Z",
+    "action": "publish",
+    "slug": "codex-tailwind-mobile-check-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:47.261Z",
+    "action": "publish",
+    "slug": "codex-tailwind-mobile-check",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:47.262Z",
+    "action": "publish",
+    "slug": "codex-upwork-job-risk-check-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:47.263Z",
+    "action": "publish",
+    "slug": "codex-upwork-job-risk-check-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:49.442Z",
+    "action": "publish",
+    "slug": "codex-upwork-job-risk-check-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:49.443Z",
+    "action": "publish",
+    "slug": "codex-upwork-job-risk-check",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:49.445Z",
+    "action": "publish",
+    "slug": "codex-vercel-deployment-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:49.447Z",
+    "action": "publish",
+    "slug": "codex-vercel-deployment-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:49.448Z",
+    "action": "publish",
+    "slug": "codex-vercel-deployment-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:51.481Z",
+    "action": "publish",
+    "slug": "codex-vercel-deployment",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:51.482Z",
+    "action": "publish",
+    "slug": "codex-vs-claude-code-beginner",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:51.483Z",
+    "action": "publish",
+    "slug": "codex-vs-cursor-web-editing-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:51.484Z",
+    "action": "publish",
+    "slug": "codex-vs-cursor-web-editing-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:51.485Z",
+    "action": "publish",
+    "slug": "codex-vs-cursor-web-editing-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:53.623Z",
+    "action": "publish",
+    "slug": "codex-vs-cursor-web-editing",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:53.625Z",
+    "action": "publish",
+    "slug": "codex-windows-install-failed-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:53.626Z",
+    "action": "publish",
+    "slug": "codex-windows-install-failed-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:53.628Z",
+    "action": "publish",
+    "slug": "codex-windows-install-failed-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:53.630Z",
+    "action": "publish",
+    "slug": "codex-windows-install-failed",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:55.775Z",
+    "action": "publish",
+    "slug": "coze-bot-publish-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:55.776Z",
+    "action": "publish",
+    "slug": "crewai-agent-deployment-beginner-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:55.777Z",
+    "action": "publish",
+    "slug": "cursor-vs-codex-web-editing-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:55.778Z",
+    "action": "publish",
+    "slug": "cursor-vs-codex-web-editing",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:55.779Z",
+    "action": "publish",
+    "slug": "customer-service-ai-prompts-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:57.870Z",
+    "action": "publish",
+    "slug": "daily-ai-freelance-practice-log-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:57.872Z",
+    "action": "publish",
+    "slug": "daily-ai-freelance-practice-log-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:57.873Z",
+    "action": "publish",
+    "slug": "daily-ai-freelance-practice-log",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:57.874Z",
+    "action": "publish",
+    "slug": "data-analysis-ai-prompts-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:57.875Z",
+    "action": "publish",
+    "slug": "deliver-small-website-with-ai-no-code-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:59.967Z",
+    "action": "publish",
+    "slug": "deliver-small-website-with-ai-no-code-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:59.968Z",
+    "action": "publish",
+    "slug": "deliver-small-website-with-ai-no-code",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:59.969Z",
+    "action": "publish",
+    "slug": "dependency-conflict-fix-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:59.970Z",
+    "action": "publish",
+    "slug": "dependency-conflict-fix-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:17:59.971Z",
+    "action": "publish",
+    "slug": "dependency-conflict-fix-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:02.029Z",
+    "action": "publish",
+    "slug": "dependency-conflict-fix",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:02.031Z",
+    "action": "publish",
+    "slug": "dev-works-build-fails-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:02.032Z",
+    "action": "publish",
+    "slug": "dev-works-build-fails-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:02.033Z",
+    "action": "publish",
+    "slug": "dev-works-build-fails-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:02.034Z",
+    "action": "publish",
+    "slug": "dev-works-build-fails",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:04.060Z",
+    "action": "publish",
+    "slug": "dify-coze-flowise-agent-builder-comparison",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:04.061Z",
+    "action": "publish",
+    "slug": "dify-docker-compose-self-host-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:04.062Z",
+    "action": "publish",
+    "slug": "dify-knowledge-base-beginner-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:04.063Z",
+    "action": "publish",
+    "slug": "dify-metadata-filtering-rag-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:04.064Z",
+    "action": "publish",
+    "slug": "dify-ollama-local-model-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:06.158Z",
+    "action": "publish",
+    "slug": "dify-openai-api-provider-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:06.159Z",
+    "action": "publish",
+    "slug": "dify-workflow-vs-agent-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:06.161Z",
+    "action": "publish",
+    "slug": "digital-template-refund-policy-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:06.162Z",
+    "action": "publish",
+    "slug": "digital-template-refund-policy",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:06.163Z",
+    "action": "publish",
+    "slug": "ecommerce-ai-prompts-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:08.397Z",
+    "action": "publish",
+    "slug": "education-ai-prompts-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:08.399Z",
+    "action": "publish",
+    "slug": "embedding-model-selection-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:08.400Z",
+    "action": "publish",
+    "slug": "english-client-reply-template-honest-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:08.401Z",
+    "action": "publish",
+    "slug": "english-client-reply-template-honest",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:08.402Z",
+    "action": "publish",
+    "slug": "enterprise-im-ai-agent-integration-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:10.678Z",
+    "action": "publish",
+    "slug": "env-variable-missing-fix-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:10.679Z",
+    "action": "publish",
+    "slug": "env-variable-missing-fix-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:10.680Z",
+    "action": "publish",
+    "slug": "env-variable-missing-fix-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:10.681Z",
+    "action": "publish",
+    "slug": "env-variable-missing-fix",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:10.683Z",
+    "action": "publish",
+    "slug": "eslint-error-should-not-disable-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:13.055Z",
+    "action": "publish",
+    "slug": "eslint-error-should-not-disable-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:13.061Z",
+    "action": "publish",
+    "slug": "eslint-error-should-not-disable-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:13.068Z",
+    "action": "publish",
+    "slug": "eslint-error-should-not-disable",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:13.070Z",
+    "action": "publish",
+    "slug": "failed-to-push-some-refs-fix-checklist",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:13.071Z",
+    "action": "publish",
+    "slug": "failed-to-push-some-refs-fix-freelance-scope",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:15.402Z",
+    "action": "publish",
+    "slug": "failed-to-push-some-refs-fix-mistakes",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:15.403Z",
+    "action": "publish",
+    "slug": "failed-to-push-some-refs-fix",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:15.405Z",
+    "action": "publish",
+    "slug": "fastgpt-knowledge-base-deployment-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:15.406Z",
+    "action": "publish",
+    "slug": "finance-ai-prompts-guide",
+    "score": 100
+  },
+  {
+    "time": "2026-06-14T14:18:15.407Z",
+    "action": "publish",
+    "slug": "first-freelance-payment-check-checklist",
+    "score": 100
   }
 ]

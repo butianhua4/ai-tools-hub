@@ -1,28 +1,30 @@
 ---
-title: "dependency conflict 常见错误和解决步骤"
-slug: "dependency-conflict-fix-mistakes"
-description: "整理 dependency conflict 依赖冲突排查中的常见错误：混用包管理器、乱删锁文件、强制安装、忽略 peer dependency、没跑 build，以及更稳的解决顺序。"
-date: "2026-06-03"
-updatedAt: "2026-06-03"
-category: "报错解决"
+title: dependency conflict 常见错误和解决步骤
+slug: dependency-conflict-fix-mistakes
+description: >-
+  整理 dependency conflict 依赖冲突排查中的常见错误：混用包管理器、乱删锁文件、强制安装、忽略 peer dependency、没跑
+  build，以及更稳的解决顺序。
+date: '2026-06-03'
+updatedAt: '2026-06-14'
+category: 报错解决
 tags:
-  - "报错解决"
-  - "依赖冲突"
-  - "npm"
-  - "故障排查"
-author: "AI 工具指南"
-status: "draft"
-contentType: "troubleshooting"
-difficulty: "beginner"
-targetReader: "依赖冲突越修越乱，需要复盘错误顺序的新手。"
-searchIntent: "informational"
-primaryKeyword: "dependency conflict 常见错误和解决步骤"
+  - 报错解决
+  - 依赖冲突
+  - npm
+  - 故障排查
+author: AI 工具指南
+status: published
+contentType: troubleshooting
+difficulty: beginner
+targetReader: 依赖冲突越修越乱，需要复盘错误顺序的新手。
+searchIntent: informational
+primaryKeyword: dependency conflict 常见错误和解决步骤
 secondaryKeywords:
-  - "npm ERESOLVE"
-  - "peer dependency 错误"
-  - "依赖冲突修复"
-  - "AI 工具实践"
-sourceNotes: "人工重写草稿；公开前仍需人工复核 npm、yarn、pnpm 版本差异、项目真实日志、官方文档和客户授权边界。"
+  - npm ERESOLVE
+  - peer dependency 错误
+  - 依赖冲突修复
+  - AI 工具实践
+sourceNotes: 人工重写草稿；公开前仍需人工复核 npm、yarn、pnpm 版本差异、项目真实日志、官方文档和客户授权边界。
 humanReviewRequired: true
 reviewChecklist:
   hasOriginalAngle: true
@@ -34,17 +36,16 @@ reviewChecklist:
   hasClearCTA: true
 monetization:
   affiliateSlots:
-    - "工具导航"
-  templateCTA: "下载模板包"
-  serviceCTA: "联系人工协助"
+    - 工具导航
+  templateCTA: 下载模板包
+  serviceCTA: 联系人工协助
   adSlots:
-    - "article-bottom"
-qualityScore: 0
+    - article-bottom
+qualityScore: 100
 publishBatch: 13
-canonical: "https://ai-jiedan-lab.vercel.app/blog/dependency-conflict-fix-mistakes"
-noindex: true
+canonical: 'https://ai-jiedan-lab.vercel.app/blog/dependency-conflict-fix-mistakes'
+noindex: false
 ---
-
 # dependency conflict 常见错误和解决步骤
 
 依赖冲突本身不一定难，难的是新手常常把环境越修越乱。今天用 npm，明天改 yarn，后天删锁文件，再用强制安装，最后已经分不清哪一步造成了新问题。
