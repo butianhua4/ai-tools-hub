@@ -6,6 +6,7 @@ import { ServiceCTA } from "@/components/ServiceCTA";
 import { TagBadge } from "@/components/Badges";
 import { ToolCTA } from "@/components/ToolCTA";
 import { ArticleToolLinks } from "@/components/ArticleToolLinks";
+import { SeoInternalLinks } from "@/components/SeoInternalLinks";
 import { getAllPosts, getPostBySlug, renderMarkdown, slugify } from "@/lib/blog";
 import { site } from "@/data/site";
 
@@ -88,6 +89,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           />
 
           <ArticleToolLinks post={post} />
+
+          <SeoInternalLinks post={post} />
 
           <div className="mt-10">
             <ToolCTA title="读完这篇后可以直接使用工具" />

@@ -3,3 +3,7 @@
 {"timestamp":"2026-06-15T00:25:11.000+08:00","event":"build run","level":"info","message":".next/BUILD_ID exists after the latest successful local production build.","source":".next/BUILD_ID"}
 {"timestamp":"2026-06-15T00:27:22.000+08:00","event":"sitemap update","level":"info","message":".next/prerender-manifest.json exists after sitemap and static routes were generated during build.","source":".next/prerender-manifest.json"}
 {"timestamp":"2026-06-15T10:26:12.564+08:00","event":"build run","level":"info","message":"npm run build completed successfully after adding System Live Report routes.","source":"next build"}
+{"timestamp":"2026-06-15T03:28:14.940Z","event":"sitemap update","level":"info","message":"SEO structure upgraded to layered sitemap index with blog, q, cluster and static sitemap files.","source":"seo-graph"}
+{"timestamp":"2026-06-15T03:28:14.941Z","event":"build run","level":"info","message":"npm run build completed successfully after adding SEO graph, cluster pages and query layer.","source":"next build"}
+{"timestamp":"2026-06-15T04:04:32.741Z","event":"sitemap update","level":"info","message":"Sitemap priority rules added for q, cluster and blog layers.","source":"sitemap-priority"}
+{"timestamp":"2026-06-15T04:04:32.742Z","event":"build run","level":"info","message":"npm run build completed successfully after adding SEO Growth Monitoring System.","source":"next build"}

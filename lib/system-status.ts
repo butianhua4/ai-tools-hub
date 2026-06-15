@@ -1,8 +1,10 @@
 import fs from "fs";
 import path from "path";
-import { getAllPosts, getCategorySlugs, getTagSlugs, slugify } from "@/lib/blog";
+import { getAllPosts, getCategorySlugs, getTagSlugs } from "@/lib/blog";
 import { site } from "@/data/site";
 import { tools } from "@/data/tools";
+import { getSeoGrowthReport, type SeoGrowthReport } from "@/lib/seo-growth-monitor";
+import { getClusterPath, getQuestionPath, getSeoGraph, seoClusters, type SeoGraph } from "@/lib/seo-graph";
 
 const root = projectPath();
 const logFile = projectPath("logs", "system.log");
@@ -46,7 +48,7 @@ export type SystemStatus = {
   };
   seo: {
     sitemap: { ok: boolean; urlCount: number; includesPublishedPosts: boolean; error?: string };
-    robots: { ok: boolean; sitemapUrl: string | null; allowsAll: boolean; error?: string };
+    robots: { ok: boolean; sitemapUrl: string[] | null; allowsAll: boolean; error?: string };
     searchConsole: {
       connected: boolean;
       status: "reserved" | "not_connected" | "connected";
@@ -71,6 +73,10 @@ export type SystemStatus = {
     averageLinksPerPage: number;
     orphanPages: number;
     orphanPageSamples: string[];
+    weakPages: number;
+    weakPageSamples: string[];
+    graphNodes: number;
+    graphEdges: number;
     totalInternalLinks: number;
   };
   build: {
@@ -89,6 +95,16 @@ export type SystemStatus = {
     dynamicRoutes: number;
     staticToDynamicRatio: string;
   };
+  seoGrowth: {
+    currentStage: SeoGrowthReport["growthStage"];
+    qPagesHealth: number;
+    clusterHealth: number;
+    internalLinkingHealth: number;
+    growthReadinessScore: number;
+    seoScore: number;
+    risingPages: number;
+    potentialPages: number;
+  };
   logs: {
     file: string;
     latest: SystemLogEntry[];
@@ -100,11 +116,18 @@ export function getSystemStatus(): SystemStatus {
   const allPosts = getAllPosts(true);
   const publishedPosts = allPosts.filter((post) => post.status === "published" && post.noindex === false);
   const draftPosts = allPosts.filter((post) => post.status === "draft");
-  const sitemapStatus = getSitemapStatus(publishedPosts.map((post) => `/blog/${post.slug}`));
+  const graph = getSeoGraph();
+  const seoGrowth = getSeoGrowthReport(graph);
+  const requiredSeoPaths = [
+    ...publishedPosts.map((post) => `/blog/${post.slug}`),
+    ...publishedPosts.map((post) => getQuestionPath(post)),
+    ...seoClusters.map((cluster) => getClusterPath(cluster.slug)),
+  ];
+  const sitemapStatus = getSitemapStatus(requiredSeoPaths);
   const robotsStatus = getRobotsStatus();
-  const questionEngine = getQuestionEngineStatus();
+  const questionEngine = getQuestionEngineStatus(publishedPosts.length);
   const pageStatus = getPageStatus(sitemapStatus.urlCount, publishedPosts.length, questionEngine.generatedPages);
-  const linkStatus = getLinkStatus(sitemapStatus.paths, publishedPosts);
+  const linkStatus = getLinkStatus(graph);
   const buildStatus = getBuildStatus();
   const performance = getPerformanceStatus(sitemapStatus.urlCount);
   const latestLogs = readSystemLog().slice(-10).reverse();
@@ -114,7 +137,7 @@ export function getSystemStatus(): SystemStatus {
     buildSuccess: buildStatus.success,
     sitemapNormal: sitemapStatus.ok,
     publishedOver100: publishedPosts.length > 100,
-    internalLinksComplete: linkStatus.orphanPages === 0,
+    internalLinksComplete: linkStatus.orphanPages === 0 && linkStatus.weakPages === 0,
     noErrors: buildStatus.errors.length === 0 && errorLogs.length === 0,
   };
   const score = Object.values(checks).filter(Boolean).length * 20;
@@ -164,6 +187,16 @@ export function getSystemStatus(): SystemStatus {
     links: linkStatus,
     build: buildStatus,
     performance,
+    seoGrowth: {
+      currentStage: seoGrowth.growthStage,
+      qPagesHealth: seoGrowth.qPages > 300 ? 100 : Math.round((seoGrowth.qPages / 300) * 100),
+      clusterHealth: seoGrowth.clusterPages > 5 ? 100 : Math.round((seoGrowth.clusterPages / 6) * 100),
+      internalLinkingHealth: seoGrowth.internalLinkHealth,
+      growthReadinessScore: seoGrowth.growthReadinessScore,
+      seoScore: seoGrowth.seoScore,
+      risingPages: seoGrowth.signals.risingPages.length,
+      potentialPages: seoGrowth.signals.potentialPages.length,
+    },
     logs: {
       file: "logs/system.log",
       latest: latestLogs,
@@ -209,9 +242,15 @@ function getSitemapStatus(requiredPaths: string[]) {
 function getRobotsStatus() {
   try {
     const allow = ["/"];
-    const sitemapUrl = `${site.url}/sitemap.xml`;
+    const sitemapUrl = [
+      `${site.url}/sitemap.xml`,
+      `${site.url}/sitemap-blog.xml`,
+      `${site.url}/sitemap-q.xml`,
+      `${site.url}/sitemap-cluster.xml`,
+      `${site.url}/sitemap-static.xml`,
+    ];
     return {
-      ok: allow.includes("/") && sitemapUrl === `${site.url}/sitemap.xml`,
+      ok: allow.includes("/") && sitemapUrl.includes(`${site.url}/sitemap.xml`),
       sitemapUrl,
       allowsAll: allow.includes("/"),
       error: undefined,
@@ -254,24 +293,20 @@ function getGeneratedSitemapPaths() {
     "/monetization",
   ];
   const postRoutes = getAllPosts(false).map((post) => `/blog/${post.slug}`);
+  const qRoutes = getAllPosts(false).map((post) => getQuestionPath(post));
+  const clusterRoutes = seoClusters.map((cluster) => getClusterPath(cluster.slug));
   const toolRoutes = tools.map((tool) => `/tools/${tool.slug}`);
   const categoryRoutes = getCategorySlugs().map((slug) => `/category/${slug}`);
   const tagRoutes = getTagSlugs().map((slug) => `/tag/${slug}`);
-  return [...staticRoutes, ...postRoutes, ...toolRoutes, ...categoryRoutes, ...tagRoutes].map(normalizePathOnly);
+  return [...staticRoutes, ...postRoutes, ...qRoutes, ...clusterRoutes, ...toolRoutes, ...categoryRoutes, ...tagRoutes].map(normalizePathOnly);
 }
 
-function getQuestionEngineStatus() {
-  const questionFiles = [
-    ...listFiles("content/questions", (file) => /\.(json|mdx?)$/i.test(file)),
-    ...listFiles("data/questions", (file) => /\.(json|ts)$/i.test(file)),
-    ...listFiles(path.join("app", "q"), (file) => file.endsWith(`${path.sep}page.tsx`)),
-  ];
-  const qPageFiles = listFiles(path.join("app", "q"), (file) => file.endsWith(`${path.sep}page.tsx`));
-  const slugs = questionFiles.map((file) => path.basename(file).replace(/\.(json|mdx?|ts|tsx)$/i, ""));
+function getQuestionEngineStatus(publicPostCount: number) {
+  const slugs = getAllPosts(false).map((post) => getQuestionPath(post));
   const uniqueSlugs = new Set(slugs);
   const duplicates = slugs.length - uniqueSlugs.size;
-  const questionTotal = questionFiles.length;
-  const generatedPages = qPageFiles.length;
+  const questionTotal = publicPostCount;
+  const generatedPages = uniqueSlugs.size;
   return {
     exists: questionTotal > 0 || generatedPages > 0,
     questionTotal,
@@ -293,59 +328,17 @@ function getPageStatus(sitemapPages: number, blogPages: number, qPages: number) 
   };
 }
 
-function getLinkStatus(paths: string[], posts: ReturnType<typeof getAllPosts>) {
-  const publicPaths = new Set(paths);
-  const outgoing = new Map<string, Set<string>>();
-  const incoming = new Map<string, number>();
-  for (const item of paths) {
-    outgoing.set(item, new Set());
-    incoming.set(item, 0);
-  }
-
-  const addEdge = (from: string, to: string) => {
-    const normalizedFrom = normalizePathOnly(from);
-    const normalizedTo = normalizePathOnly(to);
-    if (!publicPaths.has(normalizedFrom) || !publicPaths.has(normalizedTo) || normalizedFrom === normalizedTo) return;
-    const fromSet = outgoing.get(normalizedFrom) || new Set<string>();
-    const before = fromSet.size;
-    fromSet.add(normalizedTo);
-    outgoing.set(normalizedFrom, fromSet);
-    if (fromSet.size > before) incoming.set(normalizedTo, (incoming.get(normalizedTo) || 0) + 1);
-  };
-
-  const globalLinks = extractSourceLinks(["components/Header.tsx", "components/Footer.tsx"]);
-  for (const from of paths) {
-    for (const link of globalLinks) addEdge(from, link);
-  }
-
-  for (const post of posts) {
-    const postPath = `/blog/${post.slug}`;
-    addEdge("/blog", postPath);
-    addEdge("/blog", `/category/${slugify(post.category)}`);
-    addEdge(postPath, `/category/${slugify(post.category)}`);
-    for (const tag of post.tags) addEdge(postPath, `/tag/${slugify(tag)}`);
-    for (const link of extractLinks(post.content)) addEdge(postPath, link);
-  }
-
-  for (const categorySlug of getCategorySlugs()) addEdge("/blog", `/category/${categorySlug}`);
-  for (const tagSlug of getTagSlugs()) addEdge("/blog", `/tag/${tagSlug}`);
-  for (const tool of tools) addEdge("/tools", `/tools/${tool.slug}`);
-  const sourceFiles = [
-    ...listFiles("app", (file) => file.endsWith(".tsx")),
-    ...listFiles("components", (file) => file.endsWith(".tsx")),
-  ];
-  for (const link of extractSourceLinks(sourceFiles)) {
-    addEdge("/", link);
-  }
-
-  const totalInternalLinks = Array.from(outgoing.values()).reduce((sum, set) => sum + set.size, 0);
-  const averageLinksPerPage = paths.length ? round(totalInternalLinks / paths.length, 2) : 0;
-  const orphanPageSamples = paths.filter((item) => item !== "/" && (incoming.get(item) || 0) === 0).slice(0, 30);
-
+function getLinkStatus(graph: SeoGraph) {
+  const totalInternalLinks = graph.edges.length;
+  const averageLinksPerPage = graph.nodes.length ? round(totalInternalLinks / graph.nodes.length, 2) : 0;
   return {
     averageLinksPerPage,
-    orphanPages: paths.filter((item) => item !== "/" && (incoming.get(item) || 0) === 0).length,
-    orphanPageSamples,
+    orphanPages: graph.orphanPages.length,
+    orphanPageSamples: graph.orphanPages.map((node) => node.path).slice(0, 30),
+    weakPages: graph.weakPages.length,
+    weakPageSamples: graph.weakPages.map((node) => `${node.path}: ${node.reasons.join(", ")}`).slice(0, 30),
+    graphNodes: graph.nodes.length,
+    graphEdges: graph.edges.length,
     totalInternalLinks,
   };
 }
@@ -406,22 +399,6 @@ function readSystemLog(): SystemLogEntry[] {
         } satisfies SystemLogEntry;
       }
     });
-}
-
-function extractSourceLinks(files: string[]) {
-  return files.flatMap((file) => extractLinks(safeRead(path.isAbsolute(file) ? file : projectPath(file))));
-}
-
-function extractLinks(text: string) {
-  const links = new Set<string>();
-  const patterns = [
-    /\[[^\]]+\]\((\/[^)\s#]+)[^)]*\)/g,
-    /href=["'](\/[^"'#?]+)[^"']*["']/g,
-  ];
-  for (const pattern of patterns) {
-    for (const match of text.matchAll(pattern)) links.add(match[1]);
-  }
-  return Array.from(links);
 }
 
 function extractDiagnosticLines(text: string, needles: string[]) {

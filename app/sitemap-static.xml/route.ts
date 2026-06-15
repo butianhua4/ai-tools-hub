@@ -1,0 +1,37 @@
+import { getCategorySlugs, getTagSlugs } from "@/lib/blog";
+import { tools } from "@/data/tools";
+import { sitemapUrlSet } from "@/lib/sitemap-xml";
+
+export function GET() {
+  const staticRoutes = [
+    "",
+    "/blog",
+    "/deployments",
+    "/office-ai",
+    "/prompts",
+    "/tools",
+    "/tools/proposal-generator",
+    "/tools/ppt-planner",
+    "/tools/spreadsheet-cleaner",
+    "/tools/industry-prompt-builder",
+    "/tools/agent-deployment-planner",
+    "/tools/llm-deployment-cost-planner",
+    "/tools/memory-rag-architecture-planner",
+    "/tools/api-routing-cost-checker",
+    "/tools/public-seo-refresh-assistant",
+    "/tools/error-explainer",
+    "/tools/pricing-calculator",
+    "/templates",
+    "/roadmap",
+    "/about",
+    "/contact",
+    "/privacy",
+    "/disclaimer",
+    "/monetization",
+  ];
+  const toolRoutes = tools.map((tool) => `/tools/${tool.slug}`);
+  const categoryRoutes = getCategorySlugs().map((slug) => `/category/${slug}`);
+  const tagRoutes = getTagSlugs().map((slug) => `/tag/${slug}`);
+
+  return sitemapUrlSet([...staticRoutes, ...toolRoutes, ...categoryRoutes, ...tagRoutes].map((path) => ({ path, lastModified: new Date() })));
+}

@@ -21,6 +21,7 @@ export function SystemLiveReport({ initialStatus }: { initialStatus: SystemStatu
       { title: "Question Engine", data: status.questionEngine },
       { title: "页面系统", data: status.pages },
       { title: "内链系统", data: status.links },
+      { title: "SEO Growth Status", data: status.seoGrowth },
       { title: "构建状态", data: status.build },
       { title: "性能指标", data: status.performance },
     ],
