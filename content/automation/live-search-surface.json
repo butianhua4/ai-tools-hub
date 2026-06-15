@@ -1,11 +1,9 @@
 {
-  "generatedAt": "2026-06-15T13:15:30.193Z",
-  "ok": false,
+  "generatedAt": "2026-06-15T13:39:32.006Z",
+  "ok": true,
   "base": "https://ai-jiedan-lab.vercel.app",
   "fetchBase": "https://ai-jiedan-lab.vercel.app",
-  "failedChecks": [
-    "sitemap-leaks-drafts"
-  ],
+  "failedChecks": [],
   "pages": [
     {
       "path": "/",
@@ -101,7 +99,7 @@
   "sitemap": {
     "blogUrlCount": 500,
     "clusterUrlCount": 6,
-    "leaksDrafts": true,
+    "leaksDrafts": false,
     "qUrlCount": 500,
     "sitemapIndexCount": 4,
     "usesBase": true

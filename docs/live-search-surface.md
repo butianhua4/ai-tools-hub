@@ -1,10 +1,10 @@
 # Live Search Surface Check
 
-Generated at: 2026-06-15T13:15:30.193Z
+Generated at: 2026-06-15T13:39:32.006Z
 
 This report checks the live production search surfaces. It does not use Search Console traffic, impressions, or ranking data.
 
-Overall: FAIL
+Overall: PASS
 
 ## Scope
 
@@ -20,7 +20,7 @@ Overall: FAIL
 - Q sitemap URL count: 500
 - Cluster sitemap URL count: 6
 - Sitemap uses canonical base: true
-- Sitemap leaks drafts: true
+- Sitemap leaks drafts: false
 - Robots allows crawling: true
 - Robots points to sitemap: true
 - llms.txt uses canonical base: true
@@ -32,7 +32,7 @@ Overall: FAIL
 
 ## Failed Checks
 
-- sitemap-leaks-drafts
+- none
 
 ## Page Checks
 

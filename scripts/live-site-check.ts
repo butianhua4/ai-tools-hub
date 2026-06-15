@@ -70,7 +70,10 @@ async function main() {
   });
 
   const combinedSitemaps = [sitemap, sitemapBlog, sitemapQ, sitemapCluster].join("\n");
-  const leakedExcludedPosts = excludedPosts.filter((post) => combinedSitemaps.includes(`${canonicalBase}/blog/${post.slug}`));
+  const sitemapLocPaths = extractLocPaths(combinedSitemaps);
+  const leakedExcludedPosts = excludedPosts.filter(
+    (post) => sitemapLocPaths.has(`/blog/${post.slug}`) || Array.from(sitemapLocPaths).some((pathname) => pathname.startsWith("/q/") && lastPathSegment(pathname) === post.slug),
+  );
   const draftLeak = leakedExcludedPosts.length > 0;
   const llmsDraftLeak = getAllPosts(true)
     .filter((post) => !(post.status === "published" && post.noindex === false))
@@ -158,6 +161,24 @@ function writeReport(target: string | undefined, content: string) {
   const absoluteTarget = path.isAbsolute(target) ? target : path.join(process.cwd(), target);
   fs.mkdirSync(path.dirname(absoluteTarget), { recursive: true });
   fs.writeFileSync(absoluteTarget, content, "utf8");
+}
+
+function extractLocPaths(xml: string) {
+  const paths = new Set<string>();
+  for (const match of xml.matchAll(/<loc>(.*?)<\/loc>/g)) {
+    try {
+      paths.add(new URL(match[1]).pathname);
+    } catch {
+      paths.add(match[1]);
+    }
+  }
+
+  return paths;
+}
+
+function lastPathSegment(pathname: string) {
+  const parts = pathname.split("/").filter(Boolean);
+  return parts[parts.length - 1] || "";
 }
 
 async function fetchWithRetry(url: string) {
