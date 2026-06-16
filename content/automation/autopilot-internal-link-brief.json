@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:34.675Z",
+  "generatedAt": "2026-06-16T12:27:35.637Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -16,12 +16,12 @@
   "summary": {
     "approvalItems": 3,
     "items": 3,
-    "itemsAlreadyLinkedToPublic": 1,
-    "itemsMissingCurrentPublicLink": 2,
-    "itemsWithSuggestions": 1,
+    "itemsAlreadyLinkedToPublic": 2,
+    "itemsMissingCurrentPublicLink": 1,
+    "itemsWithSuggestions": 3,
     "packetUnsafeItems": 0,
     "publicArticles": 500,
-    "unsafeItems": 2
+    "unsafeItems": 0
   },
   "sourceEvidence": {
     "internalLinkAuditGuardrails": {
@@ -33,38 +33,7 @@
     "internalLinkAuditMissingSuggestions": 0,
     "note": "Suggestions are crawl-path and reader-context candidates. They do not make a draft publishable."
   },
-  "unsafeItems": [
-    {
-      "currentInternalLinks": 0,
-      "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "linkFocus": [
-        "Add one contextual public article link during human review.",
-        "No public link suggestion is available; inspect related published articles manually.",
-        "Use one link only if it helps the reader continue the task; avoid stuffing links.",
-        "Keep the article draft/noindex until explicit approval."
-      ],
-      "linksToPublicArticles": 0,
-      "readyForHumanReview": false,
-      "safeDraft": true,
-      "suggestions": [],
-      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界"
-    },
-    {
-      "currentInternalLinks": 0,
-      "file": "content/blog/vercel-404-after-deploy.mdx",
-      "linkFocus": [
-        "Add one contextual public article link during human review.",
-        "No public link suggestion is available; inspect related published articles manually.",
-        "Use one link only if it helps the reader continue the task; avoid stuffing links.",
-        "Keep the article draft/noindex until explicit approval."
-      ],
-      "linksToPublicArticles": 0,
-      "readyForHumanReview": false,
-      "safeDraft": true,
-      "suggestions": [],
-      "title": "Vercel 部署成功但页面 404：新手排查顺序"
-    }
-  ],
+  "unsafeItems": [],
   "items": [
     {
       "currentInternalLinks": 3,
@@ -123,33 +92,115 @@
       "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级"
     },
     {
-      "currentInternalLinks": 0,
+      "currentInternalLinks": 5,
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "linkFocus": [
-        "Add one contextual public article link during human review.",
-        "No public link suggestion is available; inspect related published articles manually.",
+        "Already links to at least one public article.",
+        "Review 5 suggested public link target(s).",
         "Use one link only if it helps the reader continue the task; avoid stuffing links.",
         "Keep the article draft/noindex until explicit approval."
       ],
-      "linksToPublicArticles": 0,
-      "readyForHumanReview": false,
+      "linksToPublicArticles": 4,
+      "readyForHumanReview": true,
       "safeDraft": true,
-      "suggestions": [],
+      "suggestions": [
+        {
+          "file": "content/blog/openrouter-api-beginner-guide.mdx",
+          "reason": "same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai",
+          "score": 90,
+          "slug": "openrouter-api-beginner-guide",
+          "title": "OpenRouter API 怎么接入：统一模型入口不是只换 Base URL",
+          "url": "/blog/openrouter-api-beginner-guide"
+        },
+        {
+          "file": "content/blog/groq-api-fast-llm-guide.mdx",
+          "reason": "same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai",
+          "score": 86,
+          "slug": "groq-api-fast-llm-guide",
+          "title": "Groq API 怎么接入：高速推理适合什么 AI 应用",
+          "url": "/blog/groq-api-fast-llm-guide"
+        },
+        {
+          "file": "content/blog/replicate-api-ai-demo-guide.mdx",
+          "reason": "same category: AI 基建; shared tags: API; keyword overlap: ai, api, 基建, 模型, 怎么, 部署",
+          "score": 82,
+          "slug": "replicate-api-ai-demo-guide",
+          "title": "Replicate API 怎么做 AI Demo：模型调用、部署和费用边界",
+          "url": "/blog/replicate-api-ai-demo-guide"
+        },
+        {
+          "file": "content/blog/claude-api-beginner-guide.mdx",
+          "reason": "same category: AI 基建; keyword overlap: ai, api, 怎么接入, 基建, 接入, 怎么",
+          "score": 78,
+          "slug": "claude-api-beginner-guide",
+          "title": "Claude API 怎么接入：Messages API、费用和上下文边界",
+          "url": "/blog/claude-api-beginner-guide"
+        },
+        {
+          "file": "content/blog/lm-studio-local-api-guide.mdx",
+          "reason": "same category: AI 基建; shared tags: API; keyword overlap: ai, api, 基建, openai, compatible, 模型",
+          "score": 78,
+          "slug": "lm-studio-local-api-guide",
+          "title": "LM Studio 本地 API 怎么用：把本地模型变成 OpenAI 兼容接口",
+          "url": "/blog/lm-studio-local-api-guide"
+        }
+      ],
       "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界"
     },
     {
-      "currentInternalLinks": 0,
+      "currentInternalLinks": 2,
       "file": "content/blog/vercel-404-after-deploy.mdx",
       "linkFocus": [
         "Add one contextual public article link during human review.",
-        "No public link suggestion is available; inspect related published articles manually.",
+        "Review 5 suggested public link target(s).",
         "Use one link only if it helps the reader continue the task; avoid stuffing links.",
         "Keep the article draft/noindex until explicit approval."
       ],
       "linksToPublicArticles": 0,
-      "readyForHumanReview": false,
+      "readyForHumanReview": true,
       "safeDraft": true,
-      "suggestions": [],
+      "suggestions": [
+        {
+          "file": "content/blog/nextjs-hydration-error-debug-freelance-scope.mdx",
+          "reason": "same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, next, js",
+          "score": 98,
+          "slug": "nextjs-hydration-error-debug-freelance-scope",
+          "title": "Next.js hydration error 怎么排查：使用前怎么判断是否适合",
+          "url": "/blog/nextjs-hydration-error-debug-freelance-scope"
+        },
+        {
+          "file": "content/blog/node-version-mismatch-fix-freelance-scope.mdx",
+          "reason": "same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, ai, 工具实践, js, 报错, 错解",
+          "score": 98,
+          "slug": "node-version-mismatch-fix-freelance-scope",
+          "title": "Node 版本不匹配使用前怎么判断是否适合",
+          "url": "/blog/node-version-mismatch-fix-freelance-scope"
+        },
+        {
+          "file": "content/blog/node-version-mismatch-fix-mistakes.mdx",
+          "reason": "same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, js, 报错",
+          "score": 98,
+          "slug": "node-version-mismatch-fix-mistakes",
+          "title": "Node 版本不匹配常见错误和解决步骤",
+          "url": "/blog/node-version-mismatch-fix-mistakes"
+        },
+        {
+          "file": "content/blog/dev-works-build-fails-freelance-scope.mdx",
+          "reason": "same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, ai, 工具实践, build, 报错, 错解",
+          "score": 94,
+          "slug": "dev-works-build-fails-freelance-scope",
+          "title": "npm run dev 能跑但 build 失败使用前怎么判断是否适合",
+          "url": "/blog/dev-works-build-fails-freelance-scope"
+        },
+        {
+          "file": "content/blog/dev-works-build-fails-mistakes.mdx",
+          "reason": "same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, build, 报错",
+          "score": 94,
+          "slug": "dev-works-build-fails-mistakes",
+          "title": "npm run dev 能跑但 build 失败常见错误和解决步骤",
+          "url": "/blog/dev-works-build-fails-mistakes"
+        }
+      ],
       "title": "Vercel 部署成功但页面 404：新手排查顺序"
     }
   ]

@@ -1,6 +1,6 @@
 # Autopilot Source Verification Brief
 
-Generated at: 2026-06-16T07:01:35.144Z
+Generated at: 2026-06-16T12:27:36.105Z
 
 This report is read-only. It packages source verification work for the top autopilot approval packet items.
 
@@ -33,7 +33,7 @@ This report is read-only. It packages source verification work for the top autop
 
 ## Source Evidence
 
-- Source health summary: {"checkedUrls":38,"broadFirstCoverageFiles":8,"currentReviewFiles":3,"failedUrls":1,"filesCovered":24,"filesWithReachableSource":24,"filesWithoutReachableSource":0,"missingUrlTargets":0,"nextSourcePackFiles":15,"okUrls":37,"publicGapDecisionFiles":8,"redirectedUrls":17,"sourceReferences":202,"uniqueUrls":38}
+- Source health summary: {"checkedUrls":14,"broadFirstCoverageFiles":0,"currentReviewFiles":3,"failedUrls":0,"filesCovered":16,"filesWithReachableSource":16,"filesWithoutReachableSource":0,"missingUrlTargets":0,"nextSourcePackFiles":15,"okUrls":14,"publicGapDecisionFiles":0,"redirectedUrls":10,"sourceReferences":86,"uniqueUrls":14}
 - Packet unsafe items: 0
 
 ## Unsafe Items
@@ -44,7 +44,7 @@ This report is read-only. It packages source verification work for the top autop
 
 | Ready | Safe | Reachable sources | Official sources | Fact checks | Approval checks | Risk checks | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | 7 | 8 | 15 | 15 | 11 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| true | true | 7 | 8 | 17 | 15 | 11 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 | true | true | 4 | 7 | 12 | 9 | 6 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
 | true | true | 3 | 3 | 12 | 9 | 5 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
@@ -89,12 +89,12 @@ Fact-check queries:
 - Vercel AI Gateway 多模型 official docs latest
 - Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 事实核对
 - AI 部署 平台限制 官方文档
+- 大模型部署教程
+- AI 应用部署 Vercel 教程
+- OpenAI API 部署教程
+- Claude API 部署教程
 - Vercel AI Gateway 多模型 official documentation current limits
 - Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 fact check official docs
-- AI 部署 official docs limits pricing changelog
-- 大模型部署教程
-- AI 应用部署教程
-- OpenAI API 部署教程
 
 Approval checklist:
 

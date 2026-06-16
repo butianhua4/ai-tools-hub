@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:37.533Z",
+  "generatedAt": "2026-06-16T12:27:38.431Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -18,7 +18,7 @@
     "decisionMatrixItems": 3,
     "decisionMatrixRepairItems": 1,
     "decisionMatrixUnsafeItems": 0,
-    "repairQueueFullTasks": 56,
+    "repairQueueFullTasks": 55,
     "repairQueueMinimumPathFiles": 3,
     "repairQueueMinimumPathTasks": 16,
     "repairQueueUnsafeItems": 0
@@ -38,7 +38,7 @@
   "unsafeItems": [
     {
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "fullTaskCount": 20,
+      "fullTaskCount": 19,
       "highRiskTasks": 2,
       "lane": "ai-deployment",
       "manualOnlyCommands": {
@@ -83,12 +83,12 @@
           "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-11"
         },
         {
-          "action": "Add one contextual public article link during human review.",
+          "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
           "category": "internal-link",
           "priority": 667,
           "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
           "severity": "medium",
-          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-16"
+          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-17"
         },
         {
           "action": "Publishing remains a separate explicit approval step.",
@@ -96,7 +96,7 @@
           "priority": 567,
           "proofRequired": "Draft remains status=draft, noindex=true, humanReviewRequired=true until explicit approval.",
           "severity": "medium",
-          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-20"
+          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-19"
         }
       ],
       "nextDecision": "defer",
@@ -161,12 +161,12 @@
           ],
           "tasks": [
             {
-              "action": "Add one contextual public article link during human review.",
+              "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
               "category": "internal-link",
               "priority": 667,
               "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
               "severity": "medium",
-              "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-16"
+              "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-17"
             }
           ]
         },
@@ -186,12 +186,12 @@
               "priority": 567,
               "proofRequired": "Draft remains status=draft, noindex=true, humanReviewRequired=true until explicit approval.",
               "severity": "medium",
-              "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-20"
+              "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-19"
             }
           ]
         }
       ],
-      "routeRank": 667,
+      "routeRank": 666,
       "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
       "unsafeReasons": [
         "route item is not marked repair-before-review: defer"
@@ -244,12 +244,12 @@
           "taskId": "VERCEL-404-AFTER-DEPLOY-09"
         },
         {
-          "action": "Add one contextual public article link during human review.",
+          "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
           "category": "internal-link",
           "priority": 637,
           "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
           "severity": "medium",
-          "taskId": "VERCEL-404-AFTER-DEPLOY-14"
+          "taskId": "VERCEL-404-AFTER-DEPLOY-16"
         },
         {
           "action": "Publishing remains a separate explicit approval step.",
@@ -322,12 +322,12 @@
           ],
           "tasks": [
             {
-              "action": "Add one contextual public article link during human review.",
+              "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
               "category": "internal-link",
               "priority": 637,
               "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
               "severity": "medium",
-              "taskId": "VERCEL-404-AFTER-DEPLOY-14"
+              "taskId": "VERCEL-404-AFTER-DEPLOY-16"
             }
           ]
         },
@@ -539,7 +539,7 @@
     },
     {
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "fullTaskCount": 20,
+      "fullTaskCount": 19,
       "highRiskTasks": 2,
       "lane": "ai-deployment",
       "manualOnlyCommands": {
@@ -584,12 +584,12 @@
           "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-11"
         },
         {
-          "action": "Add one contextual public article link during human review.",
+          "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
           "category": "internal-link",
           "priority": 667,
           "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
           "severity": "medium",
-          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-16"
+          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-17"
         },
         {
           "action": "Publishing remains a separate explicit approval step.",
@@ -597,7 +597,7 @@
           "priority": 567,
           "proofRequired": "Draft remains status=draft, noindex=true, humanReviewRequired=true until explicit approval.",
           "severity": "medium",
-          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-20"
+          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-19"
         }
       ],
       "nextDecision": "defer",
@@ -662,12 +662,12 @@
           ],
           "tasks": [
             {
-              "action": "Add one contextual public article link during human review.",
+              "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
               "category": "internal-link",
               "priority": 667,
               "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
               "severity": "medium",
-              "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-16"
+              "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-17"
             }
           ]
         },
@@ -687,12 +687,12 @@
               "priority": 567,
               "proofRequired": "Draft remains status=draft, noindex=true, humanReviewRequired=true until explicit approval.",
               "severity": "medium",
-              "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-20"
+              "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-19"
             }
           ]
         }
       ],
-      "routeRank": 667,
+      "routeRank": 666,
       "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
       "unsafeReasons": [
         "route item is not marked repair-before-review: defer"
@@ -745,12 +745,12 @@
           "taskId": "VERCEL-404-AFTER-DEPLOY-09"
         },
         {
-          "action": "Add one contextual public article link during human review.",
+          "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
           "category": "internal-link",
           "priority": 637,
           "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
           "severity": "medium",
-          "taskId": "VERCEL-404-AFTER-DEPLOY-14"
+          "taskId": "VERCEL-404-AFTER-DEPLOY-16"
         },
         {
           "action": "Publishing remains a separate explicit approval step.",
@@ -823,12 +823,12 @@
           ],
           "tasks": [
             {
-              "action": "Add one contextual public article link during human review.",
+              "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
               "category": "internal-link",
               "priority": 637,
               "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
               "severity": "medium",
-              "taskId": "VERCEL-404-AFTER-DEPLOY-14"
+              "taskId": "VERCEL-404-AFTER-DEPLOY-16"
             }
           ]
         },

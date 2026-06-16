@@ -1,6 +1,6 @@
 # Autopilot Internal Link Brief
 
-Generated at: 2026-06-16T07:01:34.675Z
+Generated at: 2026-06-16T12:27:35.637Z
 
 This report is read-only. It packages public internal-link suggestions for the top autopilot approval packet items.
 
@@ -23,12 +23,12 @@ This report is read-only. It packages public internal-link suggestions for the t
 
 - approvalItems: 3
 - items: 3
-- itemsAlreadyLinkedToPublic: 1
-- itemsMissingCurrentPublicLink: 2
-- itemsWithSuggestions: 1
+- itemsAlreadyLinkedToPublic: 2
+- itemsMissingCurrentPublicLink: 1
+- itemsWithSuggestions: 3
 - packetUnsafeItems: 0
 - publicArticles: 500
-- unsafeItems: 2
+- unsafeItems: 0
 
 ## Source Evidence
 
@@ -37,18 +37,15 @@ This report is read-only. It packages public internal-link suggestions for the t
 
 ## Unsafe Items
 
-| Ready | Safe | Current links | Public links | Suggestions | Title | File |
-| --- | --- | --- | --- | --- | --- | --- |
-| false | true | 0 | 0 | 0 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| false | true | 0 | 0 | 0 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+- none
 
 ## Approval Packet Link Suggestions
 
 | Ready | Safe | Current links | Public links | Suggestions | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
 | true | true | 3 | 1 | 5 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
-| false | true | 0 | 0 | 0 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| false | true | 0 | 0 | 0 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+| true | true | 5 | 4 | 5 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| true | true | 2 | 0 | 5 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Per-Item Link Targets
 
@@ -75,17 +72,22 @@ Suggested public links:
 ### Together AI API 怎么接入：开源模型接口、embedding 和部署边界
 
 - File: content/blog/together-ai-api-beginner-guide.mdx
-- Existing public article links: 0
+- Existing public article links: 4
 
 Human review focus:
 
-- Add one contextual public article link during human review.
-- No public link suggestion is available; inspect related published articles manually.
+- Already links to at least one public article.
+- Review 5 suggested public link target(s).
 - Use one link only if it helps the reader continue the task; avoid stuffing links.
 - Keep the article draft/noindex until explicit approval.
 
 Suggested public links:
 
+- OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai
+- Groq API 怎么接入：高速推理适合什么 AI 应用 (/blog/groq-api-fast-llm-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai
+- Replicate API 怎么做 AI Demo：模型调用、部署和费用边界 (/blog/replicate-api-ai-demo-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 基建, 模型, 怎么, 部署
+- Claude API 怎么接入：Messages API、费用和上下文边界 (/blog/claude-api-beginner-guide) - same category: AI 基建; keyword overlap: ai, api, 怎么接入, 基建, 接入, 怎么
+- LM Studio 本地 API 怎么用：把本地模型变成 OpenAI 兼容接口 (/blog/lm-studio-local-api-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 基建, openai, compatible, 模型
 
 ### Vercel 部署成功但页面 404：新手排查顺序
 
@@ -95,10 +97,15 @@ Suggested public links:
 Human review focus:
 
 - Add one contextual public article link during human review.
-- No public link suggestion is available; inspect related published articles manually.
+- Review 5 suggested public link target(s).
 - Use one link only if it helps the reader continue the task; avoid stuffing links.
 - Keep the article draft/noindex until explicit approval.
 
 Suggested public links:
 
+- Next.js hydration error 怎么排查：使用前怎么判断是否适合 (/blog/nextjs-hydration-error-debug-freelance-scope) - same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, next, js
+- Node 版本不匹配使用前怎么判断是否适合 (/blog/node-version-mismatch-fix-freelance-scope) - same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, ai, 工具实践, js, 报错, 错解
+- Node 版本不匹配常见错误和解决步骤 (/blog/node-version-mismatch-fix-mistakes) - same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, js, 报错
+- npm run dev 能跑但 build 失败使用前怎么判断是否适合 (/blog/dev-works-build-fails-freelance-scope) - same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, ai, 工具实践, build, 报错, 错解
+- npm run dev 能跑但 build 失败常见错误和解决步骤 (/blog/dev-works-build-fails-mistakes) - same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, build, 报错
 

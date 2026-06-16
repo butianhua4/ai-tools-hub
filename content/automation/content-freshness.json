@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:30.091Z",
+  "generatedAt": "2026-06-16T12:27:31.163Z",
   "guardrails": {
     "autoPublish": false,
     "note": "This report flags freshness risk for manual review. It does not verify live facts, claim traffic, or change article status."

@@ -1,6 +1,6 @@
 # Autopilot Broad Wave Remediation Pack
 
-Generated at: 2026-06-16T07:01:43.112Z
+Generated at: 2026-06-16T12:27:43.890Z
 
 This report is read-only. It turns broad AI publish-wave optimization items into manual remediation cards and keeps article edits, mark-review, and publishing human-gated.
 
@@ -22,7 +22,7 @@ This report is read-only. It turns broad AI publish-wave optimization items into
 - itemsWithSourceChecks: 7
 - itemsWithWarningFixes: 7
 - manualFixReadyItems: 7
-- missingSpecificLinkSuggestionItems: 6
+- missingSpecificLinkSuggestionItems: 2
 - unsafeItems: 0
 - waveItems: 7
 - waves: 3
@@ -30,7 +30,7 @@ This report is read-only. It turns broad AI publish-wave optimization items into
 
 ## Source Evidence
 
-- broadWaveOptimizationGeneratedAt: "2026-06-16T07:01:42.627Z"
+- broadWaveOptimizationGeneratedAt: "2026-06-16T12:27:43.422Z"
 - broadWaveOptimizationGuardrails: {"autoEditArticles":false,"autoMarkReview":false,"autoPublish":false,"note":"Read-only optimization brief for broad publish waves. It proposes SEO, snippet, opening, internal-link, and risk-language checks without editing article files.","stopBefore":"Apply any copy or link changes only during human review. Do not mark review or publish automatically.","trafficClaim":"not-included"}
 - broadWaveOptimizationItems: 7
 - broadWaveOptimizationReadyItems: 7
@@ -43,8 +43,8 @@ This report is read-only. It turns broad AI publish-wave optimization items into
 
 | Wave | Ready | Missing specific link suggestion | Unsafe | Items |
 | --- | --- | --- | --- | --- |
-| 1 | 3/3 | 3 | 0 | 3 |
-| 2 | 3/3 | 3 | 0 | 3 |
+| 1 | 3/3 | 1 | 0 | 3 |
+| 2 | 3/3 | 1 | 0 | 3 |
 | 3 | 1/1 | 0 | 0 | 1 |
 
 ## Unsafe Items
@@ -55,11 +55,11 @@ This report is read-only. It turns broad AI publish-wave optimization items into
 
 | Wave | Ready | Reasons | Search fixes | Source checks | Link fixes | Link plan | Warnings | Risk checks | Mark-review gated | Publish confirm | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | true | 5 | 12 | 11 | 6 | 4 | 1 | 5 | true | not-included | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
-| 1 | true | 5 | 12 | 9 | 6 | 4 | 2 | 6 | true | not-included | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| 1 | true | 5 | 12 | 11 | 3 | 1 | 1 | 5 | true | not-included | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 1 | true | 5 | 12 | 9 | 3 | 1 | 2 | 6 | true | not-included | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
 | 1 | true | 5 | 12 | 4 | 6 | 4 | 1 | 5 | true | not-included | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
-| 2 | true | 5 | 12 | 8 | 6 | 4 | 1 | 5 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| 2 | true | 5 | 12 | 11 | 6 | 4 | 2 | 6 | true | not-included | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| 2 | true | 5 | 12 | 8 | 3 | 1 | 1 | 5 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 2 | true | 5 | 12 | 11 | 3 | 1 | 2 | 6 | true | not-included | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
 | 2 | true | 5 | 12 | 4 | 6 | 4 | 2 | 6 | true | not-included | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
 | 3 | true | 5 | 12 | 12 | 3 | 1 | 3 | 7 | true | not-included | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
 
@@ -74,10 +74,7 @@ This report is read-only. It turns broad AI publish-wave optimization items into
 
 Public-link plan:
 
-- No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.
-- Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).
-- Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).
-- Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide).
+- Use suggested public link: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide).
 
 Search fixes:
 
@@ -120,7 +117,7 @@ Risk checks:
 Human checklist:
 
 - Review reason: broad AI wave item needs human remediation before approval.
-- Review reason: missing specific public internal-link suggestion needs human choice.
+- Review reason: specific public internal-link suggestion needs human acceptance or rejection.
 - Review reason: warning remediation needs human sign-off.
 - Review reason: search-intent wording needs human copy review.
 - Review reason: source evidence needs human verification.
@@ -140,10 +137,7 @@ Human checklist:
 
 Public-link plan:
 
-- No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.
-- Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).
-- Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).
-- Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide).
+- Use suggested public link: 本地部署大模型怎么开始：新手先看硬件、模型和用途 (/blog/local-llm-deployment-beginner).
 
 Search fixes:
 
@@ -187,7 +181,7 @@ Risk checks:
 Human checklist:
 
 - Review reason: broad AI wave item needs human remediation before approval.
-- Review reason: missing specific public internal-link suggestion needs human choice.
+- Review reason: specific public internal-link suggestion needs human acceptance or rejection.
 - Review reason: warning remediation needs human sign-off.
 - Review reason: search-intent wording needs human copy review.
 - Review reason: source evidence needs human verification.
@@ -267,10 +261,7 @@ Human checklist:
 
 Public-link plan:
 
-- No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.
-- Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).
-- Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).
-- Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide).
+- Use suggested public link: OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide).
 
 Search fixes:
 
@@ -311,7 +302,7 @@ Risk checks:
 Human checklist:
 
 - Review reason: broad AI wave item needs human remediation before approval.
-- Review reason: missing specific public internal-link suggestion needs human choice.
+- Review reason: specific public internal-link suggestion needs human acceptance or rejection.
 - Review reason: warning remediation needs human sign-off.
 - Review reason: search-intent wording needs human copy review.
 - Review reason: source evidence needs human verification.
@@ -331,10 +322,7 @@ Human checklist:
 
 Public-link plan:
 
-- No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.
-- Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).
-- Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).
-- Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide).
+- Use suggested public link: 本地部署大模型怎么开始：新手先看硬件、模型和用途 (/blog/local-llm-deployment-beginner).
 
 Search fixes:
 
@@ -379,7 +367,7 @@ Risk checks:
 Human checklist:
 
 - Review reason: broad AI wave item needs human remediation before approval.
-- Review reason: missing specific public internal-link suggestion needs human choice.
+- Review reason: specific public internal-link suggestion needs human acceptance or rejection.
 - Review reason: warning remediation needs human sign-off.
 - Review reason: search-intent wording needs human copy review.
 - Review reason: source evidence needs human verification.

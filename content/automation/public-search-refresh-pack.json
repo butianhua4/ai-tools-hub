@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:31.063Z",
+  "generatedAt": "2026-06-16T12:27:32.108Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "cannibalizationGeneratedAt": "2026-06-16T07:01:28.317Z",
+    "cannibalizationGeneratedAt": "2026-06-16T12:27:29.403Z",
     "cannibalizationSummary": {
       "articleCount": 669,
       "conflicts": 200,
@@ -18,7 +18,7 @@
       "slugStemConflicts": 177,
       "titleStemConflicts": 12
     },
-    "freshnessGeneratedAt": "2026-06-16T07:01:30.091Z",
+    "freshnessGeneratedAt": "2026-06-16T12:27:31.163Z",
     "freshnessSummary": {
       "articlesChecked": 669,
       "currentReviewItems": 3,
@@ -27,11 +27,11 @@
       "mediumRisk": 93,
       "plannedReviewItems": 6
     },
-    "publicSurfaceGeneratedAt": "2026-06-16T07:01:00.142Z",
+    "publicSurfaceGeneratedAt": "2026-06-16T12:27:02.128Z",
     "publicSurfaceSummary": {
       "broadClusters": 8,
-      "broadClustersWithoutPublicCoverage": 8,
-      "broadReadyCandidateFiles": 33,
+      "broadClustersWithoutPublicCoverage": 0,
+      "broadReadyCandidateFiles": 7,
       "liveArticlesChecked": 500,
       "liveMissingFromSitemap": 0,
       "livePublicCount": 500,
@@ -45,24 +45,24 @@
       "trafficDataAvailable": false,
       "unsafeItems": 0
     },
-    "seoWarningsGeneratedAt": "2026-06-16T07:01:05.115Z",
+    "seoWarningsGeneratedAt": "2026-06-16T12:27:06.835Z",
     "seoWarningsSummary": {
       "blockingItems": 0,
-      "draftItems": 1,
-      "humanGatedItems": 256,
-      "items": 256,
-      "itemsWithHumanChecklist": 256,
-      "itemsWithManualActions": 256,
+      "draftItems": 5,
+      "humanGatedItems": 260,
+      "items": 260,
+      "itemsWithHumanChecklist": 260,
+      "itemsWithManualActions": 260,
       "publicItems": 255,
       "recommendedItems": 1,
       "schemaWarningItems": 92,
-      "snippetWarningItems": 200,
+      "snippetWarningItems": 204,
       "trafficDataAvailable": false,
       "unsafeItems": 0,
-      "warningItems": 256,
+      "warningItems": 260,
       "waveItems": 1
     },
-    "trafficEvidenceGeneratedAt": "2026-06-16T07:00:58.806Z",
+    "trafficEvidenceGeneratedAt": "2026-06-16T12:27:00.677Z",
     "trafficEvidenceSummary": {
       "canClaimTraffic": false,
       "claimableMetrics": 0,
@@ -16751,8 +16751,7 @@
         "primaryKeyword": "AI API Key 安全管理",
         "priority": 58,
         "scope": [
-          "public",
-          "expansion"
+          "public"
         ],
         "schemaWarnings": [],
         "snippetWarnings": [
@@ -16835,8 +16834,7 @@
         "primaryKeyword": "AI 自动化项目报价",
         "priority": 66,
         "scope": [
-          "public",
-          "expansion"
+          "public"
         ],
         "schemaWarnings": [],
         "snippetWarnings": [
@@ -17222,11 +17220,9 @@
         ],
         "manualFixReady": true,
         "primaryKeyword": "客服 AI 模型选型",
-        "priority": 96,
+        "priority": 66,
         "scope": [
-          "public",
-          "expansion",
-          "wave-1"
+          "public"
         ],
         "schemaWarnings": [],
         "snippetWarnings": [
@@ -17379,8 +17375,7 @@
         "primaryKeyword": "团队 AI 提示词库",
         "priority": 58,
         "scope": [
-          "public",
-          "expansion"
+          "public"
         ],
         "schemaWarnings": [],
         "snippetWarnings": [
@@ -20824,8 +20819,7 @@
         "primaryKeyword": "Dify 工作流错误处理",
         "priority": 58,
         "scope": [
-          "public",
-          "expansion"
+          "public"
         ],
         "schemaWarnings": [],
         "snippetWarnings": [
@@ -20901,8 +20895,7 @@
         "primaryKeyword": "Dify Workflow 和 Agent 区别",
         "priority": 58,
         "scope": [
-          "public",
-          "expansion"
+          "public"
         ],
         "schemaWarnings": [],
         "snippetWarnings": [
@@ -23031,8 +23024,7 @@
         "primaryKeyword": "Open WebUI Functions Pipelines",
         "priority": 58,
         "scope": [
-          "public",
-          "expansion"
+          "public"
         ],
         "schemaWarnings": [],
         "snippetWarnings": [
@@ -24587,8 +24579,7 @@
         "primaryKeyword": "Docker 使用 NVIDIA GPU",
         "priority": 58,
         "scope": [
-          "public",
-          "expansion"
+          "public"
         ],
         "schemaWarnings": [],
         "snippetWarnings": [

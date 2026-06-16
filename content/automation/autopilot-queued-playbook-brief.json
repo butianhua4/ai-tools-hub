@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:39.913Z",
+  "generatedAt": "2026-06-16T12:27:40.738Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -15,7 +15,7 @@
     "items": 7,
     "itemsWithCommandBoundary": 7,
     "itemsWithFactCheckQueries": 7,
-    "itemsWithInternalLinkSuggestions": 1,
+    "itemsWithInternalLinkSuggestions": 6,
     "itemsWithOptimizationActions": 1,
     "itemsWithRiskChecklist": 7,
     "itemsWithSearchActions": 7,
@@ -83,14 +83,14 @@
           "RAG 向量数据库怎么选 official docs latest",
           "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 事实核对",
           "AI 基建 平台限制 官方文档",
+          "RAG 知识库搭建教程",
+          "企业知识库 AI 部署",
+          "向量数据库教程",
+          "客服知识库 AI",
           "Confirm current official guidance for agent.",
           "Confirm current official guidance for rag.",
           "Confirm current official guidance for 部署.",
-          "Confirm current official guidance for 模型.",
-          "Confirm current official guidance for 知识库.",
-          "Confirm current official guidance for 提示词.",
-          "Confirm current official guidance for 工具.",
-          "Confirm current official guidance for 客服."
+          "Confirm current official guidance for 模型."
         ]
       },
       "internalLinkSuggestions": [
@@ -220,14 +220,14 @@
         "RAG 向量数据库怎么选 official docs latest",
         "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 事实核对",
         "AI 基建 平台限制 官方文档",
+        "RAG 知识库搭建教程",
+        "企业知识库 AI 部署",
+        "向量数据库教程",
+        "客服知识库 AI",
         "Confirm current official guidance for agent.",
         "Confirm current official guidance for rag.",
         "Confirm current official guidance for 部署.",
         "Confirm current official guidance for 模型.",
-        "Confirm current official guidance for 知识库.",
-        "Confirm current official guidance for 提示词.",
-        "Confirm current official guidance for 工具.",
-        "Confirm current official guidance for 客服.",
         "Add one FAQ or checklist line that uses a high-intent query variant such as: RAG 向量数据库怎么选."
       ]
     },
@@ -236,7 +236,7 @@
         "Read the article end to end and confirm the opening answer matches search intent.",
         "Open 7 official source target(s) and verify fast-changing claims.",
         "Run through 5 risk review checks.",
-        "Confirm public internal link plan before publishing.",
+        "Choose or reject public internal link suggestion: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide).",
         "Confirm snippet and structured-data checks remain clean.",
         "Review source lanes together: wave.",
         "Verify 7 official source target(s) before any approval.",
@@ -280,7 +280,32 @@
         "risk": "unknown",
         "staleSensitiveChecks": []
       },
-      "internalLinkSuggestions": [],
+      "internalLinkSuggestions": [
+        {
+          "file": "content/blog/qdrant-vector-database-beginner-guide.mdx",
+          "reason": "same category: AI 基建; shared tags: RAG, 向量数据库; keyword overlap: rag, ai, 基建, 向量数据库, 语义搜索, 向量",
+          "score": 114,
+          "slug": "qdrant-vector-database-beginner-guide",
+          "title": "Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤",
+          "url": "/blog/qdrant-vector-database-beginner-guide"
+        },
+        {
+          "file": "content/blog/pinecone-rag-beginner-guide.mdx",
+          "reason": "same category: AI 基建; shared tags: RAG, 向量数据库; keyword overlap: rag, 怎么开始, ai, 基建, 向量数据库, metadata",
+          "score": 110,
+          "slug": "pinecone-rag-beginner-guide",
+          "title": "Pinecone 做 RAG 怎么开始：索引、metadata 和召回测试",
+          "url": "/blog/pinecone-rag-beginner-guide"
+        },
+        {
+          "file": "content/blog/chroma-vector-database-rag-guide.mdx",
+          "reason": "same category: AI 基建; shared tags: RAG, 向量数据库; keyword overlap: rag, ai, 基建, 向量数据库, 向量, 怎么",
+          "score": 98,
+          "slug": "chroma-vector-database-rag-guide",
+          "title": "Chroma 向量数据库怎么用：本地 RAG 原型先跑通 collection",
+          "url": "/blog/chroma-vector-database-rag-guide"
+        }
+      ],
       "manualOnlyCommands": {
         "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human",
         "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx",
@@ -344,6 +369,7 @@
         "search-query-coverage",
         "review-portfolio-board",
         "review-action-board",
+        "internal-link-opportunity-audit",
         "autopilot-search-query-gap-brief"
       ],
       "sourceTargets": [
@@ -403,7 +429,32 @@
         "risk": "unknown",
         "staleSensitiveChecks": []
       },
-      "internalLinkSuggestions": [],
+      "internalLinkSuggestions": [
+        {
+          "file": "content/blog/openrouter-api-beginner-guide.mdx",
+          "reason": "same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai",
+          "score": 90,
+          "slug": "openrouter-api-beginner-guide",
+          "title": "OpenRouter API 怎么接入：统一模型入口不是只换 Base URL",
+          "url": "/blog/openrouter-api-beginner-guide"
+        },
+        {
+          "file": "content/blog/groq-api-fast-llm-guide.mdx",
+          "reason": "same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai",
+          "score": 86,
+          "slug": "groq-api-fast-llm-guide",
+          "title": "Groq API 怎么接入：高速推理适合什么 AI 应用",
+          "url": "/blog/groq-api-fast-llm-guide"
+        },
+        {
+          "file": "content/blog/replicate-api-ai-demo-guide.mdx",
+          "reason": "same category: AI 基建; shared tags: API; keyword overlap: ai, api, 基建, 模型, 怎么, 部署",
+          "score": 82,
+          "slug": "replicate-api-ai-demo-guide",
+          "title": "Replicate API 怎么做 AI Demo：模型调用、部署和费用边界",
+          "url": "/blog/replicate-api-ai-demo-guide"
+        }
+      ],
       "manualOnlyCommands": {
         "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
         "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
@@ -478,6 +529,7 @@
         "next-review-source-pack",
         "search-query-coverage",
         "review-portfolio-board",
+        "internal-link-opportunity-audit",
         "ai-deployment-review-pack"
       ],
       "sourceTargets": [
@@ -537,7 +589,32 @@
         "risk": "unknown",
         "staleSensitiveChecks": []
       },
-      "internalLinkSuggestions": [],
+      "internalLinkSuggestions": [
+        {
+          "file": "content/blog/nextjs-hydration-error-debug-freelance-scope.mdx",
+          "reason": "same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, next, js",
+          "score": 98,
+          "slug": "nextjs-hydration-error-debug-freelance-scope",
+          "title": "Next.js hydration error 怎么排查：使用前怎么判断是否适合",
+          "url": "/blog/nextjs-hydration-error-debug-freelance-scope"
+        },
+        {
+          "file": "content/blog/node-version-mismatch-fix-freelance-scope.mdx",
+          "reason": "same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, ai, 工具实践, js, 报错, 错解",
+          "score": 98,
+          "slug": "node-version-mismatch-fix-freelance-scope",
+          "title": "Node 版本不匹配使用前怎么判断是否适合",
+          "url": "/blog/node-version-mismatch-fix-freelance-scope"
+        },
+        {
+          "file": "content/blog/node-version-mismatch-fix-mistakes.mdx",
+          "reason": "same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, js, 报错",
+          "score": 98,
+          "slug": "node-version-mismatch-fix-mistakes",
+          "title": "Node 版本不匹配常见错误和解决步骤",
+          "url": "/blog/node-version-mismatch-fix-mistakes"
+        }
+      ],
       "manualOnlyCommands": {
         "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human",
         "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vercel-404-after-deploy.mdx",
@@ -574,13 +651,25 @@
         "Confirm article answers search query: Vercel build failed",
         "Confirm article answers search query: Vercel 部署后 404",
         "Confirm article answers search query: API Key 无效或缺失",
-        "Confirm article answers search query: 环境变量缺失怎么办"
+        "Confirm article answers search query: 环境变量缺失怎么办",
+        "Confirm article answers search query: Vercel 部署成功但 404怎么做",
+        "Confirm article answers search query: Vercel 部署成功但 404教程",
+        "Confirm article answers search query: Vercel 部署成功但 404新手教程",
+        "Confirm article answers search query: Vercel 部署成功但 404落地步骤"
       ],
       "searchQueries": [
         "Vercel build failed",
         "Vercel 部署后 404",
         "API Key 无效或缺失",
-        "环境变量缺失怎么办"
+        "环境变量缺失怎么办",
+        "Vercel 部署成功但 404怎么做",
+        "Vercel 部署成功但 404教程",
+        "Vercel 部署成功但 404新手教程",
+        "Vercel 部署成功但 404落地步骤",
+        "Vercel 部署成功但 404对比",
+        "Vercel 部署成功但 404怎么选",
+        "Vercel 部署成功但 404模板",
+        "Vercel 部署成功但 404清单"
       ],
       "sourceActions": [
         "Verify official source: OpenAI API docs: https://platform.openai.com/docs",
@@ -593,7 +682,9 @@
       ],
       "sourceEvidence": [
         "next-review-source-pack",
+        "search-query-coverage",
         "review-portfolio-board",
+        "internal-link-opportunity-audit",
         "ai-deployment-review-pack"
       ],
       "sourceTargets": [
@@ -649,7 +740,32 @@
         "risk": "unknown",
         "staleSensitiveChecks": []
       },
-      "internalLinkSuggestions": [],
+      "internalLinkSuggestions": [
+        {
+          "file": "content/blog/permission-denied-fix-freelance-scope.mdx",
+          "reason": "same category: 报错解决; shared tags: 报错解决, AI 工具实践; keyword overlap: 报错解决, ai, 工具实践, 怎么, 报错, 错解",
+          "score": 130,
+          "slug": "permission-denied-fix-freelance-scope",
+          "title": "permission denied 报错新手怎么处理：使用前怎么判断是否适合",
+          "url": "/blog/permission-denied-fix-freelance-scope"
+        },
+        {
+          "file": "content/blog/nextjs-hydration-error-debug-freelance-scope.mdx",
+          "reason": "same category: 报错解决; shared tags: 报错解决, AI 工具实践; keyword overlap: 报错解决, ai, 工具实践, 怎么, 报错, 错解",
+          "score": 122,
+          "slug": "nextjs-hydration-error-debug-freelance-scope",
+          "title": "Next.js hydration error 怎么排查：使用前怎么判断是否适合",
+          "url": "/blog/nextjs-hydration-error-debug-freelance-scope"
+        },
+        {
+          "file": "content/blog/permission-denied-fix-checklist.mdx",
+          "reason": "same category: 报错解决; shared tags: 报错解决, AI 工具实践, 新手教程; keyword overlap: 报错解决, ai, 工具实践, 新手教程, 怎么, 报错",
+          "score": 122,
+          "slug": "permission-denied-fix-checklist",
+          "title": "permission denied 报错新手怎么处理：新手检查清单",
+          "url": "/blog/permission-denied-fix-checklist"
+        }
+      ],
       "manualOnlyCommands": {
         "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/windows-path-permission-install-fix.mdx --confirm-human",
         "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix.mdx",
@@ -709,6 +825,7 @@
       "sourceEvidence": [
         "next-review-source-pack",
         "review-portfolio-board",
+        "internal-link-opportunity-audit",
         "ai-deployment-review-pack"
       ],
       "sourceTargets": [
@@ -767,7 +884,32 @@
         "risk": "unknown",
         "staleSensitiveChecks": []
       },
-      "internalLinkSuggestions": [],
+      "internalLinkSuggestions": [
+        {
+          "file": "content/blog/local-llm-deployment-beginner.mdx",
+          "reason": "same category: AI 基建; keyword overlap: ai, 基建, llm, ollama, 硬件, 怎么",
+          "score": 82,
+          "slug": "local-llm-deployment-beginner",
+          "title": "本地部署大模型怎么开始：新手先看硬件、模型和用途",
+          "url": "/blog/local-llm-deployment-beginner"
+        },
+        {
+          "file": "content/blog/llm-serving-cost-latency-checklist.mdx",
+          "reason": "same category: AI 基建; keyword overlap: ai, 基建, llm, 延迟, 怎么, 模型",
+          "score": 78,
+          "slug": "llm-serving-cost-latency-checklist",
+          "title": "大模型部署成本和延迟怎么估算：上线前检查清单",
+          "url": "/blog/llm-serving-cost-latency-checklist"
+        },
+        {
+          "file": "content/blog/ray-serve-llm-deployment-guide.mdx",
+          "reason": "same category: AI 基建; keyword overlap: ai, 基建, 入门, llm, vllm, ray",
+          "score": 74,
+          "slug": "ray-serve-llm-deployment-guide",
+          "title": "Ray Serve 怎么部署 LLM：多节点、多模型和 OpenAI 兼容接口入门",
+          "url": "/blog/ray-serve-llm-deployment-guide"
+        }
+      ],
       "manualOnlyCommands": {
         "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
         "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx",
@@ -821,8 +963,8 @@
         "TensorRT-LLM 入门落地步骤",
         "TensorRT-LLM 入门对比",
         "TensorRT-LLM 入门怎么选",
-        "vLLM 和 TGI 区别",
-        "RunPod 和 Modal 部署对比"
+        "TensorRT-LLM 入门模板",
+        "TensorRT-LLM 入门清单"
       ],
       "sourceActions": [
         "Verify official source: vLLM docs: https://docs.vllm.ai",
@@ -839,6 +981,7 @@
         "next-review-source-pack",
         "search-query-coverage",
         "review-portfolio-board",
+        "internal-link-opportunity-audit",
         "ai-deployment-review-pack"
       ],
       "sourceTargets": [

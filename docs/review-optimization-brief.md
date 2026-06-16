@@ -1,6 +1,6 @@
 # Review Optimization Brief
 
-Generated at: 2026-06-16T07:01:27.214Z
+Generated at: 2026-06-16T12:27:28.310Z
 
 This report is read-only. It converts review warnings into copydesk suggestions for human review.
 
@@ -14,7 +14,7 @@ This report is read-only. It converts review warnings into copydesk suggestions 
 
 ## Source Evidence
 
-- Action board items: 11
+- Action board items: 3
 - Reports used: review-action-board, internal-link-opportunity-audit, search-query-match-audit, search-snippet-readiness-audit, structured-data-readiness-audit, public-coverage-gap-decision-pack
 
 ## Summary

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:41.667Z",
+  "generatedAt": "2026-06-16T12:27:42.467Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "broadDemandGeneratedAt": "2026-06-16T07:01:41.171Z",
+    "broadDemandGeneratedAt": "2026-06-16T12:27:41.987Z",
     "broadDemandGuardrails": {
       "autoCreateArticles": false,
       "autoEditArticles": false,
@@ -28,7 +28,7 @@
       "reviewReadyDrafts": 148,
       "unsafeClusters": 0
     },
-    "contentFreshnessGeneratedAt": "2026-06-16T07:01:30.091Z",
+    "contentFreshnessGeneratedAt": "2026-06-16T12:27:31.163Z",
     "contentFreshnessGuardrails": {
       "autoPublish": false,
       "note": "This report flags freshness risk for manual review. It does not verify live facts, claim traffic, or change article status."
@@ -42,20 +42,20 @@
       "plannedReviewItems": 6
     },
     "sourceHealthSummary": {
-      "checkedUrls": 38,
-      "broadFirstCoverageFiles": 8,
+      "checkedUrls": 14,
+      "broadFirstCoverageFiles": 0,
       "currentReviewFiles": 3,
-      "failedUrls": 1,
-      "filesCovered": 24,
-      "filesWithReachableSource": 24,
+      "failedUrls": 0,
+      "filesCovered": 16,
+      "filesWithReachableSource": 16,
       "filesWithoutReachableSource": 0,
       "missingUrlTargets": 0,
       "nextSourcePackFiles": 15,
-      "okUrls": 37,
-      "publicGapDecisionFiles": 8,
-      "redirectedUrls": 17,
-      "sourceReferences": 202,
-      "uniqueUrls": 38
+      "okUrls": 14,
+      "publicGapDecisionFiles": 0,
+      "redirectedUrls": 10,
+      "sourceReferences": 86,
+      "uniqueUrls": 14
     },
     "triageSource": "autopilot-broad-ai-demand readyCandidates joined with content-freshness risk and source health URLs"
   },

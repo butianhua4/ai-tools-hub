@@ -1,6 +1,6 @@
 # Autopilot Queued Remediation Pack
 
-Generated at: 2026-06-16T07:01:40.374Z
+Generated at: 2026-06-16T12:27:41.198Z
 
 This report is read-only. It turns queued playbook items into manual remediation cards and keeps article edits, mark-review, and publishing human-gated.
 
@@ -25,7 +25,7 @@ This report is read-only. It turns queued playbook items into manual remediation
 
 ## Source Evidence
 
-- queuedPlaybookGeneratedAt: "2026-06-16T07:01:39.913Z"
+- queuedPlaybookGeneratedAt: "2026-06-16T12:27:40.738Z"
 - queuedPlaybookGuardrails: {"autoEditArticles":false,"autoMarkReview":false,"autoPublish":false,"note":"Read-only merged playbook for next-10 queued-for-playbook sprint items. It prepares human review without changing article status.","stopBefore":"Use this report for manual review only. mark:review requires explicit human approval per file; publish --confirm is not included."}
 - queuedPlaybookItems: 7
 - queuedPlaybookReadyItems: 7
@@ -43,11 +43,11 @@ This report is read-only. It turns queued playbook items into manual remediation
 | Order | Ready | Reasons | Search fixes | Source checks | Link fixes | Risk checks | Mark-review gated | Publish confirm | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2 | true | 5 | 18 | 26 | 4 | 33 | true | not-included | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
-| 3 | true | 5 | 18 | 24 | 1 | 10 | true | not-included | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
-| 4 | true | 5 | 17 | 24 | 1 | 23 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| 5 | true | 5 | 9 | 16 | 1 | 22 | true | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
-| 6 | true | 5 | 9 | 22 | 1 | 22 | true | not-included | Windows 路径和权限导致安装失败怎么办 | content/blog/windows-path-permission-install-fix.mdx |
-| 7 | true | 5 | 17 | 20 | 1 | 22 | true | not-included | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| 3 | true | 5 | 18 | 24 | 4 | 10 | true | not-included | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 4 | true | 5 | 17 | 24 | 4 | 23 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 5 | true | 5 | 17 | 16 | 4 | 22 | true | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+| 6 | true | 5 | 9 | 22 | 4 | 22 | true | not-included | Windows 路径和权限导致安装失败怎么办 | content/blog/windows-path-permission-install-fix.mdx |
+| 7 | true | 5 | 17 | 20 | 4 | 22 | true | not-included | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
 | 8 | true | 5 | 17 | 16 | 1 | 17 | true | not-included | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
 
 ## Per-Item Checklist
@@ -123,7 +123,7 @@ Human checklist:
 ### 3. Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索
 
 - File: content/blog/supabase-pgvector-rag-guide.mdx
-- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, review-action-board, autopilot-search-query-gap-brief
+- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, review-action-board, internal-link-opportunity-audit, autopilot-search-query-gap-brief
 - Manual mark-review command: `npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human`
 - Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx`
 - Publish confirm: not-included
@@ -156,6 +156,9 @@ Source checks:
 
 Internal-link fixes:
 
+- Add or explicitly reject public internal link: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide).
+- Add or explicitly reject public internal link: Pinecone 做 RAG 怎么开始：索引、metadata 和召回测试 (/blog/pinecone-rag-beginner-guide).
+- Add or explicitly reject public internal link: Chroma 向量数据库怎么用：本地 RAG 原型先跑通 collection (/blog/chroma-vector-database-rag-guide).
 - Confirm the link anchor is contextual and does not interrupt the tutorial flow.
 
 Risk checks:
@@ -188,7 +191,7 @@ Human checklist:
 ### 4. Together AI API 怎么接入：开源模型接口、embedding 和部署边界
 
 - File: content/blog/together-ai-api-beginner-guide.mdx
-- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, ai-deployment-review-pack
+- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, internal-link-opportunity-audit, ai-deployment-review-pack
 - Manual mark-review command: `npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human`
 - Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx`
 - Publish confirm: not-included
@@ -221,6 +224,9 @@ Source checks:
 
 Internal-link fixes:
 
+- Add or explicitly reject public internal link: OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide).
+- Add or explicitly reject public internal link: Groq API 怎么接入：高速推理适合什么 AI 应用 (/blog/groq-api-fast-llm-guide).
+- Add or explicitly reject public internal link: Replicate API 怎么做 AI Demo：模型调用、部署和费用边界 (/blog/replicate-api-ai-demo-guide).
 - Confirm the link anchor is contextual and does not interrupt the tutorial flow.
 
 Risk checks:
@@ -253,7 +259,7 @@ Human checklist:
 ### 5. Vercel 部署成功但页面 404：新手排查顺序
 
 - File: content/blog/vercel-404-after-deploy.mdx
-- Source evidence: next-review-source-pack, review-portfolio-board, ai-deployment-review-pack
+- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, internal-link-opportunity-audit, ai-deployment-review-pack
 - Manual mark-review command: `npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human`
 - Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/vercel-404-after-deploy.mdx`
 - Publish confirm: not-included
@@ -265,10 +271,11 @@ Search fixes:
 - Confirm article answers search query: Vercel 部署后 404
 - Confirm article answers search query: API Key 无效或缺失
 - Confirm article answers search query: 环境变量缺失怎么办
+- Confirm article answers search query: Vercel 部署成功但 404怎么做
+- Confirm article answers search query: Vercel 部署成功但 404教程
+- Confirm article answers search query: Vercel 部署成功但 404新手教程
+- Confirm article answers search query: Vercel 部署成功但 404落地步骤
 - Check search query coverage: Vercel build failed.
-- Check search query coverage: Vercel 部署后 404.
-- Check search query coverage: API Key 无效或缺失.
-- Check search query coverage: 环境变量缺失怎么办.
 
 Source checks:
 
@@ -285,6 +292,9 @@ Source checks:
 
 Internal-link fixes:
 
+- Add or explicitly reject public internal link: Next.js hydration error 怎么排查：使用前怎么判断是否适合 (/blog/nextjs-hydration-error-debug-freelance-scope).
+- Add or explicitly reject public internal link: Node 版本不匹配使用前怎么判断是否适合 (/blog/node-version-mismatch-fix-freelance-scope).
+- Add or explicitly reject public internal link: Node 版本不匹配常见错误和解决步骤 (/blog/node-version-mismatch-fix-mistakes).
 - Confirm the link anchor is contextual and does not interrupt the tutorial flow.
 
 Risk checks:
@@ -317,7 +327,7 @@ Human checklist:
 ### 6. Windows 路径和权限导致安装失败怎么办
 
 - File: content/blog/windows-path-permission-install-fix.mdx
-- Source evidence: next-review-source-pack, review-portfolio-board, ai-deployment-review-pack
+- Source evidence: next-review-source-pack, review-portfolio-board, internal-link-opportunity-audit, ai-deployment-review-pack
 - Manual mark-review command: `npm run mark:review -- --file=content/blog/windows-path-permission-install-fix.mdx --confirm-human`
 - Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix.mdx`
 - Publish confirm: not-included
@@ -349,6 +359,9 @@ Source checks:
 
 Internal-link fixes:
 
+- Add or explicitly reject public internal link: permission denied 报错新手怎么处理：使用前怎么判断是否适合 (/blog/permission-denied-fix-freelance-scope).
+- Add or explicitly reject public internal link: Next.js hydration error 怎么排查：使用前怎么判断是否适合 (/blog/nextjs-hydration-error-debug-freelance-scope).
+- Add or explicitly reject public internal link: permission denied 报错新手怎么处理：新手检查清单 (/blog/permission-denied-fix-checklist).
 - Confirm the link anchor is contextual and does not interrupt the tutorial flow.
 
 Risk checks:
@@ -381,7 +394,7 @@ Human checklist:
 ### 7. TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收
 
 - File: content/blog/tensorrt-llm-beginner-guide.mdx
-- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, ai-deployment-review-pack
+- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, internal-link-opportunity-audit, ai-deployment-review-pack
 - Manual mark-review command: `npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human`
 - Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx`
 - Publish confirm: not-included
@@ -414,6 +427,9 @@ Source checks:
 
 Internal-link fixes:
 
+- Add or explicitly reject public internal link: 本地部署大模型怎么开始：新手先看硬件、模型和用途 (/blog/local-llm-deployment-beginner).
+- Add or explicitly reject public internal link: 大模型部署成本和延迟怎么估算：上线前检查清单 (/blog/llm-serving-cost-latency-checklist).
+- Add or explicitly reject public internal link: Ray Serve 怎么部署 LLM：多节点、多模型和 OpenAI 兼容接口入门 (/blog/ray-serve-llm-deployment-guide).
 - Confirm the link anchor is contextual and does not interrupt the tutorial flow.
 
 Risk checks:

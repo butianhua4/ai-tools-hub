@@ -1,6 +1,6 @@
 # Autopilot Human Review Playbook
 
-Generated at: 2026-06-16T07:01:35.623Z
+Generated at: 2026-06-16T12:27:36.563Z
 
 This report is read-only. It merges the top autopilot approval packet with search, source, internal-link, and copydesk tasks for human review.
 
@@ -34,7 +34,7 @@ This report is read-only. It merges the top autopilot approval packet with searc
 ## Source Evidence
 
 - approvalPacketUnsafeItems: 0
-- internalLinkUnsafeItems: 2
+- internalLinkUnsafeItems: 0
 - optimizationUnsafeCommands: 0
 - searchIntentUnsafeItems: 0
 - sourceVerificationUnsafeItems: 0
@@ -43,16 +43,16 @@ This report is read-only. It merges the top autopilot approval packet with searc
 
 | Ready | Safe | Search actions | Source actions | Link actions | Mark-review command gated | Publish confirm | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| false | true | 10 | 37 | 4 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| false | true | 6 | 33 | 4 | true | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+| false | true | 10 | 37 | 5 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| false | true | 6 | 33 | 5 | true | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Review Items
 
 | Ready | Safe | Search actions | Source actions | Link actions | Mark-review command gated | Publish confirm | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | true | true | 12 | 44 | 6 | true | not-included | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
-| false | true | 10 | 37 | 4 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| false | true | 6 | 33 | 4 | true | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+| false | true | 10 | 37 | 5 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| false | true | 6 | 33 | 5 | true | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Per-Item Human Review Steps
 
@@ -165,10 +165,11 @@ Source verification actions:
 
 Internal link actions:
 
-- Add one contextual public article link during human review.
-- No public link suggestion is available; inspect related published articles manually.
+- Already links to at least one public article.
+- Review 5 suggested public link target(s).
 - Use one link only if it helps the reader continue the task; avoid stuffing links.
 - Keep the article draft/noindex until explicit approval.
+- If helpful, add one contextual public link: OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide).
 
 ### Vercel 部署成功但页面 404：新手排查顺序
 
@@ -217,7 +218,8 @@ Source verification actions:
 Internal link actions:
 
 - Add one contextual public article link during human review.
-- No public link suggestion is available; inspect related published articles manually.
+- Review 5 suggested public link target(s).
 - Use one link only if it helps the reader continue the task; avoid stuffing links.
 - Keep the article draft/noindex until explicit approval.
+- If helpful, add one contextual public link: Next.js hydration error 怎么排查：使用前怎么判断是否适合 (/blog/nextjs-hydration-error-debug-freelance-scope).
 

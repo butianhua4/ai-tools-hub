@@ -1,6 +1,6 @@
 # Autopilot Executive Brief
 
-Generated at: 2026-06-16T07:01:47.496Z
+Generated at: 2026-06-16T12:27:48.149Z
 
 This report is read-only. It compresses the current automation reports into the next human-gated execution priorities.
 
@@ -15,10 +15,10 @@ This report is read-only. It compresses the current automation reports into the 
 
 ## Summary
 
-- approvalBacklogItems: 3
+- approvalBacklogItems: 0
 - automationRunsPerDay: 4
 - boardActionItems: 5
-- broadClustersWithoutPublicCoverage: 8
+- broadClustersWithoutPublicCoverage: 0
 - currentPublishableNow: 0
 - forbiddenWorkflowCommands: 0
 - immediateApprovalItems: 3
@@ -46,15 +46,15 @@ This report is read-only. It compresses the current automation reports into the 
 | Priority | Title | File | Warnings |
 | ---: | --- | --- | --- |
 | 441 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx | search query match warning exists |
-| 398 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx | no copydesk optimization brief matched<br>no freshness brief matched<br>search query match warning exists |
-| 359 | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx | not yet matched in human approval clearance pack<br>no copydesk optimization brief matched<br>no freshness brief matched<br>search query match warning exists |
+| 370 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx | not yet matched in human approval clearance pack<br>no copydesk optimization brief matched<br>no freshness brief matched<br>search query match warning exists |
+| 369 | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx | not yet matched in human approval clearance pack<br>no copydesk optimization brief matched<br>no freshness brief matched<br>search query match warning exists |
 
 ## Board Actions
 
 | Board | Publish confirm | Action | Key summary |
 | --- | --- | --- | --- |
-| Internal links | not-included | Use docs/internal-link-sprint-board.md to add one contextual public link per candidate during manual review. | actionItems=200; broadFirstCoverageItems=8; candidateItems=25; candidateItemsMissingPublicLinkSuggestion=0; candidateItemsWithPublicSuggestions=25; candidatesWithoutCurrentPublicLinks=2; expansionItems=19; items=25 |
-| Public refresh | not-included | Use docs/public-refresh-sprint-board.md to refresh existing public articles without claiming traffic. | actionItems=5070; cannibalizationItems=239; highPriorityItems=252; items=500; itemsPerWave=3; itemsReadyForPublicRefreshSprint=500; liveMissingFromSitemap=0; mojibakePublicItems=9 |
+| Internal links | not-included | Use docs/internal-link-sprint-board.md to add one contextual public link per candidate during manual review. | actionItems=128; broadFirstCoverageItems=0; candidateItems=16; candidateItemsMissingPublicLinkSuggestion=0; candidateItemsWithPublicSuggestions=16; candidatesWithoutCurrentPublicLinks=10; expansionItems=15; items=16 |
+| Public refresh | not-included | Use docs/public-refresh-sprint-board.md to refresh existing public articles without claiming traffic. | actionItems=5154; cannibalizationItems=239; highPriorityItems=268; items=500; itemsPerWave=3; itemsReadyForPublicRefreshSprint=500; liveMissingFromSitemap=0; mojibakePublicItems=51 |
 | AI deployment | not-included | Use docs/ai-deployment-sprint-board.md to prioritize deployment, Agent, model-serving, and API tutorial candidates. | actionItems=88; agentItems=0; apiIntegrationItems=2; automationPlatformItems=0; deploymentPublicArticles=179; highPriorityItems=0; implementationModes=4; items=6 |
 | Memory/RAG | not-included | Use docs/memory-rag-sprint-board.md to prioritize RAG, knowledge base, vector search, memory, evaluation, and privacy lanes. | candidateItems=2; decisionChecks=39; deploymentPublicArticles=179; howToLanes=2; itemsPerWave=3; lanes=6; lanesWithCandidateFiles=2; privacyLanes=1 |
-| Popular prompts | not-included | Use docs/popular-prompt-sprint-board.md to prioritize high-demand prompt playbook lanes. | actionItems=90; bridgeItems=13; candidateFiles=20; highPriorityItems=5; industryBuckets=5; items=10; itemsPerWave=2; lanesReadyForPromptSprint=3 |
+| Popular prompts | not-included | Use docs/popular-prompt-sprint-board.md to prioritize high-demand prompt playbook lanes. | actionItems=90; bridgeItems=13; candidateFiles=21; highPriorityItems=5; industryBuckets=5; items=10; itemsPerWave=2; lanesReadyForPromptSprint=3 |

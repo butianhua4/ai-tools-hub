@@ -1,6 +1,6 @@
 # Publish Readiness Pack
 
-Generated at: 2026-06-16T07:00:56.355Z
+Generated at: 2026-06-16T12:26:58.480Z
 
 This pack organizes manual review work. It does not publish articles or change article status.
 
@@ -91,8 +91,8 @@ npm run live:check -- --url=https://ai-jiedan-lab.vercel.app
 - Quality score: 100
 - Opportunity score: 65
 - Opportunity reason: RAG and knowledge base cluster; 23 public article(s) in cluster; 71 public article(s) in category
-- Matched content opportunity: none
-- Opportunity why: 
+- Matched content opportunity: RAG、知识库和向量检索
+- Opportunity why: 很多团队会搜索知识库 AI，但真正需要的是可审核、可引用、可质检的方案。
 - Chinese chars: 1209
 - Internal links: 3
 - Description: 面向新手整理 RAG 向量数据库选型思路，比较 pgvector、Qdrant、Milvus 等路线时应关注数据规模、权限、运维、成本和迁移。
@@ -127,6 +127,9 @@ Review focus:
 - Confirm risk reminders are cautionary and do not imply guaranteed outcomes.
 - Confirm internal links and CTA point to relevant site pages.
 - Open the official source targets below before approving fast-changing AI, deployment, pricing, or API claims.
+- 区分 RAG、微调和普通提示词
+- 核对向量库、引用、召回和质检说法
+- 说明失败案例和人工兜底
 
 Official source targets:
 
@@ -139,6 +142,10 @@ Fact-check queries:
 - RAG 向量数据库怎么选 official docs latest
 - RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 事实核对
 - AI 基建 平台限制 官方文档
+- RAG 知识库搭建教程
+- 企业知识库 AI 部署
+- 向量数据库教程
+- 客服知识库 AI
 
 Commands:
 
@@ -159,8 +166,8 @@ npm run live:check -- --url=https://ai-jiedan-lab.vercel.app
 - Quality score: 100
 - Opportunity score: 34
 - Opportunity reason: AI deployment cluster; 114 public article(s) in cluster; 16 public article(s) in category
-- Matched content opportunity: none
-- Opportunity why: 
+- Matched content opportunity: 大模型和 AI 应用部署教程
+- Opportunity why: 部署、API、限流、环境变量是新人最容易搜索也最容易踩坑的入口。
 - Chinese chars: 1246
 - Internal links: 3
 - Description: 整理 Vercel AI Gateway 多模型接入思路，覆盖统一 API、provider 切换、日志、成本、降级、AI SDK 和上线检查。
@@ -194,6 +201,9 @@ Review focus:
 - Confirm risk reminders are cautionary and do not imply guaranteed outcomes.
 - Confirm internal links and CTA point to relevant site pages.
 - Open the official source targets below before approving fast-changing AI, deployment, pricing, or API claims.
+- 核对官方部署文档
+- 检查 API Key、限流、环境变量和费用说法
+- 补足上线后的 smoke check 和回滚步骤
 
 Official source targets:
 
@@ -209,6 +219,10 @@ Fact-check queries:
 - Vercel AI Gateway 多模型 official docs latest
 - Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 事实核对
 - AI 部署 平台限制 官方文档
+- 大模型部署教程
+- AI 应用部署 Vercel 教程
+- OpenAI API 部署教程
+- Claude API 部署教程
 
 Commands:
 

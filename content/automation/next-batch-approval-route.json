@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:46.549Z",
+  "generatedAt": "2026-06-16T12:27:47.224Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,24 +9,24 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "clearanceGeneratedAt": "2026-06-16T07:01:45.068Z",
+    "clearanceGeneratedAt": "2026-06-16T12:27:45.790Z",
     "clearanceSummary": {
-      "approvalItems": 6,
-      "backlogItems": 3,
-      "clearanceActions": 40,
+      "approvalItems": 3,
+      "backlogItems": 0,
+      "clearanceActions": 28,
       "copydeskBriefItems": 2,
       "failedSourceDecisionItems": 0,
       "immediateItems": 3,
-      "itemsReadyForClearanceReview": 6,
-      "massSearchThemeItems": 5,
-      "popularPromptLaneItems": 4,
+      "itemsReadyForClearanceReview": 3,
+      "massSearchThemeItems": 3,
+      "popularPromptLaneItems": 3,
       "publishConfirmCommandsIncluded": 0,
       "seoWarningItems": 1,
-      "sourceDecisionItems": 0,
+      "sourceDecisionItems": 1,
       "trafficDataAvailable": false,
       "unsafeItems": 0
     },
-    "collisionGeneratedAt": "2026-06-16T07:01:29.439Z",
+    "collisionGeneratedAt": "2026-06-16T12:27:30.510Z",
     "collisionSummary": {
       "blockedQueueMatchedItems": 0,
       "blockingItems": 0,
@@ -39,7 +39,7 @@
       "unsafeItems": 0,
       "warningItems": 0
     },
-    "freshnessGeneratedAt": "2026-06-16T07:01:30.569Z",
+    "freshnessGeneratedAt": "2026-06-16T12:27:31.632Z",
     "freshnessSummary": {
       "blockedItems": 0,
       "highRiskItems": 2,
@@ -49,7 +49,7 @@
       "readyItems": 2,
       "unsafeCommands": 0
     },
-    "nextReviewSourcePackGeneratedAt": "2026-06-16T07:01:10.502Z",
+    "nextReviewSourcePackGeneratedAt": "2026-06-16T12:27:12.193Z",
     "nextReviewSourcePackSummary": {
       "items": 15,
       "missingApprovalChecks": 0,
@@ -60,7 +60,7 @@
       "safeDraftItems": 15,
       "unsafeItems": 0
     },
-    "optimizationGeneratedAt": "2026-06-16T07:01:27.214Z",
+    "optimizationGeneratedAt": "2026-06-16T12:27:28.310Z",
     "optimizationSummary": {
       "briefs": 2,
       "briefsWithAction": 2,
@@ -69,7 +69,7 @@
       "readyBriefs": 2,
       "unsafeCommands": 0
     },
-    "queryCoverageGeneratedAt": "2026-06-16T07:01:12.896Z",
+    "queryCoverageGeneratedAt": "2026-06-16T12:27:14.552Z",
     "queryCoverageSummary": {
       "items": 12,
       "minFamiliesPerItem": 5,
@@ -82,25 +82,25 @@
       "uniqueLanes": 7,
       "uniqueQueries": 352
     },
-    "queryMatchGeneratedAt": "2026-06-16T07:01:13.395Z",
+    "queryMatchGeneratedAt": "2026-06-16T12:27:15.046Z",
     "queryMatchSummary": {
-      "averageExactMatches": 0.33,
-      "averageMatchedFamilies": 6.75,
+      "averageExactMatches": 0.67,
+      "averageMatchedFamilies": 6.83,
       "blockingItems": 0,
       "items": 12,
       "queryCoverageItems": 12,
       "queryCoverageUniqueQueries": 352,
       "readyItems": 12,
-      "warningItems": 11
+      "warningItems": 10
     },
-    "reviewBatchPlanGeneratedAt": "2026-06-16T07:01:09.510Z",
+    "reviewBatchPlanGeneratedAt": "2026-06-16T12:27:11.221Z",
     "reviewBatchPlanTotals": {
       "plannedBatches": 3,
       "plannedCandidates": 6,
       "sourceReviewCandidates": 25,
       "sourceOpportunities": 7
     },
-    "workbenchGeneratedAt": "2026-06-16T07:01:46.059Z",
+    "workbenchGeneratedAt": "2026-06-16T12:27:46.744Z",
     "trafficNote": "No measured traffic, ranking, impression, click, conversion, or revenue claim is made."
   },
   "publishingBoundary": {
@@ -115,9 +115,9 @@
     "plannedBatchTopic": "大模型和 AI 应用部署教程"
   },
   "summary": {
-    "actionItems": 37,
+    "actionItems": 39,
     "batchItems": 3,
-    "clearanceMatchedItems": 2,
+    "clearanceMatchedItems": 1,
     "commandBoundaries": 3,
     "copydeskMatchedItems": 1,
     "currentPublicPublished": 500,
@@ -128,8 +128,8 @@
     "publishConfirmCommandsIncluded": 0,
     "queryCoverageMatchedItems": 3,
     "queryMatchWarningItems": 3,
-    "routeWarnings": 8,
-    "seoWarningItems": 1,
+    "routeWarnings": 9,
+    "seoWarningItems": 3,
     "sourcePackMatchedItems": 3,
     "trafficDataAvailable": false,
     "unsafeItems": 0
@@ -253,9 +253,11 @@
           ],
           "manualFixReady": true,
           "primaryKeyword": "Vercel AI Gateway 多模型",
-          "priority": 48,
+          "priority": 78,
           "scope": [
-            "recommended"
+            "expansion",
+            "recommended",
+            "wave-1"
           ],
           "schemaWarnings": [],
           "snippetWarnings": [
@@ -341,14 +343,14 @@
           "Vercel AI Gateway 多模型 official docs latest",
           "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 事实核对",
           "AI 部署 平台限制 官方文档",
+          "大模型部署教程",
+          "AI 应用部署 Vercel 教程",
+          "OpenAI API 部署教程",
+          "Claude API 部署教程",
           "Confirm current official guidance for api.",
           "Confirm current official guidance for agent.",
           "Confirm current official guidance for claude.",
-          "Confirm current official guidance for gemini.",
-          "Confirm current official guidance for openai.",
-          "Confirm current official guidance for vercel.",
-          "Confirm current official guidance for 部署.",
-          "Confirm current official guidance for 大模型."
+          "Confirm current official guidance for gemini."
         ],
         "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
         "warningIssues": []
@@ -514,9 +516,11 @@
         ],
         "manualFixReady": true,
         "primaryKeyword": "Vercel AI Gateway 多模型",
-        "priority": 48,
+        "priority": 78,
         "scope": [
-          "recommended"
+          "expansion",
+          "recommended",
+          "wave-1"
         ],
         "schemaWarnings": [],
         "snippetWarnings": [
@@ -601,49 +605,14 @@
         "Run manual fact checks for: Together AI API 接入 official docs latest | Together AI API 接入 official documentation current limits | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 fact check official docs.",
         "Use 35 query variants to check title, description, headings, and first-screen answer fit.",
         "Search wording warnings: few exact query variant matches in article text; missing query-family signals: intentSeeds.",
-        "Resolve route warnings before approval: no copydesk optimization brief matched; no freshness brief matched; search query match warning exists.",
+        "SEO manual actions: Check whether the title can naturally include the exact primary keyword: Together AI API 接入. | If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title. | Confirm the H1/title/description still answer the same search intent after any metadata change..",
+        "Resolve route warnings before approval: not yet matched in human approval clearance pack; no copydesk optimization brief matched; no freshness brief matched.",
         "After human approval only: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
         "After review state only, dry-run publish without confirm: npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
         "Do not run publish:articles --confirm from this route."
       ],
       "category": "AI 基建",
-      "clearance": {
-        "articleState": {
-          "humanReviewRequired": true,
-          "noindex": true,
-          "qualityScore": 100,
-          "sourceNotes": true,
-          "status": "draft"
-        },
-        "blockers": [],
-        "clearanceActions": [
-          "Confirm the draft still answers one clear search intent.",
-          "Verify source-backed claims before any status change.",
-          "Keep status=draft, noindex=true, and humanReviewRequired=true until approval.",
-          "Check that popular prompt lane framing stays broad enough for real search demand.",
-          "Check that mass-search theme framing is covered without stuffing keywords.",
-          "Run mark:review only after explicit human approval; publish confirm remains excluded."
-        ],
-        "commandBoundary": {
-          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-          "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
-          "publishConfirm": "not-included",
-          "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
-        },
-        "copydeskBrief": null,
-        "file": "content/blog/together-ai-api-beginner-guide.mdx",
-        "hasFailedSourceDecision": false,
-        "immediate": false,
-        "massSearchThemes": 1,
-        "popularPromptLanes": 2,
-        "priorityScore": 50,
-        "readyForHumanApproval": true,
-        "readyForClearanceReview": true,
-        "seoWarning": null,
-        "sourceDecisions": [],
-        "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-        "unsafeReasons": []
-      },
+      "clearance": null,
       "cluster": "AI deployment",
       "commandBoundary": {
         "dryRunMarkReview": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx",
@@ -657,7 +626,7 @@
       "optimization": null,
       "opportunityReason": "AI deployment cluster; 114 public article(s) in cluster; 71 public article(s) in category",
       "opportunityScore": 27,
-      "priorityScore": 398,
+      "priorityScore": 370,
       "queryCoverage": {
         "file": "content/blog/together-ai-api-beginner-guide.mdx",
         "gaps": [],
@@ -760,11 +729,50 @@
       },
       "readyForHumanRouteReview": true,
       "routeWarnings": [
+        "not yet matched in human approval clearance pack",
         "no copydesk optimization brief matched",
         "no freshness brief matched",
         "search query match warning exists"
       ],
-      "seoWarning": null,
+      "seoWarning": {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
+          "publishConfirm": "not-included",
+          "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
+        },
+        "file": "content/blog/together-ai-api-beginner-guide.mdx",
+        "humanChecklist": [
+          "Review file: content/blog/together-ai-api-beginner-guide.mdx.",
+          "Review status: draft.",
+          "Confirm primary keyword intent: Together AI API 接入.",
+          "Snippet warning: primary keyword is not an exact title substring.",
+          "Check whether the title can naturally include the exact primary keyword: Together AI API 接入.",
+          "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+          "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+          "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
+          "Do not mark review or publish from this remediation pack."
+        ],
+        "manualActions": [
+          "Check whether the title can naturally include the exact primary keyword: Together AI API 接入.",
+          "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+          "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+          "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
+        ],
+        "manualFixReady": true,
+        "primaryKeyword": "Together AI API 接入",
+        "priority": 8,
+        "scope": [
+          "expansion"
+        ],
+        "schemaWarnings": [],
+        "snippetWarnings": [
+          "primary keyword is not an exact title substring"
+        ],
+        "status": "draft",
+        "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
+        "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
+        "unsafeReasons": []
+      },
       "sourcePack": {
         "approvalChecklist": [
           "Article remains draft: true",
@@ -836,6 +844,7 @@
         "Run manual fact checks for: Vercel AI SDK 聊天机器人部署 official docs latest | Vercel AI SDK 聊天机器人部署 official documentation current limits | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 fact check official docs.",
         "Use 35 query variants to check title, description, headings, and first-screen answer fit.",
         "Search wording warnings: few exact query variant matches in article text.",
+        "SEO manual actions: Check whether the title can naturally include the exact primary keyword: Vercel AI SDK 聊天机器人部署. | If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title. | Confirm the H1/title/description still answer the same search intent after any metadata change..",
         "Resolve route warnings before approval: not yet matched in human approval clearance pack; no copydesk optimization brief matched; no freshness brief matched.",
         "After human approval only: npm run mark:review -- --file=content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx --confirm-human",
         "After review state only, dry-run publish without confirm: npm run publish:articles -- --file=content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
@@ -856,7 +865,7 @@
       "optimization": null,
       "opportunityReason": "AI deployment cluster; 114 public article(s) in cluster; 71 public article(s) in category",
       "opportunityScore": 26,
-      "priorityScore": 359,
+      "priorityScore": 369,
       "queryCoverage": {
         "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
         "gaps": [],
@@ -961,7 +970,45 @@
         "no freshness brief matched",
         "search query match warning exists"
       ],
-      "seoWarning": null,
+      "seoWarning": {
+        "commandBoundary": {
+          "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx --confirm-human",
+          "publishConfirm": "not-included",
+          "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
+        },
+        "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
+        "humanChecklist": [
+          "Review file: content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx.",
+          "Review status: draft.",
+          "Confirm primary keyword intent: Vercel AI SDK 聊天机器人部署.",
+          "Snippet warning: primary keyword is not an exact title substring.",
+          "Check whether the title can naturally include the exact primary keyword: Vercel AI SDK 聊天机器人部署.",
+          "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+          "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+          "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
+          "Do not mark review or publish from this remediation pack."
+        ],
+        "manualActions": [
+          "Check whether the title can naturally include the exact primary keyword: Vercel AI SDK 聊天机器人部署.",
+          "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+          "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+          "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
+        ],
+        "manualFixReady": true,
+        "primaryKeyword": "Vercel AI SDK 聊天机器人部署",
+        "priority": 8,
+        "scope": [
+          "expansion"
+        ],
+        "schemaWarnings": [],
+        "snippetWarnings": [
+          "primary keyword is not an exact title substring"
+        ],
+        "status": "draft",
+        "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
+        "title": "Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查",
+        "unsafeReasons": []
+      },
       "sourcePack": {
         "approvalChecklist": [
           "Article remains draft: true",

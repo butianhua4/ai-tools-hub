@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:43.112Z",
+  "generatedAt": "2026-06-16T12:27:43.890Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "broadWaveOptimizationGeneratedAt": "2026-06-16T07:01:42.627Z",
+    "broadWaveOptimizationGeneratedAt": "2026-06-16T12:27:43.422Z",
     "broadWaveOptimizationGuardrails": {
       "autoEditArticles": false,
       "autoMarkReview": false,
@@ -36,7 +36,7 @@
     "itemsWithSourceChecks": 7,
     "itemsWithWarningFixes": 7,
     "manualFixReadyItems": 7,
-    "missingSpecificLinkSuggestionItems": 6,
+    "missingSpecificLinkSuggestionItems": 2,
     "unsafeItems": 0,
     "waveItems": 7,
     "waves": 3,
@@ -47,14 +47,14 @@
     {
       "items": 3,
       "manualFixReadyItems": 3,
-      "missingSpecificLinkSuggestionItems": 3,
+      "missingSpecificLinkSuggestionItems": 1,
       "unsafeItems": 0,
       "wave": 1
     },
     {
       "items": 3,
       "manualFixReadyItems": 3,
-      "missingSpecificLinkSuggestionItems": 3,
+      "missingSpecificLinkSuggestionItems": 1,
       "unsafeItems": 0,
       "wave": 2
     },
@@ -76,7 +76,7 @@
       "file": "content/blog/supabase-pgvector-rag-guide.mdx",
       "humanChecklist": [
         "Review reason: broad AI wave item needs human remediation before approval.",
-        "Review reason: missing specific public internal-link suggestion needs human choice.",
+        "Review reason: specific public internal-link suggestion needs human acceptance or rejection.",
         "Review reason: warning remediation needs human sign-off.",
         "Review reason: search-intent wording needs human copy review.",
         "Review reason: source evidence needs human verification.",
@@ -88,23 +88,17 @@
         "Publishing remains a separate explicit approval step."
       ],
       "internalLinkFixes": [
-        "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
-        "Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).",
-        "Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).",
-        "Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide).",
+        "Use suggested public link: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide).",
         "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
         "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
       ],
       "manualFixReady": true,
       "publicLinkPlan": [
-        "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
-        "Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).",
-        "Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).",
-        "Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide)."
+        "Use suggested public link: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide)."
       ],
       "remediationReasons": [
         "broad AI wave item needs human remediation before approval",
-        "missing specific public internal-link suggestion needs human choice",
+        "specific public internal-link suggestion needs human acceptance or rejection",
         "warning remediation needs human sign-off",
         "search-intent wording needs human copy review",
         "source evidence needs human verification"
@@ -159,7 +153,7 @@
       "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
       "humanChecklist": [
         "Review reason: broad AI wave item needs human remediation before approval.",
-        "Review reason: missing specific public internal-link suggestion needs human choice.",
+        "Review reason: specific public internal-link suggestion needs human acceptance or rejection.",
         "Review reason: warning remediation needs human sign-off.",
         "Review reason: search-intent wording needs human copy review.",
         "Review reason: source evidence needs human verification.",
@@ -171,23 +165,17 @@
         "Publishing remains a separate explicit approval step."
       ],
       "internalLinkFixes": [
-        "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
-        "Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).",
-        "Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).",
-        "Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide).",
+        "Use suggested public link: 本地部署大模型怎么开始：新手先看硬件、模型和用途 (/blog/local-llm-deployment-beginner).",
         "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
         "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
       ],
       "manualFixReady": true,
       "publicLinkPlan": [
-        "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
-        "Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).",
-        "Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).",
-        "Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide)."
+        "Use suggested public link: 本地部署大模型怎么开始：新手先看硬件、模型和用途 (/blog/local-llm-deployment-beginner)."
       ],
       "remediationReasons": [
         "broad AI wave item needs human remediation before approval",
-        "missing specific public internal-link suggestion needs human choice",
+        "specific public internal-link suggestion needs human acceptance or rejection",
         "warning remediation needs human sign-off",
         "search-intent wording needs human copy review",
         "source evidence needs human verification"
@@ -318,7 +306,7 @@
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "humanChecklist": [
         "Review reason: broad AI wave item needs human remediation before approval.",
-        "Review reason: missing specific public internal-link suggestion needs human choice.",
+        "Review reason: specific public internal-link suggestion needs human acceptance or rejection.",
         "Review reason: warning remediation needs human sign-off.",
         "Review reason: search-intent wording needs human copy review.",
         "Review reason: source evidence needs human verification.",
@@ -330,23 +318,17 @@
         "Publishing remains a separate explicit approval step."
       ],
       "internalLinkFixes": [
-        "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
-        "Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).",
-        "Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).",
-        "Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide).",
+        "Use suggested public link: OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide).",
         "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
         "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
       ],
       "manualFixReady": true,
       "publicLinkPlan": [
-        "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
-        "Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).",
-        "Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).",
-        "Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide)."
+        "Use suggested public link: OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide)."
       ],
       "remediationReasons": [
         "broad AI wave item needs human remediation before approval",
-        "missing specific public internal-link suggestion needs human choice",
+        "specific public internal-link suggestion needs human acceptance or rejection",
         "warning remediation needs human sign-off",
         "search-intent wording needs human copy review",
         "source evidence needs human verification"
@@ -398,7 +380,7 @@
       "file": "content/blog/vllm-deployment-beginner-guide.mdx",
       "humanChecklist": [
         "Review reason: broad AI wave item needs human remediation before approval.",
-        "Review reason: missing specific public internal-link suggestion needs human choice.",
+        "Review reason: specific public internal-link suggestion needs human acceptance or rejection.",
         "Review reason: warning remediation needs human sign-off.",
         "Review reason: search-intent wording needs human copy review.",
         "Review reason: source evidence needs human verification.",
@@ -410,23 +392,17 @@
         "Publishing remains a separate explicit approval step."
       ],
       "internalLinkFixes": [
-        "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
-        "Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).",
-        "Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).",
-        "Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide).",
+        "Use suggested public link: 本地部署大模型怎么开始：新手先看硬件、模型和用途 (/blog/local-llm-deployment-beginner).",
         "Place the internal link contextually near a setup, deployment, pricing, security, or troubleshooting step.",
         "Do not add a public link if it weakens the article or points to an unrelated beginner topic."
       ],
       "manualFixReady": true,
       "publicLinkPlan": [
-        "No specific public link suggestion exists; human reviewer must choose a relevant published article or explicitly reject public linking for this draft.",
-        "Fallback public link candidate: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 (/blog/ai-agent-deployment-vercel-ai-sdk-guide).",
-        "Fallback public link candidate: Agent 部署怎么做：从聊天助手到可上线工作流 (/blog/agent-deployment-beginner-guide).",
-        "Fallback public link candidate: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide)."
+        "Use suggested public link: 本地部署大模型怎么开始：新手先看硬件、模型和用途 (/blog/local-llm-deployment-beginner)."
       ],
       "remediationReasons": [
         "broad AI wave item needs human remediation before approval",
-        "missing specific public internal-link suggestion needs human choice",
+        "specific public internal-link suggestion needs human acceptance or rejection",
         "warning remediation needs human sign-off",
         "search-intent wording needs human copy review",
         "source evidence needs human verification"

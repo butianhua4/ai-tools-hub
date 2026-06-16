@@ -1,6 +1,6 @@
 # Popular AI Prompt Playbook
 
-Generated at: 2026-06-16T07:01:19.839Z
+Generated at: 2026-06-16T12:27:21.442Z
 
 This report is read-only. It maps broad, commonly searched AI prompt topics to existing candidate drafts, official sources, and human-review prompt templates.
 
@@ -48,10 +48,10 @@ This report is read-only. It maps broad, commonly searched AI prompt topics to e
 - promptModuleBridgeItems: 0
 - promptTemplates: 50
 - publishConfirmCommandsIncluded: 0
-- searchQueries: 143
-- sourceTargets: 25
+- searchQueries: 139
+- sourceTargets: 22
 - trafficDataAvailable: false
-- uniqueCandidateFiles: 20
+- uniqueCandidateFiles: 21
 - unsafeItems: 7
 
 ## Top Lanes
@@ -60,7 +60,7 @@ This report is read-only. It maps broad, commonly searched AI prompt topics to e
 | --- | ---: | ---: | ---: | ---: | --- | --- |
 | true | 10 | 5 | 12 | 51 | ChatGPT 提示词大全和万能公式 | 刚开始用 AI 的普通用户、学生、职场新人和小团队老板 |
 | false | 0 | 5 | 8 | 2 | AI 办公提示词：Word、Excel、PPT、邮件和会议 | 办公室职员、行政、运营、项目经理、创业团队 |
-| true | 1 | 5 | 12 | 2 | Excel 和数据分析 AI 提示词 | 运营、财务助理、电商数据、销售管理和数据分析初学者 |
+| true | 4 | 5 | 12 | 28 | Excel 和数据分析 AI 提示词 | 运营、财务助理、电商数据、销售管理和数据分析初学者 |
 | false | 0 | 5 | 7 | 1 | 小红书、短视频和直播脚本 AI 提示词 | 自媒体、短视频运营、电商主播、本地生活商家 |
 | false | 0 | 5 | 8 | 3 | 电商客服、售后和直播卖货 AI 提示词 | 淘宝、拼多多、抖店、独立站商家和客服团队 |
 | false | 0 | 5 | 8 | 2 | 销售话术、报价和方案书 AI 提示词 | 销售、BD、自由职业者和咨询顾问 |
@@ -134,11 +134,11 @@ Prompt templates:
 - Lane: excel-data-analysis-prompts
 - Ready for human review prep: true
 - Demand reason: 表格分析、数据透视、销售报表、异常值解释属于高频刚需，适合用模板承接搜索。
-- Search queries: Excel AI 提示词; ChatGPT 分析表格数据; AI 数据分析提示词; 销售数据分析 prompt; 财务报表 AI 分析提示词; Excel 透视表 AI 教程; 用 AI 找异常数据; ChatGPT 做数据分析怎么提问; AI 生成图表建议; 运营数据复盘提示词; finance AI prompts; 报表摘要 AI prompt; 预算复盘 AI 提示词; financial analysis prompt; PRD AI prompt; 需求分析 AI 提示词; user story prompt; 产品文档 AI prompt
-- Candidate files: content/blog/together-ai-api-beginner-guide.mdx
+- Search queries: Excel AI 提示词; ChatGPT 分析表格数据; AI 数据分析提示词; 销售数据分析 prompt; 财务报表 AI 分析提示词; Excel 透视表 AI 教程; 用 AI 找异常数据; ChatGPT 做数据分析怎么提问; AI 生成图表建议; 运营数据复盘提示词; RAG knowledge base tutorial; AI agent memory; vector database RAG; enterprise knowledge base AI; RAG 知识库搭建教程; 企业知识库 AI 部署; 向量数据库 RAG 教程; RAG 评测怎么做
+- Candidate files: content/blog/together-ai-api-beginner-guide.mdx; content/blog/vector-database-selection-for-rag-guide.mdx; content/blog/supabase-pgvector-rag-guide.mdx; content/blog/vector-database-beginner-guide.mdx
 - Deployment bridge files: content/blog/together-ai-api-beginner-guide.mdx
 - Prompt module bridge files: none
-- Source targets: https://platform.openai.com/docs/guides/prompt-engineering; https://platform.openai.com/docs/guides/prompting; https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5; https://adoption.microsoft.com/en-us/copilot/prompt-gallery/; https://ai.google.dev/gemini-api/docs/models/generative-models; https://platform.openai.com/docs/guides/prompt-generation; https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview; https://support.google.com/docs/answer/15013615; OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval; LangChain docs: https://python.langchain.com/docs; LlamaIndex docs: https://docs.llamaindex.ai; Hugging Face docs: https://huggingface.co/docs
+- Source targets: https://platform.openai.com/docs/guides/prompt-engineering; https://platform.openai.com/docs/guides/prompting; https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5; https://adoption.microsoft.com/en-us/copilot/prompt-gallery/; https://ai.google.dev/gemini-api/docs/models/generative-models; OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval; LangChain docs: https://python.langchain.com/docs; LlamaIndex docs: https://docs.llamaindex.ai; Hugging Face docs: https://huggingface.co/docs; https://platform.openai.com/docs/guides/prompt-generation; https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview; https://support.google.com/docs/answer/15013615
 - Publish confirm: not-included
 - Stop before: Stop before mark:review and before publish until explicit human approval.
 - Unsafe reasons: none
@@ -279,11 +279,11 @@ Prompt templates:
 - Lane: ai-agent-deploy-prompts
 - Ready for human review prep: false
 - Demand reason: Agent 部署、工具调用、MCP、Vercel AI SDK 是技术增长入口，比单纯网页部署更贴近当前 AI 搜索。
-- Search queries: AI Agent 部署教程; Vercel AI SDK agent deploy; OpenAI Agents SDK 教程; AI Agent 工具调用提示词; MCP Agent 部署; Agent 上线排错 prompt; AI Agent human in the loop; AI Agent API route deploy; Agent 生产环境检查清单; AI Agent 怎么上线; AI app deployment tutorial; OpenAI API deployment; Vercel AI SDK deployment; Claude API Next.js deployment; RAG knowledge base tutorial; AI agent memory; vector database RAG; enterprise knowledge base AI
+- Search queries: AI Agent 部署教程; Vercel AI SDK agent deploy; OpenAI Agents SDK 教程; AI Agent 工具调用提示词; MCP Agent 部署; Agent 上线排错 prompt; AI Agent human in the loop; AI Agent API route deploy; Agent 生产环境检查清单; AI Agent 怎么上线; AI app deployment tutorial; OpenAI API deployment; Vercel AI SDK deployment; Claude API Next.js deployment; 大模型部署教程; AI 应用部署教程; OpenAI API 部署教程; Vercel AI SDK 部署
 - Candidate files: content/blog/vercel-ai-gateway-multi-provider-guide.mdx; content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx; content/blog/vllm-deployment-beginner-guide.mdx; content/blog/vercel-deploy-checklist-template.mdx; content/blog/vercel-deploy-checklist-template-checklist.mdx; content/blog/vercel-vs-netlify-small-site.mdx; content/blog/vercel-vs-netlify-small-site-checklist.mdx; content/blog/vercel-404-after-deploy.mdx; content/blog/together-ai-api-beginner-guide.mdx; content/blog/vector-database-selection-for-rag-guide.mdx
 - Deployment bridge files: content/blog/vercel-ai-gateway-multi-provider-guide.mdx; content/blog/together-ai-api-beginner-guide.mdx; content/blog/vercel-404-after-deploy.mdx; content/blog/windows-path-permission-install-fix.mdx; content/blog/tensorrt-llm-beginner-guide.mdx; content/blog/vercel-build-failed-causes-checklist.mdx
 - Prompt module bridge files: none
-- Source targets: https://vercel.com/docs/agents; https://platform.openai.com/docs/guides/agents-sdk; https://platform.openai.com/docs/guides/prompt-generation; https://platform.openai.com/docs/guides/prompt-engineering; https://docs.langchain.com/oss/python/deepagents/long-term-memory; OpenAI API docs: https://platform.openai.com/docs; Vercel AI SDK docs: https://ai-sdk.dev/docs; Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview; OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval; LangChain docs: https://python.langchain.com/docs; LlamaIndex docs: https://docs.llamaindex.ai; OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
+- Source targets: https://vercel.com/docs/agents; https://platform.openai.com/docs/guides/agents-sdk; https://platform.openai.com/docs/guides/prompt-generation; https://platform.openai.com/docs/guides/prompt-engineering; https://docs.langchain.com/oss/python/deepagents/long-term-memory; OpenAI API docs: https://platform.openai.com/docs; Vercel AI SDK docs: https://ai-sdk.dev/docs; Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview; Anthropic docs: https://docs.anthropic.com; OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval; LangChain docs: https://python.langchain.com/docs; LlamaIndex docs: https://docs.llamaindex.ai
 - Publish confirm: not-included
 - Stop before: Stop before mark:review and before publish until explicit human approval.
 - Unsafe reasons: no candidate files attached
@@ -308,11 +308,11 @@ Prompt templates:
 - Lane: llm-deployment-troubleshooting-prompts
 - Ready for human review prep: true
 - Demand reason: 大模型部署、API 报错、推理延迟、环境变量和日志排错会带来技术流量，且能和工具服务转化相连。
-- Search queries: 大模型部署教程; LLM API 报错排查; OpenAI API error prompt; AI 应用部署失败怎么办; 大模型推理服务排错; AI 环境变量配置教程; Vercel AI 应用部署错误; LLM 延迟优化检查清单; 模型 API 日志分析提示词; AI 项目上线 smoke test; AI app deployment tutorial; OpenAI API deployment; Vercel AI SDK deployment; Claude API Next.js deployment; local LLM deployment; Ollama local model tutorial; Open WebUI deployment; local AI model GPU memory
-- Candidate files: content/blog/vercel-ai-gateway-multi-provider-guide.mdx; content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx; content/blog/vllm-deployment-beginner-guide.mdx; content/blog/vercel-deploy-checklist-template.mdx; content/blog/vercel-deploy-checklist-template-checklist.mdx; content/blog/vercel-vs-netlify-small-site.mdx; content/blog/vercel-vs-netlify-small-site-checklist.mdx; content/blog/vercel-404-after-deploy.mdx; content/blog/tensorrt-llm-beginner-guide.mdx; content/blog/together-ai-api-beginner-guide.mdx
+- Search queries: 大模型部署教程; LLM API 报错排查; OpenAI API error prompt; AI 应用部署失败怎么办; 大模型推理服务排错; AI 环境变量配置教程; Vercel AI 应用部署错误; LLM 延迟优化检查清单; 模型 API 日志分析提示词; AI 项目上线 smoke test; AI app deployment tutorial; OpenAI API deployment; Vercel AI SDK deployment; Claude API Next.js deployment; AI 应用部署教程; OpenAI API 部署教程; Vercel AI SDK 部署; Vercel build failed
+- Candidate files: content/blog/vercel-ai-gateway-multi-provider-guide.mdx; content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx; content/blog/vllm-deployment-beginner-guide.mdx; content/blog/vercel-deploy-checklist-template.mdx; content/blog/vercel-deploy-checklist-template-checklist.mdx; content/blog/vercel-vs-netlify-small-site.mdx; content/blog/vercel-vs-netlify-small-site-checklist.mdx; content/blog/vercel-404-after-deploy.mdx; content/blog/together-ai-api-beginner-guide.mdx; content/blog/vector-database-selection-for-rag-guide.mdx
 - Deployment bridge files: content/blog/vercel-ai-gateway-multi-provider-guide.mdx; content/blog/together-ai-api-beginner-guide.mdx; content/blog/vercel-404-after-deploy.mdx; content/blog/windows-path-permission-install-fix.mdx; content/blog/tensorrt-llm-beginner-guide.mdx; content/blog/vercel-build-failed-causes-checklist.mdx
 - Prompt module bridge files: none
-- Source targets: https://platform.openai.com/docs/guides/prompt-engineering; https://vercel.com/docs/agents; https://platform.openai.com/docs/guides/agents-sdk; https://openai.github.io/openai-agents-js/guides/sandbox-agents/memory/; https://docs.langchain.com/oss/python/deepagents/long-term-memory; OpenAI API docs: https://platform.openai.com/docs; Vercel AI SDK docs: https://ai-sdk.dev/docs; Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview; Ollama docs: https://docs.ollama.com; Hugging Face docs: https://huggingface.co/docs; vLLM docs: https://docs.vllm.ai; Anthropic docs: https://docs.anthropic.com
+- Source targets: https://platform.openai.com/docs/guides/prompt-engineering; https://vercel.com/docs/agents; https://platform.openai.com/docs/guides/agents-sdk; https://openai.github.io/openai-agents-js/guides/sandbox-agents/memory/; https://docs.langchain.com/oss/python/deepagents/long-term-memory; OpenAI API docs: https://platform.openai.com/docs; Vercel AI SDK docs: https://ai-sdk.dev/docs; Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview; Anthropic docs: https://docs.anthropic.com; OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval; LangChain docs: https://python.langchain.com/docs; LlamaIndex docs: https://docs.llamaindex.ai
 - Publish confirm: not-included
 - Stop before: Stop before mark:review and before publish until explicit human approval.
 - Unsafe reasons: none
@@ -337,11 +337,11 @@ Prompt templates:
 - Lane: agent-memory-knowledge-base-prompts
 - Ready for human review prep: false
 - Demand reason: 记忆、知识库、RAG、长期上下文是用户已经明确要求扩展的板块，且 2026 年 Agent 资料持续更新。
-- Search queries: AI Agent 记忆怎么做; Agent memory prompt; RAG 知识库提示词; LangChain long term memory; OpenAI Agents SDK memory; AI 客服知识库 prompt; AI 助理长期记忆教程; 知识库问答提示词; Agent 记忆安全检查; AI memory retention policy; AI app deployment tutorial; OpenAI API deployment; Vercel AI SDK deployment; Claude API Next.js deployment; RAG knowledge base tutorial; AI agent memory; vector database RAG; enterprise knowledge base AI
+- Search queries: AI Agent 记忆怎么做; Agent memory prompt; RAG 知识库提示词; LangChain long term memory; OpenAI Agents SDK memory; AI 客服知识库 prompt; AI 助理长期记忆教程; 知识库问答提示词; Agent 记忆安全检查; AI memory retention policy; AI app deployment tutorial; OpenAI API deployment; Vercel AI SDK deployment; Claude API Next.js deployment; 大模型部署教程; AI 应用部署教程; OpenAI API 部署教程; Vercel AI SDK 部署
 - Candidate files: content/blog/vercel-ai-gateway-multi-provider-guide.mdx; content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx; content/blog/vllm-deployment-beginner-guide.mdx; content/blog/vercel-deploy-checklist-template.mdx; content/blog/vercel-deploy-checklist-template-checklist.mdx; content/blog/vercel-vs-netlify-small-site.mdx; content/blog/vercel-vs-netlify-small-site-checklist.mdx; content/blog/vercel-404-after-deploy.mdx; content/blog/together-ai-api-beginner-guide.mdx; content/blog/vector-database-selection-for-rag-guide.mdx
 - Deployment bridge files: content/blog/together-ai-api-beginner-guide.mdx; content/blog/windows-path-permission-install-fix.mdx; content/blog/vercel-build-failed-causes-checklist.mdx
 - Prompt module bridge files: none
-- Source targets: https://openai.github.io/openai-agents-js/guides/sandbox-agents/memory/; https://docs.langchain.com/oss/python/deepagents/long-term-memory; https://platform.openai.com/docs/guides/agents-sdk; https://platform.openai.com/docs/guides/prompt-engineering; https://platform.openai.com/docs/guides/prompt-generation; OpenAI API docs: https://platform.openai.com/docs; Vercel AI SDK docs: https://ai-sdk.dev/docs; Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview; OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval; LangChain docs: https://python.langchain.com/docs; LlamaIndex docs: https://docs.llamaindex.ai; OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering
+- Source targets: https://openai.github.io/openai-agents-js/guides/sandbox-agents/memory/; https://docs.langchain.com/oss/python/deepagents/long-term-memory; https://platform.openai.com/docs/guides/agents-sdk; https://platform.openai.com/docs/guides/prompt-engineering; https://platform.openai.com/docs/guides/prompt-generation; OpenAI API docs: https://platform.openai.com/docs; Vercel AI SDK docs: https://ai-sdk.dev/docs; Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview; Anthropic docs: https://docs.anthropic.com; OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval; LangChain docs: https://python.langchain.com/docs; LlamaIndex docs: https://docs.llamaindex.ai
 - Publish confirm: not-included
 - Stop before: Stop before mark:review and before publish until explicit human approval.
 - Unsafe reasons: no candidate files attached; no candidate files attached

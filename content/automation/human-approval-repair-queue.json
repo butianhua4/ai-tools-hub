@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:37.051Z",
+  "generatedAt": "2026-06-16T12:27:37.966Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -27,23 +27,23 @@
     "blockerFiles": 0,
     "blockerTasks": 0,
     "filesWithTasks": 3,
-    "humanGatedTasks": 56,
+    "humanGatedTasks": 55,
     "minimumPathFiles": 3,
     "minimumPathTasks": 16,
     "publishConfirmCommandsIncluded": 0,
     "repairBeforeReviewItems": 1,
-    "tasks": 56,
+    "tasks": 55,
     "tasksByCategory": {
       "source-url": 15,
       "source-review": 3,
       "search-intent": 20,
-      "internal-link": 14,
+      "internal-link": 13,
       "copydesk": 1,
       "approval-boundary": 3
     },
     "tasksBySeverity": {
       "high": 18,
-      "medium": 38
+      "medium": 37
     },
     "trafficDataAvailable": false,
     "unsafeItems": 0
@@ -154,12 +154,12 @@
           "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-11"
         },
         {
-          "action": "Add one contextual public article link during human review.",
+          "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
           "category": "internal-link",
           "priority": 667,
           "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
           "severity": "medium",
-          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-16"
+          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-17"
         },
         {
           "action": "Publishing remains a separate explicit approval step.",
@@ -167,7 +167,7 @@
           "priority": 567,
           "proofRequired": "Draft remains status=draft, noindex=true, humanReviewRequired=true until explicit approval.",
           "severity": "medium",
-          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-20"
+          "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-19"
         }
       ],
       "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界"
@@ -211,12 +211,12 @@
           "taskId": "VERCEL-404-AFTER-DEPLOY-09"
         },
         {
-          "action": "Add one contextual public article link during human review.",
+          "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
           "category": "internal-link",
           "priority": 637,
           "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
           "severity": "medium",
-          "taskId": "VERCEL-404-AFTER-DEPLOY-14"
+          "taskId": "VERCEL-404-AFTER-DEPLOY-16"
         },
         {
           "action": "Publishing remains a separate explicit approval step.",
@@ -777,11 +777,11 @@
       "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-14"
     },
     {
-      "action": "Add at least one contextual link to a currently published article before approval.",
+      "action": "Suggested public link: OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai.",
       "autoEditable": false,
       "category": "internal-link",
       "commandBoundary": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-      "evidence": "5 internal-link fixes in remediation pack",
+      "evidence": "7 internal-link fixes in remediation pack",
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "humanGate": true,
       "lane": "ai-deployment",
@@ -794,11 +794,11 @@
       "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-15"
     },
     {
-      "action": "Add one contextual public article link during human review.",
+      "action": "Suggested public link: Groq API 怎么接入：高速推理适合什么 AI 应用 (/blog/groq-api-fast-llm-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai.",
       "autoEditable": false,
       "category": "internal-link",
       "commandBoundary": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-      "evidence": "5 internal-link fixes in remediation pack",
+      "evidence": "7 internal-link fixes in remediation pack",
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "humanGate": true,
       "lane": "ai-deployment",
@@ -811,11 +811,11 @@
       "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-16"
     },
     {
-      "action": "Review reason: approval candidate has no current link to a published article.",
+      "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
       "autoEditable": false,
       "category": "internal-link",
       "commandBoundary": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-      "evidence": "5 internal-link fixes in remediation pack",
+      "evidence": "7 internal-link fixes in remediation pack",
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "humanGate": true,
       "lane": "ai-deployment",
@@ -828,11 +828,11 @@
       "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-17"
     },
     {
-      "action": "Apply or explicitly reject the internal-link suggestion before mark:review.",
+      "action": "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
       "autoEditable": false,
       "category": "internal-link",
       "commandBoundary": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-      "evidence": "5 internal-link fixes in remediation pack",
+      "evidence": "7 internal-link fixes in remediation pack",
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "humanGate": true,
       "lane": "ai-deployment",
@@ -845,28 +845,11 @@
       "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-18"
     },
     {
-      "action": "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-      "autoEditable": false,
-      "category": "internal-link",
-      "commandBoundary": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-      "evidence": "5 internal-link fixes in remediation pack",
-      "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "humanGate": true,
-      "lane": "ai-deployment",
-      "nextDecision": "defer",
-      "priority": 667,
-      "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
-      "publishConfirm": "not-included",
-      "severity": "medium",
-      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-      "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-19"
-    },
-    {
       "action": "Publishing remains a separate explicit approval step.",
       "autoEditable": false,
       "category": "approval-boundary",
       "commandBoundary": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-      "evidence": "3 remediation reasons in approval pack",
+      "evidence": "2 remediation reasons in approval pack",
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "humanGate": true,
       "lane": "ai-deployment",
@@ -876,7 +859,7 @@
       "publishConfirm": "not-included",
       "severity": "medium",
       "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-      "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-20"
+      "taskId": "TOGETHER-AI-API-BEGINNER-GUIDE-19"
     },
     {
       "action": "Confirm source redirect before approval: https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction.",
@@ -1087,7 +1070,7 @@
       "autoEditable": false,
       "category": "internal-link",
       "commandBoundary": "npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human",
-      "evidence": "5 internal-link fixes in remediation pack",
+      "evidence": "8 internal-link fixes in remediation pack",
       "file": "content/blog/vercel-404-after-deploy.mdx",
       "humanGate": true,
       "lane": "ai-deployment",
@@ -1100,11 +1083,11 @@
       "taskId": "VERCEL-404-AFTER-DEPLOY-13"
     },
     {
-      "action": "Add one contextual public article link during human review.",
+      "action": "Suggested public link: Next.js hydration error 怎么排查：使用前怎么判断是否适合 (/blog/nextjs-hydration-error-debug-freelance-scope) - same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, next, js.",
       "autoEditable": false,
       "category": "internal-link",
       "commandBoundary": "npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human",
-      "evidence": "5 internal-link fixes in remediation pack",
+      "evidence": "8 internal-link fixes in remediation pack",
       "file": "content/blog/vercel-404-after-deploy.mdx",
       "humanGate": true,
       "lane": "ai-deployment",
@@ -1121,7 +1104,7 @@
       "autoEditable": false,
       "category": "internal-link",
       "commandBoundary": "npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human",
-      "evidence": "5 internal-link fixes in remediation pack",
+      "evidence": "8 internal-link fixes in remediation pack",
       "file": "content/blog/vercel-404-after-deploy.mdx",
       "humanGate": true,
       "lane": "ai-deployment",
@@ -1138,7 +1121,7 @@
       "autoEditable": false,
       "category": "internal-link",
       "commandBoundary": "npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human",
-      "evidence": "5 internal-link fixes in remediation pack",
+      "evidence": "8 internal-link fixes in remediation pack",
       "file": "content/blog/vercel-404-after-deploy.mdx",
       "humanGate": true,
       "lane": "ai-deployment",
@@ -1155,7 +1138,7 @@
       "autoEditable": false,
       "category": "internal-link",
       "commandBoundary": "npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human",
-      "evidence": "5 internal-link fixes in remediation pack",
+      "evidence": "8 internal-link fixes in remediation pack",
       "file": "content/blog/vercel-404-after-deploy.mdx",
       "humanGate": true,
       "lane": "ai-deployment",

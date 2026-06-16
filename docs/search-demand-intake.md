@@ -1,6 +1,6 @@
 # Search Demand Intake
 
-Generated at: 2026-06-16T07:01:14.231Z
+Generated at: 2026-06-16T12:27:15.853Z
 
 This report is read-only. It turns broad user search behavior into review lanes for AI prompts, LLM deployment, Agent deployment, memory, RAG, no-code automation, API operations, observability, and AI service packaging.
 
@@ -22,7 +22,7 @@ This report is read-only. It turns broad user search behavior into review lanes 
 - lanesWithReadyCandidates: 7
 - officialSourceTargets: 29
 - readyCandidateFiles: 24
-- reviewQueueMatches: 0
+- reviewQueueMatches: 10
 - searchQueries: 81
 - unsafeLanes: 1
 
@@ -42,13 +42,13 @@ This report is read-only. It turns broad user search behavior into review lanes 
 | Score | Public | Drafts | Ready | Queue | Queries | Sources | Lane | User problem |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 320 | 58 | 15 | 8 | 0 | 12 | 4 | cross-industry-ai-prompts | People search for ready-to-use AI prompts by role, but useful articles need workflow context and review boundaries. |
-| 272 | 170 | 66 | 8 | 0 | 10 | 4 | ai-service-pricing-delivery | This lane turns search demand into services without pretending the site already has traffic or revenue proof. |
-| 268 | 43 | 4 | 4 | 0 | 10 | 4 | agent-deployment-tools-mcp | People want agents to act, but production content must start with permissions, tools, logs, and human gates. |
-| 264 | 30 | 4 | 4 | 0 | 10 | 4 | rag-knowledge-base-agent-memory | Searchers mix RAG, vector databases, and memory, so content needs clear boundaries and safety controls. |
-| 252 | 41 | 2 | 2 | 0 | 10 | 4 | llm-deployment-and-serving | Searchers want a model running, then need API access, cost control, and failure handling. |
-| 224 | 96 | 2 | 2 | 0 | 10 | 4 | ai-api-keys-limits-routing | API integration is a beginner search lane and a production risk lane at the same time. |
+| 288 | 30 | 4 | 4 | 3 | 10 | 4 | rag-knowledge-base-agent-memory | Searchers mix RAG, vector databases, and memory, so content needs clear boundaries and safety controls. |
+| 288 | 170 | 66 | 8 | 2 | 10 | 4 | ai-service-pricing-delivery | This lane turns search demand into services without pretending the site already has traffic or revenue proof. |
+| 276 | 43 | 4 | 4 | 1 | 10 | 4 | agent-deployment-tools-mcp | People want agents to act, but production content must start with permissions, tools, logs, and human gates. |
+| 260 | 41 | 2 | 2 | 1 | 10 | 4 | llm-deployment-and-serving | Searchers want a model running, then need API access, cost control, and failure handling. |
+| 240 | 96 | 2 | 2 | 2 | 10 | 4 | ai-api-keys-limits-routing | API integration is a beginner search lane and a production risk lane at the same time. |
+| 214 | 13 | 1 | 1 | 1 | 10 | 4 | llm-evals-observability-security | As content moves past deployment, searchers need quality, logs, evals, and security operations. |
 | 212 | 30 | 0 | 0 | 0 | 10 | 4 | nocode-ai-automation-deployment | This lane connects search traffic to services people can buy: automation setup, deployment, acceptance, and maintenance. |
-| 206 | 13 | 1 | 1 | 0 | 10 | 4 | llm-evals-observability-security | As content moves past deployment, searchers need quality, logs, evals, and security operations. |
 
 ## cross-industry-ai-prompts
 
@@ -108,14 +108,66 @@ Ready candidates:
 | 20 | 100 | informational | 网站修改需求确认模板怎么用：新手检查清单 | 网站修改需求确认模板怎么用：新手检查清单 | content/blog/website-edit-scope-template-checklist.mdx |
 | 20 | 100 | informational | 网站修改需求确认模板怎么用 | 网站修改需求确认模板怎么用 | content/blog/website-edit-scope-template.mdx |
 
+## rag-knowledge-base-agent-memory
+
+- Audience: Teams building support bots, internal assistants, project memory, and document Q&A systems.
+- User problem: Searchers mix RAG, vector databases, and memory, so content needs clear boundaries and safety controls.
+- Intake score: 288
+- Public matches: 30
+- Draft matches: 4
+- Review queue matches: 3
+
+Search queries:
+
+- RAG knowledge base tutorial
+- AI agent memory
+- agent long term memory
+- pgvector agent memory
+- vector database RAG
+- RAG evaluation tutorial
+- AI Agent 记忆怎么做
+- RAG 知识库搭建教程
+- 向量数据库 教程
+- 智能体 长期记忆
+
+Content formats:
+
+- RAG architecture guide
+- memory schema checklist
+- pgvector tutorial
+- privacy and deletion checklist
+
+Manual review focus:
+
+- Separate knowledge-base RAG from user memory.
+- Require citations, deletion, dedupe, retention, and privacy boundaries.
+- Do not present vector search as durable memory by itself.
+- Add evaluation steps for retrieval misses and hallucinated citations.
+
+Official source targets:
+
+- OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
+- LangChain retrieval docs: https://python.langchain.com/docs/concepts/retrieval/
+- LlamaIndex docs: https://docs.llamaindex.ai/
+- Supabase pgvector docs: https://supabase.com/docs/guides/database/extensions/pgvector
+
+Ready candidates:
+
+| Batch | Score | Intent | Keyword | Title | File |
+| --- | --- | --- | --- | --- | --- |
+| 27 | 100 | informational | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 25 | 100 | informational | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 24 | 100 | informational | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 21 | 100 | informational | 向量数据库 | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
+
 ## ai-service-pricing-delivery
 
 - Audience: Freelancers and service sellers packaging AI deployment, agents, RAG, and automation for clients.
 - User problem: This lane turns search demand into services without pretending the site already has traffic or revenue proof.
-- Intake score: 272
+- Intake score: 288
 - Public matches: 170
 - Draft matches: 66
-- Review queue matches: 0
+- Review queue matches: 2
 
 Search queries:
 
@@ -168,10 +220,10 @@ Ready candidates:
 
 - Audience: Builders moving from chatbot demos to agents that call tools, hand off work, and run in production.
 - User problem: People want agents to act, but production content must start with permissions, tools, logs, and human gates.
-- Intake score: 268
+- Intake score: 276
 - Public matches: 43
 - Draft matches: 4
-- Review queue matches: 0
+- Review queue matches: 1
 
 Search queries:
 
@@ -216,66 +268,14 @@ Ready candidates:
 | 15 | 100 | informational | Windows 路径和权限导致安装失败怎么办：常见错误和解决步骤 | Windows 路径和权限导致安装失败怎么办：常见错误和解决步骤 | content/blog/windows-path-permission-install-fix-mistakes.mdx |
 | 15 | 100 | informational | Windows 路径和权限导致安装失败怎么办 | Windows 路径和权限导致安装失败怎么办 | content/blog/windows-path-permission-install-fix.mdx |
 
-## rag-knowledge-base-agent-memory
-
-- Audience: Teams building support bots, internal assistants, project memory, and document Q&A systems.
-- User problem: Searchers mix RAG, vector databases, and memory, so content needs clear boundaries and safety controls.
-- Intake score: 264
-- Public matches: 30
-- Draft matches: 4
-- Review queue matches: 0
-
-Search queries:
-
-- RAG knowledge base tutorial
-- AI agent memory
-- agent long term memory
-- pgvector agent memory
-- vector database RAG
-- RAG evaluation tutorial
-- AI Agent 记忆怎么做
-- RAG 知识库搭建教程
-- 向量数据库 教程
-- 智能体 长期记忆
-
-Content formats:
-
-- RAG architecture guide
-- memory schema checklist
-- pgvector tutorial
-- privacy and deletion checklist
-
-Manual review focus:
-
-- Separate knowledge-base RAG from user memory.
-- Require citations, deletion, dedupe, retention, and privacy boundaries.
-- Do not present vector search as durable memory by itself.
-- Add evaluation steps for retrieval misses and hallucinated citations.
-
-Official source targets:
-
-- OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
-- LangChain retrieval docs: https://python.langchain.com/docs/concepts/retrieval/
-- LlamaIndex docs: https://docs.llamaindex.ai/
-- Supabase pgvector docs: https://supabase.com/docs/guides/database/extensions/pgvector
-
-Ready candidates:
-
-| Batch | Score | Intent | Keyword | Title | File |
-| --- | --- | --- | --- | --- | --- |
-| 27 | 100 | informational | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| 25 | 100 | informational | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
-| 24 | 100 | informational | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
-| 21 | 100 | informational | 向量数据库 | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
-
 ## llm-deployment-and-serving
 
 - Audience: Developers and small teams trying to deploy large models locally, on GPUs, or behind an API.
 - User problem: Searchers want a model running, then need API access, cost control, and failure handling.
-- Intake score: 252
+- Intake score: 260
 - Public matches: 41
 - Draft matches: 2
-- Review queue matches: 0
+- Review queue matches: 1
 
 Search queries:
 
@@ -322,10 +322,10 @@ Ready candidates:
 
 - Audience: Developers wiring OpenAI, Claude, Gemini, OpenRouter, or multi-model routing into apps.
 - User problem: API integration is a beginner search lane and a production risk lane at the same time.
-- Intake score: 224
+- Intake score: 240
 - Public matches: 96
 - Draft matches: 2
-- Review queue matches: 0
+- Review queue matches: 2
 
 Search queries:
 
@@ -367,6 +367,55 @@ Ready candidates:
 | --- | --- | --- | --- | --- | --- |
 | 34 | 100 | informational | Vercel AI Gateway 多模型 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 | 27 | 100 | informational | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+
+## llm-evals-observability-security
+
+- Audience: Teams shipping AI apps and needing to know whether outputs are reliable, safe, and affordable.
+- User problem: As content moves past deployment, searchers need quality, logs, evals, and security operations.
+- Intake score: 214
+- Public matches: 13
+- Draft matches: 1
+- Review queue matches: 1
+
+Search queries:
+
+- LLM observability tutorial
+- RAG evaluation tutorial
+- AI agent logs
+- prompt injection defense
+- promptfoo tutorial
+- LangSmith tutorial
+- LLM 评测教程
+- RAG 评估教程
+- AI 应用日志监控
+- 提示词注入防护
+
+Content formats:
+
+- observability guide
+- evaluation checklist
+- RAG test plan
+- incident review template
+
+Manual review focus:
+
+- Separate evaluation scores from guarantees.
+- Include test datasets, traces, logs, cost, latency, and privacy limits.
+- Cover prompt injection and retrieval failures for RAG/agent systems.
+- Add human sampling and rollback criteria.
+
+Official source targets:
+
+- OpenAI evals guide: https://platform.openai.com/docs/guides/evals
+- promptfoo docs: https://www.promptfoo.dev/docs/intro/
+- Ragas docs: https://docs.ragas.io/
+- LangSmith docs: https://docs.smith.langchain.com/
+
+Ready candidates:
+
+| Batch | Score | Intent | Keyword | Title | File |
+| --- | --- | --- | --- | --- | --- |
+| 13 | 100 | informational | Vercel build failed 排查清单 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
 
 ## nocode-ai-automation-deployment
 
@@ -414,52 +463,3 @@ Official source targets:
 Ready candidates:
 
 - none
-
-## llm-evals-observability-security
-
-- Audience: Teams shipping AI apps and needing to know whether outputs are reliable, safe, and affordable.
-- User problem: As content moves past deployment, searchers need quality, logs, evals, and security operations.
-- Intake score: 206
-- Public matches: 13
-- Draft matches: 1
-- Review queue matches: 0
-
-Search queries:
-
-- LLM observability tutorial
-- RAG evaluation tutorial
-- AI agent logs
-- prompt injection defense
-- promptfoo tutorial
-- LangSmith tutorial
-- LLM 评测教程
-- RAG 评估教程
-- AI 应用日志监控
-- 提示词注入防护
-
-Content formats:
-
-- observability guide
-- evaluation checklist
-- RAG test plan
-- incident review template
-
-Manual review focus:
-
-- Separate evaluation scores from guarantees.
-- Include test datasets, traces, logs, cost, latency, and privacy limits.
-- Cover prompt injection and retrieval failures for RAG/agent systems.
-- Add human sampling and rollback criteria.
-
-Official source targets:
-
-- OpenAI evals guide: https://platform.openai.com/docs/guides/evals
-- promptfoo docs: https://www.promptfoo.dev/docs/intro/
-- Ragas docs: https://docs.ragas.io/
-- LangSmith docs: https://docs.smith.langchain.com/
-
-Ready candidates:
-
-| Batch | Score | Intent | Keyword | Title | File |
-| --- | --- | --- | --- | --- | --- |
-| 13 | 100 | informational | Vercel build failed 排查清单 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |

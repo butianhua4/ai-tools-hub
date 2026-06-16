@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:44.583Z",
+  "generatedAt": "2026-06-16T12:27:45.319Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,30 +9,30 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "firstCoverageGeneratedAt": "2026-06-16T07:01:44.089Z",
+    "firstCoverageGeneratedAt": "2026-06-16T12:27:44.838Z",
     "firstCoverageSummary": {
       "blockingItems": 0,
-      "commandBoundaries": 4,
-      "firstCoverageItems": 4,
-      "freshnessReadyItems": 4,
-      "integrityReadyItems": 4,
-      "itemsWithPublicLinkPath": 1,
-      "launchPackItems": 4,
-      "preflightReadyItems": 0,
-      "queryReadyItems": 4,
-      "schemaReadyItems": 4,
-      "snippetReadyItems": 4,
-      "sourceReadyItems": 3,
-      "trafficDataAvailable": false,
-      "uniqueFiles": 4,
-      "unsafeItems": 0,
-      "warningItems": 4,
-      "zeroPublicClusters": 8
-    },
-    "massAiSearchMatrixGeneratedAt": "2026-06-16T07:01:16.524Z",
-    "massAiSearchMatrixSummary": {
       "commandBoundaries": 0,
-      "deploymentBridgedThemes": 0,
+      "firstCoverageItems": 0,
+      "freshnessReadyItems": 0,
+      "integrityReadyItems": 0,
+      "itemsWithPublicLinkPath": 0,
+      "launchPackItems": 0,
+      "preflightReadyItems": 0,
+      "queryReadyItems": 0,
+      "schemaReadyItems": 0,
+      "snippetReadyItems": 0,
+      "sourceReadyItems": 0,
+      "trafficDataAvailable": false,
+      "uniqueFiles": 0,
+      "unsafeItems": 0,
+      "warningItems": 0,
+      "zeroPublicClusters": 0
+    },
+    "massAiSearchMatrixGeneratedAt": "2026-06-16T12:27:18.113Z",
+    "massAiSearchMatrixSummary": {
+      "commandBoundaries": 5,
+      "deploymentBridgedThemes": 4,
       "humanGatedItems": 8,
       "items": 8,
       "itemsReadyForHumanReviewPrep": 6,
@@ -50,7 +50,7 @@
       "unsafeItems": 2,
       "waves": 3
     },
-    "popularAiPromptPlaybookGeneratedAt": "2026-06-16T07:01:19.839Z",
+    "popularAiPromptPlaybookGeneratedAt": "2026-06-16T12:27:21.442Z",
     "popularAiPromptPlaybookSummary": {
       "agentDeploymentLanes": 3,
       "broadWorkPromptLanes": 3,
@@ -66,53 +66,53 @@
       "promptModuleBridgeItems": 0,
       "promptTemplates": 50,
       "publishConfirmCommandsIncluded": 0,
-      "searchQueries": 143,
-      "sourceTargets": 25,
+      "searchQueries": 139,
+      "sourceTargets": 22,
       "trafficDataAvailable": false,
-      "uniqueCandidateFiles": 20,
+      "uniqueCandidateFiles": 21,
       "unsafeItems": 7
     },
-    "seoWarningGeneratedAt": "2026-06-16T07:01:05.115Z",
+    "seoWarningGeneratedAt": "2026-06-16T12:27:06.835Z",
     "seoWarningSummary": {
       "blockingItems": 0,
-      "draftItems": 1,
-      "humanGatedItems": 256,
-      "items": 256,
-      "itemsWithHumanChecklist": 256,
-      "itemsWithManualActions": 256,
+      "draftItems": 5,
+      "humanGatedItems": 260,
+      "items": 260,
+      "itemsWithHumanChecklist": 260,
+      "itemsWithManualActions": 260,
       "publicItems": 255,
       "recommendedItems": 1,
       "schemaWarningItems": 92,
-      "snippetWarningItems": 200,
+      "snippetWarningItems": 204,
       "trafficDataAvailable": false,
       "unsafeItems": 0,
-      "warningItems": 256,
+      "warningItems": 260,
       "waveItems": 1
     },
-    "sourceReplacementGeneratedAt": "2026-06-16T07:01:25.760Z",
+    "sourceReplacementGeneratedAt": "2026-06-16T12:27:26.883Z",
     "sourceReplacementSummary": {
-      "affectedFiles": 23,
-      "failedDecisionItems": 1,
-      "humanGatedItems": 110,
-      "items": 110,
-      "itemsWithDecisionOptions": 110,
-      "itemsWithManualChecklist": 110,
-      "itemsWithRecommendedCandidate": 1,
-      "officialRecommendedCandidates": 1,
-      "redirectedDecisionItems": 109,
-      "replacementCandidateOptions": 8,
-      "sourceRemediationItems": 18,
+      "affectedFiles": 16,
+      "failedDecisionItems": 0,
+      "humanGatedItems": 71,
+      "items": 71,
+      "itemsWithDecisionOptions": 71,
+      "itemsWithManualChecklist": 71,
+      "itemsWithRecommendedCandidate": 0,
+      "officialRecommendedCandidates": 0,
+      "redirectedDecisionItems": 71,
+      "replacementCandidateOptions": 0,
+      "sourceRemediationItems": 10,
       "sourceRemediationUnsafeItems": 0,
       "unsafeItems": 0
     },
-    "waveApprovalGeneratedAt": "2026-06-16T07:01:11.477Z",
+    "waveApprovalGeneratedAt": "2026-06-16T12:27:13.153Z",
     "waveApprovalSummary": {
       "items": 3,
       "readyForHumanReview": 3,
       "unsafeItems": 0,
       "wave": 1
     },
-    "wavePublishSimulationGeneratedAt": "2026-06-16T07:01:27.689Z",
+    "wavePublishSimulationGeneratedAt": "2026-06-16T12:27:28.776Z",
     "wavePublishSimulationSummary": {
       "currentlyPublishable": 0,
       "items": 3,
@@ -132,18 +132,18 @@
     "publishConfirmCommandsIncluded": 0
   },
   "summary": {
-    "backlogItems": 3,
-    "commandBoundaries": 6,
-    "humanGatedItems": 6,
+    "backlogItems": 0,
+    "commandBoundaries": 3,
+    "humanGatedItems": 3,
     "immediateApprovalItems": 3,
     "immediateApprovalReadyItems": 3,
-    "items": 6,
-    "itemsReadyForHumanApproval": 6,
+    "items": 3,
+    "itemsReadyForHumanApproval": 3,
     "itemsWithFailedSourceDecision": 0,
-    "itemsWithMassSearchTheme": 5,
-    "itemsWithPopularPromptLane": 4,
+    "itemsWithMassSearchTheme": 3,
+    "itemsWithPopularPromptLane": 3,
     "itemsWithSeoWarnings": 1,
-    "itemsWithSourceReplacementDecisions": 5,
+    "itemsWithSourceReplacementDecisions": 3,
     "publishConfirmCommandsIncluded": 0,
     "trafficDataAvailable": false,
     "unsafeItems": 0
@@ -202,7 +202,20 @@
           "wave": 1
         }
       ],
-      "popularPromptLanes": [],
+      "popularPromptLanes": [
+        {
+          "laneId": "excel-data-analysis-prompts",
+          "queries": 18,
+          "templates": 5,
+          "title": "Excel 和数据分析 AI 提示词"
+        },
+        {
+          "laneId": "llm-deployment-troubleshooting-prompts",
+          "queries": 18,
+          "templates": 5,
+          "title": "大模型部署、本地模型和 API 排错提示词"
+        }
+      ],
       "priorityScore": 446,
       "projectedPublishableAfterHumanApproval": true,
       "publicImpact": "Immediate Wave 1; projected public count after human approval is 503.",
@@ -423,7 +436,14 @@
           "wave": 1
         }
       ],
-      "popularPromptLanes": [],
+      "popularPromptLanes": [
+        {
+          "laneId": "excel-data-analysis-prompts",
+          "queries": 18,
+          "templates": 5,
+          "title": "Excel 和数据分析 AI 提示词"
+        }
+      ],
       "priorityScore": 415,
       "projectedPublishableAfterHumanApproval": true,
       "publicImpact": "Immediate Wave 1; projected public count after human approval is 503.",
@@ -460,220 +480,7 @@
       "unsafeReasons": []
     }
   ],
-  "backlogItems": [
-    {
-      "articleState": {
-        "humanReviewRequired": true,
-        "noindex": true,
-        "qualityScore": 100,
-        "sourceNotes": true,
-        "status": "draft"
-      },
-      "blockers": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
-      },
-      "currentStage": "first-coverage-backlog",
-      "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "humanChecklist": [
-        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
-        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
-        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
-        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
-        "Improve exact query alignment without keyword stuffing.",
-        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
-        "Resolve or explicitly accept warning: few exact query variant matches in article text.",
-        "Resolve or explicitly accept warning: missing query-family signals: intentSeeds.",
-        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
-        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
-        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
-        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
-        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
-        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
-      ],
-      "massSearchThemes": [
-        {
-          "lane": "agent-memory-rag",
-          "themeTitle": "RAG, knowledge base, and agent memory",
-          "wave": 1
-        }
-      ],
-      "popularPromptLanes": [
-        {
-          "laneId": "excel-data-analysis-prompts",
-          "queries": 18,
-          "templates": 5,
-          "title": "Excel 和数据分析 AI 提示词"
-        },
-        {
-          "laneId": "llm-deployment-troubleshooting-prompts",
-          "queries": 18,
-          "templates": 5,
-          "title": "大模型部署、本地模型和 API 排错提示词"
-        }
-      ],
-      "priorityScore": 50,
-      "projectedPublishableAfterHumanApproval": true,
-      "publicImpact": "First-coverage backlog for zero-public cluster: RAG、知识库、向量数据库和引用溯源.",
-      "readyForHumanApproval": true,
-      "seoWarnings": [],
-      "sourceReplacementDecisions": [
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://ai-sdk.dev/docs",
-          "recommendedCandidate": null
-        },
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://docs.anthropic.com",
-          "recommendedCandidate": null
-        },
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://platform.openai.com/docs",
-          "recommendedCandidate": null
-        },
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://platform.openai.com/docs/guides/retrieval",
-          "recommendedCandidate": null
-        }
-      ],
-      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-      "unsafeReasons": []
-    },
-    {
-      "articleState": {
-        "humanReviewRequired": true,
-        "noindex": true,
-        "qualityScore": 100,
-        "sourceNotes": true,
-        "status": "draft"
-      },
-      "blockers": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
-      },
-      "currentStage": "first-coverage-backlog",
-      "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
-      "humanChecklist": [
-        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
-        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
-        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
-        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
-        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
-        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
-        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
-        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
-        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
-        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
-        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
-      ],
-      "massSearchThemes": [
-        {
-          "lane": "rag-memory",
-          "themeTitle": "Local and open-source model deployment",
-          "wave": 2
-        },
-        {
-          "lane": "model-deployment",
-          "themeTitle": "LLM serving, GPU, and managed inference",
-          "wave": 3
-        }
-      ],
-      "popularPromptLanes": [
-        {
-          "laneId": "llm-deployment-troubleshooting-prompts",
-          "queries": 18,
-          "templates": 5,
-          "title": "大模型部署、本地模型和 API 排错提示词"
-        }
-      ],
-      "priorityScore": 54,
-      "projectedPublishableAfterHumanApproval": true,
-      "publicImpact": "First-coverage backlog for zero-public cluster: 开源大模型部署：Ollama、vLLM、TGI、RunPod.",
-      "readyForHumanApproval": true,
-      "seoWarnings": [],
-      "sourceReplacementDecisions": [
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://ai-sdk.dev/docs",
-          "recommendedCandidate": null
-        },
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://docs.vllm.ai",
-          "recommendedCandidate": null
-        },
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://platform.openai.com/docs",
-          "recommendedCandidate": null
-        }
-      ],
-      "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
-      "unsafeReasons": []
-    },
-    {
-      "articleState": {
-        "humanReviewRequired": true,
-        "noindex": true,
-        "qualityScore": 100,
-        "sourceNotes": true,
-        "status": "draft"
-      },
-      "blockers": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-build-failed-causes-checklist.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vercel-build-failed-causes-checklist.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
-      },
-      "currentStage": "first-coverage-backlog",
-      "file": "content/blog/vercel-build-failed-causes-checklist.mdx",
-      "humanChecklist": [
-        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
-        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
-        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
-        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
-        "Add or replace official source targets before manual approval.",
-        "Improve exact query alignment without keyword stuffing.",
-        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
-        "Resolve or explicitly accept warning: few exact query variant matches in article text.",
-        "Resolve or explicitly accept warning: missing query-family signals: intentSeeds.",
-        "Resolve or explicitly accept warning: source-health report does not show a reachable source for this file; verify launch-pack source targets manually.",
-        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
-        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
-        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
-        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
-        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
-        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
-      ],
-      "massSearchThemes": [],
-      "popularPromptLanes": [
-        {
-          "laneId": "chatgpt-prompt-daquan",
-          "queries": 18,
-          "templates": 5,
-          "title": "ChatGPT 提示词大全和万能公式"
-        }
-      ],
-      "priorityScore": 38,
-      "projectedPublishableAfterHumanApproval": true,
-      "publicImpact": "First-coverage backlog for zero-public cluster: LLM 观测、评测、日志和上线后质量.",
-      "readyForHumanApproval": true,
-      "seoWarnings": [],
-      "sourceReplacementDecisions": [],
-      "title": "Vercel build failed 排查清单：从日志到重新部署",
-      "unsafeReasons": []
-    }
-  ],
+  "backlogItems": [],
   "items": [
     {
       "articleState": {
@@ -727,7 +534,20 @@
           "wave": 1
         }
       ],
-      "popularPromptLanes": [],
+      "popularPromptLanes": [
+        {
+          "laneId": "excel-data-analysis-prompts",
+          "queries": 18,
+          "templates": 5,
+          "title": "Excel 和数据分析 AI 提示词"
+        },
+        {
+          "laneId": "llm-deployment-troubleshooting-prompts",
+          "queries": 18,
+          "templates": 5,
+          "title": "大模型部署、本地模型和 API 排错提示词"
+        }
+      ],
       "priorityScore": 446,
       "projectedPublishableAfterHumanApproval": true,
       "publicImpact": "Immediate Wave 1; projected public count after human approval is 503.",
@@ -948,7 +768,14 @@
           "wave": 1
         }
       ],
-      "popularPromptLanes": [],
+      "popularPromptLanes": [
+        {
+          "laneId": "excel-data-analysis-prompts",
+          "queries": 18,
+          "templates": 5,
+          "title": "Excel 和数据分析 AI 提示词"
+        }
+      ],
       "priorityScore": 415,
       "projectedPublishableAfterHumanApproval": true,
       "publicImpact": "Immediate Wave 1; projected public count after human approval is 503.",
@@ -982,218 +809,6 @@
         }
       ],
       "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
-      "unsafeReasons": []
-    },
-    {
-      "articleState": {
-        "humanReviewRequired": true,
-        "noindex": true,
-        "qualityScore": 100,
-        "sourceNotes": true,
-        "status": "draft"
-      },
-      "blockers": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
-      },
-      "currentStage": "first-coverage-backlog",
-      "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
-      "humanChecklist": [
-        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
-        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
-        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
-        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
-        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
-        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
-        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
-        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
-        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
-        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
-        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
-      ],
-      "massSearchThemes": [
-        {
-          "lane": "rag-memory",
-          "themeTitle": "Local and open-source model deployment",
-          "wave": 2
-        },
-        {
-          "lane": "model-deployment",
-          "themeTitle": "LLM serving, GPU, and managed inference",
-          "wave": 3
-        }
-      ],
-      "popularPromptLanes": [
-        {
-          "laneId": "llm-deployment-troubleshooting-prompts",
-          "queries": 18,
-          "templates": 5,
-          "title": "大模型部署、本地模型和 API 排错提示词"
-        }
-      ],
-      "priorityScore": 54,
-      "projectedPublishableAfterHumanApproval": true,
-      "publicImpact": "First-coverage backlog for zero-public cluster: 开源大模型部署：Ollama、vLLM、TGI、RunPod.",
-      "readyForHumanApproval": true,
-      "seoWarnings": [],
-      "sourceReplacementDecisions": [
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://ai-sdk.dev/docs",
-          "recommendedCandidate": null
-        },
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://docs.vllm.ai",
-          "recommendedCandidate": null
-        },
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://platform.openai.com/docs",
-          "recommendedCandidate": null
-        }
-      ],
-      "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
-      "unsafeReasons": []
-    },
-    {
-      "articleState": {
-        "humanReviewRequired": true,
-        "noindex": true,
-        "qualityScore": 100,
-        "sourceNotes": true,
-        "status": "draft"
-      },
-      "blockers": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
-      },
-      "currentStage": "first-coverage-backlog",
-      "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "humanChecklist": [
-        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
-        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
-        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
-        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
-        "Improve exact query alignment without keyword stuffing.",
-        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
-        "Resolve or explicitly accept warning: few exact query variant matches in article text.",
-        "Resolve or explicitly accept warning: missing query-family signals: intentSeeds.",
-        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
-        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
-        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
-        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
-        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
-        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
-      ],
-      "massSearchThemes": [
-        {
-          "lane": "agent-memory-rag",
-          "themeTitle": "RAG, knowledge base, and agent memory",
-          "wave": 1
-        }
-      ],
-      "popularPromptLanes": [
-        {
-          "laneId": "excel-data-analysis-prompts",
-          "queries": 18,
-          "templates": 5,
-          "title": "Excel 和数据分析 AI 提示词"
-        },
-        {
-          "laneId": "llm-deployment-troubleshooting-prompts",
-          "queries": 18,
-          "templates": 5,
-          "title": "大模型部署、本地模型和 API 排错提示词"
-        }
-      ],
-      "priorityScore": 50,
-      "projectedPublishableAfterHumanApproval": true,
-      "publicImpact": "First-coverage backlog for zero-public cluster: RAG、知识库、向量数据库和引用溯源.",
-      "readyForHumanApproval": true,
-      "seoWarnings": [],
-      "sourceReplacementDecisions": [
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://ai-sdk.dev/docs",
-          "recommendedCandidate": null
-        },
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://docs.anthropic.com",
-          "recommendedCandidate": null
-        },
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://platform.openai.com/docs",
-          "recommendedCandidate": null
-        },
-        {
-          "kind": "redirected-url",
-          "originalUrl": "https://platform.openai.com/docs/guides/retrieval",
-          "recommendedCandidate": null
-        }
-      ],
-      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-      "unsafeReasons": []
-    },
-    {
-      "articleState": {
-        "humanReviewRequired": true,
-        "noindex": true,
-        "qualityScore": 100,
-        "sourceNotes": true,
-        "status": "draft"
-      },
-      "blockers": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-build-failed-causes-checklist.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vercel-build-failed-causes-checklist.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
-      },
-      "currentStage": "first-coverage-backlog",
-      "file": "content/blog/vercel-build-failed-causes-checklist.mdx",
-      "humanChecklist": [
-        "Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.",
-        "Open the source targets and verify current product names, APIs, commands, limits, and version-sensitive claims.",
-        "Remove unsupported traffic, ranking, revenue, cost-saving, latency, or reliability claims.",
-        "Run mark:review only after explicit human approval; do not publish with --confirm from this matrix.",
-        "Add or replace official source targets before manual approval.",
-        "Improve exact query alignment without keyword stuffing.",
-        "Use launch-pack freshness checklist because no separate freshness record exists for this file.",
-        "Resolve or explicitly accept warning: few exact query variant matches in article text.",
-        "Resolve or explicitly accept warning: missing query-family signals: intentSeeds.",
-        "Resolve or explicitly accept warning: source-health report does not show a reachable source for this file; verify launch-pack source targets manually.",
-        "Resolve or explicitly accept warning: no public internal-link suggestion found in the internal-link audit; add or document one during review.",
-        "Resolve or explicitly accept warning: no public-gap preflight record; rely on launch-pack checks and run targeted preflight before approval.",
-        "Resolve or explicitly accept warning: no review-freshness record; rely on launch fact-check checklist.",
-        "Verify current official docs for product names, APIs, model names, deployment commands, limits, and version-sensitive details.",
-        "Remove unsupported claims about measured traffic, rankings, impressions, clicks, revenue, cost savings, latency, or reliability.",
-        "Confirm the article answers the cluster's first public entry search intent without keyword stuffing."
-      ],
-      "massSearchThemes": [],
-      "popularPromptLanes": [
-        {
-          "laneId": "chatgpt-prompt-daquan",
-          "queries": 18,
-          "templates": 5,
-          "title": "ChatGPT 提示词大全和万能公式"
-        }
-      ],
-      "priorityScore": 38,
-      "projectedPublishableAfterHumanApproval": true,
-      "publicImpact": "First-coverage backlog for zero-public cluster: LLM 观测、评测、日志和上线后质量.",
-      "readyForHumanApproval": true,
-      "seoWarnings": [],
-      "sourceReplacementDecisions": [],
-      "title": "Vercel build failed 排查清单：从日志到重新部署",
       "unsafeReasons": []
     }
   ]

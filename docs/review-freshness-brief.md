@@ -1,6 +1,6 @@
 # Review Freshness Brief
 
-Generated at: 2026-06-16T07:01:30.569Z
+Generated at: 2026-06-16T12:27:31.632Z
 
 This report is read-only. It converts freshness risk into human fact-check tasks for current review candidates.
 
@@ -16,8 +16,8 @@ This report is read-only. It converts freshness risk into human fact-check tasks
 
 - Action board ready tasks: 2
 - Unique action files: 2
-- Content freshness generated at: 2026-06-16T07:01:30.091Z
-- Source health summary: {"checkedUrls":38,"broadFirstCoverageFiles":8,"currentReviewFiles":3,"failedUrls":1,"filesCovered":24,"filesWithReachableSource":24,"filesWithoutReachableSource":0,"missingUrlTargets":0,"nextSourcePackFiles":15,"okUrls":37,"publicGapDecisionFiles":8,"redirectedUrls":17,"sourceReferences":202,"uniqueUrls":38}
+- Content freshness generated at: 2026-06-16T12:27:31.163Z
+- Source health summary: {"checkedUrls":14,"broadFirstCoverageFiles":0,"currentReviewFiles":3,"failedUrls":0,"filesCovered":16,"filesWithReachableSource":16,"filesWithoutReachableSource":0,"missingUrlTargets":0,"nextSourcePackFiles":15,"okUrls":14,"publicGapDecisionFiles":0,"redirectedUrls":10,"sourceReferences":86,"uniqueUrls":14}
 
 ## Summary
 
@@ -86,14 +86,14 @@ Freshness checks:
 - RAG 向量数据库怎么选 official docs latest
 - RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 事实核对
 - AI 基建 平台限制 官方文档
+- RAG 知识库搭建教程
+- 企业知识库 AI 部署
+- 向量数据库教程
+- 客服知识库 AI
 - Confirm current official guidance for agent.
 - Confirm current official guidance for rag.
 - Confirm current official guidance for 部署.
 - Confirm current official guidance for 模型.
-- Confirm current official guidance for 知识库.
-- Confirm current official guidance for 提示词.
-- Confirm current official guidance for 工具.
-- Confirm current official guidance for 客服.
 
 Human review checklist:
 
@@ -145,14 +145,14 @@ Freshness checks:
 - Vercel AI Gateway 多模型 official docs latest
 - Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 事实核对
 - AI 部署 平台限制 官方文档
+- 大模型部署教程
+- AI 应用部署 Vercel 教程
+- OpenAI API 部署教程
+- Claude API 部署教程
 - Confirm current official guidance for api.
 - Confirm current official guidance for agent.
 - Confirm current official guidance for claude.
 - Confirm current official guidance for gemini.
-- Confirm current official guidance for openai.
-- Confirm current official guidance for vercel.
-- Confirm current official guidance for 部署.
-- Confirm current official guidance for 大模型.
 
 Human review checklist:
 

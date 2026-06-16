@@ -1,6 +1,6 @@
 # Human Approval Decision Matrix
 
-Generated at: 2026-06-16T07:01:36.570Z
+Generated at: 2026-06-16T12:27:37.502Z
 
 This report is read-only. It gives reviewers one decision row per approval candidate and stops before mark:review or publish.
 
@@ -38,8 +38,8 @@ This report is read-only. It gives reviewers one decision row per approval candi
 ## Source Evidence
 
 - approvalPacketItems: 3
-- approvalPacketUnsafeItems: 8
-- internalLinkUnsafeItems: 2
+- approvalPacketUnsafeItems: 0
+- internalLinkUnsafeItems: 0
 - playbookUnsafeItems: 2
 - remediationUnsafeItems: 2
 - searchIntentUnsafeItems: 0
@@ -50,8 +50,8 @@ This report is read-only. It gives reviewers one decision row per approval candi
 | Decision | Score | Source | Search | Link | Fix ready | Risk checks | Primary query | Title | File |
 | --- | ---: | --- | --- | --- | --- | ---: | --- | --- | --- |
 | repair-before-review | 1543 | true | 2 weakness(es) | true | true | 11 | 大模型部署教程 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
-| defer | 447 | true | 4 weakness(es) | false | false | 6 | RAG 知识库搭建教程 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| defer | 417 | true | 2 weakness(es) | false | false | 5 | Vercel build failed | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+| defer | 447 | true | 4 weakness(es) | true | false | 6 | RAG 知识库搭建教程 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| defer | 417 | true | 2 weakness(es) | true | false | 5 | Vercel build failed | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Repair Before Approval
 
@@ -80,14 +80,14 @@ This report is read-only. It gives reviewers one decision row per approval candi
 - Mark review after approval: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human
 - Publish confirm: not-included
 - Defer if: manual remediation pack is not ready
-- Remediation reasons: approval candidate has no current link to a published article; 4 search-intent weakness(es) need human copy review; 8 source URL remediation action(s) need human confirmation
+- Remediation reasons: 4 search-intent weakness(es) need human copy review; 8 source URL remediation action(s) need human confirmation
 
 - Resolve or explicitly accept search weakness: no exact search query appears in title.
 - Resolve or explicitly accept search weakness: no exact search query appears in description.
 - Resolve or explicitly accept search weakness: no exact search query appears in headings or body.
 - Resolve or explicitly accept search weakness: few query tokens appear in searchable text.
-- Add at least one contextual link to a currently published article before approval.
-- Add one contextual public article link during human review.
+- Suggested public link: OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai.
+- Suggested public link: Groq API 怎么接入：高速推理适合什么 AI 应用 (/blog/groq-api-fast-llm-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai.
 - Resolve search weakness: no exact search query appears in title.
 - Resolve search weakness: no exact search query appears in description.
 - Confirm source redirect before approval: https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction.
@@ -105,7 +105,7 @@ This report is read-only. It gives reviewers one decision row per approval candi
 - Resolve or explicitly accept search weakness: no exact search query appears in title.
 - Resolve or explicitly accept search weakness: no exact search query appears in description.
 - Add at least one contextual link to a currently published article before approval.
-- Add one contextual public article link during human review.
+- Suggested public link: Next.js hydration error 怎么排查：使用前怎么判断是否适合 (/blog/nextjs-hydration-error-debug-freelance-scope) - same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, next, js.
 - Resolve search weakness: no exact search query appears in title.
 - Resolve search weakness: no exact search query appears in description.
 - Confirm source redirect before approval: https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction.

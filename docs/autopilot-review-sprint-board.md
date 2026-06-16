@@ -1,6 +1,6 @@
 # Autopilot Review Sprint Board
 
-Generated at: 2026-06-16T07:01:38.963Z
+Generated at: 2026-06-16T12:27:39.821Z
 
 This report is read-only. It plans the next 10 manual review assignments and keeps all status changes human-gated.
 
@@ -34,7 +34,7 @@ This report is read-only. It plans the next 10 manual review assignments and kee
 
 ## Source Evidence
 
-- autopilotQueueUnsafeItems: 8
+- autopilotQueueUnsafeItems: 0
 - humanReviewPlaybookUnsafeItems: 2
 - queueNextAssignments: 8
 

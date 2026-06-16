@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:15.184Z",
+  "generatedAt": "2026-06-16T12:27:16.811Z",
   "guardrails": {
     "autoCreateArticles": false,
     "autoEditArticles": false,
@@ -10,7 +10,7 @@
     "stopBefore": "Stop before mark:review and stop before publish. Both require explicit human approval."
   },
   "sourceEvidence": {
-    "reviewPackGeneratedAt": "2026-06-16T07:01:14.697Z",
+    "reviewPackGeneratedAt": "2026-06-16T12:27:16.327Z",
     "reviewPackGuardrails": {
       "autoCreateArticles": false,
       "autoEditArticles": false,
@@ -26,13 +26,13 @@
       "itemsPerLaneMax": 2,
       "itemsWithCommandBoundary": 11,
       "itemsWithHumanChecklist": 11,
-      "itemsWithInternalLinkSuggestion": 2,
+      "itemsWithInternalLinkSuggestion": 7,
       "itemsWithManualReviewFocus": 11,
       "itemsWithOfficialSources": 11,
       "itemsWithSearchQueries": 11,
       "lanes": 8,
       "readyItems": 11,
-      "reviewQueueMatchedItems": 0,
+      "reviewQueueMatchedItems": 6,
       "safeDraftItems": 11,
       "unsafeItems": 0,
       "zeroPublicLaneItems": 0
@@ -45,7 +45,7 @@
     "blockingItems": 0,
     "humanApprovalReadyItems": 11,
     "indexingSafeItems": 11,
-    "internalLinkReadyItems": 2,
+    "internalLinkReadyItems": 7,
     "items": 11,
     "reviewPackItems": 11,
     "reviewPackReadyItems": 11,
@@ -56,6 +56,45 @@
   },
   "blockingItems": [],
   "warningItems": [
+    {
+      "blockingIssues": [],
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
+      "frontMatter": {
+        "canonical": "https://ai-jiedan-lab.vercel.app/blog/tensorrt-llm-beginner-guide",
+        "date": "2026-06-05",
+        "description": "面向新手整理 TensorRT-LLM 入门判断，覆盖 NVIDIA GPU、模型支持、Quick Start、HTTP 请求、性能优化、部署成本和生产边界。",
+        "noindex": true,
+        "slug": "tensorrt-llm-beginner-guide",
+        "status": "draft",
+        "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+        "updatedAt": "2026-06-05"
+      },
+      "humanApprovalReady": true,
+      "indexingSafe": true,
+      "internalLinkReady": true,
+      "lane": "ai-service-pricing-delivery",
+      "manualNextActions": [
+        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
+        "Verify official sources and fact-check queries manually.",
+        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
+        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
+        "Publishing remains a separate explicit approval step."
+      ],
+      "reviewPackReady": true,
+      "schemaReady": true,
+      "searchSnippetReady": true,
+      "sourceReady": true,
+      "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+      "warningIssues": [
+        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
+      ]
+    },
     {
       "blockingIssues": [],
       "commandBoundary": {
@@ -141,42 +180,40 @@
     {
       "blockingIssues": [],
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
+      "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "frontMatter": {
-        "canonical": "https://ai-jiedan-lab.vercel.app/blog/tensorrt-llm-beginner-guide",
+        "canonical": "https://ai-jiedan-lab.vercel.app/blog/together-ai-api-beginner-guide",
         "date": "2026-06-05",
-        "description": "面向新手整理 TensorRT-LLM 入门判断，覆盖 NVIDIA GPU、模型支持、Quick Start、HTTP 请求、性能优化、部署成本和生产边界。",
+        "description": "面向新手整理 Together AI API 接入路线，覆盖 OpenAI-compatible 调用、开源模型选择、embedding、费用、限速、应用接入和客户项目边界。",
         "noindex": true,
-        "slug": "tensorrt-llm-beginner-guide",
+        "slug": "together-ai-api-beginner-guide",
         "status": "draft",
-        "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+        "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
         "updatedAt": "2026-06-05"
       },
       "humanApprovalReady": true,
       "indexingSafe": true,
-      "internalLinkReady": false,
-      "lane": "ai-service-pricing-delivery",
+      "internalLinkReady": true,
+      "lane": "rag-knowledge-base-agent-memory",
       "manualNextActions": [
-        "Review warning before publish: no public internal-link suggestion is attached yet.",
-        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
+        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
         "Verify official sources and fact-check queries manually.",
         "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
-        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
+        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
         "Publishing remains a separate explicit approval step."
       ],
       "reviewPackReady": true,
       "schemaReady": true,
       "searchSnippetReady": true,
       "sourceReady": true,
-      "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
       "warningIssues": [
-        "no public internal-link suggestion is attached yet",
-        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
+        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
       ]
     },
     {
@@ -201,7 +238,7 @@
       "humanApprovalReady": true,
       "indexingSafe": true,
       "internalLinkReady": true,
-      "lane": "ai-service-pricing-delivery",
+      "lane": "rag-knowledge-base-agent-memory",
       "manualNextActions": [
         "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
         "Verify official sources and fact-check queries manually.",
@@ -216,88 +253,6 @@
       "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
       "warningIssues": [
         "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
-      ]
-    },
-    {
-      "blockingIssues": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "frontMatter": {
-        "canonical": "https://ai-jiedan-lab.vercel.app/blog/together-ai-api-beginner-guide",
-        "date": "2026-06-05",
-        "description": "面向新手整理 Together AI API 接入路线，覆盖 OpenAI-compatible 调用、开源模型选择、embedding、费用、限速、应用接入和客户项目边界。",
-        "noindex": true,
-        "slug": "together-ai-api-beginner-guide",
-        "status": "draft",
-        "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-        "updatedAt": "2026-06-05"
-      },
-      "humanApprovalReady": true,
-      "indexingSafe": true,
-      "internalLinkReady": false,
-      "lane": "rag-knowledge-base-agent-memory",
-      "manualNextActions": [
-        "Review warning before publish: no public internal-link suggestion is attached yet.",
-        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
-        "Verify official sources and fact-check queries manually.",
-        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
-        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-        "Publishing remains a separate explicit approval step."
-      ],
-      "reviewPackReady": true,
-      "schemaReady": true,
-      "searchSnippetReady": true,
-      "sourceReady": true,
-      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-      "warningIssues": [
-        "no public internal-link suggestion is attached yet",
-        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
-      ]
-    },
-    {
-      "blockingIssues": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/supabase-pgvector-rag-guide.mdx",
-      "frontMatter": {
-        "canonical": "https://ai-jiedan-lab.vercel.app/blog/supabase-pgvector-rag-guide",
-        "date": "2026-06-05",
-        "description": "面向新手整理 Supabase pgvector 做 RAG 的入门思路，覆盖 vector column、embedding、SQL 查询、权限、索引、成本和维护。",
-        "noindex": true,
-        "slug": "supabase-pgvector-rag-guide",
-        "status": "draft",
-        "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
-        "updatedAt": "2026-06-05"
-      },
-      "humanApprovalReady": true,
-      "indexingSafe": true,
-      "internalLinkReady": false,
-      "lane": "rag-knowledge-base-agent-memory",
-      "manualNextActions": [
-        "Review warning before publish: no public internal-link suggestion is attached yet.",
-        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
-        "Verify official sources and fact-check queries manually.",
-        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
-        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human",
-        "Publishing remains a separate explicit approval step."
-      ],
-      "reviewPackReady": true,
-      "schemaReady": true,
-      "searchSnippetReady": true,
-      "sourceReady": true,
-      "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
-      "warningIssues": [
-        "no public internal-link suggestion is attached yet",
-        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
       ]
     },
     {
@@ -321,11 +276,10 @@
       },
       "humanApprovalReady": true,
       "indexingSafe": true,
-      "internalLinkReady": false,
+      "internalLinkReady": true,
       "lane": "agent-deployment-tools-mcp",
       "manualNextActions": [
-        "Review warning before publish: no public internal-link suggestion is attached yet.",
-        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
+        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
         "Verify official sources and fact-check queries manually.",
         "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
         "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-checklist.mdx --confirm-human",
@@ -337,87 +291,45 @@
       "sourceReady": true,
       "title": "Windows 路径和权限导致安装失败怎么办：新手检查清单",
       "warningIssues": [
-        "no public internal-link suggestion is attached yet",
-        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
+        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
       ]
     },
     {
       "blockingIssues": [],
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/upwork-proposal-review-sheet-checklist.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/upwork-proposal-review-sheet-checklist.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+      "file": "content/blog/upwork-proposal-review-sheet-checklist.mdx",
       "frontMatter": {
-        "canonical": "https://ai-jiedan-lab.vercel.app/blog/windows-path-permission-install-fix-freelance-scope",
+        "canonical": "https://ai-jiedan-lab.vercel.app/blog/upwork-proposal-review-sheet-checklist",
         "date": "2026-06-03",
-        "description": "新手搜索“Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合”时，通常不是缺一个概念解释，而是不知道准备哪些材料、按什么顺序验证、哪些风险不能碰。读完后可以按清单完成初步判断，知道下一步该问什么、测什么、记录什么，以及什么时候应该暂缓或找人复核。",
+        "description": "新手搜索“Upwork 投标复盘表怎么记录：新手检查清单”时，通常不是缺一个概念解释，而是不知道准备哪些材料、按什么顺序验证、哪些风险不能碰。读完后可以按清单完成初步判断，知道下一步该问什么、测什么、记录什么，以及什么时候应该暂缓或找人复核。",
         "noindex": true,
-        "slug": "windows-path-permission-install-fix-freelance-scope",
+        "slug": "upwork-proposal-review-sheet-checklist",
         "status": "draft",
-        "title": "Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合",
+        "title": "Upwork 投标复盘表怎么记录：新手检查清单",
         "updatedAt": "2026-06-03"
       },
       "humanApprovalReady": true,
       "indexingSafe": true,
       "internalLinkReady": false,
-      "lane": "agent-deployment-tools-mcp",
+      "lane": "ai-service-pricing-delivery",
       "manualNextActions": [
         "Review warning before publish: no public internal-link suggestion is attached yet.",
         "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
         "Verify official sources and fact-check queries manually.",
         "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
-        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx --confirm-human",
+        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/upwork-proposal-review-sheet-checklist.mdx --confirm-human",
         "Publishing remains a separate explicit approval step."
       ],
       "reviewPackReady": true,
       "schemaReady": true,
       "searchSnippetReady": true,
       "sourceReady": true,
-      "title": "Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合",
-      "warningIssues": [
-        "no public internal-link suggestion is attached yet",
-        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
-      ]
-    },
-    {
-      "blockingIssues": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vllm-deployment-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vllm-deployment-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/vllm-deployment-beginner-guide.mdx",
-      "frontMatter": {
-        "canonical": "https://ai-jiedan-lab.vercel.app/blog/vllm-deployment-beginner-guide",
-        "date": "2026-06-04",
-        "description": "解释 vLLM 部署的适用场景和新手评估清单，覆盖推理服务、并发、GPU、模型许可、API、监控、成本和上线风险。",
-        "noindex": true,
-        "slug": "vllm-deployment-beginner-guide",
-        "status": "draft",
-        "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
-        "updatedAt": "2026-06-04"
-      },
-      "humanApprovalReady": true,
-      "indexingSafe": true,
-      "internalLinkReady": false,
-      "lane": "llm-deployment-and-serving",
-      "manualNextActions": [
-        "Review warning before publish: no public internal-link suggestion is attached yet.",
-        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
-        "Verify official sources and fact-check queries manually.",
-        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
-        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vllm-deployment-beginner-guide.mdx --confirm-human",
-        "Publishing remains a separate explicit approval step."
-      ],
-      "reviewPackReady": true,
-      "schemaReady": true,
-      "searchSnippetReady": true,
-      "sourceReady": true,
-      "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
+      "title": "Upwork 投标复盘表怎么记录：新手检查清单",
       "warningIssues": [
         "no public internal-link suggestion is attached yet",
         "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
@@ -458,6 +370,84 @@
       "searchSnippetReady": true,
       "sourceReady": true,
       "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
+      "warningIssues": [
+        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "file": "content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+      "frontMatter": {
+        "canonical": "https://ai-jiedan-lab.vercel.app/blog/windows-path-permission-install-fix-freelance-scope",
+        "date": "2026-06-03",
+        "description": "新手搜索“Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合”时，通常不是缺一个概念解释，而是不知道准备哪些材料、按什么顺序验证、哪些风险不能碰。读完后可以按清单完成初步判断，知道下一步该问什么、测什么、记录什么，以及什么时候应该暂缓或找人复核。",
+        "noindex": true,
+        "slug": "windows-path-permission-install-fix-freelance-scope",
+        "status": "draft",
+        "title": "Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合",
+        "updatedAt": "2026-06-03"
+      },
+      "humanApprovalReady": true,
+      "indexingSafe": true,
+      "internalLinkReady": true,
+      "lane": "agent-deployment-tools-mcp",
+      "manualNextActions": [
+        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
+        "Verify official sources and fact-check queries manually.",
+        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
+        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx --confirm-human",
+        "Publishing remains a separate explicit approval step."
+      ],
+      "reviewPackReady": true,
+      "schemaReady": true,
+      "searchSnippetReady": true,
+      "sourceReady": true,
+      "title": "Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合",
+      "warningIssues": [
+        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vllm-deployment-beginner-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vllm-deployment-beginner-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "file": "content/blog/vllm-deployment-beginner-guide.mdx",
+      "frontMatter": {
+        "canonical": "https://ai-jiedan-lab.vercel.app/blog/vllm-deployment-beginner-guide",
+        "date": "2026-06-04",
+        "description": "解释 vLLM 部署的适用场景和新手评估清单，覆盖推理服务、并发、GPU、模型许可、API、监控、成本和上线风险。",
+        "noindex": true,
+        "slug": "vllm-deployment-beginner-guide",
+        "status": "draft",
+        "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
+        "updatedAt": "2026-06-04"
+      },
+      "humanApprovalReady": true,
+      "indexingSafe": true,
+      "internalLinkReady": true,
+      "lane": "llm-deployment-and-serving",
+      "manualNextActions": [
+        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
+        "Verify official sources and fact-check queries manually.",
+        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
+        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vllm-deployment-beginner-guide.mdx --confirm-human",
+        "Publishing remains a separate explicit approval step."
+      ],
+      "reviewPackReady": true,
+      "schemaReady": true,
+      "searchSnippetReady": true,
+      "sourceReady": true,
+      "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
       "warningIssues": [
         "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
       ]
@@ -508,6 +498,45 @@
     {
       "blockingIssues": [],
       "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
+      "frontMatter": {
+        "canonical": "https://ai-jiedan-lab.vercel.app/blog/tensorrt-llm-beginner-guide",
+        "date": "2026-06-05",
+        "description": "面向新手整理 TensorRT-LLM 入门判断，覆盖 NVIDIA GPU、模型支持、Quick Start、HTTP 请求、性能优化、部署成本和生产边界。",
+        "noindex": true,
+        "slug": "tensorrt-llm-beginner-guide",
+        "status": "draft",
+        "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+        "updatedAt": "2026-06-05"
+      },
+      "humanApprovalReady": true,
+      "indexingSafe": true,
+      "internalLinkReady": true,
+      "lane": "ai-service-pricing-delivery",
+      "manualNextActions": [
+        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
+        "Verify official sources and fact-check queries manually.",
+        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
+        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
+        "Publishing remains a separate explicit approval step."
+      ],
+      "reviewPackReady": true,
+      "schemaReady": true,
+      "searchSnippetReady": true,
+      "sourceReady": true,
+      "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+      "warningIssues": [
+        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "commandBoundary": {
         "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/template-download-cta-copy-checklist.mdx --confirm-human",
         "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/template-download-cta-copy-checklist.mdx",
         "publishConfirm": "not-included",
@@ -590,42 +619,40 @@
     {
       "blockingIssues": [],
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
+      "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "frontMatter": {
-        "canonical": "https://ai-jiedan-lab.vercel.app/blog/tensorrt-llm-beginner-guide",
+        "canonical": "https://ai-jiedan-lab.vercel.app/blog/together-ai-api-beginner-guide",
         "date": "2026-06-05",
-        "description": "面向新手整理 TensorRT-LLM 入门判断，覆盖 NVIDIA GPU、模型支持、Quick Start、HTTP 请求、性能优化、部署成本和生产边界。",
+        "description": "面向新手整理 Together AI API 接入路线，覆盖 OpenAI-compatible 调用、开源模型选择、embedding、费用、限速、应用接入和客户项目边界。",
         "noindex": true,
-        "slug": "tensorrt-llm-beginner-guide",
+        "slug": "together-ai-api-beginner-guide",
         "status": "draft",
-        "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+        "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
         "updatedAt": "2026-06-05"
       },
       "humanApprovalReady": true,
       "indexingSafe": true,
-      "internalLinkReady": false,
-      "lane": "ai-service-pricing-delivery",
+      "internalLinkReady": true,
+      "lane": "rag-knowledge-base-agent-memory",
       "manualNextActions": [
-        "Review warning before publish: no public internal-link suggestion is attached yet.",
-        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
+        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
         "Verify official sources and fact-check queries manually.",
         "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
-        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
+        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
         "Publishing remains a separate explicit approval step."
       ],
       "reviewPackReady": true,
       "schemaReady": true,
       "searchSnippetReady": true,
       "sourceReady": true,
-      "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
       "warningIssues": [
-        "no public internal-link suggestion is attached yet",
-        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
+        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
       ]
     },
     {
@@ -650,7 +677,7 @@
       "humanApprovalReady": true,
       "indexingSafe": true,
       "internalLinkReady": true,
-      "lane": "ai-service-pricing-delivery",
+      "lane": "rag-knowledge-base-agent-memory",
       "manualNextActions": [
         "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
         "Verify official sources and fact-check queries manually.",
@@ -665,88 +692,6 @@
       "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
       "warningIssues": [
         "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
-      ]
-    },
-    {
-      "blockingIssues": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "frontMatter": {
-        "canonical": "https://ai-jiedan-lab.vercel.app/blog/together-ai-api-beginner-guide",
-        "date": "2026-06-05",
-        "description": "面向新手整理 Together AI API 接入路线，覆盖 OpenAI-compatible 调用、开源模型选择、embedding、费用、限速、应用接入和客户项目边界。",
-        "noindex": true,
-        "slug": "together-ai-api-beginner-guide",
-        "status": "draft",
-        "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-        "updatedAt": "2026-06-05"
-      },
-      "humanApprovalReady": true,
-      "indexingSafe": true,
-      "internalLinkReady": false,
-      "lane": "rag-knowledge-base-agent-memory",
-      "manualNextActions": [
-        "Review warning before publish: no public internal-link suggestion is attached yet.",
-        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
-        "Verify official sources and fact-check queries manually.",
-        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
-        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-        "Publishing remains a separate explicit approval step."
-      ],
-      "reviewPackReady": true,
-      "schemaReady": true,
-      "searchSnippetReady": true,
-      "sourceReady": true,
-      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-      "warningIssues": [
-        "no public internal-link suggestion is attached yet",
-        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
-      ]
-    },
-    {
-      "blockingIssues": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/supabase-pgvector-rag-guide.mdx",
-      "frontMatter": {
-        "canonical": "https://ai-jiedan-lab.vercel.app/blog/supabase-pgvector-rag-guide",
-        "date": "2026-06-05",
-        "description": "面向新手整理 Supabase pgvector 做 RAG 的入门思路，覆盖 vector column、embedding、SQL 查询、权限、索引、成本和维护。",
-        "noindex": true,
-        "slug": "supabase-pgvector-rag-guide",
-        "status": "draft",
-        "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
-        "updatedAt": "2026-06-05"
-      },
-      "humanApprovalReady": true,
-      "indexingSafe": true,
-      "internalLinkReady": false,
-      "lane": "rag-knowledge-base-agent-memory",
-      "manualNextActions": [
-        "Review warning before publish: no public internal-link suggestion is attached yet.",
-        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
-        "Verify official sources and fact-check queries manually.",
-        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
-        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human",
-        "Publishing remains a separate explicit approval step."
-      ],
-      "reviewPackReady": true,
-      "schemaReady": true,
-      "searchSnippetReady": true,
-      "sourceReady": true,
-      "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
-      "warningIssues": [
-        "no public internal-link suggestion is attached yet",
-        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
       ]
     },
     {
@@ -770,11 +715,10 @@
       },
       "humanApprovalReady": true,
       "indexingSafe": true,
-      "internalLinkReady": false,
+      "internalLinkReady": true,
       "lane": "agent-deployment-tools-mcp",
       "manualNextActions": [
-        "Review warning before publish: no public internal-link suggestion is attached yet.",
-        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
+        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
         "Verify official sources and fact-check queries manually.",
         "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
         "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-checklist.mdx --confirm-human",
@@ -786,87 +730,45 @@
       "sourceReady": true,
       "title": "Windows 路径和权限导致安装失败怎么办：新手检查清单",
       "warningIssues": [
-        "no public internal-link suggestion is attached yet",
-        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
+        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
       ]
     },
     {
       "blockingIssues": [],
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/upwork-proposal-review-sheet-checklist.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/upwork-proposal-review-sheet-checklist.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+      "file": "content/blog/upwork-proposal-review-sheet-checklist.mdx",
       "frontMatter": {
-        "canonical": "https://ai-jiedan-lab.vercel.app/blog/windows-path-permission-install-fix-freelance-scope",
+        "canonical": "https://ai-jiedan-lab.vercel.app/blog/upwork-proposal-review-sheet-checklist",
         "date": "2026-06-03",
-        "description": "新手搜索“Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合”时，通常不是缺一个概念解释，而是不知道准备哪些材料、按什么顺序验证、哪些风险不能碰。读完后可以按清单完成初步判断，知道下一步该问什么、测什么、记录什么，以及什么时候应该暂缓或找人复核。",
+        "description": "新手搜索“Upwork 投标复盘表怎么记录：新手检查清单”时，通常不是缺一个概念解释，而是不知道准备哪些材料、按什么顺序验证、哪些风险不能碰。读完后可以按清单完成初步判断，知道下一步该问什么、测什么、记录什么，以及什么时候应该暂缓或找人复核。",
         "noindex": true,
-        "slug": "windows-path-permission-install-fix-freelance-scope",
+        "slug": "upwork-proposal-review-sheet-checklist",
         "status": "draft",
-        "title": "Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合",
+        "title": "Upwork 投标复盘表怎么记录：新手检查清单",
         "updatedAt": "2026-06-03"
       },
       "humanApprovalReady": true,
       "indexingSafe": true,
       "internalLinkReady": false,
-      "lane": "agent-deployment-tools-mcp",
+      "lane": "ai-service-pricing-delivery",
       "manualNextActions": [
         "Review warning before publish: no public internal-link suggestion is attached yet.",
         "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
         "Verify official sources and fact-check queries manually.",
         "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
-        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx --confirm-human",
+        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/upwork-proposal-review-sheet-checklist.mdx --confirm-human",
         "Publishing remains a separate explicit approval step."
       ],
       "reviewPackReady": true,
       "schemaReady": true,
       "searchSnippetReady": true,
       "sourceReady": true,
-      "title": "Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合",
-      "warningIssues": [
-        "no public internal-link suggestion is attached yet",
-        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
-      ]
-    },
-    {
-      "blockingIssues": [],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vllm-deployment-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vllm-deployment-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/vllm-deployment-beginner-guide.mdx",
-      "frontMatter": {
-        "canonical": "https://ai-jiedan-lab.vercel.app/blog/vllm-deployment-beginner-guide",
-        "date": "2026-06-04",
-        "description": "解释 vLLM 部署的适用场景和新手评估清单，覆盖推理服务、并发、GPU、模型许可、API、监控、成本和上线风险。",
-        "noindex": true,
-        "slug": "vllm-deployment-beginner-guide",
-        "status": "draft",
-        "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
-        "updatedAt": "2026-06-04"
-      },
-      "humanApprovalReady": true,
-      "indexingSafe": true,
-      "internalLinkReady": false,
-      "lane": "llm-deployment-and-serving",
-      "manualNextActions": [
-        "Review warning before publish: no public internal-link suggestion is attached yet.",
-        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.",
-        "Verify official sources and fact-check queries manually.",
-        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
-        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vllm-deployment-beginner-guide.mdx --confirm-human",
-        "Publishing remains a separate explicit approval step."
-      ],
-      "reviewPackReady": true,
-      "schemaReady": true,
-      "searchSnippetReady": true,
-      "sourceReady": true,
-      "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
+      "title": "Upwork 投标复盘表怎么记录：新手检查清单",
       "warningIssues": [
         "no public internal-link suggestion is attached yet",
         "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review"
@@ -907,6 +809,84 @@
       "searchSnippetReady": true,
       "sourceReady": true,
       "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
+      "warningIssues": [
+        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "file": "content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+      "frontMatter": {
+        "canonical": "https://ai-jiedan-lab.vercel.app/blog/windows-path-permission-install-fix-freelance-scope",
+        "date": "2026-06-03",
+        "description": "新手搜索“Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合”时，通常不是缺一个概念解释，而是不知道准备哪些材料、按什么顺序验证、哪些风险不能碰。读完后可以按清单完成初步判断，知道下一步该问什么、测什么、记录什么，以及什么时候应该暂缓或找人复核。",
+        "noindex": true,
+        "slug": "windows-path-permission-install-fix-freelance-scope",
+        "status": "draft",
+        "title": "Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合",
+        "updatedAt": "2026-06-03"
+      },
+      "humanApprovalReady": true,
+      "indexingSafe": true,
+      "internalLinkReady": true,
+      "lane": "agent-deployment-tools-mcp",
+      "manualNextActions": [
+        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
+        "Verify official sources and fact-check queries manually.",
+        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
+        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx --confirm-human",
+        "Publishing remains a separate explicit approval step."
+      ],
+      "reviewPackReady": true,
+      "schemaReady": true,
+      "searchSnippetReady": true,
+      "sourceReady": true,
+      "title": "Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合",
+      "warningIssues": [
+        "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
+      ]
+    },
+    {
+      "blockingIssues": [],
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vllm-deployment-beginner-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vllm-deployment-beginner-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "file": "content/blog/vllm-deployment-beginner-guide.mdx",
+      "frontMatter": {
+        "canonical": "https://ai-jiedan-lab.vercel.app/blog/vllm-deployment-beginner-guide",
+        "date": "2026-06-04",
+        "description": "解释 vLLM 部署的适用场景和新手评估清单，覆盖推理服务、并发、GPU、模型许可、API、监控、成本和上线风险。",
+        "noindex": true,
+        "slug": "vllm-deployment-beginner-guide",
+        "status": "draft",
+        "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
+        "updatedAt": "2026-06-04"
+      },
+      "humanApprovalReady": true,
+      "indexingSafe": true,
+      "internalLinkReady": true,
+      "lane": "llm-deployment-and-serving",
+      "manualNextActions": [
+        "Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.",
+        "Verify official sources and fact-check queries manually.",
+        "Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.",
+        "Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vllm-deployment-beginner-guide.mdx --confirm-human",
+        "Publishing remains a separate explicit approval step."
+      ],
+      "reviewPackReady": true,
+      "schemaReady": true,
+      "searchSnippetReady": true,
+      "sourceReady": true,
+      "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
       "warningIssues": [
         "review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually"
       ]

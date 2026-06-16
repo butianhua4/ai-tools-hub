@@ -1,6 +1,6 @@
 # Mass AI Search Action Matrix
 
-Generated at: 2026-06-16T07:01:16.524Z
+Generated at: 2026-06-16T12:27:18.113Z
 
 This report is read-only. It turns broad AI search demand into human-review waves across AI deployment, Agent deployment, RAG, memory, no-code automation, AI API operations, observability, and cross-industry prompt libraries.
 
@@ -16,8 +16,8 @@ This report is read-only. It turns broad AI search demand into human-review wave
 
 ## Summary
 
-- commandBoundaries: 0
-- deploymentBridgedThemes: 0
+- commandBoundaries: 5
+- deploymentBridgedThemes: 4
 - humanGatedItems: 8
 - items: 8
 - itemsReadyForHumanReviewPrep: 6
@@ -37,13 +37,13 @@ This report is read-only. It turns broad AI search demand into human-review wave
 
 ## Source Evidence
 
-- broadSearchDemandGeneratedAt: "2026-06-16T07:01:16.031Z"
+- broadSearchDemandGeneratedAt: "2026-06-16T12:27:17.621Z"
 - broadSearchDemandGuardrails: {"autoEditArticles":false,"autoMarkReview":false,"autoPublish":false,"note":"Read-only broad-demand map. It prioritizes likely user-search themes from the local content inventory and official source targets; it does not claim keyword volume, rankings, clicks, or traffic."}
 - broadSearchDemandSummary: {"themes":10,"themesWithReadyDrafts":6,"themesWithoutPublicCoverage":0,"totalReadyDraftMatches":82,"uniqueCandidateFiles":27,"reviewPackThemeMatches":2,"plannedWaveThemeMatches":15,"missingSubtopics":25,"maxGapScore":308}
-- deploymentReviewGeneratedAt: "2026-06-14T10:38:57.776Z"
-- deploymentReviewSummary: {"deploymentPublicArticles":3,"duplicateFiles":0,"items":10,"itemsWithChecklists":10,"itemsWithCommandBoundary":10,"itemsWithOfficialSources":10,"itemsWithSearchQueries":10,"reviewReadyDeploymentDrafts":208,"safeDraftItems":10,"topicsCovered":10,"topicsWithoutPublicCoverage":8,"unsafeItems":0,"uniqueFiles":10}
-- industryPromptModuleGeneratedAt: "2026-06-14T10:39:00.200Z"
-- industryPromptModuleSummary: {"humanGatedItems":12,"items":12,"itemsWithCopyPrompts":12,"itemsWithInputOutputStructure":12,"itemsWithReviewPackCandidate":11,"itemsWithRiskControls":12,"itemsWithSourceTargets":12,"modulesPerOpportunityMax":5,"modulesPerOpportunityMin":5,"promptBlueprints":60,"sourceOpportunityModules":60,"sourceOpportunityUnsafeItems":0,"sourceReviewPackUnsafeItems":0,"unsafeItems":0,"zeroPublicCoverageItems":12}
+- deploymentReviewGeneratedAt: "2026-06-16T07:01:17.007Z"
+- deploymentReviewSummary: {"deploymentPublicArticles":179,"duplicateFiles":0,"items":6,"itemsWithChecklists":6,"itemsWithCommandBoundary":6,"itemsWithOfficialSources":6,"itemsWithSearchQueries":6,"reviewReadyDeploymentDrafts":32,"safeDraftItems":6,"topicsCovered":6,"topicsWithoutPublicCoverage":0,"unsafeItems":0,"uniqueFiles":6}
+- industryPromptModuleGeneratedAt: "2026-06-16T07:01:19.351Z"
+- industryPromptModuleSummary: {"humanGatedItems":12,"items":12,"itemsWithCopyPrompts":12,"itemsWithInputOutputStructure":12,"itemsWithReviewPackCandidate":0,"itemsWithRiskControls":12,"itemsWithSourceTargets":12,"modulesPerOpportunityMax":5,"modulesPerOpportunityMin":5,"promptBlueprints":60,"sourceOpportunityModules":60,"sourceOpportunityUnsafeItems":0,"sourceReviewPackUnsafeItems":0,"unsafeItems":0,"zeroPublicCoverageItems":0}
 - officialSourceSignals: ["Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview","Dify docs: https://docs.dify.ai","Hugging Face docs: https://huggingface.co/docs","LangChain docs: https://python.langchain.com/docs","LlamaIndex docs: https://docs.llamaindex.ai","n8n docs: https://docs.n8n.io","Ollama docs: https://docs.ollama.com","OpenAI Agents docs: https://platform.openai.com/docs/guides/agents","OpenAI API docs: https://platform.openai.com/docs","OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering","OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval","Vercel AI SDK docs: https://ai-sdk.dev/docs","vLLM docs: https://docs.vllm.ai"]
 - trafficNote: "Search seeds and gap scores are editorial planning signals only; this matrix does not claim keyword volume, rankings, impressions, clicks, traffic, or revenue."
 
@@ -56,13 +56,13 @@ This report is read-only. It turns broad AI search demand into human-review wave
 
 | Wave | Ready | Public | Candidates | Sources | Seeds | Deploy bridges | Prompt bridges | Lane | Theme |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | true | 38 | 8 | 3 | 4 | 0 | 0 | model-deployment | AI app and model API deployment |
-| 1 | true | 28 | 4 | 3 | 4 | 0 | 0 | agent-memory-rag | RAG, knowledge base, and agent memory |
+| 1 | true | 38 | 8 | 4 | 12 | 2 | 0 | model-deployment | AI app and model API deployment |
+| 1 | true | 28 | 4 | 4 | 8 | 1 | 0 | agent-memory-rag | RAG, knowledge base, and agent memory |
 | 1 | true | 51 | 8 | 2 | 4 | 0 | 0 | prompt-library | Cross-industry AI prompt templates |
 | 2 | false | 35 | 0 | 3 | 4 | 0 | 0 | agent-deployment | Agent deployment, tool calling, and production workflows |
-| 2 | true | 14 | 1 | 3 | 4 | 0 | 0 | rag-memory | Local and open-source model deployment |
+| 2 | true | 14 | 1 | 3 | 8 | 1 | 0 | rag-memory | Local and open-source model deployment |
 | 2 | true | 117 | 8 | 3 | 4 | 0 | 0 | rag-memory | AI service pricing, scope, and delivery |
-| 3 | true | 7 | 2 | 2 | 4 | 0 | 0 | model-deployment | LLM serving, GPU, and managed inference |
+| 3 | true | 7 | 2 | 2 | 8 | 1 | 0 | model-deployment | LLM serving, GPU, and managed inference |
 | 3 | false | 15 | 0 | 2 | 4 | 0 | 0 | broad-ai-operations | Business AI workflows and SOP templates |
 
 ## Wave Details
@@ -74,7 +74,7 @@ This report is read-only. It turns broad AI search demand into human-review wave
 - Traffic claim: not-included
 - Public matches: 38
 - Candidate files: content/blog/vercel-ai-gateway-multi-provider-guide.mdx, content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx, content/blog/vllm-deployment-beginner-guide.mdx, content/blog/vercel-deploy-checklist-template.mdx, content/blog/vercel-deploy-checklist-template-checklist.mdx, content/blog/vercel-vs-netlify-small-site.mdx, content/blog/vercel-vs-netlify-small-site-checklist.mdx, content/blog/vercel-404-after-deploy.mdx
-- Bridge sources: content/automation/broad-search-demand-map.json
+- Bridge sources: content/automation/broad-search-demand-map.json, content/automation/ai-deployment-review-pack.json
 
 Search seeds:
 
@@ -82,12 +82,21 @@ Search seeds:
 - OpenAI API deployment
 - Vercel AI SDK deployment
 - Claude API Next.js deployment
+- 大模型部署教程
+- AI 应用部署教程
+- OpenAI API 部署教程
+- Vercel AI SDK 部署
+- Vercel build failed
+- Vercel 部署后 404
+- API Key 无效或缺失
+- 环境变量缺失怎么办
 
 Source targets:
 
 - OpenAI API docs: https://platform.openai.com/docs
 - Vercel AI SDK docs: https://ai-sdk.dev/docs
 - Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
+- Anthropic docs: https://docs.anthropic.com
 
 Human review actions:
 
@@ -100,13 +109,17 @@ Human review actions:
 - Apply theme review focus: current official docs.
 - Apply theme review focus: environment variables and API keys.
 - Apply theme review focus: rate limits, logs, rollback, and smoke checks.
+- Use deployment review candidate: content/blog/vercel-ai-gateway-multi-provider-guide.mdx.
+- Use deployment review candidate: content/blog/vercel-404-after-deploy.mdx.
 - Open source target for manual fact review: OpenAI API docs: https://platform.openai.com/docs.
 - Open source target for manual fact review: Vercel AI SDK docs: https://ai-sdk.dev/docs.
 - Open source target for manual fact review: Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview.
+- Open source target for manual fact review: Anthropic docs: https://docs.anthropic.com.
 - Confirm the draft answers search seed: AI app deployment tutorial.
 - Confirm the draft answers search seed: OpenAI API deployment.
 - Confirm the draft answers search seed: Vercel AI SDK deployment.
 - Confirm the draft answers search seed: Claude API Next.js deployment.
+- Confirm the draft answers search seed: 大模型部署教程.
 
 Prompt blueprint samples:
 
@@ -119,7 +132,7 @@ Prompt blueprint samples:
 - Traffic claim: not-included
 - Public matches: 28
 - Candidate files: content/blog/together-ai-api-beginner-guide.mdx, content/blog/vector-database-selection-for-rag-guide.mdx, content/blog/supabase-pgvector-rag-guide.mdx, content/blog/vector-database-beginner-guide.mdx
-- Bridge sources: content/automation/broad-search-demand-map.json
+- Bridge sources: content/automation/broad-search-demand-map.json, content/automation/ai-deployment-review-pack.json
 
 Search seeds:
 
@@ -127,12 +140,17 @@ Search seeds:
 - AI agent memory
 - vector database RAG
 - enterprise knowledge base AI
+- RAG 知识库搭建教程
+- 企业知识库 AI 部署
+- 向量数据库 RAG 教程
+- RAG 评测怎么做
 
 Source targets:
 
 - OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
 - LangChain docs: https://python.langchain.com/docs
 - LlamaIndex docs: https://docs.llamaindex.ai
+- Hugging Face docs: https://huggingface.co/docs
 
 Human review actions:
 
@@ -146,13 +164,16 @@ Human review actions:
 - Apply theme review focus: chunking and embeddings.
 - Apply theme review focus: citations.
 - Apply theme review focus: evaluation and privacy.
+- Use deployment review candidate: content/blog/together-ai-api-beginner-guide.mdx.
 - Open source target for manual fact review: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval.
 - Open source target for manual fact review: LangChain docs: https://python.langchain.com/docs.
 - Open source target for manual fact review: LlamaIndex docs: https://docs.llamaindex.ai.
+- Open source target for manual fact review: Hugging Face docs: https://huggingface.co/docs.
 - Confirm the draft answers search seed: RAG knowledge base tutorial.
 - Confirm the draft answers search seed: AI agent memory.
 - Confirm the draft answers search seed: vector database RAG.
 - Confirm the draft answers search seed: enterprise knowledge base AI.
+- Confirm the draft answers search seed: RAG 知识库搭建教程.
 
 Prompt blueprint samples:
 
@@ -256,7 +277,7 @@ Prompt blueprint samples:
 - Traffic claim: not-included
 - Public matches: 14
 - Candidate files: content/blog/tensorrt-llm-beginner-guide.mdx
-- Bridge sources: content/automation/broad-search-demand-map.json
+- Bridge sources: content/automation/broad-search-demand-map.json, content/automation/ai-deployment-review-pack.json
 
 Search seeds:
 
@@ -264,6 +285,10 @@ Search seeds:
 - Ollama local model tutorial
 - Open WebUI deployment
 - local AI model GPU memory
+- vLLM 部署教程
+- TGI 部署教程
+- RunPod Serverless 大模型部署
+- Modal Serverless GPU LLM
 
 Source targets:
 
@@ -283,6 +308,7 @@ Human review actions:
 - Apply theme review focus: model size and quantization.
 - Apply theme review focus: local API exposure.
 - Apply theme review focus: privacy caveats.
+- Use deployment review candidate: content/blog/tensorrt-llm-beginner-guide.mdx.
 - Open source target for manual fact review: Ollama docs: https://docs.ollama.com.
 - Open source target for manual fact review: Hugging Face docs: https://huggingface.co/docs.
 - Open source target for manual fact review: vLLM docs: https://docs.vllm.ai.
@@ -290,6 +316,7 @@ Human review actions:
 - Confirm the draft answers search seed: Ollama local model tutorial.
 - Confirm the draft answers search seed: Open WebUI deployment.
 - Confirm the draft answers search seed: local AI model GPU memory.
+- Confirm the draft answers search seed: vLLM 部署教程.
 
 Prompt blueprint samples:
 
@@ -348,7 +375,7 @@ Prompt blueprint samples:
 - Traffic claim: not-included
 - Public matches: 7
 - Candidate files: content/blog/tensorrt-llm-beginner-guide.mdx, content/blog/vllm-deployment-beginner-guide.mdx
-- Bridge sources: content/automation/broad-search-demand-map.json
+- Bridge sources: content/automation/broad-search-demand-map.json, content/automation/ai-deployment-review-pack.json
 
 Search seeds:
 
@@ -356,6 +383,10 @@ Search seeds:
 - Hugging Face TGI deployment
 - RunPod serverless LLM
 - serverless GPU LLM deployment
+- vLLM 部署教程
+- TGI 部署教程
+- RunPod Serverless 大模型部署
+- Modal Serverless GPU LLM
 
 Source targets:
 
@@ -374,12 +405,14 @@ Human review actions:
 - Apply theme review focus: cold starts and concurrency.
 - Apply theme review focus: GPU cost.
 - Apply theme review focus: autoscaling and monitoring.
+- Use deployment review candidate: content/blog/tensorrt-llm-beginner-guide.mdx.
 - Open source target for manual fact review: vLLM docs: https://docs.vllm.ai.
 - Open source target for manual fact review: Hugging Face docs: https://huggingface.co/docs.
 - Confirm the draft answers search seed: vLLM deployment tutorial.
 - Confirm the draft answers search seed: Hugging Face TGI deployment.
 - Confirm the draft answers search seed: RunPod serverless LLM.
 - Confirm the draft answers search seed: serverless GPU LLM deployment.
+- Confirm the draft answers search seed: vLLM 部署教程.
 
 Prompt blueprint samples:
 

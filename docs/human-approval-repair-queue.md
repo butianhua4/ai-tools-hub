@@ -1,6 +1,6 @@
 # Human Approval Repair Queue
 
-Generated at: 2026-06-16T07:01:37.051Z
+Generated at: 2026-06-16T12:27:37.966Z
 
 This report is read-only. It breaks repair-before-review candidates into task-level work and stops before any status change.
 
@@ -25,14 +25,14 @@ This report is read-only. It breaks repair-before-review candidates into task-le
 - Approval items: 3
 - Repair-before-review items: 1
 - Files with tasks: 3
-- Tasks: 56
+- Tasks: 55
 - Minimum path files/tasks: 3/16
 - Blocker files/tasks: 0/0
-- Human-gated tasks: 56
+- Human-gated tasks: 55
 - Unsafe items: 0
 - Traffic data available: false
-- Tasks by category: {"source-url":15,"source-review":3,"search-intent":20,"internal-link":14,"copydesk":1,"approval-boundary":3}
-- Tasks by severity: {"high":18,"medium":38}
+- Tasks by category: {"source-url":15,"source-review":3,"search-intent":20,"internal-link":13,"copydesk":1,"approval-boundary":3}
+- Tasks by severity: {"high":18,"medium":37}
 
 ## Source Evidence
 
@@ -81,7 +81,7 @@ This report is read-only. It breaks repair-before-review candidates into task-le
 | 867 | high | source-url | Verify source URLs and fact-check queries before mark:review. | Reviewer confirms final source URL is canonical or replaces it with an accessible equivalent. |
 | 807 | high | source-review | Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported. | Reviewer records source/fact-check confirmation and removes unsupported claims. |
 | 707 | medium | search-intent | Resolve search weakness: no exact search query appears in title. | Primary query or accepted equivalent appears naturally in title, description, opening, and headings/body. |
-| 667 | medium | internal-link | Add one contextual public article link during human review. | Draft contains at least one contextual link to a currently published relevant article. |
+| 667 | medium | internal-link | Apply or explicitly reject the internal-link suggestion before mark:review. | Draft contains at least one contextual link to a currently published relevant article. |
 | 567 | medium | approval-boundary | Publishing remains a separate explicit approval step. | Draft remains status=draft, noindex=true, humanReviewRequired=true until explicit approval. |
 
 ### Vercel 部署成功但页面 404：新手排查顺序
@@ -98,7 +98,7 @@ This report is read-only. It breaks repair-before-review candidates into task-le
 | 837 | high | source-url | Verify source URLs and fact-check queries before mark:review. | Reviewer confirms final source URL is canonical or replaces it with an accessible equivalent. |
 | 777 | high | source-review | Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported. | Reviewer records source/fact-check confirmation and removes unsupported claims. |
 | 677 | medium | search-intent | Resolve search weakness: no exact search query appears in title. | Primary query or accepted equivalent appears naturally in title, description, opening, and headings/body. |
-| 637 | medium | internal-link | Add one contextual public article link during human review. | Draft contains at least one contextual link to a currently published relevant article. |
+| 637 | medium | internal-link | Apply or explicitly reject the internal-link suggestion before mark:review. | Draft contains at least one contextual link to a currently published relevant article. |
 | 537 | medium | approval-boundary | Publishing remains a separate explicit approval step. | Draft remains status=draft, noindex=true, humanReviewRequired=true until explicit approval. |
 
 
@@ -186,9 +186,8 @@ This report is read-only. It breaks repair-before-review candidates into task-le
 - [medium] search-intent: Resolve search weakness: no exact search query appears in description.
 - [medium] search-intent: Review reason: 4 search-intent weakness(es) need human copy review.
 - [medium] search-intent: Resolve or explicitly accept search-intent weaknesses before mark:review.
-- [medium] internal-link: Add at least one contextual link to a currently published article before approval.
-- [medium] internal-link: Add one contextual public article link during human review.
-- [medium] internal-link: Review reason: approval candidate has no current link to a published article.
+- [medium] internal-link: Suggested public link: OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai.
+- [medium] internal-link: Suggested public link: Groq API 怎么接入：高速推理适合什么 AI 应用 (/blog/groq-api-fast-llm-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai.
 - [medium] internal-link: Apply or explicitly reject the internal-link suggestion before mark:review.
 - [medium] internal-link: Only after explicit human approval, run: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human
 - [medium] approval-boundary: Publishing remains a separate explicit approval step.
@@ -213,7 +212,7 @@ This report is read-only. It breaks repair-before-review candidates into task-le
 - [medium] search-intent: Review reason: 2 search-intent weakness(es) need human copy review.
 - [medium] search-intent: Resolve or explicitly accept search-intent weaknesses before mark:review.
 - [medium] internal-link: Add at least one contextual link to a currently published article before approval.
-- [medium] internal-link: Add one contextual public article link during human review.
+- [medium] internal-link: Suggested public link: Next.js hydration error 怎么排查：使用前怎么判断是否适合 (/blog/nextjs-hydration-error-debug-freelance-scope) - same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, next, js.
 - [medium] internal-link: Review reason: approval candidate has no current link to a published article.
 - [medium] internal-link: Apply or explicitly reject the internal-link suggestion before mark:review.
 - [medium] internal-link: Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human

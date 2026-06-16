@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:38.963Z",
+  "generatedAt": "2026-06-16T12:27:39.821Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -14,7 +14,7 @@
     "trafficDataAvailable": false
   },
   "sourceEvidence": {
-    "autopilotQueueUnsafeItems": 8,
+    "autopilotQueueUnsafeItems": 0,
     "humanReviewPlaybookUnsafeItems": 2,
     "queueNextAssignments": 8
   },

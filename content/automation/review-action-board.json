@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:26.238Z",
+  "generatedAt": "2026-06-16T12:27:27.358Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -17,20 +17,20 @@
     }
   },
   "sourceHealth": {
-    "checkedUrls": 38,
-    "broadFirstCoverageFiles": 8,
+    "checkedUrls": 14,
+    "broadFirstCoverageFiles": 0,
     "currentReviewFiles": 3,
-    "failedUrls": 1,
-    "filesCovered": 24,
-    "filesWithReachableSource": 24,
+    "failedUrls": 0,
+    "filesCovered": 16,
+    "filesWithReachableSource": 16,
     "filesWithoutReachableSource": 0,
     "missingUrlTargets": 0,
     "nextSourcePackFiles": 15,
-    "okUrls": 37,
-    "publicGapDecisionFiles": 8,
-    "redirectedUrls": 17,
-    "sourceReferences": 202,
-    "uniqueUrls": 38
+    "okUrls": 14,
+    "publicGapDecisionFiles": 0,
+    "redirectedUrls": 10,
+    "sourceReferences": 86,
+    "uniqueUrls": 14
   },
   "trafficBoundary": {
     "canClaimTraffic": false,
@@ -38,10 +38,10 @@
   },
   "summary": {
     "publicGapReadyTasks": 0,
-    "publicGapTasks": 8,
+    "publicGapTasks": 0,
     "readyTasks": 2,
-    "tasks": 11,
-    "unsafeTasks": 9,
+    "tasks": 3,
+    "unsafeTasks": 1,
     "waveReadyTasks": 2,
     "waveTasks": 3
   },
@@ -51,7 +51,7 @@
         "Read the article end to end and confirm the opening answer matches search intent.",
         "Open 7 official source target(s) and verify fast-changing claims.",
         "Run through 5 risk review checks.",
-        "Confirm public internal link plan before publishing.",
+        "Choose or reject public internal link suggestion: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide).",
         "Confirm snippet and structured-data checks remain clean."
       ],
       "blockers": [
@@ -71,246 +71,6 @@
       "sourceTargets": 7,
       "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
       "warnings": []
-    },
-    {
-      "actionItems": [
-        "Review theme gap: 开源大模型部署：Ollama、vLLM、TGI、RunPod.",
-        "Verify 10 source target(s) and source freshness.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Choose or reject public internal link suggestion: 本地部署大模型显存不够怎么办：量化、上下文、并发和换模型 (/blog/local-llm-vram-not-enough-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 800,
-      "ready": false,
-      "scope": "public-gap-wave-1",
-      "sourceTargets": 20,
-      "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查",
-      "warnings": [
-        "no exact search-seed phrase appears in title, description, or body"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: Agent 部署、工具调用和生产安全.",
-        "Verify 8 source target(s) and source freshness.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Choose or reject public internal link suggestion: Codex 修改现有网页 UI 使用前怎么判断是否适合 (/blog/codex-edit-existing-ui-freelance-scope)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 795,
-      "ready": false,
-      "scope": "public-gap-wave-1",
-      "sourceTargets": 16,
-      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
-      "warnings": [
-        "no exact search-seed phrase appears in title, description, or body"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: RAG、知识库、向量数据库和引用溯源.",
-        "Verify 11 source target(s) and source freshness.",
-        "Tighten the meta description so it states the search intent, audience, and outcome clearly.",
-        "Check whether the title should include the primary keyword naturally, or whether the current wording better matches intent.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Choose or reject public internal link suggestion: n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 (/blog/n8n-ai-agent-rag-memory-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 779,
-      "ready": false,
-      "scope": "public-gap-wave-2",
-      "sourceTargets": 22,
-      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
-      "warnings": [
-        "description may be thin for search snippets",
-        "primary keyword is not an exact title substring",
-        "no exact search-seed phrase appears in title, description, or body",
-        "description may be thin for search snippets",
-        "primary keyword is not an exact title substring"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: Agent 记忆：短期记忆、长期记忆、RAG、Postgres.",
-        "Verify 3 source target(s) and source freshness.",
-        "Check whether the title should include the primary keyword naturally, or whether the current wording better matches intent.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Choose or reject public internal link suggestion: AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 (/blog/ai-agent-memory-rag-design-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 764,
-      "ready": false,
-      "scope": "public-gap-wave-2",
-      "sourceTargets": 6,
-      "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储",
-      "warnings": [
-        "primary keyword is not an exact title substring",
-        "no exact search-seed phrase appears in title, description, or body",
-        "primary keyword is not an exact title substring"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: 全行业 AI 提示词和工作流模板.",
-        "Verify 8 source target(s) and source freshness.",
-        "Resolve all blocking issues before any review or publishing command.",
-        "Choose or reject public internal link suggestion: 销售 AI 提示词模板：客户画像、跟进话术、异议处理和会议纪要 (/blog/sales-ai-prompts-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
-      "kind": "public-gap-review",
-      "priority": 750,
-      "ready": false,
-      "scope": "public-gap-wave-3",
-      "sourceTargets": 16,
-      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
-      "warnings": []
-    },
-    {
-      "actionItems": [
-        "Review theme gap: Dify、n8n、Coze、Flowise、MCP 自动化部署.",
-        "Verify 3 source target(s) and source freshness.",
-        "Check whether the title should include the primary keyword naturally, or whether the current wording better matches intent.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Choose or reject public internal link suggestion: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/mcp-server-deployment-security-checklist.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
-      "kind": "public-gap-review",
-      "priority": 741,
-      "ready": false,
-      "scope": "public-gap-wave-3",
-      "sourceTargets": 6,
-      "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单",
-      "warnings": [
-        "primary keyword is not an exact title substring",
-        "no exact search-seed phrase appears in title, description, or body",
-        "primary keyword is not an exact title substring"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: AI API 接入、限流、成本和多模型路由.",
-        "Verify 12 source target(s) and source freshness.",
-        "Check whether the title should include the primary keyword naturally, or whether the current wording better matches intent.",
-        "Choose or reject public internal link suggestion: Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 (/blog/dify-workflow-error-handling-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 738,
-      "ready": false,
-      "scope": "public-gap-wave-4",
-      "sourceTargets": 24,
-      "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
-      "warnings": [
-        "primary keyword is not an exact title substring",
-        "primary keyword is not an exact title substring"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: LLM 观测、评测、日志和上线后质量.",
-        "Verify 3 source target(s) and source freshness.",
-        "Check whether the title should include the primary keyword naturally, or whether the current wording better matches intent.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Add or approve one concrete subsection that matches the target search intent without keyword stuffing.",
-        "Choose or reject public internal link suggestion: MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 (/blog/mcp-server-deployment-security-checklist)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/agent-tool-permission-safety-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/agent-tool-permission-safety-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 719,
-      "ready": false,
-      "scope": "public-gap-wave-4",
-      "sourceTargets": 6,
-      "title": "Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志",
-      "warnings": [
-        "primary keyword is not an exact title substring",
-        "no exact search-seed phrase appears in title, description, or body",
-        "few search-seed token families appear in article text",
-        "primary keyword is not an exact title substring"
-      ]
     }
   ],
   "nextTasks": [
@@ -421,7 +181,7 @@
         "Read the article end to end and confirm the opening answer matches search intent.",
         "Open 7 official source target(s) and verify fast-changing claims.",
         "Run through 5 risk review checks.",
-        "Confirm public internal link plan before publishing.",
+        "Choose or reject public internal link suggestion: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide).",
         "Confirm snippet and structured-data checks remain clean."
       ],
       "blockers": [
@@ -441,246 +201,6 @@
       "sourceTargets": 7,
       "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
       "warnings": []
-    },
-    {
-      "actionItems": [
-        "Review theme gap: 开源大模型部署：Ollama、vLLM、TGI、RunPod.",
-        "Verify 10 source target(s) and source freshness.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Choose or reject public internal link suggestion: 本地部署大模型显存不够怎么办：量化、上下文、并发和换模型 (/blog/local-llm-vram-not-enough-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 800,
-      "ready": false,
-      "scope": "public-gap-wave-1",
-      "sourceTargets": 20,
-      "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查",
-      "warnings": [
-        "no exact search-seed phrase appears in title, description, or body"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: Agent 部署、工具调用和生产安全.",
-        "Verify 8 source target(s) and source freshness.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Choose or reject public internal link suggestion: Codex 修改现有网页 UI 使用前怎么判断是否适合 (/blog/codex-edit-existing-ui-freelance-scope)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 795,
-      "ready": false,
-      "scope": "public-gap-wave-1",
-      "sourceTargets": 16,
-      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
-      "warnings": [
-        "no exact search-seed phrase appears in title, description, or body"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: RAG、知识库、向量数据库和引用溯源.",
-        "Verify 11 source target(s) and source freshness.",
-        "Tighten the meta description so it states the search intent, audience, and outcome clearly.",
-        "Check whether the title should include the primary keyword naturally, or whether the current wording better matches intent.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Choose or reject public internal link suggestion: n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 (/blog/n8n-ai-agent-rag-memory-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 779,
-      "ready": false,
-      "scope": "public-gap-wave-2",
-      "sourceTargets": 22,
-      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
-      "warnings": [
-        "description may be thin for search snippets",
-        "primary keyword is not an exact title substring",
-        "no exact search-seed phrase appears in title, description, or body",
-        "description may be thin for search snippets",
-        "primary keyword is not an exact title substring"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: Agent 记忆：短期记忆、长期记忆、RAG、Postgres.",
-        "Verify 3 source target(s) and source freshness.",
-        "Check whether the title should include the primary keyword naturally, or whether the current wording better matches intent.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Choose or reject public internal link suggestion: AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 (/blog/ai-agent-memory-rag-design-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 764,
-      "ready": false,
-      "scope": "public-gap-wave-2",
-      "sourceTargets": 6,
-      "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储",
-      "warnings": [
-        "primary keyword is not an exact title substring",
-        "no exact search-seed phrase appears in title, description, or body",
-        "primary keyword is not an exact title substring"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: 全行业 AI 提示词和工作流模板.",
-        "Verify 8 source target(s) and source freshness.",
-        "Resolve all blocking issues before any review or publishing command.",
-        "Choose or reject public internal link suggestion: 销售 AI 提示词模板：客户画像、跟进话术、异议处理和会议纪要 (/blog/sales-ai-prompts-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
-      "kind": "public-gap-review",
-      "priority": 750,
-      "ready": false,
-      "scope": "public-gap-wave-3",
-      "sourceTargets": 16,
-      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
-      "warnings": []
-    },
-    {
-      "actionItems": [
-        "Review theme gap: Dify、n8n、Coze、Flowise、MCP 自动化部署.",
-        "Verify 3 source target(s) and source freshness.",
-        "Check whether the title should include the primary keyword naturally, or whether the current wording better matches intent.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Choose or reject public internal link suggestion: Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 (/blog/agent-human-review-loop-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/mcp-server-deployment-security-checklist.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
-      "kind": "public-gap-review",
-      "priority": 741,
-      "ready": false,
-      "scope": "public-gap-wave-3",
-      "sourceTargets": 6,
-      "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单",
-      "warnings": [
-        "primary keyword is not an exact title substring",
-        "no exact search-seed phrase appears in title, description, or body",
-        "primary keyword is not an exact title substring"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: AI API 接入、限流、成本和多模型路由.",
-        "Verify 12 source target(s) and source freshness.",
-        "Check whether the title should include the primary keyword naturally, or whether the current wording better matches intent.",
-        "Choose or reject public internal link suggestion: Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 (/blog/dify-workflow-error-handling-guide)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 738,
-      "ready": false,
-      "scope": "public-gap-wave-4",
-      "sourceTargets": 24,
-      "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
-      "warnings": [
-        "primary keyword is not an exact title substring",
-        "primary keyword is not an exact title substring"
-      ]
-    },
-    {
-      "actionItems": [
-        "Review theme gap: LLM 观测、评测、日志和上线后质量.",
-        "Verify 3 source target(s) and source freshness.",
-        "Check whether the title should include the primary keyword naturally, or whether the current wording better matches intent.",
-        "During human review, decide whether the title, description, or opening section should naturally include one search-seed variant.",
-        "Add or approve one concrete subsection that matches the target search intent without keyword stuffing.",
-        "Choose or reject public internal link suggestion: MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 (/blog/mcp-server-deployment-security-checklist)."
-      ],
-      "blockers": [
-        "public gap item is not ready for manual review",
-        "public gap decision is blocked"
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/agent-tool-permission-safety-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/agent-tool-permission-safety-guide.mdx",
-      "kind": "public-gap-review",
-      "priority": 719,
-      "ready": false,
-      "scope": "public-gap-wave-4",
-      "sourceTargets": 6,
-      "title": "Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志",
-      "warnings": [
-        "primary keyword is not an exact title substring",
-        "no exact search-seed phrase appears in title, description, or body",
-        "few search-seed token families appear in article text",
-        "primary keyword is not an exact title substring"
-      ]
     }
   ]
 }

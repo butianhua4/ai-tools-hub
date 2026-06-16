@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:12.428Z",
+  "generatedAt": "2026-06-16T12:27:14.092Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -66,8 +66,8 @@
           ],
           "laneAudience": "Teams building customer support bots, internal knowledge assistants, and document Q&A.",
           "laneId": "rag-knowledge-memory",
-          "lanePriorityReason": "demandScore=10; public coverage=31; readyDrafts=4; currentPack=1",
-          "lanePriorityScore": 196,
+          "lanePriorityReason": "demandScore=10; public coverage=31; readyDrafts=4; currentPack=1; wave1=2",
+          "lanePriorityScore": 224,
           "laneTitle": "RAG, knowledge base, and Agent memory",
           "noindex": true,
           "primaryKeyword": "RAG 向量数据库怎么选",
@@ -99,7 +99,7 @@
           ],
           "status": "draft",
           "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
-          "wave1": false,
+          "wave1": true,
           "wordCountChinese": 1209,
           "workflowAngles": [
             "document cleanup",
@@ -133,8 +133,8 @@
           ],
           "laneAudience": "Developers integrating OpenAI, Claude, Gemini, OpenRouter, and multi-model routing.",
           "laneId": "model-api-integration",
-          "lanePriorityReason": "demandScore=9; public coverage=28; readyDrafts=2; currentPack=1",
-          "lanePriorityScore": 164,
+          "lanePriorityReason": "demandScore=9; public coverage=28; readyDrafts=2; currentPack=1; wave1=1",
+          "lanePriorityScore": 180,
           "laneTitle": "Model API integration, rate limits, and multi-model fallback",
           "noindex": true,
           "primaryKeyword": "Vercel AI Gateway 多模型",
@@ -166,7 +166,7 @@
           ],
           "status": "draft",
           "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
-          "wave1": false,
+          "wave1": true,
           "wordCountChinese": 1246,
           "workflowAngles": [
             "server-side calls",
@@ -200,8 +200,8 @@
           ],
           "laneAudience": "Teams building customer support bots, internal knowledge assistants, and document Q&A.",
           "laneId": "rag-knowledge-memory",
-          "lanePriorityReason": "demandScore=10; public coverage=31; readyDrafts=4; currentPack=1",
-          "lanePriorityScore": 196,
+          "lanePriorityReason": "demandScore=10; public coverage=31; readyDrafts=4; currentPack=1; wave1=2",
+          "lanePriorityScore": 224,
           "laneTitle": "RAG, knowledge base, and Agent memory",
           "noindex": true,
           "primaryKeyword": "Supabase pgvector",
@@ -233,7 +233,7 @@
           ],
           "status": "draft",
           "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
-          "wave1": false,
+          "wave1": true,
           "wordCountChinese": 1255,
           "workflowAngles": [
             "document cleanup",
@@ -264,18 +264,62 @@
     {
       "files": [
         "content/blog/tensorrt-llm-beginner-guide.mdx",
-        "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
-        "content/blog/vercel-404-after-deploy-checklist.mdx"
+        "content/blog/vllm-deployment-beginner-guide.mdx",
+        "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx"
       ],
-      "focus": "Large model deployment, LLM serving, and GPU infrastructure + AI Agent deployment, tool calling, and production workflow + AI app deployment errors and beginner troubleshooting",
+      "focus": "AI automation service pricing, scope, and delivery checklist + Large model deployment, LLM serving, and GPU infrastructure + AI Agent deployment, tool calling, and production workflow",
       "items": [
         {
           "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
-          "laneId": "llm-deployment-serving",
-          "lanePriorityScore": 172,
-          "laneTitle": "Large model deployment, LLM serving, and GPU infrastructure",
+          "laneId": "ai-service-pricing-scope",
+          "lanePriorityScore": 186,
+          "laneTitle": "AI automation service pricing, scope, and delivery checklist",
           "primaryKeyword": "TensorRT-LLM 入门",
           "publishBatch": 29,
+          "qualityScore": 86,
+          "readyForHumanReview": true,
+          "riskChecks": [
+            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+            "No API key, private customer data, credential, or bypass instruction is included.",
+            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+            "Article-specific operational and safety boundaries are explicit."
+          ],
+          "safeDraft": true,
+          "sourceTargets": [
+            "OpenAI API docs: https://platform.openai.com/docs",
+            "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+            "Dify docs: https://docs.dify.ai"
+          ],
+          "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+          "intentSeeds": [
+            "AI 自动化项目报价",
+            "AI Agent 项目",
+            "RAG 项目报价",
+            "Dify n8n 报价"
+          ],
+          "reviewFocus": [
+            "scope boundaries",
+            "acceptance criteria",
+            "maintenance fee",
+            "risk disclaimers",
+            "no income guarantees"
+          ],
+          "wave": 2,
+          "workflowAngles": [
+            "scope",
+            "pricing",
+            "acceptance",
+            "maintenance",
+            "risk language"
+          ]
+        },
+        {
+          "file": "content/blog/vllm-deployment-beginner-guide.mdx",
+          "laneId": "llm-deployment-serving",
+          "lanePriorityScore": 180,
+          "laneTitle": "Large model deployment, LLM serving, and GPU infrastructure",
+          "primaryKeyword": "vLLM 部署",
+          "publishBatch": 22,
           "qualityScore": 86,
           "readyForHumanReview": true,
           "riskChecks": [
@@ -291,7 +335,7 @@
             "OpenAI API docs: https://platform.openai.com/docs",
             "Modal docs: https://modal.com/docs"
           ],
-          "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+          "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
           "intentSeeds": [
             "大模型部署教程",
             "LLM deployment",
@@ -316,7 +360,7 @@
         {
           "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
           "laneId": "agent-deployment-tools",
-          "lanePriorityScore": 166,
+          "lanePriorityScore": 170,
           "laneTitle": "AI Agent deployment, tool calling, and production workflow",
           "primaryKeyword": "Vercel AI SDK 聊天机器人部署",
           "publishBatch": 26,
@@ -356,11 +400,38 @@
             "observability",
             "permissions"
           ]
-        },
+        }
+      ],
+      "laneCount": 3,
+      "lanes": [
+        "AI automation service pricing, scope, and delivery checklist",
+        "Large model deployment, LLM serving, and GPU infrastructure",
+        "AI Agent deployment, tool calling, and production workflow"
+      ],
+      "readyItems": 3,
+      "riskChecks": [
+        "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+        "No API key, private customer data, credential, or bypass instruction is included.",
+        "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+        "Article-specific operational and safety boundaries are explicit.",
+        "GPU, memory, serving, concurrency, cold-start, and cost tradeoffs are framed as checks, not guarantees.",
+        "Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit."
+      ],
+      "sourceTargetCount": 10,
+      "wave": 2
+    },
+    {
+      "files": [
+        "content/blog/vercel-404-after-deploy-checklist.mdx",
+        "content/blog/vercel-build-failed-causes-checklist.mdx",
+        "content/blog/together-ai-api-beginner-guide.mdx"
+      ],
+      "focus": "AI app deployment errors and beginner troubleshooting + LLM observability, evaluation, and production quality + RAG, knowledge base, and Agent memory",
+      "items": [
         {
           "file": "content/blog/vercel-404-after-deploy-checklist.mdx",
           "laneId": "deployment-troubleshooting",
-          "lanePriorityScore": 162,
+          "lanePriorityScore": 170,
           "laneTitle": "AI app deployment errors and beginner troubleshooting",
           "primaryKeyword": "Vercel 部署后 404 检查清单",
           "publishBatch": 15,
@@ -391,84 +462,13 @@
             "verification command",
             "avoid overgeneralized fixes"
           ],
-          "wave": 2,
+          "wave": 3,
           "workflowAngles": [
             "error log",
             "reproduction",
             "fix sequence",
             "verification",
             "handoff boundary"
-          ]
-        }
-      ],
-      "laneCount": 3,
-      "lanes": [
-        "Large model deployment, LLM serving, and GPU infrastructure",
-        "AI Agent deployment, tool calling, and production workflow",
-        "AI app deployment errors and beginner troubleshooting"
-      ],
-      "readyItems": 3,
-      "riskChecks": [
-        "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
-        "No API key, private customer data, credential, or bypass instruction is included.",
-        "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-        "GPU, memory, serving, concurrency, cold-start, and cost tradeoffs are framed as checks, not guarantees.",
-        "Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit.",
-        "Article-specific operational and safety boundaries are explicit."
-      ],
-      "sourceTargetCount": 9,
-      "wave": 2
-    },
-    {
-      "files": [
-        "content/blog/vllm-deployment-beginner-guide.mdx",
-        "content/blog/vercel-build-failed-causes-checklist.mdx",
-        "content/blog/together-ai-api-beginner-guide.mdx"
-      ],
-      "focus": "AI automation service pricing, scope, and delivery checklist + LLM observability, evaluation, and production quality + RAG, knowledge base, and Agent memory",
-      "items": [
-        {
-          "file": "content/blog/vllm-deployment-beginner-guide.mdx",
-          "laneId": "ai-service-pricing-scope",
-          "lanePriorityScore": 162,
-          "laneTitle": "AI automation service pricing, scope, and delivery checklist",
-          "primaryKeyword": "vLLM 部署",
-          "publishBatch": 22,
-          "qualityScore": 86,
-          "readyForHumanReview": true,
-          "riskChecks": [
-            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
-            "No API key, private customer data, credential, or bypass instruction is included.",
-            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-            "Article-specific operational and safety boundaries are explicit."
-          ],
-          "safeDraft": true,
-          "sourceTargets": [
-            "OpenAI API docs: https://platform.openai.com/docs",
-            "Vercel AI SDK docs: https://ai-sdk.dev/docs",
-            "Dify docs: https://docs.dify.ai"
-          ],
-          "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
-          "intentSeeds": [
-            "AI 自动化项目报价",
-            "AI Agent 项目",
-            "RAG 项目报价",
-            "Dify n8n 报价"
-          ],
-          "reviewFocus": [
-            "scope boundaries",
-            "acceptance criteria",
-            "maintenance fee",
-            "risk disclaimers",
-            "no income guarantees"
-          ],
-          "wave": 3,
-          "workflowAngles": [
-            "scope",
-            "pricing",
-            "acceptance",
-            "maintenance",
-            "risk language"
           ]
         },
         {
@@ -518,7 +518,7 @@
         {
           "file": "content/blog/together-ai-api-beginner-guide.mdx",
           "laneId": "rag-knowledge-memory",
-          "lanePriorityScore": 196,
+          "lanePriorityScore": 224,
           "laneTitle": "RAG, knowledge base, and Agent memory",
           "primaryKeyword": "Together AI API 接入",
           "publishBatch": 27,
@@ -562,7 +562,7 @@
       ],
       "laneCount": 3,
       "lanes": [
-        "AI automation service pricing, scope, and delivery checklist",
+        "AI app deployment errors and beginner troubleshooting",
         "LLM observability, evaluation, and production quality",
         "RAG, knowledge base, and Agent memory"
       ],
@@ -574,21 +574,21 @@
         "Article-specific operational and safety boundaries are explicit.",
         "Retrieval quality, citations, memory retention, privacy, and hallucination risks are explicit."
       ],
-      "sourceTargetCount": 10,
+      "sourceTargetCount": 9,
       "wave": 3
     },
     {
       "files": [
         "content/blog/vector-database-beginner-guide.mdx",
-        "content/blog/vercel-404-after-deploy-mistakes.mdx",
-        "content/blog/vercel-build-failed-causes-freelance-scope.mdx"
+        "content/blog/vercel-build-failed-causes-freelance-scope.mdx",
+        "content/blog/vercel-404-after-deploy.mdx"
       ],
-      "focus": "RAG, knowledge base, and Agent memory + AI app deployment errors and beginner troubleshooting + AI automation service pricing, scope, and delivery checklist",
+      "focus": "RAG, knowledge base, and Agent memory + AI automation service pricing, scope, and delivery checklist + AI app deployment errors and beginner troubleshooting",
       "items": [
         {
           "file": "content/blog/vector-database-beginner-guide.mdx",
           "laneId": "rag-knowledge-memory",
-          "lanePriorityScore": 196,
+          "lanePriorityScore": 224,
           "laneTitle": "RAG, knowledge base, and Agent memory",
           "primaryKeyword": "向量数据库",
           "publishBatch": 21,
@@ -630,52 +630,9 @@
           ]
         },
         {
-          "file": "content/blog/vercel-404-after-deploy-mistakes.mdx",
-          "laneId": "deployment-troubleshooting",
-          "lanePriorityScore": 162,
-          "laneTitle": "AI app deployment errors and beginner troubleshooting",
-          "primaryKeyword": "Vercel 部署后 404 常见误区",
-          "publishBatch": 15,
-          "qualityScore": 86,
-          "readyForHumanReview": true,
-          "riskChecks": [
-            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
-            "No API key, private customer data, credential, or bypass instruction is included.",
-            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-            "Article-specific operational and safety boundaries are explicit."
-          ],
-          "safeDraft": true,
-          "sourceTargets": [
-            "Vercel docs: https://vercel.com/docs",
-            "OpenAI API docs: https://platform.openai.com/docs"
-          ],
-          "title": "Vercel 部署后 404 常见误区：别只盯着域名",
-          "intentSeeds": [
-            "Vercel build failed",
-            "API Key 无效",
-            "环境变量缺失",
-            "npm command not found"
-          ],
-          "reviewFocus": [
-            "reproduction",
-            "logs",
-            "fix order",
-            "verification command",
-            "avoid overgeneralized fixes"
-          ],
-          "wave": 4,
-          "workflowAngles": [
-            "error log",
-            "reproduction",
-            "fix sequence",
-            "verification",
-            "handoff boundary"
-          ]
-        },
-        {
           "file": "content/blog/vercel-build-failed-causes-freelance-scope.mdx",
           "laneId": "ai-service-pricing-scope",
-          "lanePriorityScore": 162,
+          "lanePriorityScore": 186,
           "laneTitle": "AI automation service pricing, scope, and delivery checklist",
           "primaryKeyword": "Vercel build failed 项目",
           "publishBatch": 13,
@@ -715,13 +672,56 @@
             "maintenance",
             "risk language"
           ]
+        },
+        {
+          "file": "content/blog/vercel-404-after-deploy.mdx",
+          "laneId": "deployment-troubleshooting",
+          "lanePriorityScore": 170,
+          "laneTitle": "AI app deployment errors and beginner troubleshooting",
+          "primaryKeyword": "Vercel 部署成功但 404",
+          "publishBatch": 15,
+          "qualityScore": 86,
+          "readyForHumanReview": true,
+          "riskChecks": [
+            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+            "No API key, private customer data, credential, or bypass instruction is included.",
+            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+            "Article-specific operational and safety boundaries are explicit."
+          ],
+          "safeDraft": true,
+          "sourceTargets": [
+            "Vercel docs: https://vercel.com/docs",
+            "OpenAI API docs: https://platform.openai.com/docs"
+          ],
+          "title": "Vercel 部署成功但页面 404：新手排查顺序",
+          "intentSeeds": [
+            "Vercel build failed",
+            "API Key 无效",
+            "环境变量缺失",
+            "npm command not found"
+          ],
+          "reviewFocus": [
+            "reproduction",
+            "logs",
+            "fix order",
+            "verification command",
+            "avoid overgeneralized fixes"
+          ],
+          "wave": 4,
+          "workflowAngles": [
+            "error log",
+            "reproduction",
+            "fix sequence",
+            "verification",
+            "handoff boundary"
+          ]
         }
       ],
       "laneCount": 3,
       "lanes": [
         "RAG, knowledge base, and Agent memory",
-        "AI app deployment errors and beginner troubleshooting",
-        "AI automation service pricing, scope, and delivery checklist"
+        "AI automation service pricing, scope, and delivery checklist",
+        "AI app deployment errors and beginner troubleshooting"
       ],
       "readyItems": 3,
       "riskChecks": [

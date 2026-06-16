@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:35.623Z",
+  "generatedAt": "2026-06-16T12:27:36.563Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -15,7 +15,7 @@
   },
   "sourceEvidence": {
     "approvalPacketUnsafeItems": 0,
-    "internalLinkUnsafeItems": 2,
+    "internalLinkUnsafeItems": 0,
     "optimizationUnsafeCommands": 0,
     "searchIntentUnsafeItems": 0,
     "sourceVerificationUnsafeItems": 0
@@ -41,10 +41,11 @@
       },
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "internalLinkActions": [
-        "Add one contextual public article link during human review.",
-        "No public link suggestion is available; inspect related published articles manually.",
+        "Already links to at least one public article.",
+        "Review 5 suggested public link target(s).",
         "Use one link only if it helps the reader continue the task; avoid stuffing links.",
-        "Keep the article draft/noindex until explicit approval."
+        "Keep the article draft/noindex until explicit approval.",
+        "If helpful, add one contextual public link: OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide)."
       ],
       "manualOnlyCommands": {
         "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
@@ -122,9 +123,10 @@
       "file": "content/blog/vercel-404-after-deploy.mdx",
       "internalLinkActions": [
         "Add one contextual public article link during human review.",
-        "No public link suggestion is available; inspect related published articles manually.",
+        "Review 5 suggested public link target(s).",
         "Use one link only if it helps the reader continue the task; avoid stuffing links.",
-        "Keep the article draft/noindex until explicit approval."
+        "Keep the article draft/noindex until explicit approval.",
+        "If helpful, add one contextual public link: Next.js hydration error 怎么排查：使用前怎么判断是否适合 (/blog/nextjs-hydration-error-debug-freelance-scope)."
       ],
       "manualOnlyCommands": {
         "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human",
@@ -248,10 +250,10 @@
         "Fact-check query: Vercel AI Gateway 多模型 official docs latest.",
         "Fact-check query: Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 事实核对.",
         "Fact-check query: AI 部署 平台限制 官方文档.",
-        "Fact-check query: Vercel AI Gateway 多模型 official documentation current limits.",
-        "Fact-check query: Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 fact check official docs.",
-        "Fact-check query: AI 部署 official docs limits pricing changelog.",
         "Fact-check query: 大模型部署教程.",
+        "Fact-check query: AI 应用部署 Vercel 教程.",
+        "Fact-check query: OpenAI API 部署教程.",
+        "Fact-check query: Claude API 部署教程.",
         "No income, ranking, approval, or client acquisition guarantee.",
         "No instruction to bypass platform rules, payments, messaging, or review systems.",
         "No API key, credential, private customer data, or account detail is included.",
@@ -286,10 +288,11 @@
       },
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "internalLinkActions": [
-        "Add one contextual public article link during human review.",
-        "No public link suggestion is available; inspect related published articles manually.",
+        "Already links to at least one public article.",
+        "Review 5 suggested public link target(s).",
         "Use one link only if it helps the reader continue the task; avoid stuffing links.",
-        "Keep the article draft/noindex until explicit approval."
+        "Keep the article draft/noindex until explicit approval.",
+        "If helpful, add one contextual public link: OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide)."
       ],
       "manualOnlyCommands": {
         "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
@@ -367,9 +370,10 @@
       "file": "content/blog/vercel-404-after-deploy.mdx",
       "internalLinkActions": [
         "Add one contextual public article link during human review.",
-        "No public link suggestion is available; inspect related published articles manually.",
+        "Review 5 suggested public link target(s).",
         "Use one link only if it helps the reader continue the task; avoid stuffing links.",
-        "Keep the article draft/noindex until explicit approval."
+        "Keep the article draft/noindex until explicit approval.",
+        "If helpful, add one contextual public link: Next.js hydration error 怎么排查：使用前怎么判断是否适合 (/blog/nextjs-hydration-error-debug-freelance-scope)."
       ],
       "manualOnlyCommands": {
         "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human",

@@ -1,6 +1,6 @@
 # Human Approval Repair Session Pack
 
-Generated at: 2026-06-16T07:01:38.486Z
+Generated at: 2026-06-16T12:27:39.363Z
 
 This report is read-only. It packages the next manual repair session for each routed file and stops before article edits, mark:review, or publishing.
 
@@ -31,9 +31,9 @@ This report is read-only. It packages the next manual repair session for each ro
 ## Source Evidence
 
 - internalLinkItems: 3
-- internalLinkUnsafeItems: 2
+- internalLinkUnsafeItems: 0
 - progressFilesTracked: 3
-- progressOpenCategories: 7
+- progressOpenCategories: 8
 - progressUnsafeItems: 2
 - remediationItems: 3
 - remediationSourceUrlFixActions: 26
@@ -43,8 +43,8 @@ This report is read-only. It packages the next manual repair session for each ro
 - routeUnsafeItems: 2
 - searchIntentItems: 3
 - searchIntentUnsafeItems: 0
-- sourceTargetFailedUrlItems: 1
-- sourceTargetRedirectedUrlItems: 17
+- sourceTargetFailedUrlItems: 0
+- sourceTargetRedirectedUrlItems: 10
 - sourceTargetUnsafeItems: 0
 - sourceVerificationItems: 3
 - sourceVerificationUnsafeItems: 0
@@ -53,7 +53,7 @@ This report is read-only. It packages the next manual repair session for each ro
 
 | Rank | Session | Open categories | Source URL actions | Source URL items | Search actions | Link actions | Copydesk actions | Title | File |
 | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
-| 667 | source verification first | source-url, search-intent, internal-link, approval-boundary | 15 | 4 | 0 | 0 | 0 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 666 | source verification first | source-url, search-intent, approval-boundary | 15 | 4 | 0 | 0 | 0 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
 | 635 | source verification first | source-url, search-intent, internal-link, approval-boundary | 14 | 3 | 0 | 0 | 0 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Next Sessions
@@ -61,7 +61,7 @@ This report is read-only. It packages the next manual repair session for each ro
 | Rank | Session | Open categories | Source URL actions | Source URL items | Search actions | Link actions | Copydesk actions | Title | File |
 | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
 | 1761 | source verification first | source-url, search-intent, copydesk | 18 | 7 | 0 | 0 | 0 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
-| 667 | source verification first | source-url, search-intent, internal-link, approval-boundary | 15 | 4 | 0 | 0 | 0 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 666 | source verification first | source-url, search-intent, approval-boundary | 15 | 4 | 0 | 0 | 0 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
 | 635 | source verification first | source-url, search-intent, internal-link, approval-boundary | 14 | 3 | 0 | 0 | 0 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Session Details
@@ -84,10 +84,10 @@ Source URL actions:
 - Source replacement plan: Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Confirm source redirect before approval: https://platform.openai.com/docs -> https://developers.openai.com/api/docs.
 - Confirm source redirect before approval: https://platform.openai.com/docs/guides/prompt-engineering -> https://developers.openai.com/api/docs/guides/prompt-engineering.
-- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://docs.anthropic.com -> https://platform.claude.com/docs/en/home.
+- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://platform.openai.com/docs/guides/agents -> https://developers.openai.com/api/docs/guides/agents.
-- Confirm source redirect before approval: https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=ru.
+- Confirm source redirect before approval: https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=vi.
 - Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.
 - If the final URL is the canonical destination, update the source target during human review.
 - If the redirect lands on a generic, tracked, or unrelated page, replace it with a more specific official source.
@@ -101,10 +101,10 @@ Source target URL items:
 - [redirected-url] https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction; replacements=0
 - [redirected-url] https://platform.openai.com/docs -> https://developers.openai.com/api/docs; replacements=0
 - [redirected-url] https://platform.openai.com/docs/guides/prompt-engineering -> https://developers.openai.com/api/docs/guides/prompt-engineering; replacements=0
-- [redirected-url] https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval; replacements=0
 - [redirected-url] https://docs.anthropic.com -> https://platform.claude.com/docs/en/home; replacements=0
+- [redirected-url] https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval; replacements=0
 - [redirected-url] https://platform.openai.com/docs/guides/agents -> https://developers.openai.com/api/docs/guides/agents; replacements=0
-- [redirected-url] https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=ru; replacements=0
+- [redirected-url] https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=vi; replacements=0
 
 Source review actions:
 
@@ -115,10 +115,10 @@ Source review actions:
 - Source replacement plan: Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Confirm source redirect before approval: https://platform.openai.com/docs -> https://developers.openai.com/api/docs.
 - Confirm source redirect before approval: https://platform.openai.com/docs/guides/prompt-engineering -> https://developers.openai.com/api/docs/guides/prompt-engineering.
-- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://docs.anthropic.com -> https://platform.claude.com/docs/en/home.
+- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://platform.openai.com/docs/guides/agents -> https://developers.openai.com/api/docs/guides/agents.
-- Confirm source redirect before approval: https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=ru.
+- Confirm source redirect before approval: https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=vi.
 - Open source URL: https://platform.openai.com/docs.
 - Open source URL: https://ai-sdk.dev/docs.
 - Open source URL: https://docs.anthropic.com.
@@ -128,7 +128,7 @@ Source review actions:
 - Fact-check query: Vercel AI Gateway 多模型 official docs latest.
 - Fact-check query: Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 事实核对.
 - Fact-check query: AI 部署 平台限制 官方文档.
-- Fact-check query: Vercel AI Gateway 多模型 official documentation current limits.
+- Fact-check query: 大模型部署教程.
 - No income, ranking, approval, or client acquisition guarantee.
 - No instruction to bypass platform rules, payments, messaging, or review systems.
 - No API key, credential, private customer data, or account detail is included.
@@ -147,10 +147,10 @@ Source review actions:
 - Fact-check query: Vercel AI Gateway 多模型 official docs latest
 - Fact-check query: Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 事实核对
 - Fact-check query: AI 部署 平台限制 官方文档
-- Fact-check query: Vercel AI Gateway 多模型 official documentation current limits
-- Fact-check query: Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 fact check official docs
-- Fact-check query: AI 部署 official docs limits pricing changelog
 - Fact-check query: 大模型部署教程
+- Fact-check query: AI 应用部署 Vercel 教程
+- Fact-check query: OpenAI API 部署教程
+- Fact-check query: Claude API 部署教程
 
 Search actions:
 
@@ -174,7 +174,7 @@ Proof required:
 - File: content/blog/together-ai-api-beginner-guide.mdx
 - Session: source verification first
 - Categories: source-url, source-review
-- Open categories: source-url, search-intent, internal-link, approval-boundary
+- Open categories: source-url, search-intent, approval-boundary
 - Mark review after explicit approval: `npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human`
 - Stop before: Do not run mark:review until explicit human approval; do not publish without a separate explicit approval.
 
@@ -186,8 +186,8 @@ Source URL actions:
 - Source replacement plan: Prefer the final URL when it is canonical, current, and content-equivalent.
 - Source replacement plan: Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Confirm source redirect before approval: https://platform.openai.com/docs -> https://developers.openai.com/api/docs.
-- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://docs.anthropic.com -> https://platform.claude.com/docs/en/home.
+- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Open the original URL and the final redirected URL, then confirm the final URL is canonical and content-equivalent.
 - If the final URL is the canonical destination, update the source target during human review.
 - If the redirect lands on a generic, tracked, or unrelated page, replace it with a more specific official source.
@@ -200,8 +200,8 @@ Source target URL items:
 
 - [redirected-url] https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction; replacements=0
 - [redirected-url] https://platform.openai.com/docs -> https://developers.openai.com/api/docs; replacements=0
-- [redirected-url] https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval; replacements=0
 - [redirected-url] https://docs.anthropic.com -> https://platform.claude.com/docs/en/home; replacements=0
+- [redirected-url] https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval; replacements=0
 
 Source review actions:
 
@@ -211,8 +211,8 @@ Source review actions:
 - Source replacement plan: Prefer the final URL when it is canonical, current, and content-equivalent.
 - Source replacement plan: Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Confirm source redirect before approval: https://platform.openai.com/docs -> https://developers.openai.com/api/docs.
-- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://docs.anthropic.com -> https://platform.claude.com/docs/en/home.
+- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Open source URL: https://platform.openai.com/docs.
 - Open source URL: https://ai-sdk.dev/docs.
 - Open source URL: https://docs.anthropic.com.

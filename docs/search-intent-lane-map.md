@@ -1,6 +1,6 @@
 # Search Intent Lane Map
 
-Generated at: 2026-06-16T07:01:09.041Z
+Generated at: 2026-06-16T12:27:10.744Z
 
 This report is read-only. It maps broad AI search-intent lanes to existing public articles and safe draft candidates. It does not claim keyword volume, impressions, clicks, or traffic.
 
@@ -25,7 +25,7 @@ This report is read-only. It maps broad AI search-intent lanes to existing publi
 - lanes: 12
 - lanesWithReadyDrafts: 7
 - lanesWithoutPublicCoverage: 0
-- maxPriorityScore: 196
+- maxPriorityScore: 224
 - notReadyMatchedDrafts: 57
 - totalReadyDraftMatches: 22
 
@@ -33,12 +33,12 @@ This report is read-only. It maps broad AI search-intent lanes to existing publi
 
 | Score | Demand | Public | Ready drafts | Current pack | Wave 1 | Expansion | Not ready matched drafts | Lane | Reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 196 | 10 | 31 | 4 | 1 | 0 | 0 | 0 | RAG, knowledge base, and Agent memory | demandScore=10; public coverage=31; readyDrafts=4; currentPack=1 |
-| 172 | 10 | 27 | 2 | 0 | 0 | 0 | 0 | Large model deployment, LLM serving, and GPU infrastructure | demandScore=10; public coverage=27; readyDrafts=2 |
-| 166 | 10 | 34 | 1 | 0 | 0 | 0 | 0 | AI Agent deployment, tool calling, and production workflow | demandScore=10; public coverage=34; readyDrafts=1 |
-| 164 | 9 | 28 | 2 | 1 | 0 | 0 | 0 | Model API integration, rate limits, and multi-model fallback | demandScore=9; public coverage=28; readyDrafts=2; currentPack=1 |
-| 162 | 8 | 87 | 7 | 0 | 0 | 0 | 14 | AI app deployment errors and beginner troubleshooting | demandScore=8; public coverage=87; readyDrafts=7 |
-| 162 | 8 | 141 | 5 | 1 | 0 | 0 | 39 | AI automation service pricing, scope, and delivery checklist | demandScore=8; public coverage=141; readyDrafts=5; currentPack=1 |
+| 224 | 10 | 31 | 4 | 1 | 2 | 3 | 0 | RAG, knowledge base, and Agent memory | demandScore=10; public coverage=31; readyDrafts=4; currentPack=1; wave1=2 |
+| 186 | 8 | 141 | 5 | 1 | 1 | 4 | 39 | AI automation service pricing, scope, and delivery checklist | demandScore=8; public coverage=141; readyDrafts=5; currentPack=1; wave1=1 |
+| 180 | 10 | 27 | 2 | 0 | 0 | 2 | 0 | Large model deployment, LLM serving, and GPU infrastructure | demandScore=10; public coverage=27; readyDrafts=2 |
+| 180 | 9 | 28 | 2 | 1 | 1 | 2 | 0 | Model API integration, rate limits, and multi-model fallback | demandScore=9; public coverage=28; readyDrafts=2; currentPack=1; wave1=1 |
+| 170 | 10 | 34 | 1 | 0 | 0 | 1 | 0 | AI Agent deployment, tool calling, and production workflow | demandScore=10; public coverage=34; readyDrafts=1 |
+| 170 | 8 | 87 | 7 | 0 | 0 | 2 | 14 | AI app deployment errors and beginner troubleshooting | demandScore=8; public coverage=87; readyDrafts=7 |
 | 160 | 10 | 27 | 0 | 0 | 0 | 0 | 0 | Cross-industry AI prompt templates and reusable prompt libraries | demandScore=10; public coverage=27; readyDrafts=0 |
 | 140 | 9 | 16 | 0 | 0 | 0 | 0 | 0 | Local and open-source model deployment | demandScore=9; public coverage=16; readyDrafts=0 |
 
@@ -46,8 +46,8 @@ This report is read-only. It maps broad AI search-intent lanes to existing publi
 
 - ID: rag-knowledge-memory
 - Audience: Teams building customer support bots, internal knowledge assistants, and document Q&A.
-- Priority score: 196
-- Priority reason: demandScore=10; public coverage=31; readyDrafts=4; currentPack=1
+- Priority score: 224
+- Priority reason: demandScore=10; public coverage=31; readyDrafts=4; currentPack=1; wave1=2
 - Intent seeds: RAG 知识库搭建, AI Agent 记忆, 向量数据库教程, 企业知识库 AI
 - Workflow angles: document cleanup, chunking, embedding, source citation, memory policy
 
@@ -69,16 +69,49 @@ Matched safe draft candidates:
 
 | Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | false | false | 100 | 25 | AI 基建 | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
-| false | false | false | 86 | 27 | AI 基建 | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| false | false | false | 86 | 24 | AI 基建 | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| true | true | true | 100 | 25 | AI 基建 | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| false | true | true | 86 | 24 | AI 基建 | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| false | false | true | 86 | 27 | AI 基建 | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
 | false | false | false | 86 | 21 | AI 基建 | 向量数据库 | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
+
+## AI automation service pricing, scope, and delivery checklist
+
+- ID: ai-service-pricing-scope
+- Audience: Freelancers and service sellers packaging AI automation work for clients.
+- Priority score: 186
+- Priority reason: demandScore=8; public coverage=141; readyDrafts=5; currentPack=1; wave1=1
+- Intent seeds: AI 自动化项目报价, AI Agent 项目, RAG 项目报价, Dify n8n 报价
+- Workflow angles: scope, pricing, acceptance, maintenance, risk language
+
+Review focus:
+
+- scope boundaries
+- acceptance criteria
+- maintenance fee
+- risk disclaimers
+- no income guarantees
+
+Source targets:
+
+- OpenAI API docs: https://platform.openai.com/docs
+- Vercel AI SDK docs: https://ai-sdk.dev/docs
+- Dify docs: https://docs.dify.ai
+
+Matched safe draft candidates:
+
+| Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| true | true | true | 100 | 25 | AI 基建 | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| false | false | true | 86 | 29 | AI 基建 | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| false | false | true | 86 | 22 | AI 基建 | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| false | false | true | 86 | 15 | 报错解决 | Vercel 部署后 404 检查清单 | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
+| false | false | false | 86 | 13 | 报错解决 | Vercel build failed 项目 | Vercel build failed 排查能不能项目：先看这 7 个边界 | content/blog/vercel-build-failed-causes-freelance-scope.mdx |
 
 ## Large model deployment, LLM serving, and GPU infrastructure
 
 - ID: llm-deployment-serving
 - Audience: Developers, solo builders, and companies deciding where and how to run models.
-- Priority score: 172
+- Priority score: 180
 - Priority reason: demandScore=10; public coverage=27; readyDrafts=2
 - Intent seeds: 大模型部署教程, LLM deployment, vLLM 部署, Hugging Face TGI 部署
 - Workflow angles: GPU sizing, serving API, quantization, autoscaling, cost control
@@ -101,14 +134,44 @@ Matched safe draft candidates:
 
 | Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| false | false | false | 86 | 29 | AI 基建 | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
-| false | false | false | 86 | 22 | AI 基建 | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| false | false | true | 86 | 29 | AI 基建 | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| false | false | true | 86 | 22 | AI 基建 | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+
+## Model API integration, rate limits, and multi-model fallback
+
+- ID: model-api-integration
+- Audience: Developers integrating OpenAI, Claude, Gemini, OpenRouter, and multi-model routing.
+- Priority score: 180
+- Priority reason: demandScore=9; public coverage=28; readyDrafts=2; currentPack=1; wave1=1
+- Intent seeds: OpenAI API 接入, Claude API 限流, Gemini API 限流, 多模型 Router 降级
+- Workflow angles: server-side calls, rate limit retry, fallback routing, key rotation, cost control
+
+Review focus:
+
+- current model names
+- rate limits
+- retry behavior
+- key rotation
+- fallback quality
+
+Source targets:
+
+- OpenAI API docs: https://platform.openai.com/docs
+- Anthropic docs: https://docs.anthropic.com
+- Vercel AI SDK providers: https://ai-sdk.dev/docs/foundations/providers-and-models
+
+Matched safe draft candidates:
+
+| Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| true | true | true | 86 | 34 | AI 部署 | Vercel AI Gateway 多模型 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| false | false | true | 86 | 27 | AI 基建 | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
 
 ## AI Agent deployment, tool calling, and production workflow
 
 - ID: agent-deployment-tools
 - Audience: Developers and teams trying to move beyond chatbots into production agents.
-- Priority score: 166
+- Priority score: 170
 - Priority reason: demandScore=10; public coverage=34; readyDrafts=1
 - Intent seeds: AI Agent 部署, AI Agent 工具调用, Vercel AI SDK Agent, OpenAI Agents SDK
 - Workflow angles: tool calling, multi-step execution, human approval, observability, permissions
@@ -131,43 +194,13 @@ Matched safe draft candidates:
 
 | Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| false | false | false | 86 | 26 | AI 基建 | Vercel AI SDK 聊天机器人部署 | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
-
-## Model API integration, rate limits, and multi-model fallback
-
-- ID: model-api-integration
-- Audience: Developers integrating OpenAI, Claude, Gemini, OpenRouter, and multi-model routing.
-- Priority score: 164
-- Priority reason: demandScore=9; public coverage=28; readyDrafts=2; currentPack=1
-- Intent seeds: OpenAI API 接入, Claude API 限流, Gemini API 限流, 多模型 Router 降级
-- Workflow angles: server-side calls, rate limit retry, fallback routing, key rotation, cost control
-
-Review focus:
-
-- current model names
-- rate limits
-- retry behavior
-- key rotation
-- fallback quality
-
-Source targets:
-
-- OpenAI API docs: https://platform.openai.com/docs
-- Anthropic docs: https://docs.anthropic.com
-- Vercel AI SDK providers: https://ai-sdk.dev/docs/foundations/providers-and-models
-
-Matched safe draft candidates:
-
-| Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | false | false | 86 | 34 | AI 部署 | Vercel AI Gateway 多模型 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
-| false | false | false | 86 | 27 | AI 基建 | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| false | false | true | 86 | 26 | AI 基建 | Vercel AI SDK 聊天机器人部署 | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
 
 ## AI app deployment errors and beginner troubleshooting
 
 - ID: deployment-troubleshooting
 - Audience: Beginners searching deployment errors, API failures, and environment variable mistakes.
-- Priority score: 162
+- Priority score: 170
 - Priority reason: demandScore=8; public coverage=87; readyDrafts=7
 - Intent seeds: Vercel build failed, API Key 无效, 环境变量缺失, npm command not found
 - Workflow angles: error log, reproduction, fix sequence, verification, handoff boundary
@@ -189,46 +222,13 @@ Matched safe draft candidates:
 
 | Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| false | false | false | 86 | 15 | 报错解决 | Vercel 部署后 404 检查清单 | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
+| false | false | true | 86 | 15 | 报错解决 | Vercel 部署后 404 检查清单 | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
+| false | false | true | 86 | 15 | 报错解决 | Vercel 部署成功但 404 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 | false | false | false | 86 | 15 | 报错解决 | Vercel 部署后 404 常见误区 | Vercel 部署后 404 常见误区：别只盯着域名 | content/blog/vercel-404-after-deploy-mistakes.mdx |
-| false | false | false | 86 | 15 | 报错解决 | Vercel 部署成功但 404 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 | false | false | false | 86 | 13 | 报错解决 | Vercel build failed 排查清单 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
 | false | false | false | 86 | 13 | 报错解决 | Vercel build failed 项目 | Vercel build failed 排查能不能项目：先看这 7 个边界 | content/blog/vercel-build-failed-causes-freelance-scope.mdx |
 | false | false | false | 86 | 13 | 报错解决 | Vercel build failed 常见错误 | Vercel build failed 新手常见错误：别一上来就乱改 | content/blog/vercel-build-failed-causes-mistakes.mdx |
 | false | false | false | 86 | 13 | 报错解决 | Vercel build failed 常见原因 | Vercel build failed 常见原因：新手先看这份排查顺序 | content/blog/vercel-build-failed-causes.mdx |
-
-## AI automation service pricing, scope, and delivery checklist
-
-- ID: ai-service-pricing-scope
-- Audience: Freelancers and service sellers packaging AI automation work for clients.
-- Priority score: 162
-- Priority reason: demandScore=8; public coverage=141; readyDrafts=5; currentPack=1
-- Intent seeds: AI 自动化项目报价, AI Agent 项目, RAG 项目报价, Dify n8n 报价
-- Workflow angles: scope, pricing, acceptance, maintenance, risk language
-
-Review focus:
-
-- scope boundaries
-- acceptance criteria
-- maintenance fee
-- risk disclaimers
-- no income guarantees
-
-Source targets:
-
-- OpenAI API docs: https://platform.openai.com/docs
-- Vercel AI SDK docs: https://ai-sdk.dev/docs
-- Dify docs: https://docs.dify.ai
-
-Matched safe draft candidates:
-
-| Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | false | false | 100 | 25 | AI 基建 | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
-| false | false | false | 86 | 29 | AI 基建 | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
-| false | false | false | 86 | 22 | AI 基建 | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
-| false | false | false | 86 | 15 | 报错解决 | Vercel 部署后 404 检查清单 | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
-| false | false | false | 86 | 13 | 报错解决 | Vercel build failed 项目 | Vercel build failed 排查能不能项目：先看这 7 个边界 | content/blog/vercel-build-failed-causes-freelance-scope.mdx |
 
 ## Cross-industry AI prompt templates and reusable prompt libraries
 
@@ -288,12 +288,12 @@ Matched safe draft candidates:
 
 | Score | Demand | Public | Ready drafts | Current pack | Wave 1 | Expansion | Not ready matched drafts | Lane | Reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 196 | 10 | 31 | 4 | 1 | 0 | 0 | 0 | RAG, knowledge base, and Agent memory | demandScore=10; public coverage=31; readyDrafts=4; currentPack=1 |
-| 172 | 10 | 27 | 2 | 0 | 0 | 0 | 0 | Large model deployment, LLM serving, and GPU infrastructure | demandScore=10; public coverage=27; readyDrafts=2 |
-| 166 | 10 | 34 | 1 | 0 | 0 | 0 | 0 | AI Agent deployment, tool calling, and production workflow | demandScore=10; public coverage=34; readyDrafts=1 |
-| 164 | 9 | 28 | 2 | 1 | 0 | 0 | 0 | Model API integration, rate limits, and multi-model fallback | demandScore=9; public coverage=28; readyDrafts=2; currentPack=1 |
-| 162 | 8 | 87 | 7 | 0 | 0 | 0 | 14 | AI app deployment errors and beginner troubleshooting | demandScore=8; public coverage=87; readyDrafts=7 |
-| 162 | 8 | 141 | 5 | 1 | 0 | 0 | 39 | AI automation service pricing, scope, and delivery checklist | demandScore=8; public coverage=141; readyDrafts=5; currentPack=1 |
+| 224 | 10 | 31 | 4 | 1 | 2 | 3 | 0 | RAG, knowledge base, and Agent memory | demandScore=10; public coverage=31; readyDrafts=4; currentPack=1; wave1=2 |
+| 186 | 8 | 141 | 5 | 1 | 1 | 4 | 39 | AI automation service pricing, scope, and delivery checklist | demandScore=8; public coverage=141; readyDrafts=5; currentPack=1; wave1=1 |
+| 180 | 10 | 27 | 2 | 0 | 0 | 2 | 0 | Large model deployment, LLM serving, and GPU infrastructure | demandScore=10; public coverage=27; readyDrafts=2 |
+| 180 | 9 | 28 | 2 | 1 | 1 | 2 | 0 | Model API integration, rate limits, and multi-model fallback | demandScore=9; public coverage=28; readyDrafts=2; currentPack=1; wave1=1 |
+| 170 | 10 | 34 | 1 | 0 | 0 | 1 | 0 | AI Agent deployment, tool calling, and production workflow | demandScore=10; public coverage=34; readyDrafts=1 |
+| 170 | 8 | 87 | 7 | 0 | 0 | 2 | 14 | AI app deployment errors and beginner troubleshooting | demandScore=8; public coverage=87; readyDrafts=7 |
 | 160 | 10 | 27 | 0 | 0 | 0 | 0 | 0 | Cross-industry AI prompt templates and reusable prompt libraries | demandScore=10; public coverage=27; readyDrafts=0 |
 | 140 | 9 | 16 | 0 | 0 | 0 | 0 | 0 | Local and open-source model deployment | demandScore=9; public coverage=16; readyDrafts=0 |
 | 140 | 9 | 39 | 0 | 0 | 0 | 0 | 0 | Dify, n8n, no-code AI automation, and workflow deployment | demandScore=9; public coverage=39; readyDrafts=0 |

@@ -1,6 +1,6 @@
 # Industry Prompt Coverage
 
-Generated at: 2026-06-16T07:01:08.380Z
+Generated at: 2026-06-16T12:27:10.090Z
 
 This report is read-only. It organizes broad industry AI prompt drafts for manual review and does not publish anything.
 
@@ -26,7 +26,7 @@ This report is read-only. It organizes broad industry AI prompt drafts for manua
 - industries: 16
 - industriesWithoutPublicCoverage: 0
 - industriesWithReadyCandidates: 0
-- plannedPromptItems: 3
+- plannedPromptItems: 0
 - promptDrafts: 0
 - promptPublicArticles: 25
 - reviewReadyPromptDrafts: 0

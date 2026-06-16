@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:20.367Z",
+  "generatedAt": "2026-06-16T12:27:21.958Z",
   "guardrails": {
     "autoCreateArticles": false,
     "autoEditArticles": false,
@@ -10,25 +10,25 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "approvalQueueGeneratedAt": "2026-06-14T10:39:25.492Z",
+    "approvalQueueGeneratedAt": "2026-06-16T07:01:44.583Z",
     "approvalQueueSummary": {
-      "backlogItems": 5,
-      "commandBoundaries": 8,
-      "humanGatedItems": 8,
+      "backlogItems": 3,
+      "commandBoundaries": 6,
+      "humanGatedItems": 6,
       "immediateApprovalItems": 3,
       "immediateApprovalReadyItems": 3,
-      "items": 8,
-      "itemsReadyForHumanApproval": 8,
-      "itemsWithFailedSourceDecision": 1,
-      "itemsWithMassSearchTheme": 6,
-      "itemsWithPopularPromptLane": 5,
-      "itemsWithSeoWarnings": 2,
-      "itemsWithSourceReplacementDecisions": 7,
+      "items": 6,
+      "itemsReadyForHumanApproval": 6,
+      "itemsWithFailedSourceDecision": 0,
+      "itemsWithMassSearchTheme": 5,
+      "itemsWithPopularPromptLane": 4,
+      "itemsWithSeoWarnings": 1,
+      "itemsWithSourceReplacementDecisions": 5,
       "publishConfirmCommandsIncluded": 0,
       "trafficDataAvailable": false,
       "unsafeItems": 0
     },
-    "playbookGeneratedAt": "2026-06-16T07:01:19.839Z",
+    "playbookGeneratedAt": "2026-06-16T12:27:21.442Z",
     "playbookSummary": {
       "agentDeploymentLanes": 3,
       "broadWorkPromptLanes": 3,
@@ -44,13 +44,13 @@
       "promptModuleBridgeItems": 0,
       "promptTemplates": 50,
       "publishConfirmCommandsIncluded": 0,
-      "searchQueries": 143,
-      "sourceTargets": 25,
+      "searchQueries": 139,
+      "sourceTargets": 22,
       "trafficDataAvailable": false,
-      "uniqueCandidateFiles": 20,
+      "uniqueCandidateFiles": 21,
       "unsafeItems": 7
     },
-    "reviewCandidatesGeneratedAt": "2026-06-16T07:00:55.888Z",
+    "reviewCandidatesGeneratedAt": "2026-06-16T12:26:58.008Z",
     "reviewCandidatesCounts": {
       "candidates": 148,
       "returned": 25,
@@ -62,13 +62,13 @@
     "trafficNote": "No traffic, ranking, impression, click, conversion, or revenue claim is made."
   },
   "summary": {
-    "approvalQueueItems": 8,
-    "approvalQueueReadyItems": 8,
+    "approvalQueueItems": 6,
+    "approvalQueueReadyItems": 6,
     "bridgeItems": 13,
     "bridgeItemsReadyForHumanReviewPrep": 7,
     "commandBoundaries": 13,
     "lanes": 10,
-    "lanesAlreadyInApprovalQueue": 0,
+    "lanesAlreadyInApprovalQueue": 5,
     "lanesWithNextCandidates": 5,
     "lanesWithReadyNextCandidates": 3,
     "playbookItems": 10,
@@ -579,15 +579,15 @@
         "status": "draft"
       },
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vector-database-beginner-guide.mdx --confirm-human",
         "publishConfirm": "not-included",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vector-database-beginner-guide.mdx",
         "stopBefore": "Run mark:review only after explicit human approval. Publish dry-run only after review. Publish confirm is not included."
       },
-      "file": "content/blog/together-ai-api-beginner-guide.mdx",
+      "file": "content/blog/vector-database-beginner-guide.mdx",
       "laneId": "excel-data-analysis-prompts",
       "laneTitle": "Excel 和数据分析 AI 提示词",
-      "opportunityScore": 27,
+      "opportunityScore": 61,
       "promptTemplates": 5,
       "readyForHumanReviewPrep": true,
       "reviewFocus": [
@@ -615,11 +615,11 @@
         "https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5",
         "https://adoption.microsoft.com/en-us/copilot/prompt-gallery/",
         "https://ai.google.dev/gemini-api/docs/models/generative-models",
-        "https://platform.openai.com/docs/guides/prompt-generation",
-        "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-        "https://support.google.com/docs/answer/15013615"
+        "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+        "LangChain docs: https://python.langchain.com/docs",
+        "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
-      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
+      "title": "向量数据库怎么选：新手先理解 embedding 和检索",
       "unsafeReasons": []
     },
     {
@@ -1056,7 +1056,10 @@
   ],
   "lanes": [
     {
-      "alreadyInApprovalQueue": [],
+      "alreadyInApprovalQueue": [
+        "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+        "content/blog/vercel-build-failed-causes-checklist.mdx"
+      ],
       "audience": "刚开始用 AI 的普通用户、学生、职场新人和小团队老板",
       "candidatesConsidered": 10,
       "demandReason": "大多数人会先搜索提示词大全、ChatGPT 怎么提问、AI 指令模板，而不是先搜索框架名。",
@@ -1257,9 +1260,13 @@
       ]
     },
     {
-      "alreadyInApprovalQueue": [],
+      "alreadyInApprovalQueue": [
+        "content/blog/together-ai-api-beginner-guide.mdx",
+        "content/blog/vector-database-selection-for-rag-guide.mdx",
+        "content/blog/supabase-pgvector-rag-guide.mdx"
+      ],
       "audience": "运营、财务助理、电商数据、销售管理和数据分析初学者",
-      "candidatesConsidered": 1,
+      "candidatesConsidered": 4,
       "demandReason": "表格分析、数据透视、销售报表、异常值解释属于高频刚需，适合用模板承接搜索。",
       "laneId": "excel-data-analysis-prompts",
       "laneTitle": "Excel 和数据分析 AI 提示词",
@@ -1273,15 +1280,15 @@
             "status": "draft"
           },
           "commandBoundary": {
-            "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
+            "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vector-database-beginner-guide.mdx --confirm-human",
             "publishConfirm": "not-included",
-            "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
+            "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vector-database-beginner-guide.mdx",
             "stopBefore": "Run mark:review only after explicit human approval. Publish dry-run only after review. Publish confirm is not included."
           },
-          "file": "content/blog/together-ai-api-beginner-guide.mdx",
+          "file": "content/blog/vector-database-beginner-guide.mdx",
           "laneId": "excel-data-analysis-prompts",
           "laneTitle": "Excel 和数据分析 AI 提示词",
-          "opportunityScore": 27,
+          "opportunityScore": 61,
           "promptTemplates": 5,
           "readyForHumanReviewPrep": true,
           "reviewFocus": [
@@ -1309,11 +1316,11 @@
             "https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5",
             "https://adoption.microsoft.com/en-us/copilot/prompt-gallery/",
             "https://ai.google.dev/gemini-api/docs/models/generative-models",
-            "https://platform.openai.com/docs/guides/prompt-generation",
-            "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-            "https://support.google.com/docs/answer/15013615"
+            "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+            "LangChain docs: https://python.langchain.com/docs",
+            "LlamaIndex docs: https://docs.llamaindex.ai"
           ],
-          "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
+          "title": "向量数据库怎么选：新手先理解 embedding 和检索",
           "unsafeReasons": []
         }
       ],
@@ -1420,7 +1427,11 @@
       ]
     },
     {
-      "alreadyInApprovalQueue": [],
+      "alreadyInApprovalQueue": [
+        "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+        "content/blog/together-ai-api-beginner-guide.mdx",
+        "content/blog/vector-database-selection-for-rag-guide.mdx"
+      ],
       "audience": "想部署 Agent 的独立开发者、创业团队和技术运营",
       "candidatesConsidered": 10,
       "demandReason": "Agent 部署、工具调用、MCP、Vercel AI SDK 是技术增长入口，比单纯网页部署更贴近当前 AI 搜索。",
@@ -1608,7 +1619,11 @@
       ]
     },
     {
-      "alreadyInApprovalQueue": [],
+      "alreadyInApprovalQueue": [
+        "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+        "content/blog/together-ai-api-beginner-guide.mdx",
+        "content/blog/vector-database-selection-for-rag-guide.mdx"
+      ],
       "audience": "部署大模型 API、本地模型、推理服务和 AI 应用的开发者",
       "candidatesConsidered": 10,
       "demandReason": "大模型部署、API 报错、推理延迟、环境变量和日志排错会带来技术流量，且能和工具服务转化相连。",
@@ -1787,7 +1802,11 @@
       ]
     },
     {
-      "alreadyInApprovalQueue": [],
+      "alreadyInApprovalQueue": [
+        "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+        "content/blog/together-ai-api-beginner-guide.mdx",
+        "content/blog/vector-database-selection-for-rag-guide.mdx"
+      ],
       "audience": "做客服 Agent、个人助理、知识库问答和长期任务 Agent 的团队",
       "candidatesConsidered": 10,
       "demandReason": "记忆、知识库、RAG、长期上下文是用户已经明确要求扩展的板块，且 2026 年 Agent 资料持续更新。",

@@ -1,6 +1,6 @@
 # Autopilot Approval Remediation Pack
 
-Generated at: 2026-06-16T07:01:36.097Z
+Generated at: 2026-06-16T12:27:37.020Z
 
 This report is read-only. It consolidates approval-packet search, internal-link, source, and copydesk fixes before human review.
 
@@ -38,15 +38,15 @@ This report is read-only. It consolidates approval-packet search, internal-link,
 
 - approvalPacketItems: 3
 - approvalPacketUnsafeItems: 0
-- internalLinkUnsafeItems: 2
-- itemsMissingCurrentPublicLink: 2
+- internalLinkUnsafeItems: 0
+- itemsMissingCurrentPublicLink: 1
 - optimizationUnsafeCommands: 0
 - searchIntentUnsafeItems: 0
 - searchWeakItems: 3
 - sourceVerificationUnsafeItems: 0
-- sourceTargetRemediationItems: 18
+- sourceTargetRemediationItems: 10
 - sourceTargetRemediationUnsafeItems: 0
-- sourceTargetRemediationManualFixReadyItems: 18
+- sourceTargetRemediationManualFixReadyItems: 10
 - approvalItemsWithSourceUrlRemediation: 3
 - humanReviewPlaybookUnsafeItems: 2
 
@@ -54,16 +54,16 @@ This report is read-only. It consolidates approval-packet search, internal-link,
 
 | Ready | Reasons | Search fixes | Link fixes | Source checks | Publish confirm | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| false | 3 | 11 | 5 | 28 | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| false | 3 | 9 | 5 | 26 | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+| false | 2 | 11 | 7 | 28 | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| false | 3 | 9 | 8 | 26 | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Remediation Items
 
 | Ready | Reasons | Search fixes | Link fixes | Source checks | Publish confirm | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | true | 3 | 13 | 8 | 32 | not-included | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
-| false | 3 | 11 | 5 | 28 | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| false | 3 | 9 | 5 | 26 | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+| false | 2 | 11 | 7 | 28 | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| false | 3 | 9 | 8 | 26 | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Per-Item Checklist
 
@@ -116,10 +116,10 @@ Source checks:
 - Source replacement plan: Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Confirm source redirect before approval: https://platform.openai.com/docs -> https://developers.openai.com/api/docs.
 - Confirm source redirect before approval: https://platform.openai.com/docs/guides/prompt-engineering -> https://developers.openai.com/api/docs/guides/prompt-engineering.
-- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://docs.anthropic.com -> https://platform.claude.com/docs/en/home.
+- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://platform.openai.com/docs/guides/agents -> https://developers.openai.com/api/docs/guides/agents.
-- Confirm source redirect before approval: https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=ru.
+- Confirm source redirect before approval: https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=vi.
 - Open source URL: https://platform.openai.com/docs.
 - Open source URL: https://ai-sdk.dev/docs.
 - Open source URL: https://docs.anthropic.com.
@@ -129,7 +129,7 @@ Source checks:
 - Fact-check query: Vercel AI Gateway 多模型 official docs latest.
 - Fact-check query: Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 事实核对.
 - Fact-check query: AI 部署 平台限制 官方文档.
-- Fact-check query: Vercel AI Gateway 多模型 official documentation current limits.
+- Fact-check query: 大模型部署教程.
 - No income, ranking, approval, or client acquisition guarantee.
 - No instruction to bypass platform rules, payments, messaging, or review systems.
 - No API key, credential, private customer data, or account detail is included.
@@ -151,10 +151,10 @@ Source URL fixes:
 - Source replacement plan: Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Confirm source redirect before approval: https://platform.openai.com/docs -> https://developers.openai.com/api/docs.
 - Confirm source redirect before approval: https://platform.openai.com/docs/guides/prompt-engineering -> https://developers.openai.com/api/docs/guides/prompt-engineering.
-- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://docs.anthropic.com -> https://platform.claude.com/docs/en/home.
+- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://platform.openai.com/docs/guides/agents -> https://developers.openai.com/api/docs/guides/agents.
-- Confirm source redirect before approval: https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=ru.
+- Confirm source redirect before approval: https://ai.google.dev/docs -> https://ai.google.dev/gemini-api/docs?hl=vi.
 
 Human checklist:
 
@@ -178,15 +178,16 @@ Human checklist:
 
 Reasons:
 
-- approval candidate has no current link to a published article
 - 4 search-intent weakness(es) need human copy review
 - 8 source URL remediation action(s) need human confirmation
 
 Internal-link fixes:
 
-- Add at least one contextual link to a currently published article before approval.
-- Add one contextual public article link during human review.
-- No public link suggestion is available; inspect related published articles manually.
+- Suggested public link: OpenRouter API 怎么接入：统一模型入口不是只换 Base URL (/blog/openrouter-api-beginner-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai.
+- Suggested public link: Groq API 怎么接入：高速推理适合什么 AI 应用 (/blog/groq-api-fast-llm-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai.
+- Suggested public link: Replicate API 怎么做 AI Demo：模型调用、部署和费用边界 (/blog/replicate-api-ai-demo-guide) - same category: AI 基建; shared tags: API; keyword overlap: ai, api, 基建, 模型, 怎么, 部署.
+- Already links to at least one public article.
+- Review 5 suggested public link target(s).
 - Use one link only if it helps the reader continue the task; avoid stuffing links.
 - Keep the article draft/noindex until explicit approval.
 
@@ -212,8 +213,8 @@ Source checks:
 - Source replacement plan: Prefer the final URL when it is canonical, current, and content-equivalent.
 - Source replacement plan: Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Confirm source redirect before approval: https://platform.openai.com/docs -> https://developers.openai.com/api/docs.
-- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://docs.anthropic.com -> https://platform.claude.com/docs/en/home.
+- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Open source URL: https://platform.openai.com/docs.
 - Open source URL: https://ai-sdk.dev/docs.
 - Open source URL: https://docs.anthropic.com.
@@ -243,12 +244,11 @@ Source URL fixes:
 - Source replacement plan: Prefer the final URL when it is canonical, current, and content-equivalent.
 - Source replacement plan: Keep the original URL only if the redirect is intentionally stable and the source target is still reviewer-friendly.
 - Confirm source redirect before approval: https://platform.openai.com/docs -> https://developers.openai.com/api/docs.
-- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 - Confirm source redirect before approval: https://docs.anthropic.com -> https://platform.claude.com/docs/en/home.
+- Confirm source redirect before approval: https://platform.openai.com/docs/guides/retrieval -> https://developers.openai.com/api/docs/guides/retrieval.
 
 Human checklist:
 
-- Review reason: approval candidate has no current link to a published article.
 - Review reason: 4 search-intent weakness(es) need human copy review.
 - Review reason: 8 source URL remediation action(s) need human confirmation.
 - Apply or explicitly reject the internal-link suggestion before mark:review.
@@ -275,8 +275,11 @@ Reasons:
 Internal-link fixes:
 
 - Add at least one contextual link to a currently published article before approval.
+- Suggested public link: Next.js hydration error 怎么排查：使用前怎么判断是否适合 (/blog/nextjs-hydration-error-debug-freelance-scope) - same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, next, js.
+- Suggested public link: Node 版本不匹配使用前怎么判断是否适合 (/blog/node-version-mismatch-fix-freelance-scope) - same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, ai, 工具实践, js, 报错, 错解.
+- Suggested public link: Node 版本不匹配常见错误和解决步骤 (/blog/node-version-mismatch-fix-mistakes) - same category: 报错解决; shared tags: AI 工具实践; keyword overlap: 报错解决, 排查, ai, 工具实践, js, 报错.
 - Add one contextual public article link during human review.
-- No public link suggestion is available; inspect related published articles manually.
+- Review 5 suggested public link target(s).
 - Use one link only if it helps the reader continue the task; avoid stuffing links.
 - Keep the article draft/noindex until explicit approval.
 

@@ -1,6 +1,6 @@
 # Human Approval Repair Route
 
-Generated at: 2026-06-16T07:01:37.533Z
+Generated at: 2026-06-16T12:27:38.431Z
 
 This report is read-only. It converts the repair queue into a manual repair order and stops before article edits or status changes.
 
@@ -38,7 +38,7 @@ This report is read-only. It converts the repair queue into a manual repair orde
 - decisionMatrixItems: 3
 - decisionMatrixRepairItems: 1
 - decisionMatrixUnsafeItems: 0
-- repairQueueFullTasks: 56
+- repairQueueFullTasks: 55
 - repairQueueMinimumPathFiles: 3
 - repairQueueMinimumPathTasks: 16
 - repairQueueUnsafeItems: 0
@@ -47,7 +47,7 @@ This report is read-only. It converts the repair queue into a manual repair orde
 
 | Rank | High risk | Min tasks | Sessions | Lane | Primary query | Title | File |
 | ---: | ---: | ---: | ---: | --- | --- | --- | --- |
-| 667 | 2 | 5 | 4 | ai-deployment | RAG 知识库搭建教程 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 666 | 2 | 5 | 4 | ai-deployment | RAG 知识库搭建教程 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
 | 635 | 2 | 5 | 4 | ai-deployment | Vercel build failed | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Route Order
@@ -55,7 +55,7 @@ This report is read-only. It converts the repair queue into a manual repair orde
 | Rank | High risk | Min tasks | Sessions | Lane | Primary query | Title | File |
 | ---: | ---: | ---: | ---: | --- | --- | --- | --- |
 | 1761 | 2 | 6 | 4 | ai-deployment | 大模型部署教程 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
-| 667 | 2 | 5 | 4 | ai-deployment | RAG 知识库搭建教程 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 666 | 2 | 5 | 4 | ai-deployment | RAG 知识库搭建教程 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
 | 635 | 2 | 5 | 4 | ai-deployment | Vercel build failed | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Repair Sessions
@@ -130,7 +130,7 @@ Proof:
 
 #### public internal link insertion
 
-- [medium] internal-link: Add one contextual public article link during human review.
+- [medium] internal-link: Apply or explicitly reject the internal-link suggestion before mark:review.
 
 Proof:
 
@@ -171,7 +171,7 @@ Proof:
 
 #### public internal link insertion
 
-- [medium] internal-link: Add one contextual public article link during human review.
+- [medium] internal-link: Apply or explicitly reject the internal-link suggestion before mark:review.
 
 Proof:
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:45.068Z",
+  "generatedAt": "2026-06-16T12:27:45.790Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,25 +9,25 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "approvalQueueGeneratedAt": "2026-06-16T07:01:44.583Z",
+    "approvalQueueGeneratedAt": "2026-06-16T12:27:45.319Z",
     "approvalQueueSummary": {
-      "backlogItems": 3,
-      "commandBoundaries": 6,
-      "humanGatedItems": 6,
+      "backlogItems": 0,
+      "commandBoundaries": 3,
+      "humanGatedItems": 3,
       "immediateApprovalItems": 3,
       "immediateApprovalReadyItems": 3,
-      "items": 6,
-      "itemsReadyForHumanApproval": 6,
+      "items": 3,
+      "itemsReadyForHumanApproval": 3,
       "itemsWithFailedSourceDecision": 0,
-      "itemsWithMassSearchTheme": 5,
-      "itemsWithPopularPromptLane": 4,
+      "itemsWithMassSearchTheme": 3,
+      "itemsWithPopularPromptLane": 3,
       "itemsWithSeoWarnings": 1,
-      "itemsWithSourceReplacementDecisions": 5,
+      "itemsWithSourceReplacementDecisions": 3,
       "publishConfirmCommandsIncluded": 0,
       "trafficDataAvailable": false,
       "unsafeItems": 0
     },
-    "copydeskGeneratedAt": "2026-06-16T07:01:27.214Z",
+    "copydeskGeneratedAt": "2026-06-16T12:27:28.310Z",
     "copydeskSummary": {
       "briefs": 2,
       "briefsWithAction": 2,
@@ -36,37 +36,37 @@
       "readyBriefs": 2,
       "unsafeCommands": 0
     },
-    "sourceReplacementGeneratedAt": "2026-06-16T07:01:25.760Z",
+    "sourceReplacementGeneratedAt": "2026-06-16T12:27:26.883Z",
     "sourceReplacementSummary": {
-      "affectedFiles": 23,
-      "failedDecisionItems": 1,
-      "humanGatedItems": 110,
-      "items": 110,
-      "itemsWithDecisionOptions": 110,
-      "itemsWithManualChecklist": 110,
-      "itemsWithRecommendedCandidate": 1,
-      "officialRecommendedCandidates": 1,
-      "redirectedDecisionItems": 109,
-      "replacementCandidateOptions": 8,
-      "sourceRemediationItems": 18,
+      "affectedFiles": 16,
+      "failedDecisionItems": 0,
+      "humanGatedItems": 71,
+      "items": 71,
+      "itemsWithDecisionOptions": 71,
+      "itemsWithManualChecklist": 71,
+      "itemsWithRecommendedCandidate": 0,
+      "officialRecommendedCandidates": 0,
+      "redirectedDecisionItems": 71,
+      "replacementCandidateOptions": 0,
+      "sourceRemediationItems": 10,
       "sourceRemediationUnsafeItems": 0,
       "unsafeItems": 0
     },
-    "seoWarningGeneratedAt": "2026-06-16T07:01:05.115Z",
+    "seoWarningGeneratedAt": "2026-06-16T12:27:06.835Z",
     "seoWarningSummary": {
       "blockingItems": 0,
-      "draftItems": 1,
-      "humanGatedItems": 256,
-      "items": 256,
-      "itemsWithHumanChecklist": 256,
-      "itemsWithManualActions": 256,
+      "draftItems": 5,
+      "humanGatedItems": 260,
+      "items": 260,
+      "itemsWithHumanChecklist": 260,
+      "itemsWithManualActions": 260,
       "publicItems": 255,
       "recommendedItems": 1,
       "schemaWarningItems": 92,
-      "snippetWarningItems": 200,
+      "snippetWarningItems": 204,
       "trafficDataAvailable": false,
       "unsafeItems": 0,
-      "warningItems": 256,
+      "warningItems": 260,
       "waveItems": 1
     },
     "trafficNote": "No measured traffic, ranking, impression, click, conversion, or revenue claim is made."
@@ -78,18 +78,18 @@
     "publishConfirmCommandsIncluded": 0
   },
   "summary": {
-    "approvalItems": 6,
-    "backlogItems": 3,
-    "clearanceActions": 40,
+    "approvalItems": 3,
+    "backlogItems": 0,
+    "clearanceActions": 28,
     "copydeskBriefItems": 2,
     "failedSourceDecisionItems": 0,
     "immediateItems": 3,
-    "itemsReadyForClearanceReview": 6,
-    "massSearchThemeItems": 5,
-    "popularPromptLaneItems": 4,
+    "itemsReadyForClearanceReview": 3,
+    "massSearchThemeItems": 3,
+    "popularPromptLaneItems": 3,
     "publishConfirmCommandsIncluded": 0,
     "seoWarningItems": 1,
-    "sourceDecisionItems": 0,
+    "sourceDecisionItems": 1,
     "trafficDataAvailable": false,
     "unsafeItems": 0
   },
@@ -110,6 +110,7 @@
         "Keep status=draft, noindex=true, and humanReviewRequired=true until approval.",
         "Review public internal link suggestion: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide).",
         "Review proposed meta description from copydesk brief before approval.",
+        "Check that popular prompt lane framing stays broad enough for real search demand.",
         "Check that mass-search theme framing is covered without stuffing keywords.",
         "Run mark:review only after explicit human approval; publish confirm remains excluded."
       ],
@@ -157,7 +158,7 @@
       "hasFailedSourceDecision": false,
       "immediate": true,
       "massSearchThemes": 1,
-      "popularPromptLanes": 0,
+      "popularPromptLanes": 2,
       "priorityScore": 446,
       "readyForHumanApproval": true,
       "readyForClearanceReview": true,
@@ -264,9 +265,11 @@
         ],
         "manualFixReady": true,
         "primaryKeyword": "Vercel AI Gateway 多模型",
-        "priority": 48,
+        "priority": 78,
         "scope": [
-          "recommended"
+          "expansion",
+          "recommended",
+          "wave-1"
         ],
         "schemaWarnings": [],
         "snippetWarnings": [
@@ -294,6 +297,10 @@
         "Confirm the draft still answers one clear search intent.",
         "Verify source-backed claims before any status change.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until approval.",
+        "Review redirect https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction and approve or replace during human review.",
+        "Review redirect https://docs.llamaindex.ai -> https://developers.llamaindex.ai/python/framework/ and approve or replace during human review.",
+        "Review redirect https://platform.openai.com/docs -> https://developers.openai.com/api/docs and approve or replace during human review.",
+        "Check that popular prompt lane framing stays broad enough for real search demand.",
         "Check that mass-search theme framing is covered without stuffing keywords.",
         "Run mark:review only after explicit human approval; publish confirm remains excluded."
       ],
@@ -308,123 +315,174 @@
       "hasFailedSourceDecision": false,
       "immediate": true,
       "massSearchThemes": 1,
-      "popularPromptLanes": 0,
+      "popularPromptLanes": 1,
       "priorityScore": 415,
       "readyForHumanApproval": true,
       "readyForClearanceReview": true,
       "seoWarning": null,
-      "sourceDecisions": [],
+      "sourceDecisions": [
+        {
+          "alternatives": [],
+          "decisionOptions": [
+            "Approve the redirected final URL as canonical if it is content-equivalent.",
+            "Replace the original URL with the final URL during human review if the redirect is stable.",
+            "Find a more specific official source if the redirect lands on a generic page.",
+            "Keep the article draft/noindex/humanReviewRequired until approval."
+          ],
+          "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+          "finalUrl": "https://ai-sdk.dev/docs/introduction",
+          "kind": "redirected-url",
+          "manualChecklist": [
+            "Original URL: https://ai-sdk.dev/docs",
+            "Final URL: https://ai-sdk.dev/docs/introduction",
+            "Scopes: next-source-pack",
+            "Confirm the replacement source covers the exact claim family.",
+            "Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.",
+            "Use prompt-library sources only as market/category evidence.",
+            "Do not run mark:review or publish commands from this decision pack."
+          ],
+          "originalUrl": "https://ai-sdk.dev/docs",
+          "recommendedCandidate": null,
+          "referenceLabels": [
+            "Vercel AI SDK docs: https://ai-sdk.dev/docs"
+          ],
+          "scopes": [
+            "next-source-pack"
+          ],
+          "stopBefore": "Stop before human approval; this pack is a file-level decision aid only.",
+          "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
+          "unsafeReasons": []
+        },
+        {
+          "alternatives": [],
+          "decisionOptions": [
+            "Approve the redirected final URL as canonical if it is content-equivalent.",
+            "Replace the original URL with the final URL during human review if the redirect is stable.",
+            "Find a more specific official source if the redirect lands on a generic page.",
+            "Keep the article draft/noindex/humanReviewRequired until approval."
+          ],
+          "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+          "finalUrl": "https://developers.llamaindex.ai/python/framework/",
+          "kind": "redirected-url",
+          "manualChecklist": [
+            "Original URL: https://docs.llamaindex.ai",
+            "Final URL: https://developers.llamaindex.ai/python/framework/",
+            "Scopes: next-source-pack",
+            "Confirm the replacement source covers the exact claim family.",
+            "Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.",
+            "Use prompt-library sources only as market/category evidence.",
+            "Do not run mark:review or publish commands from this decision pack."
+          ],
+          "originalUrl": "https://docs.llamaindex.ai",
+          "recommendedCandidate": null,
+          "referenceLabels": [
+            "LlamaIndex docs: https://docs.llamaindex.ai"
+          ],
+          "scopes": [
+            "next-source-pack"
+          ],
+          "stopBefore": "Stop before human approval; this pack is a file-level decision aid only.",
+          "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
+          "unsafeReasons": []
+        },
+        {
+          "alternatives": [],
+          "decisionOptions": [
+            "Approve the redirected final URL as canonical if it is content-equivalent.",
+            "Replace the original URL with the final URL during human review if the redirect is stable.",
+            "Find a more specific official source if the redirect lands on a generic page.",
+            "Keep the article draft/noindex/humanReviewRequired until approval."
+          ],
+          "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+          "finalUrl": "https://developers.openai.com/api/docs",
+          "kind": "redirected-url",
+          "manualChecklist": [
+            "Original URL: https://platform.openai.com/docs",
+            "Final URL: https://developers.openai.com/api/docs",
+            "Scopes: next-source-pack",
+            "Confirm the replacement source covers the exact claim family.",
+            "Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.",
+            "Use prompt-library sources only as market/category evidence.",
+            "Do not run mark:review or publish commands from this decision pack."
+          ],
+          "originalUrl": "https://platform.openai.com/docs",
+          "recommendedCandidate": null,
+          "referenceLabels": [
+            "OpenAI API docs: https://platform.openai.com/docs"
+          ],
+          "scopes": [
+            "next-source-pack"
+          ],
+          "stopBefore": "Stop before human approval; this pack is a file-level decision aid only.",
+          "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
+          "unsafeReasons": []
+        },
+        {
+          "alternatives": [],
+          "decisionOptions": [
+            "Approve the redirected final URL as canonical if it is content-equivalent.",
+            "Replace the original URL with the final URL during human review if the redirect is stable.",
+            "Find a more specific official source if the redirect lands on a generic page.",
+            "Keep the article draft/noindex/humanReviewRequired until approval."
+          ],
+          "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+          "finalUrl": "https://developers.openai.com/api/docs/guides/retrieval",
+          "kind": "redirected-url",
+          "manualChecklist": [
+            "Original URL: https://platform.openai.com/docs/guides/retrieval",
+            "Final URL: https://developers.openai.com/api/docs/guides/retrieval",
+            "Scopes: next-source-pack",
+            "Confirm the replacement source covers the exact claim family.",
+            "Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.",
+            "Use prompt-library sources only as market/category evidence.",
+            "Do not run mark:review or publish commands from this decision pack."
+          ],
+          "originalUrl": "https://platform.openai.com/docs/guides/retrieval",
+          "recommendedCandidate": null,
+          "referenceLabels": [
+            "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval"
+          ],
+          "scopes": [
+            "next-source-pack"
+          ],
+          "stopBefore": "Stop before human approval; this pack is a file-level decision aid only.",
+          "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
+          "unsafeReasons": []
+        },
+        {
+          "alternatives": [],
+          "decisionOptions": [
+            "Approve the redirected final URL as canonical if it is content-equivalent.",
+            "Replace the original URL with the final URL during human review if the redirect is stable.",
+            "Find a more specific official source if the redirect lands on a generic page.",
+            "Keep the article draft/noindex/humanReviewRequired until approval."
+          ],
+          "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+          "finalUrl": "https://docs.langchain.com/oss/python/langchain/overview",
+          "kind": "redirected-url",
+          "manualChecklist": [
+            "Original URL: https://python.langchain.com/docs",
+            "Final URL: https://docs.langchain.com/oss/python/langchain/overview",
+            "Scopes: next-source-pack",
+            "Confirm the replacement source covers the exact claim family.",
+            "Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.",
+            "Use prompt-library sources only as market/category evidence.",
+            "Do not run mark:review or publish commands from this decision pack."
+          ],
+          "originalUrl": "https://python.langchain.com/docs",
+          "recommendedCandidate": null,
+          "referenceLabels": [
+            "LangChain docs: https://python.langchain.com/docs"
+          ],
+          "scopes": [
+            "next-source-pack"
+          ],
+          "stopBefore": "Stop before human approval; this pack is a file-level decision aid only.",
+          "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
+          "unsafeReasons": []
+        }
+      ],
       "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
-      "unsafeReasons": []
-    },
-    {
-      "articleState": {
-        "humanReviewRequired": true,
-        "noindex": true,
-        "qualityScore": 100,
-        "sourceNotes": true,
-        "status": "draft"
-      },
-      "blockers": [],
-      "clearanceActions": [
-        "Confirm the draft still answers one clear search intent.",
-        "Verify source-backed claims before any status change.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until approval.",
-        "Check that popular prompt lane framing stays broad enough for real search demand.",
-        "Check that mass-search theme framing is covered without stuffing keywords.",
-        "Run mark:review only after explicit human approval; publish confirm remains excluded."
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
-      },
-      "copydeskBrief": null,
-      "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "hasFailedSourceDecision": false,
-      "immediate": false,
-      "massSearchThemes": 1,
-      "popularPromptLanes": 2,
-      "priorityScore": 50,
-      "readyForHumanApproval": true,
-      "readyForClearanceReview": true,
-      "seoWarning": null,
-      "sourceDecisions": [],
-      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-      "unsafeReasons": []
-    },
-    {
-      "articleState": {
-        "humanReviewRequired": true,
-        "noindex": true,
-        "qualityScore": 100,
-        "sourceNotes": true,
-        "status": "draft"
-      },
-      "blockers": [],
-      "clearanceActions": [
-        "Confirm the draft still answers one clear search intent.",
-        "Verify source-backed claims before any status change.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until approval.",
-        "Check that popular prompt lane framing stays broad enough for real search demand.",
-        "Check that mass-search theme framing is covered without stuffing keywords.",
-        "Run mark:review only after explicit human approval; publish confirm remains excluded."
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
-      },
-      "copydeskBrief": null,
-      "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
-      "hasFailedSourceDecision": false,
-      "immediate": false,
-      "massSearchThemes": 2,
-      "popularPromptLanes": 1,
-      "priorityScore": 54,
-      "readyForHumanApproval": true,
-      "readyForClearanceReview": true,
-      "seoWarning": null,
-      "sourceDecisions": [],
-      "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
-      "unsafeReasons": []
-    },
-    {
-      "articleState": {
-        "humanReviewRequired": true,
-        "noindex": true,
-        "qualityScore": 100,
-        "sourceNotes": true,
-        "status": "draft"
-      },
-      "blockers": [],
-      "clearanceActions": [
-        "Confirm the draft still answers one clear search intent.",
-        "Verify source-backed claims before any status change.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until approval.",
-        "Check that popular prompt lane framing stays broad enough for real search demand.",
-        "Run mark:review only after explicit human approval; publish confirm remains excluded."
-      ],
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-build-failed-causes-checklist.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vercel-build-failed-causes-checklist.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Run mark:review only after human source/fact approval. Run publish dry-run after review status. Do not run publish with --confirm here."
-      },
-      "copydeskBrief": null,
-      "file": "content/blog/vercel-build-failed-causes-checklist.mdx",
-      "hasFailedSourceDecision": false,
-      "immediate": false,
-      "massSearchThemes": 0,
-      "popularPromptLanes": 1,
-      "priorityScore": 38,
-      "readyForHumanApproval": true,
-      "readyForClearanceReview": true,
-      "seoWarning": null,
-      "sourceDecisions": [],
-      "title": "Vercel build failed 排查清单：从日志到重新部署",
       "unsafeReasons": []
     }
   ]

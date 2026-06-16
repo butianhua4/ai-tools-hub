@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:19.839Z",
+  "generatedAt": "2026-06-16T12:27:21.442Z",
   "guardrails": {
     "autoCreateArticles": false,
     "autoEditArticles": false,
@@ -26,10 +26,10 @@
       "https://openai.github.io/openai-agents-js/guides/sandbox-agents/memory/",
       "https://docs.langchain.com/oss/python/deepagents/long-term-memory"
     ],
-    "massMatrixGeneratedAt": "2026-06-16T07:01:16.524Z",
+    "massMatrixGeneratedAt": "2026-06-16T12:27:18.113Z",
     "massMatrixSummary": {
-      "commandBoundaries": 0,
-      "deploymentBridgedThemes": 0,
+      "commandBoundaries": 5,
+      "deploymentBridgedThemes": 4,
       "humanGatedItems": 8,
       "items": 8,
       "itemsReadyForHumanReviewPrep": 6,
@@ -47,7 +47,7 @@
       "unsafeItems": 2,
       "waves": 3
     },
-    "promptModuleGeneratedAt": "2026-06-16T07:01:19.351Z",
+    "promptModuleGeneratedAt": "2026-06-16T12:27:20.953Z",
     "promptModuleSummary": {
       "humanGatedItems": 12,
       "items": 12,
@@ -65,7 +65,7 @@
       "unsafeItems": 0,
       "zeroPublicCoverageItems": 0
     },
-    "deploymentReviewGeneratedAt": "2026-06-16T07:01:17.007Z",
+    "deploymentReviewGeneratedAt": "2026-06-16T12:27:18.594Z",
     "deploymentReviewSummary": {
       "deploymentPublicArticles": 179,
       "duplicateFiles": 0,
@@ -97,10 +97,10 @@
     "promptModuleBridgeItems": 0,
     "promptTemplates": 50,
     "publishConfirmCommandsIncluded": 0,
-    "searchQueries": 143,
-    "sourceTargets": 25,
+    "searchQueries": 139,
+    "sourceTargets": 22,
     "trafficDataAvailable": false,
-    "uniqueCandidateFiles": 20,
+    "uniqueCandidateFiles": 21,
     "unsafeItems": 7
   },
   "unsafeItems": [
@@ -1547,10 +1547,10 @@
         "OpenAI API deployment",
         "Vercel AI SDK deployment",
         "Claude API Next.js deployment",
-        "RAG knowledge base tutorial",
-        "AI agent memory",
-        "vector database RAG",
-        "enterprise knowledge base AI"
+        "大模型部署教程",
+        "AI 应用部署教程",
+        "OpenAI API 部署教程",
+        "Vercel AI SDK 部署"
       ],
       "sourceTargets": [
         "https://vercel.com/docs/agents",
@@ -1561,16 +1561,18 @@
         "OpenAI API docs: https://platform.openai.com/docs",
         "Vercel AI SDK docs: https://ai-sdk.dev/docs",
         "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+        "Anthropic docs: https://docs.anthropic.com",
         "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
         "LangChain docs: https://python.langchain.com/docs",
-        "LlamaIndex docs: https://docs.llamaindex.ai",
-        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents"
+        "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
       "sourceThemeMatches": [
         "AI app and model API deployment",
         "RAG, knowledge base, and agent memory",
         "Agent deployment, tool calling, and production workflows",
-        "AI service pricing, scope, and delivery"
+        "Local and open-source model deployment",
+        "AI service pricing, scope, and delivery",
+        "LLM serving, GPU, and managed inference"
       ],
       "title": "AI Agent 部署、工具调用和上线排错提示词",
       "trafficClaim": "not-included",
@@ -1822,10 +1824,10 @@
         "OpenAI API deployment",
         "Vercel AI SDK deployment",
         "Claude API Next.js deployment",
-        "RAG knowledge base tutorial",
-        "AI agent memory",
-        "vector database RAG",
-        "enterprise knowledge base AI"
+        "大模型部署教程",
+        "AI 应用部署教程",
+        "OpenAI API 部署教程",
+        "Vercel AI SDK 部署"
       ],
       "sourceTargets": [
         "https://openai.github.io/openai-agents-js/guides/sandbox-agents/memory/",
@@ -1836,10 +1838,10 @@
         "OpenAI API docs: https://platform.openai.com/docs",
         "Vercel AI SDK docs: https://ai-sdk.dev/docs",
         "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+        "Anthropic docs: https://docs.anthropic.com",
         "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
         "LangChain docs: https://python.langchain.com/docs",
-        "LlamaIndex docs: https://docs.llamaindex.ai",
-        "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering"
+        "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
       "sourceThemeMatches": [
         "AI app and model API deployment",
@@ -2382,7 +2384,10 @@
         "stopBefore": "Stop before mark:review and before publish until explicit human approval."
       },
       "candidateFiles": [
-        "content/blog/together-ai-api-beginner-guide.mdx"
+        "content/blog/together-ai-api-beginner-guide.mdx",
+        "content/blog/vector-database-selection-for-rag-guide.mdx",
+        "content/blog/supabase-pgvector-rag-guide.mdx",
+        "content/blog/vector-database-beginner-guide.mdx"
       ],
       "demandReason": "表格分析、数据透视、销售报表、异常值解释属于高频刚需，适合用模板承接搜索。",
       "deploymentBridgeFiles": [
@@ -2565,7 +2570,7 @@
           "useCase": "可视化建议"
         }
       ],
-      "publicMatches": 2,
+      "publicMatches": 28,
       "readyForHumanReviewPrep": true,
       "riskControls": [
         "Do not claim measured traffic, rankings, revenue, conversion lift, or guaranteed outcomes.",
@@ -2584,14 +2589,14 @@
         "ChatGPT 做数据分析怎么提问",
         "AI 生成图表建议",
         "运营数据复盘提示词",
-        "finance AI prompts",
-        "报表摘要 AI prompt",
-        "预算复盘 AI 提示词",
-        "financial analysis prompt",
-        "PRD AI prompt",
-        "需求分析 AI 提示词",
-        "user story prompt",
-        "产品文档 AI prompt"
+        "RAG knowledge base tutorial",
+        "AI agent memory",
+        "vector database RAG",
+        "enterprise knowledge base AI",
+        "RAG 知识库搭建教程",
+        "企业知识库 AI 部署",
+        "向量数据库 RAG 教程",
+        "RAG 评测怎么做"
       ],
       "sourceTargets": [
         "https://platform.openai.com/docs/guides/prompt-engineering",
@@ -2599,15 +2604,16 @@
         "https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5",
         "https://adoption.microsoft.com/en-us/copilot/prompt-gallery/",
         "https://ai.google.dev/gemini-api/docs/models/generative-models",
-        "https://platform.openai.com/docs/guides/prompt-generation",
-        "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-        "https://support.google.com/docs/answer/15013615",
         "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
         "LangChain docs: https://python.langchain.com/docs",
         "LlamaIndex docs: https://docs.llamaindex.ai",
-        "Hugging Face docs: https://huggingface.co/docs"
+        "Hugging Face docs: https://huggingface.co/docs",
+        "https://platform.openai.com/docs/guides/prompt-generation",
+        "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+        "https://support.google.com/docs/answer/15013615"
       ],
       "sourceThemeMatches": [
+        "RAG, knowledge base, and agent memory",
         "财务 AI 提示词",
         "产品经理 AI 提示词",
         "电商 AI 提示词",
@@ -3821,10 +3827,10 @@
         "OpenAI API deployment",
         "Vercel AI SDK deployment",
         "Claude API Next.js deployment",
-        "RAG knowledge base tutorial",
-        "AI agent memory",
-        "vector database RAG",
-        "enterprise knowledge base AI"
+        "大模型部署教程",
+        "AI 应用部署教程",
+        "OpenAI API 部署教程",
+        "Vercel AI SDK 部署"
       ],
       "sourceTargets": [
         "https://vercel.com/docs/agents",
@@ -3835,16 +3841,18 @@
         "OpenAI API docs: https://platform.openai.com/docs",
         "Vercel AI SDK docs: https://ai-sdk.dev/docs",
         "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+        "Anthropic docs: https://docs.anthropic.com",
         "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
         "LangChain docs: https://python.langchain.com/docs",
-        "LlamaIndex docs: https://docs.llamaindex.ai",
-        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents"
+        "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
       "sourceThemeMatches": [
         "AI app and model API deployment",
         "RAG, knowledge base, and agent memory",
         "Agent deployment, tool calling, and production workflows",
-        "AI service pricing, scope, and delivery"
+        "Local and open-source model deployment",
+        "AI service pricing, scope, and delivery",
+        "LLM serving, GPU, and managed inference"
       ],
       "title": "AI Agent 部署、工具调用和上线排错提示词",
       "trafficClaim": "not-included",
@@ -3875,8 +3883,8 @@
         "content/blog/vercel-vs-netlify-small-site.mdx",
         "content/blog/vercel-vs-netlify-small-site-checklist.mdx",
         "content/blog/vercel-404-after-deploy.mdx",
-        "content/blog/tensorrt-llm-beginner-guide.mdx",
-        "content/blog/together-ai-api-beginner-guide.mdx"
+        "content/blog/together-ai-api-beginner-guide.mdx",
+        "content/blog/vector-database-selection-for-rag-guide.mdx"
       ],
       "demandReason": "大模型部署、API 报错、推理延迟、环境变量和日志排错会带来技术流量，且能和工具服务转化相连。",
       "deploymentBridgeFiles": [
@@ -4094,10 +4102,10 @@
         "OpenAI API deployment",
         "Vercel AI SDK deployment",
         "Claude API Next.js deployment",
-        "local LLM deployment",
-        "Ollama local model tutorial",
-        "Open WebUI deployment",
-        "local AI model GPU memory"
+        "AI 应用部署教程",
+        "OpenAI API 部署教程",
+        "Vercel AI SDK 部署",
+        "Vercel build failed"
       ],
       "sourceTargets": [
         "https://platform.openai.com/docs/guides/prompt-engineering",
@@ -4108,13 +4116,14 @@
         "OpenAI API docs: https://platform.openai.com/docs",
         "Vercel AI SDK docs: https://ai-sdk.dev/docs",
         "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-        "Ollama docs: https://docs.ollama.com",
-        "Hugging Face docs: https://huggingface.co/docs",
-        "vLLM docs: https://docs.vllm.ai",
-        "Anthropic docs: https://docs.anthropic.com"
+        "Anthropic docs: https://docs.anthropic.com",
+        "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+        "LangChain docs: https://python.langchain.com/docs",
+        "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
       "sourceThemeMatches": [
         "AI app and model API deployment",
+        "RAG, knowledge base, and agent memory",
         "Local and open-source model deployment",
         "LLM serving, GPU, and managed inference"
       ],
@@ -4366,10 +4375,10 @@
         "OpenAI API deployment",
         "Vercel AI SDK deployment",
         "Claude API Next.js deployment",
-        "RAG knowledge base tutorial",
-        "AI agent memory",
-        "vector database RAG",
-        "enterprise knowledge base AI"
+        "大模型部署教程",
+        "AI 应用部署教程",
+        "OpenAI API 部署教程",
+        "Vercel AI SDK 部署"
       ],
       "sourceTargets": [
         "https://openai.github.io/openai-agents-js/guides/sandbox-agents/memory/",
@@ -4380,10 +4389,10 @@
         "OpenAI API docs: https://platform.openai.com/docs",
         "Vercel AI SDK docs: https://ai-sdk.dev/docs",
         "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+        "Anthropic docs: https://docs.anthropic.com",
         "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
         "LangChain docs: https://python.langchain.com/docs",
-        "LlamaIndex docs: https://docs.llamaindex.ai",
-        "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering"
+        "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
       "sourceThemeMatches": [
         "AI app and model API deployment",
@@ -4926,7 +4935,10 @@
         "stopBefore": "Stop before mark:review and before publish until explicit human approval."
       },
       "candidateFiles": [
-        "content/blog/together-ai-api-beginner-guide.mdx"
+        "content/blog/together-ai-api-beginner-guide.mdx",
+        "content/blog/vector-database-selection-for-rag-guide.mdx",
+        "content/blog/supabase-pgvector-rag-guide.mdx",
+        "content/blog/vector-database-beginner-guide.mdx"
       ],
       "demandReason": "表格分析、数据透视、销售报表、异常值解释属于高频刚需，适合用模板承接搜索。",
       "deploymentBridgeFiles": [
@@ -5109,7 +5121,7 @@
           "useCase": "可视化建议"
         }
       ],
-      "publicMatches": 2,
+      "publicMatches": 28,
       "readyForHumanReviewPrep": true,
       "riskControls": [
         "Do not claim measured traffic, rankings, revenue, conversion lift, or guaranteed outcomes.",
@@ -5128,14 +5140,14 @@
         "ChatGPT 做数据分析怎么提问",
         "AI 生成图表建议",
         "运营数据复盘提示词",
-        "finance AI prompts",
-        "报表摘要 AI prompt",
-        "预算复盘 AI 提示词",
-        "financial analysis prompt",
-        "PRD AI prompt",
-        "需求分析 AI 提示词",
-        "user story prompt",
-        "产品文档 AI prompt"
+        "RAG knowledge base tutorial",
+        "AI agent memory",
+        "vector database RAG",
+        "enterprise knowledge base AI",
+        "RAG 知识库搭建教程",
+        "企业知识库 AI 部署",
+        "向量数据库 RAG 教程",
+        "RAG 评测怎么做"
       ],
       "sourceTargets": [
         "https://platform.openai.com/docs/guides/prompt-engineering",
@@ -5143,15 +5155,16 @@
         "https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5",
         "https://adoption.microsoft.com/en-us/copilot/prompt-gallery/",
         "https://ai.google.dev/gemini-api/docs/models/generative-models",
-        "https://platform.openai.com/docs/guides/prompt-generation",
-        "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-        "https://support.google.com/docs/answer/15013615",
         "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
         "LangChain docs: https://python.langchain.com/docs",
         "LlamaIndex docs: https://docs.llamaindex.ai",
-        "Hugging Face docs: https://huggingface.co/docs"
+        "Hugging Face docs: https://huggingface.co/docs",
+        "https://platform.openai.com/docs/guides/prompt-generation",
+        "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+        "https://support.google.com/docs/answer/15013615"
       ],
       "sourceThemeMatches": [
+        "RAG, knowledge base, and agent memory",
         "财务 AI 提示词",
         "产品经理 AI 提示词",
         "电商 AI 提示词",
@@ -6365,10 +6378,10 @@
         "OpenAI API deployment",
         "Vercel AI SDK deployment",
         "Claude API Next.js deployment",
-        "RAG knowledge base tutorial",
-        "AI agent memory",
-        "vector database RAG",
-        "enterprise knowledge base AI"
+        "大模型部署教程",
+        "AI 应用部署教程",
+        "OpenAI API 部署教程",
+        "Vercel AI SDK 部署"
       ],
       "sourceTargets": [
         "https://vercel.com/docs/agents",
@@ -6379,16 +6392,18 @@
         "OpenAI API docs: https://platform.openai.com/docs",
         "Vercel AI SDK docs: https://ai-sdk.dev/docs",
         "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+        "Anthropic docs: https://docs.anthropic.com",
         "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
         "LangChain docs: https://python.langchain.com/docs",
-        "LlamaIndex docs: https://docs.llamaindex.ai",
-        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents"
+        "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
       "sourceThemeMatches": [
         "AI app and model API deployment",
         "RAG, knowledge base, and agent memory",
         "Agent deployment, tool calling, and production workflows",
-        "AI service pricing, scope, and delivery"
+        "Local and open-source model deployment",
+        "AI service pricing, scope, and delivery",
+        "LLM serving, GPU, and managed inference"
       ],
       "title": "AI Agent 部署、工具调用和上线排错提示词",
       "trafficClaim": "not-included",
@@ -6419,8 +6434,8 @@
         "content/blog/vercel-vs-netlify-small-site.mdx",
         "content/blog/vercel-vs-netlify-small-site-checklist.mdx",
         "content/blog/vercel-404-after-deploy.mdx",
-        "content/blog/tensorrt-llm-beginner-guide.mdx",
-        "content/blog/together-ai-api-beginner-guide.mdx"
+        "content/blog/together-ai-api-beginner-guide.mdx",
+        "content/blog/vector-database-selection-for-rag-guide.mdx"
       ],
       "demandReason": "大模型部署、API 报错、推理延迟、环境变量和日志排错会带来技术流量，且能和工具服务转化相连。",
       "deploymentBridgeFiles": [
@@ -6638,10 +6653,10 @@
         "OpenAI API deployment",
         "Vercel AI SDK deployment",
         "Claude API Next.js deployment",
-        "local LLM deployment",
-        "Ollama local model tutorial",
-        "Open WebUI deployment",
-        "local AI model GPU memory"
+        "AI 应用部署教程",
+        "OpenAI API 部署教程",
+        "Vercel AI SDK 部署",
+        "Vercel build failed"
       ],
       "sourceTargets": [
         "https://platform.openai.com/docs/guides/prompt-engineering",
@@ -6652,13 +6667,14 @@
         "OpenAI API docs: https://platform.openai.com/docs",
         "Vercel AI SDK docs: https://ai-sdk.dev/docs",
         "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-        "Ollama docs: https://docs.ollama.com",
-        "Hugging Face docs: https://huggingface.co/docs",
-        "vLLM docs: https://docs.vllm.ai",
-        "Anthropic docs: https://docs.anthropic.com"
+        "Anthropic docs: https://docs.anthropic.com",
+        "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+        "LangChain docs: https://python.langchain.com/docs",
+        "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
       "sourceThemeMatches": [
         "AI app and model API deployment",
+        "RAG, knowledge base, and agent memory",
         "Local and open-source model deployment",
         "LLM serving, GPU, and managed inference"
       ],
@@ -6910,10 +6926,10 @@
         "OpenAI API deployment",
         "Vercel AI SDK deployment",
         "Claude API Next.js deployment",
-        "RAG knowledge base tutorial",
-        "AI agent memory",
-        "vector database RAG",
-        "enterprise knowledge base AI"
+        "大模型部署教程",
+        "AI 应用部署教程",
+        "OpenAI API 部署教程",
+        "Vercel AI SDK 部署"
       ],
       "sourceTargets": [
         "https://openai.github.io/openai-agents-js/guides/sandbox-agents/memory/",
@@ -6924,10 +6940,10 @@
         "OpenAI API docs: https://platform.openai.com/docs",
         "Vercel AI SDK docs: https://ai-sdk.dev/docs",
         "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+        "Anthropic docs: https://docs.anthropic.com",
         "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
         "LangChain docs: https://python.langchain.com/docs",
-        "LlamaIndex docs: https://docs.llamaindex.ai",
-        "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering"
+        "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
       "sourceThemeMatches": [
         "AI app and model API deployment",

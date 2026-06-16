@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:42.627Z",
+  "generatedAt": "2026-06-16T12:27:43.422Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "broadPublishWavesGeneratedAt": "2026-06-16T07:01:42.150Z",
+    "broadPublishWavesGeneratedAt": "2026-06-16T12:27:42.938Z",
     "broadPublishWavesGuardrails": {
       "autoEditArticles": false,
       "autoMarkReview": false,
@@ -40,7 +40,7 @@
   "summary": {
     "items": 7,
     "itemsWithActionChecklist": 7,
-    "itemsWithPublicLinkSuggestion": 1,
+    "itemsWithPublicLinkSuggestion": 5,
     "itemsWithSearchQueries": 7,
     "itemsWithSourceTargets": 7,
     "readyItems": 7,
@@ -60,7 +60,7 @@
         "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources.",
         "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
         "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
-        "Add one contextual link to a relevant published article before approval.",
+        "Add one contextual link to the published article \"Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤\" at /blog/qdrant-vector-database-beginner-guide.",
         "Apply review focus: 把 RAG、微调、提示词模板区分清楚.",
         "Apply review focus: 必须写明引用、来源、权限和失败兜底.",
         "Apply review focus: 不要把 demo 成功写成生产质量保证.",
@@ -81,7 +81,14 @@
         "publishConfirm": "not-included"
       },
       "file": "content/blog/supabase-pgvector-rag-guide.mdx",
-      "publicLinkSuggestion": null,
+      "publicLinkSuggestion": {
+        "file": "content/blog/qdrant-vector-database-beginner-guide.mdx",
+        "reason": "same category: AI 基建; shared tags: RAG, 向量数据库; keyword overlap: rag, ai, 基建, 向量数据库, 语义搜索, 向量",
+        "score": 114,
+        "slug": "qdrant-vector-database-beginner-guide",
+        "title": "Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤",
+        "url": "/blog/qdrant-vector-database-beginner-guide"
+      },
       "readyForHumanOptimizationReview": true,
       "safeDraft": true,
       "searchQueries": [
@@ -119,7 +126,7 @@
         "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources.",
         "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
         "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
-        "Add one contextual link to a relevant published article before approval.",
+        "Add one contextual link to the published article \"本地部署大模型怎么开始：新手先看硬件、模型和用途\" at /blog/local-llm-deployment-beginner.",
         "Apply review focus: 核对部署命令、模型名称、GPU/显存要求、API 路径和版本差异.",
         "Apply review focus: 不要承诺本地部署一定更省钱或更稳定.",
         "Apply review focus: 必须包含 smoke check、回滚、日志、限流和成本边界.",
@@ -140,7 +147,14 @@
         "publishConfirm": "not-included"
       },
       "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
-      "publicLinkSuggestion": null,
+      "publicLinkSuggestion": {
+        "file": "content/blog/local-llm-deployment-beginner.mdx",
+        "reason": "same category: AI 基建; keyword overlap: ai, 基建, llm, ollama, 硬件, 怎么",
+        "score": 82,
+        "slug": "local-llm-deployment-beginner",
+        "title": "本地部署大模型怎么开始：新手先看硬件、模型和用途",
+        "url": "/blog/local-llm-deployment-beginner"
+      },
       "readyForHumanOptimizationReview": true,
       "safeDraft": true,
       "searchQueries": [
@@ -229,7 +243,7 @@
         "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources.",
         "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
         "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
-        "Add one contextual link to a relevant published article before approval.",
+        "Add one contextual link to the published article \"OpenRouter API 怎么接入：统一模型入口不是只换 Base URL\" at /blog/openrouter-api-beginner-guide.",
         "Apply review focus: 把 RAG、微调、提示词模板区分清楚.",
         "Apply review focus: 必须写明引用、来源、权限和失败兜底.",
         "Apply review focus: 不要把 demo 成功写成生产质量保证.",
@@ -250,7 +264,14 @@
         "publishConfirm": "not-included"
       },
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "publicLinkSuggestion": null,
+      "publicLinkSuggestion": {
+        "file": "content/blog/openrouter-api-beginner-guide.mdx",
+        "reason": "same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai",
+        "score": 90,
+        "slug": "openrouter-api-beginner-guide",
+        "title": "OpenRouter API 怎么接入：统一模型入口不是只换 Base URL",
+        "url": "/blog/openrouter-api-beginner-guide"
+      },
       "readyForHumanOptimizationReview": true,
       "safeDraft": true,
       "searchQueries": [
@@ -285,7 +306,7 @@
         "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources.",
         "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
         "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
-        "Add one contextual link to a relevant published article before approval.",
+        "Add one contextual link to the published article \"本地部署大模型怎么开始：新手先看硬件、模型和用途\" at /blog/local-llm-deployment-beginner.",
         "Apply review focus: 核对部署命令、模型名称、GPU/显存要求、API 路径和版本差异.",
         "Apply review focus: 不要承诺本地部署一定更省钱或更稳定.",
         "Apply review focus: 必须包含 smoke check、回滚、日志、限流和成本边界.",
@@ -306,7 +327,14 @@
         "publishConfirm": "not-included"
       },
       "file": "content/blog/vllm-deployment-beginner-guide.mdx",
-      "publicLinkSuggestion": null,
+      "publicLinkSuggestion": {
+        "file": "content/blog/local-llm-deployment-beginner.mdx",
+        "reason": "same category: AI 基建; shared tags: AI 基建; keyword overlap: ai, 基建, 部署, 硬件, ollama, 新手",
+        "score": 90,
+        "slug": "local-llm-deployment-beginner",
+        "title": "本地部署大模型怎么开始：新手先看硬件、模型和用途",
+        "url": "/blog/local-llm-deployment-beginner"
+      },
       "readyForHumanOptimizationReview": true,
       "safeDraft": true,
       "searchQueries": [
@@ -506,7 +534,7 @@
         "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources.",
         "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
         "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
-        "Add one contextual link to a relevant published article before approval.",
+        "Add one contextual link to the published article \"Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤\" at /blog/qdrant-vector-database-beginner-guide.",
         "Apply review focus: 把 RAG、微调、提示词模板区分清楚.",
         "Apply review focus: 必须写明引用、来源、权限和失败兜底.",
         "Apply review focus: 不要把 demo 成功写成生产质量保证.",
@@ -527,7 +555,14 @@
         "publishConfirm": "not-included"
       },
       "file": "content/blog/supabase-pgvector-rag-guide.mdx",
-      "publicLinkSuggestion": null,
+      "publicLinkSuggestion": {
+        "file": "content/blog/qdrant-vector-database-beginner-guide.mdx",
+        "reason": "same category: AI 基建; shared tags: RAG, 向量数据库; keyword overlap: rag, ai, 基建, 向量数据库, 语义搜索, 向量",
+        "score": 114,
+        "slug": "qdrant-vector-database-beginner-guide",
+        "title": "Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤",
+        "url": "/blog/qdrant-vector-database-beginner-guide"
+      },
       "readyForHumanOptimizationReview": true,
       "safeDraft": true,
       "searchQueries": [
@@ -565,7 +600,7 @@
         "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources.",
         "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
         "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
-        "Add one contextual link to a relevant published article before approval.",
+        "Add one contextual link to the published article \"本地部署大模型怎么开始：新手先看硬件、模型和用途\" at /blog/local-llm-deployment-beginner.",
         "Apply review focus: 核对部署命令、模型名称、GPU/显存要求、API 路径和版本差异.",
         "Apply review focus: 不要承诺本地部署一定更省钱或更稳定.",
         "Apply review focus: 必须包含 smoke check、回滚、日志、限流和成本边界.",
@@ -586,7 +621,14 @@
         "publishConfirm": "not-included"
       },
       "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
-      "publicLinkSuggestion": null,
+      "publicLinkSuggestion": {
+        "file": "content/blog/local-llm-deployment-beginner.mdx",
+        "reason": "same category: AI 基建; keyword overlap: ai, 基建, llm, ollama, 硬件, 怎么",
+        "score": 82,
+        "slug": "local-llm-deployment-beginner",
+        "title": "本地部署大模型怎么开始：新手先看硬件、模型和用途",
+        "url": "/blog/local-llm-deployment-beginner"
+      },
       "readyForHumanOptimizationReview": true,
       "safeDraft": true,
       "searchQueries": [
@@ -675,7 +717,7 @@
         "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources.",
         "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
         "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
-        "Add one contextual link to a relevant published article before approval.",
+        "Add one contextual link to the published article \"OpenRouter API 怎么接入：统一模型入口不是只换 Base URL\" at /blog/openrouter-api-beginner-guide.",
         "Apply review focus: 把 RAG、微调、提示词模板区分清楚.",
         "Apply review focus: 必须写明引用、来源、权限和失败兜底.",
         "Apply review focus: 不要把 demo 成功写成生产质量保证.",
@@ -696,7 +738,14 @@
         "publishConfirm": "not-included"
       },
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "publicLinkSuggestion": null,
+      "publicLinkSuggestion": {
+        "file": "content/blog/openrouter-api-beginner-guide.mdx",
+        "reason": "same category: AI 基建; shared tags: API; keyword overlap: ai, api, 怎么接入, 基建, 接入, openai",
+        "score": 90,
+        "slug": "openrouter-api-beginner-guide",
+        "title": "OpenRouter API 怎么接入：统一模型入口不是只换 Base URL",
+        "url": "/blog/openrouter-api-beginner-guide"
+      },
       "readyForHumanOptimizationReview": true,
       "safeDraft": true,
       "searchQueries": [
@@ -731,7 +780,7 @@
         "Confirm every fast-changing model, SDK, API, deployment, pricing, and version claim against current official sources.",
         "Remove unsupported traffic, ranking, revenue, benchmark, or guaranteed-outcome language.",
         "Keep human review, rollback, logging, cost, privacy, and failure-handling boundaries explicit.",
-        "Add one contextual link to a relevant published article before approval.",
+        "Add one contextual link to the published article \"本地部署大模型怎么开始：新手先看硬件、模型和用途\" at /blog/local-llm-deployment-beginner.",
         "Apply review focus: 核对部署命令、模型名称、GPU/显存要求、API 路径和版本差异.",
         "Apply review focus: 不要承诺本地部署一定更省钱或更稳定.",
         "Apply review focus: 必须包含 smoke check、回滚、日志、限流和成本边界.",
@@ -752,7 +801,14 @@
         "publishConfirm": "not-included"
       },
       "file": "content/blog/vllm-deployment-beginner-guide.mdx",
-      "publicLinkSuggestion": null,
+      "publicLinkSuggestion": {
+        "file": "content/blog/local-llm-deployment-beginner.mdx",
+        "reason": "same category: AI 基建; shared tags: AI 基建; keyword overlap: ai, 基建, 部署, 硬件, ollama, 新手",
+        "score": 90,
+        "slug": "local-llm-deployment-beginner",
+        "title": "本地部署大模型怎么开始：新手先看硬件、模型和用途",
+        "url": "/blog/local-llm-deployment-beginner"
+      },
       "readyForHumanOptimizationReview": true,
       "safeDraft": true,
       "searchQueries": [

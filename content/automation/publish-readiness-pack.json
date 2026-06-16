@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:00:56.355Z",
+  "generatedAt": "2026-06-16T12:26:58.480Z",
   "guardrails": {
     "autoPublish": false,
     "requiredHumanAction": "Read the article, verify factual claims and risk language, then mark review manually.",
@@ -73,7 +73,11 @@
         "RAG 向量数据库怎么选 官方文档 最新",
         "RAG 向量数据库怎么选 official docs latest",
         "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 事实核对",
-        "AI 基建 平台限制 官方文档"
+        "AI 基建 平台限制 官方文档",
+        "RAG 知识库搭建教程",
+        "企业知识库 AI 部署",
+        "向量数据库教程",
+        "客服知识库 AI"
       ],
       "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
       "humanDecisionChecklist": [
@@ -86,7 +90,21 @@
         "Opening section directly answers the search query.",
         "Reviewer can explain why this article should be public now instead of staying draft."
       ],
-      "matchedContentOpportunity": null,
+      "matchedContentOpportunity": {
+        "reviewFocus": [
+          "区分 RAG、微调和普通提示词",
+          "核对向量库、引用、召回和质检说法",
+          "说明失败案例和人工兜底"
+        ],
+        "searchQueries": [
+          "RAG 知识库搭建教程",
+          "企业知识库 AI 部署",
+          "向量数据库教程",
+          "客服知识库 AI"
+        ],
+        "topic": "RAG、知识库和向量检索",
+        "why": "很多团队会搜索知识库 AI，但真正需要的是可审核、可引用、可质检的方案。"
+      },
       "officialSourceTargets": [
         "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
         "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering"
@@ -114,7 +132,10 @@
         "Check facts, tool names, limits, and platform policy wording.",
         "Confirm risk reminders are cautionary and do not imply guaranteed outcomes.",
         "Confirm internal links and CTA point to relevant site pages.",
-        "Open the official source targets below before approving fast-changing AI, deployment, pricing, or API claims."
+        "Open the official source targets below before approving fast-changing AI, deployment, pricing, or API claims.",
+        "区分 RAG、微调和普通提示词",
+        "核对向量库、引用、召回和质检说法",
+        "说明失败案例和人工兜底"
       ],
       "searchIntent": "informational",
       "slug": "vector-database-selection-for-rag-guide",
@@ -130,7 +151,11 @@
         "Vercel AI Gateway 多模型 官方文档 最新",
         "Vercel AI Gateway 多模型 official docs latest",
         "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 事实核对",
-        "AI 部署 平台限制 官方文档"
+        "AI 部署 平台限制 官方文档",
+        "大模型部署教程",
+        "AI 应用部署 Vercel 教程",
+        "OpenAI API 部署教程",
+        "Claude API 部署教程"
       ],
       "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
       "humanDecisionChecklist": [
@@ -143,7 +168,21 @@
         "Opening section directly answers the search query.",
         "Reviewer can explain why this article should be public now instead of staying draft."
       ],
-      "matchedContentOpportunity": null,
+      "matchedContentOpportunity": {
+        "reviewFocus": [
+          "核对官方部署文档",
+          "检查 API Key、限流、环境变量和费用说法",
+          "补足上线后的 smoke check 和回滚步骤"
+        ],
+        "searchQueries": [
+          "大模型部署教程",
+          "AI 应用部署 Vercel 教程",
+          "OpenAI API 部署教程",
+          "Claude API 部署教程"
+        ],
+        "topic": "大模型和 AI 应用部署教程",
+        "why": "部署、API、限流、环境变量是新人最容易搜索也最容易踩坑的入口。"
+      },
       "officialSourceTargets": [
         "OpenAI docs: https://platform.openai.com/docs",
         "Vercel AI SDK docs: https://ai-sdk.dev/docs",
@@ -173,7 +212,10 @@
         "Check facts, tool names, limits, and platform policy wording.",
         "Confirm risk reminders are cautionary and do not imply guaranteed outcomes.",
         "Confirm internal links and CTA point to relevant site pages.",
-        "Open the official source targets below before approving fast-changing AI, deployment, pricing, or API claims."
+        "Open the official source targets below before approving fast-changing AI, deployment, pricing, or API claims.",
+        "核对官方部署文档",
+        "检查 API Key、限流、环境变量和费用说法",
+        "补足上线后的 smoke check 和回滚步骤"
       ],
       "searchIntent": "informational",
       "slug": "vercel-ai-gateway-multi-provider-guide",

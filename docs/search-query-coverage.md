@@ -1,6 +1,6 @@
 # Search Query Coverage
 
-Generated at: 2026-06-16T07:01:12.896Z
+Generated at: 2026-06-16T12:27:14.552Z
 
 This report is read-only. It expands each planned review-wave article into user-search query variants for human review and SEO planning. It does not claim measured search volume.
 
@@ -222,21 +222,21 @@ intentSeeds:
 - 向量数据库教程
 - 企业知识库 AI
 
-## Wave 2: Large model deployment, LLM serving, and GPU infrastructure + AI Agent deployment, tool calling, and production workflow + AI app deployment errors and beginner troubleshooting
+## Wave 2: AI automation service pricing, scope, and delivery checklist + Large model deployment, LLM serving, and GPU infrastructure + AI Agent deployment, tool calling, and production workflow
 
 - Items: 3
 - Query variants: 100
 
 | Ready | Queries | Lane | Primary keyword | Gaps | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| true | 35 | Large model deployment, LLM serving, and GPU infrastructure | TensorRT-LLM 入门 | none | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| true | 30 | AI automation service pricing, scope, and delivery checklist | TensorRT-LLM 入门 | none | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| true | 35 | Large model deployment, LLM serving, and GPU infrastructure | vLLM 部署 | none | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
 | true | 35 | AI Agent deployment, tool calling, and production workflow | Vercel AI SDK 聊天机器人部署 | none | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
-| true | 30 | AI app deployment errors and beginner troubleshooting | Vercel 部署后 404 检查清单 | none | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
 
 ### TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收
 
 - File: content/blog/tensorrt-llm-beginner-guide.mdx
-- Lane: Large model deployment, LLM serving, and GPU infrastructure
+- Lane: AI automation service pricing, scope, and delivery checklist
 - Primary keyword: TensorRT-LLM 入门
 
 howTo:
@@ -251,14 +251,11 @@ deployment:
 - TensorRT-LLM 入门部署
 - TensorRT-LLM 入门工作流
 - TensorRT-LLM 入门生产环境
-- 大模型部署
-- LLM serving
-- GPU 部署
-- TensorRT-LLM 入门 GPU sizing
-- TensorRT-LLM 入门 serving API
-- TensorRT-LLM 入门 quantization
-- TensorRT-LLM 入门 autoscaling
-- TensorRT-LLM 入门 cost control
+- TensorRT-LLM 入门 scope
+- TensorRT-LLM 入门 pricing
+- TensorRT-LLM 入门 acceptance
+- TensorRT-LLM 入门 maintenance
+- TensorRT-LLM 入门 risk language
 
 template:
 
@@ -271,8 +268,6 @@ comparison:
 
 - TensorRT-LLM 入门对比
 - TensorRT-LLM 入门怎么选
-- vLLM 和 TGI 区别
-- RunPod 和 Modal 部署对比
 
 risk:
 
@@ -287,6 +282,68 @@ costOps:
 - TensorRT-LLM 入门报价
 - TensorRT-LLM 入门维护
 - TensorRT-LLM 入门上线检查
+
+intentSeeds:
+
+- AI 自动化项目报价
+- AI Agent 项目
+- RAG 项目报价
+- Dify n8n 报价
+
+### vLLM 部署适合什么场景：新手先看推理服务边界
+
+- File: content/blog/vllm-deployment-beginner-guide.mdx
+- Lane: Large model deployment, LLM serving, and GPU infrastructure
+- Primary keyword: vLLM 部署
+
+howTo:
+
+- vLLM 部署怎么做
+- vLLM 部署教程
+- vLLM 部署新手教程
+- vLLM 部署落地步骤
+
+deployment:
+
+- vLLM 部署部署
+- vLLM 部署工作流
+- vLLM 部署生产环境
+- 大模型部署
+- LLM serving
+- GPU 部署
+- vLLM 部署 GPU sizing
+- vLLM 部署 serving API
+- vLLM 部署 quantization
+- vLLM 部署 autoscaling
+- vLLM 部署 cost control
+
+template:
+
+- vLLM 部署模板
+- vLLM 部署清单
+- vLLM 部署SOP
+- vLLM 部署方案
+
+comparison:
+
+- vLLM 部署对比
+- vLLM 部署怎么选
+- vLLM 和 TGI 区别
+- RunPod 和 Modal 部署对比
+
+risk:
+
+- vLLM 部署避坑
+- vLLM 部署风险
+- vLLM 部署安全
+- vLLM 部署人工审核
+
+costOps:
+
+- vLLM 部署成本
+- vLLM 部署报价
+- vLLM 部署维护
+- vLLM 部署上线检查
 
 intentSeeds:
 
@@ -357,6 +414,17 @@ intentSeeds:
 - Vercel AI SDK Agent
 - OpenAI Agents SDK
 
+## Wave 3: AI app deployment errors and beginner troubleshooting + LLM observability, evaluation, and production quality + RAG, knowledge base, and Agent memory
+
+- Items: 3
+- Query variants: 95
+
+| Ready | Queries | Lane | Primary keyword | Gaps | Title | File |
+| --- | --- | --- | --- | --- | --- | --- |
+| true | 30 | AI app deployment errors and beginner troubleshooting | Vercel 部署后 404 检查清单 | none | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
+| true | 30 | LLM observability, evaluation, and production quality | Vercel build failed 排查清单 | none | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
+| true | 35 | RAG, knowledge base, and Agent memory | Together AI API 接入 | none | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+
 ### Vercel 部署后 404 检查清单：逐页验收更稳
 
 - File: content/blog/vercel-404-after-deploy-checklist.mdx
@@ -413,74 +481,6 @@ intentSeeds:
 - API Key 无效
 - 环境变量缺失
 - npm command not found
-
-## Wave 3: AI automation service pricing, scope, and delivery checklist + LLM observability, evaluation, and production quality + RAG, knowledge base, and Agent memory
-
-- Items: 3
-- Query variants: 95
-
-| Ready | Queries | Lane | Primary keyword | Gaps | Title | File |
-| --- | --- | --- | --- | --- | --- | --- |
-| true | 30 | AI automation service pricing, scope, and delivery checklist | vLLM 部署 | none | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
-| true | 30 | LLM observability, evaluation, and production quality | Vercel build failed 排查清单 | none | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
-| true | 35 | RAG, knowledge base, and Agent memory | Together AI API 接入 | none | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-
-### vLLM 部署适合什么场景：新手先看推理服务边界
-
-- File: content/blog/vllm-deployment-beginner-guide.mdx
-- Lane: AI automation service pricing, scope, and delivery checklist
-- Primary keyword: vLLM 部署
-
-howTo:
-
-- vLLM 部署怎么做
-- vLLM 部署教程
-- vLLM 部署新手教程
-- vLLM 部署落地步骤
-
-deployment:
-
-- vLLM 部署部署
-- vLLM 部署工作流
-- vLLM 部署生产环境
-- vLLM 部署 scope
-- vLLM 部署 pricing
-- vLLM 部署 acceptance
-- vLLM 部署 maintenance
-- vLLM 部署 risk language
-
-template:
-
-- vLLM 部署模板
-- vLLM 部署清单
-- vLLM 部署SOP
-- vLLM 部署方案
-
-comparison:
-
-- vLLM 部署对比
-- vLLM 部署怎么选
-
-risk:
-
-- vLLM 部署避坑
-- vLLM 部署风险
-- vLLM 部署安全
-- vLLM 部署人工审核
-
-costOps:
-
-- vLLM 部署成本
-- vLLM 部署报价
-- vLLM 部署维护
-- vLLM 部署上线检查
-
-intentSeeds:
-
-- AI 自动化项目报价
-- AI Agent 项目
-- RAG 项目报价
-- Dify n8n 报价
 
 ### Vercel build failed 排查清单：从日志到重新部署
 
@@ -601,7 +601,7 @@ intentSeeds:
 - 向量数据库教程
 - 企业知识库 AI
 
-## Wave 4: RAG, knowledge base, and Agent memory + AI app deployment errors and beginner troubleshooting + AI automation service pricing, scope, and delivery checklist
+## Wave 4: RAG, knowledge base, and Agent memory + AI automation service pricing, scope, and delivery checklist + AI app deployment errors and beginner troubleshooting
 
 - Items: 3
 - Query variants: 95
@@ -609,8 +609,8 @@ intentSeeds:
 | Ready | Queries | Lane | Primary keyword | Gaps | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
 | true | 35 | RAG, knowledge base, and Agent memory | 向量数据库 | none | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
-| true | 30 | AI app deployment errors and beginner troubleshooting | Vercel 部署后 404 常见误区 | none | Vercel 部署后 404 常见误区：别只盯着域名 | content/blog/vercel-404-after-deploy-mistakes.mdx |
 | true | 30 | AI automation service pricing, scope, and delivery checklist | Vercel build failed 项目 | none | Vercel build failed 排查能不能项目：先看这 7 个边界 | content/blog/vercel-build-failed-causes-freelance-scope.mdx |
+| true | 30 | AI app deployment errors and beginner troubleshooting | Vercel 部署成功但 404 | none | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ### 向量数据库怎么选：新手先理解 embedding 和检索
 
@@ -674,63 +674,6 @@ intentSeeds:
 - 向量数据库教程
 - 企业知识库 AI
 
-### Vercel 部署后 404 常见误区：别只盯着域名
-
-- File: content/blog/vercel-404-after-deploy-mistakes.mdx
-- Lane: AI app deployment errors and beginner troubleshooting
-- Primary keyword: Vercel 部署后 404 常见误区
-
-howTo:
-
-- Vercel 部署后 404 常见误区怎么做
-- Vercel 部署后 404 常见误区教程
-- Vercel 部署后 404 常见误区新手教程
-- Vercel 部署后 404 常见误区落地步骤
-
-deployment:
-
-- Vercel 部署后 404 常见误区部署
-- Vercel 部署后 404 常见误区工作流
-- Vercel 部署后 404 常见误区生产环境
-- Vercel 部署后 404 常见误区 error log
-- Vercel 部署后 404 常见误区 reproduction
-- Vercel 部署后 404 常见误区 fix sequence
-- Vercel 部署后 404 常见误区 verification
-- Vercel 部署后 404 常见误区 handoff boundary
-
-template:
-
-- Vercel 部署后 404 常见误区模板
-- Vercel 部署后 404 常见误区清单
-- Vercel 部署后 404 常见误区SOP
-- Vercel 部署后 404 常见误区方案
-
-comparison:
-
-- Vercel 部署后 404 常见误区对比
-- Vercel 部署后 404 常见误区怎么选
-
-risk:
-
-- Vercel 部署后 404 常见误区避坑
-- Vercel 部署后 404 常见误区风险
-- Vercel 部署后 404 常见误区安全
-- Vercel 部署后 404 常见误区人工审核
-
-costOps:
-
-- Vercel 部署后 404 常见误区成本
-- Vercel 部署后 404 常见误区报价
-- Vercel 部署后 404 常见误区维护
-- Vercel 部署后 404 常见误区上线检查
-
-intentSeeds:
-
-- Vercel build failed
-- API Key 无效
-- 环境变量缺失
-- npm command not found
-
 ### Vercel build failed 排查能不能项目：先看这 7 个边界
 
 - File: content/blog/vercel-build-failed-causes-freelance-scope.mdx
@@ -787,3 +730,60 @@ intentSeeds:
 - AI Agent 项目
 - RAG 项目报价
 - Dify n8n 报价
+
+### Vercel 部署成功但页面 404：新手排查顺序
+
+- File: content/blog/vercel-404-after-deploy.mdx
+- Lane: AI app deployment errors and beginner troubleshooting
+- Primary keyword: Vercel 部署成功但 404
+
+howTo:
+
+- Vercel 部署成功但 404怎么做
+- Vercel 部署成功但 404教程
+- Vercel 部署成功但 404新手教程
+- Vercel 部署成功但 404落地步骤
+
+deployment:
+
+- Vercel 部署成功但 404部署
+- Vercel 部署成功但 404工作流
+- Vercel 部署成功但 404生产环境
+- Vercel 部署成功但 404 error log
+- Vercel 部署成功但 404 reproduction
+- Vercel 部署成功但 404 fix sequence
+- Vercel 部署成功但 404 verification
+- Vercel 部署成功但 404 handoff boundary
+
+template:
+
+- Vercel 部署成功但 404模板
+- Vercel 部署成功但 404清单
+- Vercel 部署成功但 404SOP
+- Vercel 部署成功但 404方案
+
+comparison:
+
+- Vercel 部署成功但 404对比
+- Vercel 部署成功但 404怎么选
+
+risk:
+
+- Vercel 部署成功但 404避坑
+- Vercel 部署成功但 404风险
+- Vercel 部署成功但 404安全
+- Vercel 部署成功但 404人工审核
+
+costOps:
+
+- Vercel 部署成功但 404成本
+- Vercel 部署成功但 404报价
+- Vercel 部署成功但 404维护
+- Vercel 部署成功但 404上线检查
+
+intentSeeds:
+
+- Vercel build failed
+- API Key 无效
+- 环境变量缺失
+- npm command not found

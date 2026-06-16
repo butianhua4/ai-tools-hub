@@ -1,6 +1,6 @@
 # Review Coverage Report
 
-Generated at: 2026-06-16T07:01:45.561Z
+Generated at: 2026-06-16T12:27:46.261Z
 
 This report expands manual review coverage across the planned candidate batches. It is read-only and does not publish or mark review.
 
@@ -35,10 +35,10 @@ This report expands manual review coverage across the planned candidate batches.
 
 | Batch | Pack | Risk | Quality | Status | Noindex | Human Review | Sources | Queries | Checks | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | current | high | 100 | draft | true | true | 5 | 4 | 7 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| 1 | current | high | 100 | draft | true | true | 5 | 8 | 7 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 | 1 | planned | high | 100 | draft | true | true | 2 | 7 | 6 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
 | 1 | planned | high | 100 | draft | true | true | 2 | 7 | 5 | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
-| 3 | current | high | 100 | draft | true | true | 2 | 4 | 8 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 3 | current | high | 100 | draft | true | true | 2 | 8 | 8 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
 | 3 | planned | high | 100 | draft | true | true | 2 | 7 | 5 | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
 | 3 | planned | high | 100 | draft | true | true | 1 | 7 | 6 | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
 
@@ -70,6 +70,10 @@ Fact-check queries:
 - Vercel AI Gateway 多模型 official docs latest
 - Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 事实核对
 - AI 部署 平台限制 官方文档
+- 大模型部署教程
+- AI 应用部署 Vercel 教程
+- OpenAI API 部署教程
+- Claude API 部署教程
 
 Approval checklist:
 
@@ -235,6 +239,10 @@ Fact-check queries:
 - RAG 向量数据库怎么选 official docs latest
 - RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 事实核对
 - AI 基建 平台限制 官方文档
+- RAG 知识库搭建教程
+- 企业知识库 AI 部署
+- 向量数据库教程
+- 客服知识库 AI
 
 Approval checklist:
 

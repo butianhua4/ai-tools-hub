@@ -1,6 +1,6 @@
 # Next Batch Approval Route
 
-Generated at: 2026-06-16T07:01:46.549Z
+Generated at: 2026-06-16T12:27:47.224Z
 
 This report is read-only. It converts the manual review workbench next batch into per-article approval routes without editing articles or changing publishing state.
 
@@ -26,9 +26,9 @@ This report is read-only. It converts the manual review workbench next batch int
 
 ## Summary
 
-- actionItems: 37
+- actionItems: 39
 - batchItems: 3
-- clearanceMatchedItems: 2
+- clearanceMatchedItems: 1
 - commandBoundaries: 3
 - copydeskMatchedItems: 1
 - currentPublicPublished: 500
@@ -39,8 +39,8 @@ This report is read-only. It converts the manual review workbench next batch int
 - publishConfirmCommandsIncluded: 0
 - queryCoverageMatchedItems: 3
 - queryMatchWarningItems: 3
-- routeWarnings: 8
-- seoWarningItems: 1
+- routeWarnings: 9
+- seoWarningItems: 3
 - sourcePackMatchedItems: 3
 - trafficDataAvailable: false
 - unsafeItems: 0
@@ -54,8 +54,8 @@ This report is read-only. It converts the manual review workbench next batch int
 | Ready | Score | Actions | Warnings | Sources | Queries | SEO | Freshness | Copydesk | Title | File |
 | --- | ---: | ---: | ---: | ---: | ---: | --- | --- | --- | --- | --- |
 | true | 441 | 15 | 1 | 7 | 30 | true | high | true | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
-| true | 398 | 11 | 3 | 4 | 35 | false | none | false | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| true | 359 | 11 | 4 | 5 | 35 | false | none | false | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
+| true | 370 | 12 | 4 | 4 | 35 | true | none | false | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| true | 369 | 12 | 4 | 5 | 35 | true | none | false | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
 
 ## Item Actions
 
@@ -92,14 +92,14 @@ This report is read-only. It converts the manual review workbench next batch int
 
 - File: content/blog/together-ai-api-beginner-guide.mdx
 - Ready for human route review: true
-- Priority score: 398
+- Priority score: 370
 - Cluster: AI deployment
 - Category: AI 基建
 - Publish confirm: not-included
 - Dry-run mark review: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx
 - Human approval mark review: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human
 - Publish dry-run: npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx
-- Route warnings: no copydesk optimization brief matched; no freshness brief matched; search query match warning exists
+- Route warnings: not yet matched in human approval clearance pack; no copydesk optimization brief matched; no freshness brief matched; search query match warning exists
 
 - Confirm the article still targets the next batch topic before any status change.
 - Verify the opening section answers the likely user search query directly.
@@ -108,7 +108,8 @@ This report is read-only. It converts the manual review workbench next batch int
 - Run manual fact checks for: Together AI API 接入 official docs latest | Together AI API 接入 official documentation current limits | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 fact check official docs.
 - Use 35 query variants to check title, description, headings, and first-screen answer fit.
 - Search wording warnings: few exact query variant matches in article text; missing query-family signals: intentSeeds.
-- Resolve route warnings before approval: no copydesk optimization brief matched; no freshness brief matched; search query match warning exists.
+- SEO manual actions: Check whether the title can naturally include the exact primary keyword: Together AI API 接入. | If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title. | Confirm the H1/title/description still answer the same search intent after any metadata change..
+- Resolve route warnings before approval: not yet matched in human approval clearance pack; no copydesk optimization brief matched; no freshness brief matched.
 - After human approval only: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human
 - After review state only, dry-run publish without confirm: npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx
 - Do not run publish:articles --confirm from this route.
@@ -117,7 +118,7 @@ This report is read-only. It converts the manual review workbench next batch int
 
 - File: content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx
 - Ready for human route review: true
-- Priority score: 359
+- Priority score: 369
 - Cluster: AI deployment
 - Category: AI 基建
 - Publish confirm: not-included
@@ -133,6 +134,7 @@ This report is read-only. It converts the manual review workbench next batch int
 - Run manual fact checks for: Vercel AI SDK 聊天机器人部署 official docs latest | Vercel AI SDK 聊天机器人部署 official documentation current limits | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 fact check official docs.
 - Use 35 query variants to check title, description, headings, and first-screen answer fit.
 - Search wording warnings: few exact query variant matches in article text.
+- SEO manual actions: Check whether the title can naturally include the exact primary keyword: Vercel AI SDK 聊天机器人部署. | If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title. | Confirm the H1/title/description still answer the same search intent after any metadata change..
 - Resolve route warnings before approval: not yet matched in human approval clearance pack; no copydesk optimization brief matched; no freshness brief matched.
 - After human approval only: npm run mark:review -- --file=content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx --confirm-human
 - After review state only, dry-run publish without confirm: npm run publish:articles -- --file=content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx

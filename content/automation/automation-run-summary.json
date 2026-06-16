@@ -1,7 +1,6 @@
 {
-  "generatedAt": "2026-06-16T07:01:52.125Z",
+  "generatedAt": "2026-06-16T12:27:52.688Z",
   "failures": [
-    "Generate internal link sprint board exited 1",
     "Generate search intent lane map exited 1",
     "Generate search intent approval packet exited 1",
     "Generate search demand intake exited 1",
@@ -10,12 +9,7 @@
     "Generate popular AI prompt playbook exited 1",
     "Generate popular prompt approval bridge exited 1",
     "Generate popular prompt sprint board exited 1",
-    "Run public coverage gap preflight exited 1",
-    "Generate public coverage gap decision pack exited 1",
     "Generate review action board exited 1",
-    "Generate review portfolio board exited 1",
-    "Generate autopilot review queue exited 1",
-    "Generate autopilot internal link brief exited 1",
     "Generate autopilot human review playbook exited 1",
     "Generate autopilot approval remediation pack exited 1",
     "Generate human approval repair route exited 1",

@@ -1,6 +1,6 @@
 # Human Approval Clearance Pack
 
-Generated at: 2026-06-16T07:01:45.068Z
+Generated at: 2026-06-16T12:27:45.790Z
 
 This report is read-only. It consolidates the source, SEO, copydesk, and link checks needed before a human reviewer approves any mark:review action.
 
@@ -22,18 +22,18 @@ This report is read-only. It consolidates the source, SEO, copydesk, and link ch
 
 ## Summary
 
-- approvalItems: 6
-- backlogItems: 3
-- clearanceActions: 40
+- approvalItems: 3
+- backlogItems: 0
+- clearanceActions: 28
 - copydeskBriefItems: 2
 - failedSourceDecisionItems: 0
 - immediateItems: 3
-- itemsReadyForClearanceReview: 6
-- massSearchThemeItems: 5
-- popularPromptLaneItems: 4
+- itemsReadyForClearanceReview: 3
+- massSearchThemeItems: 3
+- popularPromptLaneItems: 3
 - publishConfirmCommandsIncluded: 0
 - seoWarningItems: 1
-- sourceDecisionItems: 0
+- sourceDecisionItems: 1
 - trafficDataAvailable: false
 - unsafeItems: 0
 
@@ -45,12 +45,9 @@ This report is read-only. It consolidates the source, SEO, copydesk, and link ch
 
 | Immediate | Ready | Priority | Source decisions | Failed source | SEO | Copydesk | Popular lanes | Mass themes | Title | File |
 | --- | --- | ---: | ---: | --- | --- | --- | ---: | ---: | --- | --- |
-| true | true | 446 | 0 | false | false | true | 0 | 1 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| true | true | 446 | 0 | false | false | true | 2 | 1 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
 | true | true | 439 | 0 | false | true | true | 2 | 1 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
-| true | true | 415 | 0 | false | false | false | 0 | 1 | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
-| false | true | 50 | 0 | false | false | false | 2 | 1 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
-| false | true | 54 | 0 | false | false | false | 1 | 2 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
-| false | true | 38 | 0 | false | false | false | 1 | 0 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
+| true | true | 415 | 5 | false | false | false | 1 | 1 | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
 
 ## Item Actions
 
@@ -63,7 +60,7 @@ This report is read-only. It consolidates the source, SEO, copydesk, and link ch
 - Failed source decision: false
 - SEO warning: false
 - Copydesk brief: true
-- Popular prompt lanes: 0
+- Popular prompt lanes: 2
 - Mass search themes: 1
 
 - Confirm the draft still answers one clear search intent.
@@ -71,6 +68,7 @@ This report is read-only. It consolidates the source, SEO, copydesk, and link ch
 - Keep status=draft, noindex=true, and humanReviewRequired=true until approval.
 - Review public internal link suggestion: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide).
 - Review proposed meta description from copydesk brief before approval.
+- Check that popular prompt lane framing stays broad enough for real search demand.
 - Check that mass-search theme framing is covered without stuffing keywords.
 - Run mark:review only after explicit human approval; publish confirm remains excluded.
 
@@ -103,71 +101,19 @@ This report is read-only. It consolidates the source, SEO, copydesk, and link ch
 - File: content/blog/supabase-pgvector-rag-guide.mdx
 - Immediate: true
 - Ready for clearance review: true
-- Source decisions: 0
+- Source decisions: 5
 - Failed source decision: false
 - SEO warning: false
 - Copydesk brief: false
-- Popular prompt lanes: 0
+- Popular prompt lanes: 1
 - Mass search themes: 1
 
 - Confirm the draft still answers one clear search intent.
 - Verify source-backed claims before any status change.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until approval.
-- Check that mass-search theme framing is covered without stuffing keywords.
-- Run mark:review only after explicit human approval; publish confirm remains excluded.
-
-### Together AI API 怎么接入：开源模型接口、embedding 和部署边界
-
-- File: content/blog/together-ai-api-beginner-guide.mdx
-- Immediate: false
-- Ready for clearance review: true
-- Source decisions: 0
-- Failed source decision: false
-- SEO warning: false
-- Copydesk brief: false
-- Popular prompt lanes: 2
-- Mass search themes: 1
-
-- Confirm the draft still answers one clear search intent.
-- Verify source-backed claims before any status change.
-- Keep status=draft, noindex=true, and humanReviewRequired=true until approval.
+- Review redirect https://ai-sdk.dev/docs -> https://ai-sdk.dev/docs/introduction and approve or replace during human review.
+- Review redirect https://docs.llamaindex.ai -> https://developers.llamaindex.ai/python/framework/ and approve or replace during human review.
+- Review redirect https://platform.openai.com/docs -> https://developers.openai.com/api/docs and approve or replace during human review.
 - Check that popular prompt lane framing stays broad enough for real search demand.
 - Check that mass-search theme framing is covered without stuffing keywords.
-- Run mark:review only after explicit human approval; publish confirm remains excluded.
-
-### TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收
-
-- File: content/blog/tensorrt-llm-beginner-guide.mdx
-- Immediate: false
-- Ready for clearance review: true
-- Source decisions: 0
-- Failed source decision: false
-- SEO warning: false
-- Copydesk brief: false
-- Popular prompt lanes: 1
-- Mass search themes: 2
-
-- Confirm the draft still answers one clear search intent.
-- Verify source-backed claims before any status change.
-- Keep status=draft, noindex=true, and humanReviewRequired=true until approval.
-- Check that popular prompt lane framing stays broad enough for real search demand.
-- Check that mass-search theme framing is covered without stuffing keywords.
-- Run mark:review only after explicit human approval; publish confirm remains excluded.
-
-### Vercel build failed 排查清单：从日志到重新部署
-
-- File: content/blog/vercel-build-failed-causes-checklist.mdx
-- Immediate: false
-- Ready for clearance review: true
-- Source decisions: 0
-- Failed source decision: false
-- SEO warning: false
-- Copydesk brief: false
-- Popular prompt lanes: 1
-- Mass search themes: 0
-
-- Confirm the draft still answers one clear search intent.
-- Verify source-backed claims before any status change.
-- Keep status=draft, noindex=true, and humanReviewRequired=true until approval.
-- Check that popular prompt lane framing stays broad enough for real search demand.
 - Run mark:review only after explicit human approval; publish confirm remains excluded.

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:38.018Z",
+  "generatedAt": "2026-06-16T12:27:38.895Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -19,7 +19,7 @@
     "decisionMatrixRepairItems": 1,
     "decisionMatrixUnsafeItems": 0,
     "internalLinkItems": 3,
-    "internalLinkUnsafeItems": 2,
+    "internalLinkUnsafeItems": 0,
     "repairQueueMinimumPathFiles": 3,
     "repairQueueMinimumPathTasks": 16,
     "repairQueueUnsafeItems": 0,
@@ -34,7 +34,7 @@
     "remediationUnsafeItems": 2
   },
   "summary": {
-    "blockedCategories": 4,
+    "blockedCategories": 2,
     "categoriesTracked": 18,
     "evidenceReadyCategories": 3,
     "filesReadyForHumanApprovalAfterRepair": 0,
@@ -42,9 +42,9 @@
     "manualOnlyCategories": 1,
     "nextRepairFile": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
     "nextRepairTitle": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
-    "openCategories": 7,
+    "openCategories": 8,
     "publishConfirmCommandsIncluded": 0,
-    "resolvedCategories": 3,
+    "resolvedCategories": 4,
     "routeSessions": 12,
     "trafficDataAvailable": false,
     "unsafeItems": 2
@@ -93,23 +93,23 @@
         },
         {
           "category": "internal-link",
-          "detail": "No current link to a published article.",
+          "detail": "At least one contextual public article link is present.",
           "evidence": {
-            "linksToPublicArticles": 0,
-            "readyForHumanReview": false,
+            "linksToPublicArticles": 4,
+            "readyForHumanReview": true,
             "safeDraft": true,
-            "suggestions": 0
+            "suggestions": 5
           },
-          "nextAction": "Add one useful contextual link to a currently published relevant article.",
+          "nextAction": "Keep the contextual public link if it helps the reader.",
           "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
-          "status": "blocked"
+          "status": "resolved"
         },
         {
           "category": "copydesk",
           "detail": "No copydesk warning is listed in the remediation pack.",
           "evidence": {
-            "humanChecklistItems": 10,
-            "remediationReasons": 3,
+            "humanChecklistItems": 9,
+            "remediationReasons": 2,
             "warningDetected": false
           },
           "nextAction": "No copydesk action required.",
@@ -166,13 +166,12 @@
       "openCategories": [
         "source-url",
         "search-intent",
-        "internal-link",
         "approval-boundary"
       ],
       "primaryQuery": "RAG 知识库搭建教程",
       "publishConfirm": "not-included",
       "readyForHumanApprovalAfterRepair": false,
-      "routeRank": 667,
+      "routeRank": 666,
       "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
       "unsafeReasons": [
         "route unsafe reasons remain: route item is not marked repair-before-review: defer"
@@ -224,13 +223,13 @@
           "detail": "No current link to a published article.",
           "evidence": {
             "linksToPublicArticles": 0,
-            "readyForHumanReview": false,
+            "readyForHumanReview": true,
             "safeDraft": true,
-            "suggestions": 0
+            "suggestions": 5
           },
           "nextAction": "Add one useful contextual link to a currently published relevant article.",
           "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
-          "status": "blocked"
+          "status": "open"
         },
         {
           "category": "copydesk",
@@ -325,7 +324,7 @@
           "detail": "Source review evidence is ready, but human confirmation is still required before mark:review.",
           "evidence": {
             "approvalChecks": 15,
-            "factCheckQueries": 15,
+            "factCheckQueries": 17,
             "reachableSources": 7,
             "readyForHumanReview": true,
             "riskChecks": 11
@@ -476,23 +475,23 @@
         },
         {
           "category": "internal-link",
-          "detail": "No current link to a published article.",
+          "detail": "At least one contextual public article link is present.",
           "evidence": {
-            "linksToPublicArticles": 0,
-            "readyForHumanReview": false,
+            "linksToPublicArticles": 4,
+            "readyForHumanReview": true,
             "safeDraft": true,
-            "suggestions": 0
+            "suggestions": 5
           },
-          "nextAction": "Add one useful contextual link to a currently published relevant article.",
+          "nextAction": "Keep the contextual public link if it helps the reader.",
           "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
-          "status": "blocked"
+          "status": "resolved"
         },
         {
           "category": "copydesk",
           "detail": "No copydesk warning is listed in the remediation pack.",
           "evidence": {
-            "humanChecklistItems": 10,
-            "remediationReasons": 3,
+            "humanChecklistItems": 9,
+            "remediationReasons": 2,
             "warningDetected": false
           },
           "nextAction": "No copydesk action required.",
@@ -549,13 +548,12 @@
       "openCategories": [
         "source-url",
         "search-intent",
-        "internal-link",
         "approval-boundary"
       ],
       "primaryQuery": "RAG 知识库搭建教程",
       "publishConfirm": "not-included",
       "readyForHumanApprovalAfterRepair": false,
-      "routeRank": 667,
+      "routeRank": 666,
       "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
       "unsafeReasons": [
         "route unsafe reasons remain: route item is not marked repair-before-review: defer"
@@ -607,13 +605,13 @@
           "detail": "No current link to a published article.",
           "evidence": {
             "linksToPublicArticles": 0,
-            "readyForHumanReview": false,
+            "readyForHumanReview": true,
             "safeDraft": true,
-            "suggestions": 0
+            "suggestions": 5
           },
           "nextAction": "Add one useful contextual link to a currently published relevant article.",
           "proofRequired": "Draft contains at least one contextual link to a currently published relevant article.",
-          "status": "blocked"
+          "status": "open"
         },
         {
           "category": "copydesk",

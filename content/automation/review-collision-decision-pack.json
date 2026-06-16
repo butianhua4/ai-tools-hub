@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:29.439Z",
+  "generatedAt": "2026-06-16T12:27:30.510Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "stopBefore": "Stop before mark:review. If a reviewer keeps both articles, the angle and internal-link relationship must be explicit first."
   },
   "sourceEvidence": {
-    "cannibalizationGeneratedAt": "2026-06-16T07:01:28.975Z",
+    "cannibalizationGeneratedAt": "2026-06-16T12:27:30.051Z",
     "cannibalizationGuardrails": {
       "autoEditArticles": false,
       "autoMarkReview": false,
@@ -28,7 +28,7 @@
       "mediumRiskItems": 0,
       "unsafeCommands": 0
     },
-    "queueBlockedItems": 1
+    "queueBlockedItems": 0
   },
   "summary": {
     "blockedQueueMatchedItems": 0,

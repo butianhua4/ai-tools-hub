@@ -1,6 +1,6 @@
 # Autopilot Review Queue
 
-Generated at: 2026-06-16T07:01:33.237Z
+Generated at: 2026-06-16T12:27:34.237Z
 
 This report is read-only. It ranks the next manual review assignments and stops before article status changes.
 
@@ -21,26 +21,17 @@ This report is read-only. It ranks the next manual review assignments and stops 
 ## Summary
 
 - blockedItems: 0
-- items: 16
+- items: 8
 - nextAssignments: 8
 - readyItems: 8
 - safeDraftItems: 8
-- unsafeItems: 8
-- withSearchQueries: 14
-- withSourceTargets: 16
+- unsafeItems: 0
+- withSearchQueries: 6
+- withSourceTargets: 8
 
 ## Unsafe Items
 
-| Ready | Score | Lane | Sources | Refs | Queries | Blockers | Title | File |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| false | 157 | public-coverage-gap | public-gap | 12 | 5 | 2 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| false | 157 | public-coverage-gap | public-gap | 11 | 5 | 2 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| false | 157 | public-coverage-gap | public-gap | 10 | 5 | 2 | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-| false | 137 | public-coverage-gap | public-gap | 8 | 6 | 2 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| false | 127 | public-coverage-gap | public-gap | 8 | 5 | 2 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| false | 52 | public-coverage-gap | public-gap | 3 | 5 | 2 | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
-| false | 52 | public-coverage-gap | public-gap | 3 | 5 | 2 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| false | 52 | public-coverage-gap | public-gap | 3 | 5 | 2 | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
+- none
 
 ## Blocked Items
 
@@ -198,11 +189,3 @@ Focus:
 | true | 403 | ai-deployment | deployment | 2 | 4 | 0 | Windows 路径和权限导致安装失败怎么办 | content/blog/windows-path-permission-install-fix.mdx |
 | true | 389 | ai-deployment | deployment | 2 | 4 | 0 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
 | true | 387 | ai-deployment | deployment | 3 | 4 | 0 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
-| false | 157 | public-coverage-gap | public-gap | 12 | 5 | 2 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| false | 157 | public-coverage-gap | public-gap | 11 | 5 | 2 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| false | 157 | public-coverage-gap | public-gap | 10 | 5 | 2 | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-| false | 137 | public-coverage-gap | public-gap | 8 | 6 | 2 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| false | 127 | public-coverage-gap | public-gap | 8 | 5 | 2 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| false | 52 | public-coverage-gap | public-gap | 3 | 5 | 2 | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
-| false | 52 | public-coverage-gap | public-gap | 3 | 5 | 2 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| false | 52 | public-coverage-gap | public-gap | 3 | 5 | 2 | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |

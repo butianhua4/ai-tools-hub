@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:09.041Z",
+  "generatedAt": "2026-06-16T12:27:10.744Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -20,7 +20,7 @@
     "lanes": 12,
     "lanesWithReadyDrafts": 7,
     "lanesWithoutPublicCoverage": 0,
-    "maxPriorityScore": 196,
+    "maxPriorityScore": 224,
     "notReadyMatchedDrafts": 57,
     "totalReadyDraftMatches": 22
   },
@@ -67,12 +67,12 @@
       ],
       "candidateCount": 35,
       "currentPackCandidates": 1,
-      "expansionCandidates": 0,
+      "expansionCandidates": 3,
       "matchedCandidates": [
         {
           "category": "AI 基建",
           "currentPack": true,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
           "noindex": true,
           "primaryKeyword": "RAG 向量数据库怎么选",
@@ -82,27 +82,12 @@
           "searchIntent": "informational",
           "status": "draft",
           "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
-          "wave1": false
+          "wave1": true
         },
         {
           "category": "AI 基建",
           "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/together-ai-api-beginner-guide.mdx",
-          "noindex": true,
-          "primaryKeyword": "Together AI API 接入",
-          "publishBatch": 27,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-          "wave1": false
-        },
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/supabase-pgvector-rag-guide.mdx",
           "noindex": true,
           "primaryKeyword": "Supabase pgvector",
@@ -112,6 +97,21 @@
           "searchIntent": "informational",
           "status": "draft",
           "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
+          "wave1": true
+        },
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/together-ai-api-beginner-guide.mdx",
+          "noindex": true,
+          "primaryKeyword": "Together AI API 接入",
+          "publishBatch": 27,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
           "wave1": false
         },
         {
@@ -131,11 +131,139 @@
         }
       ],
       "publicCount": 31,
-      "priorityReason": "demandScore=10; public coverage=31; readyDrafts=4; currentPack=1",
-      "priorityScore": 196,
+      "priorityReason": "demandScore=10; public coverage=31; readyDrafts=4; currentPack=1; wave1=2",
+      "priorityScore": 224,
       "readyDraftCount": 4,
       "notReadyMatchedDrafts": 0,
-      "wave1Candidates": 0
+      "wave1Candidates": 2
+    },
+    {
+      "audience": "Freelancers and service sellers packaging AI automation work for clients.",
+      "demandScore": 8,
+      "id": "ai-service-pricing-scope",
+      "intentSeeds": [
+        "AI 自动化项目报价",
+        "AI Agent 项目",
+        "RAG 项目报价",
+        "Dify n8n 报价"
+      ],
+      "matchTerms": [
+        "报价",
+        "项目",
+        "scope",
+        "pricing",
+        "服务",
+        "项目",
+        "维护",
+        "验收",
+        "自动化"
+      ],
+      "reviewFocus": [
+        "scope boundaries",
+        "acceptance criteria",
+        "maintenance fee",
+        "risk disclaimers",
+        "no income guarantees"
+      ],
+      "sourceTargets": [
+        "OpenAI API docs: https://platform.openai.com/docs",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+        "Dify docs: https://docs.dify.ai"
+      ],
+      "title": "AI automation service pricing, scope, and delivery checklist",
+      "workflowAngles": [
+        "scope",
+        "pricing",
+        "acceptance",
+        "maintenance",
+        "risk language"
+      ],
+      "candidateCount": 185,
+      "currentPackCandidates": 1,
+      "expansionCandidates": 4,
+      "matchedCandidates": [
+        {
+          "category": "AI 基建",
+          "currentPack": true,
+          "expansionQueue": true,
+          "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
+          "noindex": true,
+          "primaryKeyword": "RAG 向量数据库怎么选",
+          "publishBatch": 25,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
+          "wave1": true
+        },
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
+          "noindex": true,
+          "primaryKeyword": "TensorRT-LLM 入门",
+          "publishBatch": 29,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+          "wave1": false
+        },
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/vllm-deployment-beginner-guide.mdx",
+          "noindex": true,
+          "primaryKeyword": "vLLM 部署",
+          "publishBatch": 22,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
+          "wave1": false
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/vercel-404-after-deploy-checklist.mdx",
+          "noindex": true,
+          "primaryKeyword": "Vercel 部署后 404 检查清单",
+          "publishBatch": 15,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "Vercel 部署后 404 检查清单：逐页验收更稳",
+          "wave1": false
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "expansionQueue": false,
+          "file": "content/blog/vercel-build-failed-causes-freelance-scope.mdx",
+          "noindex": true,
+          "primaryKeyword": "Vercel build failed 项目",
+          "publishBatch": 13,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "commercial",
+          "status": "draft",
+          "title": "Vercel build failed 排查能不能项目：先看这 7 个边界",
+          "wave1": false
+        }
+      ],
+      "publicCount": 141,
+      "priorityReason": "demandScore=8; public coverage=141; readyDrafts=5; currentPack=1; wave1=1",
+      "priorityScore": 186,
+      "readyDraftCount": 5,
+      "notReadyMatchedDrafts": 39,
+      "wave1Candidates": 1
     },
     {
       "audience": "Developers, solo builders, and companies deciding where and how to run models.",
@@ -182,12 +310,12 @@
       ],
       "candidateCount": 29,
       "currentPackCandidates": 0,
-      "expansionCandidates": 0,
+      "expansionCandidates": 2,
       "matchedCandidates": [
         {
           "category": "AI 基建",
           "currentPack": false,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
           "noindex": true,
           "primaryKeyword": "TensorRT-LLM 入门",
@@ -202,7 +330,7 @@
         {
           "category": "AI 基建",
           "currentPack": false,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/vllm-deployment-beginner-guide.mdx",
           "noindex": true,
           "primaryKeyword": "vLLM 部署",
@@ -217,75 +345,8 @@
       ],
       "publicCount": 27,
       "priorityReason": "demandScore=10; public coverage=27; readyDrafts=2",
-      "priorityScore": 172,
+      "priorityScore": 180,
       "readyDraftCount": 2,
-      "notReadyMatchedDrafts": 0,
-      "wave1Candidates": 0
-    },
-    {
-      "audience": "Developers and teams trying to move beyond chatbots into production agents.",
-      "demandScore": 10,
-      "id": "agent-deployment-tools",
-      "intentSeeds": [
-        "AI Agent 部署",
-        "AI Agent 工具调用",
-        "Vercel AI SDK Agent",
-        "OpenAI Agents SDK"
-      ],
-      "matchTerms": [
-        "agent",
-        "agents sdk",
-        "工具调用",
-        "多步",
-        "workflow",
-        "vercel ai sdk",
-        "企业微信",
-        "slack ai agent"
-      ],
-      "reviewFocus": [
-        "tool permission boundaries",
-        "loop control and stop conditions",
-        "human handoff",
-        "logs and fallback paths"
-      ],
-      "sourceTargets": [
-        "OpenAI Agents: https://platform.openai.com/docs/guides/agents",
-        "OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk",
-        "Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents",
-        "n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
-      ],
-      "title": "AI Agent deployment, tool calling, and production workflow",
-      "workflowAngles": [
-        "tool calling",
-        "multi-step execution",
-        "human approval",
-        "observability",
-        "permissions"
-      ],
-      "candidateCount": 35,
-      "currentPackCandidates": 0,
-      "expansionCandidates": 0,
-      "matchedCandidates": [
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
-          "noindex": true,
-          "primaryKeyword": "Vercel AI SDK 聊天机器人部署",
-          "publishBatch": 26,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查",
-          "wave1": false
-        }
-      ],
-      "publicCount": 34,
-      "priorityReason": "demandScore=10; public coverage=34; readyDrafts=1",
-      "priorityScore": 166,
-      "readyDraftCount": 1,
       "notReadyMatchedDrafts": 0,
       "wave1Candidates": 0
     },
@@ -333,12 +394,12 @@
       ],
       "candidateCount": 30,
       "currentPackCandidates": 1,
-      "expansionCandidates": 0,
+      "expansionCandidates": 2,
       "matchedCandidates": [
         {
           "category": "AI 部署",
           "currentPack": true,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
           "noindex": true,
           "primaryKeyword": "Vercel AI Gateway 多模型",
@@ -348,12 +409,12 @@
           "searchIntent": "informational",
           "status": "draft",
           "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
-          "wave1": false
+          "wave1": true
         },
         {
           "category": "AI 基建",
           "currentPack": false,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/together-ai-api-beginner-guide.mdx",
           "noindex": true,
           "primaryKeyword": "Together AI API 接入",
@@ -367,9 +428,76 @@
         }
       ],
       "publicCount": 28,
-      "priorityReason": "demandScore=9; public coverage=28; readyDrafts=2; currentPack=1",
-      "priorityScore": 164,
+      "priorityReason": "demandScore=9; public coverage=28; readyDrafts=2; currentPack=1; wave1=1",
+      "priorityScore": 180,
       "readyDraftCount": 2,
+      "notReadyMatchedDrafts": 0,
+      "wave1Candidates": 1
+    },
+    {
+      "audience": "Developers and teams trying to move beyond chatbots into production agents.",
+      "demandScore": 10,
+      "id": "agent-deployment-tools",
+      "intentSeeds": [
+        "AI Agent 部署",
+        "AI Agent 工具调用",
+        "Vercel AI SDK Agent",
+        "OpenAI Agents SDK"
+      ],
+      "matchTerms": [
+        "agent",
+        "agents sdk",
+        "工具调用",
+        "多步",
+        "workflow",
+        "vercel ai sdk",
+        "企业微信",
+        "slack ai agent"
+      ],
+      "reviewFocus": [
+        "tool permission boundaries",
+        "loop control and stop conditions",
+        "human handoff",
+        "logs and fallback paths"
+      ],
+      "sourceTargets": [
+        "OpenAI Agents: https://platform.openai.com/docs/guides/agents",
+        "OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk",
+        "Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents",
+        "n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
+      ],
+      "title": "AI Agent deployment, tool calling, and production workflow",
+      "workflowAngles": [
+        "tool calling",
+        "multi-step execution",
+        "human approval",
+        "observability",
+        "permissions"
+      ],
+      "candidateCount": 35,
+      "currentPackCandidates": 0,
+      "expansionCandidates": 1,
+      "matchedCandidates": [
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
+          "noindex": true,
+          "primaryKeyword": "Vercel AI SDK 聊天机器人部署",
+          "publishBatch": 26,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查",
+          "wave1": false
+        }
+      ],
+      "publicCount": 34,
+      "priorityReason": "demandScore=10; public coverage=34; readyDrafts=1",
+      "priorityScore": 170,
+      "readyDraftCount": 1,
       "notReadyMatchedDrafts": 0,
       "wave1Candidates": 0
     },
@@ -416,12 +544,12 @@
       ],
       "candidateCount": 111,
       "currentPackCandidates": 0,
-      "expansionCandidates": 0,
+      "expansionCandidates": 2,
       "matchedCandidates": [
         {
           "category": "报错解决",
           "currentPack": false,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/vercel-404-after-deploy-checklist.mdx",
           "noindex": true,
           "primaryKeyword": "Vercel 部署后 404 检查清单",
@@ -431,6 +559,21 @@
           "searchIntent": "informational",
           "status": "draft",
           "title": "Vercel 部署后 404 检查清单：逐页验收更稳",
+          "wave1": false
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/vercel-404-after-deploy.mdx",
+          "noindex": true,
+          "primaryKeyword": "Vercel 部署成功但 404",
+          "publishBatch": 15,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "Vercel 部署成功但页面 404：新手排查顺序",
           "wave1": false
         },
         {
@@ -446,21 +589,6 @@
           "searchIntent": "informational",
           "status": "draft",
           "title": "Vercel 部署后 404 常见误区：别只盯着域名",
-          "wave1": false
-        },
-        {
-          "category": "报错解决",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/vercel-404-after-deploy.mdx",
-          "noindex": true,
-          "primaryKeyword": "Vercel 部署成功但 404",
-          "publishBatch": 15,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "Vercel 部署成功但页面 404：新手排查顺序",
           "wave1": false
         },
         {
@@ -526,137 +654,9 @@
       ],
       "publicCount": 87,
       "priorityReason": "demandScore=8; public coverage=87; readyDrafts=7",
-      "priorityScore": 162,
+      "priorityScore": 170,
       "readyDraftCount": 7,
       "notReadyMatchedDrafts": 14,
-      "wave1Candidates": 0
-    },
-    {
-      "audience": "Freelancers and service sellers packaging AI automation work for clients.",
-      "demandScore": 8,
-      "id": "ai-service-pricing-scope",
-      "intentSeeds": [
-        "AI 自动化项目报价",
-        "AI Agent 项目",
-        "RAG 项目报价",
-        "Dify n8n 报价"
-      ],
-      "matchTerms": [
-        "报价",
-        "项目",
-        "scope",
-        "pricing",
-        "服务",
-        "项目",
-        "维护",
-        "验收",
-        "自动化"
-      ],
-      "reviewFocus": [
-        "scope boundaries",
-        "acceptance criteria",
-        "maintenance fee",
-        "risk disclaimers",
-        "no income guarantees"
-      ],
-      "sourceTargets": [
-        "OpenAI API docs: https://platform.openai.com/docs",
-        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
-        "Dify docs: https://docs.dify.ai"
-      ],
-      "title": "AI automation service pricing, scope, and delivery checklist",
-      "workflowAngles": [
-        "scope",
-        "pricing",
-        "acceptance",
-        "maintenance",
-        "risk language"
-      ],
-      "candidateCount": 185,
-      "currentPackCandidates": 1,
-      "expansionCandidates": 0,
-      "matchedCandidates": [
-        {
-          "category": "AI 基建",
-          "currentPack": true,
-          "expansionQueue": false,
-          "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
-          "noindex": true,
-          "primaryKeyword": "RAG 向量数据库怎么选",
-          "publishBatch": 25,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
-          "wave1": false
-        },
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
-          "noindex": true,
-          "primaryKeyword": "TensorRT-LLM 入门",
-          "publishBatch": 29,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
-          "wave1": false
-        },
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/vllm-deployment-beginner-guide.mdx",
-          "noindex": true,
-          "primaryKeyword": "vLLM 部署",
-          "publishBatch": 22,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
-          "wave1": false
-        },
-        {
-          "category": "报错解决",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/vercel-404-after-deploy-checklist.mdx",
-          "noindex": true,
-          "primaryKeyword": "Vercel 部署后 404 检查清单",
-          "publishBatch": 15,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "Vercel 部署后 404 检查清单：逐页验收更稳",
-          "wave1": false
-        },
-        {
-          "category": "报错解决",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/vercel-build-failed-causes-freelance-scope.mdx",
-          "noindex": true,
-          "primaryKeyword": "Vercel build failed 项目",
-          "publishBatch": 13,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "commercial",
-          "status": "draft",
-          "title": "Vercel build failed 排查能不能项目：先看这 7 个边界",
-          "wave1": false
-        }
-      ],
-      "publicCount": 141,
-      "priorityReason": "demandScore=8; public coverage=141; readyDrafts=5; currentPack=1",
-      "priorityScore": 162,
-      "readyDraftCount": 5,
-      "notReadyMatchedDrafts": 39,
       "wave1Candidates": 0
     },
     {
@@ -809,12 +809,12 @@
       ],
       "candidateCount": 35,
       "currentPackCandidates": 1,
-      "expansionCandidates": 0,
+      "expansionCandidates": 3,
       "matchedCandidates": [
         {
           "category": "AI 基建",
           "currentPack": true,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
           "noindex": true,
           "primaryKeyword": "RAG 向量数据库怎么选",
@@ -824,27 +824,12 @@
           "searchIntent": "informational",
           "status": "draft",
           "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
-          "wave1": false
+          "wave1": true
         },
         {
           "category": "AI 基建",
           "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/together-ai-api-beginner-guide.mdx",
-          "noindex": true,
-          "primaryKeyword": "Together AI API 接入",
-          "publishBatch": 27,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
-          "wave1": false
-        },
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/supabase-pgvector-rag-guide.mdx",
           "noindex": true,
           "primaryKeyword": "Supabase pgvector",
@@ -854,6 +839,21 @@
           "searchIntent": "informational",
           "status": "draft",
           "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
+          "wave1": true
+        },
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/together-ai-api-beginner-guide.mdx",
+          "noindex": true,
+          "primaryKeyword": "Together AI API 接入",
+          "publishBatch": 27,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
           "wave1": false
         },
         {
@@ -873,11 +873,139 @@
         }
       ],
       "publicCount": 31,
-      "priorityReason": "demandScore=10; public coverage=31; readyDrafts=4; currentPack=1",
-      "priorityScore": 196,
+      "priorityReason": "demandScore=10; public coverage=31; readyDrafts=4; currentPack=1; wave1=2",
+      "priorityScore": 224,
       "readyDraftCount": 4,
       "notReadyMatchedDrafts": 0,
-      "wave1Candidates": 0
+      "wave1Candidates": 2
+    },
+    {
+      "audience": "Freelancers and service sellers packaging AI automation work for clients.",
+      "demandScore": 8,
+      "id": "ai-service-pricing-scope",
+      "intentSeeds": [
+        "AI 自动化项目报价",
+        "AI Agent 项目",
+        "RAG 项目报价",
+        "Dify n8n 报价"
+      ],
+      "matchTerms": [
+        "报价",
+        "项目",
+        "scope",
+        "pricing",
+        "服务",
+        "项目",
+        "维护",
+        "验收",
+        "自动化"
+      ],
+      "reviewFocus": [
+        "scope boundaries",
+        "acceptance criteria",
+        "maintenance fee",
+        "risk disclaimers",
+        "no income guarantees"
+      ],
+      "sourceTargets": [
+        "OpenAI API docs: https://platform.openai.com/docs",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+        "Dify docs: https://docs.dify.ai"
+      ],
+      "title": "AI automation service pricing, scope, and delivery checklist",
+      "workflowAngles": [
+        "scope",
+        "pricing",
+        "acceptance",
+        "maintenance",
+        "risk language"
+      ],
+      "candidateCount": 185,
+      "currentPackCandidates": 1,
+      "expansionCandidates": 4,
+      "matchedCandidates": [
+        {
+          "category": "AI 基建",
+          "currentPack": true,
+          "expansionQueue": true,
+          "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
+          "noindex": true,
+          "primaryKeyword": "RAG 向量数据库怎么选",
+          "publishBatch": 25,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
+          "wave1": true
+        },
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
+          "noindex": true,
+          "primaryKeyword": "TensorRT-LLM 入门",
+          "publishBatch": 29,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+          "wave1": false
+        },
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/vllm-deployment-beginner-guide.mdx",
+          "noindex": true,
+          "primaryKeyword": "vLLM 部署",
+          "publishBatch": 22,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
+          "wave1": false
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/vercel-404-after-deploy-checklist.mdx",
+          "noindex": true,
+          "primaryKeyword": "Vercel 部署后 404 检查清单",
+          "publishBatch": 15,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "Vercel 部署后 404 检查清单：逐页验收更稳",
+          "wave1": false
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "expansionQueue": false,
+          "file": "content/blog/vercel-build-failed-causes-freelance-scope.mdx",
+          "noindex": true,
+          "primaryKeyword": "Vercel build failed 项目",
+          "publishBatch": 13,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "commercial",
+          "status": "draft",
+          "title": "Vercel build failed 排查能不能项目：先看这 7 个边界",
+          "wave1": false
+        }
+      ],
+      "publicCount": 141,
+      "priorityReason": "demandScore=8; public coverage=141; readyDrafts=5; currentPack=1; wave1=1",
+      "priorityScore": 186,
+      "readyDraftCount": 5,
+      "notReadyMatchedDrafts": 39,
+      "wave1Candidates": 1
     },
     {
       "audience": "Developers, solo builders, and companies deciding where and how to run models.",
@@ -924,12 +1052,12 @@
       ],
       "candidateCount": 29,
       "currentPackCandidates": 0,
-      "expansionCandidates": 0,
+      "expansionCandidates": 2,
       "matchedCandidates": [
         {
           "category": "AI 基建",
           "currentPack": false,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
           "noindex": true,
           "primaryKeyword": "TensorRT-LLM 入门",
@@ -944,7 +1072,7 @@
         {
           "category": "AI 基建",
           "currentPack": false,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/vllm-deployment-beginner-guide.mdx",
           "noindex": true,
           "primaryKeyword": "vLLM 部署",
@@ -959,75 +1087,8 @@
       ],
       "publicCount": 27,
       "priorityReason": "demandScore=10; public coverage=27; readyDrafts=2",
-      "priorityScore": 172,
+      "priorityScore": 180,
       "readyDraftCount": 2,
-      "notReadyMatchedDrafts": 0,
-      "wave1Candidates": 0
-    },
-    {
-      "audience": "Developers and teams trying to move beyond chatbots into production agents.",
-      "demandScore": 10,
-      "id": "agent-deployment-tools",
-      "intentSeeds": [
-        "AI Agent 部署",
-        "AI Agent 工具调用",
-        "Vercel AI SDK Agent",
-        "OpenAI Agents SDK"
-      ],
-      "matchTerms": [
-        "agent",
-        "agents sdk",
-        "工具调用",
-        "多步",
-        "workflow",
-        "vercel ai sdk",
-        "企业微信",
-        "slack ai agent"
-      ],
-      "reviewFocus": [
-        "tool permission boundaries",
-        "loop control and stop conditions",
-        "human handoff",
-        "logs and fallback paths"
-      ],
-      "sourceTargets": [
-        "OpenAI Agents: https://platform.openai.com/docs/guides/agents",
-        "OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk",
-        "Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents",
-        "n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
-      ],
-      "title": "AI Agent deployment, tool calling, and production workflow",
-      "workflowAngles": [
-        "tool calling",
-        "multi-step execution",
-        "human approval",
-        "observability",
-        "permissions"
-      ],
-      "candidateCount": 35,
-      "currentPackCandidates": 0,
-      "expansionCandidates": 0,
-      "matchedCandidates": [
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
-          "noindex": true,
-          "primaryKeyword": "Vercel AI SDK 聊天机器人部署",
-          "publishBatch": 26,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查",
-          "wave1": false
-        }
-      ],
-      "publicCount": 34,
-      "priorityReason": "demandScore=10; public coverage=34; readyDrafts=1",
-      "priorityScore": 166,
-      "readyDraftCount": 1,
       "notReadyMatchedDrafts": 0,
       "wave1Candidates": 0
     },
@@ -1075,12 +1136,12 @@
       ],
       "candidateCount": 30,
       "currentPackCandidates": 1,
-      "expansionCandidates": 0,
+      "expansionCandidates": 2,
       "matchedCandidates": [
         {
           "category": "AI 部署",
           "currentPack": true,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
           "noindex": true,
           "primaryKeyword": "Vercel AI Gateway 多模型",
@@ -1090,12 +1151,12 @@
           "searchIntent": "informational",
           "status": "draft",
           "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
-          "wave1": false
+          "wave1": true
         },
         {
           "category": "AI 基建",
           "currentPack": false,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/together-ai-api-beginner-guide.mdx",
           "noindex": true,
           "primaryKeyword": "Together AI API 接入",
@@ -1109,9 +1170,76 @@
         }
       ],
       "publicCount": 28,
-      "priorityReason": "demandScore=9; public coverage=28; readyDrafts=2; currentPack=1",
-      "priorityScore": 164,
+      "priorityReason": "demandScore=9; public coverage=28; readyDrafts=2; currentPack=1; wave1=1",
+      "priorityScore": 180,
       "readyDraftCount": 2,
+      "notReadyMatchedDrafts": 0,
+      "wave1Candidates": 1
+    },
+    {
+      "audience": "Developers and teams trying to move beyond chatbots into production agents.",
+      "demandScore": 10,
+      "id": "agent-deployment-tools",
+      "intentSeeds": [
+        "AI Agent 部署",
+        "AI Agent 工具调用",
+        "Vercel AI SDK Agent",
+        "OpenAI Agents SDK"
+      ],
+      "matchTerms": [
+        "agent",
+        "agents sdk",
+        "工具调用",
+        "多步",
+        "workflow",
+        "vercel ai sdk",
+        "企业微信",
+        "slack ai agent"
+      ],
+      "reviewFocus": [
+        "tool permission boundaries",
+        "loop control and stop conditions",
+        "human handoff",
+        "logs and fallback paths"
+      ],
+      "sourceTargets": [
+        "OpenAI Agents: https://platform.openai.com/docs/guides/agents",
+        "OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk",
+        "Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents",
+        "n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
+      ],
+      "title": "AI Agent deployment, tool calling, and production workflow",
+      "workflowAngles": [
+        "tool calling",
+        "multi-step execution",
+        "human approval",
+        "observability",
+        "permissions"
+      ],
+      "candidateCount": 35,
+      "currentPackCandidates": 0,
+      "expansionCandidates": 1,
+      "matchedCandidates": [
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
+          "noindex": true,
+          "primaryKeyword": "Vercel AI SDK 聊天机器人部署",
+          "publishBatch": 26,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查",
+          "wave1": false
+        }
+      ],
+      "publicCount": 34,
+      "priorityReason": "demandScore=10; public coverage=34; readyDrafts=1",
+      "priorityScore": 170,
+      "readyDraftCount": 1,
       "notReadyMatchedDrafts": 0,
       "wave1Candidates": 0
     },
@@ -1158,12 +1286,12 @@
       ],
       "candidateCount": 111,
       "currentPackCandidates": 0,
-      "expansionCandidates": 0,
+      "expansionCandidates": 2,
       "matchedCandidates": [
         {
           "category": "报错解决",
           "currentPack": false,
-          "expansionQueue": false,
+          "expansionQueue": true,
           "file": "content/blog/vercel-404-after-deploy-checklist.mdx",
           "noindex": true,
           "primaryKeyword": "Vercel 部署后 404 检查清单",
@@ -1173,6 +1301,21 @@
           "searchIntent": "informational",
           "status": "draft",
           "title": "Vercel 部署后 404 检查清单：逐页验收更稳",
+          "wave1": false
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "expansionQueue": true,
+          "file": "content/blog/vercel-404-after-deploy.mdx",
+          "noindex": true,
+          "primaryKeyword": "Vercel 部署成功但 404",
+          "publishBatch": 15,
+          "qualityScore": 86,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "status": "draft",
+          "title": "Vercel 部署成功但页面 404：新手排查顺序",
           "wave1": false
         },
         {
@@ -1188,21 +1331,6 @@
           "searchIntent": "informational",
           "status": "draft",
           "title": "Vercel 部署后 404 常见误区：别只盯着域名",
-          "wave1": false
-        },
-        {
-          "category": "报错解决",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/vercel-404-after-deploy.mdx",
-          "noindex": true,
-          "primaryKeyword": "Vercel 部署成功但 404",
-          "publishBatch": 15,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "Vercel 部署成功但页面 404：新手排查顺序",
           "wave1": false
         },
         {
@@ -1268,137 +1396,9 @@
       ],
       "publicCount": 87,
       "priorityReason": "demandScore=8; public coverage=87; readyDrafts=7",
-      "priorityScore": 162,
+      "priorityScore": 170,
       "readyDraftCount": 7,
       "notReadyMatchedDrafts": 14,
-      "wave1Candidates": 0
-    },
-    {
-      "audience": "Freelancers and service sellers packaging AI automation work for clients.",
-      "demandScore": 8,
-      "id": "ai-service-pricing-scope",
-      "intentSeeds": [
-        "AI 自动化项目报价",
-        "AI Agent 项目",
-        "RAG 项目报价",
-        "Dify n8n 报价"
-      ],
-      "matchTerms": [
-        "报价",
-        "项目",
-        "scope",
-        "pricing",
-        "服务",
-        "项目",
-        "维护",
-        "验收",
-        "自动化"
-      ],
-      "reviewFocus": [
-        "scope boundaries",
-        "acceptance criteria",
-        "maintenance fee",
-        "risk disclaimers",
-        "no income guarantees"
-      ],
-      "sourceTargets": [
-        "OpenAI API docs: https://platform.openai.com/docs",
-        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
-        "Dify docs: https://docs.dify.ai"
-      ],
-      "title": "AI automation service pricing, scope, and delivery checklist",
-      "workflowAngles": [
-        "scope",
-        "pricing",
-        "acceptance",
-        "maintenance",
-        "risk language"
-      ],
-      "candidateCount": 185,
-      "currentPackCandidates": 1,
-      "expansionCandidates": 0,
-      "matchedCandidates": [
-        {
-          "category": "AI 基建",
-          "currentPack": true,
-          "expansionQueue": false,
-          "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
-          "noindex": true,
-          "primaryKeyword": "RAG 向量数据库怎么选",
-          "publishBatch": 25,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
-          "wave1": false
-        },
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
-          "noindex": true,
-          "primaryKeyword": "TensorRT-LLM 入门",
-          "publishBatch": 29,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
-          "wave1": false
-        },
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/vllm-deployment-beginner-guide.mdx",
-          "noindex": true,
-          "primaryKeyword": "vLLM 部署",
-          "publishBatch": 22,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
-          "wave1": false
-        },
-        {
-          "category": "报错解决",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/vercel-404-after-deploy-checklist.mdx",
-          "noindex": true,
-          "primaryKeyword": "Vercel 部署后 404 检查清单",
-          "publishBatch": 15,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "status": "draft",
-          "title": "Vercel 部署后 404 检查清单：逐页验收更稳",
-          "wave1": false
-        },
-        {
-          "category": "报错解决",
-          "currentPack": false,
-          "expansionQueue": false,
-          "file": "content/blog/vercel-build-failed-causes-freelance-scope.mdx",
-          "noindex": true,
-          "primaryKeyword": "Vercel build failed 项目",
-          "publishBatch": 13,
-          "qualityScore": 86,
-          "safeDraft": true,
-          "searchIntent": "commercial",
-          "status": "draft",
-          "title": "Vercel build failed 排查能不能项目：先看这 7 个边界",
-          "wave1": false
-        }
-      ],
-      "publicCount": 141,
-      "priorityReason": "demandScore=8; public coverage=141; readyDrafts=5; currentPack=1",
-      "priorityScore": 162,
-      "readyDraftCount": 5,
-      "notReadyMatchedDrafts": 39,
       "wave1Candidates": 0
     },
     {

@@ -1,6 +1,6 @@
 # Autopilot Approval Packet
 
-Generated at: 2026-06-16T07:01:33.721Z
+Generated at: 2026-06-16T12:27:34.705Z
 
 This packet is read-only. It packages the top autopilot review assignments for human approval and does not change article status.
 
@@ -21,7 +21,7 @@ This packet is read-only. It packages the top autopilot review assignments for h
 ## Summary
 
 - items: 3
-- queueUnsafeItems: 8
+- queueUnsafeItems: 0
 - readyForHumanApproval: 3
 - unsafeItems: 0
 - withHeadings: 3

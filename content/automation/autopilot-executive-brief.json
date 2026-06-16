@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:01:47.496Z",
+  "generatedAt": "2026-06-16T12:27:48.149Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,10 +9,10 @@
     "trafficClaim": "not-included"
   },
   "summary": {
-    "approvalBacklogItems": 3,
+    "approvalBacklogItems": 0,
     "automationRunsPerDay": 4,
     "boardActionItems": 5,
-    "broadClustersWithoutPublicCoverage": 8,
+    "broadClustersWithoutPublicCoverage": 0,
     "currentPublishableNow": 0,
     "forbiddenWorkflowCommands": 0,
     "immediateApprovalItems": 3,
@@ -61,9 +61,10 @@
     },
     {
       "file": "content/blog/together-ai-api-beginner-guide.mdx",
-      "priorityScore": 398,
+      "priorityScore": 370,
       "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
       "warnings": [
+        "not yet matched in human approval clearance pack",
         "no copydesk optimization brief matched",
         "no freshness brief matched",
         "search query match warning exists"
@@ -71,7 +72,7 @@
     },
     {
       "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
-      "priorityScore": 359,
+      "priorityScore": 369,
       "title": "Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查",
       "warnings": [
         "not yet matched in human approval clearance pack",
@@ -86,24 +87,24 @@
       "action": "Use docs/internal-link-sprint-board.md to add one contextual public link per candidate during manual review.",
       "publishConfirm": "not-included",
       "summary": {
-        "actionItems": 200,
-        "broadFirstCoverageItems": 8,
-        "candidateItems": 25,
+        "actionItems": 128,
+        "broadFirstCoverageItems": 0,
+        "candidateItems": 16,
         "candidateItemsMissingPublicLinkSuggestion": 0,
-        "candidateItemsWithPublicSuggestions": 25,
-        "candidatesWithoutCurrentPublicLinks": 2,
-        "expansionItems": 19,
-        "items": 25,
+        "candidateItemsWithPublicSuggestions": 16,
+        "candidatesWithoutCurrentPublicLinks": 10,
+        "expansionItems": 15,
+        "items": 16,
         "itemsPerWave": 4,
         "publicArticles": 500,
         "publishConfirmCommandsIncluded": 0,
-        "readyForInternalLinkSprint": 3,
+        "readyForInternalLinkSprint": 16,
         "recommendedItems": 3,
-        "suggestedPublicLinks": 75,
+        "suggestedPublicLinks": 48,
         "trafficDataAvailable": false,
-        "unsafeItems": 22,
+        "unsafeItems": 0,
         "waveItems": 3,
-        "waves": 7
+        "waves": 4
       },
       "title": "Internal links"
     },
@@ -111,14 +112,14 @@
       "action": "Use docs/public-refresh-sprint-board.md to refresh existing public articles without claiming traffic.",
       "publishConfirm": "not-included",
       "summary": {
-        "actionItems": 5070,
+        "actionItems": 5154,
         "cannibalizationItems": 239,
-        "highPriorityItems": 252,
+        "highPriorityItems": 268,
         "items": 500,
         "itemsPerWave": 3,
         "itemsReadyForPublicRefreshSprint": 500,
         "liveMissingFromSitemap": 0,
-        "mojibakePublicItems": 9,
+        "mojibakePublicItems": 51,
         "publicArticles": 500,
         "publishConfirmCommandsIncluded": 0,
         "publishedButNoindexed": 0,
@@ -189,7 +190,7 @@
       "summary": {
         "actionItems": 90,
         "bridgeItems": 13,
-        "candidateFiles": 20,
+        "candidateFiles": 21,
         "highPriorityItems": 5,
         "industryBuckets": 5,
         "items": 10,
