@@ -1,6 +1,6 @@
 # Search Demand Publication Bridge
 
-Generated at: 2026-06-14T10:38:55.968Z
+Generated at: 2026-06-16T07:01:15.184Z
 
 This report is read-only. It maps search-demand review candidates to SEO, source, internal-link, and manual publication readiness while stopping before review or publish commands.
 
@@ -17,22 +17,22 @@ This report is read-only. It maps search-demand review candidates to SEO, source
 ## Summary
 
 - blockingItems: 0
-- humanApprovalReadyItems: 16
-- indexingSafeItems: 16
-- internalLinkReadyItems: 13
-- items: 16
-- reviewPackItems: 16
-- reviewPackReadyItems: 16
-- schemaReadyItems: 16
-- searchSnippetReadyItems: 16
-- sourceReadyItems: 16
-- warningItems: 16
+- humanApprovalReadyItems: 11
+- indexingSafeItems: 11
+- internalLinkReadyItems: 2
+- items: 11
+- reviewPackItems: 11
+- reviewPackReadyItems: 11
+- schemaReadyItems: 11
+- searchSnippetReadyItems: 11
+- sourceReadyItems: 11
+- warningItems: 11
 
 ## Source Evidence
 
-- reviewPackGeneratedAt: "2026-06-14T10:38:55.486Z"
+- reviewPackGeneratedAt: "2026-06-16T07:01:14.697Z"
 - reviewPackGuardrails: {"autoCreateArticles":false,"autoEditArticles":false,"autoMarkReview":false,"autoPublish":false,"trafficClaim":"not-included","note":"Read-only review pack for high-search-demand lanes. It packages manual review work but never edits article files, marks review, or publishes.","stopBefore":"All commands are manual-only and require explicit human approval."}
-- reviewPackSummary: {"factCheckQueries":79,"items":16,"itemsPerLaneMax":2,"itemsWithCommandBoundary":16,"itemsWithHumanChecklist":16,"itemsWithInternalLinkSuggestion":13,"itemsWithManualReviewFocus":16,"itemsWithOfficialSources":16,"itemsWithSearchQueries":16,"lanes":8,"readyItems":16,"reviewQueueMatchedItems":14,"safeDraftItems":16,"unsafeItems":0,"zeroPublicLaneItems":12}
+- reviewPackSummary: {"factCheckQueries":63,"items":11,"itemsPerLaneMax":2,"itemsWithCommandBoundary":11,"itemsWithHumanChecklist":11,"itemsWithInternalLinkSuggestion":2,"itemsWithManualReviewFocus":11,"itemsWithOfficialSources":11,"itemsWithSearchQueries":11,"lanes":8,"readyItems":11,"reviewQueueMatchedItems":0,"safeDraftItems":11,"unsafeItems":0,"zeroPublicLaneItems":0}
 - sourceHealthFilesWithoutReachableSource: 0
 - sourceHealthMissingUrlTargets: 0
 - trafficNote: "This report evaluates readiness only; it does not claim keyword volume, rankings, impressions, clicks, traffic, or revenue."
@@ -45,273 +45,196 @@ This report is read-only. It maps search-demand review candidates to SEO, source
 
 | Ready | Snippet | Schema | Source | Link | Draft safe | Blockers | Warnings | Lane | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | true | true | true | true | 0 | 1 | agent-deployment-tools-mcp | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | agent-deployment-tools-mcp | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | cross-industry-ai-prompts | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| true | true | true | true | true | true | 0 | 2 | cross-industry-ai-prompts | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | llm-deployment-and-serving | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-| true | true | true | true | false | true | 0 | 3 | llm-deployment-and-serving | 大模型成本监控怎么做：按用户、功能、模型和项目拆账 | content/blog/llm-cost-monitoring-dashboard-guide.mdx |
-| true | true | true | true | true | true | 0 | 2 | rag-knowledge-base-agent-memory | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | rag-knowledge-base-agent-memory | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | nocode-ai-automation-deployment | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | nocode-ai-automation-deployment | Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核 | content/blog/dify-workflow-vs-agent-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | llm-evals-observability-security | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| true | true | true | true | true | true | 0 | 1 | llm-evals-observability-security | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | ai-api-keys-limits-routing | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| true | true | true | true | false | true | 0 | 2 | ai-service-pricing-delivery | Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则 | content/blog/agent-memory-postgres-schema-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | ai-api-keys-limits-routing | Claude API Rate limit reached 怎么办：限流、上下文、重试和降级 | content/blog/claude-api-rate-limit-debug-guide.mdx |
-| true | true | true | true | false | true | 0 | 2 | ai-service-pricing-delivery | 产品经理 AI 提示词模板：需求分析、PRD、竞品、用户故事和验收标准 | content/blog/product-manager-ai-prompts-guide.mdx |
+| true | true | true | true | false | true | 0 | 2 | cross-industry-ai-prompts | 模板下载页 CTA 文案怎么写：新手检查清单 | content/blog/template-download-cta-copy-checklist.mdx |
+| true | true | true | true | false | true | 0 | 2 | cross-industry-ai-prompts | 模板下载页 CTA 文案怎么写 | content/blog/template-download-cta-copy.mdx |
+| true | true | true | true | false | true | 0 | 2 | ai-service-pricing-delivery | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| true | true | true | true | true | true | 0 | 1 | ai-service-pricing-delivery | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| true | true | true | true | false | true | 0 | 2 | rag-knowledge-base-agent-memory | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| true | true | true | true | false | true | 0 | 2 | rag-knowledge-base-agent-memory | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| true | true | true | true | false | true | 0 | 2 | agent-deployment-tools-mcp | Windows 路径和权限导致安装失败怎么办：新手检查清单 | content/blog/windows-path-permission-install-fix-checklist.mdx |
+| true | true | true | true | false | true | 0 | 2 | agent-deployment-tools-mcp | Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合 | content/blog/windows-path-permission-install-fix-freelance-scope.mdx |
+| true | true | true | true | false | true | 0 | 2 | llm-deployment-and-serving | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| true | true | true | true | true | true | 0 | 1 | ai-api-keys-limits-routing | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| true | true | true | true | false | true | 0 | 2 | llm-evals-observability-security | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
 
 ## All Items
 
 | Ready | Snippet | Schema | Source | Link | Draft safe | Blockers | Warnings | Lane | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | true | true | true | true | 0 | 1 | agent-deployment-tools-mcp | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | agent-deployment-tools-mcp | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | cross-industry-ai-prompts | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| true | true | true | true | true | true | 0 | 2 | cross-industry-ai-prompts | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | llm-deployment-and-serving | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-| true | true | true | true | false | true | 0 | 3 | llm-deployment-and-serving | 大模型成本监控怎么做：按用户、功能、模型和项目拆账 | content/blog/llm-cost-monitoring-dashboard-guide.mdx |
-| true | true | true | true | true | true | 0 | 2 | rag-knowledge-base-agent-memory | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | rag-knowledge-base-agent-memory | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | nocode-ai-automation-deployment | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | nocode-ai-automation-deployment | Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核 | content/blog/dify-workflow-vs-agent-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | llm-evals-observability-security | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| true | true | true | true | true | true | 0 | 1 | llm-evals-observability-security | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | ai-api-keys-limits-routing | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| true | true | true | true | false | true | 0 | 2 | ai-service-pricing-delivery | Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则 | content/blog/agent-memory-postgres-schema-guide.mdx |
-| true | true | true | true | true | true | 0 | 1 | ai-api-keys-limits-routing | Claude API Rate limit reached 怎么办：限流、上下文、重试和降级 | content/blog/claude-api-rate-limit-debug-guide.mdx |
-| true | true | true | true | false | true | 0 | 2 | ai-service-pricing-delivery | 产品经理 AI 提示词模板：需求分析、PRD、竞品、用户故事和验收标准 | content/blog/product-manager-ai-prompts-guide.mdx |
+| true | true | true | true | false | true | 0 | 2 | cross-industry-ai-prompts | 模板下载页 CTA 文案怎么写：新手检查清单 | content/blog/template-download-cta-copy-checklist.mdx |
+| true | true | true | true | false | true | 0 | 2 | cross-industry-ai-prompts | 模板下载页 CTA 文案怎么写 | content/blog/template-download-cta-copy.mdx |
+| true | true | true | true | false | true | 0 | 2 | ai-service-pricing-delivery | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| true | true | true | true | true | true | 0 | 1 | ai-service-pricing-delivery | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| true | true | true | true | false | true | 0 | 2 | rag-knowledge-base-agent-memory | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| true | true | true | true | false | true | 0 | 2 | rag-knowledge-base-agent-memory | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| true | true | true | true | false | true | 0 | 2 | agent-deployment-tools-mcp | Windows 路径和权限导致安装失败怎么办：新手检查清单 | content/blog/windows-path-permission-install-fix-checklist.mdx |
+| true | true | true | true | false | true | 0 | 2 | agent-deployment-tools-mcp | Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合 | content/blog/windows-path-permission-install-fix-freelance-scope.mdx |
+| true | true | true | true | false | true | 0 | 2 | llm-deployment-and-serving | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| true | true | true | true | true | true | 0 | 1 | ai-api-keys-limits-routing | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| true | true | true | true | false | true | 0 | 2 | llm-evals-observability-security | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
 
 ## Manual Next Actions
 
-### AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查
+### 模板下载页 CTA 文案怎么写：新手检查清单
 
-- File: content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
-- Lane: agent-deployment-tools-mcp
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx`
-- Publish confirm: not-included
-
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
-- Verify official sources and fact-check queries manually.
-- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界
-
-- File: content/blog/ai-agent-memory-rag-design-guide.mdx
-- Lane: agent-deployment-tools-mcp
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx`
-- Publish confirm: not-included
-
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
-- Verify official sources and fact-check queries manually.
-- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用
-
-- File: content/blog/industry-ai-prompts-template-library-2026.mdx
+- File: content/blog/template-download-cta-copy-checklist.mdx
 - Lane: cross-industry-ai-prompts
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx`
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/template-download-cta-copy-checklist.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/template-download-cta-copy-checklist.mdx`
 - Publish confirm: not-included
 
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
+- Review warning before publish: no public internal-link suggestion is attached yet.
+- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.
 - Verify official sources and fact-check queries manually.
 - Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/template-download-cta-copy-checklist.mdx --confirm-human
 - Publishing remains a separate explicit approval step.
 
-### 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检
+### 模板下载页 CTA 文案怎么写
 
-- File: content/blog/ai-model-selection-customer-service-guide.mdx
+- File: content/blog/template-download-cta-copy.mdx
 - Lane: cross-industry-ai-prompts
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx`
-- Publish confirm: not-included
-
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
-- Review warning before publish: description may be thin for search snippets.
-- Verify official sources and fact-check queries manually.
-- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查
-
-- File: content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx
-- Lane: llm-deployment-and-serving
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx`
-- Publish confirm: not-included
-
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
-- Verify official sources and fact-check queries manually.
-- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### 大模型成本监控怎么做：按用户、功能、模型和项目拆账
-
-- File: content/blog/llm-cost-monitoring-dashboard-guide.mdx
-- Lane: llm-deployment-and-serving
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/llm-cost-monitoring-dashboard-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/llm-cost-monitoring-dashboard-guide.mdx`
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/template-download-cta-copy.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/template-download-cta-copy.mdx`
 - Publish confirm: not-included
 
 - Review warning before publish: no public internal-link suggestion is attached yet.
 - Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.
-- Review warning before publish: description may be thin for search snippets.
 - Verify official sources and fact-check queries manually.
 - Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/llm-cost-monitoring-dashboard-guide.mdx --confirm-human
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/template-download-cta-copy.mdx --confirm-human
 - Publishing remains a separate explicit approval step.
 
-### AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围
+### TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收
 
-- File: content/blog/ai-automation-project-pricing-scope-guide.mdx
-- Lane: rag-knowledge-base-agent-memory
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx`
-- Publish confirm: not-included
-
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
-- Review warning before publish: description may be thin for search snippets.
-- Verify official sources and fact-check queries manually.
-- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储
-
-- File: content/blog/n8n-ai-agent-rag-memory-guide.mdx
-- Lane: rag-knowledge-base-agent-memory
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx`
-- Publish confirm: not-included
-
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
-- Verify official sources and fact-check queries manually.
-- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底
-
-- File: content/blog/dify-workflow-error-handling-guide.mdx
-- Lane: nocode-ai-automation-deployment
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/dify-workflow-error-handling-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/dify-workflow-error-handling-guide.mdx`
-- Publish confirm: not-included
-
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
-- Verify official sources and fact-check queries manually.
-- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/dify-workflow-error-handling-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核
-
-- File: content/blog/dify-workflow-vs-agent-guide.mdx
-- Lane: nocode-ai-automation-deployment
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/dify-workflow-vs-agent-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/dify-workflow-vs-agent-guide.mdx`
-- Publish confirm: not-included
-
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
-- Verify official sources and fact-check queries manually.
-- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/dify-workflow-vs-agent-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单
-
-- File: content/blog/mcp-server-deployment-security-checklist.mdx
-- Lane: llm-evals-observability-security
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/mcp-server-deployment-security-checklist.mdx`
-- Publish confirm: not-included
-
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
-- Verify official sources and fact-check queries manually.
-- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志
-
-- File: content/blog/agent-tool-permission-safety-guide.mdx
-- Lane: llm-evals-observability-security
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/agent-tool-permission-safety-guide.mdx`
-- Publish confirm: not-included
-
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
-- Verify official sources and fact-check queries manually.
-- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
-
-- File: content/blog/ai-api-key-security-rotation-guide.mdx
-- Lane: ai-api-keys-limits-routing
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx`
-- Publish confirm: not-included
-
-- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
-- Verify official sources and fact-check queries manually.
-- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则
-
-- File: content/blog/agent-memory-postgres-schema-guide.mdx
+- File: content/blog/tensorrt-llm-beginner-guide.mdx
 - Lane: ai-service-pricing-delivery
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/agent-memory-postgres-schema-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/agent-memory-postgres-schema-guide.mdx`
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx`
 - Publish confirm: not-included
 
 - Review warning before publish: no public internal-link suggestion is attached yet.
 - Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.
 - Verify official sources and fact-check queries manually.
 - Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/agent-memory-postgres-schema-guide.mdx --confirm-human
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human
 - Publishing remains a separate explicit approval step.
 
-### Claude API Rate limit reached 怎么办：限流、上下文、重试和降级
+### RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界
 
-- File: content/blog/claude-api-rate-limit-debug-guide.mdx
-- Lane: ai-api-keys-limits-routing
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/claude-api-rate-limit-debug-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/claude-api-rate-limit-debug-guide.mdx`
+- File: content/blog/vector-database-selection-for-rag-guide.mdx
+- Lane: ai-service-pricing-delivery
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/vector-database-selection-for-rag-guide.mdx`
 - Publish confirm: not-included
 
 - Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
 - Verify official sources and fact-check queries manually.
 - Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/claude-api-rate-limit-debug-guide.mdx --confirm-human
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human
 - Publishing remains a separate explicit approval step.
 
-### 产品经理 AI 提示词模板：需求分析、PRD、竞品、用户故事和验收标准
+### Together AI API 怎么接入：开源模型接口、embedding 和部署边界
 
-- File: content/blog/product-manager-ai-prompts-guide.mdx
-- Lane: ai-service-pricing-delivery
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/product-manager-ai-prompts-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/product-manager-ai-prompts-guide.mdx`
+- File: content/blog/together-ai-api-beginner-guide.mdx
+- Lane: rag-knowledge-base-agent-memory
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx`
 - Publish confirm: not-included
 
 - Review warning before publish: no public internal-link suggestion is attached yet.
 - Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.
 - Verify official sources and fact-check queries manually.
 - Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/product-manager-ai-prompts-guide.mdx --confirm-human
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索
+
+- File: content/blog/supabase-pgvector-rag-guide.mdx
+- Lane: rag-knowledge-base-agent-memory
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx`
+- Publish confirm: not-included
+
+- Review warning before publish: no public internal-link suggestion is attached yet.
+- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.
+- Verify official sources and fact-check queries manually.
+- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### Windows 路径和权限导致安装失败怎么办：新手检查清单
+
+- File: content/blog/windows-path-permission-install-fix-checklist.mdx
+- Lane: agent-deployment-tools-mcp
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-checklist.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix-checklist.mdx`
+- Publish confirm: not-included
+
+- Review warning before publish: no public internal-link suggestion is attached yet.
+- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.
+- Verify official sources and fact-check queries manually.
+- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-checklist.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合
+
+- File: content/blog/windows-path-permission-install-fix-freelance-scope.mdx
+- Lane: agent-deployment-tools-mcp
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx`
+- Publish confirm: not-included
+
+- Review warning before publish: no public internal-link suggestion is attached yet.
+- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.
+- Verify official sources and fact-check queries manually.
+- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/windows-path-permission-install-fix-freelance-scope.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### vLLM 部署适合什么场景：新手先看推理服务边界
+
+- File: content/blog/vllm-deployment-beginner-guide.mdx
+- Lane: llm-deployment-and-serving
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/vllm-deployment-beginner-guide.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/vllm-deployment-beginner-guide.mdx`
+- Publish confirm: not-included
+
+- Review warning before publish: no public internal-link suggestion is attached yet.
+- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.
+- Verify official sources and fact-check queries manually.
+- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vllm-deployment-beginner-guide.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级
+
+- File: content/blog/vercel-ai-gateway-multi-provider-guide.mdx
+- Lane: ai-api-keys-limits-routing
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx`
+- Publish confirm: not-included
+
+- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually.
+- Verify official sources and fact-check queries manually.
+- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### Vercel build failed 排查清单：从日志到重新部署
+
+- File: content/blog/vercel-build-failed-causes-checklist.mdx
+- Lane: llm-evals-observability-security
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/vercel-build-failed-causes-checklist.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/vercel-build-failed-causes-checklist.mdx`
+- Publish confirm: not-included
+
+- Review warning before publish: no public internal-link suggestion is attached yet.
+- Review warning before publish: review pack warnings: warning: source health has no per-file reachable URL list; verify official source targets manually; warning: no public internal-link suggestion found; add or explicitly reject one during human review.
+- Verify official sources and fact-check queries manually.
+- Confirm no traffic, ranking, revenue, benchmark, cost, latency, or stability claim is unsupported.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vercel-build-failed-causes-checklist.mdx --confirm-human
 - Publishing remains a separate explicit approval step.
 

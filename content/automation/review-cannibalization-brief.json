@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:39:10.079Z",
+  "generatedAt": "2026-06-16T07:01:28.975Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -15,8 +15,8 @@
       "note": "Read-only review action board. It prioritizes human review tasks and does not edit articles, mark review, or publish.",
       "stopBefore": "Every mark:review command requires explicit human approval. publish --confirm commands are intentionally not included."
     },
-    "actionBoardReadyTasks": 16,
-    "contentCannibalizationGeneratedAt": "2026-06-14T10:39:09.336Z",
+    "actionBoardReadyTasks": 2,
+    "contentCannibalizationGeneratedAt": "2026-06-16T07:01:28.317Z",
     "contentCannibalizationSummary": {
       "articleCount": 669,
       "conflicts": 200,
@@ -25,369 +25,86 @@
       "slugStemConflicts": 177,
       "titleStemConflicts": 12
     },
-    "uniqueActionFiles": 13
+    "uniqueActionFiles": 2
   },
   "summary": {
-    "candidateFiles": 13,
-    "highRiskItems": 1,
+    "candidateFiles": 2,
+    "highRiskItems": 0,
     "highRiskPublishedItems": 0,
-    "highRiskReviewOnlyItems": 1,
-    "items": 13,
-    "itemsWithPublishedComparison": 0,
-    "itemsWithReviewComparison": 1,
+    "highRiskReviewOnlyItems": 0,
+    "items": 2,
+    "itemsWithPublishedComparison": 1,
+    "itemsWithReviewComparison": 0,
     "mediumRiskItems": 0,
     "unsafeCommands": 0
   },
-  "highRiskItems": [
-    {
-      "candidate": {
-        "category": "AI 部署",
-        "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-        "primaryKeyword": "大模型部署",
-        "searchIntent": "informational",
-        "slug": "llm-deployment-huggingface-inference-endpoints-guide",
-        "status": "draft",
-        "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查",
-        "tokens": [
-          "大模型部署怎么选",
-          "hugging",
-          "face",
-          "inference",
-          "endpoints",
-          "api",
-          "私有化和成本检查",
-          "大模型部署",
-          "llm",
-          "deployment",
-          "huggingface",
-          "inference",
-          "endpoints",
-          "ai",
-          "部署"
-        ]
-      },
-      "decision": "differentiate-before-approval",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 93,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: 大模型部署.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "Compare against nearby draft/review candidate: 大模型部署是什么意思：API、本地和私有化怎么选 (content/blog/llm-deployment-beginner-guide.mdx).",
-        "Do not mark review until the angle, title, or consolidation decision is explicit.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "Before mark:review, rewrite or split the angle so \"大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查\" does not compete with \"大模型部署是什么意思：API、本地和私有化怎么选\".",
-      "reviewSimilar": [
-        {
-          "file": "content/blog/llm-deployment-beginner-guide.mdx",
-          "primaryKeyword": "大模型部署",
-          "reason": [
-            "same primary keyword",
-            "same search intent",
-            "token overlap 0.56"
-          ],
-          "score": 93,
-          "slug": "llm-deployment-beginner-guide",
-          "status": "draft",
-          "title": "大模型部署是什么意思：API、本地和私有化怎么选"
-        }
-      ],
-      "riskLevel": "high"
-    }
-  ],
-  "nextItems": [
-    {
-      "candidate": {
-        "category": "AI 部署",
-        "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-        "primaryKeyword": "大模型部署",
-        "searchIntent": "informational",
-        "slug": "llm-deployment-huggingface-inference-endpoints-guide",
-        "status": "draft",
-        "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查",
-        "tokens": [
-          "大模型部署怎么选",
-          "hugging",
-          "face",
-          "inference",
-          "endpoints",
-          "api",
-          "私有化和成本检查",
-          "大模型部署",
-          "llm",
-          "deployment",
-          "huggingface",
-          "inference",
-          "endpoints",
-          "ai",
-          "部署"
-        ]
-      },
-      "decision": "differentiate-before-approval",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 93,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: 大模型部署.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "Compare against nearby draft/review candidate: 大模型部署是什么意思：API、本地和私有化怎么选 (content/blog/llm-deployment-beginner-guide.mdx).",
-        "Do not mark review until the angle, title, or consolidation decision is explicit.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "Before mark:review, rewrite or split the angle so \"大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查\" does not compete with \"大模型部署是什么意思：API、本地和私有化怎么选\".",
-      "reviewSimilar": [
-        {
-          "file": "content/blog/llm-deployment-beginner-guide.mdx",
-          "primaryKeyword": "大模型部署",
-          "reason": [
-            "same primary keyword",
-            "same search intent",
-            "token overlap 0.56"
-          ],
-          "score": 93,
-          "slug": "llm-deployment-beginner-guide",
-          "status": "draft",
-          "title": "大模型部署是什么意思：API、本地和私有化怎么选"
-        }
-      ],
-      "riskLevel": "high"
-    }
-  ],
+  "highRiskItems": [],
+  "nextItems": [],
   "items": [
     {
       "candidate": {
-        "category": "AI 部署",
-        "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
-        "primaryKeyword": "客服 AI 模型选型",
+        "category": "AI 基建",
+        "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
+        "primaryKeyword": "RAG 向量数据库怎么选",
         "searchIntent": "informational",
-        "slug": "ai-model-selection-customer-service-guide",
+        "slug": "vector-database-selection-for-rag-guide",
         "status": "draft",
-        "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+        "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
         "tokens": [
-          "客服",
-          "ai",
-          "该选什么模型",
-          "速度",
-          "成本",
-          "知识库",
-          "转人工和质检",
-          "客服",
-          "ai",
-          "模型选型",
-          "ai",
-          "model",
+          "rag",
+          "向量数据库怎么选",
+          "pgvector",
+          "qdrant",
+          "milvus",
+          "先看项目边界",
+          "rag",
+          "向量数据库怎么选",
+          "vector",
+          "database",
           "selection",
-          "customer",
-          "service",
+          "rag",
           "ai",
-          "部署"
+          "基建"
         ]
       },
       "decision": "monitor-only",
-      "highestPublishedScore": 0,
+      "highestPublishedScore": 30,
       "highestReviewScore": 0,
       "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: 客服 AI 模型选型.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
+        "Confirm the candidate owns a distinct search intent: RAG 向量数据库怎么选.",
+        "Compare against published article: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (content/blog/qdrant-vector-database-beginner-guide.mdx).",
         "No close draft/review candidate found.",
         "Document why this can remain a separate article.",
         "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
       ],
-      "publishedSimilar": [],
-      "recommendation": "No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.",
-      "reviewSimilar": [],
-      "riskLevel": "low"
-    },
-    {
-      "candidate": {
-        "category": "AI Agent",
-        "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-        "primaryKeyword": "AI Agent 部署",
-        "searchIntent": "informational",
-        "slug": "ai-agent-deployment-vercel-ai-sdk-guide",
-        "status": "draft",
-        "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
-        "tokens": [
-          "ai",
-          "agent",
-          "部署怎么做",
-          "vercel",
-          "ai",
-          "sdk",
-          "理解工具调用",
-          "多步执行和上线检查",
-          "ai",
-          "agent",
-          "部署",
-          "ai",
-          "agent",
-          "deployment",
-          "vercel",
-          "ai",
-          "sdk",
-          "ai",
-          "agent"
-        ]
-      },
-      "decision": "monitor-only",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 0,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: AI Agent 部署.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "No close draft/review candidate found.",
-        "Document why this can remain a separate article.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.",
-      "reviewSimilar": [],
-      "riskLevel": "low"
-    },
-    {
-      "candidate": {
-        "category": "AI 提示词",
-        "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
-        "primaryKeyword": "全行业 AI 提示词模板",
-        "searchIntent": "informational",
-        "slug": "industry-ai-prompts-template-library-2026",
-        "status": "draft",
-        "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
-        "tokens": [
-          "全行业",
-          "ai",
-          "提示词模板库怎么做",
-          "销售",
-          "运营",
-          "客服",
-          "hr",
-          "财务和教育都能用",
-          "全行业",
-          "ai",
-          "提示词模板",
-          "industry",
-          "ai",
-          "prompts",
-          "template",
-          "library",
-          "2026",
-          "ai",
-          "提示词"
-        ]
-      },
-      "decision": "monitor-only",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 0,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: 全行业 AI 提示词模板.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "No close draft/review candidate found.",
-        "Document why this can remain a separate article.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.",
-      "reviewSimilar": [],
-      "riskLevel": "low"
-    },
-    {
-      "candidate": {
-        "category": "AI 部署",
-        "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-        "primaryKeyword": "大模型部署",
-        "searchIntent": "informational",
-        "slug": "llm-deployment-huggingface-inference-endpoints-guide",
-        "status": "draft",
-        "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查",
-        "tokens": [
-          "大模型部署怎么选",
-          "hugging",
-          "face",
-          "inference",
-          "endpoints",
-          "api",
-          "私有化和成本检查",
-          "大模型部署",
-          "llm",
-          "deployment",
-          "huggingface",
-          "inference",
-          "endpoints",
-          "ai",
-          "部署"
-        ]
-      },
-      "decision": "differentiate-before-approval",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 93,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: 大模型部署.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "Compare against nearby draft/review candidate: 大模型部署是什么意思：API、本地和私有化怎么选 (content/blog/llm-deployment-beginner-guide.mdx).",
-        "Do not mark review until the angle, title, or consolidation decision is explicit.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "Before mark:review, rewrite or split the angle so \"大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查\" does not compete with \"大模型部署是什么意思：API、本地和私有化怎么选\".",
-      "reviewSimilar": [
+      "publishedSimilar": [
         {
-          "file": "content/blog/llm-deployment-beginner-guide.mdx",
-          "primaryKeyword": "大模型部署",
+          "file": "content/blog/qdrant-vector-database-beginner-guide.mdx",
+          "primaryKeyword": "Qdrant 向量数据库",
           "reason": [
-            "same primary keyword",
+            "same category",
             "same search intent",
-            "token overlap 0.56"
+            "token overlap 0.55"
           ],
-          "score": 93,
-          "slug": "llm-deployment-beginner-guide",
-          "status": "draft",
-          "title": "大模型部署是什么意思：API、本地和私有化怎么选"
+          "score": 30,
+          "slug": "qdrant-vector-database-beginner-guide",
+          "status": "published",
+          "title": "Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤"
+        },
+        {
+          "file": "content/blog/embedding-model-selection-guide.mdx",
+          "primaryKeyword": "Embedding 模型怎么选",
+          "reason": [
+            "same category",
+            "same search intent",
+            "token overlap 0.50"
+          ],
+          "score": 29,
+          "slug": "embedding-model-selection-guide",
+          "status": "published",
+          "title": "Embedding 模型怎么选：RAG 和向量检索别只看模型名"
         }
       ],
-      "riskLevel": "high"
-    },
-    {
-      "candidate": {
-        "category": "AI 记忆",
-        "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
-        "primaryKeyword": "AI Agent 记忆",
-        "searchIntent": "informational",
-        "slug": "ai-agent-memory-rag-design-guide",
-        "status": "draft",
-        "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
-        "tokens": [
-          "ai",
-          "agent",
-          "记忆和",
-          "rag",
-          "怎么设计",
-          "短期记忆",
-          "长期记忆",
-          "引用来源和隐私边界",
-          "ai",
-          "agent",
-          "记忆",
-          "ai",
-          "agent",
-          "memory",
-          "rag",
-          "design",
-          "ai",
-          "记忆"
-        ]
-      },
-      "decision": "monitor-only",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 0,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: AI Agent 记忆.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "No close draft/review candidate found.",
-        "Document why this can remain a separate article.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
       "recommendation": "No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.",
       "reviewSimilar": [],
       "riskLevel": "low"
@@ -395,30 +112,30 @@
     {
       "candidate": {
         "category": "AI 部署",
-        "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
-        "primaryKeyword": "Open WebUI Functions Pipelines",
+        "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+        "primaryKeyword": "Vercel AI Gateway 多模型",
         "searchIntent": "informational",
-        "slug": "open-webui-functions-pipelines-deployment-guide",
+        "slug": "vercel-ai-gateway-multi-provider-guide",
         "status": "draft",
-        "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流",
+        "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
         "tokens": [
-          "open",
-          "webui",
-          "functions",
-          "pipelines",
-          "怎么用",
-          "扩展模型",
-          "rag",
-          "和外部工作流",
-          "open",
-          "webui",
-          "functions",
-          "pipelines",
-          "open",
-          "webui",
-          "functions",
-          "pipelines",
-          "deployment",
+          "vercel",
+          "ai",
+          "gateway",
+          "怎么做多模型接入",
+          "openai",
+          "claude",
+          "gemini",
+          "和降级",
+          "vercel",
+          "ai",
+          "gateway",
+          "多模型",
+          "vercel",
+          "ai",
+          "gateway",
+          "multi",
+          "provider",
           "ai",
           "部署"
         ]
@@ -427,305 +144,7 @@
       "highestPublishedScore": 0,
       "highestReviewScore": 0,
       "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: Open WebUI Functions Pipelines.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "No close draft/review candidate found.",
-        "Document why this can remain a separate article.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.",
-      "reviewSimilar": [],
-      "riskLevel": "low"
-    },
-    {
-      "candidate": {
-        "category": "AI 部署",
-        "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
-        "primaryKeyword": "n8n AI Agent 知识库记忆",
-        "searchIntent": "informational",
-        "slug": "n8n-ai-agent-rag-memory-guide",
-        "status": "draft",
-        "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储",
-        "tokens": [
-          "n8n",
-          "ai",
-          "agent",
-          "怎么接知识库和记忆",
-          "rag",
-          "上下文和状态存储",
-          "n8n",
-          "ai",
-          "agent",
-          "知识库记忆",
-          "n8n",
-          "ai",
-          "agent",
-          "rag",
-          "memory",
-          "ai",
-          "部署"
-        ]
-      },
-      "decision": "monitor-only",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 0,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: n8n AI Agent 知识库记忆.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "No close draft/review candidate found.",
-        "Document why this can remain a separate article.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.",
-      "reviewSimilar": [],
-      "riskLevel": "low"
-    },
-    {
-      "candidate": {
-        "category": "AI 部署",
-        "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
-        "primaryKeyword": "AI API Key 安全管理",
-        "searchIntent": "informational",
-        "slug": "ai-api-key-security-rotation-guide",
-        "status": "draft",
-        "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
-        "tokens": [
-          "ai",
-          "api",
-          "key",
-          "怎么安全管理",
-          "环境变量",
-          "权限",
-          "轮换",
-          "泄露应急",
-          "ai",
-          "api",
-          "key",
-          "安全管理",
-          "ai",
-          "api",
-          "key",
-          "security",
-          "rotation",
-          "ai",
-          "部署"
-        ]
-      },
-      "decision": "monitor-only",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 0,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: AI API Key 安全管理.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "No close draft/review candidate found.",
-        "Document why this can remain a separate article.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.",
-      "reviewSimilar": [],
-      "riskLevel": "low"
-    },
-    {
-      "candidate": {
-        "category": "项目报价",
-        "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-        "primaryKeyword": "AI 自动化项目报价",
-        "searchIntent": "informational",
-        "slug": "ai-automation-project-pricing-scope-guide",
-        "status": "draft",
-        "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
-        "tokens": [
-          "ai",
-          "自动化项目怎么报价",
-          "dify",
-          "n8n",
-          "rag",
-          "agent",
-          "和维护范围",
-          "ai",
-          "自动化项目报价",
-          "ai",
-          "automation",
-          "project",
-          "pricing",
-          "scope",
-          "项目报价"
-        ]
-      },
-      "decision": "monitor-only",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 0,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: AI 自动化项目报价.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "No close draft/review candidate found.",
-        "Document why this can remain a separate article.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.",
-      "reviewSimilar": [],
-      "riskLevel": "low"
-    },
-    {
-      "candidate": {
-        "category": "AI 部署",
-        "file": "content/blog/dify-workflow-error-handling-guide.mdx",
-        "primaryKeyword": "Dify 工作流错误处理",
-        "searchIntent": "informational",
-        "slug": "dify-workflow-error-handling-guide",
-        "status": "draft",
-        "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底",
-        "tokens": [
-          "dify",
-          "工作流怎么做错误处理",
-          "变量",
-          "分支",
-          "重试和人工兜底",
-          "dify",
-          "工作流错误处理",
-          "dify",
-          "workflow",
-          "error",
-          "handling",
-          "ai",
-          "部署"
-        ]
-      },
-      "decision": "monitor-only",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 0,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: Dify 工作流错误处理.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "No close draft/review candidate found.",
-        "Document why this can remain a separate article.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.",
-      "reviewSimilar": [],
-      "riskLevel": "low"
-    },
-    {
-      "candidate": {
-        "category": "AI 基建",
-        "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
-        "primaryKeyword": "MCP Server 部署安全",
-        "searchIntent": "informational",
-        "slug": "mcp-server-deployment-security-checklist",
-        "status": "draft",
-        "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单",
-        "tokens": [
-          "mcp",
-          "server",
-          "怎么部署才安全",
-          "本地",
-          "远程",
-          "权限",
-          "日志和工具白名单",
-          "mcp",
-          "server",
-          "部署安全",
-          "mcp",
-          "server",
-          "deployment",
-          "security",
-          "ai",
-          "基建"
-        ]
-      },
-      "decision": "monitor-only",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 0,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: MCP Server 部署安全.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "No close draft/review candidate found.",
-        "Document why this can remain a separate article.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.",
-      "reviewSimilar": [],
-      "riskLevel": "low"
-    },
-    {
-      "candidate": {
-        "category": "AI 基建",
-        "file": "content/blog/agent-tool-permission-safety-guide.mdx",
-        "primaryKeyword": "Agent 工具权限控制",
-        "searchIntent": "informational",
-        "slug": "agent-tool-permission-safety-guide",
-        "status": "draft",
-        "title": "Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志",
-        "tokens": [
-          "agent",
-          "调工具怎么做权限控制",
-          "白名单",
-          "审批",
-          "沙箱和日志",
-          "agent",
-          "工具权限控制",
-          "agent",
-          "tool",
-          "permission",
-          "safety",
-          "ai",
-          "基建"
-        ]
-      },
-      "decision": "monitor-only",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 0,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: Agent 工具权限控制.",
-        "No close published article found; still confirm the title is not a duplicate promise.",
-        "No close draft/review candidate found.",
-        "Document why this can remain a separate article.",
-        "If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up."
-      ],
-      "publishedSimilar": [],
-      "recommendation": "No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.",
-      "reviewSimilar": [],
-      "riskLevel": "low"
-    },
-    {
-      "candidate": {
-        "category": "AI 基建",
-        "file": "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
-        "primaryKeyword": "BentoML LLM 部署",
-        "searchIntent": "informational",
-        "slug": "bentoml-llm-deployment-beginner-guide",
-        "status": "draft",
-        "title": "BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收",
-        "tokens": [
-          "bentoml",
-          "怎么部署",
-          "llm",
-          "从本地",
-          "service",
-          "bentocloud",
-          "验收",
-          "bentoml",
-          "llm",
-          "部署",
-          "bentoml",
-          "llm",
-          "deployment",
-          "beginner",
-          "ai",
-          "基建"
-        ]
-      },
-      "decision": "monitor-only",
-      "highestPublishedScore": 0,
-      "highestReviewScore": 0,
-      "humanReviewChecklist": [
-        "Confirm the candidate owns a distinct search intent: BentoML LLM 部署.",
+        "Confirm the candidate owns a distinct search intent: Vercel AI Gateway 多模型.",
         "No close published article found; still confirm the title is not a duplicate promise.",
         "No close draft/review candidate found.",
         "Document why this can remain a separate article.",

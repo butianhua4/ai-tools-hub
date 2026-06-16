@@ -1,6 +1,6 @@
 # Autopilot Broad Publish Waves
 
-Generated at: 2026-06-14T10:39:23.036Z
+Generated at: 2026-06-16T07:01:42.150Z
 
 ## Guardrails
 
@@ -10,13 +10,13 @@ Generated at: 2026-06-14T10:39:23.036Z
 
 ## Summary
 
-- Current public published: 15
-- Waves: 8
-- Waves ready for human approval: 8
-- Items: 24
-- Ready items: 24
-- Unique files: 24
-- Clusters covered: 7
+- Current public published: 500
+- Waves: 3
+- Waves ready for human approval: 3
+- Items: 7
+- Ready items: 7
+- Unique files: 7
+- Clusters covered: 3
 - Unsafe items: 0
 - Unsafe waves: 0
 
@@ -24,56 +24,47 @@ Generated at: 2026-06-14T10:39:23.036Z
 
 | Wave | Ready | Projected public after approval | Theme | Files |
 | --- | --- | --- | --- | --- |
-| 1 | 3/3 | 18 | 开源大模型部署：Ollama、vLLM、TGI、RunPod + Agent 部署、工具调用和生产安全 + Agent 记忆：短期记忆、长期记忆、RAG、Postgres | content/blog/bentoml-llm-deployment-beginner-guide.mdx<br>content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx<br>content/blog/agent-memory-postgres-schema-guide.mdx |
-| 2 | 3/3 | 18 | RAG、知识库、向量数据库和引用溯源 + 全行业 AI 提示词和工作流模板 + Dify、n8n、Coze、Flowise、MCP 自动化部署 | content/blog/ai-model-selection-customer-service-guide.mdx<br>content/blog/ai-prompt-library-team-knowledge-base-guide.mdx<br>content/blog/mcp-server-deployment-security-checklist.mdx |
-| 3 | 3/3 | 18 | AI API 接入、限流、成本和多模型路由 + 开源大模型部署：Ollama、vLLM、TGI、RunPod + Agent 部署、工具调用和生产安全 | content/blog/ai-api-key-security-rotation-guide.mdx<br>content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx<br>content/blog/ai-agent-memory-rag-design-guide.mdx |
-| 4 | 3/3 | 18 | Agent 记忆：短期记忆、长期记忆、RAG、Postgres + 全行业 AI 提示词和工作流模板 + Dify、n8n、Coze、Flowise、MCP 自动化部署 | content/blog/n8n-ai-agent-rag-memory-guide.mdx<br>content/blog/data-analysis-ai-prompts-guide.mdx<br>content/blog/n8n-ai-agent-webhook-production-guide.mdx |
-| 5 | 3/3 | 18 | AI API 接入、限流、成本和多模型路由 + 开源大模型部署：Ollama、vLLM、TGI、RunPod + Agent 部署、工具调用和生产安全 | content/blog/helicone-llm-observability-guide.mdx<br>content/blog/llm-api-rate-limit-retry-guide.mdx<br>content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| 6 | 3/3 | 18 | Agent 记忆：短期记忆、长期记忆、RAG、Postgres + 全行业 AI 提示词和工作流模板 + 开源大模型部署：Ollama、vLLM、TGI、RunPod | content/blog/open-webui-functions-pipelines-deployment-guide.mdx<br>content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/llm-cost-monitoring-dashboard-guide.mdx |
-| 7 | 3/3 | 18 | Agent 部署、工具调用和生产安全 + Agent 记忆：短期记忆、长期记忆、RAG、Postgres + 开源大模型部署：Ollama、vLLM、TGI、RunPod | content/blog/dify-workflow-error-handling-guide.mdx<br>content/blog/rag-citation-source-trace-guide.mdx<br>content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-| 8 | 3/3 | 18 | Agent 部署、工具调用和生产安全 + 开源大模型部署：Ollama、vLLM、TGI、RunPod | content/blog/dify-workflow-vs-agent-guide.mdx<br>content/blog/local-llm-vram-not-enough-guide.mdx<br>content/blog/enterprise-im-ai-agent-integration-guide.mdx |
+| 1 | 3/3 | 503 | RAG、知识库、向量数据库和引用溯源 + 开源大模型部署：Ollama、vLLM、TGI、RunPod + LLM 观测、评测、日志和上线后质量 | content/blog/supabase-pgvector-rag-guide.mdx<br>content/blog/tensorrt-llm-beginner-guide.mdx<br>content/blog/vercel-build-failed-causes-checklist.mdx |
+| 2 | 3/3 | 503 | RAG、知识库、向量数据库和引用溯源 + 开源大模型部署：Ollama、vLLM、TGI、RunPod | content/blog/together-ai-api-beginner-guide.mdx<br>content/blog/vllm-deployment-beginner-guide.mdx<br>content/blog/vector-database-beginner-guide.mdx |
+| 3 | 1/1 | 501 | RAG、知识库、向量数据库和引用溯源 | content/blog/vector-database-selection-for-rag-guide.mdx |
 
 ## Next Wave Detail
 
-### Wave 1: 开源大模型部署：Ollama、vLLM、TGI、RunPod + Agent 部署、工具调用和生产安全 + Agent 记忆：短期记忆、长期记忆、RAG、Postgres
+### Wave 1: RAG、知识库、向量数据库和引用溯源 + 开源大模型部署：Ollama、vLLM、TGI、RunPod + LLM 观测、评测、日志和上线后质量
 
 - Stop before publish with --confirm.
 - Mark review commands require human approval:
-  - npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human
-  - npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human
-  - npm run mark:review -- --file=content/blog/agent-memory-postgres-schema-guide.mdx --confirm-human
+  - npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human
+  - npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human
+  - npm run mark:review -- --file=content/blog/vercel-build-failed-causes-checklist.mdx --confirm-human
 
 | Order | Risk | Checks | Sources | Queries | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | high | 15 | 5 | 5 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
-| 2 | high | 16 | 8 | 5 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| 3 | high | 13 | 3 | 5 | Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则 | content/blog/agent-memory-postgres-schema-guide.mdx |
+| 1 | high | 16 | 10 | 5 | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 2 | high | 15 | 8 | 5 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| 3 | low | 11 | 3 | 5 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
 
-### Wave 2: RAG、知识库、向量数据库和引用溯源 + 全行业 AI 提示词和工作流模板 + Dify、n8n、Coze、Flowise、MCP 自动化部署
+### Wave 2: RAG、知识库、向量数据库和引用溯源 + 开源大模型部署：Ollama、vLLM、TGI、RunPod
 
 - Stop before publish with --confirm.
 - Mark review commands require human approval:
-  - npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human
-  - npm run mark:review -- --file=content/blog/ai-prompt-library-team-knowledge-base-guide.mdx --confirm-human
-  - npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human
+  - npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human
+  - npm run mark:review -- --file=content/blog/vllm-deployment-beginner-guide.mdx --confirm-human
+  - npm run mark:review -- --file=content/blog/vector-database-beginner-guide.mdx --confirm-human
 
 | Order | Risk | Checks | Sources | Queries | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | high | 16 | 11 | 5 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| 2 | high | 16 | 7 | 6 | 团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用 | content/blog/ai-prompt-library-team-knowledge-base-guide.mdx |
-| 3 | high | 13 | 3 | 5 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
+| 1 | high | 16 | 7 | 5 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 2 | high | 15 | 10 | 5 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| 3 | high | 16 | 3 | 5 | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
 
-### Wave 3: AI API 接入、限流、成本和多模型路由 + 开源大模型部署：Ollama、vLLM、TGI、RunPod + Agent 部署、工具调用和生产安全
+### Wave 3: RAG、知识库、向量数据库和引用溯源
 
 - Stop before publish with --confirm.
 - Mark review commands require human approval:
-  - npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human
-  - npm run mark:review -- --file=content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx --confirm-human
-  - npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human
+  - npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human
 
 | Order | Risk | Checks | Sources | Queries | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | high | 14 | 12 | 5 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| 2 | high | 15 | 8 | 5 | Docker 怎么用 NVIDIA GPU：大模型部署先装对 Container Toolkit | content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx |
-| 3 | high | 16 | 10 | 5 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
+| 1 | high | 16 | 11 | 5 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
 

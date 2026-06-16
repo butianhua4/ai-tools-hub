@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:38:39.541Z",
+  "generatedAt": "2026-06-16T07:00:58.016Z",
   "contentPlan": {
     "total": 500,
     "uniqueSlugs": 500,
@@ -8,19 +8,19 @@
     "missingPlannedFiles": 0,
     "nextBatchToGenerate": null,
     "plannedStatusCounts": {
-      "draft": 499,
-      "published": 1
+      "published": 360,
+      "draft": 140
     }
   },
   "articles": {
     "files": 669,
     "statusCounts": {
-      "draft": 633,
-      "published": 15,
-      "archived": 21
+      "published": 500,
+      "archived": 21,
+      "draft": 148
     },
-    "publicPublished": 15,
-    "draftOrReview": 633,
+    "publicPublished": 500,
+    "draftOrReview": 148,
     "archived": 21,
     "publishableNow": []
   },

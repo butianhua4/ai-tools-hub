@@ -1,6 +1,6 @@
 # AI Deployment Coverage
 
-Generated at: 2026-06-14T10:38:48.394Z
+Generated at: 2026-06-16T07:01:07.570Z
 
 This report is read-only. It organizes deployment, Agent, RAG, and model infrastructure drafts for manual review and does not publish anything.
 
@@ -30,73 +30,114 @@ This report is read-only. It organizes deployment, Agent, RAG, and model infrast
 ## Summary
 
 - currentPackDeploymentItems: 2
-- deploymentDrafts: 208
-- deploymentPublicArticles: 3
+- deploymentDrafts: 32
+- deploymentPublicArticles: 179
 - plannedDeploymentItems: 6
-- reviewReadyDeploymentDrafts: 208
+- reviewReadyDeploymentDrafts: 32
 - topics: 10
-- topicsWithoutPublicCoverage: 8
-- topicsWithReadyCandidates: 10
-- totalCandidateMentions: 50
-- uniqueCandidateFiles: 34
+- topicsWithoutPublicCoverage: 0
+- topicsWithReadyCandidates: 8
+- totalCandidateMentions: 23
+- uniqueCandidateFiles: 18
 - unsafeCandidateItems: 0
 
 ## Coverage Matrix
 
 | Topic | Score | Public | Drafts | Ready candidates | Search queries | Top candidate |
 | --- | --- | --- | --- | --- | --- | --- |
-| Agent 部署、工具调用和工作流 | 230 | 0 | 41 | 5 | AI Agent 部署教程<br>Agent 工具调用教程 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 |
-| RAG、知识库和向量检索 | 228 | 0 | 32 | 5 | RAG 知识库搭建教程<br>企业知识库 AI 部署 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 |
-| 本地模型和开源模型部署 | 224 | 0 | 14 | 5 | 本地部署大模型教程<br>Ollama 本地部署 | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 |
-| Dify、n8n、Flowise 和无代码 AI 自动化 | 220 | 0 | 21 | 5 | Dify 部署教程<br>n8n AI Agent 自托管 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 |
-| 模型 API 接入、限流和多模型降级 | 218 | 0 | 18 | 5 | OpenAI API Next.js<br>Claude API 接入 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 |
-| LLM Serving、GPU 和托管推理 | 217 | 0 | 7 | 5 | vLLM 部署教程<br>TGI 部署教程 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 |
-| LLM 观测、评测和上线质量 | 216 | 0 | 14 | 5 | LLM observability 教程<br>Agent 可观测性 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 |
-| MCP、工具权限和企业集成安全 | 214 | 0 | 13 | 5 | MCP Server 部署安全<br>Agent 工具权限控制 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 |
-| 大模型和 AI 应用部署 | 174 | 2 | 61 | 5 | 大模型部署教程<br>AI 应用部署教程 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 |
-| AI 应用部署报错和排查 | 152 | 2 | 88 | 5 | Vercel build failed<br>Vercel 部署后 404 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 |
+| 大模型和 AI 应用部署 | 162 | 50 | 13 | 5 | 大模型部署教程<br>AI 应用部署教程 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 |
+| AI 应用部署报错和排查 | 140 | 70 | 20 | 5 | Vercel build failed<br>Vercel 部署后 404 | Vercel 部署成功但页面 404：新手排查顺序 |
+| RAG、知识库和向量检索 | 140 | 28 | 4 | 4 | RAG 知识库搭建教程<br>企业知识库 AI 部署 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 |
+| MCP、工具权限和企业集成安全 | 126 | 9 | 4 | 4 | MCP Server 部署安全<br>Agent 工具权限控制 | Windows 路径和权限导致安装失败怎么办 |
+| LLM Serving、GPU 和托管推理 | 112 | 5 | 2 | 2 | vLLM 部署教程<br>TGI 部署教程 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 |
+| 本地模型和开源模型部署 | 103 | 13 | 1 | 1 | 本地部署大模型教程<br>Ollama 本地部署 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 |
+| Agent 部署、工具调用和工作流 | 98 | 41 | 0 | 0 | AI Agent 部署教程<br>Agent 工具调用教程 |  |
+| 模型 API 接入、限流和多模型降级 | 97 | 17 | 1 | 1 | OpenAI API Next.js<br>Claude API 接入 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 |
+| LLM 观测、评测和上线质量 | 95 | 13 | 1 | 1 | LLM observability 教程<br>Agent 可观测性 | Vercel build failed 排查清单：从日志到重新部署 |
+| Dify、n8n、Flowise 和无代码 AI 自动化 | 88 | 21 | 0 | 0 | Dify 部署教程<br>n8n AI Agent 自托管 |  |
 
-## Agent 部署、工具调用和工作流
+## 大模型和 AI 应用部署
 
-- Audience: 正在把聊天助手升级成工作流或内部工具的人
+- Audience: 想把 AI 应用上线的新手开发者、独立站站长、AI 服务提供者
 - Next action: Use these draft candidates in manual review; keep status=draft/noindex until explicit approval.
 
 Workflow angles:
 
-- 工具白名单
-- 多步执行
-- 人工确认
-- 失败重试
-- 日志追踪
+- 环境变量
+- API Key
+- 限流重试
+- 上线检查
+- 回滚
 
 Search queries to cover:
 
-- AI Agent 部署教程
-- Agent 工具调用教程
-- AI 工作流部署
-- Agent 人工审核流程
+- 大模型部署教程
+- AI 应用部署教程
+- OpenAI API 部署教程
+- Vercel AI SDK 部署
 
 Review focus:
 
-- 区分 Agent、Workflow、普通聊天机器人
-- 核对工具调用、状态、人工接管和日志边界
-- 避免承诺全自动完成业务结果
+- 核对当前官方部署文档
+- 检查环境变量、API Key、限流、日志、回滚和 smoke check
+- 避免承诺一次部署就稳定运行
 
 Source targets:
 
-- OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
+- OpenAI API docs: https://platform.openai.com/docs
 - Vercel AI SDK docs: https://ai-sdk.dev/docs
-- LangChain docs: https://python.langchain.com/docs
+- Anthropic docs: https://docs.anthropic.com
 
 Ready candidates:
 
 | Batch | Score | Category | Intent | Keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| 40 | 100 | AI Agent | informational | AI Agent 部署 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| 40 | 100 | AI 记忆 | informational | AI Agent 记忆 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| 33 | 100 | 项目报价 | informational | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| 33 | 100 | AI 部署 | informational | Dify 工作流错误处理 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
-| 33 | 100 | AI 部署 | informational | Dify Workflow 和 Agent 区别 | Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核 | content/blog/dify-workflow-vs-agent-guide.mdx |
+| 34 | 100 | AI 部署 | informational | Vercel AI Gateway 多模型 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| 27 | 100 | AI 基建 | informational | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 26 | 100 | AI 基建 | informational | Vercel AI SDK 聊天机器人部署 | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
+| 22 | 100 | AI 基建 | informational | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| 19 | 100 | 模板和清单 | informational | Vercel 部署检查表 | Vercel 部署检查表怎么写：给新手的上线模板 | content/blog/vercel-deploy-checklist-template.mdx |
+
+## AI 应用部署报错和排查
+
+- Audience: 部署失败、API 报错、环境变量缺失的新手
+- Next action: Use these draft candidates in manual review; keep status=draft/noindex until explicit approval.
+
+Workflow angles:
+
+- 错误日志
+- 复现
+- 修复顺序
+- 验证命令
+- 项目边界
+
+Search queries to cover:
+
+- Vercel build failed
+- Vercel 部署后 404
+- API Key 无效或缺失
+- 环境变量缺失怎么办
+
+Review focus:
+
+- 保留错误现象、原因、修复步骤和验证命令
+- 不要把偶然修复写成通用结论
+- 补齐官方文档或日志来源
+
+Source targets:
+
+- Vercel AI SDK docs: https://ai-sdk.dev/docs
+- OpenAI API docs: https://platform.openai.com/docs
+
+Ready candidates:
+
+| Batch | Score | Category | Intent | Keyword | Title | File |
+| --- | --- | --- | --- | --- | --- | --- |
+| 15 | 100 | 报错解决 | informational | Vercel 部署成功但 404 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+| 15 | 100 | 报错解决 | informational | Vercel 部署后 404 检查清单 | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
+| 15 | 100 | 报错解决 | commercial | Vercel 404 部署成功但页面打不开怎么办：使用前怎么判断是否适合 | Vercel 404 部署成功但页面打不开怎么办：使用前怎么判断是否适合 | content/blog/vercel-404-after-deploy-freelance-scope.mdx |
+| 15 | 100 | 报错解决 | informational | Vercel 部署后 404 常见误区 | Vercel 部署后 404 常见误区：别只盯着域名 | content/blog/vercel-404-after-deploy-mistakes.mdx |
+| 15 | 100 | 报错解决 | informational | Windows 路径和权限导致安装失败怎么办 | Windows 路径和权限导致安装失败怎么办 | content/blog/windows-path-permission-install-fix.mdx |
 
 ## RAG、知识库和向量检索
 
@@ -136,11 +177,88 @@ Ready candidates:
 
 | Batch | Score | Category | Intent | Keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| 40 | 100 | AI 记忆 | informational | AI Agent 记忆 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| 34 | 100 | AI 部署 | informational | 客服 AI 模型选型 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| 33 | 100 | 项目报价 | informational | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| 33 | 100 | AI 部署 | informational | n8n AI Agent 知识库记忆 | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
-| 33 | 100 | AI 部署 | informational | Open WebUI Functions Pipelines | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
+| 27 | 100 | AI 基建 | informational | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 25 | 100 | AI 基建 | informational | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 24 | 100 | AI 基建 | informational | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 21 | 100 | AI 基建 | informational | 向量数据库 | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
+
+## MCP、工具权限和企业集成安全
+
+- Audience: 部署 MCP Server、Agent 工具、企业 IM 接入的人
+- Next action: Use these draft candidates in manual review; keep status=draft/noindex until explicit approval.
+
+Workflow angles:
+
+- 工具权限
+- 审批
+- 沙箱
+- 审计日志
+- IM 接入
+
+Search queries to cover:
+
+- MCP Server 部署安全
+- Agent 工具权限控制
+- 企业微信 AI Agent
+- Slack AI Agent 接入
+
+Review focus:
+
+- 核对工具权限、沙箱、审批、审计日志和密钥边界
+- 提醒读写执行要分级
+- 避免给出绕过权限或自动执行敏感操作的建议
+
+Source targets:
+
+- OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
+- n8n docs: https://docs.n8n.io
+
+Ready candidates:
+
+| Batch | Score | Category | Intent | Keyword | Title | File |
+| --- | --- | --- | --- | --- | --- | --- |
+| 15 | 100 | 报错解决 | informational | Windows 路径和权限导致安装失败怎么办 | Windows 路径和权限导致安装失败怎么办 | content/blog/windows-path-permission-install-fix.mdx |
+| 15 | 100 | 报错解决 | informational | Windows 路径和权限导致安装失败怎么办：新手检查清单 | Windows 路径和权限导致安装失败怎么办：新手检查清单 | content/blog/windows-path-permission-install-fix-checklist.mdx |
+| 15 | 100 | 报错解决 | commercial | Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合 | Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合 | content/blog/windows-path-permission-install-fix-freelance-scope.mdx |
+| 15 | 100 | 报错解决 | informational | Windows 路径和权限导致安装失败怎么办：常见错误和解决步骤 | Windows 路径和权限导致安装失败怎么办：常见错误和解决步骤 | content/blog/windows-path-permission-install-fix-mistakes.mdx |
+
+## LLM Serving、GPU 和托管推理
+
+- Audience: 需要自部署或托管 LLM 服务的工程团队
+- Next action: Use these draft candidates in manual review; keep status=draft/noindex until explicit approval.
+
+Workflow angles:
+
+- 在线 serving
+- 并发
+- GPU
+- 冷启动
+- 成本延迟
+
+Search queries to cover:
+
+- vLLM 部署教程
+- TGI 部署教程
+- RunPod Serverless 大模型部署
+- Modal Serverless GPU LLM
+
+Review focus:
+
+- 核对 serving 框架版本和部署方式
+- 说明冷启动、并发、成本、GPU、扩缩容和监控
+- 避免把 benchmark 写成项目保证
+
+Source targets:
+
+- vLLM docs: https://docs.vllm.ai
+- Hugging Face docs: https://huggingface.co/docs
+
+Ready candidates:
+
+| Batch | Score | Category | Intent | Keyword | Title | File |
+| --- | --- | --- | --- | --- | --- | --- |
+| 29 | 100 | AI 基建 | informational | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| 22 | 100 | AI 基建 | informational | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
 
 ## 本地模型和开源模型部署
 
@@ -178,52 +296,44 @@ Ready candidates:
 
 | Batch | Score | Category | Intent | Keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| 33 | 100 | AI 部署 | informational | Open WebUI Functions Pipelines | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| 32 | 100 | AI 部署 | informational | 本地部署大模型显存不够 | 本地部署大模型显存不够怎么办：量化、上下文、并发和换模型 | content/blog/local-llm-vram-not-enough-guide.mdx |
-| 29 | 100 | AI 基建 | informational | Docker 使用 NVIDIA GPU | Docker 怎么用 NVIDIA GPU：大模型部署先装对 Container Toolkit | content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx |
-| 29 | 100 | AI 基建 | informational | Kubernetes GPU 大模型部署 | Kubernetes 怎么部署 GPU 大模型：Device Plugin、资源限制和调度边界 | content/blog/kubernetes-gpu-llm-deployment-guide.mdx |
-| 29 | 100 | AI 基建 | informational | Modal Serverless GPU LLM | Modal 怎么部署 Serverless GPU LLM：代码化环境和冷启动先评估 | content/blog/modal-serverless-gpu-llm-guide.mdx |
+| 29 | 100 | AI 基建 | informational | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
 
-## Dify、n8n、Flowise 和无代码 AI 自动化
+## Agent 部署、工具调用和工作流
 
-- Audience: 用 Dify、n8n、Flowise、Coze 做自动化和知识库的人
-- Next action: Use these draft candidates in manual review; keep status=draft/noindex until explicit approval.
+- Audience: 正在把聊天助手升级成工作流或内部工具的人
+- Next action: Create or expand draft coverage before adding this topic to a review batch.
 
 Workflow angles:
 
-- 自部署
-- Webhook
-- 鉴权
-- 错误处理
-- 人工兜底
+- 工具白名单
+- 多步执行
+- 人工确认
+- 失败重试
+- 日志追踪
 
 Search queries to cover:
 
-- Dify 部署教程
-- n8n AI Agent 自托管
-- Flowise 本地部署
-- Dify 工作流错误处理
+- AI Agent 部署教程
+- Agent 工具调用教程
+- AI 工作流部署
+- Agent 人工审核流程
 
 Review focus:
 
-- 核对自部署和云端功能边界
-- 检查 Webhook、权限、连接器、错误处理和人工兜底
-- 避免引导群发、绕规则或站外交易
+- 区分 Agent、Workflow、普通聊天机器人
+- 核对工具调用、状态、人工接管和日志边界
+- 避免承诺全自动完成业务结果
 
 Source targets:
 
-- Dify docs: https://docs.dify.ai
-- n8n docs: https://docs.n8n.io
+- OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
+- Vercel AI SDK docs: https://ai-sdk.dev/docs
+- LangChain docs: https://python.langchain.com/docs
 
 Ready candidates:
 
 | Batch | Score | Category | Intent | Keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| 33 | 100 | 项目报价 | informational | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| 33 | 100 | AI 部署 | informational | Dify 工作流错误处理 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
-| 33 | 100 | AI 部署 | informational | Dify Workflow 和 Agent 区别 | Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核 | content/blog/dify-workflow-vs-agent-guide.mdx |
-| 33 | 100 | AI 部署 | informational | n8n AI Agent 知识库记忆 | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
-| 33 | 100 | AI 部署 | informational | n8n AI Agent Webhook | n8n AI Agent 接 Webhook 怎么上线：触发、鉴权、队列和失败重试 | content/blog/n8n-ai-agent-webhook-production-guide.mdx |
 
 ## 模型 API 接入、限流和多模型降级
 
@@ -260,52 +370,7 @@ Ready candidates:
 
 | Batch | Score | Category | Intent | Keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| 34 | 100 | AI 部署 | informational | AI API Key 安全管理 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| 34 | 100 | AI 部署 | informational | Claude API rate limit reached | Claude API Rate limit reached 怎么办：限流、上下文、重试和降级 | content/blog/claude-api-rate-limit-debug-guide.mdx |
-| 34 | 100 | AI 部署 | informational | Gemini API 限流 | Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型 | content/blog/gemini-api-rate-limit-debug-guide.mdx |
-| 34 | 100 | AI 部署 | informational | 多模型 Router 降级 | 多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估 | content/blog/multi-model-router-fallback-guide.mdx |
-| 34 | 100 | AI 部署 | informational | OpenAI Batch API | OpenAI Batch API 适合什么任务：批量摘要、分类、抽取和成本控制 | content/blog/openai-batch-api-cost-guide.mdx |
-
-## LLM Serving、GPU 和托管推理
-
-- Audience: 需要自部署或托管 LLM 服务的工程团队
-- Next action: Use these draft candidates in manual review; keep status=draft/noindex until explicit approval.
-
-Workflow angles:
-
-- 在线 serving
-- 并发
-- GPU
-- 冷启动
-- 成本延迟
-
-Search queries to cover:
-
-- vLLM 部署教程
-- TGI 部署教程
-- RunPod Serverless 大模型部署
-- Modal Serverless GPU LLM
-
-Review focus:
-
-- 核对 serving 框架版本和部署方式
-- 说明冷启动、并发、成本、GPU、扩缩容和监控
-- 避免把 benchmark 写成项目保证
-
-Source targets:
-
-- vLLM docs: https://docs.vllm.ai
-- Hugging Face docs: https://huggingface.co/docs
-
-Ready candidates:
-
-| Batch | Score | Category | Intent | Keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- |
-| 29 | 100 | AI 基建 | informational | BentoML LLM 部署 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
-| 29 | 100 | AI 基建 | informational | Hugging Face TGI 部署 | Hugging Face TGI 怎么部署：Text Generation Inference 入门检查表 | content/blog/huggingface-tgi-deployment-guide.mdx |
-| 29 | 100 | AI 基建 | informational | Modal Serverless GPU LLM | Modal 怎么部署 Serverless GPU LLM：代码化环境和冷启动先评估 | content/blog/modal-serverless-gpu-llm-guide.mdx |
-| 29 | 100 | AI 基建 | informational | Ray Serve LLM 部署 | Ray Serve 怎么部署 LLM：多节点、多模型和 OpenAI 兼容接口入门 | content/blog/ray-serve-llm-deployment-guide.mdx |
-| 29 | 100 | AI 基建 | informational | RunPod Serverless 大模型部署 | RunPod Serverless 怎么部署大模型：Endpoint、Worker 和冷启动边界 | content/blog/runpod-serverless-llm-deployment-guide.mdx |
+| 34 | 100 | AI 部署 | informational | Vercel AI Gateway 多模型 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 
 ## LLM 观测、评测和上线质量
 
@@ -343,132 +408,40 @@ Ready candidates:
 
 | Batch | Score | Category | Intent | Keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| 33 | 100 | AI 基建 | informational | MCP Server 部署安全 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| 32 | 100 | AI 基建 | informational | Agent 工具权限控制 | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
-| 28 | 100 | AI 基建 | informational | Arize Phoenix LLM Tracing | Arize Phoenix 怎么做 LLM Tracing：OpenTelemetry、评测和排错入门 | content/blog/arize-phoenix-llm-observability-guide.mdx |
-| 28 | 100 | AI 基建 | informational | Helicone LLM Observability | Helicone 怎么做 LLM 观测：Gateway、日志、成本和限流先管住 | content/blog/helicone-llm-observability-guide.mdx |
-| 28 | 100 | AI 基建 | informational | LangSmith Observability | LangSmith 怎么做观测和评测：别再只靠 print 调试 Agent | content/blog/langsmith-observability-evaluation-guide.mdx |
+| 13 | 100 | 报错解决 | informational | Vercel build failed 排查清单 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
 
-## MCP、工具权限和企业集成安全
+## Dify、n8n、Flowise 和无代码 AI 自动化
 
-- Audience: 部署 MCP Server、Agent 工具、企业 IM 接入的人
-- Next action: Use these draft candidates in manual review; keep status=draft/noindex until explicit approval.
+- Audience: 用 Dify、n8n、Flowise、Coze 做自动化和知识库的人
+- Next action: Create or expand draft coverage before adding this topic to a review batch.
 
 Workflow angles:
 
-- 工具权限
-- 审批
-- 沙箱
-- 审计日志
-- IM 接入
+- 自部署
+- Webhook
+- 鉴权
+- 错误处理
+- 人工兜底
 
 Search queries to cover:
 
-- MCP Server 部署安全
-- Agent 工具权限控制
-- 企业微信 AI Agent
-- Slack AI Agent 接入
+- Dify 部署教程
+- n8n AI Agent 自托管
+- Flowise 本地部署
+- Dify 工作流错误处理
 
 Review focus:
 
-- 核对工具权限、沙箱、审批、审计日志和密钥边界
-- 提醒读写执行要分级
-- 避免给出绕过权限或自动执行敏感操作的建议
+- 核对自部署和云端功能边界
+- 检查 Webhook、权限、连接器、错误处理和人工兜底
+- 避免引导群发、绕规则或站外交易
 
 Source targets:
 
-- OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
+- Dify docs: https://docs.dify.ai
 - n8n docs: https://docs.n8n.io
 
 Ready candidates:
 
 | Batch | Score | Category | Intent | Keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| 34 | 100 | AI 部署 | informational | AI API Key 安全管理 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| 33 | 100 | AI 部署 | informational | 企业微信 飞书 Slack AI Agent | 企业微信、飞书、Slack 怎么接 AI Agent：消息入口、权限和人工接管 | content/blog/enterprise-im-ai-agent-integration-guide.mdx |
-| 33 | 100 | AI 基建 | informational | MCP Server 部署安全 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| 32 | 100 | AI 基建 | informational | Agent 工具权限控制 | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
-| 23 | 100 | AI 基建 | informational | Agent 生产上线 | Agent 生产上线检查表：权限、日志、成本和人工确认 | content/blog/agent-production-deployment-checklist.mdx |
-
-## 大模型和 AI 应用部署
-
-- Audience: 想把 AI 应用上线的新手开发者、独立站站长、AI 服务提供者
-- Next action: Use these draft candidates in manual review; keep status=draft/noindex until explicit approval.
-
-Workflow angles:
-
-- 环境变量
-- API Key
-- 限流重试
-- 上线检查
-- 回滚
-
-Search queries to cover:
-
-- 大模型部署教程
-- AI 应用部署教程
-- OpenAI API 部署教程
-- Vercel AI SDK 部署
-
-Review focus:
-
-- 核对当前官方部署文档
-- 检查环境变量、API Key、限流、日志、回滚和 smoke check
-- 避免承诺一次部署就稳定运行
-
-Source targets:
-
-- OpenAI API docs: https://platform.openai.com/docs
-- Vercel AI SDK docs: https://ai-sdk.dev/docs
-- Anthropic docs: https://docs.anthropic.com
-
-Ready candidates:
-
-| Batch | Score | Category | Intent | Keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- |
-| 40 | 100 | AI Agent | informational | AI Agent 部署 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| 40 | 100 | AI 部署 | informational | 大模型部署 | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-| 34 | 100 | AI 部署 | informational | AI API Key 安全管理 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| 34 | 100 | AI 部署 | informational | 客服 AI 模型选型 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| 34 | 100 | AI 部署 | informational | Claude API rate limit reached | Claude API Rate limit reached 怎么办：限流、上下文、重试和降级 | content/blog/claude-api-rate-limit-debug-guide.mdx |
-
-## AI 应用部署报错和排查
-
-- Audience: 部署失败、API 报错、环境变量缺失的新手
-- Next action: Use these draft candidates in manual review; keep status=draft/noindex until explicit approval.
-
-Workflow angles:
-
-- 错误日志
-- 复现
-- 修复顺序
-- 验证命令
-- 项目边界
-
-Search queries to cover:
-
-- Vercel build failed
-- Vercel 部署后 404
-- API Key 无效或缺失
-- 环境变量缺失怎么办
-
-Review focus:
-
-- 保留错误现象、原因、修复步骤和验证命令
-- 不要把偶然修复写成通用结论
-- 补齐官方文档或日志来源
-
-Source targets:
-
-- Vercel AI SDK docs: https://ai-sdk.dev/docs
-- OpenAI API docs: https://platform.openai.com/docs
-
-Ready candidates:
-
-| Batch | Score | Category | Intent | Keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- |
-| 34 | 100 | AI 部署 | informational | AI API Key 安全管理 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| 20 | 100 | 工具流程 | informational | Claude Code 错误排查 | 用 Claude Code 排查客户报错时怎么做才稳 | content/blog/claude-code-error-debug.mdx |
-| 20 | 100 | 工具流程 | informational | Claude Code 排查报错常见错误 | Claude Code 排查客户报错时的常见错误 | content/blog/claude-code-error-debug-mistakes.mdx |
-| 18 | 100 | 报错解决 | informational | npm command not found 怎么解决 | npm command not found 怎么解决 | content/blog/npm-command-not-found-fix.mdx |
-| 18 | 100 | 报错解决 | informational | npm command not found 排查检查清单 | npm command not found 排查检查清单 | content/blog/npm-command-not-found-fix-checklist.mdx |

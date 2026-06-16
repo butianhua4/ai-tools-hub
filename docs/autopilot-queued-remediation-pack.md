@@ -1,6 +1,6 @@
 # Autopilot Queued Remediation Pack
 
-Generated at: 2026-06-14T10:39:21.242Z
+Generated at: 2026-06-16T07:01:40.374Z
 
 This report is read-only. It turns queued playbook items into manual remediation cards and keeps article edits, mark-review, and publishing human-gated.
 
@@ -25,7 +25,7 @@ This report is read-only. It turns queued playbook items into manual remediation
 
 ## Source Evidence
 
-- queuedPlaybookGeneratedAt: "2026-06-14T10:39:20.784Z"
+- queuedPlaybookGeneratedAt: "2026-06-16T07:01:39.913Z"
 - queuedPlaybookGuardrails: {"autoEditArticles":false,"autoMarkReview":false,"autoPublish":false,"note":"Read-only merged playbook for next-10 queued-for-playbook sprint items. It prepares human review without changing article status.","stopBefore":"Use this report for manual review only. mark:review requires explicit human approval per file; publish --confirm is not included."}
 - queuedPlaybookItems: 7
 - queuedPlaybookReadyItems: 7
@@ -42,172 +42,36 @@ This report is read-only. It turns queued playbook items into manual remediation
 
 | Order | Ready | Reasons | Search fixes | Source checks | Link fixes | Risk checks | Mark-review gated | Publish confirm | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 4 | true | 5 | 17 | 40 | 4 | 51 | true | not-included | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| 5 | true | 5 | 17 | 22 | 4 | 43 | true | not-included | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| 6 | true | 5 | 17 | 26 | 4 | 55 | true | not-included | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| 7 | true | 5 | 17 | 27 | 4 | 59 | true | not-included | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| 8 | true | 5 | 17 | 28 | 4 | 60 | true | not-included | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| 9 | true | 5 | 17 | 14 | 2 | 47 | true | not-included | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
-| 10 | true | 5 | 10 | 15 | 4 | 34 | true | not-included | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
+| 2 | true | 5 | 18 | 26 | 4 | 33 | true | not-included | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 3 | true | 5 | 18 | 24 | 1 | 10 | true | not-included | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 4 | true | 5 | 17 | 24 | 1 | 23 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 5 | true | 5 | 9 | 16 | 1 | 22 | true | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+| 6 | true | 5 | 9 | 22 | 1 | 22 | true | not-included | Windows 路径和权限导致安装失败怎么办 | content/blog/windows-path-permission-install-fix.mdx |
+| 7 | true | 5 | 17 | 20 | 1 | 22 | true | not-included | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| 8 | true | 5 | 17 | 16 | 1 | 17 | true | not-included | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
 
 ## Per-Item Checklist
 
-### 4. AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
+### 2. RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界
 
-- File: content/blog/ai-api-key-security-rotation-guide.mdx
-- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, review-action-board, review-optimization-brief, review-freshness-brief, review-cannibalization-brief, internal-link-opportunity-audit, ai-deployment-review-pack
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx`
+- File: content/blog/vector-database-selection-for-rag-guide.mdx
+- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, review-action-board, review-optimization-brief, review-freshness-brief, review-cannibalization-brief, internal-link-opportunity-audit, autopilot-search-query-gap-brief
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/vector-database-selection-for-rag-guide.mdx`
 - Publish confirm: not-included
 
 Search fixes:
 
-- Make the opening answer the primary keyword naturally: AI API Key 安全管理.
-- Confirm article answers search query: LLM observability
-- Confirm article answers search query: RAG evaluation
-- Confirm article answers search query: AI agent logs
-- Confirm article answers search query: prompt injection defense
-- Confirm article answers search query: OpenAI API 接入教程
-- Confirm article answers search query: Claude API rate limit
-- Confirm article answers search query: Gemini API 限流
-- Confirm article answers search query: OpenRouter API 教程
-- Check search query coverage: LLM observability.
-
-Source checks:
-
-- Verify official source: OpenAI API docs: https://platform.openai.com/docs
-- Verify official source: Anthropic docs: https://docs.anthropic.com
-- Verify official source: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
-- Verify official source: Vercel AI SDK docs: https://ai-sdk.dev/docs
-- Verify official source: Google AI docs: https://ai.google.dev/docs
-- Verify official source: Dify docs: https://docs.dify.ai
-- Verify official source: n8n docs: https://docs.n8n.io
-- Verify official source: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
-- Verify official source: OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering
-- Verify official source: LangChain docs: https://python.langchain.com/docs
-
-Internal-link fixes:
-
-- Add or explicitly reject public internal link: Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist).
-- Add or explicitly reject public internal link: Codex 和 GitHub 怎么配合：提交代码前检查 (/blog/codex-github-before-commit-checklist).
-- Add or explicitly reject public internal link: 第一个 Upwork 小项目怎么报价：新手范围和底价检查 (/blog/first-upwork-project-pricing-checklist).
-- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
-
-Risk checks:
-
-- No income, ranking, approval, or client acquisition guarantee.
-- No instruction to bypass platform, payment, messaging, account, or review rules.
-- No API key, credential, private customer data, or account detail is included.
-- Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.
-- Agent or workflow claims include permissions, human approval, logging, failure handling, and rollback boundaries.
-- Deployment guidance includes environment variables, smoke checks, rate limits, logs, resource limits, and rollback steps.
-- No one-click stability promise for deployment, serving, Agent execution, or RAG quality.
-- No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim.
-- No unsafe secret handling, public API key exposure, or client-side privileged token use.
-- No unbounded autonomous Agent action without permissions, allowlists, human approval, and logs.
-
-Human checklist:
-
-- Review reason: queued sprint item has not entered the current approval remediation packet.
-- Review reason: internal-link placement needs human acceptance or rejection.
-- Review reason: search-intent wording needs human copy review.
-- Review reason: source and fact-check evidence needs human verification.
-- Review reason: risk-language checklist needs human sign-off.
-- Apply, rewrite, or explicitly reject each search fix before mark:review.
-- Open source targets or run equivalent source checks before mark:review.
-- Apply or explicitly reject the public internal-link suggestion before mark:review.
-- Resolve risk checklist items and remove unsupported claims before mark:review.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### 5. MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单
-
-- File: content/blog/mcp-server-deployment-security-checklist.mdx
-- Source evidence: review-portfolio-board, review-action-board, review-optimization-brief, review-freshness-brief, review-cannibalization-brief, internal-link-opportunity-audit, ai-deployment-review-pack
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/mcp-server-deployment-security-checklist.mdx`
-- Publish confirm: not-included
-
-Search fixes:
-
-- Make the opening answer the primary keyword naturally: MCP Server 部署安全.
-- Confirm article answers search query: Dify 部署教程
-- Confirm article answers search query: n8n AI 自动化教程
-- Confirm article answers search query: MCP 使用教程
-- Confirm article answers search query: Flowise 本地部署
-- Confirm article answers search query: Coze Bot 发布
-- Confirm article answers search query: LLM observability 教程
-- Confirm article answers search query: Agent 可观测性
-- Confirm article answers search query: RAG 评测
-- Check search query coverage: Dify 部署教程.
-
-Source checks:
-
-- Verify official source: https://docs.dify.ai/
-- Verify official source: https://docs.n8n.io/
-- Verify official source: https://modelcontextprotocol.io/docs
-- Verify official source: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
-- Verify official source: LangChain docs: https://python.langchain.com/docs
-- Verify official source: LlamaIndex docs: https://docs.llamaindex.ai
-- Run or manually check fact-check query: Dify 部署教程 official docs latest
-- Run or manually check fact-check query: n8n AI 自动化教程 official docs latest
-- Run or manually check fact-check query: MCP 使用教程 official docs latest
-- Run or manually check fact-check query: Flowise 本地部署 official docs latest
-
-Internal-link fixes:
-
-- Add or explicitly reject public internal link: Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide).
-- Add or explicitly reject public internal link: Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex).
-- Add or explicitly reject public internal link: Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist).
-- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
-
-Risk checks:
-
-- No one-click stability promise for deployment, serving, Agent execution, or RAG quality.
-- No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim.
-- No unsafe secret handling, public API key exposure, or client-side privileged token use.
-- No unbounded autonomous Agent action without permissions, allowlists, human approval, and logs.
-- No RAG or memory claim that removes the need for citation, privacy review, or hallucination checks.
-- No outdated model, package, endpoint, pricing, or platform behavior unless marked for human fact-checking.
-- Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.
-- Verify official docs for deployment commands, SDK names, model names, API endpoints, environment variables, and version-sensitive details.
-- Check that API keys, secrets, tokens, and credentials are never exposed in client-side code or screenshots.
-- Confirm the article includes a smoke check, rollback boundary, logging plan, and a failure triage path.
-
-Human checklist:
-
-- Review reason: queued sprint item has not entered the current approval remediation packet.
-- Review reason: internal-link placement needs human acceptance or rejection.
-- Review reason: search-intent wording needs human copy review.
-- Review reason: source and fact-check evidence needs human verification.
-- Review reason: risk-language checklist needs human sign-off.
-- Apply, rewrite, or explicitly reject each search fix before mark:review.
-- Open source targets or run equivalent source checks before mark:review.
-- Apply or explicitly reject the public internal-link suggestion before mark:review.
-- Resolve risk checklist items and remove unsupported claims before mark:review.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### 6. AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界
-
-- File: content/blog/ai-agent-memory-rag-design-guide.mdx
-- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, review-action-board, review-optimization-brief, review-freshness-brief, review-cannibalization-brief, internal-link-opportunity-audit, ai-deployment-review-pack
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx`
-- Publish confirm: not-included
-
-Search fixes:
-
-- Make the opening answer the primary keyword naturally: AI Agent 记忆.
-- Confirm article answers search query: RAG knowledge base tutorial
-- Confirm article answers search query: AI agent memory
-- Confirm article answers search query: vector database RAG
-- Confirm article answers search query: enterprise knowledge base AI
-- Confirm article answers search query: RAG 知识库搭建教程
-- Confirm article answers search query: 企业知识库 AI 部署
-- Confirm article answers search query: 向量数据库 RAG 教程
-- Confirm article answers search query: RAG 评测怎么做
-- Check search query coverage: RAG knowledge base tutorial.
+- Make the opening answer the primary keyword naturally: RAG 向量数据库怎么选.
+- Confirm article answers search query: RAG 向量数据库怎么选
+- Confirm article answers search query: RAG 向量数据库怎么选怎么做
+- Confirm article answers search query: RAG 向量数据库怎么选教程
+- Confirm article answers search query: RAG 向量数据库怎么选新手教程
+- Confirm article answers search query: RAG 向量数据库怎么选落地步骤
+- Confirm article answers search query: RAG 向量数据库怎么选对比
+- Confirm article answers search query: RAG 向量数据库怎么选怎么选
+- Confirm article answers search query: RAG 向量数据库怎么选模板
+- Use autopilot search query gap brief evidence for this item.
 
 Source checks:
 
@@ -219,14 +83,14 @@ Source checks:
 - Verify official source: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
 - Verify official source: Vercel AI SDK docs: https://ai-sdk.dev/docs
 - Verify official source: OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering
-- Run or manually check fact-check query: AI Agent 记忆 official docs latest
-- Run or manually check fact-check query: AI Agent 记忆 official documentation current limits
+- Run or manually check fact-check query: RAG 向量数据库怎么选 official docs latest
+- Run or manually check fact-check query: RAG 向量数据库怎么选 official documentation current limits
 
 Internal-link fixes:
 
-- Add or explicitly reject public internal link: Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist).
-- Add or explicitly reject public internal link: Codex 和 GitHub 怎么配合：提交代码前检查 (/blog/codex-github-before-commit-checklist).
-- Add or explicitly reject public internal link: Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist).
+- Add or explicitly reject public internal link: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide).
+- Add or explicitly reject public internal link: RAG 知识库怎么搭：文档、切分、检索和回答复核 (/blog/rag-knowledge-base-beginner-guide).
+- Add or explicitly reject public internal link: Chroma 向量数据库怎么用：本地 RAG 原型先跑通 collection (/blog/chroma-vector-database-rag-guide).
 - Confirm the link anchor is contextual and does not interrupt the tutorial flow.
 
 Risk checks:
@@ -237,280 +101,10 @@ Risk checks:
 - Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.
 - Agent or workflow claims include permissions, human approval, logging, failure handling, and rollback boundaries.
 - RAG or knowledge-base claims distinguish retrieval quality, citation checks, privacy boundaries, and hallucination risk.
-- Deployment guidance includes environment variables, smoke checks, rate limits, logs, resource limits, and rollback steps.
-- Prompt examples include input context, output criteria, review rules, and adaptation notes.
-- No one-click stability promise for deployment, serving, Agent execution, or RAG quality.
-- No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim.
-
-Human checklist:
-
-- Review reason: queued sprint item has not entered the current approval remediation packet.
-- Review reason: internal-link placement needs human acceptance or rejection.
-- Review reason: search-intent wording needs human copy review.
-- Review reason: source and fact-check evidence needs human verification.
-- Review reason: risk-language checklist needs human sign-off.
-- Apply, rewrite, or explicitly reject each search fix before mark:review.
-- Open source targets or run equivalent source checks before mark:review.
-- Apply or explicitly reject the public internal-link suggestion before mark:review.
-- Resolve risk checklist items and remove unsupported claims before mark:review.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### 7. Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流
-
-- File: content/blog/open-webui-functions-pipelines-deployment-guide.mdx
-- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, review-action-board, review-optimization-brief, review-freshness-brief, review-cannibalization-brief, internal-link-opportunity-audit, ai-deployment-review-pack
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx`
-- Publish confirm: not-included
-
-Search fixes:
-
-- Make the opening answer the primary keyword naturally: Open WebUI Functions Pipelines.
-- Confirm article answers search query: local LLM deployment
-- Confirm article answers search query: Ollama local model tutorial
-- Confirm article answers search query: Open WebUI deployment
-- Confirm article answers search query: local AI model GPU memory
-- Confirm article answers search query: 本地部署大模型教程
-- Confirm article answers search query: Ollama 本地部署
-- Confirm article answers search query: Open WebUI Ollama 部署
-- Confirm article answers search query: 本地大模型显存不够
-- Check search query coverage: local LLM deployment.
-
-Source checks:
-
-- Verify official source: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
-- Verify official source: LangChain docs: https://python.langchain.com/docs
-- Verify official source: LlamaIndex docs: https://docs.llamaindex.ai
-- Verify official source: Hugging Face docs: https://huggingface.co/docs
-- Verify official source: OpenAI API docs: https://platform.openai.com/docs
-- Verify official source: Vercel AI SDK docs: https://ai-sdk.dev/docs
-- Verify official source: n8n docs: https://docs.n8n.io
-- Verify official source: Ollama docs: https://docs.ollama.com
-- Verify official source: vLLM docs: https://docs.vllm.ai
-- Run or manually check fact-check query: Open WebUI Functions Pipelines official docs latest
-
-Internal-link fixes:
-
-- Add or explicitly reject public internal link: Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex).
-- Add or explicitly reject public internal link: Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist).
-- Add or explicitly reject public internal link: Codex 生成代码后怎么审核 (/blog/codex-generated-code-review-guide).
-- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
-
-Risk checks:
-
-- No income, ranking, approval, or client acquisition guarantee.
-- No instruction to bypass platform, payment, messaging, account, or review rules.
-- No API key, credential, private customer data, or account detail is included.
-- Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.
-- RAG or knowledge-base claims distinguish retrieval quality, citation checks, privacy boundaries, and hallucination risk.
-- Deployment guidance includes environment variables, smoke checks, rate limits, logs, resource limits, and rollback steps.
-- No one-click stability promise for deployment, serving, Agent execution, or RAG quality.
-- No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim.
-- No unsafe secret handling, public API key exposure, or client-side privileged token use.
-- No unbounded autonomous Agent action without permissions, allowlists, human approval, and logs.
-
-Human checklist:
-
-- Review reason: queued sprint item has not entered the current approval remediation packet.
-- Review reason: internal-link placement needs human acceptance or rejection.
-- Review reason: search-intent wording needs human copy review.
-- Review reason: source and fact-check evidence needs human verification.
-- Review reason: risk-language checklist needs human sign-off.
-- Apply, rewrite, or explicitly reject each search fix before mark:review.
-- Open source targets or run equivalent source checks before mark:review.
-- Apply or explicitly reject the public internal-link suggestion before mark:review.
-- Resolve risk checklist items and remove unsupported claims before mark:review.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### 8. AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围
-
-- File: content/blog/ai-automation-project-pricing-scope-guide.mdx
-- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, review-action-board, review-optimization-brief, review-freshness-brief, review-cannibalization-brief, internal-link-opportunity-audit, ai-deployment-review-pack
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx`
-- Publish confirm: not-included
-
-Search fixes:
-
-- Make the opening answer the primary keyword naturally: AI 自动化项目报价.
-- Confirm article answers search query: Dify deployment tutorial
-- Confirm article answers search query: n8n AI agent self hosted
-- Confirm article answers search query: Flowise local deployment
-- Confirm article answers search query: Dify workflow error handling
-- Confirm article answers search query: Dify 部署教程
-- Confirm article answers search query: n8n AI Agent 自托管
-- Confirm article answers search query: Flowise 本地部署
-- Confirm article answers search query: Dify 工作流错误处理
-- Check search query coverage: Dify deployment tutorial.
-
-Source checks:
-
-- Verify official source: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
-- Verify official source: LangChain docs: https://python.langchain.com/docs
-- Verify official source: LlamaIndex docs: https://docs.llamaindex.ai
-- Verify official source: Hugging Face docs: https://huggingface.co/docs
-- Verify official source: OpenAI API docs: https://platform.openai.com/docs
-- Verify official source: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
-- Verify official source: Vercel AI SDK docs: https://ai-sdk.dev/docs
-- Verify official source: Dify docs: https://docs.dify.ai
-- Verify official source: n8n docs: https://docs.n8n.io
-- Verify official source: OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering
-
-Internal-link fixes:
-
-- Add or explicitly reject public internal link: Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist).
-- Add or explicitly reject public internal link: Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist).
-- Add or explicitly reject public internal link: 第一个 Upwork 小项目怎么报价：新手范围和底价检查 (/blog/first-upwork-project-pricing-checklist).
-- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
-
-Risk checks:
-
-- No income, ranking, approval, or client acquisition guarantee.
-- No instruction to bypass platform, payment, messaging, account, or review rules.
-- No API key, credential, private customer data, or account detail is included.
-- Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.
-- Agent or workflow claims include permissions, human approval, logging, failure handling, and rollback boundaries.
-- RAG or knowledge-base claims distinguish retrieval quality, citation checks, privacy boundaries, and hallucination risk.
-- Deployment guidance includes environment variables, smoke checks, rate limits, logs, resource limits, and rollback steps.
-- No one-click stability promise for deployment, serving, Agent execution, or RAG quality.
-- No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim.
-- No unsafe secret handling, public API key exposure, or client-side privileged token use.
-
-Human checklist:
-
-- Review reason: queued sprint item has not entered the current approval remediation packet.
-- Review reason: internal-link placement needs human acceptance or rejection.
-- Review reason: search-intent wording needs human copy review.
-- Review reason: source and fact-check evidence needs human verification.
-- Review reason: risk-language checklist needs human sign-off.
-- Apply, rewrite, or explicitly reject each search fix before mark:review.
-- Open source targets or run equivalent source checks before mark:review.
-- Apply or explicitly reject the public internal-link suggestion before mark:review.
-- Resolve risk checklist items and remove unsupported claims before mark:review.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### 9. BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收
-
-- File: content/blog/bentoml-llm-deployment-beginner-guide.mdx
-- Source evidence: review-portfolio-board, review-action-board, review-optimization-brief, review-freshness-brief, review-cannibalization-brief, ai-deployment-review-pack
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx`
-- Publish confirm: not-included
-
-Search fixes:
-
-- Make the opening answer the primary keyword naturally: BentoML LLM 部署.
-- Confirm article answers search query: vLLM deployment tutorial
-- Confirm article answers search query: Hugging Face TGI deployment
-- Confirm article answers search query: RunPod serverless LLM
-- Confirm article answers search query: serverless GPU LLM deployment
-- Confirm article answers search query: vLLM 部署教程
-- Confirm article answers search query: TGI 部署教程
-- Confirm article answers search query: RunPod Serverless 大模型部署
-- Confirm article answers search query: Modal Serverless GPU LLM
-- Check search query coverage: vLLM deployment tutorial.
-
-Source checks:
-
-- Verify official source: vLLM docs: https://docs.vllm.ai
-- Verify official source: Hugging Face docs: https://huggingface.co/docs
-- Run or manually check fact-check query: vLLM deployment tutorial official docs latest
-- Run or manually check fact-check query: Hugging Face TGI deployment official docs latest
-- Run or manually check fact-check query: RunPod serverless LLM official docs latest
-- Run or manually check fact-check query: serverless GPU LLM deployment official docs latest
-- Verify source target: vLLM docs: https://docs.vllm.ai.
-- Verify source target: Hugging Face docs: https://huggingface.co/docs.
-- Fact-check query: vLLM deployment tutorial official docs latest.
-- Fact-check query: Hugging Face TGI deployment official docs latest.
-
-Internal-link fixes:
-
-- Add or explicitly reject public internal link: Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist).
-- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
-
-Risk checks:
-
-- No one-click stability promise for deployment, serving, Agent execution, or RAG quality.
-- No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim.
-- No unsafe secret handling, public API key exposure, or client-side privileged token use.
-- No unbounded autonomous Agent action without permissions, allowlists, human approval, and logs.
-- No RAG or memory claim that removes the need for citation, privacy review, or hallucination checks.
-- No outdated model, package, endpoint, pricing, or platform behavior unless marked for human fact-checking.
-- Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.
-- Verify official docs for deployment commands, SDK names, model names, API endpoints, environment variables, and version-sensitive details.
-- Check that API keys, secrets, tokens, and credentials are never exposed in client-side code or screenshots.
-- Confirm the article includes a smoke check, rollback boundary, logging plan, and a failure triage path.
-
-Human checklist:
-
-- Review reason: queued sprint item has not entered the current approval remediation packet.
-- Review reason: internal-link placement needs human acceptance or rejection.
-- Review reason: search-intent wording needs human copy review.
-- Review reason: source and fact-check evidence needs human verification.
-- Review reason: risk-language checklist needs human sign-off.
-- Apply, rewrite, or explicitly reject each search fix before mark:review.
-- Open source targets or run equivalent source checks before mark:review.
-- Apply or explicitly reject the public internal-link suggestion before mark:review.
-- Resolve risk checklist items and remove unsupported claims before mark:review.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human
-- Publishing remains a separate explicit approval step.
-
-### 10. Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志
-
-- File: content/blog/agent-tool-permission-safety-guide.mdx
-- Source evidence: review-portfolio-board, review-action-board, review-optimization-brief, review-freshness-brief, review-cannibalization-brief, internal-link-opportunity-audit
-- Manual mark-review command: `npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human`
-- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/agent-tool-permission-safety-guide.mdx`
-- Publish confirm: not-included
-
-Search fixes:
-
-- Confirm article answers search query: LLM observability 教程
-- Confirm article answers search query: RAG 评测教程
-- Confirm article answers search query: promptfoo 入门
-- Confirm article answers search query: LangSmith 教程
-- Confirm article answers search query: AI 应用日志监控
-- Check search query coverage: LLM observability 教程.
-- Check search query coverage: RAG 评测教程.
-- Check search query coverage: promptfoo 入门.
-- Check search query coverage: LangSmith 教程.
-- Check search query coverage: AI 应用日志监控.
-
-Source checks:
-
-- Verify official source: https://www.promptfoo.dev/docs/intro/
-- Verify official source: https://docs.ragas.io/
-- Verify official source: https://docs.helicone.ai/
-- Run or manually check fact-check query: LLM observability 教程 official docs latest
-- Run or manually check fact-check query: RAG 评测教程 official docs latest
-- Run or manually check fact-check query: promptfoo 入门 official docs latest
-- Run or manually check fact-check query: LangSmith 教程 official docs latest
-- Verify source target: https://www.promptfoo.dev/docs/intro/.
-- Verify source target: https://docs.ragas.io/.
-- Verify source target: https://docs.helicone.ai/.
-
-Internal-link fixes:
-
-- Add or explicitly reject public internal link: Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist).
-- Add or explicitly reject public internal link: 第一个 Upwork 小项目怎么报价：新手范围和底价检查 (/blog/first-upwork-project-pricing-checklist).
-- Add or explicitly reject public internal link: Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide).
-- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
-
-Risk checks:
-
 - Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.
 - Open official source targets and verify current product names, APIs, limits, pricing-sensitive wording, and workflow boundaries.
 - Rewrite or remove any unsupported claim before mark:review.
 - Confirm no traffic, ranking, revenue, client acquisition, or guaranteed result claim was introduced.
-- Only after human approval, run mark:review manually; publishing still requires separate explicit approval.
-- Confirm the candidate owns a distinct search intent: Agent 工具权限控制.
-- No close published article found; still confirm the title is not a duplicate promise.
-- No close draft/review candidate found.
-- Document why this can remain a separate article.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
 
 Human checklist:
 
@@ -523,7 +117,395 @@ Human checklist:
 - Open source targets or run equivalent source checks before mark:review.
 - Apply or explicitly reject the public internal-link suggestion before mark:review.
 - Resolve risk checklist items and remove unsupported claims before mark:review.
-- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### 3. Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索
+
+- File: content/blog/supabase-pgvector-rag-guide.mdx
+- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, review-action-board, autopilot-search-query-gap-brief
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx`
+- Publish confirm: not-included
+
+Search fixes:
+
+- Make the opening answer the primary keyword naturally: Supabase pgvector.
+- Confirm article answers search query: Supabase pgvector
+- Confirm article answers search query: Supabase pgvector怎么做
+- Confirm article answers search query: Supabase pgvector教程
+- Confirm article answers search query: Supabase pgvector新手教程
+- Confirm article answers search query: Supabase pgvector落地步骤
+- Confirm article answers search query: Supabase pgvector对比
+- Confirm article answers search query: Supabase pgvector怎么选
+- Confirm article answers search query: Supabase pgvector模板
+- Use autopilot search query gap brief evidence for this item.
+
+Source checks:
+
+- Verify official source: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
+- Verify official source: LangChain docs: https://python.langchain.com/docs
+- Verify official source: LlamaIndex docs: https://docs.llamaindex.ai
+- Verify official source: Hugging Face docs: https://huggingface.co/docs
+- Verify official source: OpenAI API docs: https://platform.openai.com/docs
+- Verify official source: Vercel AI SDK docs: https://ai-sdk.dev/docs
+- Verify official source: LangChain docs: https://docs.langchain.com
+- Run or manually check fact-check query: Supabase pgvector official docs latest
+- Run or manually check fact-check query: Supabase pgvector official documentation current limits
+- Run or manually check fact-check query: Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 fact check official docs
+
+Internal-link fixes:
+
+- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
+
+Risk checks:
+
+- No income, ranking, approval, or client acquisition guarantee.
+- No instruction to bypass platform, payment, messaging, account, or review rules.
+- No API key, credential, private customer data, or account detail is included.
+- Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.
+- RAG or knowledge-base claims distinguish retrieval quality, citation checks, privacy boundaries, and hallucination risk.
+- missing publish readiness pack item
+- No traffic, ranking, revenue, benchmark, cost, latency, or stability claim is approved without measured evidence.
+- No API key, private customer data, credential, or client account detail is exposed.
+- Reject unsupported traffic, ranking, revenue, benchmark, cost, latency, or stability claims.
+- Confirm credentials, customer data, API keys, and deployment secrets are never exposed.
+
+Human checklist:
+
+- Review reason: queued sprint item has not entered the current approval remediation packet.
+- Review reason: internal-link placement needs human acceptance or rejection.
+- Review reason: search-intent wording needs human copy review.
+- Review reason: source and fact-check evidence needs human verification.
+- Review reason: risk-language checklist needs human sign-off.
+- Apply, rewrite, or explicitly reject each search fix before mark:review.
+- Open source targets or run equivalent source checks before mark:review.
+- Apply or explicitly reject the public internal-link suggestion before mark:review.
+- Resolve risk checklist items and remove unsupported claims before mark:review.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### 4. Together AI API 怎么接入：开源模型接口、embedding 和部署边界
+
+- File: content/blog/together-ai-api-beginner-guide.mdx
+- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, ai-deployment-review-pack
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx`
+- Publish confirm: not-included
+
+Search fixes:
+
+- Make the opening answer the primary keyword naturally: Together AI API 接入.
+- Confirm article answers search query: RAG 知识库搭建教程
+- Confirm article answers search query: 企业知识库 AI 部署
+- Confirm article answers search query: 向量数据库 RAG 教程
+- Confirm article answers search query: RAG 评测怎么做
+- Confirm article answers search query: Together AI API 接入怎么做
+- Confirm article answers search query: Together AI API 接入教程
+- Confirm article answers search query: Together AI API 接入新手教程
+- Confirm article answers search query: Together AI API 接入落地步骤
+- Check search query coverage: RAG 知识库搭建教程.
+
+Source checks:
+
+- Verify official source: OpenAI API docs: https://platform.openai.com/docs
+- Verify official source: Vercel AI SDK docs: https://ai-sdk.dev/docs
+- Verify official source: Anthropic docs: https://docs.anthropic.com
+- Verify official source: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
+- Verify official source: LangChain docs: https://python.langchain.com/docs
+- Verify official source: LlamaIndex docs: https://docs.llamaindex.ai
+- Verify official source: Hugging Face docs: https://huggingface.co/docs
+- Run or manually check fact-check query: Together AI API 接入 official docs latest
+- Run or manually check fact-check query: Together AI API 接入 official documentation current limits
+- Run or manually check fact-check query: Together AI API 怎么接入：开源模型接口、embedding 和部署边界 fact check official docs
+
+Internal-link fixes:
+
+- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
+
+Risk checks:
+
+- No income, ranking, approval, or client acquisition guarantee.
+- No instruction to bypass platform, payment, messaging, account, or review rules.
+- No API key, credential, private customer data, or account detail is included.
+- Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.
+- RAG or knowledge-base claims distinguish retrieval quality, citation checks, privacy boundaries, and hallucination risk.
+- Deployment guidance includes environment variables, smoke checks, rate limits, logs, resource limits, and rollback steps.
+- No one-click stability promise for deployment, serving, Agent execution, or RAG quality.
+- No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim.
+- No unsafe secret handling, public API key exposure, or client-side privileged token use.
+- No unbounded autonomous Agent action without permissions, allowlists, human approval, and logs.
+
+Human checklist:
+
+- Review reason: queued sprint item has not entered the current approval remediation packet.
+- Review reason: internal-link placement needs human acceptance or rejection.
+- Review reason: search-intent wording needs human copy review.
+- Review reason: source and fact-check evidence needs human verification.
+- Review reason: risk-language checklist needs human sign-off.
+- Apply, rewrite, or explicitly reject each search fix before mark:review.
+- Open source targets or run equivalent source checks before mark:review.
+- Apply or explicitly reject the public internal-link suggestion before mark:review.
+- Resolve risk checklist items and remove unsupported claims before mark:review.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### 5. Vercel 部署成功但页面 404：新手排查顺序
+
+- File: content/blog/vercel-404-after-deploy.mdx
+- Source evidence: next-review-source-pack, review-portfolio-board, ai-deployment-review-pack
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/vercel-404-after-deploy.mdx`
+- Publish confirm: not-included
+
+Search fixes:
+
+- Make the opening answer the primary keyword naturally: Vercel 部署成功但 404.
+- Confirm article answers search query: Vercel build failed
+- Confirm article answers search query: Vercel 部署后 404
+- Confirm article answers search query: API Key 无效或缺失
+- Confirm article answers search query: 环境变量缺失怎么办
+- Check search query coverage: Vercel build failed.
+- Check search query coverage: Vercel 部署后 404.
+- Check search query coverage: API Key 无效或缺失.
+- Check search query coverage: 环境变量缺失怎么办.
+
+Source checks:
+
+- Verify official source: OpenAI API docs: https://platform.openai.com/docs
+- Verify official source: OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering
+- Verify official source: Vercel AI SDK docs: https://ai-sdk.dev/docs
+- Run or manually check fact-check query: Vercel 部署成功但 404 official docs latest
+- Run or manually check fact-check query: Vercel 部署成功但 404 official documentation current limits
+- Run or manually check fact-check query: Vercel 部署成功但页面 404：新手排查顺序 fact check official docs
+- Run or manually check fact-check query: 报错解决 official docs limits pricing changelog
+- Verify source target: OpenAI API docs: https://platform.openai.com/docs.
+- Verify source target: OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering.
+- Verify source target: Vercel AI SDK docs: https://ai-sdk.dev/docs.
+
+Internal-link fixes:
+
+- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
+
+Risk checks:
+
+- No income, ranking, approval, or client acquisition guarantee.
+- No instruction to bypass platform, payment, messaging, account, or review rules.
+- No API key, credential, private customer data, or account detail is included.
+- Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.
+- Deployment guidance includes environment variables, smoke checks, rate limits, logs, resource limits, and rollback steps.
+- No one-click stability promise for deployment, serving, Agent execution, or RAG quality.
+- No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim.
+- No unsafe secret handling, public API key exposure, or client-side privileged token use.
+- No unbounded autonomous Agent action without permissions, allowlists, human approval, and logs.
+- No RAG or memory claim that removes the need for citation, privacy review, or hallucination checks.
+
+Human checklist:
+
+- Review reason: queued sprint item has not entered the current approval remediation packet.
+- Review reason: internal-link placement needs human acceptance or rejection.
+- Review reason: search-intent wording needs human copy review.
+- Review reason: source and fact-check evidence needs human verification.
+- Review reason: risk-language checklist needs human sign-off.
+- Apply, rewrite, or explicitly reject each search fix before mark:review.
+- Open source targets or run equivalent source checks before mark:review.
+- Apply or explicitly reject the public internal-link suggestion before mark:review.
+- Resolve risk checklist items and remove unsupported claims before mark:review.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### 6. Windows 路径和权限导致安装失败怎么办
+
+- File: content/blog/windows-path-permission-install-fix.mdx
+- Source evidence: next-review-source-pack, review-portfolio-board, ai-deployment-review-pack
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/windows-path-permission-install-fix.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix.mdx`
+- Publish confirm: not-included
+
+Search fixes:
+
+- Make the opening answer the primary keyword naturally: Windows 路径和权限导致安装失败怎么办.
+- Confirm article answers search query: MCP Server 部署安全
+- Confirm article answers search query: Agent 工具权限控制
+- Confirm article answers search query: 企业微信 AI Agent
+- Confirm article answers search query: Slack AI Agent 接入
+- Check search query coverage: MCP Server 部署安全.
+- Check search query coverage: Agent 工具权限控制.
+- Check search query coverage: 企业微信 AI Agent.
+- Check search query coverage: Slack AI Agent 接入.
+
+Source checks:
+
+- Verify official source: Vercel AI SDK docs: https://ai-sdk.dev/docs
+- Verify official source: OpenAI API docs: https://platform.openai.com/docs
+- Verify official source: Anthropic docs: https://docs.anthropic.com
+- Verify official source: OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering
+- Verify official source: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
+- Verify official source: n8n docs: https://docs.n8n.io
+- Run or manually check fact-check query: Windows 路径和权限导致安装失败怎么办 official docs latest
+- Run or manually check fact-check query: Windows 路径和权限导致安装失败怎么办 official documentation current limits
+- Run or manually check fact-check query: Windows 路径和权限导致安装失败怎么办 fact check official docs
+- Run or manually check fact-check query: 报错解决 official docs limits pricing changelog
+
+Internal-link fixes:
+
+- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
+
+Risk checks:
+
+- No income, ranking, approval, or client acquisition guarantee.
+- No instruction to bypass platform, payment, messaging, account, or review rules.
+- No API key, credential, private customer data, or account detail is included.
+- Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.
+- Deployment guidance includes environment variables, smoke checks, rate limits, logs, resource limits, and rollback steps.
+- No one-click stability promise for deployment, serving, Agent execution, or RAG quality.
+- No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim.
+- No unsafe secret handling, public API key exposure, or client-side privileged token use.
+- No unbounded autonomous Agent action without permissions, allowlists, human approval, and logs.
+- No RAG or memory claim that removes the need for citation, privacy review, or hallucination checks.
+
+Human checklist:
+
+- Review reason: queued sprint item has not entered the current approval remediation packet.
+- Review reason: internal-link placement needs human acceptance or rejection.
+- Review reason: search-intent wording needs human copy review.
+- Review reason: source and fact-check evidence needs human verification.
+- Review reason: risk-language checklist needs human sign-off.
+- Apply, rewrite, or explicitly reject each search fix before mark:review.
+- Open source targets or run equivalent source checks before mark:review.
+- Apply or explicitly reject the public internal-link suggestion before mark:review.
+- Resolve risk checklist items and remove unsupported claims before mark:review.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/windows-path-permission-install-fix.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### 7. TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收
+
+- File: content/blog/tensorrt-llm-beginner-guide.mdx
+- Source evidence: next-review-source-pack, search-query-coverage, review-portfolio-board, ai-deployment-review-pack
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx`
+- Publish confirm: not-included
+
+Search fixes:
+
+- Make the opening answer the primary keyword naturally: TensorRT-LLM 入门.
+- Confirm article answers search query: vLLM 部署教程
+- Confirm article answers search query: TGI 部署教程
+- Confirm article answers search query: RunPod Serverless 大模型部署
+- Confirm article answers search query: Modal Serverless GPU LLM
+- Confirm article answers search query: TensorRT-LLM 入门怎么做
+- Confirm article answers search query: TensorRT-LLM 入门教程
+- Confirm article answers search query: TensorRT-LLM 入门新手教程
+- Confirm article answers search query: TensorRT-LLM 入门落地步骤
+- Check search query coverage: vLLM 部署教程.
+
+Source checks:
+
+- Verify official source: vLLM docs: https://docs.vllm.ai
+- Verify official source: Hugging Face docs: https://huggingface.co/docs
+- Verify official source: OpenAI API docs: https://platform.openai.com/docs
+- Verify official source: Vercel AI SDK docs: https://ai-sdk.dev/docs
+- Verify official source: Ollama docs: https://docs.ollama.com
+- Run or manually check fact-check query: TensorRT-LLM 入门 official docs latest
+- Run or manually check fact-check query: TensorRT-LLM 入门 official documentation current limits
+- Run or manually check fact-check query: TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 fact check official docs
+- Run or manually check fact-check query: AI 基建 official docs limits pricing changelog
+- Verify source target: vLLM docs: https://docs.vllm.ai.
+
+Internal-link fixes:
+
+- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
+
+Risk checks:
+
+- No income, ranking, approval, or client acquisition guarantee.
+- No instruction to bypass platform, payment, messaging, account, or review rules.
+- No API key, credential, private customer data, or account detail is included.
+- Fast-changing model names, pricing, quotas, rate limits, and deployment steps are checked against current official docs.
+- Deployment guidance includes environment variables, smoke checks, rate limits, logs, resource limits, and rollback steps.
+- No one-click stability promise for deployment, serving, Agent execution, or RAG quality.
+- No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim.
+- No unsafe secret handling, public API key exposure, or client-side privileged token use.
+- No unbounded autonomous Agent action without permissions, allowlists, human approval, and logs.
+- No RAG or memory claim that removes the need for citation, privacy review, or hallucination checks.
+
+Human checklist:
+
+- Review reason: queued sprint item has not entered the current approval remediation packet.
+- Review reason: internal-link placement needs human acceptance or rejection.
+- Review reason: search-intent wording needs human copy review.
+- Review reason: source and fact-check evidence needs human verification.
+- Review reason: risk-language checklist needs human sign-off.
+- Apply, rewrite, or explicitly reject each search fix before mark:review.
+- Open source targets or run equivalent source checks before mark:review.
+- Apply or explicitly reject the public internal-link suggestion before mark:review.
+- Resolve risk checklist items and remove unsupported claims before mark:review.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human
+- Publishing remains a separate explicit approval step.
+
+### 8. Vercel build failed 排查清单：从日志到重新部署
+
+- File: content/blog/vercel-build-failed-causes-checklist.mdx
+- Source evidence: search-query-coverage, review-portfolio-board, ai-deployment-review-pack
+- Manual mark-review command: `npm run mark:review -- --file=content/blog/vercel-build-failed-causes-checklist.mdx --confirm-human`
+- Publish dry-run command after review: `npm run publish:articles -- --file=content/blog/vercel-build-failed-causes-checklist.mdx`
+- Publish confirm: not-included
+
+Search fixes:
+
+- Make the opening answer the primary keyword naturally: Vercel build failed 排查清单.
+- Confirm article answers search query: LLM observability 教程
+- Confirm article answers search query: Agent 可观测性
+- Confirm article answers search query: RAG 评测
+- Confirm article answers search query: promptfoo LLM 评测
+- Confirm article answers search query: Vercel build failed 排查清单怎么做
+- Confirm article answers search query: Vercel build failed 排查清单教程
+- Confirm article answers search query: Vercel build failed 排查清单新手教程
+- Confirm article answers search query: Vercel build failed 排查清单落地步骤
+- Check search query coverage: LLM observability 教程.
+
+Source checks:
+
+- Verify official source: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
+- Verify official source: LangChain docs: https://python.langchain.com/docs
+- Verify official source: LlamaIndex docs: https://docs.llamaindex.ai
+- Run or manually check fact-check query: LLM observability 教程 official docs latest
+- Run or manually check fact-check query: Agent 可观测性 official docs latest
+- Run or manually check fact-check query: RAG 评测 official docs latest
+- Run or manually check fact-check query: promptfoo LLM 评测 official docs latest
+- Verify source target: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents.
+- Verify source target: LangChain docs: https://python.langchain.com/docs.
+- Verify source target: LlamaIndex docs: https://docs.llamaindex.ai.
+
+Internal-link fixes:
+
+- Confirm the link anchor is contextual and does not interrupt the tutorial flow.
+
+Risk checks:
+
+- No one-click stability promise for deployment, serving, Agent execution, or RAG quality.
+- No fabricated benchmark, latency, cost, traffic, ranking, income, or conversion claim.
+- No unsafe secret handling, public API key exposure, or client-side privileged token use.
+- No unbounded autonomous Agent action without permissions, allowlists, human approval, and logs.
+- No RAG or memory claim that removes the need for citation, privacy review, or hallucination checks.
+- No outdated model, package, endpoint, pricing, or platform behavior unless marked for human fact-checking.
+- Confirm the article is still draft, noindex, and humanReviewRequired before any approval action.
+- Verify official docs for deployment commands, SDK names, model names, API endpoints, environment variables, and version-sensitive details.
+- Check that API keys, secrets, tokens, and credentials are never exposed in client-side code or screenshots.
+- Confirm the article includes a smoke check, rollback boundary, logging plan, and a failure triage path.
+
+Human checklist:
+
+- Review reason: queued sprint item has not entered the current approval remediation packet.
+- Review reason: internal-link placement needs human acceptance or rejection.
+- Review reason: search-intent wording needs human copy review.
+- Review reason: source and fact-check evidence needs human verification.
+- Review reason: risk-language checklist needs human sign-off.
+- Apply, rewrite, or explicitly reject each search fix before mark:review.
+- Open source targets or run equivalent source checks before mark:review.
+- Apply or explicitly reject the public internal-link suggestion before mark:review.
+- Resolve risk checklist items and remove unsupported claims before mark:review.
+- Only after explicit human approval, run: npm run mark:review -- --file=content/blog/vercel-build-failed-causes-checklist.mdx --confirm-human
 - Publishing remains a separate explicit approval step.
 
 

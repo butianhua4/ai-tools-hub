@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:39:15.627Z",
+  "generatedAt": "2026-06-16T07:01:34.675Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,19 +9,19 @@
   },
   "boundaries": {
     "canClaimTraffic": false,
-    "publicPublished": 15,
+    "publicPublished": 500,
     "publishableNow": 0,
     "trafficDataAvailable": false
   },
   "summary": {
     "approvalItems": 3,
     "items": 3,
-    "itemsAlreadyLinkedToPublic": 0,
-    "itemsMissingCurrentPublicLink": 3,
-    "itemsWithSuggestions": 3,
+    "itemsAlreadyLinkedToPublic": 1,
+    "itemsMissingCurrentPublicLink": 2,
+    "itemsWithSuggestions": 1,
     "packetUnsafeItems": 0,
-    "publicArticles": 15,
-    "unsafeItems": 0
+    "publicArticles": 500,
+    "unsafeItems": 2
   },
   "sourceEvidence": {
     "internalLinkAuditGuardrails": {
@@ -33,175 +33,124 @@
     "internalLinkAuditMissingSuggestions": 0,
     "note": "Suggestions are crawl-path and reader-context candidates. They do not make a draft publishable."
   },
-  "unsafeItems": [],
+  "unsafeItems": [
+    {
+      "currentInternalLinks": 0,
+      "file": "content/blog/together-ai-api-beginner-guide.mdx",
+      "linkFocus": [
+        "Add one contextual public article link during human review.",
+        "No public link suggestion is available; inspect related published articles manually.",
+        "Use one link only if it helps the reader continue the task; avoid stuffing links.",
+        "Keep the article draft/noindex until explicit approval."
+      ],
+      "linksToPublicArticles": 0,
+      "readyForHumanReview": false,
+      "safeDraft": true,
+      "suggestions": [],
+      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界"
+    },
+    {
+      "currentInternalLinks": 0,
+      "file": "content/blog/vercel-404-after-deploy.mdx",
+      "linkFocus": [
+        "Add one contextual public article link during human review.",
+        "No public link suggestion is available; inspect related published articles manually.",
+        "Use one link only if it helps the reader continue the task; avoid stuffing links.",
+        "Keep the article draft/noindex until explicit approval."
+      ],
+      "linksToPublicArticles": 0,
+      "readyForHumanReview": false,
+      "safeDraft": true,
+      "suggestions": [],
+      "title": "Vercel 部署成功但页面 404：新手排查顺序"
+    }
+  ],
   "items": [
     {
-      "currentInternalLinks": 6,
-      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "currentInternalLinks": 3,
+      "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
       "linkFocus": [
-        "Add one contextual public article link during human review.",
+        "Already links to at least one public article.",
         "Review 5 suggested public link target(s).",
         "Use one link only if it helps the reader continue the task; avoid stuffing links.",
         "Keep the article draft/noindex until explicit approval."
       ],
-      "linksToPublicArticles": 0,
+      "linksToPublicArticles": 1,
       "readyForHumanReview": true,
       "safeDraft": true,
       "suggestions": [
         {
-          "file": "content/blog/codex-vercel-deploy-preflight-checklist.mdx",
-          "reason": "keyword overlap: ai, vercel, 部署, 工具, 上线, 检查",
-          "score": 39,
-          "slug": "codex-vercel-deploy-preflight-checklist",
-          "title": "Codex 部署 Vercel 前检查什么：上线前清单",
-          "url": "/blog/codex-vercel-deploy-preflight-checklist"
+          "file": "content/blog/multi-model-router-fallback-guide.mdx",
+          "reason": "same category: AI 部署; shared tags: 多模型, AI 部署; keyword overlap: ai, 部署, 多模型, 降级, 怎么, 么做",
+          "score": 106,
+          "slug": "multi-model-router-fallback-guide",
+          "title": "多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估",
+          "url": "/blog/multi-model-router-fallback-guide"
         },
         {
-          "file": "content/blog/build-first-webpage-with-codex.mdx",
-          "reason": "keyword overlap: ai, 怎么, 么做, 工具, 新手, 网页",
-          "score": 35,
-          "slug": "build-first-webpage-with-codex",
-          "title": "Codex 怎么做第一个网页",
-          "url": "/blog/build-first-webpage-with-codex"
+          "file": "content/blog/claude-api-rate-limit-debug-guide.mdx",
+          "reason": "same category: AI 部署; keyword overlap: ai, claude, 部署, 降级, api, 怎么",
+          "score": 74,
+          "slug": "claude-api-rate-limit-debug-guide",
+          "title": "Claude API Rate limit reached 怎么办：限流、上下文、重试和降级",
+          "url": "/blog/claude-api-rate-limit-debug-guide"
         },
         {
-          "file": "content/blog/codex-upwork-small-job-risk-checklist.mdx",
-          "reason": "keyword overlap: ai, 怎么, 工具, 检查, 新手, 判断",
-          "score": 31,
-          "slug": "codex-upwork-small-job-risk-checklist",
-          "title": "Codex 接 Upwork 小单怎么判断：风险检查清单",
-          "url": "/blog/codex-upwork-small-job-risk-checklist"
+          "file": "content/blog/gemini-api-rate-limit-debug-guide.mdx",
+          "reason": "same category: AI 部署; keyword overlap: ai, gemini, 部署, 降级, api, 怎么",
+          "score": 74,
+          "slug": "gemini-api-rate-limit-debug-guide",
+          "title": "Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型",
+          "url": "/blog/gemini-api-rate-limit-debug-guide"
         },
         {
-          "file": "content/blog/first-upwork-project-pricing-checklist.mdx",
-          "reason": "keyword overlap: 怎么, 检查, 项目, 新手, 一个, 第一",
-          "score": 28,
-          "slug": "first-upwork-project-pricing-checklist",
-          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
-          "url": "/blog/first-upwork-project-pricing-checklist"
+          "file": "content/blog/llm-cost-monitoring-dashboard-guide.mdx",
+          "reason": "same category: AI 部署; keyword overlap: ai, 部署, 怎么, 么做, 模型, 成本",
+          "score": 74,
+          "slug": "llm-cost-monitoring-dashboard-guide",
+          "title": "大模型成本监控怎么做：按用户、功能、模型和项目拆账",
+          "url": "/blog/llm-cost-monitoring-dashboard-guide"
         },
         {
-          "file": "content/blog/payoneer-wise-paypal-beginner-comparison.mdx",
-          "reason": "keyword overlap: ai, 工具, 新手, 什么, 有什, 么区",
-          "score": 28,
-          "slug": "payoneer-wise-paypal-beginner-comparison",
-          "title": "Payoneer、Wise、PayPal 有什么区别：AI 工具新手收款前先看",
-          "url": "/blog/payoneer-wise-paypal-beginner-comparison"
+          "file": "content/blog/openai-batch-api-cost-guide.mdx",
+          "reason": "same category: AI 部署; keyword overlap: ai, openai, 部署, api, 任务, 适合",
+          "score": 74,
+          "slug": "openai-batch-api-cost-guide",
+          "title": "OpenAI Batch API 适合什么任务：批量摘要、分类、抽取和成本控制",
+          "url": "/blog/openai-batch-api-cost-guide"
         }
       ],
-      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
+      "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级"
     },
     {
-      "currentInternalLinks": 5,
-      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "currentInternalLinks": 0,
+      "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "linkFocus": [
         "Add one contextual public article link during human review.",
-        "Review 5 suggested public link target(s).",
+        "No public link suggestion is available; inspect related published articles manually.",
         "Use one link only if it helps the reader continue the task; avoid stuffing links.",
         "Keep the article draft/noindex until explicit approval."
       ],
       "linksToPublicArticles": 0,
-      "readyForHumanReview": true,
+      "readyForHumanReview": false,
       "safeDraft": true,
-      "suggestions": [
-        {
-          "file": "content/blog/upwork-client-requirements-analysis-beginner.mdx",
-          "reason": "keyword overlap: proposal, 客户沟通, 怎么, 客户, 需求, 户沟",
-          "score": 32,
-          "slug": "upwork-client-requirements-analysis-beginner",
-          "title": "Upwork 客户需求太模糊怎么办：新手分析和追问清单",
-          "url": "/blog/upwork-client-requirements-analysis-beginner"
-        },
-        {
-          "file": "content/blog/codex-code-review-delivery-checklist.mdx",
-          "reason": "keyword overlap: ai, 怎么, 审核, 生成, 交付, 工具",
-          "score": 27,
-          "slug": "codex-code-review-delivery-checklist",
-          "title": "Codex 生成代码后怎么审核：交付前检查清单",
-          "url": "/blog/codex-code-review-delivery-checklist"
-        },
-        {
-          "file": "content/blog/build-first-webpage-with-codex.mdx",
-          "reason": "keyword overlap: ai, 怎么, 么做, 第一, 工具",
-          "score": 23,
-          "slug": "build-first-webpage-with-codex",
-          "title": "Codex 怎么做第一个网页",
-          "url": "/blog/build-first-webpage-with-codex"
-        },
-        {
-          "file": "content/blog/codex-generated-code-review-guide.mdx",
-          "reason": "keyword overlap: ai, 怎么, 审核, 生成, 工具",
-          "score": 23,
-          "slug": "codex-generated-code-review-guide",
-          "title": "Codex 生成代码后怎么审核",
-          "url": "/blog/codex-generated-code-review-guide"
-        },
-        {
-          "file": "content/blog/codex-install-failed-beginner-fix.mdx",
-          "reason": "keyword overlap: ai, 怎么, 失败, 工具",
-          "score": 19,
-          "slug": "codex-install-failed-beginner-fix",
-          "title": "Codex 安装失败怎么办",
-          "url": "/blog/codex-install-failed-beginner-fix"
-        }
-      ],
-      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
+      "suggestions": [],
+      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界"
     },
     {
-      "currentInternalLinks": 4,
-      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "currentInternalLinks": 0,
+      "file": "content/blog/vercel-404-after-deploy.mdx",
       "linkFocus": [
         "Add one contextual public article link during human review.",
-        "Review 5 suggested public link target(s).",
+        "No public link suggestion is available; inspect related published articles manually.",
         "Use one link only if it helps the reader continue the task; avoid stuffing links.",
         "Keep the article draft/noindex until explicit approval."
       ],
       "linksToPublicArticles": 0,
-      "readyForHumanReview": true,
+      "readyForHumanReview": false,
       "safeDraft": true,
-      "suggestions": [
-        {
-          "file": "content/blog/build-first-webpage-with-codex.mdx",
-          "reason": "keyword overlap: ai, 一个, 怎么, 么做, 第一",
-          "score": 23,
-          "slug": "build-first-webpage-with-codex",
-          "title": "Codex 怎么做第一个网页",
-          "url": "/blog/build-first-webpage-with-codex"
-        },
-        {
-          "file": "content/blog/codex-code-review-delivery-checklist.mdx",
-          "reason": "keyword overlap: ai, 怎么, 交付, 生成, 检查",
-          "score": 23,
-          "slug": "codex-code-review-delivery-checklist",
-          "title": "Codex 生成代码后怎么审核：交付前检查清单",
-          "url": "/blog/codex-code-review-delivery-checklist"
-        },
-        {
-          "file": "content/blog/codex-vercel-deploy-preflight-checklist.mdx",
-          "reason": "keyword overlap: ai, 部署, 什么, 上线, 检查",
-          "score": 23,
-          "slug": "codex-vercel-deploy-preflight-checklist",
-          "title": "Codex 部署 Vercel 前检查什么：上线前清单",
-          "url": "/blog/codex-vercel-deploy-preflight-checklist"
-        },
-        {
-          "file": "content/blog/first-upwork-project-pricing-checklist.mdx",
-          "reason": "keyword overlap: 一个, 怎么, 项目, 第一, 检查",
-          "score": 20,
-          "slug": "first-upwork-project-pricing-checklist",
-          "title": "第一个 Upwork 小项目怎么报价：新手范围和底价检查",
-          "url": "/blog/first-upwork-project-pricing-checklist"
-        },
-        {
-          "file": "content/blog/vercel-env-variable-missing-beginner-guide.mdx",
-          "reason": "keyword overlap: 部署, 提示, 怎么, 失败, 检查",
-          "score": 20,
-          "slug": "vercel-env-variable-missing-beginner-guide",
-          "title": "Vercel 提示环境变量缺失怎么办：新手部署检查流程",
-          "url": "/blog/vercel-env-variable-missing-beginner-guide"
-        }
-      ],
-      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检"
+      "suggestions": [],
+      "title": "Vercel 部署成功但页面 404：新手排查顺序"
     }
   ]
 }

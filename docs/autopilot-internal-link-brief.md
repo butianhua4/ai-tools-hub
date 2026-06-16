@@ -1,6 +1,6 @@
 # Autopilot Internal Link Brief
 
-Generated at: 2026-06-14T10:39:15.627Z
+Generated at: 2026-06-16T07:01:34.675Z
 
 This report is read-only. It packages public internal-link suggestions for the top autopilot approval packet items.
 
@@ -14,7 +14,7 @@ This report is read-only. It packages public internal-link suggestions for the t
 
 ## Boundaries
 
-- Public published: 15
+- Public published: 500
 - Publishable now: 0
 - Traffic data available: false
 - Can claim traffic: false
@@ -23,12 +23,12 @@ This report is read-only. It packages public internal-link suggestions for the t
 
 - approvalItems: 3
 - items: 3
-- itemsAlreadyLinkedToPublic: 0
-- itemsMissingCurrentPublicLink: 3
-- itemsWithSuggestions: 3
+- itemsAlreadyLinkedToPublic: 1
+- itemsMissingCurrentPublicLink: 2
+- itemsWithSuggestions: 1
 - packetUnsafeItems: 0
-- publicArticles: 15
-- unsafeItems: 0
+- publicArticles: 500
+- unsafeItems: 2
 
 ## Source Evidence
 
@@ -37,75 +37,68 @@ This report is read-only. It packages public internal-link suggestions for the t
 
 ## Unsafe Items
 
-- none
+| Ready | Safe | Current links | Public links | Suggestions | Title | File |
+| --- | --- | --- | --- | --- | --- | --- |
+| false | true | 0 | 0 | 0 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| false | true | 0 | 0 | 0 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Approval Packet Link Suggestions
 
 | Ready | Safe | Current links | Public links | Suggestions | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| true | true | 6 | 0 | 5 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| true | true | 5 | 0 | 5 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| true | true | 4 | 0 | 5 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| true | true | 3 | 1 | 5 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| false | true | 0 | 0 | 0 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| false | true | 0 | 0 | 0 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Per-Item Link Targets
 
-### AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查
+### Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级
 
-- File: content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
-- Existing public article links: 0
+- File: content/blog/vercel-ai-gateway-multi-provider-guide.mdx
+- Existing public article links: 1
 
 Human review focus:
 
-- Add one contextual public article link during human review.
+- Already links to at least one public article.
 - Review 5 suggested public link target(s).
 - Use one link only if it helps the reader continue the task; avoid stuffing links.
 - Keep the article draft/noindex until explicit approval.
 
 Suggested public links:
 
-- Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist) - keyword overlap: ai, vercel, 部署, 工具, 上线, 检查
-- Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex) - keyword overlap: ai, 怎么, 么做, 工具, 新手, 网页
-- Codex 接 Upwork 小单怎么判断：风险检查清单 (/blog/codex-upwork-small-job-risk-checklist) - keyword overlap: ai, 怎么, 工具, 检查, 新手, 判断
-- 第一个 Upwork 小项目怎么报价：新手范围和底价检查 (/blog/first-upwork-project-pricing-checklist) - keyword overlap: 怎么, 检查, 项目, 新手, 一个, 第一
-- Payoneer、Wise、PayPal 有什么区别：AI 工具新手收款前先看 (/blog/payoneer-wise-paypal-beginner-comparison) - keyword overlap: ai, 工具, 新手, 什么, 有什, 么区
+- 多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估 (/blog/multi-model-router-fallback-guide) - same category: AI 部署; shared tags: 多模型, AI 部署; keyword overlap: ai, 部署, 多模型, 降级, 怎么, 么做
+- Claude API Rate limit reached 怎么办：限流、上下文、重试和降级 (/blog/claude-api-rate-limit-debug-guide) - same category: AI 部署; keyword overlap: ai, claude, 部署, 降级, api, 怎么
+- Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型 (/blog/gemini-api-rate-limit-debug-guide) - same category: AI 部署; keyword overlap: ai, gemini, 部署, 降级, api, 怎么
+- 大模型成本监控怎么做：按用户、功能、模型和项目拆账 (/blog/llm-cost-monitoring-dashboard-guide) - same category: AI 部署; keyword overlap: ai, 部署, 怎么, 么做, 模型, 成本
+- OpenAI Batch API 适合什么任务：批量摘要、分类、抽取和成本控制 (/blog/openai-batch-api-cost-guide) - same category: AI 部署; keyword overlap: ai, openai, 部署, api, 任务, 适合
 
-### 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用
+### Together AI API 怎么接入：开源模型接口、embedding 和部署边界
 
-- File: content/blog/industry-ai-prompts-template-library-2026.mdx
+- File: content/blog/together-ai-api-beginner-guide.mdx
 - Existing public article links: 0
 
 Human review focus:
 
 - Add one contextual public article link during human review.
-- Review 5 suggested public link target(s).
+- No public link suggestion is available; inspect related published articles manually.
 - Use one link only if it helps the reader continue the task; avoid stuffing links.
 - Keep the article draft/noindex until explicit approval.
 
 Suggested public links:
 
-- Upwork 客户需求太模糊怎么办：新手分析和追问清单 (/blog/upwork-client-requirements-analysis-beginner) - keyword overlap: proposal, 客户沟通, 怎么, 客户, 需求, 户沟
-- Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist) - keyword overlap: ai, 怎么, 审核, 生成, 交付, 工具
-- Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex) - keyword overlap: ai, 怎么, 么做, 第一, 工具
-- Codex 生成代码后怎么审核 (/blog/codex-generated-code-review-guide) - keyword overlap: ai, 怎么, 审核, 生成, 工具
-- Codex 安装失败怎么办 (/blog/codex-install-failed-beginner-fix) - keyword overlap: ai, 怎么, 失败, 工具
 
-### 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检
+### Vercel 部署成功但页面 404：新手排查顺序
 
-- File: content/blog/ai-model-selection-customer-service-guide.mdx
+- File: content/blog/vercel-404-after-deploy.mdx
 - Existing public article links: 0
 
 Human review focus:
 
 - Add one contextual public article link during human review.
-- Review 5 suggested public link target(s).
+- No public link suggestion is available; inspect related published articles manually.
 - Use one link only if it helps the reader continue the task; avoid stuffing links.
 - Keep the article draft/noindex until explicit approval.
 
 Suggested public links:
 
-- Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex) - keyword overlap: ai, 一个, 怎么, 么做, 第一
-- Codex 生成代码后怎么审核：交付前检查清单 (/blog/codex-code-review-delivery-checklist) - keyword overlap: ai, 怎么, 交付, 生成, 检查
-- Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist) - keyword overlap: ai, 部署, 什么, 上线, 检查
-- 第一个 Upwork 小项目怎么报价：新手范围和底价检查 (/blog/first-upwork-project-pricing-checklist) - keyword overlap: 一个, 怎么, 项目, 第一, 检查
-- Vercel 提示环境变量缺失怎么办：新手部署检查流程 (/blog/vercel-env-variable-missing-beginner-guide) - keyword overlap: 部署, 提示, 怎么, 失败, 检查
 

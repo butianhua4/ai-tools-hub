@@ -1,6 +1,6 @@
 # Industry Prompt Module Pack
 
-Generated at: 2026-06-14T10:39:00.200Z
+Generated at: 2026-06-16T07:01:19.351Z
 
 This report is read-only. It turns cross-industry AI prompt opportunities into reusable prompt blueprints for human article review.
 
@@ -41,7 +41,7 @@ Market signal sources:
 - items: 12
 - itemsWithCopyPrompts: 12
 - itemsWithInputOutputStructure: 12
-- itemsWithReviewPackCandidate: 11
+- itemsWithReviewPackCandidate: 0
 - itemsWithRiskControls: 12
 - itemsWithSourceTargets: 12
 - modulesPerOpportunityMax: 5
@@ -51,7 +51,7 @@ Market signal sources:
 - sourceOpportunityUnsafeItems: 0
 - sourceReviewPackUnsafeItems: 0
 - unsafeItems: 0
-- zeroPublicCoverageItems: 12
+- zeroPublicCoverageItems: 0
 
 ## Unsafe Items
 
@@ -61,103 +61,23 @@ Market signal sources:
 
 | Ready | Safe bridge | Score | Public | Modules | Queries | Lane | Primary query | Candidate files |
 | --- | --- | ---: | ---: | ---: | ---: | --- | --- | --- |
-| true | true | 226 | 0 | 5 | 4 | customer-service-ai-prompts | 客服 AI 回复模板 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/customer-service-ai-prompts-guide.mdx<br>content/blog/ecommerce-ai-prompts-guide.mdx |
-| true | true | 216 | 0 | 5 | 4 | sales-ai-prompts | 销售 AI 提示词 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/sales-ai-prompts-guide.mdx |
-| true | true | 212 | 0 | 5 | 4 | hr-ai-prompts | HR AI 提示词 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/hr-recruiting-ai-prompts-guide.mdx |
-| true | true | 208 | 0 | 5 | 4 | operations-ai-prompts | 运营 AI 提示词 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/manufacturing-ai-prompts-guide.mdx |
-| true | true | 206 | 0 | 5 | 4 | finance-ai-prompts | 财务 AI 提示词 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/finance-ai-prompts-guide.mdx |
-| true | true | 204 | 0 | 5 | 4 | education-ai-prompts | 教师 AI 提示词 | content/blog/industry-ai-prompts-template-library-2026.mdx<br>content/blog/education-ai-prompts-guide.mdx |
-| true | true | 202 | 0 | 5 | 4 | product-manager-ai-prompts | 产品经理 AI 提示词 | content/blog/software-development-ai-prompts-guide.mdx<br>content/blog/product-manager-ai-prompts-guide.mdx |
-| true | true | 198 | 0 | 5 | 4 | marketing-ai-prompts | 营销 AI 提示词 | content/blog/marketing-ai-prompts-guide.mdx |
+| true | false | 152 | 2 | 5 | 4 | sales-ai-prompts | 销售 AI 提示词 |  |
+| true | false | 150 | 3 | 5 | 4 | customer-service-ai-prompts | 客服 AI 回复模板 |  |
+| true | false | 148 | 2 | 5 | 4 | hr-ai-prompts | HR AI 提示词 |  |
+| true | false | 146 | 1 | 5 | 4 | marketing-ai-prompts | 营销 AI 提示词 |  |
+| true | false | 144 | 3 | 5 | 4 | operations-ai-prompts | 运营 AI 提示词 |  |
+| true | false | 142 | 2 | 5 | 4 | finance-ai-prompts | 财务 AI 提示词 |  |
+| true | false | 140 | 2 | 5 | 4 | education-ai-prompts | 教师 AI 提示词 |  |
+| true | false | 138 | 2 | 5 | 4 | product-manager-ai-prompts | 产品经理 AI 提示词 |  |
 
 ## Prompt Blueprint Samples
-
-### 客服 AI 回复模板
-
-- Lane: customer-service-ai-prompts
-- Audience: support teams, after-sales teams, customer success teams
-- Deliverable: Customer support prompt pack with ticket triage, empathy reply, escalation, refund boundary, and knowledge-base update.
-- Review candidates: content/blog/industry-ai-prompts-template-library-2026.mdx, content/blog/customer-service-ai-prompts-guide.mdx, content/blog/ecommerce-ai-prompts-guide.mdx
-- Human boundary: Create or review only as draft/noindex/humanReviewRequired. Stop before mark:review and stop before publish until explicit human approval.
-
-Manual review actions:
-
-- Use the prompt blueprints as article expansion material only during human review.
-- If no review candidate exists, keep this as a future draft idea and do not create an article automatically.
-- Confirm every example requires user-provided facts and marks unknowns instead of inventing data.
-- Keep the article draft/noindex/humanReviewRequired until explicit approval.
-- Stop before mark:review; publishing requires a separate explicit approval.
-
-#### 客服 AI 回复模板 - complaint response
-
-Input fields:
-
-- customer message
-- policy excerpt
-- order context
-- support channel
-- severity
-- allowed next actions
-
-Output blocks:
-
-- ticket category
-- draft reply
-- escalation reason
-- policy check
-- knowledge-base note
-
-Copy prompt:
-
-```text
-You are assisting with complaint response for support teams, after-sales teams, customer success teams.
-Use only the facts supplied below. If a fact is missing, write UNKNOWN and ask a follow-up question.
-Primary search intent: 客服 AI 回复模板.
-Business context: {{customer message}}, {{policy excerpt}}, {{order context}}, {{support channel}}, {{severity}}, {{allowed next actions}}.
-Return these sections: ticket category, draft reply, escalation reason, policy check, knowledge-base note.
-Quality rules: Uses only the provided input facts and labels missing information. Returns the requested output blocks in a scannable structure. Includes assumptions, risks, and human escalation points. Avoids guaranteed revenue, ranking, legal, medical, hiring, or conversion claims.
-Human boundary: Require user-provided facts and mark unknowns instead of inventing business data. Include output format, review criteria, and escalation boundary in every prompt. Keep human approval for customer, employee, financial, legal, medical, or operational decisions. Do not claim guaranteed traffic, ranking, revenue, hiring, legal, medical, or conversion outcomes. Refund, privacy, abuse, and safety issues must route to a human owner.
-Module order: 1 of 5.
-```
-
-#### 客服 AI 回复模板 - support ticket classifier
-
-Input fields:
-
-- customer message
-- policy excerpt
-- order context
-- support channel
-- severity
-- allowed next actions
-
-Output blocks:
-
-- ticket category
-- draft reply
-- escalation reason
-- policy check
-- knowledge-base note
-
-Copy prompt:
-
-```text
-You are assisting with support ticket classifier for support teams, after-sales teams, customer success teams.
-Use only the facts supplied below. If a fact is missing, write UNKNOWN and ask a follow-up question.
-Primary search intent: 客服 AI 回复模板.
-Business context: {{customer message}}, {{policy excerpt}}, {{order context}}, {{support channel}}, {{severity}}, {{allowed next actions}}.
-Return these sections: ticket category, draft reply, escalation reason, policy check, knowledge-base note.
-Quality rules: Uses only the provided input facts and labels missing information. Returns the requested output blocks in a scannable structure. Includes assumptions, risks, and human escalation points. Avoids guaranteed revenue, ranking, legal, medical, hiring, or conversion claims.
-Human boundary: Require user-provided facts and mark unknowns instead of inventing business data. Include output format, review criteria, and escalation boundary in every prompt. Keep human approval for customer, employee, financial, legal, medical, or operational decisions. Do not claim guaranteed traffic, ranking, revenue, hiring, legal, medical, or conversion outcomes. Refund, privacy, abuse, and safety issues must route to a human owner.
-Module order: 2 of 5.
-```
 
 ### 销售 AI 提示词
 
 - Lane: sales-ai-prompts
 - Audience: sales teams, founders, account managers
 - Deliverable: Sales prompt pack with prospect research, discovery questions, objection handling, follow-up, and CRM summary.
-- Review candidates: content/blog/industry-ai-prompts-template-library-2026.mdx, content/blog/sales-ai-prompts-guide.mdx
+- Review candidates: none
 - Human boundary: Create or review only as draft/noindex/humanReviewRequired. Stop before mark:review and stop before publish until explicit human approval.
 
 Manual review actions:
@@ -232,12 +152,92 @@ Human boundary: Require user-provided facts and mark unknowns instead of inventi
 Module order: 2 of 5.
 ```
 
+### 客服 AI 回复模板
+
+- Lane: customer-service-ai-prompts
+- Audience: support teams, after-sales teams, customer success teams
+- Deliverable: Customer support prompt pack with ticket triage, empathy reply, escalation, refund boundary, and knowledge-base update.
+- Review candidates: none
+- Human boundary: Create or review only as draft/noindex/humanReviewRequired. Stop before mark:review and stop before publish until explicit human approval.
+
+Manual review actions:
+
+- Use the prompt blueprints as article expansion material only during human review.
+- If no review candidate exists, keep this as a future draft idea and do not create an article automatically.
+- Confirm every example requires user-provided facts and marks unknowns instead of inventing data.
+- Keep the article draft/noindex/humanReviewRequired until explicit approval.
+- Stop before mark:review; publishing requires a separate explicit approval.
+
+#### 客服 AI 回复模板 - complaint response
+
+Input fields:
+
+- customer message
+- policy excerpt
+- order context
+- support channel
+- severity
+- allowed next actions
+
+Output blocks:
+
+- ticket category
+- draft reply
+- escalation reason
+- policy check
+- knowledge-base note
+
+Copy prompt:
+
+```text
+You are assisting with complaint response for support teams, after-sales teams, customer success teams.
+Use only the facts supplied below. If a fact is missing, write UNKNOWN and ask a follow-up question.
+Primary search intent: 客服 AI 回复模板.
+Business context: {{customer message}}, {{policy excerpt}}, {{order context}}, {{support channel}}, {{severity}}, {{allowed next actions}}.
+Return these sections: ticket category, draft reply, escalation reason, policy check, knowledge-base note.
+Quality rules: Uses only the provided input facts and labels missing information. Returns the requested output blocks in a scannable structure. Includes assumptions, risks, and human escalation points. Avoids guaranteed revenue, ranking, legal, medical, hiring, or conversion claims.
+Human boundary: Require user-provided facts and mark unknowns instead of inventing business data. Include output format, review criteria, and escalation boundary in every prompt. Keep human approval for customer, employee, financial, legal, medical, or operational decisions. Do not claim guaranteed traffic, ranking, revenue, hiring, legal, medical, or conversion outcomes. Refund, privacy, abuse, and safety issues must route to a human owner.
+Module order: 1 of 5.
+```
+
+#### 客服 AI 回复模板 - support ticket classifier
+
+Input fields:
+
+- customer message
+- policy excerpt
+- order context
+- support channel
+- severity
+- allowed next actions
+
+Output blocks:
+
+- ticket category
+- draft reply
+- escalation reason
+- policy check
+- knowledge-base note
+
+Copy prompt:
+
+```text
+You are assisting with support ticket classifier for support teams, after-sales teams, customer success teams.
+Use only the facts supplied below. If a fact is missing, write UNKNOWN and ask a follow-up question.
+Primary search intent: 客服 AI 回复模板.
+Business context: {{customer message}}, {{policy excerpt}}, {{order context}}, {{support channel}}, {{severity}}, {{allowed next actions}}.
+Return these sections: ticket category, draft reply, escalation reason, policy check, knowledge-base note.
+Quality rules: Uses only the provided input facts and labels missing information. Returns the requested output blocks in a scannable structure. Includes assumptions, risks, and human escalation points. Avoids guaranteed revenue, ranking, legal, medical, hiring, or conversion claims.
+Human boundary: Require user-provided facts and mark unknowns instead of inventing business data. Include output format, review criteria, and escalation boundary in every prompt. Keep human approval for customer, employee, financial, legal, medical, or operational decisions. Do not claim guaranteed traffic, ranking, revenue, hiring, legal, medical, or conversion outcomes. Refund, privacy, abuse, and safety issues must route to a human owner.
+Module order: 2 of 5.
+```
+
 ### HR AI 提示词
 
 - Lane: hr-ai-prompts
 - Audience: HR teams, recruiters, people operations
 - Deliverable: HR prompt pack with JD draft, interview rubric, onboarding plan, performance review, and policy summary.
-- Review candidates: content/blog/industry-ai-prompts-template-library-2026.mdx, content/blog/hr-recruiting-ai-prompts-guide.mdx
+- Review candidates: none
 - Human boundary: Create or review only as draft/noindex/humanReviewRequired. Stop before mark:review and stop before publish until explicit human approval.
 
 Manual review actions:
@@ -312,12 +312,92 @@ Human boundary: Require user-provided facts and mark unknowns instead of inventi
 Module order: 2 of 5.
 ```
 
+### 营销 AI 提示词
+
+- Lane: marketing-ai-prompts
+- Audience: marketing teams, content teams, SEO operators
+- Deliverable: Marketing prompt pack with campaign brief, SEO outline, ad copy, content calendar, and post-campaign review.
+- Review candidates: none
+- Human boundary: Create or review only as draft/noindex/humanReviewRequired. Stop before mark:review and stop before publish until explicit human approval.
+
+Manual review actions:
+
+- Use the prompt blueprints as article expansion material only during human review.
+- If no review candidate exists, keep this as a future draft idea and do not create an article automatically.
+- Confirm every example requires user-provided facts and marks unknowns instead of inventing data.
+- Keep the article draft/noindex/humanReviewRequired until explicit approval.
+- Stop before mark:review; publishing requires a separate explicit approval.
+
+#### 营销 AI 提示词 - campaign planner
+
+Input fields:
+
+- audience
+- offer
+- brand voice
+- proof points
+- channels
+- constraints
+
+Output blocks:
+
+- campaign brief
+- SEO outline
+- ad variants
+- content calendar
+- review checklist
+
+Copy prompt:
+
+```text
+You are assisting with campaign planner for marketing teams, content teams, SEO operators.
+Use only the facts supplied below. If a fact is missing, write UNKNOWN and ask a follow-up question.
+Primary search intent: 营销 AI 提示词.
+Business context: {{audience}}, {{offer}}, {{brand voice}}, {{proof points}}, {{channels}}, {{constraints}}.
+Return these sections: campaign brief, SEO outline, ad variants, content calendar, review checklist.
+Quality rules: Uses only the provided input facts and labels missing information. Returns the requested output blocks in a scannable structure. Includes assumptions, risks, and human escalation points. Avoids guaranteed revenue, ranking, legal, medical, hiring, or conversion claims.
+Human boundary: Require user-provided facts and mark unknowns instead of inventing business data. Include output format, review criteria, and escalation boundary in every prompt. Keep human approval for customer, employee, financial, legal, medical, or operational decisions. Do not claim guaranteed traffic, ranking, revenue, hiring, legal, medical, or conversion outcomes. Claims, metrics, and customer proof must be backed by provided evidence.
+Module order: 1 of 5.
+```
+
+#### 营销 AI 提示词 - SEO outline builder
+
+Input fields:
+
+- audience
+- offer
+- brand voice
+- proof points
+- channels
+- constraints
+
+Output blocks:
+
+- campaign brief
+- SEO outline
+- ad variants
+- content calendar
+- review checklist
+
+Copy prompt:
+
+```text
+You are assisting with SEO outline builder for marketing teams, content teams, SEO operators.
+Use only the facts supplied below. If a fact is missing, write UNKNOWN and ask a follow-up question.
+Primary search intent: 营销 AI 提示词.
+Business context: {{audience}}, {{offer}}, {{brand voice}}, {{proof points}}, {{channels}}, {{constraints}}.
+Return these sections: campaign brief, SEO outline, ad variants, content calendar, review checklist.
+Quality rules: Uses only the provided input facts and labels missing information. Returns the requested output blocks in a scannable structure. Includes assumptions, risks, and human escalation points. Avoids guaranteed revenue, ranking, legal, medical, hiring, or conversion claims.
+Human boundary: Require user-provided facts and mark unknowns instead of inventing business data. Include output format, review criteria, and escalation boundary in every prompt. Keep human approval for customer, employee, financial, legal, medical, or operational decisions. Do not claim guaranteed traffic, ranking, revenue, hiring, legal, medical, or conversion outcomes. Claims, metrics, and customer proof must be backed by provided evidence.
+Module order: 2 of 5.
+```
+
 ### 运营 AI 提示词
 
 - Lane: operations-ai-prompts
 - Audience: operations managers, project owners, internal workflow teams
 - Deliverable: Operations prompt pack with SOP, weekly report, meeting summary, project risk list, and retrospective.
-- Review candidates: content/blog/industry-ai-prompts-template-library-2026.mdx, content/blog/manufacturing-ai-prompts-guide.mdx
+- Review candidates: none
 - Human boundary: Create or review only as draft/noindex/humanReviewRequired. Stop before mark:review and stop before publish until explicit human approval.
 
 Manual review actions:
@@ -397,7 +477,7 @@ Module order: 2 of 5.
 - Lane: finance-ai-prompts
 - Audience: finance teams, founders, business analysts
 - Deliverable: Finance prompt pack with variance narrative, budget review, cost driver summary, forecast assumptions, and board memo.
-- Review candidates: content/blog/industry-ai-prompts-template-library-2026.mdx, content/blog/finance-ai-prompts-guide.mdx
+- Review candidates: none
 - Human boundary: Create or review only as draft/noindex/humanReviewRequired. Stop before mark:review and stop before publish until explicit human approval.
 
 Manual review actions:
@@ -477,7 +557,7 @@ Module order: 2 of 5.
 - Lane: education-ai-prompts
 - Audience: teachers, trainers, course creators
 - Deliverable: Education prompt pack with lesson plan, quiz, student feedback, learning plan, and teaching-material rewrite.
-- Review candidates: content/blog/industry-ai-prompts-template-library-2026.mdx, content/blog/education-ai-prompts-guide.mdx
+- Review candidates: none
 - Human boundary: Create or review only as draft/noindex/humanReviewRequired. Stop before mark:review and stop before publish until explicit human approval.
 
 Manual review actions:
@@ -557,7 +637,7 @@ Module order: 2 of 5.
 - Lane: product-manager-ai-prompts
 - Audience: product managers, founders, business analysts
 - Deliverable: Product prompt pack with PRD, user stories, competitor notes, acceptance criteria, and launch checklist.
-- Review candidates: content/blog/software-development-ai-prompts-guide.mdx, content/blog/product-manager-ai-prompts-guide.mdx
+- Review candidates: none
 - Human boundary: Create or review only as draft/noindex/humanReviewRequired. Stop before mark:review and stop before publish until explicit human approval.
 
 Manual review actions:
@@ -629,86 +709,6 @@ Business context: {{user segment}}, {{problem}}, {{business goal}}, {{constraint
 Return these sections: problem statement, user stories, acceptance criteria, tradeoffs, launch checklist.
 Quality rules: Uses only the provided input facts and labels missing information. Returns the requested output blocks in a scannable structure. Includes assumptions, risks, and human escalation points. Avoids guaranteed revenue, ranking, legal, medical, hiring, or conversion claims.
 Human boundary: Require user-provided facts and mark unknowns instead of inventing business data. Include output format, review criteria, and escalation boundary in every prompt. Keep human approval for customer, employee, financial, legal, medical, or operational decisions. Do not claim guaranteed traffic, ranking, revenue, hiring, legal, medical, or conversion outcomes. Product requirements must stay traceable to real user evidence and measurable acceptance criteria.
-Module order: 2 of 5.
-```
-
-### 营销 AI 提示词
-
-- Lane: marketing-ai-prompts
-- Audience: marketing teams, content teams, SEO operators
-- Deliverable: Marketing prompt pack with campaign brief, SEO outline, ad copy, content calendar, and post-campaign review.
-- Review candidates: content/blog/marketing-ai-prompts-guide.mdx
-- Human boundary: Create or review only as draft/noindex/humanReviewRequired. Stop before mark:review and stop before publish until explicit human approval.
-
-Manual review actions:
-
-- Use the prompt blueprints as article expansion material only during human review.
-- If no review candidate exists, keep this as a future draft idea and do not create an article automatically.
-- Confirm every example requires user-provided facts and marks unknowns instead of inventing data.
-- Keep the article draft/noindex/humanReviewRequired until explicit approval.
-- Stop before mark:review; publishing requires a separate explicit approval.
-
-#### 营销 AI 提示词 - campaign planner
-
-Input fields:
-
-- audience
-- offer
-- brand voice
-- proof points
-- channels
-- constraints
-
-Output blocks:
-
-- campaign brief
-- SEO outline
-- ad variants
-- content calendar
-- review checklist
-
-Copy prompt:
-
-```text
-You are assisting with campaign planner for marketing teams, content teams, SEO operators.
-Use only the facts supplied below. If a fact is missing, write UNKNOWN and ask a follow-up question.
-Primary search intent: 营销 AI 提示词.
-Business context: {{audience}}, {{offer}}, {{brand voice}}, {{proof points}}, {{channels}}, {{constraints}}.
-Return these sections: campaign brief, SEO outline, ad variants, content calendar, review checklist.
-Quality rules: Uses only the provided input facts and labels missing information. Returns the requested output blocks in a scannable structure. Includes assumptions, risks, and human escalation points. Avoids guaranteed revenue, ranking, legal, medical, hiring, or conversion claims.
-Human boundary: Require user-provided facts and mark unknowns instead of inventing business data. Include output format, review criteria, and escalation boundary in every prompt. Keep human approval for customer, employee, financial, legal, medical, or operational decisions. Do not claim guaranteed traffic, ranking, revenue, hiring, legal, medical, or conversion outcomes. Claims, metrics, and customer proof must be backed by provided evidence.
-Module order: 1 of 5.
-```
-
-#### 营销 AI 提示词 - SEO outline builder
-
-Input fields:
-
-- audience
-- offer
-- brand voice
-- proof points
-- channels
-- constraints
-
-Output blocks:
-
-- campaign brief
-- SEO outline
-- ad variants
-- content calendar
-- review checklist
-
-Copy prompt:
-
-```text
-You are assisting with SEO outline builder for marketing teams, content teams, SEO operators.
-Use only the facts supplied below. If a fact is missing, write UNKNOWN and ask a follow-up question.
-Primary search intent: 营销 AI 提示词.
-Business context: {{audience}}, {{offer}}, {{brand voice}}, {{proof points}}, {{channels}}, {{constraints}}.
-Return these sections: campaign brief, SEO outline, ad variants, content calendar, review checklist.
-Quality rules: Uses only the provided input facts and labels missing information. Returns the requested output blocks in a scannable structure. Includes assumptions, risks, and human escalation points. Avoids guaranteed revenue, ranking, legal, medical, hiring, or conversion claims.
-Human boundary: Require user-provided facts and mark unknowns instead of inventing business data. Include output format, review criteria, and escalation boundary in every prompt. Keep human approval for customer, employee, financial, legal, medical, or operational decisions. Do not claim guaranteed traffic, ranking, revenue, hiring, legal, medical, or conversion outcomes. Claims, metrics, and customer proof must be backed by provided evidence.
 Module order: 2 of 5.
 ```
 

@@ -1,6 +1,6 @@
 # Autopilot Review Sprint Board
 
-Generated at: 2026-06-14T10:39:19.854Z
+Generated at: 2026-06-16T07:01:38.963Z
 
 This report is read-only. It plans the next 10 manual review assignments and keeps all status changes human-gated.
 
@@ -14,29 +14,29 @@ This report is read-only. It plans the next 10 manual review assignments and kee
 
 ## Boundaries
 
-- Public published: 15
+- Public published: 500
 - Publishable now: 0
 - Traffic data available: false
 - Can claim traffic: false
 
 ## Summary
 
-- items: 10
-- itemsNeedingSearchQuery: 0
-- itemsWithCommandBoundary: 10
+- items: 8
+- itemsNeedingSearchQuery: 2
+- itemsWithCommandBoundary: 8
 - queuedForPlaybook: 7
-- readyForSprint: 10
-- readyWithPlaybook: 3
-- safeDraftItems: 10
+- readyForSprint: 8
+- readyWithPlaybook: 1
+- safeDraftItems: 8
 - unsafeItems: 0
-- withSearchQueries: 10
-- withSourceTargets: 10
+- withSearchQueries: 6
+- withSourceTargets: 8
 
 ## Source Evidence
 
-- autopilotQueueUnsafeItems: 0
-- humanReviewPlaybookUnsafeItems: 0
-- queueNextAssignments: 10
+- autopilotQueueUnsafeItems: 8
+- humanReviewPlaybookUnsafeItems: 2
+- queueNextAssignments: 8
 
 ## Unsafe Items
 
@@ -46,281 +46,221 @@ This report is read-only. It plans the next 10 manual review assignments and kee
 
 | Order | Ready | Stage | Lane | Score | Sources | Queries | Mark-review gated | Publish confirm | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | true | ready-with-playbook | ai-deployment | 1723 | 14 | 11 | true | not-included | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| 2 | true | ready-with-playbook | industry-prompt | 1723 | 17 | 13 | true | not-included | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| 3 | true | ready-with-playbook | public-coverage-gap | 1598 | 19 | 5 | true | not-included | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| 1 | true | ready-with-playbook | ai-deployment | 1543 | 7 | 4 | true | not-included | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 
 ## Queued For Playbook
 
 | Order | Ready | Stage | Lane | Score | Sources | Queries | Mark-review gated | Publish confirm | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 4 | true | queued-for-playbook | ai-deployment | 1348 | 17 | 13 | true | not-included | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| 5 | true | queued-for-playbook | ai-deployment | 1278 | 6 | 9 | true | not-included | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| 6 | true | queued-for-playbook | ai-deployment | 1238 | 4 | 8 | true | not-included | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| 7 | true | queued-for-playbook | ai-deployment | 1223 | 3 | 8 | true | not-included | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| 8 | true | queued-for-playbook | ai-deployment | 1208 | 2 | 8 | true | not-included | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| 9 | true | queued-for-playbook | ai-deployment | 1208 | 2 | 8 | true | not-included | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
-| 10 | true | queued-for-playbook | public-coverage-gap | 1118 | 3 | 5 | true | not-included | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
+| 2 | true | queued-for-playbook | wave-review | 1443 | 8 | 0 | true | not-included | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 3 | true | queued-for-playbook | wave-review | 1412 | 7 | 0 | true | not-included | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 4 | true | queued-for-playbook | ai-deployment | 447 | 4 | 4 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 5 | true | queued-for-playbook | ai-deployment | 417 | 2 | 4 | true | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+| 6 | true | queued-for-playbook | ai-deployment | 403 | 2 | 4 | true | not-included | Windows 路径和权限导致安装失败怎么办 | content/blog/windows-path-permission-install-fix.mdx |
+| 7 | true | queued-for-playbook | ai-deployment | 389 | 2 | 4 | true | not-included | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| 8 | true | queued-for-playbook | ai-deployment | 387 | 3 | 4 | true | not-included | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
 
 ## Sprint Checklist
 
-### 1. AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查
+### 1. Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级
 
-- File: content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
+- File: content/blog/vercel-ai-gateway-multi-provider-guide.mdx
 - Stage: ready-with-playbook
 - Lane: ai-deployment
-- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human
-- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
+- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx --confirm-human
+- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx
 - Publish confirm: not-included
 
 Checklist:
 
-- Use merged playbook actions: 19 search, 45 source, 6 link.
-- Review source lanes together: deployment, public-gap, wave.
-- Verify 14 official source target(s) before any approval.
-- Check search intent against 6 query seed(s).
+- Use merged playbook actions: 12 search, 44 source, 6 link.
+- Review source lanes together: deployment, wave.
+- Verify 7 official source target(s) before any approval.
+- Check search intent against 4 query seed(s).
 - Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.
 - Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.
 - Run mark:review only after explicit human approval; publishing requires a separate explicit approval.
-- Verify 14 official source target(s).
-- Check 8 search query seed(s).
-- Review 22 combined checklist signal(s).
-- Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: AI Agent deployment tutorial.; Add one contextual link to a published article before approval..
-- Complete freshness checklist for fast-changing AI/tool guidance.
-- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
-- Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
-
-### 2. 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用
-
-- File: content/blog/industry-ai-prompts-template-library-2026.mdx
-- Stage: ready-with-playbook
-- Lane: industry-prompt
-- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human
-- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx
-- Publish confirm: not-included
-
-Checklist:
-
-- Use merged playbook actions: 11 search, 44 source, 6 link.
-- Review source lanes together: prompt, public-gap, wave.
-- Verify 17 official source target(s) before any approval.
-- Check search intent against 6 query seed(s).
-- Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.
-- Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.
-- Run mark:review only after explicit human approval; publishing requires a separate explicit approval.
-- Verify 17 official source target(s).
-- Check 8 search query seed(s).
+- Verify 7 official source target(s).
+- Check 4 search query seed(s).
 - Review 19 combined checklist signal(s).
-- Apply copydesk remediation: Add one contextual link to a published article before approval.; Decide whether missing subtopics should become a short section or a follow-up article..
+- Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Add one FAQ or checklist line that uses a high-intent query variant such as: Vercel AI Gateway 多模型..
 - Complete freshness checklist for fast-changing AI/tool guidance.
 - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
 
-### 3. 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检
+### 2. RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界
 
-- File: content/blog/ai-model-selection-customer-service-guide.mdx
-- Stage: ready-with-playbook
-- Lane: public-coverage-gap
-- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human
-- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx
-- Publish confirm: not-included
-
-Checklist:
-
-- Use merged playbook actions: 22 search, 45 source, 6 link.
-- Review source lanes together: public-gap, wave.
-- Verify 19 official source target(s) before any approval.
-- Check search intent against 5 query seed(s).
-- Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.
-- Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.
-- Run mark:review only after explicit human approval; publishing requires a separate explicit approval.
-- Verify 19 official source target(s).
-- Check 5 search query seed(s).
-- Review 12 combined checklist signal(s).
-- Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: RAG 知识库搭建教程.; Check whether the primary keyword can appear naturally in the title without making the title stiff..
-- Complete freshness checklist for fast-changing AI/tool guidance.
-- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
-- Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
-
-### 4. AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
-
-- File: content/blog/ai-api-key-security-rotation-guide.mdx
+- File: content/blog/vector-database-selection-for-rag-guide.mdx
 - Stage: queued-for-playbook
-- Lane: ai-deployment
-- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human
-- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx
+- Lane: wave-review
+- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human
+- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/vector-database-selection-for-rag-guide.mdx
 - Publish confirm: not-included
 
 Checklist:
 
 - Generate or review a merged playbook before mark:review.
-- Review source lanes together: deployment, public-gap.
-- Verify 17 official source target(s) before any approval.
-- Check search intent against 6 query seed(s).
+- Review source lanes together: wave.
+- Verify 8 official source target(s) before any approval.
+- Confirm search intent from the source review packet.
 - Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.
 - Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.
 - Run mark:review only after explicit human approval; publishing requires a separate explicit approval.
-- Verify 17 official source target(s).
-- Check 8 search query seed(s).
-- Review 15 combined checklist signal(s).
-- Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Decide whether missing subtopics should become a short section or a follow-up article..
+- Verify 8 official source target(s).
+- Confirm search intent from the source packet.
+- Review 6 combined checklist signal(s).
+- Apply copydesk remediation: Add one FAQ or checklist line that uses a high-intent query variant such as: RAG 向量数据库怎么选..
 - Complete freshness checklist for fast-changing AI/tool guidance.
 - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
 
-### 5. MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单
+### 3. Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索
 
-- File: content/blog/mcp-server-deployment-security-checklist.mdx
+- File: content/blog/supabase-pgvector-rag-guide.mdx
 - Stage: queued-for-playbook
-- Lane: ai-deployment
-- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human
-- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/mcp-server-deployment-security-checklist.mdx
+- Lane: wave-review
+- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human
+- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx
 - Publish confirm: not-included
 
 Checklist:
 
 - Generate or review a merged playbook before mark:review.
-- Review source lanes together: deployment, public-gap.
-- Verify 6 official source target(s) before any approval.
-- Check search intent against 6 query seed(s).
+- Review source lanes together: wave.
+- Verify 7 official source target(s) before any approval.
+- Confirm search intent from the source review packet.
 - Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.
 - Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.
 - Run mark:review only after explicit human approval; publishing requires a separate explicit approval.
-- Verify 6 official source target(s).
-- Check 8 search query seed(s).
-- Review 16 combined checklist signal(s).
-- Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: Dify 部署教程..
-- Complete freshness checklist for fast-changing AI/tool guidance.
+- Verify 7 official source target(s).
+- Confirm search intent from the source packet.
+- Review 5 combined checklist signal(s).
 - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
+- Do not run publish:articles --confirm from this sprint board.
 
-### 6. AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界
+### 4. Together AI API 怎么接入：开源模型接口、embedding 和部署边界
 
-- File: content/blog/ai-agent-memory-rag-design-guide.mdx
+- File: content/blog/together-ai-api-beginner-guide.mdx
 - Stage: queued-for-playbook
 - Lane: ai-deployment
-- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human
-- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx
+- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human
+- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx
 - Publish confirm: not-included
 
 Checklist:
 
 - Generate or review a merged playbook before mark:review.
-- Review source lanes together: deployment, public-gap.
+- Review source lanes together: deployment.
 - Verify 4 official source target(s) before any approval.
-- Check search intent against 6 query seed(s).
+- Check search intent against 4 query seed(s).
 - Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.
 - Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.
 - Run mark:review only after explicit human approval; publishing requires a separate explicit approval.
 - Verify 4 official source target(s).
-- Check 8 search query seed(s).
-- Review 16 combined checklist signal(s).
-- Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: RAG knowledge base tutorial.; Add one contextual link to a published article before approval..
-- Complete freshness checklist for fast-changing AI/tool guidance.
+- Check 4 search query seed(s).
+- Review 13 combined checklist signal(s).
 - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
+- Do not run publish:articles --confirm from this sprint board.
 
-### 7. Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流
+### 5. Vercel 部署成功但页面 404：新手排查顺序
 
-- File: content/blog/open-webui-functions-pipelines-deployment-guide.mdx
+- File: content/blog/vercel-404-after-deploy.mdx
 - Stage: queued-for-playbook
 - Lane: ai-deployment
-- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human
-- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx
+- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human
+- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/vercel-404-after-deploy.mdx
 - Publish confirm: not-included
 
 Checklist:
 
 - Generate or review a merged playbook before mark:review.
-- Review source lanes together: deployment, public-gap.
-- Verify 3 official source target(s) before any approval.
-- Check search intent against 6 query seed(s).
-- Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.
-- Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.
-- Run mark:review only after explicit human approval; publishing requires a separate explicit approval.
-- Verify 3 official source target(s).
-- Check 8 search query seed(s).
-- Review 17 combined checklist signal(s).
-- Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: local LLM deployment..
-- Complete freshness checklist for fast-changing AI/tool guidance.
-- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
-- Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
-
-### 8. AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围
-
-- File: content/blog/ai-automation-project-pricing-scope-guide.mdx
-- Stage: queued-for-playbook
-- Lane: ai-deployment
-- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human
-- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx
-- Publish confirm: not-included
-
-Checklist:
-
-- Generate or review a merged playbook before mark:review.
-- Review source lanes together: deployment, public-gap.
+- Review source lanes together: deployment.
 - Verify 2 official source target(s) before any approval.
-- Check search intent against 6 query seed(s).
+- Check search intent against 4 query seed(s).
 - Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.
 - Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.
 - Run mark:review only after explicit human approval; publishing requires a separate explicit approval.
 - Verify 2 official source target(s).
-- Check 8 search query seed(s).
-- Review 18 combined checklist signal(s).
-- Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: Dify deployment tutorial.; Check whether the primary keyword can appear naturally in the title without making the title stiff..
-- Complete freshness checklist for fast-changing AI/tool guidance.
+- Check 4 search query seed(s).
+- Review 13 combined checklist signal(s).
 - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
+- Do not run publish:articles --confirm from this sprint board.
 
-### 9. BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收
+### 6. Windows 路径和权限导致安装失败怎么办
 
-- File: content/blog/bentoml-llm-deployment-beginner-guide.mdx
+- File: content/blog/windows-path-permission-install-fix.mdx
 - Stage: queued-for-playbook
 - Lane: ai-deployment
-- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human
-- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx
+- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/windows-path-permission-install-fix.mdx --confirm-human
+- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix.mdx
 - Publish confirm: not-included
 
 Checklist:
 
 - Generate or review a merged playbook before mark:review.
-- Review source lanes together: deployment, public-gap.
+- Review source lanes together: deployment.
 - Verify 2 official source target(s) before any approval.
-- Check search intent against 6 query seed(s).
+- Check search intent against 4 query seed(s).
 - Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.
 - Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.
 - Run mark:review only after explicit human approval; publishing requires a separate explicit approval.
 - Verify 2 official source target(s).
-- Check 8 search query seed(s).
-- Review 17 combined checklist signal(s).
-- Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: vLLM deployment tutorial..
-- Complete freshness checklist for fast-changing AI/tool guidance.
+- Check 4 search query seed(s).
+- Review 13 combined checklist signal(s).
 - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
+- Do not run publish:articles --confirm from this sprint board.
 
-### 10. Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志
+### 7. TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收
 
-- File: content/blog/agent-tool-permission-safety-guide.mdx
+- File: content/blog/tensorrt-llm-beginner-guide.mdx
 - Stage: queued-for-playbook
-- Lane: public-coverage-gap
-- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human
-- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/agent-tool-permission-safety-guide.mdx
+- Lane: ai-deployment
+- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human
+- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx
 - Publish confirm: not-included
 
 Checklist:
 
 - Generate or review a merged playbook before mark:review.
-- Review source lanes together: public-gap.
+- Review source lanes together: deployment.
+- Verify 2 official source target(s) before any approval.
+- Check search intent against 4 query seed(s).
+- Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.
+- Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.
+- Run mark:review only after explicit human approval; publishing requires a separate explicit approval.
+- Verify 2 official source target(s).
+- Check 4 search query seed(s).
+- Review 13 combined checklist signal(s).
+- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
+- Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
+- Do not run publish:articles --confirm from this sprint board.
+
+### 8. Vercel build failed 排查清单：从日志到重新部署
+
+- File: content/blog/vercel-build-failed-causes-checklist.mdx
+- Stage: queued-for-playbook
+- Lane: ai-deployment
+- Manual mark-review command after approval: npm run mark:review -- --file=content/blog/vercel-build-failed-causes-checklist.mdx --confirm-human
+- Publish dry-run only after review: npm run publish:articles -- --file=content/blog/vercel-build-failed-causes-checklist.mdx
+- Publish confirm: not-included
+
+Checklist:
+
+- Generate or review a merged playbook before mark:review.
+- Review source lanes together: deployment.
 - Verify 3 official source target(s) before any approval.
-- Check search intent against 5 query seed(s).
+- Check search intent against 4 query seed(s).
 - Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.
 - Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.
 - Run mark:review only after explicit human approval; publishing requires a separate explicit approval.
 - Verify 3 official source target(s).
-- Check 5 search query seed(s).
-- Review 4 combined checklist signal(s).
-- Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: LLM observability 教程..
-- Complete freshness checklist for fast-changing AI/tool guidance.
+- Check 4 search query seed(s).
+- Review 13 combined checklist signal(s).
 - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
+- Do not run publish:articles --confirm from this sprint board.
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:39:19.854Z",
+  "generatedAt": "2026-06-16T07:01:38.963Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,814 +9,618 @@
   },
   "boundaries": {
     "canClaimTraffic": false,
-    "publicPublished": 15,
+    "publicPublished": 500,
     "publishableNow": 0,
     "trafficDataAvailable": false
   },
   "sourceEvidence": {
-    "autopilotQueueUnsafeItems": 0,
-    "humanReviewPlaybookUnsafeItems": 0,
-    "queueNextAssignments": 10
+    "autopilotQueueUnsafeItems": 8,
+    "humanReviewPlaybookUnsafeItems": 2,
+    "queueNextAssignments": 8
   },
   "summary": {
-    "items": 10,
-    "itemsNeedingSearchQuery": 0,
-    "itemsWithCommandBoundary": 10,
+    "items": 8,
+    "itemsNeedingSearchQuery": 2,
+    "itemsWithCommandBoundary": 8,
     "queuedForPlaybook": 7,
-    "readyForSprint": 10,
-    "readyWithPlaybook": 3,
-    "safeDraftItems": 10,
+    "readyForSprint": 8,
+    "readyWithPlaybook": 1,
+    "safeDraftItems": 8,
     "unsafeItems": 0,
-    "withSearchQueries": 10,
-    "withSourceTargets": 10
+    "withSearchQueries": 6,
+    "withSourceTargets": 8
   },
   "unsafeItems": [],
   "readyWithPlaybook": [
     {
-      "autopilotScore": 1723,
+      "autopilotScore": 1543,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
       "lane": "ai-deployment",
       "playbookStage": "ready-with-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
-        "Use merged playbook actions: 19 search, 45 source, 6 link.",
-        "Review source lanes together: deployment, public-gap, wave.",
-        "Verify 14 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
+        "Use merged playbook actions: 12 search, 44 source, 6 link.",
+        "Review source lanes together: deployment, wave.",
+        "Verify 7 official source target(s) before any approval.",
+        "Check search intent against 4 query seed(s).",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 14 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 22 combined checklist signal(s).",
-        "Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: AI Agent deployment tutorial.; Add one contextual link to a published article before approval..",
+        "Verify 7 official source target(s).",
+        "Check 4 search query seed(s).",
+        "Review 19 combined checklist signal(s).",
+        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Add one FAQ or checklist line that uses a high-intent query variant such as: Vercel AI Gateway 多模型..",
         "Complete freshness checklist for fast-changing AI/tool guidance.",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 11,
-      "sourceTargets": 14,
+      "searchQueries": 4,
+      "sourceTargets": 7,
       "sourceTypes": [
         "deployment",
-        "public-gap",
         "wave"
       ],
       "sprintOrder": 1,
-      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
-    },
-    {
-      "autopilotScore": 1723,
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
-      "lane": "industry-prompt",
-      "playbookStage": "ready-with-playbook",
-      "readyForSprint": true,
-      "reviewChecklist": [
-        "Use merged playbook actions: 11 search, 44 source, 6 link.",
-        "Review source lanes together: prompt, public-gap, wave.",
-        "Verify 17 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
-        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
-        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
-        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 17 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 19 combined checklist signal(s).",
-        "Apply copydesk remediation: Add one contextual link to a published article before approval.; Decide whether missing subtopics should become a short section or a follow-up article..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
-        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not run publish:articles --confirm from this sprint board."
-      ],
-      "safeDraft": true,
-      "searchQueries": 13,
-      "sourceTargets": 17,
-      "sourceTypes": [
-        "prompt",
-        "public-gap",
-        "wave"
-      ],
-      "sprintOrder": 2,
-      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
-    },
-    {
-      "autopilotScore": 1598,
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
-      "lane": "public-coverage-gap",
-      "playbookStage": "ready-with-playbook",
-      "readyForSprint": true,
-      "reviewChecklist": [
-        "Use merged playbook actions: 22 search, 45 source, 6 link.",
-        "Review source lanes together: public-gap, wave.",
-        "Verify 19 official source target(s) before any approval.",
-        "Check search intent against 5 query seed(s).",
-        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
-        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
-        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 19 official source target(s).",
-        "Check 5 search query seed(s).",
-        "Review 12 combined checklist signal(s).",
-        "Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: RAG 知识库搭建教程.; Check whether the primary keyword can appear naturally in the title without making the title stiff..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
-        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not run publish:articles --confirm from this sprint board."
-      ],
-      "safeDraft": true,
-      "searchQueries": 5,
-      "sourceTargets": 19,
-      "sourceTypes": [
-        "public-gap",
-        "wave"
-      ],
-      "sprintOrder": 3,
-      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检"
+      "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级"
     }
   ],
   "queuedForPlaybook": [
     {
-      "autopilotScore": 1348,
+      "autopilotScore": 1443,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vector-database-selection-for-rag-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
-      "lane": "ai-deployment",
+      "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
+      "lane": "wave-review",
       "playbookStage": "queued-for-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
         "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
-        "Verify 17 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
+        "Review source lanes together: wave.",
+        "Verify 8 official source target(s) before any approval.",
+        "Confirm search intent from the source review packet.",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 17 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 15 combined checklist signal(s).",
-        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Decide whether missing subtopics should become a short section or a follow-up article..",
+        "Verify 8 official source target(s).",
+        "Confirm search intent from the source packet.",
+        "Review 6 combined checklist signal(s).",
+        "Apply copydesk remediation: Add one FAQ or checklist line that uses a high-intent query variant such as: RAG 向量数据库怎么选..",
         "Complete freshness checklist for fast-changing AI/tool guidance.",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 13,
-      "sourceTargets": 17,
+      "searchQueries": 0,
+      "sourceTargets": 8,
       "sourceTypes": [
-        "deployment",
-        "public-gap"
+        "wave"
       ],
-      "sprintOrder": 4,
-      "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急"
+      "sprintOrder": 2,
+      "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界"
     },
     {
-      "autopilotScore": 1278,
+      "autopilotScore": 1412,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/mcp-server-deployment-security-checklist.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
-      "lane": "ai-deployment",
+      "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+      "lane": "wave-review",
       "playbookStage": "queued-for-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
         "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
-        "Verify 6 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
+        "Review source lanes together: wave.",
+        "Verify 7 official source target(s) before any approval.",
+        "Confirm search intent from the source review packet.",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 6 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 16 combined checklist signal(s).",
-        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: Dify 部署教程..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
+        "Verify 7 official source target(s).",
+        "Confirm search intent from the source packet.",
+        "Review 5 combined checklist signal(s).",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 9,
-      "sourceTargets": 6,
+      "searchQueries": 0,
+      "sourceTargets": 7,
       "sourceTypes": [
-        "deployment",
-        "public-gap"
+        "wave"
       ],
-      "sprintOrder": 5,
-      "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单"
+      "sprintOrder": 3,
+      "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索"
     },
     {
-      "autopilotScore": 1238,
+      "autopilotScore": 447,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+      "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "lane": "ai-deployment",
       "playbookStage": "queued-for-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
         "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
+        "Review source lanes together: deployment.",
         "Verify 4 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
+        "Check search intent against 4 query seed(s).",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
         "Verify 4 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 16 combined checklist signal(s).",
-        "Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: RAG knowledge base tutorial.; Add one contextual link to a published article before approval..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
+        "Check 4 search query seed(s).",
+        "Review 13 combined checklist signal(s).",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 8,
+      "searchQueries": 4,
       "sourceTargets": 4,
       "sourceTypes": [
-        "deployment",
-        "public-gap"
+        "deployment"
+      ],
+      "sprintOrder": 4,
+      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界"
+    },
+    {
+      "autopilotScore": 417,
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vercel-404-after-deploy.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "file": "content/blog/vercel-404-after-deploy.mdx",
+      "lane": "ai-deployment",
+      "playbookStage": "queued-for-playbook",
+      "readyForSprint": true,
+      "reviewChecklist": [
+        "Generate or review a merged playbook before mark:review.",
+        "Review source lanes together: deployment.",
+        "Verify 2 official source target(s) before any approval.",
+        "Check search intent against 4 query seed(s).",
+        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
+        "Verify 2 official source target(s).",
+        "Check 4 search query seed(s).",
+        "Review 13 combined checklist signal(s).",
+        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
+        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
+        "Do not run publish:articles --confirm from this sprint board."
+      ],
+      "safeDraft": true,
+      "searchQueries": 4,
+      "sourceTargets": 2,
+      "sourceTypes": [
+        "deployment"
+      ],
+      "sprintOrder": 5,
+      "title": "Vercel 部署成功但页面 404：新手排查顺序"
+    },
+    {
+      "autopilotScore": 403,
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/windows-path-permission-install-fix.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "file": "content/blog/windows-path-permission-install-fix.mdx",
+      "lane": "ai-deployment",
+      "playbookStage": "queued-for-playbook",
+      "readyForSprint": true,
+      "reviewChecklist": [
+        "Generate or review a merged playbook before mark:review.",
+        "Review source lanes together: deployment.",
+        "Verify 2 official source target(s) before any approval.",
+        "Check search intent against 4 query seed(s).",
+        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
+        "Verify 2 official source target(s).",
+        "Check 4 search query seed(s).",
+        "Review 13 combined checklist signal(s).",
+        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
+        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
+        "Do not run publish:articles --confirm from this sprint board."
+      ],
+      "safeDraft": true,
+      "searchQueries": 4,
+      "sourceTargets": 2,
+      "sourceTypes": [
+        "deployment"
       ],
       "sprintOrder": 6,
-      "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+      "title": "Windows 路径和权限导致安装失败怎么办"
     },
     {
-      "autopilotScore": 1223,
+      "autopilotScore": 389,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+      "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
       "lane": "ai-deployment",
       "playbookStage": "queued-for-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
         "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
-        "Verify 3 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
+        "Review source lanes together: deployment.",
+        "Verify 2 official source target(s) before any approval.",
+        "Check search intent against 4 query seed(s).",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 3 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 17 combined checklist signal(s).",
-        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: local LLM deployment..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
+        "Verify 2 official source target(s).",
+        "Check 4 search query seed(s).",
+        "Review 13 combined checklist signal(s).",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 8,
-      "sourceTargets": 3,
+      "searchQueries": 4,
+      "sourceTargets": 2,
       "sourceTypes": [
-        "deployment",
-        "public-gap"
+        "deployment"
       ],
       "sprintOrder": 7,
-      "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+      "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收"
     },
     {
-      "autopilotScore": 1208,
+      "autopilotScore": 387,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-build-failed-causes-checklist.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vercel-build-failed-causes-checklist.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+      "file": "content/blog/vercel-build-failed-causes-checklist.mdx",
       "lane": "ai-deployment",
       "playbookStage": "queued-for-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
         "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
-        "Verify 2 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
-        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
-        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
-        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 2 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 18 combined checklist signal(s).",
-        "Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: Dify deployment tutorial.; Check whether the primary keyword can appear naturally in the title without making the title stiff..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
-        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not run publish:articles --confirm from this sprint board."
-      ],
-      "safeDraft": true,
-      "searchQueries": 8,
-      "sourceTargets": 2,
-      "sourceTypes": [
-        "deployment",
-        "public-gap"
-      ],
-      "sprintOrder": 8,
-      "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
-    },
-    {
-      "autopilotScore": 1208,
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
-      "lane": "ai-deployment",
-      "playbookStage": "queued-for-playbook",
-      "readyForSprint": true,
-      "reviewChecklist": [
-        "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
-        "Verify 2 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
-        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
-        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
-        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 2 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 17 combined checklist signal(s).",
-        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: vLLM deployment tutorial..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
-        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not run publish:articles --confirm from this sprint board."
-      ],
-      "safeDraft": true,
-      "searchQueries": 8,
-      "sourceTargets": 2,
-      "sourceTypes": [
-        "deployment",
-        "public-gap"
-      ],
-      "sprintOrder": 9,
-      "title": "BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收"
-    },
-    {
-      "autopilotScore": 1118,
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/agent-tool-permission-safety-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/agent-tool-permission-safety-guide.mdx",
-      "lane": "public-coverage-gap",
-      "playbookStage": "queued-for-playbook",
-      "readyForSprint": true,
-      "reviewChecklist": [
-        "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: public-gap.",
+        "Review source lanes together: deployment.",
         "Verify 3 official source target(s) before any approval.",
-        "Check search intent against 5 query seed(s).",
+        "Check search intent against 4 query seed(s).",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
         "Verify 3 official source target(s).",
-        "Check 5 search query seed(s).",
-        "Review 4 combined checklist signal(s).",
-        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: LLM observability 教程..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
+        "Check 4 search query seed(s).",
+        "Review 13 combined checklist signal(s).",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 5,
+      "searchQueries": 4,
       "sourceTargets": 3,
       "sourceTypes": [
-        "public-gap"
+        "deployment"
       ],
-      "sprintOrder": 10,
-      "title": "Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志"
+      "sprintOrder": 8,
+      "title": "Vercel build failed 排查清单：从日志到重新部署"
     }
   ],
   "items": [
     {
-      "autopilotScore": 1723,
+      "autopilotScore": 1543,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
       "lane": "ai-deployment",
       "playbookStage": "ready-with-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
-        "Use merged playbook actions: 19 search, 45 source, 6 link.",
-        "Review source lanes together: deployment, public-gap, wave.",
-        "Verify 14 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
+        "Use merged playbook actions: 12 search, 44 source, 6 link.",
+        "Review source lanes together: deployment, wave.",
+        "Verify 7 official source target(s) before any approval.",
+        "Check search intent against 4 query seed(s).",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 14 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 22 combined checklist signal(s).",
-        "Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: AI Agent deployment tutorial.; Add one contextual link to a published article before approval..",
+        "Verify 7 official source target(s).",
+        "Check 4 search query seed(s).",
+        "Review 19 combined checklist signal(s).",
+        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Add one FAQ or checklist line that uses a high-intent query variant such as: Vercel AI Gateway 多模型..",
         "Complete freshness checklist for fast-changing AI/tool guidance.",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 11,
-      "sourceTargets": 14,
+      "searchQueries": 4,
+      "sourceTargets": 7,
       "sourceTypes": [
         "deployment",
-        "public-gap",
         "wave"
       ],
       "sprintOrder": 1,
-      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
+      "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级"
     },
     {
-      "autopilotScore": 1723,
+      "autopilotScore": 1443,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vector-database-selection-for-rag-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
-      "lane": "industry-prompt",
-      "playbookStage": "ready-with-playbook",
+      "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
+      "lane": "wave-review",
+      "playbookStage": "queued-for-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
-        "Use merged playbook actions: 11 search, 44 source, 6 link.",
-        "Review source lanes together: prompt, public-gap, wave.",
-        "Verify 17 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
+        "Generate or review a merged playbook before mark:review.",
+        "Review source lanes together: wave.",
+        "Verify 8 official source target(s) before any approval.",
+        "Confirm search intent from the source review packet.",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 17 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 19 combined checklist signal(s).",
-        "Apply copydesk remediation: Add one contextual link to a published article before approval.; Decide whether missing subtopics should become a short section or a follow-up article..",
+        "Verify 8 official source target(s).",
+        "Confirm search intent from the source packet.",
+        "Review 6 combined checklist signal(s).",
+        "Apply copydesk remediation: Add one FAQ or checklist line that uses a high-intent query variant such as: RAG 向量数据库怎么选..",
         "Complete freshness checklist for fast-changing AI/tool guidance.",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 13,
-      "sourceTargets": 17,
+      "searchQueries": 0,
+      "sourceTargets": 8,
       "sourceTypes": [
-        "prompt",
-        "public-gap",
         "wave"
       ],
       "sprintOrder": 2,
-      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
+      "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界"
     },
     {
-      "autopilotScore": 1598,
+      "autopilotScore": 1412,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
-      "lane": "public-coverage-gap",
-      "playbookStage": "ready-with-playbook",
+      "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+      "lane": "wave-review",
+      "playbookStage": "queued-for-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
-        "Use merged playbook actions: 22 search, 45 source, 6 link.",
-        "Review source lanes together: public-gap, wave.",
-        "Verify 19 official source target(s) before any approval.",
-        "Check search intent against 5 query seed(s).",
+        "Generate or review a merged playbook before mark:review.",
+        "Review source lanes together: wave.",
+        "Verify 7 official source target(s) before any approval.",
+        "Confirm search intent from the source review packet.",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 19 official source target(s).",
-        "Check 5 search query seed(s).",
-        "Review 12 combined checklist signal(s).",
-        "Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: RAG 知识库搭建教程.; Check whether the primary keyword can appear naturally in the title without making the title stiff..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
+        "Verify 7 official source target(s).",
+        "Confirm search intent from the source packet.",
+        "Review 5 combined checklist signal(s).",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 5,
-      "sourceTargets": 19,
+      "searchQueries": 0,
+      "sourceTargets": 7,
       "sourceTypes": [
-        "public-gap",
         "wave"
       ],
       "sprintOrder": 3,
-      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检"
+      "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索"
     },
     {
-      "autopilotScore": 1348,
+      "autopilotScore": 447,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-api-key-security-rotation-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-api-key-security-rotation-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+      "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "lane": "ai-deployment",
       "playbookStage": "queued-for-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
         "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
-        "Verify 17 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
-        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
-        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
-        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 17 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 15 combined checklist signal(s).",
-        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Decide whether missing subtopics should become a short section or a follow-up article..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
-        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not run publish:articles --confirm from this sprint board."
-      ],
-      "safeDraft": true,
-      "searchQueries": 13,
-      "sourceTargets": 17,
-      "sourceTypes": [
-        "deployment",
-        "public-gap"
-      ],
-      "sprintOrder": 4,
-      "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急"
-    },
-    {
-      "autopilotScore": 1278,
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/mcp-server-deployment-security-checklist.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/mcp-server-deployment-security-checklist.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
-      "lane": "ai-deployment",
-      "playbookStage": "queued-for-playbook",
-      "readyForSprint": true,
-      "reviewChecklist": [
-        "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
-        "Verify 6 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
-        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
-        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
-        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 6 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 16 combined checklist signal(s).",
-        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: Dify 部署教程..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
-        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not run publish:articles --confirm from this sprint board."
-      ],
-      "safeDraft": true,
-      "searchQueries": 9,
-      "sourceTargets": 6,
-      "sourceTypes": [
-        "deployment",
-        "public-gap"
-      ],
-      "sprintOrder": 5,
-      "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单"
-    },
-    {
-      "autopilotScore": 1238,
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
-      "lane": "ai-deployment",
-      "playbookStage": "queued-for-playbook",
-      "readyForSprint": true,
-      "reviewChecklist": [
-        "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
+        "Review source lanes together: deployment.",
         "Verify 4 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
+        "Check search intent against 4 query seed(s).",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
         "Verify 4 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 16 combined checklist signal(s).",
-        "Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: RAG knowledge base tutorial.; Add one contextual link to a published article before approval..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
+        "Check 4 search query seed(s).",
+        "Review 13 combined checklist signal(s).",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 8,
+      "searchQueries": 4,
       "sourceTargets": 4,
       "sourceTypes": [
-        "deployment",
-        "public-gap"
+        "deployment"
+      ],
+      "sprintOrder": 4,
+      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界"
+    },
+    {
+      "autopilotScore": 417,
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vercel-404-after-deploy.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "file": "content/blog/vercel-404-after-deploy.mdx",
+      "lane": "ai-deployment",
+      "playbookStage": "queued-for-playbook",
+      "readyForSprint": true,
+      "reviewChecklist": [
+        "Generate or review a merged playbook before mark:review.",
+        "Review source lanes together: deployment.",
+        "Verify 2 official source target(s) before any approval.",
+        "Check search intent against 4 query seed(s).",
+        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
+        "Verify 2 official source target(s).",
+        "Check 4 search query seed(s).",
+        "Review 13 combined checklist signal(s).",
+        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
+        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
+        "Do not run publish:articles --confirm from this sprint board."
+      ],
+      "safeDraft": true,
+      "searchQueries": 4,
+      "sourceTargets": 2,
+      "sourceTypes": [
+        "deployment"
+      ],
+      "sprintOrder": 5,
+      "title": "Vercel 部署成功但页面 404：新手排查顺序"
+    },
+    {
+      "autopilotScore": 403,
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/windows-path-permission-install-fix.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/windows-path-permission-install-fix.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "file": "content/blog/windows-path-permission-install-fix.mdx",
+      "lane": "ai-deployment",
+      "playbookStage": "queued-for-playbook",
+      "readyForSprint": true,
+      "reviewChecklist": [
+        "Generate or review a merged playbook before mark:review.",
+        "Review source lanes together: deployment.",
+        "Verify 2 official source target(s) before any approval.",
+        "Check search intent against 4 query seed(s).",
+        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
+        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
+        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
+        "Verify 2 official source target(s).",
+        "Check 4 search query seed(s).",
+        "Review 13 combined checklist signal(s).",
+        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
+        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
+        "Do not run publish:articles --confirm from this sprint board."
+      ],
+      "safeDraft": true,
+      "searchQueries": 4,
+      "sourceTargets": 2,
+      "sourceTypes": [
+        "deployment"
       ],
       "sprintOrder": 6,
-      "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+      "title": "Windows 路径和权限导致安装失败怎么办"
     },
     {
-      "autopilotScore": 1223,
+      "autopilotScore": 389,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/tensorrt-llm-beginner-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/tensorrt-llm-beginner-guide.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+      "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
       "lane": "ai-deployment",
       "playbookStage": "queued-for-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
         "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
-        "Verify 3 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
+        "Review source lanes together: deployment.",
+        "Verify 2 official source target(s) before any approval.",
+        "Check search intent against 4 query seed(s).",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 3 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 17 combined checklist signal(s).",
-        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: local LLM deployment..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
+        "Verify 2 official source target(s).",
+        "Check 4 search query seed(s).",
+        "Review 13 combined checklist signal(s).",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 8,
-      "sourceTargets": 3,
+      "searchQueries": 4,
+      "sourceTargets": 2,
       "sourceTypes": [
-        "deployment",
-        "public-gap"
+        "deployment"
       ],
       "sprintOrder": 7,
-      "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+      "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收"
     },
     {
-      "autopilotScore": 1208,
+      "autopilotScore": 387,
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-build-failed-causes-checklist.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vercel-build-failed-causes-checklist.mdx",
         "publishConfirm": "not-included",
         "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
       },
-      "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+      "file": "content/blog/vercel-build-failed-causes-checklist.mdx",
       "lane": "ai-deployment",
       "playbookStage": "queued-for-playbook",
       "readyForSprint": true,
       "reviewChecklist": [
         "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
-        "Verify 2 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
-        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
-        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
-        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 2 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 18 combined checklist signal(s).",
-        "Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: Dify deployment tutorial.; Check whether the primary keyword can appear naturally in the title without making the title stiff..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
-        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not run publish:articles --confirm from this sprint board."
-      ],
-      "safeDraft": true,
-      "searchQueries": 8,
-      "sourceTargets": 2,
-      "sourceTypes": [
-        "deployment",
-        "public-gap"
-      ],
-      "sprintOrder": 8,
-      "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
-    },
-    {
-      "autopilotScore": 1208,
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/bentoml-llm-deployment-beginner-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
-      "lane": "ai-deployment",
-      "playbookStage": "queued-for-playbook",
-      "readyForSprint": true,
-      "reviewChecklist": [
-        "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: deployment, public-gap.",
-        "Verify 2 official source target(s) before any approval.",
-        "Check search intent against 6 query seed(s).",
-        "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
-        "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
-        "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
-        "Verify 2 official source target(s).",
-        "Check 8 search query seed(s).",
-        "Review 17 combined checklist signal(s).",
-        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: vLLM deployment tutorial..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
-        "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not run publish:articles --confirm from this sprint board."
-      ],
-      "safeDraft": true,
-      "searchQueries": 8,
-      "sourceTargets": 2,
-      "sourceTypes": [
-        "deployment",
-        "public-gap"
-      ],
-      "sprintOrder": 9,
-      "title": "BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收"
-    },
-    {
-      "autopilotScore": 1118,
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/agent-tool-permission-safety-guide.mdx --confirm-human",
-        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/agent-tool-permission-safety-guide.mdx",
-        "publishConfirm": "not-included",
-        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
-      },
-      "file": "content/blog/agent-tool-permission-safety-guide.mdx",
-      "lane": "public-coverage-gap",
-      "playbookStage": "queued-for-playbook",
-      "readyForSprint": true,
-      "reviewChecklist": [
-        "Generate or review a merged playbook before mark:review.",
-        "Review source lanes together: public-gap.",
+        "Review source lanes together: deployment.",
         "Verify 3 official source target(s) before any approval.",
-        "Check search intent against 5 query seed(s).",
+        "Check search intent against 4 query seed(s).",
         "Resolve or explicitly accept snippet, structured-data, freshness, and cannibalization warnings before mark:review.",
         "Confirm no traffic, ranking, revenue, benchmark, or stability claim is unsupported.",
         "Run mark:review only after explicit human approval; publishing requires a separate explicit approval.",
         "Verify 3 official source target(s).",
-        "Check 5 search query seed(s).",
-        "Review 4 combined checklist signal(s).",
-        "Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Rewrite the meta description to name the reader, outcome, and search phrase: LLM observability 教程..",
-        "Complete freshness checklist for fast-changing AI/tool guidance.",
+        "Check 4 search query seed(s).",
+        "Review 13 combined checklist signal(s).",
         "Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not run publish:articles --confirm from this sprint board."
       ],
       "safeDraft": true,
-      "searchQueries": 5,
+      "searchQueries": 4,
       "sourceTargets": 3,
       "sourceTypes": [
-        "public-gap"
+        "deployment"
       ],
-      "sprintOrder": 10,
-      "title": "Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志"
+      "sprintOrder": 8,
+      "title": "Vercel build failed 排查清单：从日志到重新部署"
     }
   ]
 }

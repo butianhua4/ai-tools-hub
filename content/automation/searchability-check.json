@@ -6,16 +6,16 @@
     "checks": 13,
     "passed": 13,
     "failed": 0,
-    "publishedPosts": 15,
-    "categorySlugs": 6,
-    "tagSlugs": 31
+    "publishedPosts": 500,
+    "categorySlugs": 22,
+    "tagSlugs": 430
   },
   "failedItems": [],
   "checks": [
     {
       "name": "published posts are available",
       "ok": true,
-      "detail": "15 published posts"
+      "detail": "500 published posts"
     },
     {
       "name": "article slugs are english/ascii",

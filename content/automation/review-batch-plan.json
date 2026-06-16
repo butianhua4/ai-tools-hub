@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:38:50.319Z",
+  "generatedAt": "2026-06-16T07:01:09.510Z",
   "guardrails": {
     "autoMarkReview": false,
     "autoPublish": false,
@@ -8,7 +8,7 @@
   },
   "totals": {
     "plannedBatches": 3,
-    "plannedCandidates": 9,
+    "plannedCandidates": 6,
     "sourceReviewCandidates": 25,
     "sourceOpportunities": 7
   },
@@ -17,95 +17,113 @@
       "batch": 1,
       "candidates": [
         {
-          "category": "AI Agent",
-          "cluster": "Agent and memory",
-          "dryRunCommand": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-          "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-          "opportunityReason": "Agent and memory cluster; no public article in cluster; no public article in category",
-          "opportunityScore": 260,
-          "publishBatch": 40,
+          "category": "AI 部署",
+          "cluster": "AI deployment",
+          "dryRunCommand": "npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+          "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+          "opportunityReason": "AI deployment cluster; 114 public article(s) in cluster; 16 public article(s) in category",
+          "opportunityScore": 34,
+          "publishBatch": 34,
           "qualityScore": 100,
-          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
-          "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
+          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx --confirm-human",
+          "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级"
         },
         {
-          "category": "AI 记忆",
-          "cluster": "Agent and memory",
-          "dryRunCommand": "npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx",
-          "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
-          "opportunityReason": "Agent and memory cluster; no public article in cluster; no public article in category",
-          "opportunityScore": 260,
-          "publishBatch": 40,
+          "category": "AI 基建",
+          "cluster": "AI deployment",
+          "dryRunCommand": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx",
+          "file": "content/blog/together-ai-api-beginner-guide.mdx",
+          "opportunityReason": "AI deployment cluster; 114 public article(s) in cluster; 71 public article(s) in category",
+          "opportunityScore": 27,
+          "publishBatch": 27,
           "qualityScore": 100,
-          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human",
-          "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human",
+          "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界"
         },
         {
-          "category": "项目报价",
-          "cluster": "Agent and memory",
-          "dryRunCommand": "npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx",
-          "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-          "opportunityReason": "Agent and memory cluster; no public article in cluster; no public article in category",
-          "opportunityScore": 253,
-          "publishBatch": 33,
+          "category": "AI 基建",
+          "cluster": "AI deployment",
+          "dryRunCommand": "npm run mark:review -- --file=content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
+          "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
+          "opportunityReason": "AI deployment cluster; 114 public article(s) in cluster; 71 public article(s) in category",
+          "opportunityScore": 26,
+          "publishBatch": 26,
           "qualityScore": 100,
-          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human",
-          "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx --confirm-human",
+          "title": "Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查"
         }
       ],
       "decisionRule": "A human reviewer must approve facts, risk language, source freshness, and search-intent fit before any mark:review command is run.",
       "reviewFocus": [
-        "解释工具调用和多步执行边界",
-        "明确记忆、状态和人工确认的安全边界",
-        "避免承诺全自动完成业务结果"
+        "核对官方部署文档",
+        "检查 API Key、限流、环境变量和费用说法",
+        "补足上线后的 smoke check 和回滚步骤"
       ],
       "searchQueries": [
-        "AI Agent 部署教程",
-        "Agent 记忆怎么做",
-        "AI Agent 工具调用教程",
-        "AI 工作流部署"
+        "大模型部署教程",
+        "AI 应用部署 Vercel 教程",
+        "OpenAI API 部署教程",
+        "Claude API 部署教程"
       ],
-      "topic": "Agent 部署、工具调用和记忆",
-      "why": "Agent、记忆和工作流是高频 AI 应用词，但需要清楚解释边界和落地步骤。"
+      "topic": "大模型和 AI 应用部署教程",
+      "why": "部署、API、限流、环境变量是新人最容易搜索也最容易踩坑的入口。"
     },
     {
       "batch": 2,
+      "candidates": [],
+      "decisionRule": "A human reviewer must approve facts, risk language, source freshness, and search-intent fit before any mark:review command is run.",
+      "reviewFocus": [
+        "保留错误现象、原因、修复步骤和验证命令",
+        "补足版本差异和官方链接",
+        "避免把偶然修复写成通用结论"
+      ],
+      "searchQueries": [
+        "OpenAI API 报错解决",
+        "Vercel 部署失败",
+        "npm install 报错",
+        "AI 应用部署 404"
+      ],
+      "topic": "AI 工具和部署报错解决",
+      "why": "报错类文章通常搜索意图明确，适合作为稳定长尾入口。"
+    },
+    {
+      "batch": 3,
       "candidates": [
         {
-          "category": "AI 部署",
+          "category": "AI 基建",
           "cluster": "RAG and knowledge base",
-          "dryRunCommand": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx",
-          "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
-          "opportunityReason": "RAG and knowledge base cluster; no public article in cluster; no public article in category",
-          "opportunityScore": 254,
-          "publishBatch": 34,
+          "dryRunCommand": "npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx",
+          "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
+          "opportunityReason": "RAG and knowledge base cluster; 23 public article(s) in cluster; 71 public article(s) in category",
+          "opportunityScore": 65,
+          "publishBatch": 25,
           "qualityScore": 100,
-          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
-          "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检"
+          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human",
+          "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界"
         },
         {
-          "category": "AI 部署",
-          "cluster": "Agent and memory",
-          "dryRunCommand": "npm run mark:review -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx",
-          "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
-          "opportunityReason": "Agent and memory cluster; no public article in cluster; no public article in category",
-          "opportunityScore": 253,
-          "publishBatch": 33,
+          "category": "AI 基建",
+          "cluster": "RAG and knowledge base",
+          "dryRunCommand": "npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx",
+          "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+          "opportunityReason": "RAG and knowledge base cluster; 23 public article(s) in cluster; 71 public article(s) in category",
+          "opportunityScore": 64,
+          "publishBatch": 24,
           "qualityScore": 100,
-          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/n8n-ai-agent-rag-memory-guide.mdx --confirm-human",
-          "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储"
+          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human",
+          "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索"
         },
         {
-          "category": "AI 部署",
+          "category": "AI 基建",
           "cluster": "RAG and knowledge base",
-          "dryRunCommand": "npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
-          "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
-          "opportunityReason": "RAG and knowledge base cluster; no public article in cluster; no public article in category",
-          "opportunityScore": 253,
-          "publishBatch": 33,
+          "dryRunCommand": "npm run mark:review -- --file=content/blog/vector-database-beginner-guide.mdx",
+          "file": "content/blog/vector-database-beginner-guide.mdx",
+          "opportunityReason": "RAG and knowledge base cluster; 23 public article(s) in cluster; 71 public article(s) in category",
+          "opportunityScore": 61,
+          "publishBatch": 21,
           "qualityScore": 100,
-          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/open-webui-functions-pipelines-deployment-guide.mdx --confirm-human",
-          "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/vector-database-beginner-guide.mdx --confirm-human",
+          "title": "向量数据库怎么选：新手先理解 embedding 和检索"
         }
       ],
       "decisionRule": "A human reviewer must approve facts, risk language, source freshness, and search-intent fit before any mark:review command is run.",
@@ -122,62 +140,6 @@
       ],
       "topic": "RAG、知识库和向量检索",
       "why": "很多团队会搜索知识库 AI，但真正需要的是可审核、可引用、可质检的方案。"
-    },
-    {
-      "batch": 3,
-      "candidates": [
-        {
-          "category": "AI 提示词",
-          "cluster": "Industry AI prompts",
-          "dryRunCommand": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
-          "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
-          "opportunityReason": "Industry AI prompts cluster; no public article in cluster; no public article in category",
-          "opportunityScore": 260,
-          "publishBatch": 40,
-          "qualityScore": 100,
-          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
-          "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
-        },
-        {
-          "category": "AI 提示词",
-          "cluster": "Industry AI prompts",
-          "dryRunCommand": "npm run mark:review -- --file=content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
-          "file": "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
-          "opportunityReason": "Industry AI prompts cluster; no public article in cluster; no public article in category",
-          "opportunityScore": 252,
-          "publishBatch": 32,
-          "qualityScore": 100,
-          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/ai-prompt-library-team-knowledge-base-guide.mdx --confirm-human",
-          "title": "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用"
-        },
-        {
-          "category": "AI 提示词",
-          "cluster": "Industry AI prompts",
-          "dryRunCommand": "npm run mark:review -- --file=content/blog/data-analysis-ai-prompts-guide.mdx",
-          "file": "content/blog/data-analysis-ai-prompts-guide.mdx",
-          "opportunityReason": "Industry AI prompts cluster; no public article in cluster; no public article in category",
-          "opportunityScore": 251,
-          "publishBatch": 31,
-          "qualityScore": 100,
-          "reviewCommandAfterHumanApproval": "npm run mark:review -- --file=content/blog/data-analysis-ai-prompts-guide.mdx --confirm-human",
-          "title": "数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要"
-        }
-      ],
-      "decisionRule": "A human reviewer must approve facts, risk language, source freshness, and search-intent fit before any mark:review command is run.",
-      "reviewFocus": [
-        "按行业给可复制结构",
-        "避免空泛万能提示词",
-        "补充输入字段、质检标准和反例"
-      ],
-      "searchQueries": [
-        "AI 提示词大全",
-        "销售 AI 提示词",
-        "客服 AI 提示词",
-        "运营 AI 提示词",
-        "HR AI 提示词"
-      ],
-      "topic": "全行业 AI 提示词和工作流模板",
-      "why": "提示词类内容搜索面宽，但需要从模板升级成行业流程，才更适合长期收录。"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Memory RAG Sprint Board
 
-Generated at: 2026-06-14T10:38:58.728Z
+Generated at: 2026-06-16T07:01:17.950Z
 
 This report is read-only. It turns broad RAG, knowledge base, vector search, Agent memory, privacy, and evaluation demand into manual review lanes.
 
@@ -16,16 +16,16 @@ This report is read-only. It turns broad RAG, knowledge base, vector search, Age
 
 ## Summary
 
-- candidateItems: 4
+- candidateItems: 2
 - decisionChecks: 39
-- deploymentPublicArticles: 3
+- deploymentPublicArticles: 179
 - howToLanes: 2
 - itemsPerWave: 3
 - lanes: 6
 - lanesWithCandidateFiles: 2
 - privacyLanes: 1
 - publishConfirmCommandsIncluded: 0
-- readyCandidates: 4
+- readyCandidates: 2
 - readyLanes: 6
 - searchQueries: 24
 - sourceTargets: 6
@@ -42,28 +42,26 @@ This report is read-only. It turns broad RAG, knowledge base, vector search, Age
 
 | Wave | Ready | Candidate files | Search queries | Decision checks |
 | ---: | ---: | --- | --- | --- |
-| 1 | 3/3 | content/blog/ai-agent-memory-rag-design-guide.mdx | RAG 知识库搭建教程<br>企业知识库 AI 部署<br>客服知识库 AI 怎么做<br>RAG 和知识库区别<br>AI Agent 记忆怎么做<br>AI Agent 长期记忆 | State the user problem first: knowledge base setup, Agent memory, document ingestion, vector retrieval, evaluation, or privacy.<br>Separate implementation steps from conceptual explanation so beginners can scan the article.<br>Require citations or source links for retrieval output claims.<br>Call out privacy, permission, retention, and deletion boundaries before any production recommendation. |
-| 2 | 3/3 | content/blog/ai-agent-memory-rag-design-guide.mdx | 向量数据库怎么选<br>RAG 向量数据库教程<br>Pinecone Milvus Chroma 区别<br>pgvector RAG 教程<br>RAG 评测怎么做<br>RAG 幻觉怎么解决 | State the user problem first: knowledge base setup, Agent memory, document ingestion, vector retrieval, evaluation, or privacy.<br>Separate implementation steps from conceptual explanation so beginners can scan the article.<br>Require citations or source links for retrieval output claims.<br>Call out privacy, permission, retention, and deletion boundaries before any production recommendation. |
+| 1 | 3/3 | content/blog/together-ai-api-beginner-guide.mdx | RAG 知识库搭建教程<br>企业知识库 AI 部署<br>客服知识库 AI 怎么做<br>RAG 和知识库区别<br>AI Agent 记忆怎么做<br>AI Agent 长期记忆 | State the user problem first: knowledge base setup, Agent memory, document ingestion, vector retrieval, evaluation, or privacy.<br>Separate implementation steps from conceptual explanation so beginners can scan the article.<br>Require citations or source links for retrieval output claims.<br>Call out privacy, permission, retention, and deletion boundaries before any production recommendation. |
+| 2 | 3/3 | content/blog/together-ai-api-beginner-guide.mdx | 向量数据库怎么选<br>RAG 向量数据库教程<br>Pinecone Milvus Chroma 区别<br>pgvector RAG 教程<br>RAG 评测怎么做<br>RAG 幻觉怎么解决 | State the user problem first: knowledge base setup, Agent memory, document ingestion, vector retrieval, evaluation, or privacy.<br>Separate implementation steps from conceptual explanation so beginners can scan the article.<br>Require citations or source links for retrieval output claims.<br>Call out privacy, permission, retention, and deletion boundaries before any production recommendation. |
 
 ## Memory Demand Lanes
 
 | Wave | Score | Intent | Lane | Candidate files | Queries | Sources | Title |
 | ---: | ---: | --- | --- | --- | ---: | ---: | --- |
-| 1 | 410 | how-to | rag-knowledge-base-setup | content/blog/ai-agent-memory-rag-design-guide.mdx | 4 | 6 | RAG 知识库搭建教程 |
+| 1 | 410 | how-to | rag-knowledge-base-setup | content/blog/together-ai-api-beginner-guide.mdx | 4 | 6 | RAG 知识库搭建教程 |
 | 1 | 405 | concept-and-design | agent-long-term-memory | none | 4 | 6 | AI Agent 长期记忆设计 |
 | 1 | 395 | implementation | document-ingestion-chunking | none | 4 | 6 | RAG 文档切分和入库流程 |
 | 2 | 385 | comparison | vector-database-selection | none | 4 | 6 | 向量数据库和检索方案选择 |
-| 2 | 380 | troubleshooting | rag-evaluation-hallucination | content/blog/ai-agent-memory-rag-design-guide.mdx | 4 | 6 | RAG 评测、引用和幻觉控制 |
+| 2 | 380 | troubleshooting | rag-evaluation-hallucination | content/blog/together-ai-api-beginner-guide.mdx | 4 | 6 | RAG 评测、引用和幻觉控制 |
 | 2 | 370 | risk-and-governance | memory-privacy-permission | none | 4 | 6 | 企业知识库权限、隐私和记忆保留 |
 
 ## Candidate Bridges
 
 | Ready | Score | Lanes | Queries | Sources | Title | File |
 | --- | ---: | --- | ---: | ---: | --- | --- |
-| true | 378 | rag-knowledge-base-setup, rag-evaluation-hallucination | 4 | 4 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| true | 374 | memory-adjacent | 4 | 3 | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| true | 370 | memory-adjacent | 4 | 2 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| true | 366 | memory-adjacent | 4 | 3 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
+| true | 240 | rag-knowledge-base-setup, rag-evaluation-hallucination | 4 | 4 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| true | 195 | memory-adjacent | 4 | 3 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
 
 ## Lane Review Actions
 
@@ -73,7 +71,7 @@ This report is read-only. It turns broad RAG, knowledge base, vector search, Age
 - Wave: 1
 - Audience: 第一次给企业或客服系统做知识库问答的人
 - Intent: how-to
-- Candidate files: content/blog/ai-agent-memory-rag-design-guide.mdx
+- Candidate files: content/blog/together-ai-api-beginner-guide.mdx
 
 Search queries:
 - RAG 知识库搭建教程
@@ -194,7 +192,7 @@ Source targets:
 - Wave: 2
 - Audience: 已经做出知识库 demo、但回答不准的人
 - Intent: troubleshooting
-- Candidate files: content/blog/ai-agent-memory-rag-design-guide.mdx
+- Candidate files: content/blog/together-ai-api-beginner-guide.mdx
 
 Search queries:
 - RAG 评测怎么做

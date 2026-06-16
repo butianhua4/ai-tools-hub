@@ -1,6 +1,6 @@
 # Review Candidate Preflight
 
-Generated at: 2026-06-14T10:38:38.371Z
+Generated at: 2026-06-16T07:00:56.826Z
 
 Overall: PASS
 
@@ -21,14 +21,14 @@ Overall: PASS
 
 | Status | Score | Chinese chars | Title | File | Issues | Warnings |
 | --- | --- | --- | --- | --- | --- | --- |
-| PASS | 100 | 2186 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |  |  |
-| PASS | 100 | 2332 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |  |  |
-| PASS | 100 | 1232 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |  |  |
+| PASS | 100 | 1201 | AI 工具新手不应该先买哪些工具 | content/blog/tools-not-to-buy-first.mdx |  |  |
+| PASS | 100 | 1209 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |  |  |
+| PASS | 100 | 1246 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |  |  |
 
 ## Dry-run Commands
 
 ```bash
-npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
-npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx
-npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx
+npm run mark:review -- --file=content/blog/tools-not-to-buy-first.mdx
+npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx
+npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx
 ```

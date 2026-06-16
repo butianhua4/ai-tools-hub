@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:38:50.815Z",
+  "generatedAt": "2026-06-16T07:01:10.008Z",
   "guardrails": {
     "autoMarkReview": false,
     "autoPublish": false,
@@ -7,107 +7,280 @@
     "stopBefore": "Run mark:review --confirm-human or publish:articles --confirm only after explicit human approval."
   },
   "summary": {
-    "currentPackCandidates": 8,
-    "lanes": 12,
-    "plannedBatchCandidates": 28,
-    "sourceLanes": 33,
-    "topicsWithoutPublicCoverage": 7,
-    "uniqueNextReviewFiles": 19,
+    "currentPackCandidates": 4,
+    "lanes": 9,
+    "plannedBatchCandidates": 13,
+    "sourceLanes": 12,
+    "topicsWithoutPublicCoverage": 0,
+    "uniqueNextReviewFiles": 15,
     "unsafeCandidates": 0
   },
   "nextReviewFiles": [
-    "content/blog/ai-agent-memory-rag-design-guide.mdx",
-    "content/blog/ai-model-selection-customer-service-guide.mdx",
-    "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-    "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-    "content/blog/industry-ai-prompts-template-library-2026.mdx",
-    "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
-    "content/blog/data-analysis-ai-prompts-guide.mdx",
-    "content/blog/education-ai-prompts-guide.mdx",
-    "content/blog/dify-workflow-error-handling-guide.mdx",
-    "content/blog/dify-workflow-vs-agent-guide.mdx",
-    "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
-    "content/blog/local-llm-vram-not-enough-guide.mdx",
-    "content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx",
-    "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-    "content/blog/ai-api-key-security-rotation-guide.mdx",
-    "content/blog/claude-api-rate-limit-debug-guide.mdx",
-    "content/blog/gemini-api-rate-limit-debug-guide.mdx",
-    "content/blog/customer-service-ai-prompts-guide.mdx",
-    "content/blog/ecommerce-ai-prompts-guide.mdx"
+    "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+    "content/blog/together-ai-api-beginner-guide.mdx",
+    "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
+    "content/blog/vercel-deploy-checklist-template.mdx",
+    "content/blog/vector-database-selection-for-rag-guide.mdx",
+    "content/blog/supabase-pgvector-rag-guide.mdx",
+    "content/blog/subscription-payment-failed-message.mdx",
+    "content/blog/vercel-404-after-deploy.mdx",
+    "content/blog/vercel-404-after-deploy-checklist.mdx",
+    "content/blog/vercel-404-after-deploy-freelance-scope.mdx",
+    "content/blog/windows-path-permission-install-fix.mdx",
+    "content/blog/windows-path-permission-install-fix-checklist.mdx",
+    "content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+    "content/blog/tensorrt-llm-beginner-guide.mdx",
+    "content/blog/vllm-deployment-beginner-guide.mdx"
   ],
   "lanes": [
     {
       "candidates": [
         {
-          "category": "AI 记忆",
-          "currentPack": false,
-          "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "AI Agent 记忆",
-          "publishBatch": 40,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
-        },
-        {
           "category": "AI 部署",
           "currentPack": true,
-          "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+          "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
           "plannedBatch": true,
-          "primaryKeyword": "客服 AI 模型选型",
+          "primaryKeyword": "Vercel AI Gateway 多模型",
           "publishBatch": 34,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检"
+          "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级"
         },
         {
-          "category": "项目报价",
+          "category": "AI 基建",
           "currentPack": false,
-          "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+          "file": "content/blog/together-ai-api-beginner-guide.mdx",
           "plannedBatch": true,
-          "primaryKeyword": "AI 自动化项目报价",
-          "publishBatch": 33,
+          "primaryKeyword": "Together AI API 接入",
+          "publishBatch": 27,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+          "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界"
         },
         {
-          "category": "AI 部署",
+          "category": "AI 基建",
           "currentPack": false,
-          "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
+          "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
           "plannedBatch": true,
-          "primaryKeyword": "n8n AI Agent 知识库记忆",
-          "publishBatch": 33,
+          "primaryKeyword": "Vercel AI SDK 聊天机器人部署",
+          "publishBatch": 26,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储"
+          "title": "Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查"
         },
         {
-          "category": "AI 部署",
+          "category": "AI 基建",
           "currentPack": false,
-          "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "Open WebUI Functions Pipelines",
-          "publishBatch": 33,
+          "file": "content/blog/vllm-deployment-beginner-guide.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "vLLM 部署",
+          "publishBatch": 22,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+          "title": "vLLM 部署适合什么场景：新手先看推理服务边界"
+        },
+        {
+          "category": "模板和清单",
+          "currentPack": false,
+          "file": "content/blog/vercel-deploy-checklist-template.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Vercel 部署检查表",
+          "publishBatch": 19,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Vercel 部署检查表怎么写：给新手的上线模板"
         }
       ],
       "currentPackCandidates": 1,
-      "draftMatches": 32,
-      "lane": "deployment: RAG、知识库和向量检索",
-      "missingPublicCoverage": true,
-      "plannedBatchCandidates": 5,
-      "priorityScore": 348,
+      "draftMatches": 13,
+      "lane": "deployment: 大模型和 AI 应用部署",
+      "missingPublicCoverage": false,
+      "plannedBatchCandidates": 3,
+      "priorityScore": 230,
+      "publicMatches": 50,
+      "rationale": "High search-intent lane that can expand existing public coverage.",
+      "reviewFocus": [
+        "核对当前官方部署文档",
+        "检查环境变量、API Key、限流、日志、回滚和 smoke check",
+        "避免承诺一次部署就稳定运行"
+      ],
+      "searchQueries": [
+        "大模型部署教程",
+        "AI 应用部署教程",
+        "OpenAI API 部署教程",
+        "Vercel AI SDK 部署"
+      ],
+      "sourceTargets": [
+        "OpenAI API docs: https://platform.openai.com/docs",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+        "Anthropic docs: https://docs.anthropic.com"
+      ],
+      "workflowAngles": [
+        "环境变量",
+        "API Key",
+        "限流重试",
+        "上线检查",
+        "回滚"
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "category": "AI 部署",
+          "currentPack": true,
+          "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+          "plannedBatch": true,
+          "primaryKeyword": "Vercel AI Gateway 多模型",
+          "publishBatch": 34,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级"
+        },
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
+          "plannedBatch": true,
+          "primaryKeyword": "Vercel AI SDK 聊天机器人部署",
+          "publishBatch": 26,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查"
+        },
+        {
+          "category": "模板和清单",
+          "currentPack": false,
+          "file": "content/blog/vercel-deploy-checklist-template.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Vercel 部署检查表",
+          "publishBatch": 19,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Vercel 部署检查表怎么写：给新手的上线模板"
+        },
+        {
+          "category": "模板和清单",
+          "currentPack": false,
+          "file": "content/blog/vercel-deploy-checklist-template-checklist.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Vercel 部署检查表怎么写：新手检查清单",
+          "publishBatch": 19,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Vercel 部署检查表怎么写：新手检查清单"
+        },
+        {
+          "category": "工具导航",
+          "currentPack": false,
+          "file": "content/blog/vercel-vs-netlify-small-site.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Vercel 和 Netlify 部署小网站怎么选",
+          "publishBatch": 17,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Vercel 和 Netlify 部署小网站怎么选"
+        }
+      ],
+      "currentPackCandidates": 1,
+      "draftMatches": 5,
+      "lane": "content-backlog: 大模型和 AI 应用部署教程",
+      "missingPublicCoverage": false,
+      "plannedBatchCandidates": 2,
+      "priorityScore": 226,
       "publicMatches": 0,
-      "rationale": "High search-intent lane with ready drafts but no public coverage yet.",
+      "rationale": "部署、API、限流、环境变量是新人最容易搜索也最容易踩坑的入口。",
+      "reviewFocus": [
+        "核对官方部署文档",
+        "检查 API Key、限流、环境变量和费用说法",
+        "补足上线后的 smoke check 和回滚步骤"
+      ],
+      "searchQueries": [
+        "大模型部署教程",
+        "AI 应用部署 Vercel 教程",
+        "OpenAI API 部署教程",
+        "Claude API 部署教程"
+      ],
+      "sourceTargets": [
+        "OpenAI API docs: https://platform.openai.com/docs",
+        "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs"
+      ],
+      "workflowAngles": [
+        "search intent",
+        "fact review",
+        "risk language",
+        "internal links"
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "file": "content/blog/together-ai-api-beginner-guide.mdx",
+          "plannedBatch": true,
+          "primaryKeyword": "Together AI API 接入",
+          "publishBatch": 27,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界"
+        },
+        {
+          "category": "AI 基建",
+          "currentPack": true,
+          "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
+          "plannedBatch": true,
+          "primaryKeyword": "RAG 向量数据库怎么选",
+          "publishBatch": 25,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界"
+        },
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+          "plannedBatch": true,
+          "primaryKeyword": "Supabase pgvector",
+          "publishBatch": 24,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索"
+        },
+        {
+          "category": "AI 基建",
+          "currentPack": false,
+          "file": "content/blog/vector-database-beginner-guide.mdx",
+          "plannedBatch": true,
+          "primaryKeyword": "向量数据库",
+          "publishBatch": 21,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "向量数据库怎么选：新手先理解 embedding 和检索"
+        }
+      ],
+      "currentPackCandidates": 1,
+      "draftMatches": 4,
+      "lane": "deployment: RAG、知识库和向量检索",
+      "missingPublicCoverage": false,
+      "plannedBatchCandidates": 4,
+      "priorityScore": 206,
+      "publicMatches": 28,
+      "rationale": "High search-intent lane that can expand existing public coverage.",
       "reviewFocus": [
         "区分 RAG、微调和普通提示词",
         "核对切分、embedding、召回、引用和评测说法",
@@ -137,72 +310,60 @@
     {
       "candidates": [
         {
-          "category": "AI 记忆",
+          "category": "AI 基建",
           "currentPack": false,
-          "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+          "file": "content/blog/together-ai-api-beginner-guide.mdx",
           "plannedBatch": true,
-          "primaryKeyword": "AI Agent 记忆",
-          "publishBatch": 40,
+          "primaryKeyword": "Together AI API 接入",
+          "publishBatch": 27,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
+          "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界"
         },
         {
-          "category": "AI 部署",
+          "category": "AI 基建",
           "currentPack": true,
-          "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+          "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
           "plannedBatch": true,
-          "primaryKeyword": "客服 AI 模型选型",
-          "publishBatch": 34,
+          "primaryKeyword": "RAG 向量数据库怎么选",
+          "publishBatch": 25,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检"
+          "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界"
         },
         {
-          "category": "项目报价",
+          "category": "AI 基建",
           "currentPack": false,
-          "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+          "file": "content/blog/supabase-pgvector-rag-guide.mdx",
           "plannedBatch": true,
-          "primaryKeyword": "AI 自动化项目报价",
-          "publishBatch": 33,
+          "primaryKeyword": "Supabase pgvector",
+          "publishBatch": 24,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
+          "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索"
         },
         {
-          "category": "AI 部署",
+          "category": "AI 基建",
           "currentPack": false,
-          "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
+          "file": "content/blog/vector-database-beginner-guide.mdx",
           "plannedBatch": true,
-          "primaryKeyword": "n8n AI Agent 知识库记忆",
-          "publishBatch": 33,
+          "primaryKeyword": "向量数据库",
+          "publishBatch": 21,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "Open WebUI Functions Pipelines",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
+          "title": "向量数据库怎么选：新手先理解 embedding 和检索"
         }
       ],
       "currentPackCandidates": 1,
-      "draftMatches": 5,
+      "draftMatches": 4,
       "lane": "content-backlog: RAG、知识库和向量检索",
       "missingPublicCoverage": false,
-      "plannedBatchCandidates": 5,
-      "priorityScore": 342,
+      "plannedBatchCandidates": 4,
+      "priorityScore": 200,
       "publicMatches": 0,
       "rationale": "很多团队会搜索知识库 AI，但真正需要的是可审核、可引用、可质检的方案。",
       "reviewFocus": [
@@ -231,723 +392,364 @@
     {
       "candidates": [
         {
-          "category": "AI Agent",
-          "currentPack": true,
-          "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "AI Agent 部署",
-          "publishBatch": 40,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
-        },
-        {
-          "category": "AI 记忆",
+          "category": "收款工具",
           "currentPack": false,
-          "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "AI Agent 记忆",
-          "publishBatch": 40,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
-        },
-        {
-          "category": "项目报价",
-          "currentPack": false,
-          "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "AI 自动化项目报价",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+          "file": "content/blog/subscription-payment-failed-message.mdx",
           "plannedBatch": false,
-          "primaryKeyword": "Dify 工作流错误处理",
-          "publishBatch": 33,
+          "primaryKeyword": "订阅支付失败怎么和客户沟通",
+          "publishBatch": 16,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底"
+          "title": "订阅支付失败怎么和客户沟通"
         },
         {
-          "category": "AI 部署",
+          "category": "报错解决",
           "currentPack": false,
-          "file": "content/blog/dify-workflow-vs-agent-guide.mdx",
+          "file": "content/blog/vercel-404-after-deploy.mdx",
           "plannedBatch": false,
-          "primaryKeyword": "Dify Workflow 和 Agent 区别",
-          "publishBatch": 33,
+          "primaryKeyword": "Vercel 部署成功但 404",
+          "publishBatch": 15,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核"
+          "title": "Vercel 部署成功但页面 404：新手排查顺序"
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/vercel-404-after-deploy-checklist.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Vercel 部署后 404 检查清单",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Vercel 部署后 404 检查清单：逐页验收更稳"
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/vercel-404-after-deploy-freelance-scope.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Vercel 404 部署成功但页面打不开怎么办：使用前怎么判断是否适合",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "commercial",
+          "title": "Vercel 404 部署成功但页面打不开怎么办：使用前怎么判断是否适合"
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/vercel-404-after-deploy-mistakes.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Vercel 部署后 404 常见误区",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Vercel 部署后 404 常见误区：别只盯着域名"
         }
       ],
-      "currentPackCandidates": 1,
-      "draftMatches": 41,
-      "lane": "deployment: Agent 部署、工具调用和工作流",
-      "missingPublicCoverage": true,
-      "plannedBatchCandidates": 3,
-      "priorityScore": 338,
+      "currentPackCandidates": 0,
+      "draftMatches": 5,
+      "lane": "content-backlog: AI 工具和部署报错解决",
+      "missingPublicCoverage": false,
+      "plannedBatchCandidates": 0,
+      "priorityScore": 192,
       "publicMatches": 0,
-      "rationale": "High search-intent lane with ready drafts but no public coverage yet.",
+      "rationale": "报错类文章通常搜索意图明确，适合作为稳定长尾入口。",
       "reviewFocus": [
-        "区分 Agent、Workflow、普通聊天机器人",
-        "核对工具调用、状态、人工接管和日志边界",
-        "避免承诺全自动完成业务结果"
+        "保留错误现象、原因、修复步骤和验证命令",
+        "补足版本差异和官方链接",
+        "避免把偶然修复写成通用结论"
       ],
       "searchQueries": [
-        "AI Agent 部署教程",
-        "Agent 工具调用教程",
-        "AI 工作流部署",
-        "Agent 人工审核流程"
+        "OpenAI API 报错解决",
+        "Vercel 部署失败",
+        "npm install 报错",
+        "AI 应用部署 404"
+      ],
+      "sourceTargets": [
+        "OpenAI API docs: https://platform.openai.com/docs",
+        "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs"
+      ],
+      "workflowAngles": [
+        "search intent",
+        "fact review",
+        "risk language",
+        "internal links"
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/vercel-404-after-deploy.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Vercel 部署成功但 404",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Vercel 部署成功但页面 404：新手排查顺序"
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/vercel-404-after-deploy-checklist.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Vercel 部署后 404 检查清单",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Vercel 部署后 404 检查清单：逐页验收更稳"
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/vercel-404-after-deploy-freelance-scope.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Vercel 404 部署成功但页面打不开怎么办：使用前怎么判断是否适合",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "commercial",
+          "title": "Vercel 404 部署成功但页面打不开怎么办：使用前怎么判断是否适合"
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/vercel-404-after-deploy-mistakes.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Vercel 部署后 404 常见误区",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Vercel 部署后 404 常见误区：别只盯着域名"
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/windows-path-permission-install-fix.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Windows 路径和权限导致安装失败怎么办",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Windows 路径和权限导致安装失败怎么办"
+        }
+      ],
+      "currentPackCandidates": 0,
+      "draftMatches": 20,
+      "lane": "deployment: AI 应用部署报错和排查",
+      "missingPublicCoverage": false,
+      "plannedBatchCandidates": 0,
+      "priorityScore": 180,
+      "publicMatches": 70,
+      "rationale": "High search-intent lane that can expand existing public coverage.",
+      "reviewFocus": [
+        "保留错误现象、原因、修复步骤和验证命令",
+        "不要把偶然修复写成通用结论",
+        "补齐官方文档或日志来源"
+      ],
+      "searchQueries": [
+        "Vercel build failed",
+        "Vercel 部署后 404",
+        "API Key 无效或缺失",
+        "环境变量缺失怎么办"
+      ],
+      "sourceTargets": [
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+        "OpenAI API docs: https://platform.openai.com/docs"
+      ],
+      "workflowAngles": [
+        "错误日志",
+        "复现",
+        "修复顺序",
+        "验证命令",
+        "项目边界"
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/windows-path-permission-install-fix.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Windows 路径和权限导致安装失败怎么办",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Windows 路径和权限导致安装失败怎么办"
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/windows-path-permission-install-fix-checklist.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Windows 路径和权限导致安装失败怎么办：新手检查清单",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Windows 路径和权限导致安装失败怎么办：新手检查清单"
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "commercial",
+          "title": "Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合"
+        },
+        {
+          "category": "报错解决",
+          "currentPack": false,
+          "file": "content/blog/windows-path-permission-install-fix-mistakes.mdx",
+          "plannedBatch": false,
+          "primaryKeyword": "Windows 路径和权限导致安装失败怎么办：常见错误和解决步骤",
+          "publishBatch": 15,
+          "qualityScore": 100,
+          "safeDraft": true,
+          "searchIntent": "informational",
+          "title": "Windows 路径和权限导致安装失败怎么办：常见错误和解决步骤"
+        }
+      ],
+      "currentPackCandidates": 0,
+      "draftMatches": 4,
+      "lane": "deployment: MCP、工具权限和企业集成安全",
+      "missingPublicCoverage": false,
+      "plannedBatchCandidates": 0,
+      "priorityScore": 158,
+      "publicMatches": 9,
+      "rationale": "High search-intent lane that can expand existing public coverage.",
+      "reviewFocus": [
+        "核对工具权限、沙箱、审批、审计日志和密钥边界",
+        "提醒读写执行要分级",
+        "避免给出绕过权限或自动执行敏感操作的建议"
+      ],
+      "searchQueries": [
+        "MCP Server 部署安全",
+        "Agent 工具权限控制",
+        "企业微信 AI Agent",
+        "Slack AI Agent 接入"
       ],
       "sourceTargets": [
         "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
-        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
-        "LangChain docs: https://python.langchain.com/docs"
-      ],
-      "workflowAngles": [
-        "工具白名单",
-        "多步执行",
-        "人工确认",
-        "失败重试",
-        "日志追踪"
-      ]
-    },
-    {
-      "candidates": [
-        {
-          "category": "AI Agent",
-          "currentPack": true,
-          "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "AI Agent 部署",
-          "publishBatch": 40,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查"
-        },
-        {
-          "category": "AI 记忆",
-          "currentPack": false,
-          "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "AI Agent 记忆",
-          "publishBatch": 40,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界"
-        },
-        {
-          "category": "项目报价",
-          "currentPack": false,
-          "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "AI 自动化项目报价",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/dify-workflow-error-handling-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "Dify 工作流错误处理",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/dify-workflow-vs-agent-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "Dify Workflow 和 Agent 区别",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核"
-        }
-      ],
-      "currentPackCandidates": 1,
-      "draftMatches": 5,
-      "lane": "content-backlog: Agent 部署、工具调用和记忆",
-      "missingPublicCoverage": false,
-      "plannedBatchCandidates": 3,
-      "priorityScore": 334,
-      "publicMatches": 0,
-      "rationale": "Agent、记忆和工作流是高频 AI 应用词，但需要清楚解释边界和落地步骤。",
-      "reviewFocus": [
-        "解释工具调用和多步执行边界",
-        "明确记忆、状态和人工确认的安全边界",
-        "避免承诺全自动完成业务结果"
-      ],
-      "searchQueries": [
-        "AI Agent 部署教程",
-        "Agent 记忆怎么做",
-        "AI Agent 工具调用教程",
-        "AI 工作流部署"
-      ],
-      "sourceTargets": [
-        "OpenAI API docs: https://platform.openai.com/docs",
-        "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering",
-        "Vercel AI SDK docs: https://ai-sdk.dev/docs"
-      ],
-      "workflowAngles": [
-        "search intent",
-        "fact review",
-        "risk language",
-        "internal links"
-      ]
-    },
-    {
-      "candidates": [
-        {
-          "category": "AI 提示词",
-          "currentPack": true,
-          "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "全行业 AI 提示词模板",
-          "publishBatch": 40,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": true,
-          "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "客服 AI 模型选型",
-          "publishBatch": 34,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检"
-        },
-        {
-          "category": "AI 提示词",
-          "currentPack": false,
-          "file": "content/blog/ai-prompt-library-team-knowledge-base-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "团队 AI 提示词库",
-          "publishBatch": 32,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用"
-        },
-        {
-          "category": "AI 提示词",
-          "currentPack": false,
-          "file": "content/blog/data-analysis-ai-prompts-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "数据分析 AI 提示词",
-          "publishBatch": 31,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要"
-        },
-        {
-          "category": "AI 提示词",
-          "currentPack": false,
-          "file": "content/blog/education-ai-prompts-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "教育 AI 提示词",
-          "publishBatch": 31,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "教育 AI 提示词模板：备课、教案、测验、反馈和学习计划"
-        }
-      ],
-      "currentPackCandidates": 2,
-      "draftMatches": 5,
-      "lane": "content-backlog: 全行业 AI 提示词和工作流模板",
-      "missingPublicCoverage": false,
-      "plannedBatchCandidates": 4,
-      "priorityScore": 334,
-      "publicMatches": 0,
-      "rationale": "提示词类内容搜索面宽，但需要从模板升级成行业流程，才更适合长期收录。",
-      "reviewFocus": [
-        "按行业给可复制结构",
-        "避免空泛万能提示词",
-        "补充输入字段、质检标准和反例"
-      ],
-      "searchQueries": [
-        "AI 提示词大全",
-        "销售 AI 提示词",
-        "客服 AI 提示词",
-        "运营 AI 提示词",
-        "HR AI 提示词"
-      ],
-      "sourceTargets": [
-        "OpenAI API docs: https://platform.openai.com/docs",
-        "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering",
-        "Vercel AI SDK docs: https://ai-sdk.dev/docs"
-      ],
-      "workflowAngles": [
-        "search intent",
-        "fact review",
-        "risk language",
-        "internal links"
-      ]
-    },
-    {
-      "candidates": [
-        {
-          "category": "AI 提示词",
-          "currentPack": true,
-          "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "全行业 AI 提示词模板",
-          "publishBatch": 40,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
-        },
-        {
-          "category": "AI 提示词",
-          "currentPack": false,
-          "file": "content/blog/data-analysis-ai-prompts-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "数据分析 AI 提示词",
-          "publishBatch": 31,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要"
-        },
-        {
-          "category": "AI 提示词",
-          "currentPack": false,
-          "file": "content/blog/education-ai-prompts-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "教育 AI 提示词",
-          "publishBatch": 31,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "教育 AI 提示词模板：备课、教案、测验、反馈和学习计划"
-        },
-        {
-          "category": "AI 提示词",
-          "currentPack": false,
-          "file": "content/blog/healthcare-admin-ai-prompts-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "医疗 AI 提示词",
-          "publishBatch": 31,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "医疗行政 AI 提示词模板：病历摘要、随访问卷和宣教材料怎么安全写"
-        }
-      ],
-      "currentPackCandidates": 1,
-      "draftMatches": 17,
-      "lane": "industry-prompt: 全行业提示词模板库",
-      "missingPublicCoverage": true,
-      "plannedBatchCandidates": 2,
-      "priorityScore": 324,
-      "publicMatches": 0,
-      "rationale": "High search-intent lane with ready drafts but no public coverage yet.",
-      "reviewFocus": [
-        "必须说明提示词不是万能答案",
-        "补齐输入字段、输出格式、质检标准和反例",
-        "避免承诺直接带来成交、排名或收益"
-      ],
-      "searchQueries": [
-        "AI 提示词大全",
-        "ChatGPT 提示词模板",
-        "全行业 AI 提示词",
-        "AI prompt library"
-      ],
-      "sourceTargets": [
-        "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
-        "OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation",
-        "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-        "Google Gemini Workspace prompting: https://support.google.com/docs/answer/15013615",
-        "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
-      ],
-      "workflowAngles": [
-        "行业分类",
-        "提示词版本管理",
-        "审核标准",
-        "复用规则"
-      ]
-    },
-    {
-      "candidates": [
-        {
-          "category": "项目报价",
-          "currentPack": false,
-          "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "AI 自动化项目报价",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/dify-workflow-error-handling-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "Dify 工作流错误处理",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/dify-workflow-vs-agent-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "Dify Workflow 和 Agent 区别",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "n8n AI Agent 知识库记忆",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/n8n-ai-agent-webhook-production-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "n8n AI Agent Webhook",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "n8n AI Agent 接 Webhook 怎么上线：触发、鉴权、队列和失败重试"
-        }
-      ],
-      "currentPackCandidates": 0,
-      "draftMatches": 21,
-      "lane": "deployment: Dify、n8n、Flowise 和无代码 AI 自动化",
-      "missingPublicCoverage": true,
-      "plannedBatchCandidates": 2,
-      "priorityScore": 312,
-      "publicMatches": 0,
-      "rationale": "High search-intent lane with ready drafts but no public coverage yet.",
-      "reviewFocus": [
-        "核对自部署和云端功能边界",
-        "检查 Webhook、权限、连接器、错误处理和人工兜底",
-        "避免引导群发、绕规则或站外交易"
-      ],
-      "searchQueries": [
-        "Dify 部署教程",
-        "n8n AI Agent 自托管",
-        "Flowise 本地部署",
-        "Dify 工作流错误处理"
-      ],
-      "sourceTargets": [
-        "Dify docs: https://docs.dify.ai",
         "n8n docs: https://docs.n8n.io"
       ],
       "workflowAngles": [
-        "自部署",
-        "Webhook",
-        "鉴权",
-        "错误处理",
-        "人工兜底"
+        "工具权限",
+        "审批",
+        "沙箱",
+        "审计日志",
+        "IM 接入"
       ]
     },
     {
       "candidates": [
         {
-          "category": "项目报价",
+          "category": "AI 基建",
           "currentPack": false,
-          "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "AI 自动化项目报价",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/dify-workflow-error-handling-guide.mdx",
+          "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
           "plannedBatch": false,
-          "primaryKeyword": "Dify 工作流错误处理",
-          "publishBatch": 33,
+          "primaryKeyword": "TensorRT-LLM 入门",
+          "publishBatch": 29,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/dify-workflow-vs-agent-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "Dify Workflow 和 Agent 区别",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核"
+          "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收"
         },
         {
           "category": "AI 基建",
           "currentPack": false,
-          "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
+          "file": "content/blog/vllm-deployment-beginner-guide.mdx",
           "plannedBatch": false,
-          "primaryKeyword": "MCP Server 部署安全",
-          "publishBatch": 33,
+          "primaryKeyword": "vLLM 部署",
+          "publishBatch": 22,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/n8n-ai-agent-rag-memory-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "n8n AI Agent 知识库记忆",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储"
+          "title": "vLLM 部署适合什么场景：新手先看推理服务边界"
         }
       ],
       "currentPackCandidates": 0,
-      "draftMatches": 5,
-      "lane": "content-backlog: Dify、n8n、MCP 和无代码 AI 自动化",
+      "draftMatches": 2,
+      "lane": "deployment: LLM Serving、GPU 和托管推理",
       "missingPublicCoverage": false,
-      "plannedBatchCandidates": 2,
-      "priorityScore": 310,
-      "publicMatches": 0,
-      "rationale": "无代码 AI 自动化容易吸引搜索流量，也最需要平台规则和权限边界提醒。",
+      "plannedBatchCandidates": 0,
+      "priorityScore": 128,
+      "publicMatches": 5,
+      "rationale": "High search-intent lane that can expand existing public coverage.",
       "reviewFocus": [
-        "明确 Dify、n8n、MCP 的适用范围",
-        "核对连接器、Webhook 和权限风险",
-        "避免鼓励群发、绕规则或站外交易"
+        "核对 serving 框架版本和部署方式",
+        "说明冷启动、并发、成本、GPU、扩缩容和监控",
+        "避免把 benchmark 写成项目保证"
       ],
       "searchQueries": [
-        "Dify 部署教程",
-        "n8n AI 自动化教程",
-        "MCP 使用教程",
-        "AI 自动化工作流教程"
+        "vLLM 部署教程",
+        "TGI 部署教程",
+        "RunPod Serverless 大模型部署",
+        "Modal Serverless GPU LLM"
       ],
       "sourceTargets": [
-        "OpenAI API docs: https://platform.openai.com/docs",
-        "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering",
-        "Vercel AI SDK docs: https://ai-sdk.dev/docs"
-      ],
-      "workflowAngles": [
-        "search intent",
-        "fact review",
-        "risk language",
-        "internal links"
-      ]
-    },
-    {
-      "candidates": [
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "Open WebUI Functions Pipelines",
-          "publishBatch": 33,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/local-llm-vram-not-enough-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "本地部署大模型显存不够",
-          "publishBatch": 32,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "本地部署大模型显存不够怎么办：量化、上下文、并发和换模型"
-        },
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "file": "content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "Docker 使用 NVIDIA GPU",
-          "publishBatch": 29,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Docker 怎么用 NVIDIA GPU：大模型部署先装对 Container Toolkit"
-        },
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "file": "content/blog/kubernetes-gpu-llm-deployment-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "Kubernetes GPU 大模型部署",
-          "publishBatch": 29,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Kubernetes 怎么部署 GPU 大模型：Device Plugin、资源限制和调度边界"
-        },
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "file": "content/blog/modal-serverless-gpu-llm-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "Modal Serverless GPU LLM",
-          "publishBatch": 29,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Modal 怎么部署 Serverless GPU LLM：代码化环境和冷启动先评估"
-        }
-      ],
-      "currentPackCandidates": 0,
-      "draftMatches": 14,
-      "lane": "deployment: 本地模型和开源模型部署",
-      "missingPublicCoverage": true,
-      "plannedBatchCandidates": 1,
-      "priorityScore": 310,
-      "publicMatches": 0,
-      "rationale": "High search-intent lane with ready drafts but no public coverage yet.",
-      "reviewFocus": [
-        "核对显存、量化、模型大小和上下文要求",
-        "区分 Ollama、LM Studio、Open WebUI、vLLM 和 TGI",
-        "不要暗示本地部署一定更省钱或更安全"
-      ],
-      "searchQueries": [
-        "本地部署大模型教程",
-        "Ollama 本地部署",
-        "Open WebUI Ollama 部署",
-        "本地大模型显存不够"
-      ],
-      "sourceTargets": [
-        "Ollama docs: https://docs.ollama.com",
         "vLLM docs: https://docs.vllm.ai",
         "Hugging Face docs: https://huggingface.co/docs"
       ],
       "workflowAngles": [
-        "硬件估算",
-        "模型下载",
-        "本地 API",
-        "量化",
-        "网页聊天"
+        "在线 serving",
+        "并发",
+        "GPU",
+        "冷启动",
+        "成本延迟"
       ]
     },
     {
       "candidates": [
         {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "大模型部署",
-          "publishBatch": 40,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/local-llm-vram-not-enough-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "本地部署大模型显存不够",
-          "publishBatch": 32,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "本地部署大模型显存不够怎么办：量化、上下文、并发和换模型"
-        },
-        {
           "category": "AI 基建",
           "currentPack": false,
-          "file": "content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx",
+          "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
           "plannedBatch": false,
-          "primaryKeyword": "Docker 使用 NVIDIA GPU",
+          "primaryKeyword": "TensorRT-LLM 入门",
           "publishBatch": 29,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "Docker 怎么用 NVIDIA GPU：大模型部署先装对 Container Toolkit"
+          "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收"
         },
         {
           "category": "AI 基建",
           "currentPack": false,
-          "file": "content/blog/huggingface-tgi-deployment-guide.mdx",
+          "file": "content/blog/vllm-deployment-beginner-guide.mdx",
           "plannedBatch": false,
-          "primaryKeyword": "Hugging Face TGI 部署",
-          "publishBatch": 29,
+          "primaryKeyword": "vLLM 部署",
+          "publishBatch": 22,
           "qualityScore": 100,
           "safeDraft": true,
           "searchIntent": "informational",
-          "title": "Hugging Face TGI 怎么部署：Text Generation Inference 入门检查表"
-        },
-        {
-          "category": "AI 基建",
-          "currentPack": false,
-          "file": "content/blog/kubernetes-gpu-llm-deployment-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "Kubernetes GPU 大模型部署",
-          "publishBatch": 29,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Kubernetes 怎么部署 GPU 大模型：Device Plugin、资源限制和调度边界"
+          "title": "vLLM 部署适合什么场景：新手先看推理服务边界"
         }
       ],
       "currentPackCandidates": 0,
-      "draftMatches": 5,
+      "draftMatches": 2,
       "lane": "content-backlog: Ollama、vLLM 和开源模型本地部署",
       "missingPublicCoverage": false,
       "plannedBatchCandidates": 0,
-      "priorityScore": 300,
+      "priorityScore": 126,
       "publicMatches": 0,
       "rationale": "本地模型部署搜索需求强，但信息变化快，必须保留人工事实核对。",
       "reviewFocus": [
@@ -971,172 +773,6 @@
         "fact review",
         "risk language",
         "internal links"
-      ]
-    },
-    {
-      "candidates": [
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "AI API Key 安全管理",
-          "publishBatch": 34,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/claude-api-rate-limit-debug-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "Claude API rate limit reached",
-          "publishBatch": 34,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Claude API Rate limit reached 怎么办：限流、上下文、重试和降级"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/gemini-api-rate-limit-debug-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "Gemini API 限流",
-          "publishBatch": 34,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/multi-model-router-fallback-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "多模型 Router 降级",
-          "publishBatch": 34,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估"
-        },
-        {
-          "category": "AI 部署",
-          "currentPack": false,
-          "file": "content/blog/openai-batch-api-cost-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "OpenAI Batch API",
-          "publishBatch": 34,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "OpenAI Batch API 适合什么任务：批量摘要、分类、抽取和成本控制"
-        }
-      ],
-      "currentPackCandidates": 0,
-      "draftMatches": 18,
-      "lane": "deployment: 模型 API 接入、限流和多模型降级",
-      "missingPublicCoverage": true,
-      "plannedBatchCandidates": 0,
-      "priorityScore": 298,
-      "publicMatches": 0,
-      "rationale": "High search-intent lane with ready drafts but no public coverage yet.",
-      "reviewFocus": [
-        "核对 API 端点、模型名、限流、费用和降级方式",
-        "检查 key 安全和重试逻辑",
-        "避免把过期模型名或价格写死为结论"
-      ],
-      "searchQueries": [
-        "OpenAI API Next.js",
-        "Claude API 接入",
-        "Gemini API Next.js",
-        "API rate limit 怎么办"
-      ],
-      "sourceTargets": [
-        "OpenAI API docs: https://platform.openai.com/docs",
-        "Anthropic docs: https://docs.anthropic.com"
-      ],
-      "workflowAngles": [
-        "服务端调用",
-        "限流重试",
-        "降级模型",
-        "成本控制",
-        "Key 轮换"
-      ]
-    },
-    {
-      "candidates": [
-        {
-          "category": "AI 提示词",
-          "currentPack": true,
-          "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
-          "plannedBatch": true,
-          "primaryKeyword": "全行业 AI 提示词模板",
-          "publishBatch": 40,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用"
-        },
-        {
-          "category": "AI 提示词",
-          "currentPack": false,
-          "file": "content/blog/customer-service-ai-prompts-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "客服 AI 提示词",
-          "publishBatch": 30,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断"
-        },
-        {
-          "category": "AI 提示词",
-          "currentPack": false,
-          "file": "content/blog/ecommerce-ai-prompts-guide.mdx",
-          "plannedBatch": false,
-          "primaryKeyword": "电商 AI 提示词",
-          "publishBatch": 30,
-          "qualityScore": 100,
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "title": "电商 AI 提示词模板：商品标题、详情页、评价分析和售后回复"
-        }
-      ],
-      "currentPackCandidates": 1,
-      "draftMatches": 3,
-      "lane": "industry-prompt: 客服",
-      "missingPublicCoverage": true,
-      "plannedBatchCandidates": 1,
-      "priorityScore": 286,
-      "publicMatches": 0,
-      "rationale": "High search-intent lane with ready drafts but no public coverage yet.",
-      "reviewFocus": [
-        "强调人工升级边界",
-        "敏感投诉和退款不能自动定性",
-        "输出必须包含情绪安抚和事实确认"
-      ],
-      "searchQueries": [
-        "客服 AI 提示词",
-        "客服回复 AI 模板",
-        "工单分类 AI prompt",
-        "售后回复 AI 提示词"
-      ],
-      "sourceTargets": [
-        "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
-        "OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation",
-        "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-        "Google Gemini Workspace prompting: https://support.google.com/docs/answer/15013615",
-        "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
-      ],
-      "workflowAngles": [
-        "回复草稿",
-        "工单分类",
-        "情绪安抚",
-        "升级判断"
       ]
     }
   ]

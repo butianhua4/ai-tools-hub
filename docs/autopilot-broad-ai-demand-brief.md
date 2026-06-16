@@ -1,6 +1,6 @@
 # Autopilot Broad AI Demand Brief
 
-Generated at: 2026-06-14T10:39:22.053Z
+Generated at: 2026-06-16T07:01:41.171Z
 
 This report is read-only. It widens content planning beyond website deployment into LLM deployment, Agent deployment, memory, RAG, no-code automation, AI API operations, observability, and industry prompt packs.
 
@@ -16,12 +16,12 @@ This report is read-only. It widens content planning beyond website deployment i
 ## Summary
 
 - clusters: 8
-- clustersWithoutPublicCoverage: 8
-- clustersWithReadyCandidates: 8
+- clustersWithoutPublicCoverage: 0
+- clustersWithReadyCandidates: 4
 - externalSourceSignals: 24
-- publicArticles: 15
-- readyCandidateFiles: 33
-- reviewReadyDrafts: 633
+- publicArticles: 500
+- readyCandidateFiles: 7
+- reviewReadyDrafts: 148
 - unsafeClusters: 0
 
 ## Next Actions
@@ -39,159 +39,21 @@ This report is read-only. It widens content planning beyond website deployment i
 
 | Score | Public | Drafts | Ready | Sources | Queries | Cluster | Audience | Why |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 321 | 0 | 31 | 6 | 3 | 5 | 开源大模型部署：Ollama、vLLM、TGI、RunPod | 想把开源大模型真正跑起来的人：开发者、独立站站长、AI 工具创业者 | 这是比网页部署更宽的入口词，搜索者通常已经有明确问题：跑不起来、太慢、太贵、API 接不上。 |
-| 317 | 0 | 35 | 6 | 3 | 5 | Agent 部署、工具调用和生产安全 | 正在把聊天机器人升级成业务 Agent、工作流或内部工具的人 | Agent 是当前 AI 应用搜索里的大词，但文章必须从权限、状态和人工接管切入，才能比泛泛介绍更有用。 |
-| 315 | 0 | 28 | 6 | 3 | 5 | Agent 记忆：短期记忆、长期记忆、RAG、Postgres | 想让 Agent 记住用户、项目、偏好和流程的开发者与团队 | 用户明确点名“记忆板块”，这个方向能从技术教程、架构设计、隐私合规三个层面持续扩展。 |
-| 313 | 0 | 32 | 6 | 3 | 5 | RAG、知识库、向量数据库和引用溯源 | 企业知识库、客服机器人、内部搜索、文档问答负责人 | RAG 是搜索面很宽的稳定主题，适合承接企业知识库、客服、内部文档问答和 Agent 记忆流量。 |
-| 311 | 0 | 27 | 6 | 3 | 6 | 全行业 AI 提示词和工作流模板 | 运营、销售、客服、HR、教育、财务、法务、产品等非技术岗位 | 这是用户特别要求的“全行业使用 AI 的提示词”，搜索面宽，适合先做总入口，再拆岗位长尾。 |
-| 307 | 0 | 36 | 6 | 3 | 5 | Dify、n8n、Coze、Flowise、MCP 自动化部署 | 低代码/无代码自动化项目者、内部工具负责人、小团队运营 | 这类词同时覆盖搜索流量和可售服务，适合从教程、报价、验收、风控四个角度铺内容。 |
-| 293 | 0 | 15 | 6 | 3 | 5 | AI API 接入、限流、成本和多模型路由 | 需要把 AI API 接进产品、网站、SaaS 原型的人 | API 接入和报错是明确搜索意图，能和工具页、报价页、部署教程形成内链闭环。 |
-| 287 | 0 | 13 | 6 | 3 | 5 | LLM 观测、评测、日志和上线后质量 | 准备把 AI 应用交付给客户或团队使用的人 | 部署之后的质量和成本问题会持续出现，适合承接更成熟的搜索需求，也能提高文章可信度。 |
-
-## 开源大模型部署：Ollama、vLLM、TGI、RunPod
-
-- Audience: 想把开源大模型真正跑起来的人：开发者、独立站站长、AI 工具创业者
-- Gap score: 321
-- Public matches: 0
-- Draft matches: 31
-- Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
-
-Search queries to cover:
-
-- 大模型部署教程
-- Ollama 本地部署教程
-- vLLM 部署教程
-- RunPod vLLM serverless
-- Hugging Face TGI 部署
-
-Content angles:
-
-- 本地先跑通：Ollama、LM Studio、llama.cpp 的入门边界
-- 生产推理服务：vLLM、TGI、RunPod Serverless 的选择
-- 成本和延迟：GPU、并发、量化、上下文长度的检查表
-- OpenAI-compatible API：如何接入现有前端或 Agent
-
-Review focus:
-
-- 核对部署命令、模型名称、GPU/显存要求、API 路径和版本差异
-- 不要承诺本地部署一定更省钱或更稳定
-- 必须包含 smoke check、回滚、日志、限流和成本边界
-
-External source signals:
-
-- official-doc: [Deploy vLLM on Runpod Serverless](https://docs.runpod.io/serverless/vllm/get-started) - RunPod 文档把 vLLM Serverless 当成独立部署路径，适合做一篇从 endpoint 到 API 调用的教程。
-- vendor-guide: [Deploy vLLM with Docker on Runpod](https://www.runpod.io/articles/guides/deploy-vllm-runpod-docker) - RunPod 2026 指南覆盖 vLLM Docker、模型加载和生产调优，适合补充 GPU/容器部署角度。
-- search-result: [From Prototype to Production: A Complete LLM Deployment Guide](https://www.spheron.network/blog/llm-deployment-guide/) - LLM 部署类搜索结果集中出现 Ollama、vLLM、TGI、GPU cloud、MLOps 等组合词。
-
-Ready draft candidates:
-
-| Batch | Score | Intent | Keyword | Title | File |
-| --- | --- | --- | --- | --- | --- |
-| 40 | 100 | informational | 大模型部署 | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-| 34 | 100 | informational | 大模型成本监控 | 大模型成本监控怎么做：按用户、功能、模型和项目拆账 | content/blog/llm-cost-monitoring-dashboard-guide.mdx |
-| 32 | 100 | informational | 大模型 API 限流重试 | 大模型 API 限流和重试怎么做：429、队列、退避和降级方案 | content/blog/llm-api-rate-limit-retry-guide.mdx |
-| 32 | 100 | informational | 本地部署大模型显存不够 | 本地部署大模型显存不够怎么办：量化、上下文、并发和换模型 | content/blog/local-llm-vram-not-enough-guide.mdx |
-| 29 | 100 | informational | BentoML LLM 部署 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
-| 29 | 100 | informational | Docker 使用 NVIDIA GPU | Docker 怎么用 NVIDIA GPU：大模型部署先装对 Container Toolkit | content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx |
-
-## Agent 部署、工具调用和生产安全
-
-- Audience: 正在把聊天机器人升级成业务 Agent、工作流或内部工具的人
-- Gap score: 317
-- Public matches: 0
-- Draft matches: 35
-- Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
-
-Search queries to cover:
-
-- AI Agent 部署教程
-- Agent 工具调用教程
-- AI Agent 生产环境
-- LangGraph Agent 入门
-- CrewAI 部署教程
-
-Content angles:
-
-- Agent 和普通 Chatbot 的区别
-- 工具调用 allowlist、权限、审计日志和人审
-- Vercel AI SDK、LangGraph、CrewAI、AutoGen 的入门对比
-- Agent 上线后的观测、失败回退和人工接管
-
-Review focus:
-
-- 不要写成全自动替人完成高风险业务
-- 明确工具权限、人工确认、日志和失败处理
-- 核对 SDK/API 的当前名称和部署方式
-
-External source signals:
-
-- official-doc: [Vercel AI SDK documentation](https://ai-sdk.dev/docs) - Agent 和工具调用正在从 demo 走向生产，部署文章需要强调权限和人工审批。
-- official-doc: [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) - OpenAI Agents SDK 是 Agent 主题的官方信号源，适合核对工具、handoff、guardrail 等概念。
-- official-doc: [LangGraph documentation](https://langchain-ai.github.io/langgraph/) - LangGraph 是 Agent 工作流搜索中的高频框架，适合做工程化和状态图解释。
-
-Ready draft candidates:
-
-| Batch | Score | Intent | Keyword | Title | File |
-| --- | --- | --- | --- | --- | --- |
-| 40 | 100 | informational | AI Agent 部署 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| 40 | 100 | informational | AI Agent 记忆 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| 33 | 100 | informational | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| 33 | 100 | informational | Dify 工作流错误处理 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
-| 33 | 100 | informational | Dify Workflow 和 Agent 区别 | Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核 | content/blog/dify-workflow-vs-agent-guide.mdx |
-| 33 | 100 | informational | 企业微信 飞书 Slack AI Agent | 企业微信、飞书、Slack 怎么接 AI Agent：消息入口、权限和人工接管 | content/blog/enterprise-im-ai-agent-integration-guide.mdx |
-
-## Agent 记忆：短期记忆、长期记忆、RAG、Postgres
-
-- Audience: 想让 Agent 记住用户、项目、偏好和流程的开发者与团队
-- Gap score: 315
-- Public matches: 0
-- Draft matches: 28
-- Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
-
-Search queries to cover:
-
-- AI Agent 记忆怎么做
-- Agent memory RAG
-- AI Agent 长期记忆
-- pgvector Agent memory
-- RAG 和记忆区别
-
-Content angles:
-
-- 记忆不是简单向量库：facts、events、procedures 的拆分
-- Postgres/pgvector 记忆表结构
-- RAG 知识库和用户记忆的边界
-- 记忆清理、去重、过期、隐私和撤回
-
-Review focus:
-
-- 区分知识库 RAG 和用户记忆
-- 必须有隐私、删除、去重、引用和人工纠错边界
-- 避免宣称记忆层能自动解决幻觉
-
-External source signals:
-
-- research: [Self-Aware Vector Embeddings for Retrieval-Augmented Generation](https://arxiv.org/abs/2604.20598) - 2026 RAG/Agent 讨论明显关注 structured memory、temporal/confidence/relationship 等维度。
-- community: [Vector dbs aren't memory](https://www.reddit.com/r/Rag/comments/1qjvqd4/vector_dbs_arent_memory_learned_this_the_hard_way/) - 社区讨论集中在“vector DB 不是 memory”，适合做反常识型解释文章。
-- official-doc: [Memory and RAG Tutorial](https://docs.agenticgokit.com/tutorials/getting-started/memory-and-rag) - RAG 记忆教程开始把 pgvector、agent orchestration 和 retrieval strategy 放在一起讲。
-
-Ready draft candidates:
-
-| Batch | Score | Intent | Keyword | Title | File |
-| --- | --- | --- | --- | --- | --- |
-| 40 | 100 | informational | AI Agent 记忆 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| 33 | 100 | informational | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| 33 | 100 | informational | n8n AI Agent 知识库记忆 | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
-| 33 | 100 | informational | Open WebUI Functions Pipelines | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| 32 | 100 | informational | Agent 记忆数据库设计 | Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则 | content/blog/agent-memory-postgres-schema-guide.mdx |
-| 32 | 100 | informational | RAG 引用来源 | RAG 怎么显示引用来源：文档名、页码、片段和可信度 | content/blog/rag-citation-source-trace-guide.mdx |
+| 168 | 28 | 4 | 4 | 3 | 5 | RAG、知识库、向量数据库和引用溯源 | 企业知识库、客服机器人、内部搜索、文档问答负责人 | RAG 是搜索面很宽的稳定主题，适合承接企业知识库、客服、内部文档问答和 Agent 记忆流量。 |
+| 157 | 25 | 3 | 3 | 3 | 5 | Agent 记忆：短期记忆、长期记忆、RAG、Postgres | 想让 Agent 记住用户、项目、偏好和流程的开发者与团队 | 用户明确点名“记忆板块”，这个方向能从技术教程、架构设计、隐私合规三个层面持续扩展。 |
+| 150 | 29 | 2 | 2 | 3 | 5 | 开源大模型部署：Ollama、vLLM、TGI、RunPod | 想把开源大模型真正跑起来的人：开发者、独立站站长、AI 工具创业者 | 这是比网页部署更宽的入口词，搜索者通常已经有明确问题：跑不起来、太慢、太贵、API 接不上。 |
+| 120 | 35 | 0 | 0 | 3 | 5 | Agent 部署、工具调用和生产安全 | 正在把聊天机器人升级成业务 Agent、工作流或内部工具的人 | Agent 是当前 AI 应用搜索里的大词，但文章必须从权限、状态和人工接管切入，才能比泛泛介绍更有用。 |
+| 115 | 12 | 1 | 1 | 3 | 5 | LLM 观测、评测、日志和上线后质量 | 准备把 AI 应用交付给客户或团队使用的人 | 部署之后的质量和成本问题会持续出现，适合承接更成熟的搜索需求，也能提高文章可信度。 |
+| 114 | 27 | 0 | 0 | 3 | 6 | 全行业 AI 提示词和工作流模板 | 运营、销售、客服、HR、教育、财务、法务、产品等非技术岗位 | 这是用户特别要求的“全行业使用 AI 的提示词”，搜索面宽，适合先做总入口，再拆岗位长尾。 |
+| 110 | 36 | 0 | 0 | 3 | 5 | Dify、n8n、Coze、Flowise、MCP 自动化部署 | 低代码/无代码自动化项目者、内部工具负责人、小团队运营 | 这类词同时覆盖搜索流量和可售服务，适合从教程、报价、验收、风控四个角度铺内容。 |
+| 106 | 15 | 0 | 0 | 3 | 5 | AI API 接入、限流、成本和多模型路由 | 需要把 AI API 接进产品、网站、SaaS 原型的人 | API 接入和报错是明确搜索意图，能和工具页、报价页、部署教程形成内链闭环。 |
 
 ## RAG、知识库、向量数据库和引用溯源
 
 - Audience: 企业知识库、客服机器人、内部搜索、文档问答负责人
-- Gap score: 313
-- Public matches: 0
-- Draft matches: 32
+- Gap score: 168
+- Public matches: 28
+- Draft matches: 4
 - Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
 
 Search queries to cover:
@@ -225,19 +87,183 @@ Ready draft candidates:
 
 | Batch | Score | Intent | Keyword | Title | File |
 | --- | --- | --- | --- | --- | --- |
-| 40 | 100 | informational | AI Agent 记忆 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| 34 | 100 | informational | 客服 AI 模型选型 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| 33 | 100 | informational | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| 33 | 100 | informational | n8n AI Agent 知识库记忆 | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
-| 33 | 100 | informational | Open WebUI Functions Pipelines | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| 32 | 100 | informational | RAG 引用来源 | RAG 怎么显示引用来源：文档名、页码、片段和可信度 | content/blog/rag-citation-source-trace-guide.mdx |
+| 27 | 100 | informational | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 25 | 100 | informational | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 24 | 100 | informational | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 21 | 100 | informational | 向量数据库 | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
+
+## Agent 记忆：短期记忆、长期记忆、RAG、Postgres
+
+- Audience: 想让 Agent 记住用户、项目、偏好和流程的开发者与团队
+- Gap score: 157
+- Public matches: 25
+- Draft matches: 3
+- Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
+
+Search queries to cover:
+
+- AI Agent 记忆怎么做
+- Agent memory RAG
+- AI Agent 长期记忆
+- pgvector Agent memory
+- RAG 和记忆区别
+
+Content angles:
+
+- 记忆不是简单向量库：facts、events、procedures 的拆分
+- Postgres/pgvector 记忆表结构
+- RAG 知识库和用户记忆的边界
+- 记忆清理、去重、过期、隐私和撤回
+
+Review focus:
+
+- 区分知识库 RAG 和用户记忆
+- 必须有隐私、删除、去重、引用和人工纠错边界
+- 避免宣称记忆层能自动解决幻觉
+
+External source signals:
+
+- research: [Self-Aware Vector Embeddings for Retrieval-Augmented Generation](https://arxiv.org/abs/2604.20598) - 2026 RAG/Agent 讨论明显关注 structured memory、temporal/confidence/relationship 等维度。
+- community: [Vector dbs aren't memory](https://www.reddit.com/r/Rag/comments/1qjvqd4/vector_dbs_arent_memory_learned_this_the_hard_way/) - 社区讨论集中在“vector DB 不是 memory”，适合做反常识型解释文章。
+- official-doc: [Memory and RAG Tutorial](https://docs.agenticgokit.com/tutorials/getting-started/memory-and-rag) - RAG 记忆教程开始把 pgvector、agent orchestration 和 retrieval strategy 放在一起讲。
+
+Ready draft candidates:
+
+| Batch | Score | Intent | Keyword | Title | File |
+| --- | --- | --- | --- | --- | --- |
+| 25 | 100 | informational | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 24 | 100 | informational | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 21 | 100 | informational | 向量数据库 | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
+
+## 开源大模型部署：Ollama、vLLM、TGI、RunPod
+
+- Audience: 想把开源大模型真正跑起来的人：开发者、独立站站长、AI 工具创业者
+- Gap score: 150
+- Public matches: 29
+- Draft matches: 2
+- Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
+
+Search queries to cover:
+
+- 大模型部署教程
+- Ollama 本地部署教程
+- vLLM 部署教程
+- RunPod vLLM serverless
+- Hugging Face TGI 部署
+
+Content angles:
+
+- 本地先跑通：Ollama、LM Studio、llama.cpp 的入门边界
+- 生产推理服务：vLLM、TGI、RunPod Serverless 的选择
+- 成本和延迟：GPU、并发、量化、上下文长度的检查表
+- OpenAI-compatible API：如何接入现有前端或 Agent
+
+Review focus:
+
+- 核对部署命令、模型名称、GPU/显存要求、API 路径和版本差异
+- 不要承诺本地部署一定更省钱或更稳定
+- 必须包含 smoke check、回滚、日志、限流和成本边界
+
+External source signals:
+
+- official-doc: [Deploy vLLM on Runpod Serverless](https://docs.runpod.io/serverless/vllm/get-started) - RunPod 文档把 vLLM Serverless 当成独立部署路径，适合做一篇从 endpoint 到 API 调用的教程。
+- vendor-guide: [Deploy vLLM with Docker on Runpod](https://www.runpod.io/articles/guides/deploy-vllm-runpod-docker) - RunPod 2026 指南覆盖 vLLM Docker、模型加载和生产调优，适合补充 GPU/容器部署角度。
+- search-result: [From Prototype to Production: A Complete LLM Deployment Guide](https://www.spheron.network/blog/llm-deployment-guide/) - LLM 部署类搜索结果集中出现 Ollama、vLLM、TGI、GPU cloud、MLOps 等组合词。
+
+Ready draft candidates:
+
+| Batch | Score | Intent | Keyword | Title | File |
+| --- | --- | --- | --- | --- | --- |
+| 29 | 100 | informational | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| 22 | 100 | informational | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+
+## Agent 部署、工具调用和生产安全
+
+- Audience: 正在把聊天机器人升级成业务 Agent、工作流或内部工具的人
+- Gap score: 120
+- Public matches: 35
+- Draft matches: 0
+- Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
+
+Search queries to cover:
+
+- AI Agent 部署教程
+- Agent 工具调用教程
+- AI Agent 生产环境
+- LangGraph Agent 入门
+- CrewAI 部署教程
+
+Content angles:
+
+- Agent 和普通 Chatbot 的区别
+- 工具调用 allowlist、权限、审计日志和人审
+- Vercel AI SDK、LangGraph、CrewAI、AutoGen 的入门对比
+- Agent 上线后的观测、失败回退和人工接管
+
+Review focus:
+
+- 不要写成全自动替人完成高风险业务
+- 明确工具权限、人工确认、日志和失败处理
+- 核对 SDK/API 的当前名称和部署方式
+
+External source signals:
+
+- official-doc: [Vercel AI SDK documentation](https://ai-sdk.dev/docs) - Agent 和工具调用正在从 demo 走向生产，部署文章需要强调权限和人工审批。
+- official-doc: [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) - OpenAI Agents SDK 是 Agent 主题的官方信号源，适合核对工具、handoff、guardrail 等概念。
+- official-doc: [LangGraph documentation](https://langchain-ai.github.io/langgraph/) - LangGraph 是 Agent 工作流搜索中的高频框架，适合做工程化和状态图解释。
+
+Ready draft candidates:
+
+| Batch | Score | Intent | Keyword | Title | File |
+| --- | --- | --- | --- | --- | --- |
+
+## LLM 观测、评测、日志和上线后质量
+
+- Audience: 准备把 AI 应用交付给客户或团队使用的人
+- Gap score: 115
+- Public matches: 12
+- Draft matches: 1
+- Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
+
+Search queries to cover:
+
+- LLM observability 教程
+- RAG 评测教程
+- promptfoo 入门
+- LangSmith 教程
+- AI 应用日志监控
+
+Content angles:
+
+- Promptfoo、Ragas、LangSmith、Helicone、Phoenix 的用途
+- 上线前测试集和人工抽检
+- 日志、成本、延迟、错误率和用户反馈
+- RAG/Agent 失败案例复盘模板
+
+Review focus:
+
+- 不要把评测分数写成绝对质量保证
+- 明确日志隐私、数据脱敏和留存边界
+- 给出人工抽检和回滚流程
+
+External source signals:
+
+- official-doc: [promptfoo documentation](https://www.promptfoo.dev/docs/intro/) - Promptfoo 是 LLM eval 搜索中的常见工具，适合做上线前测试专题。
+- official-doc: [Ragas documentation](https://docs.ragas.io/) - Ragas 是 RAG 评测主题的事实源之一。
+- official-doc: [Helicone documentation](https://docs.helicone.ai/) - Helicone 覆盖 LLM observability、cost、latency、logs，适合做运维类内容。
+
+Ready draft candidates:
+
+| Batch | Score | Intent | Keyword | Title | File |
+| --- | --- | --- | --- | --- | --- |
+| 13 | 100 | informational | Vercel build failed 排查清单 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
 
 ## 全行业 AI 提示词和工作流模板
 
 - Audience: 运营、销售、客服、HR、教育、财务、法务、产品等非技术岗位
-- Gap score: 311
-- Public matches: 0
-- Draft matches: 27
+- Gap score: 114
+- Public matches: 27
+- Draft matches: 0
 - Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
 
 Search queries to cover:
@@ -272,19 +298,13 @@ Ready draft candidates:
 
 | Batch | Score | Intent | Keyword | Title | File |
 | --- | --- | --- | --- | --- | --- |
-| 40 | 100 | informational | 全行业 AI 提示词模板 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| 34 | 100 | informational | 客服 AI 模型选型 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| 32 | 100 | informational | 团队 AI 提示词库 | 团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用 | content/blog/ai-prompt-library-team-knowledge-base-guide.mdx |
-| 31 | 100 | informational | 数据分析 AI 提示词 | 数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要 | content/blog/data-analysis-ai-prompts-guide.mdx |
-| 31 | 100 | informational | 教育 AI 提示词 | 教育 AI 提示词模板：备课、教案、测验、反馈和学习计划 | content/blog/education-ai-prompts-guide.mdx |
-| 31 | 100 | informational | 医疗 AI 提示词 | 医疗行政 AI 提示词模板：病历摘要、随访问卷和宣教材料怎么安全写 | content/blog/healthcare-admin-ai-prompts-guide.mdx |
 
 ## Dify、n8n、Coze、Flowise、MCP 自动化部署
 
 - Audience: 低代码/无代码自动化项目者、内部工具负责人、小团队运营
-- Gap score: 307
-- Public matches: 0
-- Draft matches: 36
+- Gap score: 110
+- Public matches: 36
+- Draft matches: 0
 - Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
 
 Search queries to cover:
@@ -318,19 +338,13 @@ Ready draft candidates:
 
 | Batch | Score | Intent | Keyword | Title | File |
 | --- | --- | --- | --- | --- | --- |
-| 33 | 100 | informational | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| 33 | 100 | informational | Dify 工作流错误处理 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
-| 33 | 100 | informational | Dify Workflow 和 Agent 区别 | Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核 | content/blog/dify-workflow-vs-agent-guide.mdx |
-| 33 | 100 | informational | MCP Server 部署安全 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| 33 | 100 | informational | n8n AI Agent 知识库记忆 | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
-| 33 | 100 | informational | n8n AI Agent Webhook | n8n AI Agent 接 Webhook 怎么上线：触发、鉴权、队列和失败重试 | content/blog/n8n-ai-agent-webhook-production-guide.mdx |
 
 ## AI API 接入、限流、成本和多模型路由
 
 - Audience: 需要把 AI API 接进产品、网站、SaaS 原型的人
-- Gap score: 293
-- Public matches: 0
-- Draft matches: 15
+- Gap score: 106
+- Public matches: 15
+- Draft matches: 0
 - Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
 
 Search queries to cover:
@@ -364,55 +378,3 @@ Ready draft candidates:
 
 | Batch | Score | Intent | Keyword | Title | File |
 | --- | --- | --- | --- | --- | --- |
-| 34 | 100 | informational | AI API Key 安全管理 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| 34 | 100 | informational | Claude API rate limit reached | Claude API Rate limit reached 怎么办：限流、上下文、重试和降级 | content/blog/claude-api-rate-limit-debug-guide.mdx |
-| 34 | 100 | informational | Gemini API 限流 | Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型 | content/blog/gemini-api-rate-limit-debug-guide.mdx |
-| 34 | 100 | informational | 多模型 Router 降级 | 多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估 | content/blog/multi-model-router-fallback-guide.mdx |
-| 32 | 100 | informational | 大模型 API 限流重试 | 大模型 API 限流和重试怎么做：429、队列、退避和降级方案 | content/blog/llm-api-rate-limit-retry-guide.mdx |
-| 28 | 100 | informational | Helicone LLM Observability | Helicone 怎么做 LLM 观测：Gateway、日志、成本和限流先管住 | content/blog/helicone-llm-observability-guide.mdx |
-
-## LLM 观测、评测、日志和上线后质量
-
-- Audience: 准备把 AI 应用交付给客户或团队使用的人
-- Gap score: 287
-- Public matches: 0
-- Draft matches: 13
-- Search demand note: External signals are source/research/search-result cues only; they are not measured keyword volume, rankings, impressions, clicks, traffic, or revenue.
-
-Search queries to cover:
-
-- LLM observability 教程
-- RAG 评测教程
-- promptfoo 入门
-- LangSmith 教程
-- AI 应用日志监控
-
-Content angles:
-
-- Promptfoo、Ragas、LangSmith、Helicone、Phoenix 的用途
-- 上线前测试集和人工抽检
-- 日志、成本、延迟、错误率和用户反馈
-- RAG/Agent 失败案例复盘模板
-
-Review focus:
-
-- 不要把评测分数写成绝对质量保证
-- 明确日志隐私、数据脱敏和留存边界
-- 给出人工抽检和回滚流程
-
-External source signals:
-
-- official-doc: [promptfoo documentation](https://www.promptfoo.dev/docs/intro/) - Promptfoo 是 LLM eval 搜索中的常见工具，适合做上线前测试专题。
-- official-doc: [Ragas documentation](https://docs.ragas.io/) - Ragas 是 RAG 评测主题的事实源之一。
-- official-doc: [Helicone documentation](https://docs.helicone.ai/) - Helicone 覆盖 LLM observability、cost、latency、logs，适合做运维类内容。
-
-Ready draft candidates:
-
-| Batch | Score | Intent | Keyword | Title | File |
-| --- | --- | --- | --- | --- | --- |
-| 33 | 100 | informational | MCP Server 部署安全 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| 32 | 100 | informational | Agent 工具权限控制 | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
-| 28 | 100 | informational | Arize Phoenix LLM Tracing | Arize Phoenix 怎么做 LLM Tracing：OpenTelemetry、评测和排错入门 | content/blog/arize-phoenix-llm-observability-guide.mdx |
-| 28 | 100 | informational | Helicone LLM Observability | Helicone 怎么做 LLM 观测：Gateway、日志、成本和限流先管住 | content/blog/helicone-llm-observability-guide.mdx |
-| 28 | 100 | informational | LangSmith Observability | LangSmith 怎么做观测和评测：别再只靠 print 调试 Agent | content/blog/langsmith-observability-evaluation-guide.mdx |
-| 28 | 100 | informational | promptfoo LLM 评测 | promptfoo 怎么做 LLM 评测：提示词、模型和 Agent 都要有测试用例 | content/blog/promptfoo-llm-evaluation-beginner-guide.mdx |

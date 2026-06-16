@@ -1,6 +1,6 @@
 # Review Cannibalization Brief
 
-Generated at: 2026-06-14T10:39:10.079Z
+Generated at: 2026-06-16T07:01:28.975Z
 
 This report is read-only. It checks current review candidates against published and nearby draft articles before human approval.
 
@@ -14,66 +14,52 @@ This report is read-only. It checks current review candidates against published 
 
 ## Source Evidence
 
-- Action board ready tasks: 16
-- Unique action files: 13
-- Content cannibalization generated at: 2026-06-14T10:39:09.336Z
+- Action board ready tasks: 2
+- Unique action files: 2
+- Content cannibalization generated at: 2026-06-16T07:01:28.317Z
 - Global cannibalization summary: {"articleCount":669,"conflicts":200,"keywordConflicts":11,"reviewBatchConflicts":0,"slugStemConflicts":177,"titleStemConflicts":12}
 
 ## Summary
 
-- candidateFiles: 13
-- highRiskItems: 1
+- candidateFiles: 2
+- highRiskItems: 0
 - highRiskPublishedItems: 0
-- highRiskReviewOnlyItems: 1
-- items: 13
-- itemsWithPublishedComparison: 0
-- itemsWithReviewComparison: 1
+- highRiskReviewOnlyItems: 0
+- items: 2
+- itemsWithPublishedComparison: 1
+- itemsWithReviewComparison: 0
 - mediumRiskItems: 0
 - unsafeCommands: 0
 
 ## High Risk Items
 
-| Risk | Decision | Published score | Review score | Recommendation | Title | File |
-| --- | --- | --- | --- | --- | --- | --- |
-| high | differentiate-before-approval | 0 | 93 | Before mark:review, rewrite or split the angle so "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查" does not compete with "大模型部署是什么意思：API、本地和私有化怎么选". | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
+- none
 
 ## Next Items
 
-| Risk | Decision | Published score | Review score | Recommendation | Title | File |
-| --- | --- | --- | --- | --- | --- | --- |
-| high | differentiate-before-approval | 0 | 93 | Before mark:review, rewrite or split the angle so "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查" does not compete with "大模型部署是什么意思：API、本地和私有化怎么选". | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
+- none
 
 ## All Items
 
 | Risk | Decision | Published score | Review score | Recommendation | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| high | differentiate-before-approval | 0 | 93 | Before mark:review, rewrite or split the angle so "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查" does not compete with "大模型部署是什么意思：API、本地和私有化怎么选". | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
-| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
+| low | monitor-only | 30 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| low | monitor-only | 0 | 0 | No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article. | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 
 ## Per-Candidate Checklist
 
-### 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检
+### RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界
 
-- File: content/blog/ai-model-selection-customer-service-guide.mdx
-- Primary keyword: 客服 AI 模型选型
+- File: content/blog/vector-database-selection-for-rag-guide.mdx
+- Primary keyword: RAG 向量数据库怎么选
 - Risk: low
 - Decision: monitor-only
 - Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
 
 Closest published articles:
 
-- none
+- 30: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (content/blog/qdrant-vector-database-beginner-guide.mdx) - same category, same search intent, token overlap 0.55
+- 29: Embedding 模型怎么选：RAG 和向量检索别只看模型名 (content/blog/embedding-model-selection-guide.mdx) - same category, same search intent, token overlap 0.50
 
 Closest draft/review articles:
 
@@ -81,16 +67,16 @@ Closest draft/review articles:
 
 Human review checklist:
 
-- Confirm the candidate owns a distinct search intent: 客服 AI 模型选型.
-- No close published article found; still confirm the title is not a duplicate promise.
+- Confirm the candidate owns a distinct search intent: RAG 向量数据库怎么选.
+- Compare against published article: Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (content/blog/qdrant-vector-database-beginner-guide.mdx).
 - No close draft/review candidate found.
 - Document why this can remain a separate article.
 - If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
 
-### AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查
+### Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级
 
-- File: content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
-- Primary keyword: AI Agent 部署
+- File: content/blog/vercel-ai-gateway-multi-provider-guide.mdx
+- Primary keyword: Vercel AI Gateway 多模型
 - Risk: low
 - Decision: monitor-only
 - Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
@@ -105,271 +91,7 @@ Closest draft/review articles:
 
 Human review checklist:
 
-- Confirm the candidate owns a distinct search intent: AI Agent 部署.
-- No close published article found; still confirm the title is not a duplicate promise.
-- No close draft/review candidate found.
-- Document why this can remain a separate article.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
-
-### 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用
-
-- File: content/blog/industry-ai-prompts-template-library-2026.mdx
-- Primary keyword: 全行业 AI 提示词模板
-- Risk: low
-- Decision: monitor-only
-- Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
-
-Closest published articles:
-
-- none
-
-Closest draft/review articles:
-
-- none
-
-Human review checklist:
-
-- Confirm the candidate owns a distinct search intent: 全行业 AI 提示词模板.
-- No close published article found; still confirm the title is not a duplicate promise.
-- No close draft/review candidate found.
-- Document why this can remain a separate article.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
-
-### 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查
-
-- File: content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx
-- Primary keyword: 大模型部署
-- Risk: high
-- Decision: differentiate-before-approval
-- Recommendation: Before mark:review, rewrite or split the angle so "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查" does not compete with "大模型部署是什么意思：API、本地和私有化怎么选".
-
-Closest published articles:
-
-- none
-
-Closest draft/review articles:
-
-- 93: 大模型部署是什么意思：API、本地和私有化怎么选 (content/blog/llm-deployment-beginner-guide.mdx) - same primary keyword, same search intent, token overlap 0.56
-
-Human review checklist:
-
-- Confirm the candidate owns a distinct search intent: 大模型部署.
-- No close published article found; still confirm the title is not a duplicate promise.
-- Compare against nearby draft/review candidate: 大模型部署是什么意思：API、本地和私有化怎么选 (content/blog/llm-deployment-beginner-guide.mdx).
-- Do not mark review until the angle, title, or consolidation decision is explicit.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
-
-### AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界
-
-- File: content/blog/ai-agent-memory-rag-design-guide.mdx
-- Primary keyword: AI Agent 记忆
-- Risk: low
-- Decision: monitor-only
-- Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
-
-Closest published articles:
-
-- none
-
-Closest draft/review articles:
-
-- none
-
-Human review checklist:
-
-- Confirm the candidate owns a distinct search intent: AI Agent 记忆.
-- No close published article found; still confirm the title is not a duplicate promise.
-- No close draft/review candidate found.
-- Document why this can remain a separate article.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
-
-### Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流
-
-- File: content/blog/open-webui-functions-pipelines-deployment-guide.mdx
-- Primary keyword: Open WebUI Functions Pipelines
-- Risk: low
-- Decision: monitor-only
-- Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
-
-Closest published articles:
-
-- none
-
-Closest draft/review articles:
-
-- none
-
-Human review checklist:
-
-- Confirm the candidate owns a distinct search intent: Open WebUI Functions Pipelines.
-- No close published article found; still confirm the title is not a duplicate promise.
-- No close draft/review candidate found.
-- Document why this can remain a separate article.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
-
-### n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储
-
-- File: content/blog/n8n-ai-agent-rag-memory-guide.mdx
-- Primary keyword: n8n AI Agent 知识库记忆
-- Risk: low
-- Decision: monitor-only
-- Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
-
-Closest published articles:
-
-- none
-
-Closest draft/review articles:
-
-- none
-
-Human review checklist:
-
-- Confirm the candidate owns a distinct search intent: n8n AI Agent 知识库记忆.
-- No close published article found; still confirm the title is not a duplicate promise.
-- No close draft/review candidate found.
-- Document why this can remain a separate article.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
-
-### AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
-
-- File: content/blog/ai-api-key-security-rotation-guide.mdx
-- Primary keyword: AI API Key 安全管理
-- Risk: low
-- Decision: monitor-only
-- Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
-
-Closest published articles:
-
-- none
-
-Closest draft/review articles:
-
-- none
-
-Human review checklist:
-
-- Confirm the candidate owns a distinct search intent: AI API Key 安全管理.
-- No close published article found; still confirm the title is not a duplicate promise.
-- No close draft/review candidate found.
-- Document why this can remain a separate article.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
-
-### AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围
-
-- File: content/blog/ai-automation-project-pricing-scope-guide.mdx
-- Primary keyword: AI 自动化项目报价
-- Risk: low
-- Decision: monitor-only
-- Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
-
-Closest published articles:
-
-- none
-
-Closest draft/review articles:
-
-- none
-
-Human review checklist:
-
-- Confirm the candidate owns a distinct search intent: AI 自动化项目报价.
-- No close published article found; still confirm the title is not a duplicate promise.
-- No close draft/review candidate found.
-- Document why this can remain a separate article.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
-
-### Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底
-
-- File: content/blog/dify-workflow-error-handling-guide.mdx
-- Primary keyword: Dify 工作流错误处理
-- Risk: low
-- Decision: monitor-only
-- Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
-
-Closest published articles:
-
-- none
-
-Closest draft/review articles:
-
-- none
-
-Human review checklist:
-
-- Confirm the candidate owns a distinct search intent: Dify 工作流错误处理.
-- No close published article found; still confirm the title is not a duplicate promise.
-- No close draft/review candidate found.
-- Document why this can remain a separate article.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
-
-### MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单
-
-- File: content/blog/mcp-server-deployment-security-checklist.mdx
-- Primary keyword: MCP Server 部署安全
-- Risk: low
-- Decision: monitor-only
-- Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
-
-Closest published articles:
-
-- none
-
-Closest draft/review articles:
-
-- none
-
-Human review checklist:
-
-- Confirm the candidate owns a distinct search intent: MCP Server 部署安全.
-- No close published article found; still confirm the title is not a duplicate promise.
-- No close draft/review candidate found.
-- Document why this can remain a separate article.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
-
-### Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志
-
-- File: content/blog/agent-tool-permission-safety-guide.mdx
-- Primary keyword: Agent 工具权限控制
-- Risk: low
-- Decision: monitor-only
-- Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
-
-Closest published articles:
-
-- none
-
-Closest draft/review articles:
-
-- none
-
-Human review checklist:
-
-- Confirm the candidate owns a distinct search intent: Agent 工具权限控制.
-- No close published article found; still confirm the title is not a duplicate promise.
-- No close draft/review candidate found.
-- Document why this can remain a separate article.
-- If both articles stay, add a clear internal-link relationship: pillar, comparison, implementation detail, or troubleshooting follow-up.
-
-### BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收
-
-- File: content/blog/bentoml-llm-deployment-beginner-guide.mdx
-- Primary keyword: BentoML LLM 部署
-- Risk: low
-- Decision: monitor-only
-- Recommendation: No strong cannibalization risk detected for current public coverage; keep the candidate as a distinct article.
-
-Closest published articles:
-
-- none
-
-Closest draft/review articles:
-
-- none
-
-Human review checklist:
-
-- Confirm the candidate owns a distinct search intent: BentoML LLM 部署.
+- Confirm the candidate owns a distinct search intent: Vercel AI Gateway 多模型.
 - No close published article found; still confirm the title is not a duplicate promise.
 - No close draft/review candidate found.
 - Document why this can remain a separate article.

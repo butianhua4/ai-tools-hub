@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:38:53.239Z",
+  "generatedAt": "2026-06-16T07:01:12.428Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -15,8 +15,8 @@
     "uniqueFiles": 12,
     "uniqueLanes": 7,
     "unsafeItems": 0,
-    "sourceLaneMapItems": 233,
-    "sourceApprovalNextGapItems": 6
+    "sourceLaneMapItems": 22,
+    "sourceApprovalNextGapItems": 0
   },
   "sourceEvidence": {
     "laneMapGuardrails": {
@@ -37,9 +37,9 @@
   "waves": [
     {
       "files": [
-        "content/blog/industry-ai-prompts-template-library-2026.mdx",
-        "content/blog/ai-model-selection-customer-service-guide.mdx",
-        "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx"
+        "content/blog/vector-database-selection-for-rag-guide.mdx",
+        "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+        "content/blog/supabase-pgvector-rag-guide.mdx"
       ],
       "focus": "Current human approval packet",
       "items": [
@@ -53,61 +53,60 @@
             "Reviewer verifies official sources before any status change.",
             "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
           ],
-          "category": "AI 提示词",
+          "category": "AI 基建",
           "currentPack": true,
-          "description": "整理全行业 AI 提示词模板库的搭建方法，覆盖销售、运营、客服、HR、财务、教育、产品和研发场景，重点讲分类、输入、输出、审核和复用。",
-          "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
-          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human",
+          "description": "面向新手整理 RAG 向量数据库选型思路，比较 pgvector、Qdrant、Milvus 等路线时应关注数据规模、权限、运维、成本和迁移。",
+          "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
+          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human",
           "intentSeeds": [
-            "AI 提示词大全",
-            "ChatGPT 提示词模板",
-            "全行业 AI 提示词",
-            "AI prompt library"
+            "RAG 知识库搭建",
+            "AI Agent 记忆",
+            "向量数据库教程",
+            "企业知识库 AI"
           ],
-          "laneAudience": "Teams trying to build reusable prompt libraries instead of one-off prompts.",
-          "laneId": "industry-prompt-library",
-          "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=23; currentPack=2; wave1=2",
-          "lanePriorityScore": 386,
-          "laneTitle": "Cross-industry AI prompt templates and reusable prompt libraries",
+          "laneAudience": "Teams building customer support bots, internal knowledge assistants, and document Q&A.",
+          "laneId": "rag-knowledge-memory",
+          "lanePriorityReason": "demandScore=10; public coverage=31; readyDrafts=4; currentPack=1",
+          "lanePriorityScore": 196,
+          "laneTitle": "RAG, knowledge base, and Agent memory",
           "noindex": true,
-          "primaryKeyword": "全行业 AI 提示词模板",
-          "publishBatch": 40,
-          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx",
+          "primaryKeyword": "RAG 向量数据库怎么选",
+          "publishBatch": 25,
+          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/vector-database-selection-for-rag-guide.mdx",
           "qualityIssues": [],
           "qualityScore": 100,
           "readyForHumanReview": true,
           "reviewFocus": [
-            "input fields",
-            "output format",
-            "quality checks",
-            "risk disclaimers",
-            "versioning"
+            "chunking and metadata",
+            "citation and source boundaries",
+            "privacy and retention",
+            "evaluation set"
           ],
           "riskChecks": [
             "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
             "No API key, private customer data, credential, or bypass instruction is included.",
             "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-            "Prompt templates include input context, output criteria, human review rules, and adaptation notes."
+            "Retrieval quality, citations, memory retention, privacy, and hallucination risks are explicit."
           ],
           "safeDraft": true,
           "searchIntent": "informational",
-          "sourceNotes": "已于 2026-06-12 按 OpenAI 官方 prompt engineering / prompt guidance 文档核对提示词结构原则；结合团队知识库实践和行业 SOP 设计经验整理。正式公开前仍需人工核对示例、行业边界和敏感内容。",
+          "sourceNotes": "已于 2026-06-12 按 Supabase pgvector 官方文档、Qdrant 和 Milvus 向量数据库官方文档核对基础能力；结合 RAG 项目边界、metadata filter、运维复杂度和迁移成本整理。正式公开前仍需人工核对最新能力、托管价格、区域和版本差异。",
           "sourceTargets": [
-            "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
-            "OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation",
-            "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-            "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
+            "OpenAI retrieval: https://platform.openai.com/docs/guides/retrieval",
+            "OpenAI Agents knowledge and memory: https://platform.openai.com/docs/guides/agents",
+            "LangChain docs: https://python.langchain.com/docs",
+            "LlamaIndex docs: https://docs.llamaindex.ai"
           ],
           "status": "draft",
-          "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
-          "wave1": true,
-          "wordCountChinese": 2332,
+          "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
+          "wave1": false,
+          "wordCountChinese": 1209,
           "workflowAngles": [
-            "industry taxonomy",
-            "input schema",
-            "output format",
-            "review checklist",
-            "reuse rules"
+            "document cleanup",
+            "chunking",
+            "embedding",
+            "source citation",
+            "memory policy"
           ],
           "wave": 1
         },
@@ -123,59 +122,58 @@
           ],
           "category": "AI 部署",
           "currentPack": true,
-          "description": "整理客服 AI 模型选型方法，覆盖响应速度、成本、知识库、情绪识别、转人工、质检、上下文长度和安全边界。",
-          "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
-          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human",
+          "description": "整理 Vercel AI Gateway 多模型接入思路，覆盖统一 API、provider 切换、日志、成本、降级、AI SDK 和上线检查。",
+          "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx --confirm-human",
           "intentSeeds": [
-            "AI 提示词大全",
-            "ChatGPT 提示词模板",
-            "全行业 AI 提示词",
-            "AI prompt library"
+            "OpenAI API 接入",
+            "Claude API 限流",
+            "Gemini API 限流",
+            "多模型 Router 降级"
           ],
-          "laneAudience": "Teams trying to build reusable prompt libraries instead of one-off prompts.",
-          "laneId": "industry-prompt-library",
-          "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=23; currentPack=2; wave1=2",
-          "lanePriorityScore": 386,
-          "laneTitle": "Cross-industry AI prompt templates and reusable prompt libraries",
+          "laneAudience": "Developers integrating OpenAI, Claude, Gemini, OpenRouter, and multi-model routing.",
+          "laneId": "model-api-integration",
+          "lanePriorityReason": "demandScore=9; public coverage=28; readyDrafts=2; currentPack=1",
+          "lanePriorityScore": 164,
+          "laneTitle": "Model API integration, rate limits, and multi-model fallback",
           "noindex": true,
-          "primaryKeyword": "客服 AI 模型选型",
+          "primaryKeyword": "Vercel AI Gateway 多模型",
           "publishBatch": 34,
-          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx",
+          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
           "qualityIssues": [],
           "qualityScore": 100,
           "readyForHumanReview": true,
           "reviewFocus": [
-            "input fields",
-            "output format",
-            "quality checks",
-            "risk disclaimers",
-            "versioning"
+            "current model names",
+            "rate limits",
+            "retry behavior",
+            "key rotation",
+            "fallback quality"
           ],
           "riskChecks": [
             "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
             "No API key, private customer data, credential, or bypass instruction is included.",
             "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-            "Prompt templates include input context, output criteria, human review rules, and adaptation notes."
+            "Article-specific operational and safety boundaries are explicit."
           ],
           "safeDraft": true,
           "searchIntent": "informational",
-          "sourceNotes": "已于 2026-06-12 按 OpenAI Agents guardrails / human review 文档和 Vercel AI SDK tool calling / agent 文档核对高风险动作、人工接管、工具调用边界；结合多模型路由、RAG、客服提示词和生产客服系统风险整理。正式发布前仍需人工核对具体平台规则。",
+          "sourceNotes": "参考 Vercel AI Gateway 官方文档、models and providers、provider options 和 capability 文档整理；正式发布前需要人工核对最新模型列表。",
           "sourceTargets": [
-            "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
-            "OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation",
-            "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-            "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
+            "OpenAI API docs: https://platform.openai.com/docs",
+            "Anthropic docs: https://docs.anthropic.com",
+            "Vercel AI SDK providers: https://ai-sdk.dev/docs/foundations/providers-and-models"
           ],
           "status": "draft",
-          "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
-          "wave1": true,
-          "wordCountChinese": 1232,
+          "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
+          "wave1": false,
+          "wordCountChinese": 1246,
           "workflowAngles": [
-            "industry taxonomy",
-            "input schema",
-            "output format",
-            "review checklist",
-            "reuse rules"
+            "server-side calls",
+            "rate limit retry",
+            "fallback routing",
+            "key rotation",
+            "cost control"
           ],
           "wave": 1
         },
@@ -189,488 +187,97 @@
             "Reviewer verifies official sources before any status change.",
             "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
           ],
-          "category": "AI Agent",
-          "currentPack": true,
-          "description": "面向新手解释 AI Agent 部署流程，覆盖 Vercel AI SDK、工具调用、多步执行、停止条件、日志、权限、人工接管和上线检查。",
-          "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human",
+          "category": "AI 基建",
+          "currentPack": false,
+          "description": "面向新手整理 Supabase pgvector 做 RAG 的入门思路，覆盖 vector column、embedding、SQL 查询、权限、索引、成本和维护。",
+          "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human",
           "intentSeeds": [
-            "AI Agent 部署",
-            "AI Agent 工具调用",
-            "Vercel AI SDK Agent",
-            "OpenAI Agents SDK"
+            "RAG 知识库搭建",
+            "AI Agent 记忆",
+            "向量数据库教程",
+            "企业知识库 AI"
           ],
-          "laneAudience": "Developers and teams trying to move beyond chatbots into production agents.",
-          "laneId": "agent-deployment-tools",
-          "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=27; currentPack=1; wave1=1",
-          "lanePriorityScore": 358,
-          "laneTitle": "AI Agent deployment, tool calling, and production workflow",
+          "laneAudience": "Teams building customer support bots, internal knowledge assistants, and document Q&A.",
+          "laneId": "rag-knowledge-memory",
+          "lanePriorityReason": "demandScore=10; public coverage=31; readyDrafts=4; currentPack=1",
+          "lanePriorityScore": 196,
+          "laneTitle": "RAG, knowledge base, and Agent memory",
           "noindex": true,
-          "primaryKeyword": "AI Agent 部署",
-          "publishBatch": 40,
-          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+          "primaryKeyword": "Supabase pgvector",
+          "publishBatch": 24,
+          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx",
           "qualityIssues": [],
           "qualityScore": 100,
           "readyForHumanReview": true,
           "reviewFocus": [
-            "tool permission boundaries",
-            "loop control and stop conditions",
-            "human handoff",
-            "logs and fallback paths"
+            "chunking and metadata",
+            "citation and source boundaries",
+            "privacy and retention",
+            "evaluation set"
           ],
           "riskChecks": [
             "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
             "No API key, private customer data, credential, or bypass instruction is included.",
             "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-            "Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit."
+            "Retrieval quality, citations, memory retention, privacy, and hallucination risks are explicit."
           ],
           "safeDraft": true,
           "searchIntent": "informational",
-          "sourceNotes": "已于 2026-06-13 按 Vercel AI SDK 官方 ToolLoopAgent、tool calling、streamText、chatbot tool usage 文档核对核心概念；结合实际 Web 应用部署流程整理。正式公开前仍需人工复核 API 示例、版本和平台限制。",
+          "sourceNotes": "参考 Supabase AI & Vectors、vector columns、LangChain with Supabase 文档整理；正式发布前需要人工核对 pgvector 版本和 SQL 示例。",
           "sourceTargets": [
-            "OpenAI Agents: https://platform.openai.com/docs/guides/agents",
-            "OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk",
-            "Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents",
-            "n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
+            "OpenAI retrieval: https://platform.openai.com/docs/guides/retrieval",
+            "OpenAI Agents knowledge and memory: https://platform.openai.com/docs/guides/agents",
+            "LangChain docs: https://python.langchain.com/docs",
+            "LlamaIndex docs: https://docs.llamaindex.ai"
           ],
           "status": "draft",
-          "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
-          "wave1": true,
-          "wordCountChinese": 2186,
+          "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
+          "wave1": false,
+          "wordCountChinese": 1255,
           "workflowAngles": [
-            "tool calling",
-            "multi-step execution",
-            "human approval",
-            "observability",
-            "permissions"
+            "document cleanup",
+            "chunking",
+            "embedding",
+            "source citation",
+            "memory policy"
           ],
           "wave": 1
         }
       ],
       "laneCount": 2,
       "lanes": [
-        "Cross-industry AI prompt templates and reusable prompt libraries",
-        "AI Agent deployment, tool calling, and production workflow"
+        "RAG, knowledge base, and Agent memory",
+        "Model API integration, rate limits, and multi-model fallback"
       ],
       "readyItems": 3,
       "riskChecks": [
         "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
         "No API key, private customer data, credential, or bypass instruction is included.",
         "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-        "Prompt templates include input context, output criteria, human review rules, and adaptation notes.",
-        "Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit."
+        "Retrieval quality, citations, memory retention, privacy, and hallucination risks are explicit.",
+        "Article-specific operational and safety boundaries are explicit."
       ],
-      "sourceTargetCount": 8,
+      "sourceTargetCount": 7,
       "wave": 1
     },
     {
       "files": [
-        "content/blog/data-analysis-ai-prompts-guide.mdx",
-        "content/blog/education-ai-prompts-guide.mdx",
-        "content/blog/customer-service-ai-prompts-guide.mdx"
+        "content/blog/tensorrt-llm-beginner-guide.mdx",
+        "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
+        "content/blog/vercel-404-after-deploy-checklist.mdx"
       ],
-      "focus": "Cross-industry AI prompt templates and reusable prompt libraries + Business department AI workflows across sales, support, ops, HR, finance, legal, and education",
+      "focus": "Large model deployment, LLM serving, and GPU infrastructure + AI Agent deployment, tool calling, and production workflow + AI app deployment errors and beginner troubleshooting",
       "items": [
         {
-          "approvalChecks": [
-            "Article remains draft: true",
-            "Article remains noindex: true",
-            "Human review flag is present: true",
-            "Source notes are present: true",
-            "Quality check passed: true",
-            "Reviewer verifies official sources before any status change.",
-            "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
-          ],
-          "category": "AI 提示词",
-          "currentPack": false,
-          "description": "面向数据分析和业务团队整理 AI 提示词模板，覆盖指标解释、SQL 思路、异常排查、报表摘要、实验复盘和人工核对边界。",
-          "file": "content/blog/data-analysis-ai-prompts-guide.mdx",
-          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/data-analysis-ai-prompts-guide.mdx --confirm-human",
-          "intentSeeds": [
-            "AI 提示词大全",
-            "ChatGPT 提示词模板",
-            "全行业 AI 提示词",
-            "AI prompt library"
-          ],
-          "laneAudience": "Teams trying to build reusable prompt libraries instead of one-off prompts.",
-          "laneId": "industry-prompt-library",
-          "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=23; currentPack=2; wave1=2",
-          "lanePriorityScore": 386,
-          "laneTitle": "Cross-industry AI prompt templates and reusable prompt libraries",
-          "noindex": true,
-          "primaryKeyword": "数据分析 AI 提示词",
-          "publishBatch": 31,
-          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/data-analysis-ai-prompts-guide.mdx",
-          "qualityIssues": [],
-          "qualityScore": 100,
-          "readyForHumanReview": true,
-          "reviewFocus": [
-            "input fields",
-            "output format",
-            "quality checks",
-            "risk disclaimers",
-            "versioning"
-          ],
-          "riskChecks": [
-            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
-            "No API key, private customer data, credential, or bypass instruction is included.",
-            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-            "Prompt templates include input context, output criteria, human review rules, and adaptation notes."
-          ],
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "sourceNotes": "已于 2026-06-12 按 OpenAI 官方 Prompt Engineering、Text Generation 和 Structured Outputs 相关文档核对输出格式、结构化结果和复核原则；结合指标解释、SQL 思路、异常排查和报告摘要流程整理。正式公开前仍需人工核对数据安全、SQL 方言、业务口径和敏感信息处理。",
-          "sourceTargets": [
-            "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
-            "OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation",
-            "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-            "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
-          ],
-          "status": "draft",
-          "title": "数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要",
-          "wave1": false,
-          "wordCountChinese": 1524,
-          "workflowAngles": [
-            "industry taxonomy",
-            "input schema",
-            "output format",
-            "review checklist",
-            "reuse rules"
-          ],
-          "wave": 2
-        },
-        {
-          "approvalChecks": [
-            "Article remains draft: true",
-            "Article remains noindex: true",
-            "Human review flag is present: true",
-            "Source notes are present: true",
-            "Quality check passed: true",
-            "Reviewer verifies official sources before any status change.",
-            "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
-          ],
-          "category": "AI 提示词",
-          "currentPack": false,
-          "description": "面向教育培训和教师整理 AI 提示词模板，覆盖备课、教案、测验题、学生反馈、学习计划、课程运营和人工复核边界。",
-          "file": "content/blog/education-ai-prompts-guide.mdx",
-          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/education-ai-prompts-guide.mdx --confirm-human",
-          "intentSeeds": [
-            "AI 提示词大全",
-            "ChatGPT 提示词模板",
-            "全行业 AI 提示词",
-            "AI prompt library"
-          ],
-          "laneAudience": "Teams trying to build reusable prompt libraries instead of one-off prompts.",
-          "laneId": "industry-prompt-library",
-          "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=23; currentPack=2; wave1=2",
-          "lanePriorityScore": 386,
-          "laneTitle": "Cross-industry AI prompt templates and reusable prompt libraries",
-          "noindex": true,
-          "primaryKeyword": "教育 AI 提示词",
-          "publishBatch": 31,
-          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/education-ai-prompts-guide.mdx",
-          "qualityIssues": [],
-          "qualityScore": 100,
-          "readyForHumanReview": true,
-          "reviewFocus": [
-            "input fields",
-            "output format",
-            "quality checks",
-            "risk disclaimers",
-            "versioning"
-          ],
-          "riskChecks": [
-            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
-            "No API key, private customer data, credential, or bypass instruction is included.",
-            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-            "Prompt templates include input context, output criteria, human review rules, and adaptation notes."
-          ],
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "sourceNotes": "已于 2026-06-12 按 OpenAI 官方 Prompt Engineering、Text Generation 和 Safety Best Practices 文档核对提示词结构、输出约束和人工复核原则；结合备课、教案、测验、反馈和学习计划流程整理。正式公开前仍需人工核对学校政策、学生隐私、年龄段适配和具体课程要求。",
-          "sourceTargets": [
-            "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
-            "OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation",
-            "Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-            "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
-          ],
-          "status": "draft",
-          "title": "教育 AI 提示词模板：备课、教案、测验、反馈和学习计划",
-          "wave1": false,
-          "wordCountChinese": 1243,
-          "workflowAngles": [
-            "industry taxonomy",
-            "input schema",
-            "output format",
-            "review checklist",
-            "reuse rules"
-          ],
-          "wave": 2
-        },
-        {
-          "approvalChecks": [
-            "Article remains draft: true",
-            "Article remains noindex: true",
-            "Human review flag is present: true",
-            "Source notes are present: true",
-            "Quality check passed: true",
-            "Reviewer verifies official sources before any status change.",
-            "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
-          ],
-          "category": "AI 提示词",
-          "currentPack": false,
-          "description": "面向客服和售后团队整理 AI 提示词模板，覆盖客户回复、工单分类、情绪安抚、问题升级、知识库问答和人工复核边界。",
-          "file": "content/blog/customer-service-ai-prompts-guide.mdx",
-          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/customer-service-ai-prompts-guide.mdx --confirm-human",
-          "intentSeeds": [
-            "企业 AI 应用场景",
-            "AI 工作流模板",
-            "销售 AI 提示词",
-            "客服 AI 提示词",
-            "运营 AI 提示词"
-          ],
-          "laneAudience": "Business teams deciding how to use AI across departments.",
-          "laneId": "business-ai-workflows",
-          "lanePriorityReason": "demandScore=9; no public coverage; readyDrafts=16; currentPack=2; wave1=2",
-          "lanePriorityScore": 366,
-          "laneTitle": "Business department AI workflows across sales, support, ops, HR, finance, legal, and education",
-          "noindex": true,
-          "primaryKeyword": "客服 AI 提示词",
-          "publishBatch": 30,
-          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/customer-service-ai-prompts-guide.mdx",
-          "qualityIssues": [],
-          "qualityScore": 100,
-          "readyForHumanReview": true,
-          "reviewFocus": [
-            "role-specific input fields",
-            "approval owner",
-            "risk boundaries",
-            "measurable output format"
-          ],
-          "riskChecks": [
-            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
-            "No API key, private customer data, credential, or bypass instruction is included.",
-            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-            "Department workflows identify approval owner, sensitive decisions, and human handoff points."
-          ],
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "sourceNotes": "已于 2026-06-13 按 OpenAI 官方 Prompt Engineering、Text generation、Safety best practices、Agent safety 文档核对提示词结构、输入约束、输出格式、敏感动作和人工复核边界；结合客服工单分类、升级判断、隐私最小化和人工复核流程整理。正式公开前仍需人工核对行业售后政策、敏感信息处理和隐私要求。",
-          "sourceTargets": [
-            "OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering",
-            "Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/"
-          ],
-          "status": "draft",
-          "title": "客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断",
-          "wave1": false,
-          "wordCountChinese": 1745,
-          "workflowAngles": [
-            "department workflows",
-            "SOP",
-            "review owner",
-            "handoff",
-            "template library"
-          ],
-          "wave": 2
-        }
-      ],
-      "laneCount": 2,
-      "lanes": [
-        "Cross-industry AI prompt templates and reusable prompt libraries",
-        "Business department AI workflows across sales, support, ops, HR, finance, legal, and education"
-      ],
-      "readyItems": 3,
-      "riskChecks": [
-        "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
-        "No API key, private customer data, credential, or bypass instruction is included.",
-        "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-        "Prompt templates include input context, output criteria, human review rules, and adaptation notes.",
-        "Department workflows identify approval owner, sensitive decisions, and human handoff points."
-      ],
-      "sourceTargetCount": 4,
-      "wave": 2
-    },
-    {
-      "files": [
-        "content/blog/ai-agent-memory-rag-design-guide.mdx",
-        "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-        "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx"
-      ],
-      "focus": "AI Agent deployment, tool calling, and production workflow + Large model deployment, LLM serving, and GPU infrastructure",
-      "items": [
-        {
-          "approvalChecks": [
-            "Article remains draft: true",
-            "Article remains noindex: true",
-            "Human review flag is present: true",
-            "Source notes are present: true",
-            "Quality check passed: true",
-            "Reviewer verifies official sources before any status change.",
-            "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
-          ],
-          "category": "AI 记忆",
-          "currentPack": false,
-          "description": "解释 AI Agent 记忆和 RAG 的区别，覆盖短期记忆、长期记忆、知识库检索、引用来源、更新机制、隐私和验收检查。",
-          "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
-          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx --confirm-human",
-          "intentSeeds": [
-            "AI Agent 部署",
-            "AI Agent 工具调用",
-            "Vercel AI SDK Agent",
-            "OpenAI Agents SDK"
-          ],
-          "laneAudience": "Developers and teams trying to move beyond chatbots into production agents.",
-          "laneId": "agent-deployment-tools",
-          "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=27; currentPack=1; wave1=1",
-          "lanePriorityScore": 358,
-          "laneTitle": "AI Agent deployment, tool calling, and production workflow",
-          "noindex": true,
-          "primaryKeyword": "AI Agent 记忆",
-          "publishBatch": 40,
-          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/ai-agent-memory-rag-design-guide.mdx",
-          "qualityIssues": [],
-          "qualityScore": 100,
-          "readyForHumanReview": true,
-          "reviewFocus": [
-            "tool permission boundaries",
-            "loop control and stop conditions",
-            "human handoff",
-            "logs and fallback paths"
-          ],
-          "riskChecks": [
-            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
-            "No API key, private customer data, credential, or bypass instruction is included.",
-            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-            "Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit."
-          ],
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "sourceNotes": "已于 2026-06-12 对照 OpenAI Agents SDK Sessions / Memory、OpenAI file search、Vercel AI SDK Agents / tool calling / human-in-the-loop 文档补充边界；正式公开前仍需人工核对 SDK 版本、隐私建议和 API 名称。",
-          "sourceTargets": [
-            "OpenAI Agents: https://platform.openai.com/docs/guides/agents",
-            "OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk",
-            "Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents",
-            "n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
-          ],
-          "status": "draft",
-          "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
-          "wave1": false,
-          "wordCountChinese": 1951,
-          "workflowAngles": [
-            "tool calling",
-            "multi-step execution",
-            "human approval",
-            "observability",
-            "permissions"
-          ],
-          "wave": 3
-        },
-        {
-          "approvalChecks": [
-            "Article remains draft: true",
-            "Article remains noindex: true",
-            "Human review flag is present: true",
-            "Source notes are present: true",
-            "Quality check passed: true",
-            "Reviewer verifies official sources before any status change.",
-            "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
-          ],
-          "category": "项目报价",
-          "currentPack": false,
-          "description": "整理 AI 自动化项目报价思路，覆盖需求范围、工具选型、RAG、Agent、部署、维护、验收标准和风险边界。",
-          "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx --confirm-human",
-          "intentSeeds": [
-            "AI Agent 部署",
-            "AI Agent 工具调用",
-            "Vercel AI SDK Agent",
-            "OpenAI Agents SDK"
-          ],
-          "laneAudience": "Developers and teams trying to move beyond chatbots into production agents.",
-          "laneId": "agent-deployment-tools",
-          "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=27; currentPack=1; wave1=1",
-          "lanePriorityScore": 358,
-          "laneTitle": "AI Agent deployment, tool calling, and production workflow",
-          "noindex": true,
-          "primaryKeyword": "AI 自动化项目报价",
-          "publishBatch": 33,
-          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/ai-automation-project-pricing-scope-guide.mdx",
-          "qualityIssues": [],
-          "qualityScore": 100,
-          "readyForHumanReview": true,
-          "reviewFocus": [
-            "tool permission boundaries",
-            "loop control and stop conditions",
-            "human handoff",
-            "logs and fallback paths"
-          ],
-          "riskChecks": [
-            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
-            "No API key, private customer data, credential, or bypass instruction is included.",
-            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-            "Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit."
-          ],
-          "safeDraft": true,
-          "searchIntent": "informational",
-          "sourceNotes": "结合 Dify、n8n、RAG、Agent 部署内容和项目报价经验整理；正式发布前需要人工核对市场价格和交付边界。",
-          "sourceTargets": [
-            "OpenAI Agents: https://platform.openai.com/docs/guides/agents",
-            "OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk",
-            "Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents",
-            "n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
-          ],
-          "status": "draft",
-          "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
-          "wave1": false,
-          "wordCountChinese": 1305,
-          "workflowAngles": [
-            "tool calling",
-            "multi-step execution",
-            "human approval",
-            "observability",
-            "permissions"
-          ],
-          "wave": 3
-        },
-        {
-          "approvalChecks": [
-            "Article remains draft: true",
-            "Article remains noindex: true",
-            "Human review flag is present: true",
-            "Source notes are present: true",
-            "Quality check passed: true",
-            "Reviewer verifies official sources before any status change.",
-            "Reviewer confirms the article answers one broad search intent without unsupported traffic or income claims."
-          ],
-          "category": "AI 部署",
-          "currentPack": false,
-          "description": "面向新手整理大模型部署路径，讲清 API 调用、托管推理端点、私有化部署、vLLM/TGI/SGLang、成本、延迟、安全和验收。",
-          "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-          "humanReviewCommandAfterApproval": "npm run mark:review -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx --confirm-human",
-          "intentSeeds": [
-            "大模型部署教程",
-            "LLM deployment",
-            "vLLM 部署",
-            "Hugging Face TGI 部署"
-          ],
-          "laneAudience": "Developers, solo builders, and companies deciding where and how to run models.",
+          "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
           "laneId": "llm-deployment-serving",
-          "lanePriorityReason": "demandScore=10; no public coverage; readyDrafts=29",
-          "lanePriorityScore": 330,
+          "lanePriorityScore": 172,
           "laneTitle": "Large model deployment, LLM serving, and GPU infrastructure",
-          "noindex": true,
-          "primaryKeyword": "大模型部署",
-          "publishBatch": 40,
-          "publishDryRunCommandAfterApproval": "npm run publish:articles -- --file=content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-          "qualityIssues": [],
-          "qualityScore": 100,
+          "primaryKeyword": "TensorRT-LLM 入门",
+          "publishBatch": 29,
+          "qualityScore": 86,
           "readyForHumanReview": true,
-          "reviewFocus": [
-            "GPU and memory requirements",
-            "serving framework versions",
-            "cold start and concurrency",
-            "cost boundaries"
-          ],
           "riskChecks": [
             "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
             "No API key, private customer data, credential, or bypass instruction is included.",
@@ -678,59 +285,243 @@
             "GPU, memory, serving, concurrency, cold-start, and cost tradeoffs are framed as checks, not guarantees."
           ],
           "safeDraft": true,
-          "searchIntent": "informational",
-          "sourceNotes": "已于 2026-06-13 按 Hugging Face Inference Endpoints 官方文档核对托管推理端点、实例选择、自动伸缩、安全、价格和推理引擎边界；结合 API、私有化和成本检查经验整理。正式公开前仍需人工核对价格、区域、引擎支持和最新限制。",
           "sourceTargets": [
             "Hugging Face docs: https://huggingface.co/docs",
             "vLLM docs: https://docs.vllm.ai",
             "OpenAI API docs: https://platform.openai.com/docs",
             "Modal docs: https://modal.com/docs"
           ],
-          "status": "draft",
-          "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查",
-          "wave1": false,
-          "wordCountChinese": 2338,
+          "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+          "intentSeeds": [
+            "大模型部署教程",
+            "LLM deployment",
+            "vLLM 部署",
+            "Hugging Face TGI 部署"
+          ],
+          "reviewFocus": [
+            "GPU and memory requirements",
+            "serving framework versions",
+            "cold start and concurrency",
+            "cost boundaries"
+          ],
+          "wave": 2,
           "workflowAngles": [
             "GPU sizing",
             "serving API",
             "quantization",
             "autoscaling",
             "cost control"
+          ]
+        },
+        {
+          "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
+          "laneId": "agent-deployment-tools",
+          "lanePriorityScore": 166,
+          "laneTitle": "AI Agent deployment, tool calling, and production workflow",
+          "primaryKeyword": "Vercel AI SDK 聊天机器人部署",
+          "publishBatch": 26,
+          "qualityScore": 86,
+          "readyForHumanReview": true,
+          "riskChecks": [
+            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+            "No API key, private customer data, credential, or bypass instruction is included.",
+            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+            "Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit."
           ],
-          "wave": 3
+          "safeDraft": true,
+          "sourceTargets": [
+            "OpenAI Agents: https://platform.openai.com/docs/guides/agents",
+            "OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk",
+            "Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents",
+            "n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
+          ],
+          "title": "Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查",
+          "intentSeeds": [
+            "AI Agent 部署",
+            "AI Agent 工具调用",
+            "Vercel AI SDK Agent",
+            "OpenAI Agents SDK"
+          ],
+          "reviewFocus": [
+            "tool permission boundaries",
+            "loop control and stop conditions",
+            "human handoff",
+            "logs and fallback paths"
+          ],
+          "wave": 2,
+          "workflowAngles": [
+            "tool calling",
+            "multi-step execution",
+            "human approval",
+            "observability",
+            "permissions"
+          ]
+        },
+        {
+          "file": "content/blog/vercel-404-after-deploy-checklist.mdx",
+          "laneId": "deployment-troubleshooting",
+          "lanePriorityScore": 162,
+          "laneTitle": "AI app deployment errors and beginner troubleshooting",
+          "primaryKeyword": "Vercel 部署后 404 检查清单",
+          "publishBatch": 15,
+          "qualityScore": 86,
+          "readyForHumanReview": true,
+          "riskChecks": [
+            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+            "No API key, private customer data, credential, or bypass instruction is included.",
+            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+            "Article-specific operational and safety boundaries are explicit."
+          ],
+          "safeDraft": true,
+          "sourceTargets": [
+            "Vercel docs: https://vercel.com/docs",
+            "OpenAI API docs: https://platform.openai.com/docs"
+          ],
+          "title": "Vercel 部署后 404 检查清单：逐页验收更稳",
+          "intentSeeds": [
+            "Vercel build failed",
+            "API Key 无效",
+            "环境变量缺失",
+            "npm command not found"
+          ],
+          "reviewFocus": [
+            "reproduction",
+            "logs",
+            "fix order",
+            "verification command",
+            "avoid overgeneralized fixes"
+          ],
+          "wave": 2,
+          "workflowAngles": [
+            "error log",
+            "reproduction",
+            "fix sequence",
+            "verification",
+            "handoff boundary"
+          ]
         }
       ],
-      "laneCount": 2,
+      "laneCount": 3,
       "lanes": [
+        "Large model deployment, LLM serving, and GPU infrastructure",
         "AI Agent deployment, tool calling, and production workflow",
-        "Large model deployment, LLM serving, and GPU infrastructure"
+        "AI app deployment errors and beginner troubleshooting"
       ],
       "readyItems": 3,
       "riskChecks": [
         "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
         "No API key, private customer data, credential, or bypass instruction is included.",
         "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+        "GPU, memory, serving, concurrency, cold-start, and cost tradeoffs are framed as checks, not guarantees.",
         "Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit.",
-        "GPU, memory, serving, concurrency, cold-start, and cost tradeoffs are framed as checks, not guarantees."
+        "Article-specific operational and safety boundaries are explicit."
       ],
-      "sourceTargetCount": 8,
-      "wave": 3
+      "sourceTargetCount": 9,
+      "wave": 2
     },
     {
       "files": [
-        "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
-        "content/blog/dify-workflow-error-handling-guide.mdx",
-        "content/blog/ai-api-key-security-rotation-guide.mdx"
+        "content/blog/vllm-deployment-beginner-guide.mdx",
+        "content/blog/vercel-build-failed-causes-checklist.mdx",
+        "content/blog/together-ai-api-beginner-guide.mdx"
       ],
-      "focus": "RAG, knowledge base, and Agent memory + Dify, n8n, no-code AI automation, and workflow deployment + Model API integration, rate limits, and multi-model fallback",
+      "focus": "AI automation service pricing, scope, and delivery checklist + LLM observability, evaluation, and production quality + RAG, knowledge base, and Agent memory",
       "items": [
         {
-          "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+          "file": "content/blog/vllm-deployment-beginner-guide.mdx",
+          "laneId": "ai-service-pricing-scope",
+          "lanePriorityScore": 162,
+          "laneTitle": "AI automation service pricing, scope, and delivery checklist",
+          "primaryKeyword": "vLLM 部署",
+          "publishBatch": 22,
+          "qualityScore": 86,
+          "readyForHumanReview": true,
+          "riskChecks": [
+            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+            "No API key, private customer data, credential, or bypass instruction is included.",
+            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+            "Article-specific operational and safety boundaries are explicit."
+          ],
+          "safeDraft": true,
+          "sourceTargets": [
+            "OpenAI API docs: https://platform.openai.com/docs",
+            "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+            "Dify docs: https://docs.dify.ai"
+          ],
+          "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
+          "intentSeeds": [
+            "AI 自动化项目报价",
+            "AI Agent 项目",
+            "RAG 项目报价",
+            "Dify n8n 报价"
+          ],
+          "reviewFocus": [
+            "scope boundaries",
+            "acceptance criteria",
+            "maintenance fee",
+            "risk disclaimers",
+            "no income guarantees"
+          ],
+          "wave": 3,
+          "workflowAngles": [
+            "scope",
+            "pricing",
+            "acceptance",
+            "maintenance",
+            "risk language"
+          ]
+        },
+        {
+          "file": "content/blog/vercel-build-failed-causes-checklist.mdx",
+          "laneId": "llm-observability-evals",
+          "lanePriorityScore": 126,
+          "laneTitle": "LLM observability, evaluation, and production quality",
+          "primaryKeyword": "Vercel build failed 排查清单",
+          "publishBatch": 13,
+          "qualityScore": 86,
+          "readyForHumanReview": true,
+          "riskChecks": [
+            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+            "No API key, private customer data, credential, or bypass instruction is included.",
+            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+            "Article-specific operational and safety boundaries are explicit."
+          ],
+          "safeDraft": true,
+          "sourceTargets": [
+            "OpenAI Evals: https://platform.openai.com/docs/guides/evals",
+            "LangSmith docs: https://docs.smith.langchain.com",
+            "promptfoo docs: https://www.promptfoo.dev/docs/intro/"
+          ],
+          "title": "Vercel build failed 排查清单：从日志到重新部署",
+          "intentSeeds": [
+            "LLM observability",
+            "RAG 评测",
+            "Agent 可观测性",
+            "promptfoo LLM 评测"
+          ],
+          "reviewFocus": [
+            "trace fields",
+            "evaluation datasets",
+            "cost logs",
+            "failure review",
+            "quality drift"
+          ],
+          "wave": 3,
+          "workflowAngles": [
+            "tracing",
+            "eval sets",
+            "cost tracking",
+            "failure review",
+            "quality scorecards"
+          ]
+        },
+        {
+          "file": "content/blog/together-ai-api-beginner-guide.mdx",
           "laneId": "rag-knowledge-memory",
-          "lanePriorityScore": 358,
+          "lanePriorityScore": 196,
           "laneTitle": "RAG, knowledge base, and Agent memory",
-          "primaryKeyword": "Open WebUI Functions Pipelines",
-          "publishBatch": 33,
+          "primaryKeyword": "Together AI API 接入",
+          "publishBatch": 27,
           "qualityScore": 86,
           "readyForHumanReview": true,
           "riskChecks": [
@@ -746,7 +537,77 @@
             "LangChain docs: https://python.langchain.com/docs",
             "LlamaIndex docs: https://docs.llamaindex.ai"
           ],
-          "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流",
+          "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
+          "intentSeeds": [
+            "RAG 知识库搭建",
+            "AI Agent 记忆",
+            "向量数据库教程",
+            "企业知识库 AI"
+          ],
+          "reviewFocus": [
+            "chunking and metadata",
+            "citation and source boundaries",
+            "privacy and retention",
+            "evaluation set"
+          ],
+          "wave": 3,
+          "workflowAngles": [
+            "document cleanup",
+            "chunking",
+            "embedding",
+            "source citation",
+            "memory policy"
+          ]
+        }
+      ],
+      "laneCount": 3,
+      "lanes": [
+        "AI automation service pricing, scope, and delivery checklist",
+        "LLM observability, evaluation, and production quality",
+        "RAG, knowledge base, and Agent memory"
+      ],
+      "readyItems": 3,
+      "riskChecks": [
+        "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+        "No API key, private customer data, credential, or bypass instruction is included.",
+        "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+        "Article-specific operational and safety boundaries are explicit.",
+        "Retrieval quality, citations, memory retention, privacy, and hallucination risks are explicit."
+      ],
+      "sourceTargetCount": 10,
+      "wave": 3
+    },
+    {
+      "files": [
+        "content/blog/vector-database-beginner-guide.mdx",
+        "content/blog/vercel-404-after-deploy-mistakes.mdx",
+        "content/blog/vercel-build-failed-causes-freelance-scope.mdx"
+      ],
+      "focus": "RAG, knowledge base, and Agent memory + AI app deployment errors and beginner troubleshooting + AI automation service pricing, scope, and delivery checklist",
+      "items": [
+        {
+          "file": "content/blog/vector-database-beginner-guide.mdx",
+          "laneId": "rag-knowledge-memory",
+          "lanePriorityScore": 196,
+          "laneTitle": "RAG, knowledge base, and Agent memory",
+          "primaryKeyword": "向量数据库",
+          "publishBatch": 21,
+          "qualityScore": 86,
+          "readyForHumanReview": true,
+          "riskChecks": [
+            "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
+            "No API key, private customer data, credential, or bypass instruction is included.",
+            "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
+            "Retrieval quality, citations, memory retention, privacy, and hallucination risks are explicit."
+          ],
+          "safeDraft": true,
+          "sourceTargets": [
+            "OpenAI retrieval: https://platform.openai.com/docs/guides/retrieval",
+            "OpenAI Agents knowledge and memory: https://platform.openai.com/docs/guides/agents",
+            "LangChain docs: https://python.langchain.com/docs",
+            "LlamaIndex docs: https://docs.llamaindex.ai"
+          ],
+          "title": "向量数据库怎么选：新手先理解 embedding 和检索",
           "intentSeeds": [
             "RAG 知识库搭建",
             "AI Agent 记忆",
@@ -769,55 +630,55 @@
           ]
         },
         {
-          "file": "content/blog/dify-workflow-error-handling-guide.mdx",
-          "laneId": "nocode-ai-automation",
-          "lanePriorityScore": 314,
-          "laneTitle": "Dify, n8n, no-code AI automation, and workflow deployment",
-          "primaryKeyword": "Dify 工作流错误处理",
-          "publishBatch": 33,
+          "file": "content/blog/vercel-404-after-deploy-mistakes.mdx",
+          "laneId": "deployment-troubleshooting",
+          "lanePriorityScore": 162,
+          "laneTitle": "AI app deployment errors and beginner troubleshooting",
+          "primaryKeyword": "Vercel 部署后 404 常见误区",
+          "publishBatch": 15,
           "qualityScore": 86,
           "readyForHumanReview": true,
           "riskChecks": [
             "No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.",
             "No API key, private customer data, credential, or bypass instruction is included.",
             "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
-            "Webhook auth, connector permissions, retries, manual fallback, and platform policy boundaries are explicit."
+            "Article-specific operational and safety boundaries are explicit."
           ],
           "safeDraft": true,
           "sourceTargets": [
-            "Dify Agent docs: https://docs.dify.ai/en/use-dify/build/agent",
-            "Dify Agent node: https://docs.dify.ai/en/guides/workflow/node/agent",
-            "n8n docs: https://docs.n8n.io"
+            "Vercel docs: https://vercel.com/docs",
+            "OpenAI API docs: https://platform.openai.com/docs"
           ],
-          "title": "Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底",
+          "title": "Vercel 部署后 404 常见误区：别只盯着域名",
           "intentSeeds": [
-            "Dify 部署教程",
-            "n8n AI Agent",
-            "AI 自动化工作流",
-            "Webhook AI Agent"
+            "Vercel build failed",
+            "API Key 无效",
+            "环境变量缺失",
+            "npm command not found"
           ],
           "reviewFocus": [
-            "self-hosting vs cloud boundaries",
-            "webhook auth",
-            "error handling",
-            "manual fallback"
+            "reproduction",
+            "logs",
+            "fix order",
+            "verification command",
+            "avoid overgeneralized fixes"
           ],
           "wave": 4,
           "workflowAngles": [
-            "self-hosting",
-            "webhook",
-            "auth",
-            "retry",
-            "human fallback"
+            "error log",
+            "reproduction",
+            "fix sequence",
+            "verification",
+            "handoff boundary"
           ]
         },
         {
-          "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
-          "laneId": "model-api-integration",
-          "lanePriorityScore": 314,
-          "laneTitle": "Model API integration, rate limits, and multi-model fallback",
-          "primaryKeyword": "AI API Key 安全管理",
-          "publishBatch": 34,
+          "file": "content/blog/vercel-build-failed-causes-freelance-scope.mdx",
+          "laneId": "ai-service-pricing-scope",
+          "lanePriorityScore": 162,
+          "laneTitle": "AI automation service pricing, scope, and delivery checklist",
+          "primaryKeyword": "Vercel build failed 项目",
+          "publishBatch": 13,
           "qualityScore": 86,
           "readyForHumanReview": true,
           "riskChecks": [
@@ -829,38 +690,38 @@
           "safeDraft": true,
           "sourceTargets": [
             "OpenAI API docs: https://platform.openai.com/docs",
-            "Anthropic docs: https://docs.anthropic.com",
-            "Vercel AI SDK providers: https://ai-sdk.dev/docs/foundations/providers-and-models"
+            "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+            "Dify docs: https://docs.dify.ai"
           ],
-          "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
+          "title": "Vercel build failed 排查能不能项目：先看这 7 个边界",
           "intentSeeds": [
-            "OpenAI API 接入",
-            "Claude API 限流",
-            "Gemini API 限流",
-            "多模型 Router 降级"
+            "AI 自动化项目报价",
+            "AI Agent 项目",
+            "RAG 项目报价",
+            "Dify n8n 报价"
           ],
           "reviewFocus": [
-            "current model names",
-            "rate limits",
-            "retry behavior",
-            "key rotation",
-            "fallback quality"
+            "scope boundaries",
+            "acceptance criteria",
+            "maintenance fee",
+            "risk disclaimers",
+            "no income guarantees"
           ],
           "wave": 4,
           "workflowAngles": [
-            "server-side calls",
-            "rate limit retry",
-            "fallback routing",
-            "key rotation",
-            "cost control"
+            "scope",
+            "pricing",
+            "acceptance",
+            "maintenance",
+            "risk language"
           ]
         }
       ],
       "laneCount": 3,
       "lanes": [
         "RAG, knowledge base, and Agent memory",
-        "Dify, n8n, no-code AI automation, and workflow deployment",
-        "Model API integration, rate limits, and multi-model fallback"
+        "AI app deployment errors and beginner troubleshooting",
+        "AI automation service pricing, scope, and delivery checklist"
       ],
       "readyItems": 3,
       "riskChecks": [
@@ -868,10 +729,9 @@
         "No API key, private customer data, credential, or bypass instruction is included.",
         "Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.",
         "Retrieval quality, citations, memory retention, privacy, and hallucination risks are explicit.",
-        "Webhook auth, connector permissions, retries, manual fallback, and platform policy boundaries are explicit.",
         "Article-specific operational and safety boundaries are explicit."
       ],
-      "sourceTargetCount": 10,
+      "sourceTargetCount": 8,
       "wave": 4
     }
   ]

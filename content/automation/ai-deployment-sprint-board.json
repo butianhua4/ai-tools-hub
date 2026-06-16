@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:38:58.249Z",
+  "generatedAt": "2026-06-16T07:01:17.486Z",
   "guardrails": {
     "autoCreateArticles": false,
     "autoEditArticles": false,
@@ -10,21 +10,21 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "deploymentReviewGeneratedAt": "2026-06-14T10:38:57.776Z",
+    "deploymentReviewGeneratedAt": "2026-06-16T07:01:17.007Z",
     "deploymentReviewSummary": {
-      "deploymentPublicArticles": 3,
+      "deploymentPublicArticles": 179,
       "duplicateFiles": 0,
-      "items": 10,
-      "itemsWithChecklists": 10,
-      "itemsWithCommandBoundary": 10,
-      "itemsWithOfficialSources": 10,
-      "itemsWithSearchQueries": 10,
-      "reviewReadyDeploymentDrafts": 208,
-      "safeDraftItems": 10,
-      "topicsCovered": 10,
-      "topicsWithoutPublicCoverage": 8,
+      "items": 6,
+      "itemsWithChecklists": 6,
+      "itemsWithCommandBoundary": 6,
+      "itemsWithOfficialSources": 6,
+      "itemsWithSearchQueries": 6,
+      "reviewReadyDeploymentDrafts": 32,
+      "safeDraftItems": 6,
+      "topicsCovered": 6,
+      "topicsWithoutPublicCoverage": 0,
       "unsafeItems": 0,
-      "uniqueFiles": 10
+      "uniqueFiles": 6
     },
     "officialSources": [
       "Anthropic docs: https://docs.anthropic.com",
@@ -43,28 +43,28 @@
     "trafficNote": "Search queries are planning seeds only; no traffic, ranking, impression, click, conversion, revenue, benchmark, latency, or cost claim is made."
   },
   "summary": {
-    "actionItems": 147,
-    "agentItems": 1,
-    "apiIntegrationItems": 1,
-    "automationPlatformItems": 1,
-    "deploymentPublicArticles": 3,
-    "highPriorityItems": 8,
-    "implementationModes": 7,
-    "items": 10,
+    "actionItems": 88,
+    "agentItems": 0,
+    "apiIntegrationItems": 2,
+    "automationPlatformItems": 0,
+    "deploymentPublicArticles": 179,
+    "highPriorityItems": 0,
+    "implementationModes": 4,
+    "items": 6,
     "itemsPerWave": 2,
-    "lanes": 7,
-    "localModelItems": 1,
+    "lanes": 4,
+    "localModelItems": 0,
     "memoryItems": 1,
-    "modelServingItems": 2,
+    "modelServingItems": 1,
     "publishConfirmCommandsIncluded": 0,
-    "readyForDeploymentSprint": 10,
-    "reviewPackItems": 10,
-    "searchQueries": 40,
-    "sourceTargets": 12,
-    "topicsWithoutPublicCoverage": 8,
+    "readyForDeploymentSprint": 6,
+    "reviewPackItems": 6,
+    "searchQueries": 24,
+    "sourceTargets": 10,
+    "topicsWithoutPublicCoverage": 0,
     "trafficDataAvailable": false,
     "unsafeItems": 0,
-    "waves": 5
+    "waves": 3
   },
   "unsafeItems": [],
   "waves": [
@@ -77,18 +77,18 @@
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not include publish confirm commands in any generated handoff.",
         "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence.",
-        "Confirm tool allowlists, permission boundaries, human approval steps, retries, and audit logs are explicit.",
+        "Confirm rate limits, auth, environment variables, request/response validation, and error handling are explicit.",
         "Confirm chunking, retrieval, citation, privacy, memory retention, and hallucination review boundaries are explicit."
       ],
       "deploymentLanes": [
-        "agent-deployment",
+        "api-integration",
         "rag-memory"
       ],
       "files": [
-        "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
-        "content/blog/ai-agent-memory-rag-design-guide.mdx"
+        "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+        "content/blog/together-ai-api-beginner-guide.mdx"
       ],
-      "highPriorityItems": 2,
+      "highPriorityItems": 0,
       "implementationModes": [
         "managed-web-runtime",
         "retrieval-memory-system"
@@ -96,20 +96,21 @@
       "items": 2,
       "readyItems": 2,
       "searchQueries": [
-        "AI Agent 部署教程",
-        "Agent 工具调用教程",
-        "AI 工作流部署",
-        "Agent 人工审核流程",
+        "大模型部署教程",
+        "AI 应用部署教程",
+        "OpenAI API 部署教程",
+        "Vercel AI SDK 部署",
         "RAG 知识库搭建教程",
         "企业知识库 AI 部署",
         "向量数据库 RAG 教程",
         "RAG 评测怎么做"
       ],
       "sourceTargets": [
-        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+        "OpenAI API docs: https://platform.openai.com/docs",
         "Vercel AI SDK docs: https://ai-sdk.dev/docs",
-        "LangChain docs: https://python.langchain.com/docs",
+        "Anthropic docs: https://docs.anthropic.com",
         "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+        "LangChain docs: https://python.langchain.com/docs",
         "LlamaIndex docs: https://docs.llamaindex.ai",
         "Hugging Face docs: https://huggingface.co/docs"
       ],
@@ -117,7 +118,7 @@
       "wave": 1
     },
     {
-      "actionItems": 30,
+      "actionItems": 29,
       "deploymentChecks": [
         "Verify current official docs before touching model names, SDK imports, endpoints, commands, or deployment settings.",
         "Confirm secret handling keeps API keys, tokens, and credentials out of client-side code and screenshots.",
@@ -125,39 +126,37 @@
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not include publish confirm commands in any generated handoff.",
         "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence.",
-        "Confirm local runtime, model download, hardware, storage, and network exposure warnings are explicit.",
-        "Confirm workflow branching, retries, fallback, manual handoff, and error handling are explicit."
+        "Confirm rate limits, auth, environment variables, request/response validation, and error handling are explicit."
       ],
       "deploymentLanes": [
-        "local-model-serving",
-        "workflow-automation"
+        "api-integration",
+        "deployment-ops"
       ],
       "files": [
-        "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
-        "content/blog/ai-automation-project-pricing-scope-guide.mdx"
+        "content/blog/vercel-404-after-deploy.mdx",
+        "content/blog/windows-path-permission-install-fix.mdx"
       ],
-      "highPriorityItems": 2,
+      "highPriorityItems": 0,
       "implementationModes": [
-        "local-runtime",
-        "low-code-workflow"
+        "managed-web-runtime",
+        "manual-deployment-review"
       ],
       "items": 2,
       "readyItems": 2,
       "searchQueries": [
-        "本地部署大模型教程",
-        "Ollama 本地部署",
-        "Open WebUI Ollama 部署",
-        "本地大模型显存不够",
-        "Dify 部署教程",
-        "n8n AI Agent 自托管",
-        "Flowise 本地部署",
-        "Dify 工作流错误处理"
+        "Vercel build failed",
+        "Vercel 部署后 404",
+        "API Key 无效或缺失",
+        "环境变量缺失怎么办",
+        "MCP Server 部署安全",
+        "Agent 工具权限控制",
+        "企业微信 AI Agent",
+        "Slack AI Agent 接入"
       ],
       "sourceTargets": [
-        "Ollama docs: https://docs.ollama.com",
-        "vLLM docs: https://docs.vllm.ai",
-        "Hugging Face docs: https://huggingface.co/docs",
-        "Dify docs: https://docs.dify.ai",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+        "OpenAI API docs: https://platform.openai.com/docs",
+        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
         "n8n docs: https://docs.n8n.io"
       ],
       "unsafeItems": 0,
@@ -175,125 +174,39 @@
         "Confirm serving runtime, queueing, GPU/resource limits, monitoring, scaling, and fallback behavior are explicit."
       ],
       "deploymentLanes": [
-        "deployment-ops",
-        "model-serving"
-      ],
-      "files": [
-        "content/blog/ai-api-key-security-rotation-guide.mdx",
-        "content/blog/bentoml-llm-deployment-beginner-guide.mdx"
-      ],
-      "highPriorityItems": 2,
-      "implementationModes": [
-        "manual-deployment-review",
-        "model-serving-runtime"
-      ],
-      "items": 2,
-      "readyItems": 2,
-      "searchQueries": [
-        "OpenAI API Next.js",
-        "Claude API 接入",
-        "Gemini API Next.js",
-        "API rate limit 怎么办",
-        "vLLM 部署教程",
-        "TGI 部署教程",
-        "RunPod Serverless 大模型部署",
-        "Modal Serverless GPU LLM"
-      ],
-      "sourceTargets": [
-        "OpenAI API docs: https://platform.openai.com/docs",
-        "Anthropic docs: https://docs.anthropic.com",
-        "vLLM docs: https://docs.vllm.ai",
-        "Hugging Face docs: https://huggingface.co/docs"
-      ],
-      "unsafeItems": 0,
-      "wave": 3
-    },
-    {
-      "actionItems": 28,
-      "deploymentChecks": [
-        "Verify current official docs before touching model names, SDK imports, endpoints, commands, or deployment settings.",
-        "Confirm secret handling keeps API keys, tokens, and credentials out of client-side code and screenshots.",
-        "Require a smoke test, rollback path, log location, and failure triage checklist before review approval.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not include publish confirm commands in any generated handoff.",
-        "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence."
-      ],
-      "deploymentLanes": [
+        "model-serving",
         "deployment-ops"
       ],
       "files": [
-        "content/blog/mcp-server-deployment-security-checklist.mdx",
-        "content/blog/enterprise-im-ai-agent-integration-guide.mdx"
-      ],
-      "highPriorityItems": 2,
-      "implementationModes": [
-        "manual-deployment-review"
-      ],
-      "items": 2,
-      "readyItems": 2,
-      "searchQueries": [
-        "LLM observability 教程",
-        "Agent 可观测性",
-        "RAG 评测",
-        "promptfoo LLM 评测",
-        "MCP Server 部署安全",
-        "Agent 工具权限控制",
-        "企业微信 AI Agent",
-        "Slack AI Agent 接入"
-      ],
-      "sourceTargets": [
-        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
-        "LangChain docs: https://python.langchain.com/docs",
-        "LlamaIndex docs: https://docs.llamaindex.ai",
-        "n8n docs: https://docs.n8n.io"
-      ],
-      "unsafeItems": 0,
-      "wave": 4
-    },
-    {
-      "actionItems": 30,
-      "deploymentChecks": [
-        "Verify current official docs before touching model names, SDK imports, endpoints, commands, or deployment settings.",
-        "Confirm secret handling keeps API keys, tokens, and credentials out of client-side code and screenshots.",
-        "Require a smoke test, rollback path, log location, and failure triage checklist before review approval.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not include publish confirm commands in any generated handoff.",
-        "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence.",
-        "Confirm serving runtime, queueing, GPU/resource limits, monitoring, scaling, and fallback behavior are explicit.",
-        "Confirm rate limits, auth, environment variables, request/response validation, and error handling are explicit."
-      ],
-      "deploymentLanes": [
-        "model-serving",
-        "api-integration"
-      ],
-      "files": [
-        "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
-        "content/blog/claude-code-error-debug.mdx"
+        "content/blog/tensorrt-llm-beginner-guide.mdx",
+        "content/blog/vercel-build-failed-causes-checklist.mdx"
       ],
       "highPriorityItems": 0,
       "implementationModes": [
         "model-serving-runtime",
-        "api-service-integration"
+        "managed-web-runtime"
       ],
       "items": 2,
       "readyItems": 2,
       "searchQueries": [
-        "大模型部署教程",
-        "AI 应用部署教程",
-        "OpenAI API 部署教程",
-        "Vercel AI SDK 部署",
-        "Vercel build failed",
-        "Vercel 部署后 404",
-        "API Key 无效或缺失",
-        "环境变量缺失怎么办"
+        "vLLM 部署教程",
+        "TGI 部署教程",
+        "RunPod Serverless 大模型部署",
+        "Modal Serverless GPU LLM",
+        "LLM observability 教程",
+        "Agent 可观测性",
+        "RAG 评测",
+        "promptfoo LLM 评测"
       ],
       "sourceTargets": [
-        "OpenAI API docs: https://platform.openai.com/docs",
-        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
-        "Anthropic docs: https://docs.anthropic.com"
+        "vLLM docs: https://docs.vllm.ai",
+        "Hugging Face docs: https://huggingface.co/docs",
+        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+        "LangChain docs: https://python.langchain.com/docs",
+        "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
       "unsafeItems": 0,
-      "wave": 5
+      "wave": 3
     }
   ],
   "items": [
@@ -306,10 +219,10 @@
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not include publish confirm commands in any generated handoff.",
         "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence.",
-        "Confirm tool allowlists, permission boundaries, human approval steps, retries, and audit logs are explicit."
+        "Confirm rate limits, auth, environment variables, request/response validation, and error handling are explicit."
       ],
-      "deploymentLane": "agent-deployment",
-      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "deploymentLane": "api-integration",
+      "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
       "humanReviewActions": [
         "Read the candidate as a tutorial, not a product claim; remove any unsupported certainty.",
         "Check that the title, intro, FAQ, and examples answer broad deployment search intent.",
@@ -317,35 +230,35 @@
         "Add or verify a beginner-facing failure path for common install, key, runtime, and deployment errors.",
         "Map the article to one dominant deployment lane so it does not cannibalize adjacent Agent/RAG/model topics.",
         "Leave mark:review and publish actions to explicit human approval only.",
-        "Review lane-specific risk boundary for agent-deployment.",
-        "Use source targets: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents, Vercel AI SDK docs: https://ai-sdk.dev/docs, LangChain docs: https://python.langchain.com/docs."
+        "Review lane-specific risk boundary for api-integration.",
+        "Use source targets: OpenAI API docs: https://platform.openai.com/docs, Vercel AI SDK docs: https://ai-sdk.dev/docs, Anthropic docs: https://docs.anthropic.com."
       ],
       "implementationMode": "managed-web-runtime",
-      "priorityScore": 380,
-      "publicMatches": 0,
+      "priorityScore": 262,
+      "publicMatches": 50,
       "publishConfirm": "not-included",
       "readyForDeploymentSprint": true,
       "searchQueries": [
-        "AI Agent 部署教程",
-        "Agent 工具调用教程",
-        "AI 工作流部署",
-        "Agent 人工审核流程"
+        "大模型部署教程",
+        "AI 应用部署教程",
+        "OpenAI API 部署教程",
+        "Vercel AI SDK 部署"
       ],
       "sourceTargets": [
-        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+        "OpenAI API docs: https://platform.openai.com/docs",
         "Vercel AI SDK docs: https://ai-sdk.dev/docs",
-        "LangChain docs: https://python.langchain.com/docs"
+        "Anthropic docs: https://docs.anthropic.com"
       ],
       "sprintWave": 1,
-      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
-      "topic": "Agent 部署、工具调用和工作流",
+      "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
+      "topic": "大模型和 AI 应用部署",
       "unsafeReasons": [],
       "workflowAngles": [
-        "工具白名单",
-        "多步执行",
-        "人工确认",
-        "失败重试",
-        "日志追踪"
+        "环境变量",
+        "API Key",
+        "限流重试",
+        "上线检查",
+        "回滚"
       ]
     },
     {
@@ -360,7 +273,7 @@
         "Confirm chunking, retrieval, citation, privacy, memory retention, and hallucination review boundaries are explicit."
       ],
       "deploymentLane": "rag-memory",
-      "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+      "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "humanReviewActions": [
         "Read the candidate as a tutorial, not a product claim; remove any unsupported certainty.",
         "Check that the title, intro, FAQ, and examples answer broad deployment search intent.",
@@ -372,8 +285,8 @@
         "Use source targets: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval, LangChain docs: https://python.langchain.com/docs, LlamaIndex docs: https://docs.llamaindex.ai."
       ],
       "implementationMode": "retrieval-memory-system",
-      "priorityScore": 378,
-      "publicMatches": 0,
+      "priorityScore": 240,
+      "publicMatches": 28,
       "publishConfirm": "not-included",
       "readyForDeploymentSprint": true,
       "searchQueries": [
@@ -389,7 +302,7 @@
         "Hugging Face docs: https://huggingface.co/docs"
       ],
       "sprintWave": 1,
-      "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
+      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
       "topic": "RAG、知识库和向量检索",
       "unsafeReasons": [],
       "workflowAngles": [
@@ -410,10 +323,10 @@
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not include publish confirm commands in any generated handoff.",
         "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence.",
-        "Confirm local runtime, model download, hardware, storage, and network exposure warnings are explicit."
+        "Confirm rate limits, auth, environment variables, request/response validation, and error handling are explicit."
       ],
-      "deploymentLane": "local-model-serving",
-      "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+      "deploymentLane": "api-integration",
+      "file": "content/blog/vercel-404-after-deploy.mdx",
       "humanReviewActions": [
         "Read the candidate as a tutorial, not a product claim; remove any unsupported certainty.",
         "Check that the title, intro, FAQ, and examples answer broad deployment search intent.",
@@ -421,85 +334,34 @@
         "Add or verify a beginner-facing failure path for common install, key, runtime, and deployment errors.",
         "Map the article to one dominant deployment lane so it does not cannibalize adjacent Agent/RAG/model topics.",
         "Leave mark:review and publish actions to explicit human approval only.",
-        "Review lane-specific risk boundary for local-model-serving.",
-        "Use source targets: Ollama docs: https://docs.ollama.com, vLLM docs: https://docs.vllm.ai, Hugging Face docs: https://huggingface.co/docs."
+        "Review lane-specific risk boundary for api-integration.",
+        "Use source targets: Vercel AI SDK docs: https://ai-sdk.dev/docs, OpenAI API docs: https://platform.openai.com/docs."
       ],
-      "implementationMode": "local-runtime",
-      "priorityScore": 374,
-      "publicMatches": 0,
+      "implementationMode": "managed-web-runtime",
+      "priorityScore": 240,
+      "publicMatches": 70,
       "publishConfirm": "not-included",
       "readyForDeploymentSprint": true,
       "searchQueries": [
-        "本地部署大模型教程",
-        "Ollama 本地部署",
-        "Open WebUI Ollama 部署",
-        "本地大模型显存不够"
+        "Vercel build failed",
+        "Vercel 部署后 404",
+        "API Key 无效或缺失",
+        "环境变量缺失怎么办"
       ],
       "sourceTargets": [
-        "Ollama docs: https://docs.ollama.com",
-        "vLLM docs: https://docs.vllm.ai",
-        "Hugging Face docs: https://huggingface.co/docs"
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+        "OpenAI API docs: https://platform.openai.com/docs"
       ],
       "sprintWave": 2,
-      "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流",
-      "topic": "本地模型和开源模型部署",
+      "title": "Vercel 部署成功但页面 404：新手排查顺序",
+      "topic": "AI 应用部署报错和排查",
       "unsafeReasons": [],
       "workflowAngles": [
-        "硬件估算",
-        "模型下载",
-        "本地 API",
-        "量化",
-        "网页聊天"
-      ]
-    },
-    {
-      "actionCount": 15,
-      "deploymentChecks": [
-        "Verify current official docs before touching model names, SDK imports, endpoints, commands, or deployment settings.",
-        "Confirm secret handling keeps API keys, tokens, and credentials out of client-side code and screenshots.",
-        "Require a smoke test, rollback path, log location, and failure triage checklist before review approval.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not include publish confirm commands in any generated handoff.",
-        "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence.",
-        "Confirm workflow branching, retries, fallback, manual handoff, and error handling are explicit."
-      ],
-      "deploymentLane": "workflow-automation",
-      "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-      "humanReviewActions": [
-        "Read the candidate as a tutorial, not a product claim; remove any unsupported certainty.",
-        "Check that the title, intro, FAQ, and examples answer broad deployment search intent.",
-        "Use official docs as fact-check sources before any mark:review action.",
-        "Add or verify a beginner-facing failure path for common install, key, runtime, and deployment errors.",
-        "Map the article to one dominant deployment lane so it does not cannibalize adjacent Agent/RAG/model topics.",
-        "Leave mark:review and publish actions to explicit human approval only.",
-        "Review lane-specific risk boundary for workflow-automation.",
-        "Use source targets: Dify docs: https://docs.dify.ai, n8n docs: https://docs.n8n.io."
-      ],
-      "implementationMode": "low-code-workflow",
-      "priorityScore": 370,
-      "publicMatches": 0,
-      "publishConfirm": "not-included",
-      "readyForDeploymentSprint": true,
-      "searchQueries": [
-        "Dify 部署教程",
-        "n8n AI Agent 自托管",
-        "Flowise 本地部署",
-        "Dify 工作流错误处理"
-      ],
-      "sourceTargets": [
-        "Dify docs: https://docs.dify.ai",
-        "n8n docs: https://docs.n8n.io"
-      ],
-      "sprintWave": 2,
-      "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
-      "topic": "Dify、n8n、Flowise 和无代码 AI 自动化",
-      "unsafeReasons": [],
-      "workflowAngles": [
-        "自部署",
-        "Webhook",
-        "鉴权",
-        "错误处理",
-        "人工兜底"
+        "错误日志",
+        "复现",
+        "修复顺序",
+        "验证命令",
+        "项目边界"
       ]
     },
     {
@@ -513,156 +375,7 @@
         "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence."
       ],
       "deploymentLane": "deployment-ops",
-      "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
-      "humanReviewActions": [
-        "Read the candidate as a tutorial, not a product claim; remove any unsupported certainty.",
-        "Check that the title, intro, FAQ, and examples answer broad deployment search intent.",
-        "Use official docs as fact-check sources before any mark:review action.",
-        "Add or verify a beginner-facing failure path for common install, key, runtime, and deployment errors.",
-        "Map the article to one dominant deployment lane so it does not cannibalize adjacent Agent/RAG/model topics.",
-        "Leave mark:review and publish actions to explicit human approval only.",
-        "Review lane-specific risk boundary for deployment-ops.",
-        "Use source targets: OpenAI API docs: https://platform.openai.com/docs, Anthropic docs: https://docs.anthropic.com."
-      ],
-      "implementationMode": "manual-deployment-review",
-      "priorityScore": 368,
-      "publicMatches": 0,
-      "publishConfirm": "not-included",
-      "readyForDeploymentSprint": true,
-      "searchQueries": [
-        "OpenAI API Next.js",
-        "Claude API 接入",
-        "Gemini API Next.js",
-        "API rate limit 怎么办"
-      ],
-      "sourceTargets": [
-        "OpenAI API docs: https://platform.openai.com/docs",
-        "Anthropic docs: https://docs.anthropic.com"
-      ],
-      "sprintWave": 3,
-      "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
-      "topic": "模型 API 接入、限流和多模型降级",
-      "unsafeReasons": [],
-      "workflowAngles": [
-        "服务端调用",
-        "限流重试",
-        "降级模型",
-        "成本控制",
-        "Key 轮换"
-      ]
-    },
-    {
-      "actionCount": 15,
-      "deploymentChecks": [
-        "Verify current official docs before touching model names, SDK imports, endpoints, commands, or deployment settings.",
-        "Confirm secret handling keeps API keys, tokens, and credentials out of client-side code and screenshots.",
-        "Require a smoke test, rollback path, log location, and failure triage checklist before review approval.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not include publish confirm commands in any generated handoff.",
-        "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence.",
-        "Confirm serving runtime, queueing, GPU/resource limits, monitoring, scaling, and fallback behavior are explicit."
-      ],
-      "deploymentLane": "model-serving",
-      "file": "content/blog/bentoml-llm-deployment-beginner-guide.mdx",
-      "humanReviewActions": [
-        "Read the candidate as a tutorial, not a product claim; remove any unsupported certainty.",
-        "Check that the title, intro, FAQ, and examples answer broad deployment search intent.",
-        "Use official docs as fact-check sources before any mark:review action.",
-        "Add or verify a beginner-facing failure path for common install, key, runtime, and deployment errors.",
-        "Map the article to one dominant deployment lane so it does not cannibalize adjacent Agent/RAG/model topics.",
-        "Leave mark:review and publish actions to explicit human approval only.",
-        "Review lane-specific risk boundary for model-serving.",
-        "Use source targets: vLLM docs: https://docs.vllm.ai, Hugging Face docs: https://huggingface.co/docs."
-      ],
-      "implementationMode": "model-serving-runtime",
-      "priorityScore": 367,
-      "publicMatches": 0,
-      "publishConfirm": "not-included",
-      "readyForDeploymentSprint": true,
-      "searchQueries": [
-        "vLLM 部署教程",
-        "TGI 部署教程",
-        "RunPod Serverless 大模型部署",
-        "Modal Serverless GPU LLM"
-      ],
-      "sourceTargets": [
-        "vLLM docs: https://docs.vllm.ai",
-        "Hugging Face docs: https://huggingface.co/docs"
-      ],
-      "sprintWave": 3,
-      "title": "BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收",
-      "topic": "LLM Serving、GPU 和托管推理",
-      "unsafeReasons": [],
-      "workflowAngles": [
-        "在线 serving",
-        "并发",
-        "GPU",
-        "冷启动",
-        "成本延迟"
-      ]
-    },
-    {
-      "actionCount": 14,
-      "deploymentChecks": [
-        "Verify current official docs before touching model names, SDK imports, endpoints, commands, or deployment settings.",
-        "Confirm secret handling keeps API keys, tokens, and credentials out of client-side code and screenshots.",
-        "Require a smoke test, rollback path, log location, and failure triage checklist before review approval.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not include publish confirm commands in any generated handoff.",
-        "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence."
-      ],
-      "deploymentLane": "deployment-ops",
-      "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
-      "humanReviewActions": [
-        "Read the candidate as a tutorial, not a product claim; remove any unsupported certainty.",
-        "Check that the title, intro, FAQ, and examples answer broad deployment search intent.",
-        "Use official docs as fact-check sources before any mark:review action.",
-        "Add or verify a beginner-facing failure path for common install, key, runtime, and deployment errors.",
-        "Map the article to one dominant deployment lane so it does not cannibalize adjacent Agent/RAG/model topics.",
-        "Leave mark:review and publish actions to explicit human approval only.",
-        "Review lane-specific risk boundary for deployment-ops.",
-        "Use source targets: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents, LangChain docs: https://python.langchain.com/docs, LlamaIndex docs: https://docs.llamaindex.ai."
-      ],
-      "implementationMode": "manual-deployment-review",
-      "priorityScore": 366,
-      "publicMatches": 0,
-      "publishConfirm": "not-included",
-      "readyForDeploymentSprint": true,
-      "searchQueries": [
-        "LLM observability 教程",
-        "Agent 可观测性",
-        "RAG 评测",
-        "promptfoo LLM 评测"
-      ],
-      "sourceTargets": [
-        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
-        "LangChain docs: https://python.langchain.com/docs",
-        "LlamaIndex docs: https://docs.llamaindex.ai"
-      ],
-      "sprintWave": 4,
-      "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单",
-      "topic": "LLM 观测、评测和上线质量",
-      "unsafeReasons": [],
-      "workflowAngles": [
-        "日志",
-        "tracing",
-        "评测集",
-        "成本",
-        "失败复盘"
-      ]
-    },
-    {
-      "actionCount": 14,
-      "deploymentChecks": [
-        "Verify current official docs before touching model names, SDK imports, endpoints, commands, or deployment settings.",
-        "Confirm secret handling keeps API keys, tokens, and credentials out of client-side code and screenshots.",
-        "Require a smoke test, rollback path, log location, and failure triage checklist before review approval.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not include publish confirm commands in any generated handoff.",
-        "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence."
-      ],
-      "deploymentLane": "deployment-ops",
-      "file": "content/blog/enterprise-im-ai-agent-integration-guide.mdx",
+      "file": "content/blog/windows-path-permission-install-fix.mdx",
       "humanReviewActions": [
         "Read the candidate as a tutorial, not a product claim; remove any unsupported certainty.",
         "Check that the title, intro, FAQ, and examples answer broad deployment search intent.",
@@ -674,8 +387,8 @@
         "Use source targets: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents, n8n docs: https://docs.n8n.io."
       ],
       "implementationMode": "manual-deployment-review",
-      "priorityScore": 364,
-      "publicMatches": 0,
+      "priorityScore": 226,
+      "publicMatches": 9,
       "publishConfirm": "not-included",
       "readyForDeploymentSprint": true,
       "searchQueries": [
@@ -688,8 +401,8 @@
         "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
         "n8n docs: https://docs.n8n.io"
       ],
-      "sprintWave": 4,
-      "title": "企业微信、飞书、Slack 怎么接 AI Agent：消息入口、权限和人工接管",
+      "sprintWave": 2,
+      "title": "Windows 路径和权限导致安装失败怎么办",
       "topic": "MCP、工具权限和企业集成安全",
       "unsafeReasons": [],
       "workflowAngles": [
@@ -712,7 +425,7 @@
         "Confirm serving runtime, queueing, GPU/resource limits, monitoring, scaling, and fallback behavior are explicit."
       ],
       "deploymentLane": "model-serving",
-      "file": "content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx",
+      "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
       "humanReviewActions": [
         "Read the candidate as a tutorial, not a product claim; remove any unsupported certainty.",
         "Check that the title, intro, FAQ, and examples answer broad deployment search intent.",
@@ -721,49 +434,47 @@
         "Map the article to one dominant deployment lane so it does not cannibalize adjacent Agent/RAG/model topics.",
         "Leave mark:review and publish actions to explicit human approval only.",
         "Review lane-specific risk boundary for model-serving.",
-        "Use source targets: OpenAI API docs: https://platform.openai.com/docs, Vercel AI SDK docs: https://ai-sdk.dev/docs, Anthropic docs: https://docs.anthropic.com."
+        "Use source targets: vLLM docs: https://docs.vllm.ai, Hugging Face docs: https://huggingface.co/docs."
       ],
       "implementationMode": "model-serving-runtime",
-      "priorityScore": 274,
-      "publicMatches": 2,
+      "priorityScore": 212,
+      "publicMatches": 5,
       "publishConfirm": "not-included",
       "readyForDeploymentSprint": true,
       "searchQueries": [
-        "大模型部署教程",
-        "AI 应用部署教程",
-        "OpenAI API 部署教程",
-        "Vercel AI SDK 部署"
+        "vLLM 部署教程",
+        "TGI 部署教程",
+        "RunPod Serverless 大模型部署",
+        "Modal Serverless GPU LLM"
       ],
       "sourceTargets": [
-        "OpenAI API docs: https://platform.openai.com/docs",
-        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
-        "Anthropic docs: https://docs.anthropic.com"
+        "vLLM docs: https://docs.vllm.ai",
+        "Hugging Face docs: https://huggingface.co/docs"
       ],
-      "sprintWave": 5,
-      "title": "大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查",
-      "topic": "大模型和 AI 应用部署",
+      "sprintWave": 3,
+      "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+      "topic": "LLM Serving、GPU 和托管推理",
       "unsafeReasons": [],
       "workflowAngles": [
-        "环境变量",
-        "API Key",
-        "限流重试",
-        "上线检查",
-        "回滚"
+        "在线 serving",
+        "并发",
+        "GPU",
+        "冷启动",
+        "成本延迟"
       ]
     },
     {
-      "actionCount": 15,
+      "actionCount": 14,
       "deploymentChecks": [
         "Verify current official docs before touching model names, SDK imports, endpoints, commands, or deployment settings.",
         "Confirm secret handling keeps API keys, tokens, and credentials out of client-side code and screenshots.",
         "Require a smoke test, rollback path, log location, and failure triage checklist before review approval.",
         "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
         "Do not include publish confirm commands in any generated handoff.",
-        "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence.",
-        "Confirm rate limits, auth, environment variables, request/response validation, and error handling are explicit."
+        "Do not claim traffic, ranking, revenue, latency, benchmark, cost savings, or uptime without measured evidence."
       ],
-      "deploymentLane": "api-integration",
-      "file": "content/blog/claude-code-error-debug.mdx",
+      "deploymentLane": "deployment-ops",
+      "file": "content/blog/vercel-build-failed-causes-checklist.mdx",
       "humanReviewActions": [
         "Read the candidate as a tutorial, not a product claim; remove any unsupported certainty.",
         "Check that the title, intro, FAQ, and examples answer broad deployment search intent.",
@@ -771,34 +482,35 @@
         "Add or verify a beginner-facing failure path for common install, key, runtime, and deployment errors.",
         "Map the article to one dominant deployment lane so it does not cannibalize adjacent Agent/RAG/model topics.",
         "Leave mark:review and publish actions to explicit human approval only.",
-        "Review lane-specific risk boundary for api-integration.",
-        "Use source targets: Vercel AI SDK docs: https://ai-sdk.dev/docs, OpenAI API docs: https://platform.openai.com/docs."
+        "Review lane-specific risk boundary for deployment-ops.",
+        "Use source targets: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents, LangChain docs: https://python.langchain.com/docs, LlamaIndex docs: https://docs.llamaindex.ai."
       ],
-      "implementationMode": "api-service-integration",
-      "priorityScore": 252,
-      "publicMatches": 2,
+      "implementationMode": "managed-web-runtime",
+      "priorityScore": 195,
+      "publicMatches": 13,
       "publishConfirm": "not-included",
       "readyForDeploymentSprint": true,
       "searchQueries": [
-        "Vercel build failed",
-        "Vercel 部署后 404",
-        "API Key 无效或缺失",
-        "环境变量缺失怎么办"
+        "LLM observability 教程",
+        "Agent 可观测性",
+        "RAG 评测",
+        "promptfoo LLM 评测"
       ],
       "sourceTargets": [
-        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
-        "OpenAI API docs: https://platform.openai.com/docs"
+        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+        "LangChain docs: https://python.langchain.com/docs",
+        "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
-      "sprintWave": 5,
-      "title": "用 Claude Code 排查客户报错时怎么做才稳",
-      "topic": "AI 应用部署报错和排查",
+      "sprintWave": 3,
+      "title": "Vercel build failed 排查清单：从日志到重新部署",
+      "topic": "LLM 观测、评测和上线质量",
       "unsafeReasons": [],
       "workflowAngles": [
-        "错误日志",
-        "复现",
-        "修复顺序",
-        "验证命令",
-        "项目边界"
+        "日志",
+        "tracing",
+        "评测集",
+        "成本",
+        "失败复盘"
       ]
     }
   ]

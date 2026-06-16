@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:38:58.728Z",
+  "generatedAt": "2026-06-16T07:01:17.950Z",
   "guardrails": {
     "autoCreateArticles": false,
     "autoEditArticles": false,
@@ -10,21 +10,21 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "deploymentReviewGeneratedAt": "2026-06-14T10:38:57.776Z",
+    "deploymentReviewGeneratedAt": "2026-06-16T07:01:17.007Z",
     "deploymentReviewSummary": {
-      "deploymentPublicArticles": 3,
+      "deploymentPublicArticles": 179,
       "duplicateFiles": 0,
-      "items": 10,
-      "itemsWithChecklists": 10,
-      "itemsWithCommandBoundary": 10,
-      "itemsWithOfficialSources": 10,
-      "itemsWithSearchQueries": 10,
-      "reviewReadyDeploymentDrafts": 208,
-      "safeDraftItems": 10,
-      "topicsCovered": 10,
-      "topicsWithoutPublicCoverage": 8,
+      "items": 6,
+      "itemsWithChecklists": 6,
+      "itemsWithCommandBoundary": 6,
+      "itemsWithOfficialSources": 6,
+      "itemsWithSearchQueries": 6,
+      "reviewReadyDeploymentDrafts": 32,
+      "safeDraftItems": 6,
+      "topicsCovered": 6,
+      "topicsWithoutPublicCoverage": 0,
       "unsafeItems": 0,
-      "uniqueFiles": 10
+      "uniqueFiles": 6
     },
     "officialSources": [
       "Anthropic docs: https://docs.anthropic.com",
@@ -43,16 +43,16 @@
     "trafficNote": "Search queries are planning seeds only; no traffic, ranking, impression, click, conversion, revenue, benchmark, latency, or cost claim is made."
   },
   "summary": {
-    "candidateItems": 4,
+    "candidateItems": 2,
     "decisionChecks": 39,
-    "deploymentPublicArticles": 3,
+    "deploymentPublicArticles": 179,
     "howToLanes": 2,
     "itemsPerWave": 3,
     "lanes": 6,
     "lanesWithCandidateFiles": 2,
     "privacyLanes": 1,
     "publishConfirmCommandsIncluded": 0,
-    "readyCandidates": 4,
+    "readyCandidates": 2,
     "readyLanes": 6,
     "searchQueries": 24,
     "sourceTargets": 6,
@@ -70,7 +70,7 @@
         "需要把文档、客服话术、SOP 接入问答系统的运营和开发者"
       ],
       "candidateFiles": [
-        "content/blog/ai-agent-memory-rag-design-guide.mdx"
+        "content/blog/together-ai-api-beginner-guide.mdx"
       ],
       "decisionChecks": [
         "State the user problem first: knowledge base setup, Agent memory, document ingestion, vector retrieval, evaluation, or privacy.",
@@ -106,7 +106,7 @@
         "要在企业内部上线知识库、担心权限和隐私的人"
       ],
       "candidateFiles": [
-        "content/blog/ai-agent-memory-rag-design-guide.mdx"
+        "content/blog/together-ai-api-beginner-guide.mdx"
       ],
       "decisionChecks": [
         "State the user problem first: knowledge base setup, Agent memory, document ingestion, vector retrieval, evaluation, or privacy.",
@@ -143,7 +143,7 @@
     {
       "audience": "第一次给企业或客服系统做知识库问答的人",
       "candidateFiles": [
-        "content/blog/ai-agent-memory-rag-design-guide.mdx"
+        "content/blog/together-ai-api-beginner-guide.mdx"
       ],
       "decisionChecks": [
         "State the user problem first: knowledge base setup, Agent memory, document ingestion, vector retrieval, evaluation, or privacy.",
@@ -278,7 +278,7 @@
     {
       "audience": "已经做出知识库 demo、但回答不准的人",
       "candidateFiles": [
-        "content/blog/ai-agent-memory-rag-design-guide.mdx"
+        "content/blog/together-ai-api-beginner-guide.mdx"
       ],
       "decisionChecks": [
         "State the user problem first: knowledge base setup, Agent memory, document ingestion, vector retrieval, evaluation, or privacy.",
@@ -348,12 +348,12 @@
   ],
   "candidates": [
     {
-      "file": "content/blog/ai-agent-memory-rag-design-guide.mdx",
+      "file": "content/blog/together-ai-api-beginner-guide.mdx",
       "matchedLanes": [
         "rag-knowledge-base-setup",
         "rag-evaluation-hallucination"
       ],
-      "priorityScore": 378,
+      "priorityScore": 240,
       "publishConfirm": "not-included",
       "readyForMemorySprint": true,
       "reviewActions": [
@@ -376,68 +376,13 @@
         "LlamaIndex docs: https://docs.llamaindex.ai",
         "Hugging Face docs: https://huggingface.co/docs"
       ],
-      "title": "AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界",
+      "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
       "unsafeReasons": []
     },
     {
-      "file": "content/blog/open-webui-functions-pipelines-deployment-guide.mdx",
+      "file": "content/blog/vercel-build-failed-causes-checklist.mdx",
       "matchedLanes": [],
-      "priorityScore": 374,
-      "publishConfirm": "not-included",
-      "readyForMemorySprint": true,
-      "reviewActions": [
-        "Confirm the article explains the difference between prompt context, short-term state, long-term memory, and RAG retrieval.",
-        "Verify chunking, embedding, retrieval, reranking, and citation claims against official or primary docs before human approval.",
-        "Add a failure section for stale documents, hallucinated answers, missing citations, and permission leakage.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not include publish confirm commands in the handoff.",
-        "Do not claim measured traffic, ranking, conversion, answer accuracy, latency, or cost without evidence."
-      ],
-      "searchQueries": [
-        "本地部署大模型教程",
-        "Ollama 本地部署",
-        "Open WebUI Ollama 部署",
-        "本地大模型显存不够"
-      ],
-      "sourceTargets": [
-        "Ollama docs: https://docs.ollama.com",
-        "vLLM docs: https://docs.vllm.ai",
-        "Hugging Face docs: https://huggingface.co/docs"
-      ],
-      "title": "Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流",
-      "unsafeReasons": []
-    },
-    {
-      "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
-      "matchedLanes": [],
-      "priorityScore": 370,
-      "publishConfirm": "not-included",
-      "readyForMemorySprint": true,
-      "reviewActions": [
-        "Confirm the article explains the difference between prompt context, short-term state, long-term memory, and RAG retrieval.",
-        "Verify chunking, embedding, retrieval, reranking, and citation claims against official or primary docs before human approval.",
-        "Add a failure section for stale documents, hallucinated answers, missing citations, and permission leakage.",
-        "Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.",
-        "Do not include publish confirm commands in the handoff.",
-        "Do not claim measured traffic, ranking, conversion, answer accuracy, latency, or cost without evidence."
-      ],
-      "searchQueries": [
-        "Dify 部署教程",
-        "n8n AI Agent 自托管",
-        "Flowise 本地部署",
-        "Dify 工作流错误处理"
-      ],
-      "sourceTargets": [
-        "Dify docs: https://docs.dify.ai",
-        "n8n docs: https://docs.n8n.io"
-      ],
-      "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
-      "unsafeReasons": []
-    },
-    {
-      "file": "content/blog/mcp-server-deployment-security-checklist.mdx",
-      "matchedLanes": [],
-      "priorityScore": 366,
+      "priorityScore": 195,
       "publishConfirm": "not-included",
       "readyForMemorySprint": true,
       "reviewActions": [
@@ -459,7 +404,7 @@
         "LangChain docs: https://python.langchain.com/docs",
         "LlamaIndex docs: https://docs.llamaindex.ai"
       ],
-      "title": "MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单",
+      "title": "Vercel build failed 排查清单：从日志到重新部署",
       "unsafeReasons": []
     }
   ]

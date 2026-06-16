@@ -1,6 +1,6 @@
 # Autopilot Source Verification Brief
 
-Generated at: 2026-06-14T10:39:16.088Z
+Generated at: 2026-06-16T07:01:35.144Z
 
 This report is read-only. It packages source verification work for the top autopilot approval packet items.
 
@@ -14,7 +14,7 @@ This report is read-only. It packages source verification work for the top autop
 
 ## Boundaries
 
-- Public published: 15
+- Public published: 500
 - Publishable now: 0
 - Traffic data available: false
 - Can claim traffic: false
@@ -28,12 +28,12 @@ This report is read-only. It packages source verification work for the top autop
 - itemsWithOfficialSources: 3
 - itemsWithReachableSources: 3
 - packetUnsafeItems: 0
-- totalReachableSources: 26
+- totalReachableSources: 14
 - unsafeItems: 0
 
 ## Source Evidence
 
-- Source health summary: {"checkedUrls":40,"broadFirstCoverageFiles":8,"currentReviewFiles":3,"failedUrls":1,"filesCovered":23,"filesWithReachableSource":23,"filesWithoutReachableSource":0,"missingUrlTargets":0,"nextSourcePackFiles":19,"okUrls":39,"publicGapDecisionFiles":13,"redirectedUrls":18,"sourceReferences":267,"uniqueUrls":40}
+- Source health summary: {"checkedUrls":38,"broadFirstCoverageFiles":8,"currentReviewFiles":3,"failedUrls":1,"filesCovered":24,"filesWithReachableSource":24,"filesWithoutReachableSource":0,"missingUrlTargets":0,"nextSourcePackFiles":15,"okUrls":37,"publicGapDecisionFiles":8,"redirectedUrls":17,"sourceReferences":202,"uniqueUrls":38}
 - Packet unsafe items: 0
 
 ## Unsafe Items
@@ -44,122 +44,57 @@ This report is read-only. It packages source verification work for the top autop
 
 | Ready | Safe | Reachable sources | Official sources | Fact checks | Approval checks | Risk checks | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | 8 | 14 | 24 | 15 | 10 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| true | true | 7 | 18 | 25 | 15 | 11 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| true | true | 11 | 20 | 18 | 15 | 12 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| true | true | 7 | 8 | 15 | 15 | 11 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| true | true | 4 | 7 | 12 | 9 | 6 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| true | true | 3 | 3 | 12 | 9 | 5 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Per-Item Verification Tasks
 
-### AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查
+### Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级
 
-- File: content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
-- Source types: deployment, public-gap, wave
-- Source health scopes: broad-first-coverage, current-review, next-source-pack, public-gap-decision
-- Reachable source URLs: 8
-
-Verification focus:
-
-- Verify 14 official source target(s).
-- Check 8 search query seed(s).
-- Review 22 combined checklist signal(s).
-- Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: AI Agent deployment tutorial.; Add one contextual link to a published article before approval..
-- Complete freshness checklist for fast-changing AI/tool guidance.
-- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
-- Open official source and verify current wording: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
-- Open official source and verify current wording: Vercel AI SDK docs: https://ai-sdk.dev/docs
-- Open official source and verify current wording: LangChain docs: https://python.langchain.com/docs
-- Open official source and verify current wording: OpenAI API docs: https://platform.openai.com/docs
-- Open official source and verify current wording: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
-- Reject or rewrite unsupported claims before any mark:review command.
-- Keep the article draft/noindex until explicit approval.
-
-Reachable URLs:
-
-- https://ai-sdk.dev/docs
-- https://platform.openai.com/docs/guides/agents
-- https://python.langchain.com/docs
-- https://platform.openai.com/docs
-- https://platform.openai.com/docs/guides/retrieval
-- https://platform.openai.com/docs/guides/prompt-engineering
-- https://openai.github.io/openai-agents-python/
-- https://langchain-ai.github.io/langgraph/
-
-Fact-check queries:
-
-- AI Agent 部署 官方文档 最新
-- AI Agent 部署 official docs latest
-- AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 事实核对
-- AI Agent 平台限制 官方文档
-- AI Agent 部署教程
-- Agent 记忆怎么做
-- AI Agent 工具调用教程
-- AI 工作流部署
-- AI Agent 部署 official documentation current limits
-- AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 fact check official docs
-
-Approval checklist:
-
-- Article remains draft before approval: true
-- Article remains noindex before approval: true
-- Human review is required: true
-- Quality score is at least 100: true
-- Source notes are present: true
-- Article has at least one internal link: true
-- Opening section directly answers the search query.
-- Reviewer can explain why this article should be public now instead of staying draft.
-- Article remains draft: true
-- Article remains noindex: true
-- Human review flag is present: true
-- Article has internal links: true
-- Reviewer confirms the article answers one clear search intent.
-- Reviewer confirms factual claims against official docs before any status change.
-- Human confirms every fast-changing AI, API, deployment, prompt, pricing, and security claim against the listed official sources.
-
-### 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用
-
-- File: content/blog/industry-ai-prompts-template-library-2026.mdx
-- Source types: prompt, public-gap, wave
-- Source health scopes: broad-first-coverage, current-review, next-source-pack, public-gap-decision
+- File: content/blog/vercel-ai-gateway-multi-provider-guide.mdx
+- Source types: deployment, wave
+- Source health scopes: current-review, next-source-pack
 - Reachable source URLs: 7
 
 Verification focus:
 
-- Verify 17 official source target(s).
-- Check 8 search query seed(s).
+- Verify 7 official source target(s).
+- Check 4 search query seed(s).
 - Review 19 combined checklist signal(s).
-- Apply copydesk remediation: Add one contextual link to a published article before approval.; Decide whether missing subtopics should become a short section or a follow-up article..
+- Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Add one FAQ or checklist line that uses a high-intent query variant such as: Vercel AI Gateway 多模型..
 - Complete freshness checklist for fast-changing AI/tool guidance.
 - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
 - Open official source and verify current wording: OpenAI API docs: https://platform.openai.com/docs
-- Open official source and verify current wording: OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering
 - Open official source and verify current wording: Vercel AI SDK docs: https://ai-sdk.dev/docs
-- Open official source and verify current wording: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
-- Open official source and verify current wording: OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering
+- Open official source and verify current wording: Anthropic docs: https://docs.anthropic.com
+- Open official source and verify current wording: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
+- Open official source and verify current wording: Google AI docs: https://ai.google.dev/docs
 - Reject or rewrite unsupported claims before any mark:review command.
 - Keep the article draft/noindex until explicit approval.
 
 Reachable URLs:
 
 - https://platform.openai.com/docs
-- https://platform.openai.com/docs/guides/prompt-engineering
-- https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
 - https://ai-sdk.dev/docs
+- https://docs.anthropic.com
+- https://ai.google.dev/docs
+- https://platform.openai.com/docs/guides/prompt-engineering
+- https://platform.openai.com/docs/guides/agents
 - https://platform.openai.com/docs/guides/retrieval
-- https://sensara.io/prompts/
-- https://www.mrprompts.ai/learn/ai-prompts-for-sales
 
 Fact-check queries:
 
-- 全行业 AI 提示词模板 官方文档 最新
-- 全行业 AI 提示词模板 official docs latest
-- 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 事实核对
-- AI 提示词 平台限制 官方文档
-- AI 提示词大全
-- 销售 AI 提示词
-- 客服 AI 提示词
-- 运营 AI 提示词
-- 全行业 AI 提示词模板 official documentation current limits
-- 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 fact check official docs
+- Vercel AI Gateway 多模型 官方文档 最新
+- Vercel AI Gateway 多模型 official docs latest
+- Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 事实核对
+- AI 部署 平台限制 官方文档
+- Vercel AI Gateway 多模型 official documentation current limits
+- Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 fact check official docs
+- AI 部署 official docs limits pricing changelog
+- 大模型部署教程
+- AI 应用部署教程
+- OpenAI API 部署教程
 
 Approval checklist:
 
@@ -179,20 +114,18 @@ Approval checklist:
 - Reviewer confirms factual claims against official docs before any status change.
 - Human confirms every fast-changing AI, API, deployment, prompt, pricing, and security claim against the listed official sources.
 
-### 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检
+### Together AI API 怎么接入：开源模型接口、embedding 和部署边界
 
-- File: content/blog/ai-model-selection-customer-service-guide.mdx
-- Source types: public-gap, wave
-- Source health scopes: broad-first-coverage, current-review, next-source-pack, public-gap-decision
-- Reachable source URLs: 11
+- File: content/blog/together-ai-api-beginner-guide.mdx
+- Source types: deployment
+- Source health scopes: next-source-pack
+- Reachable source URLs: 4
 
 Verification focus:
 
-- Verify 19 official source target(s).
-- Check 5 search query seed(s).
-- Review 12 combined checklist signal(s).
-- Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: RAG 知识库搭建教程.; Check whether the primary keyword can appear naturally in the title without making the title stiff..
-- Complete freshness checklist for fast-changing AI/tool guidance.
+- Verify 4 official source target(s).
+- Check 4 search query seed(s).
+- Review 13 combined checklist signal(s).
 - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
 - Open official source and verify current wording: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
 - Open official source and verify current wording: LangChain docs: https://python.langchain.com/docs
@@ -206,42 +139,79 @@ Reachable URLs:
 
 - https://platform.openai.com/docs
 - https://ai-sdk.dev/docs
+- https://docs.anthropic.com
 - https://platform.openai.com/docs/guides/retrieval
-- https://platform.openai.com/docs/guides/prompt-engineering
-- https://python.langchain.com/docs
-- https://docs.llamaindex.ai
-- https://huggingface.co/docs
-- https://www.reddit.com/r/Rag/comments/1t9v93f/is_anyone_still_running_pure_vector_rag_in/
-- https://arxiv.org/abs/2603.10700
-- https://www.pinecone.io/learn/retrieval-augmented-generation/
-- https://platform.openai.com/docs/guides/agents
 
 Fact-check queries:
 
-- 客服 AI 模型选型 官方文档 最新
-- 客服 AI 模型选型 official docs latest
-- 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 事实核对
-- AI 部署 平台限制 官方文档
-- RAG 知识库搭建教程
-- 企业知识库 AI 部署
-- 向量数据库教程
-- 客服知识库 AI
-- 客服 AI 模型选型 official documentation current limits
-- 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 fact check official docs
+- Together AI API 接入 official docs latest
+- Together AI API 接入 official documentation current limits
+- Together AI API 怎么接入：开源模型接口、embedding 和部署边界 fact check official docs
+- AI 基建 official docs limits pricing changelog
+- 大模型部署教程
+- AI 应用部署教程
+- OpenAI API 部署教程
+- Vercel AI SDK 部署
+- RAG 知识库搭建教程 official docs fact check
+- 企业知识库 AI 部署 official docs fact check
 
 Approval checklist:
 
-- Article remains draft before approval: true
-- Article remains noindex before approval: true
-- Human review is required: true
-- Quality score is at least 100: true
-- Source notes are present: true
-- Article has at least one internal link: true
-- Opening section directly answers the search query.
-- Reviewer can explain why this article should be public now instead of staying draft.
 - Article remains draft: true
 - Article remains noindex: true
 - Human review flag is present: true
+- Quality score is at least 100: true
+- Source notes are present: true
+- Article has internal links: true
+- Reviewer confirms the article answers one clear search intent.
+- Reviewer confirms factual claims against official docs before any status change.
+- Human confirms every fast-changing AI, API, deployment, prompt, pricing, and security claim against the listed official sources.
+
+### Vercel 部署成功但页面 404：新手排查顺序
+
+- File: content/blog/vercel-404-after-deploy.mdx
+- Source types: deployment
+- Source health scopes: next-source-pack
+- Reachable source URLs: 3
+
+Verification focus:
+
+- Verify 2 official source target(s).
+- Check 4 search query seed(s).
+- Review 13 combined checklist signal(s).
+- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
+- Open official source and verify current wording: Vercel AI SDK docs: https://ai-sdk.dev/docs
+- Open official source and verify current wording: OpenAI API docs: https://platform.openai.com/docs
+- Open official source and verify current wording: OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering
+- Reject or rewrite unsupported claims before any mark:review command.
+- Keep the article draft/noindex until explicit approval.
+
+Reachable URLs:
+
+- https://platform.openai.com/docs
+- https://platform.openai.com/docs/guides/prompt-engineering
+- https://ai-sdk.dev/docs
+
+Fact-check queries:
+
+- Vercel 部署成功但 404 official docs latest
+- Vercel 部署成功但 404 official documentation current limits
+- Vercel 部署成功但页面 404：新手排查顺序 fact check official docs
+- 报错解决 official docs limits pricing changelog
+- OpenAI API 报错解决
+- Vercel 部署失败
+- npm install 报错
+- AI 应用部署 404
+- Vercel build failed official docs fact check
+- Vercel 部署后 404 official docs fact check
+
+Approval checklist:
+
+- Article remains draft: true
+- Article remains noindex: true
+- Human review flag is present: true
+- Quality score is at least 100: true
+- Source notes are present: true
 - Article has internal links: true
 - Reviewer confirms the article answers one clear search intent.
 - Reviewer confirms factual claims against official docs before any status change.

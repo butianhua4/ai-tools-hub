@@ -1,6 +1,6 @@
 # Autopilot Search Query Gap Brief
 
-Generated at: 2026-06-14T10:39:20.316Z
+Generated at: 2026-06-16T07:01:39.443Z
 
 This report is read-only. It turns existing search-query evidence into a manual checklist for next-10 sprint items that currently have zero autopilot queue search queries.
 
@@ -14,22 +14,22 @@ This report is read-only. It turns existing search-query evidence into a manual 
 
 ## Summary
 
-- items: 0
-- itemsWithCommandBoundary: 0
-- itemsWithCoverageEvidence: 0
-- itemsWithFactCheckQueries: 0
-- itemsWithOfficialSources: 0
-- itemsWithRecommendedQueries: 0
-- readyItems: 0
-- safeDraftItems: 0
-- totalRecommendedQueries: 0
+- items: 2
+- itemsWithCommandBoundary: 2
+- itemsWithCoverageEvidence: 2
+- itemsWithFactCheckQueries: 2
+- itemsWithOfficialSources: 2
+- itemsWithRecommendedQueries: 2
+- readyItems: 2
+- safeDraftItems: 2
+- totalRecommendedQueries: 20
 - unsafeItems: 0
 
 ## Source Evidence
 
-- nextReviewSourcePackItems: 19
+- nextReviewSourcePackItems: 15
 - searchQueryCoverageItems: 12
-- sprintBoardItemsNeedingSearchQuery: 0
+- sprintBoardItemsNeedingSearchQuery: 2
 - sprintBoardUnsafeItems: 0
 - waveApprovalPacketItems: 3
 
@@ -39,7 +39,96 @@ This report is read-only. It turns existing search-query evidence into a manual 
 
 ## Gap Items
 
-- none
+| Order | Ready | Sources | Recommended queries | Primary keyword | Title | File |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2 | true | 8 | 10 | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 3 | true | 7 | 10 | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
 
 ## Manual Query Review
+
+### 2. RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界
+
+- File: content/blog/vector-database-selection-for-rag-guide.mdx
+- Sprint lane: wave-review
+- Coverage lane: RAG, knowledge base, and Agent memory
+- Primary keyword: RAG 向量数据库怎么选
+- Query families used: howTo, template, comparison
+- Source evidence: search-query-coverage, next-review-source-pack, wave-approval-packet
+- Mark-review after human approval: npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human
+- Publish dry-run only: npm run publish:articles -- --file=content/blog/vector-database-selection-for-rag-guide.mdx
+- Publish confirm: not-included
+
+Recommended search queries:
+
+- RAG 向量数据库怎么选
+- RAG 向量数据库怎么选怎么做
+- RAG 向量数据库怎么选教程
+- RAG 向量数据库怎么选新手教程
+- RAG 向量数据库怎么选落地步骤
+- RAG 向量数据库怎么选对比
+- RAG 向量数据库怎么选怎么选
+- RAG 向量数据库怎么选模板
+- RAG 向量数据库怎么选清单
+- RAG 向量数据库怎么选SOP
+
+Fact-check queries:
+
+- RAG 向量数据库怎么选 official docs latest
+- RAG 向量数据库怎么选 official documentation current limits
+- RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 fact check official docs
+- AI 基建 official docs limits pricing changelog
+- RAG 知识库搭建教程
+- 企业知识库 AI 部署
+
+Checklist:
+
+- Confirm the article is still draft, noindex, and humanReviewRequired before changing article metadata.
+- Use these queries as manual review evidence only; do not auto-edit article frontmatter from this report.
+- Prefer queries that match the article's actual title, description, and reader job-to-be-done.
+- Discard any query that would push the article toward unsupported traffic, ranking, revenue, or benchmark claims.
+- After human approval, add chosen search queries in the article review workflow before mark:review.
+- Do not run mark:review or publish commands from this gap brief.
+
+### 3. Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索
+
+- File: content/blog/supabase-pgvector-rag-guide.mdx
+- Sprint lane: wave-review
+- Coverage lane: RAG, knowledge base, and Agent memory
+- Primary keyword: Supabase pgvector
+- Query families used: howTo, template, comparison
+- Source evidence: search-query-coverage, next-review-source-pack, wave-approval-packet
+- Mark-review after human approval: npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human
+- Publish dry-run only: npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx
+- Publish confirm: not-included
+
+Recommended search queries:
+
+- Supabase pgvector
+- Supabase pgvector怎么做
+- Supabase pgvector教程
+- Supabase pgvector新手教程
+- Supabase pgvector落地步骤
+- Supabase pgvector对比
+- Supabase pgvector怎么选
+- Supabase pgvector模板
+- Supabase pgvector清单
+- Supabase pgvectorSOP
+
+Fact-check queries:
+
+- Supabase pgvector official docs latest
+- Supabase pgvector official documentation current limits
+- Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 fact check official docs
+- AI 基建 official docs limits pricing changelog
+- RAG 知识库搭建教程
+- 企业知识库 AI 部署
+
+Checklist:
+
+- Confirm the article is still draft, noindex, and humanReviewRequired before changing article metadata.
+- Use these queries as manual review evidence only; do not auto-edit article frontmatter from this report.
+- Prefer queries that match the article's actual title, description, and reader job-to-be-done.
+- Discard any query that would push the article toward unsupported traffic, ranking, revenue, or benchmark claims.
+- After human approval, add chosen search queries in the article review workflow before mark:review.
+- Do not run mark:review or publish commands from this gap brief.
 

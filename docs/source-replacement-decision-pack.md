@@ -1,6 +1,6 @@
 # Source Replacement Decision Pack
 
-Generated at: 2026-06-14T10:39:06.777Z
+Generated at: 2026-06-16T07:01:25.760Z
 
 This report is read-only. It turns source URL remediation into per-file human replacement decisions.
 
@@ -15,24 +15,24 @@ This report is read-only. It turns source URL remediation into per-file human re
 
 ## Source Evidence
 
-- Source remediation items: 19
+- Source remediation items: 18
 - Failed URL items: 1
-- Redirected URL items: 18
+- Redirected URL items: 17
 - Source remediation unsafe items: 0
 
 ## Summary
 
-- affectedFiles: 22
+- affectedFiles: 23
 - failedDecisionItems: 1
-- humanGatedItems: 115
-- items: 115
-- itemsWithDecisionOptions: 115
-- itemsWithManualChecklist: 115
+- humanGatedItems: 110
+- items: 110
+- itemsWithDecisionOptions: 110
+- itemsWithManualChecklist: 110
 - itemsWithRecommendedCandidate: 1
 - officialRecommendedCandidates: 1
-- redirectedDecisionItems: 114
+- redirectedDecisionItems: 109
 - replacementCandidateOptions: 8
-- sourceRemediationItems: 19
+- sourceRemediationItems: 18
 - sourceRemediationUnsafeItems: 0
 - unsafeItems: 0
 
@@ -47,15 +47,15 @@ This report is read-only. It turns source URL remediation into per-file human re
 | failed-url | Microsoft Copilot Prompt Gallery (official-doc) | 7 | public-gap-decision, broad-first-coverage | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx | https://ai-prompts-pro.com/blog/ai-prompt-templates-business |
 | redirected-url | review redirect | 0 | public-gap-decision, broad-first-coverage | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx | https://docs.helicone.ai/ |
 | redirected-url | review redirect | 0 | public-gap-decision, broad-first-coverage | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx | https://docs.ragas.io/ |
-| redirected-url | review redirect | 0 | current-review, public-gap-decision, next-source-pack, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://ai-sdk.dev/docs |
-| redirected-url | review redirect | 0 | public-gap-decision, next-source-pack, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://platform.openai.com/docs |
-| redirected-url | review redirect | 0 | public-gap-decision, next-source-pack, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://platform.openai.com/docs/guides/agents |
-| redirected-url | review redirect | 0 | public-gap-decision, next-source-pack, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://platform.openai.com/docs/guides/prompt-engineering |
-| redirected-url | review redirect | 0 | public-gap-decision, next-source-pack, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://platform.openai.com/docs/guides/retrieval |
-| redirected-url | review redirect | 0 | public-gap-decision, next-source-pack, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://python.langchain.com/docs |
-| redirected-url | review redirect | 0 | next-source-pack | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx | https://ai-sdk.dev/docs |
-| redirected-url | review redirect | 0 | public-gap-decision, next-source-pack | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx | https://docs.llamaindex.ai |
-| redirected-url | review redirect | 0 | next-source-pack | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx | https://platform.openai.com/docs |
+| redirected-url | review redirect | 0 | public-gap-decision, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://ai-sdk.dev/docs |
+| redirected-url | review redirect | 0 | public-gap-decision, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://platform.openai.com/docs |
+| redirected-url | review redirect | 0 | public-gap-decision, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://platform.openai.com/docs/guides/agents |
+| redirected-url | review redirect | 0 | public-gap-decision, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://platform.openai.com/docs/guides/prompt-engineering |
+| redirected-url | review redirect | 0 | public-gap-decision, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://platform.openai.com/docs/guides/retrieval |
+| redirected-url | review redirect | 0 | public-gap-decision, broad-first-coverage | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx | https://python.langchain.com/docs |
+| redirected-url | review redirect | 0 | public-gap-decision, broad-first-coverage | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx | https://ai-sdk.dev/docs |
+| redirected-url | review redirect | 0 | public-gap-decision, broad-first-coverage | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx | https://ai.google.dev/docs |
+| redirected-url | review redirect | 0 | public-gap-decision, broad-first-coverage | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx | https://docs.anthropic.com |
 
 ## Per-File Decisions
 
@@ -155,7 +155,7 @@ Manual checklist:
 
 - Original URL: https://ai-sdk.dev/docs
 - Final URL: https://ai-sdk.dev/docs/introduction
-- Scopes: current-review, public-gap-decision, next-source-pack, broad-first-coverage
+- Scopes: public-gap-decision, broad-first-coverage
 - Confirm the replacement source covers the exact claim family.
 - Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
 - Use prompt-library sources only as market/category evidence.
@@ -181,7 +181,7 @@ Manual checklist:
 
 - Original URL: https://platform.openai.com/docs
 - Final URL: https://developers.openai.com/api/docs
-- Scopes: public-gap-decision, next-source-pack, broad-first-coverage
+- Scopes: public-gap-decision, broad-first-coverage
 - Confirm the replacement source covers the exact claim family.
 - Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
 - Use prompt-library sources only as market/category evidence.
@@ -207,7 +207,7 @@ Manual checklist:
 
 - Original URL: https://platform.openai.com/docs/guides/agents
 - Final URL: https://developers.openai.com/api/docs/guides/agents
-- Scopes: public-gap-decision, next-source-pack, broad-first-coverage
+- Scopes: public-gap-decision, broad-first-coverage
 - Confirm the replacement source covers the exact claim family.
 - Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
 - Use prompt-library sources only as market/category evidence.
@@ -233,7 +233,7 @@ Manual checklist:
 
 - Original URL: https://platform.openai.com/docs/guides/prompt-engineering
 - Final URL: https://developers.openai.com/api/docs/guides/prompt-engineering
-- Scopes: public-gap-decision, next-source-pack, broad-first-coverage
+- Scopes: public-gap-decision, broad-first-coverage
 - Confirm the replacement source covers the exact claim family.
 - Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
 - Use prompt-library sources only as market/category evidence.
@@ -259,7 +259,7 @@ Manual checklist:
 
 - Original URL: https://platform.openai.com/docs/guides/retrieval
 - Final URL: https://developers.openai.com/api/docs/guides/retrieval
-- Scopes: public-gap-decision, next-source-pack, broad-first-coverage
+- Scopes: public-gap-decision, broad-first-coverage
 - Confirm the replacement source covers the exact claim family.
 - Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
 - Use prompt-library sources only as market/category evidence.
@@ -285,16 +285,16 @@ Manual checklist:
 
 - Original URL: https://python.langchain.com/docs
 - Final URL: https://docs.langchain.com/oss/python/langchain/overview
-- Scopes: public-gap-decision, next-source-pack, broad-first-coverage
+- Scopes: public-gap-decision, broad-first-coverage
 - Confirm the replacement source covers the exact claim family.
 - Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
 - Use prompt-library sources only as market/category evidence.
 - Do not run mark:review or publish commands from this decision pack.
 
-### content/blog/ai-agent-memory-rag-design-guide.mdx
+### content/blog/ai-api-key-security-rotation-guide.mdx
 
 - Kind: redirected-url
-- Title: AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界
+- Title: AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
 - Original URL: https://ai-sdk.dev/docs
 - Final URL: https://ai-sdk.dev/docs/introduction
 - Recommended candidate: review redirected final URL
@@ -311,18 +311,18 @@ Manual checklist:
 
 - Original URL: https://ai-sdk.dev/docs
 - Final URL: https://ai-sdk.dev/docs/introduction
-- Scopes: next-source-pack
+- Scopes: public-gap-decision, broad-first-coverage
 - Confirm the replacement source covers the exact claim family.
 - Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
 - Use prompt-library sources only as market/category evidence.
 - Do not run mark:review or publish commands from this decision pack.
 
-### content/blog/ai-agent-memory-rag-design-guide.mdx
+### content/blog/ai-api-key-security-rotation-guide.mdx
 
 - Kind: redirected-url
-- Title: AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界
-- Original URL: https://docs.llamaindex.ai
-- Final URL: https://developers.llamaindex.ai/python/framework/
+- Title: AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
+- Original URL: https://ai.google.dev/docs
+- Final URL: https://ai.google.dev/gemini-api/docs?hl=ru
 - Recommended candidate: review redirected final URL
 - Stop before: Stop before human approval; this pack is a file-level decision aid only.
 
@@ -335,18 +335,96 @@ Decision options:
 
 Manual checklist:
 
-- Original URL: https://docs.llamaindex.ai
-- Final URL: https://developers.llamaindex.ai/python/framework/
-- Scopes: public-gap-decision, next-source-pack
+- Original URL: https://ai.google.dev/docs
+- Final URL: https://ai.google.dev/gemini-api/docs?hl=ru
+- Scopes: public-gap-decision, broad-first-coverage
 - Confirm the replacement source covers the exact claim family.
 - Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
 - Use prompt-library sources only as market/category evidence.
 - Do not run mark:review or publish commands from this decision pack.
 
-### content/blog/ai-agent-memory-rag-design-guide.mdx
+### content/blog/ai-api-key-security-rotation-guide.mdx
 
 - Kind: redirected-url
-- Title: AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界
+- Title: AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
+- Original URL: https://docs.anthropic.com
+- Final URL: https://platform.claude.com/docs/en/home
+- Recommended candidate: review redirected final URL
+- Stop before: Stop before human approval; this pack is a file-level decision aid only.
+
+Decision options:
+
+- Approve the redirected final URL as canonical if it is content-equivalent.
+- Replace the original URL with the final URL during human review if the redirect is stable.
+- Find a more specific official source if the redirect lands on a generic page.
+- Keep the article draft/noindex/humanReviewRequired until approval.
+
+Manual checklist:
+
+- Original URL: https://docs.anthropic.com
+- Final URL: https://platform.claude.com/docs/en/home
+- Scopes: public-gap-decision, broad-first-coverage
+- Confirm the replacement source covers the exact claim family.
+- Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
+- Use prompt-library sources only as market/category evidence.
+- Do not run mark:review or publish commands from this decision pack.
+
+### content/blog/ai-api-key-security-rotation-guide.mdx
+
+- Kind: redirected-url
+- Title: AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
+- Original URL: https://docs.anthropic.com/
+- Final URL: https://platform.claude.com/docs/en/home
+- Recommended candidate: review redirected final URL
+- Stop before: Stop before human approval; this pack is a file-level decision aid only.
+
+Decision options:
+
+- Approve the redirected final URL as canonical if it is content-equivalent.
+- Replace the original URL with the final URL during human review if the redirect is stable.
+- Find a more specific official source if the redirect lands on a generic page.
+- Keep the article draft/noindex/humanReviewRequired until approval.
+
+Manual checklist:
+
+- Original URL: https://docs.anthropic.com/
+- Final URL: https://platform.claude.com/docs/en/home
+- Scopes: public-gap-decision, broad-first-coverage
+- Confirm the replacement source covers the exact claim family.
+- Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
+- Use prompt-library sources only as market/category evidence.
+- Do not run mark:review or publish commands from this decision pack.
+
+### content/blog/ai-api-key-security-rotation-guide.mdx
+
+- Kind: redirected-url
+- Title: AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
+- Original URL: https://docs.dify.ai
+- Final URL: https://docs.dify.ai/en/use-dify/getting-started/introduction
+- Recommended candidate: review redirected final URL
+- Stop before: Stop before human approval; this pack is a file-level decision aid only.
+
+Decision options:
+
+- Approve the redirected final URL as canonical if it is content-equivalent.
+- Replace the original URL with the final URL during human review if the redirect is stable.
+- Find a more specific official source if the redirect lands on a generic page.
+- Keep the article draft/noindex/humanReviewRequired until approval.
+
+Manual checklist:
+
+- Original URL: https://docs.dify.ai
+- Final URL: https://docs.dify.ai/en/use-dify/getting-started/introduction
+- Scopes: public-gap-decision, broad-first-coverage
+- Confirm the replacement source covers the exact claim family.
+- Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
+- Use prompt-library sources only as market/category evidence.
+- Do not run mark:review or publish commands from this decision pack.
+
+### content/blog/ai-api-key-security-rotation-guide.mdx
+
+- Kind: redirected-url
+- Title: AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
 - Original URL: https://platform.openai.com/docs
 - Final URL: https://developers.openai.com/api/docs
 - Recommended candidate: review redirected final URL
@@ -363,16 +441,16 @@ Manual checklist:
 
 - Original URL: https://platform.openai.com/docs
 - Final URL: https://developers.openai.com/api/docs
-- Scopes: next-source-pack
+- Scopes: public-gap-decision, broad-first-coverage
 - Confirm the replacement source covers the exact claim family.
 - Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
 - Use prompt-library sources only as market/category evidence.
 - Do not run mark:review or publish commands from this decision pack.
 
-### content/blog/ai-agent-memory-rag-design-guide.mdx
+### content/blog/ai-api-key-security-rotation-guide.mdx
 
 - Kind: redirected-url
-- Title: AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界
+- Title: AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急
 - Original URL: https://platform.openai.com/docs/guides/agents
 - Final URL: https://developers.openai.com/api/docs/guides/agents
 - Recommended candidate: review redirected final URL
@@ -389,85 +467,7 @@ Manual checklist:
 
 - Original URL: https://platform.openai.com/docs/guides/agents
 - Final URL: https://developers.openai.com/api/docs/guides/agents
-- Scopes: next-source-pack
-- Confirm the replacement source covers the exact claim family.
-- Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
-- Use prompt-library sources only as market/category evidence.
-- Do not run mark:review or publish commands from this decision pack.
-
-### content/blog/ai-agent-memory-rag-design-guide.mdx
-
-- Kind: redirected-url
-- Title: AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界
-- Original URL: https://platform.openai.com/docs/guides/prompt-engineering
-- Final URL: https://developers.openai.com/api/docs/guides/prompt-engineering
-- Recommended candidate: review redirected final URL
-- Stop before: Stop before human approval; this pack is a file-level decision aid only.
-
-Decision options:
-
-- Approve the redirected final URL as canonical if it is content-equivalent.
-- Replace the original URL with the final URL during human review if the redirect is stable.
-- Find a more specific official source if the redirect lands on a generic page.
-- Keep the article draft/noindex/humanReviewRequired until approval.
-
-Manual checklist:
-
-- Original URL: https://platform.openai.com/docs/guides/prompt-engineering
-- Final URL: https://developers.openai.com/api/docs/guides/prompt-engineering
-- Scopes: next-source-pack
-- Confirm the replacement source covers the exact claim family.
-- Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
-- Use prompt-library sources only as market/category evidence.
-- Do not run mark:review or publish commands from this decision pack.
-
-### content/blog/ai-agent-memory-rag-design-guide.mdx
-
-- Kind: redirected-url
-- Title: AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界
-- Original URL: https://platform.openai.com/docs/guides/retrieval
-- Final URL: https://developers.openai.com/api/docs/guides/retrieval
-- Recommended candidate: review redirected final URL
-- Stop before: Stop before human approval; this pack is a file-level decision aid only.
-
-Decision options:
-
-- Approve the redirected final URL as canonical if it is content-equivalent.
-- Replace the original URL with the final URL during human review if the redirect is stable.
-- Find a more specific official source if the redirect lands on a generic page.
-- Keep the article draft/noindex/humanReviewRequired until approval.
-
-Manual checklist:
-
-- Original URL: https://platform.openai.com/docs/guides/retrieval
-- Final URL: https://developers.openai.com/api/docs/guides/retrieval
-- Scopes: public-gap-decision, next-source-pack
-- Confirm the replacement source covers the exact claim family.
-- Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
-- Use prompt-library sources only as market/category evidence.
-- Do not run mark:review or publish commands from this decision pack.
-
-### content/blog/ai-agent-memory-rag-design-guide.mdx
-
-- Kind: redirected-url
-- Title: AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界
-- Original URL: https://python.langchain.com/docs
-- Final URL: https://docs.langchain.com/oss/python/langchain/overview
-- Recommended candidate: review redirected final URL
-- Stop before: Stop before human approval; this pack is a file-level decision aid only.
-
-Decision options:
-
-- Approve the redirected final URL as canonical if it is content-equivalent.
-- Replace the original URL with the final URL during human review if the redirect is stable.
-- Find a more specific official source if the redirect lands on a generic page.
-- Keep the article draft/noindex/humanReviewRequired until approval.
-
-Manual checklist:
-
-- Original URL: https://python.langchain.com/docs
-- Final URL: https://docs.langchain.com/oss/python/langchain/overview
-- Scopes: public-gap-decision, next-source-pack
+- Scopes: public-gap-decision, broad-first-coverage
 - Confirm the replacement source covers the exact claim family.
 - Prefer official documentation for implementation, pricing, SDK, deployment, or model behavior claims.
 - Use prompt-library sources only as market/category evidence.

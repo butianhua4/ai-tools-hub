@@ -1,6 +1,6 @@
 # Search Intent Wave Planner
 
-Generated at: 2026-06-14T10:38:53.239Z
+Generated at: 2026-06-16T07:01:12.428Z
 
 This report is read-only. It expands the current approval packet into a continuous human-review wave queue across broad AI search-intent lanes.
 
@@ -21,8 +21,8 @@ This report is read-only. It expands the current approval packet into a continuo
 - uniqueFiles: 12
 - uniqueLanes: 7
 - unsafeItems: 0
-- sourceLaneMapItems: 233
-- sourceApprovalNextGapItems: 6
+- sourceLaneMapItems: 22
+- sourceApprovalNextGapItems: 0
 
 ## Source Evidence
 
@@ -35,140 +35,13 @@ This report is read-only. It expands the current approval packet into a continuo
 - Items: 3
 - Ready items: 3
 - Lanes: 2
-- Unique source targets: 8
+- Unique source targets: 7
 
 | Ready | Safe draft | Lane score | Quality | Batch | Lane | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | 386 | 100 | 40 | Cross-industry AI prompt templates and reusable prompt libraries | 全行业 AI 提示词模板 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| true | true | 386 | 100 | 34 | Cross-industry AI prompt templates and reusable prompt libraries | 客服 AI 模型选型 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| true | true | 358 | 100 | 40 | AI Agent deployment, tool calling, and production workflow | AI Agent 部署 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-
-Review focus:
-
-- input fields
-- output format
-- quality checks
-- risk disclaimers
-- versioning
-- tool permission boundaries
-- loop control and stop conditions
-- human handoff
-- logs and fallback paths
-
-Source targets:
-
-- OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering
-- OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation
-- Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
-- Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/
-- OpenAI Agents: https://platform.openai.com/docs/guides/agents
-- OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk
-- Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents
-- n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/
-
-Risk checks:
-
-- No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.
-- No API key, private customer data, credential, or bypass instruction is included.
-- Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.
-- Prompt templates include input context, output criteria, human review rules, and adaptation notes.
-- Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit.
-
-## Wave 2: Cross-industry AI prompt templates and reusable prompt libraries + Business department AI workflows across sales, support, ops, HR, finance, legal, and education
-
-- Items: 3
-- Ready items: 3
-- Lanes: 2
-- Unique source targets: 4
-
-| Ready | Safe draft | Lane score | Quality | Batch | Lane | Primary keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | 386 | 100 | 31 | Cross-industry AI prompt templates and reusable prompt libraries | 数据分析 AI 提示词 | 数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要 | content/blog/data-analysis-ai-prompts-guide.mdx |
-| true | true | 386 | 100 | 31 | Cross-industry AI prompt templates and reusable prompt libraries | 教育 AI 提示词 | 教育 AI 提示词模板：备课、教案、测验、反馈和学习计划 | content/blog/education-ai-prompts-guide.mdx |
-| true | true | 366 | 100 | 30 | Business department AI workflows across sales, support, ops, HR, finance, legal, and education | 客服 AI 提示词 | 客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断 | content/blog/customer-service-ai-prompts-guide.mdx |
-
-Review focus:
-
-- input fields
-- output format
-- quality checks
-- risk disclaimers
-- versioning
-- role-specific input fields
-- approval owner
-- risk boundaries
-- measurable output format
-
-Source targets:
-
-- OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering
-- OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation
-- Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
-- Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/
-
-Risk checks:
-
-- No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.
-- No API key, private customer data, credential, or bypass instruction is included.
-- Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.
-- Prompt templates include input context, output criteria, human review rules, and adaptation notes.
-- Department workflows identify approval owner, sensitive decisions, and human handoff points.
-
-## Wave 3: AI Agent deployment, tool calling, and production workflow + Large model deployment, LLM serving, and GPU infrastructure
-
-- Items: 3
-- Ready items: 3
-- Lanes: 2
-- Unique source targets: 8
-
-| Ready | Safe draft | Lane score | Quality | Batch | Lane | Primary keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | 358 | 100 | 40 | AI Agent deployment, tool calling, and production workflow | AI Agent 记忆 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| true | true | 358 | 100 | 33 | AI Agent deployment, tool calling, and production workflow | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| true | true | 330 | 100 | 40 | Large model deployment, LLM serving, and GPU infrastructure | 大模型部署 | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-
-Review focus:
-
-- tool permission boundaries
-- loop control and stop conditions
-- human handoff
-- logs and fallback paths
-- GPU and memory requirements
-- serving framework versions
-- cold start and concurrency
-- cost boundaries
-
-Source targets:
-
-- OpenAI Agents: https://platform.openai.com/docs/guides/agents
-- OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk
-- Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents
-- n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/
-- Hugging Face docs: https://huggingface.co/docs
-- vLLM docs: https://docs.vllm.ai
-- OpenAI API docs: https://platform.openai.com/docs
-- Modal docs: https://modal.com/docs
-
-Risk checks:
-
-- No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.
-- No API key, private customer data, credential, or bypass instruction is included.
-- Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.
-- Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit.
-- GPU, memory, serving, concurrency, cold-start, and cost tradeoffs are framed as checks, not guarantees.
-
-## Wave 4: RAG, knowledge base, and Agent memory + Dify, n8n, no-code AI automation, and workflow deployment + Model API integration, rate limits, and multi-model fallback
-
-- Items: 3
-- Ready items: 3
-- Lanes: 3
-- Unique source targets: 10
-
-| Ready | Safe draft | Lane score | Quality | Batch | Lane | Primary keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | 358 | 86 | 33 | RAG, knowledge base, and Agent memory | Open WebUI Functions Pipelines | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| true | true | 314 | 86 | 33 | Dify, n8n, no-code AI automation, and workflow deployment | Dify 工作流错误处理 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
-| true | true | 314 | 86 | 34 | Model API integration, rate limits, and multi-model fallback | AI API Key 安全管理 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
+| true | true | 196 | 100 | 25 | RAG, knowledge base, and Agent memory | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| true | true | 164 | 100 | 34 | Model API integration, rate limits, and multi-model fallback | Vercel AI Gateway 多模型 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| true | true | 196 | 100 | 24 | RAG, knowledge base, and Agent memory | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
 
 Review focus:
 
@@ -176,10 +49,6 @@ Review focus:
 - citation and source boundaries
 - privacy and retention
 - evaluation set
-- self-hosting vs cloud boundaries
-- webhook auth
-- error handling
-- manual fallback
 - current model names
 - rate limits
 - retry behavior
@@ -192,9 +61,6 @@ Source targets:
 - OpenAI Agents knowledge and memory: https://platform.openai.com/docs/guides/agents
 - LangChain docs: https://python.langchain.com/docs
 - LlamaIndex docs: https://docs.llamaindex.ai
-- Dify Agent docs: https://docs.dify.ai/en/use-dify/build/agent
-- Dify Agent node: https://docs.dify.ai/en/guides/workflow/node/agent
-- n8n docs: https://docs.n8n.io
 - OpenAI API docs: https://platform.openai.com/docs
 - Anthropic docs: https://docs.anthropic.com
 - Vercel AI SDK providers: https://ai-sdk.dev/docs/foundations/providers-and-models
@@ -205,5 +71,154 @@ Risk checks:
 - No API key, private customer data, credential, or bypass instruction is included.
 - Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.
 - Retrieval quality, citations, memory retention, privacy, and hallucination risks are explicit.
-- Webhook auth, connector permissions, retries, manual fallback, and platform policy boundaries are explicit.
+- Article-specific operational and safety boundaries are explicit.
+
+## Wave 2: Large model deployment, LLM serving, and GPU infrastructure + AI Agent deployment, tool calling, and production workflow + AI app deployment errors and beginner troubleshooting
+
+- Items: 3
+- Ready items: 3
+- Lanes: 3
+- Unique source targets: 9
+
+| Ready | Safe draft | Lane score | Quality | Batch | Lane | Primary keyword | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| true | true | 172 | 86 | 29 | Large model deployment, LLM serving, and GPU infrastructure | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| true | true | 166 | 86 | 26 | AI Agent deployment, tool calling, and production workflow | Vercel AI SDK 聊天机器人部署 | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
+| true | true | 162 | 86 | 15 | AI app deployment errors and beginner troubleshooting | Vercel 部署后 404 检查清单 | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
+
+Review focus:
+
+- GPU and memory requirements
+- serving framework versions
+- cold start and concurrency
+- cost boundaries
+- tool permission boundaries
+- loop control and stop conditions
+- human handoff
+- logs and fallback paths
+- reproduction
+- logs
+- fix order
+- verification command
+- avoid overgeneralized fixes
+
+Source targets:
+
+- Hugging Face docs: https://huggingface.co/docs
+- vLLM docs: https://docs.vllm.ai
+- OpenAI API docs: https://platform.openai.com/docs
+- Modal docs: https://modal.com/docs
+- OpenAI Agents: https://platform.openai.com/docs/guides/agents
+- OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk
+- Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents
+- n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/
+- Vercel docs: https://vercel.com/docs
+
+Risk checks:
+
+- No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.
+- No API key, private customer data, credential, or bypass instruction is included.
+- Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.
+- GPU, memory, serving, concurrency, cold-start, and cost tradeoffs are framed as checks, not guarantees.
+- Agent permissions, tool allowlists, human approval, logs, and rollback boundaries are explicit.
+- Article-specific operational and safety boundaries are explicit.
+
+## Wave 3: AI automation service pricing, scope, and delivery checklist + LLM observability, evaluation, and production quality + RAG, knowledge base, and Agent memory
+
+- Items: 3
+- Ready items: 3
+- Lanes: 3
+- Unique source targets: 10
+
+| Ready | Safe draft | Lane score | Quality | Batch | Lane | Primary keyword | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| true | true | 162 | 86 | 22 | AI automation service pricing, scope, and delivery checklist | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| true | true | 126 | 86 | 13 | LLM observability, evaluation, and production quality | Vercel build failed 排查清单 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
+| true | true | 196 | 86 | 27 | RAG, knowledge base, and Agent memory | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+
+Review focus:
+
+- scope boundaries
+- acceptance criteria
+- maintenance fee
+- risk disclaimers
+- no income guarantees
+- trace fields
+- evaluation datasets
+- cost logs
+- failure review
+- quality drift
+- chunking and metadata
+- citation and source boundaries
+- privacy and retention
+- evaluation set
+
+Source targets:
+
+- OpenAI API docs: https://platform.openai.com/docs
+- Vercel AI SDK docs: https://ai-sdk.dev/docs
+- Dify docs: https://docs.dify.ai
+- OpenAI Evals: https://platform.openai.com/docs/guides/evals
+- LangSmith docs: https://docs.smith.langchain.com
+- promptfoo docs: https://www.promptfoo.dev/docs/intro/
+- OpenAI retrieval: https://platform.openai.com/docs/guides/retrieval
+- OpenAI Agents knowledge and memory: https://platform.openai.com/docs/guides/agents
+- LangChain docs: https://python.langchain.com/docs
+- LlamaIndex docs: https://docs.llamaindex.ai
+
+Risk checks:
+
+- No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.
+- No API key, private customer data, credential, or bypass instruction is included.
+- Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.
+- Article-specific operational and safety boundaries are explicit.
+- Retrieval quality, citations, memory retention, privacy, and hallucination risks are explicit.
+
+## Wave 4: RAG, knowledge base, and Agent memory + AI app deployment errors and beginner troubleshooting + AI automation service pricing, scope, and delivery checklist
+
+- Items: 3
+- Ready items: 3
+- Lanes: 3
+- Unique source targets: 8
+
+| Ready | Safe draft | Lane score | Quality | Batch | Lane | Primary keyword | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| true | true | 196 | 86 | 21 | RAG, knowledge base, and Agent memory | 向量数据库 | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
+| true | true | 162 | 86 | 15 | AI app deployment errors and beginner troubleshooting | Vercel 部署后 404 常见误区 | Vercel 部署后 404 常见误区：别只盯着域名 | content/blog/vercel-404-after-deploy-mistakes.mdx |
+| true | true | 162 | 86 | 13 | AI automation service pricing, scope, and delivery checklist | Vercel build failed 项目 | Vercel build failed 排查能不能项目：先看这 7 个边界 | content/blog/vercel-build-failed-causes-freelance-scope.mdx |
+
+Review focus:
+
+- chunking and metadata
+- citation and source boundaries
+- privacy and retention
+- evaluation set
+- reproduction
+- logs
+- fix order
+- verification command
+- avoid overgeneralized fixes
+- scope boundaries
+- acceptance criteria
+- maintenance fee
+- risk disclaimers
+- no income guarantees
+
+Source targets:
+
+- OpenAI retrieval: https://platform.openai.com/docs/guides/retrieval
+- OpenAI Agents knowledge and memory: https://platform.openai.com/docs/guides/agents
+- LangChain docs: https://python.langchain.com/docs
+- LlamaIndex docs: https://docs.llamaindex.ai
+- Vercel docs: https://vercel.com/docs
+- OpenAI API docs: https://platform.openai.com/docs
+- Vercel AI SDK docs: https://ai-sdk.dev/docs
+- Dify docs: https://docs.dify.ai
+
+Risk checks:
+
+- No measured traffic, ranking, income, approval, or client acquisition claim is made without evidence.
+- No API key, private customer data, credential, or bypass instruction is included.
+- Fast-changing model names, quotas, pricing, limits, and platform features are checked against official docs.
+- Retrieval quality, citations, memory retention, privacy, and hallucination risks are explicit.
 - Article-specific operational and safety boundaries are explicit.

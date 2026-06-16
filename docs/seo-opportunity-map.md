@@ -1,6 +1,6 @@
 # SEO Opportunity Map
 
-Generated at: 2026-06-14T10:38:46.808Z
+Generated at: 2026-06-16T07:01:05.946Z
 
 This report ranks local content opportunities. It does not use or claim real traffic, impressions, or keyword volume.
 
@@ -12,23 +12,23 @@ This report ranks local content opportunities. It does not use or claim real tra
 ## Totals
 
 - Files: 669
-- Published: 15
-- Draft: 633
+- Published: 500
+- Draft: 148
 - Archived: 21
-- Review-ready drafts: 633
+- Review-ready drafts: 148
 
 ## Next Review Targets
 
 | Category | Published | Review-ready drafts | Reason |
 | --- | --- | --- | --- |
-| AI 基建 | 0 | 78 | has review-ready drafts but no public article yet |
-| 报错解决 | 1 | 80 | has enough review-ready drafts for a small manual publishing batch |
 | Upwork 新手 | 2 | 78 | has enough review-ready drafts for a small manual publishing batch |
-| Codex 新手教程 | 9 | 74 | has enough review-ready drafts for a small manual publishing batch |
-| 工具流程 | 0 | 58 | has review-ready drafts but no public article yet |
-| AI 自由职业路线 | 0 | 44 | has review-ready drafts but no public article yet |
-| 模板和清单 | 0 | 44 | has review-ready drafts but no public article yet |
-| 收款工具 | 1 | 40 | has enough review-ready drafts for a small manual publishing batch |
+| 自由职业平台 | 0 | 12 | has review-ready drafts but no public article yet |
+| 工具选择 | 0 | 2 | has review-ready drafts but no public article yet |
+| 模板和清单 | 30 | 14 | has enough review-ready drafts for a small manual publishing batch |
+| 工具导航 | 23 | 6 | has review-ready drafts and can expand existing public coverage |
+| AI 部署 | 16 | 1 | has review-ready drafts and can expand existing public coverage |
+| 报错解决 | 61 | 20 | has enough review-ready drafts for a small manual publishing batch |
+| 收款工具 | 36 | 5 | has review-ready drafts and can expand existing public coverage |
 
 ## Suggested Review Batches
 
@@ -36,98 +36,83 @@ These are manual-review batches only. They do not change status or publish anyth
 
 ### Freelance monetization
 
-- Published: 6
-- Review-ready drafts: 260
+- Published: 159
+- Review-ready drafts: 107
 - Suggested batch size: 3
 - Reason: cluster has enough review-ready drafts for a small manual batch
 
 | Category | Intent | Batch | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- |
-| 模板和清单 | informational | 20 | AI 工具配置服务项目清单 | AI 工具配置服务项目清单怎么写 | content/blog/ai-tool-setup-service-checklist.mdx |
-| 模板和清单 | informational | 20 | AI 工具配置服务检查清单 | AI 工具配置服务项目检查清单 | content/blog/ai-tool-setup-service-checklist-checklist.mdx |
-| 模板和清单 | informational | 20 | 客户验收清单减少返工 | 客户验收清单怎么减少返工 | content/blog/client-acceptance-checklist.mdx |
+| 收款工具 | informational | 20 | 模板站什么时候接入支付平台 | 模板站什么时候接入支付平台 | content/blog/template-site-payment-platform-timing.mdx |
+| 收款工具 | informational | 20 | 模板站什么时候接入支付平台：新手检查清单 | 模板站什么时候接入支付平台：新手检查清单 | content/blog/template-site-payment-platform-timing-checklist.mdx |
+| 模板和清单 | informational | 20 | Upwork 投标复盘表怎么记录 | Upwork 投标复盘表怎么记录 | content/blog/upwork-proposal-review-sheet.mdx |
 
 ### Troubleshooting
 
-- Published: 3
-- Review-ready drafts: 188
+- Published: 139
+- Review-ready drafts: 52
 - Suggested batch size: 3
 - Reason: cluster has enough review-ready drafts for a small manual batch
 
 | Category | Intent | Batch | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- |
-| 新手路线 | informational | 18 | 第一次接 AI 小单常见错误 | 第一次接 AI 小单前最容易犯的错误 | content/blog/before-first-ai-freelance-job-mistakes.mdx |
-| 新手教程 | informational | 18 | 第一个作品集案例常见错误 | 第一个作品集案例常见错误和修正方法 | content/blog/first-portfolio-case-realistic-mistakes.mdx |
-| 报错解决 | informational | 18 | npm command not found 怎么解决 | npm command not found 怎么解决 | content/blog/npm-command-not-found-fix.mdx |
-
-### AI deployment
-
-- Published: 3
-- Review-ready drafts: 153
-- Suggested batch size: 3
-- Reason: cluster has enough review-ready drafts for a small manual batch
-
-| Category | Intent | Batch | Primary keyword | Title | File |
-| --- | --- | --- | --- | --- | --- |
-| AI Agent | informational | 40 | AI Agent 部署 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| AI 部署 | informational | 40 | 大模型部署 | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-| AI 部署 | informational | 34 | AI API Key 安全管理 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-
-### Agent and memory
-
-- Published: 0
-- Review-ready drafts: 55
-- Suggested batch size: 3
-- Reason: cluster has review-ready drafts but no public article yet
-
-| Category | Intent | Batch | Primary keyword | Title | File |
-| --- | --- | --- | --- | --- | --- |
-| AI 记忆 | informational | 40 | AI Agent 记忆 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| AI 基建 | informational | 32 | Agent 人工审核流程 | Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认 | content/blog/agent-human-review-loop-guide.mdx |
-| AI 基建 | informational | 32 | Agent 记忆数据库设计 | Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则 | content/blog/agent-memory-postgres-schema-guide.mdx |
+| 收款工具 | informational | 16 | 订阅支付失败怎么和客户沟通 | 订阅支付失败怎么和客户沟通 | content/blog/subscription-payment-failed-message.mdx |
+| 报错解决 | commercial | 15 | Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合 | Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合 | content/blog/windows-path-permission-install-fix-freelance-scope.mdx |
+| 报错解决 | informational | 15 | Windows 路径和权限导致安装失败怎么办 | Windows 路径和权限导致安装失败怎么办 | content/blog/windows-path-permission-install-fix.mdx |
 
 ### RAG and knowledge base
 
-- Published: 0
-- Review-ready drafts: 31
-- Suggested batch size: 2
-- Reason: cluster has review-ready drafts but no public article yet
+- Published: 28
+- Review-ready drafts: 3
+- Suggested batch size: 1
+- Reason: cluster can expand existing public coverage
 
 | Category | Intent | Batch | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- |
-| AI 基建 | informational | 22 | AI 知识库权限 | AI 知识库权限怎么设计：别让检索结果越权 | content/blog/knowledge-base-permission-design-guide.mdx |
 | AI 基建 | informational | 21 | 向量数据库 | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
 
-### Industry AI prompts
+### Agent and memory
 
-- Published: 0
-- Review-ready drafts: 27
-- Suggested batch size: 3
-- Reason: cluster has review-ready drafts but no public article yet
+- Published: 53
+- Review-ready drafts: 2
+- Suggested batch size: 2
+- Reason: cluster can expand existing public coverage
 
 | Category | Intent | Batch | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- |
-| AI 提示词 | informational | 40 | 全行业 AI 提示词模板 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| AI 提示词 | informational | 32 | 团队 AI 提示词库 | 团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用 | content/blog/ai-prompt-library-team-knowledge-base-guide.mdx |
-| AI 提示词 | informational | 31 | 数据分析 AI 提示词 | 数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要 | content/blog/data-analysis-ai-prompts-guide.mdx |
+| AI 基建 | informational | 25 | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| AI 基建 | informational | 24 | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+
+### AI deployment
+
+- Published: 140
+- Review-ready drafts: 16
+- Suggested batch size: 3
+- Reason: cluster has enough review-ready drafts for a small manual batch
+
+| Category | Intent | Batch | Primary keyword | Title | File |
+| --- | --- | --- | --- | --- | --- |
+| AI 部署 | informational | 34 | Vercel AI Gateway 多模型 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| AI 基建 | informational | 27 | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| AI 基建 | informational | 26 | Vercel AI SDK 聊天机器人部署 | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
 
 ## Topic Clusters
 
 | Cluster | Published | Drafts | Review-ready drafts | Example candidates |
 | --- | --- | --- | --- | --- |
-| Freelance monetization | 6 | 260 | 260 | 广告收入要等到什么时候再接：新手检查清单<br>广告收入要等到什么时候再接<br>联盟链接收入和服务收入有什么区别：新手检查清单<br>联盟链接收入和服务收入有什么区别<br>Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则 |
-| Troubleshooting | 3 | 188 | 188 | AI 辅助交付常见错误和解决步骤<br>AI 新手判断接项目时的常见错误<br>新手 30 天 AI 工具实践计划常见执行错误<br>AI 自动化项目常见合规错误和解决步骤<br>AI 工具实践误区的常见错误和解决步骤 |
-| AI deployment | 3 | 153 | 153 | Agent 部署怎么做：从聊天助手到可上线工作流<br>AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查<br>AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急<br>AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围<br>客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 |
-| Agent and memory | 0 | 55 | 55 | Agent 部署怎么做：从聊天助手到可上线工作流<br>Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认<br>Agent 记忆怎么设计：短期记忆、长期记忆和用户偏好<br>Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则<br>Agent 可观测性怎么做：日志、轨迹、成本和失败复盘 |
-| RAG and knowledge base | 0 | 31 | 31 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界<br>AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围<br>客服 AI 该选什么模型：速度、成本、知识库、转人工和质检<br>AnythingLLM 怎么搭本地知识库：从文档聊天到 Agent 原型<br>Chroma 向量数据库怎么用：本地 RAG 原型先跑通 collection |
-| Industry AI prompts | 0 | 27 | 27 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检<br>AI 提示词怎么写才好用：全行业都能套的 5 段式框架<br>团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用<br>ChatGPT 提示词怎么写：新手可复制的 5 段式模板<br>Chroma 向量数据库怎么用：本地 RAG 原型先跑通 collection |
+| Freelance monetization | 159 | 107 | 107 | 订阅支付失败怎么和客户沟通<br>模板站什么时候接入支付平台：新手检查清单<br>模板站什么时候接入支付平台<br>Upwork 账号准备新手先做什么：新手检查清单<br>Upwork 账号准备新手先做什么：常见错误和解决步骤 |
+| Troubleshooting | 139 | 52 | 52 | 订阅支付失败怎么和客户沟通<br>Tailwind 样式不生效怎么检查：新手检查清单<br>Tailwind 样式不生效怎么检查：使用前怎么判断是否适合<br>Tailwind 样式不生效怎么检查：常见错误和解决步骤<br>Tailwind 样式不生效怎么检查 |
+| RAG and knowledge base | 28 | 3 | 3 | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索<br>向量数据库怎么选：新手先理解 embedding 和检索<br>RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 |
+| Industry AI prompts | 27 | 0 | 0 |  |
+| Agent and memory | 53 | 2 | 2 | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索<br>RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 |
+| AI deployment | 140 | 16 | 16 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界<br>Vercel 部署后 404 检查清单：逐页验收更稳<br>Vercel 404 部署成功但页面打不开怎么办：使用前怎么判断是否适合<br>Vercel 部署后 404 常见误区：别只盯着域名<br>Vercel 部署成功但页面 404：新手排查顺序 |
 
 ## Search Intents
 
 | Intent | Published | Drafts | Review-ready drafts | Total |
 | --- | --- | --- | --- | --- |
-| informational | 9 | 574 | 574 | 589 |
-| commercial | 4 | 59 | 59 | 68 |
+| informational | 443 | 140 | 140 | 589 |
+| commercial | 55 | 8 | 8 | 68 |
 | navigational | 1 | 0 | 0 | 5 |
 | transactional | 1 | 0 | 0 | 7 |
 
@@ -135,32 +120,32 @@ These are manual-review batches only. They do not change status or publish anyth
 
 | Category | Published | Drafts | Review-ready drafts | Total |
 | --- | --- | --- | --- | --- |
-| AI 基建 | 0 | 78 | 78 | 78 |
-| 报错解决 | 1 | 80 | 80 | 81 |
 | Upwork 新手 | 2 | 78 | 78 | 80 |
-| Codex 新手教程 | 9 | 74 | 74 | 104 |
-| 工具流程 | 0 | 58 | 58 | 58 |
-| AI 自由职业路线 | 0 | 44 | 44 | 44 |
-| 模板和清单 | 0 | 44 | 44 | 44 |
-| 收款工具 | 1 | 40 | 40 | 41 |
-| 工具导航 | 0 | 29 | 29 | 29 |
-| AI 提示词 | 0 | 18 | 18 | 18 |
-| AI 部署 | 0 | 17 | 17 | 17 |
-| 新手教程 | 0 | 17 | 17 | 17 |
 | 自由职业平台 | 0 | 12 | 12 | 12 |
-| AI 工具 | 0 | 8 | 8 | 8 |
-| Claude Code 新手教程 | 0 | 4 | 4 | 4 |
-| Deployment | 0 | 4 | 4 | 4 |
-| Troubleshooting | 0 | 4 | 4 | 4 |
-| Upwork 新手教程 | 0 | 4 | 4 | 4 |
-| 工具对比 | 0 | 4 | 4 | 4 |
-| 新手路线 | 0 | 3 | 3 | 3 |
-| Proposal | 0 | 2 | 2 | 2 |
-| 作品集 | 0 | 2 | 2 | 2 |
-| 客户沟通 | 0 | 2 | 2 | 2 |
 | 工具选择 | 0 | 2 | 2 | 2 |
-| AI Agent | 0 | 1 | 1 | 1 |
-| AI 记忆 | 0 | 1 | 1 | 1 |
-| 项目报价 | 0 | 1 | 1 | 1 |
-| 报价指南 | 1 | 2 | 2 | 3 |
+| AI Agent | 1 | 0 | 0 | 1 |
+| AI 记忆 | 1 | 0 | 0 | 1 |
 | 部署教程 | 1 | 0 | 0 | 1 |
+| 项目报价 | 1 | 0 | 0 | 1 |
+| 模板和清单 | 30 | 14 | 14 | 44 |
+| Proposal | 2 | 0 | 0 | 2 |
+| 作品集 | 2 | 0 | 0 | 2 |
+| 客户沟通 | 2 | 0 | 0 | 2 |
+| 报价指南 | 3 | 0 | 0 | 3 |
+| 新手路线 | 3 | 0 | 0 | 3 |
+| Claude Code 新手教程 | 4 | 0 | 0 | 4 |
+| Deployment | 4 | 0 | 0 | 4 |
+| Troubleshooting | 4 | 0 | 0 | 4 |
+| Upwork 新手教程 | 4 | 0 | 0 | 4 |
+| 工具对比 | 4 | 0 | 0 | 4 |
+| AI 工具 | 8 | 0 | 0 | 8 |
+| 工具导航 | 23 | 6 | 6 | 29 |
+| AI 部署 | 16 | 1 | 1 | 17 |
+| 新手教程 | 17 | 0 | 0 | 17 |
+| AI 提示词 | 18 | 0 | 0 | 18 |
+| 报错解决 | 61 | 20 | 20 | 81 |
+| 收款工具 | 36 | 5 | 5 | 41 |
+| AI 自由职业路线 | 41 | 3 | 3 | 44 |
+| AI 基建 | 71 | 7 | 7 | 78 |
+| 工具流程 | 58 | 0 | 0 | 58 |
+| Codex 新手教程 | 83 | 0 | 0 | 104 |

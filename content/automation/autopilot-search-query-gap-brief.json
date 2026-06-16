@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T10:39:20.316Z",
+  "generatedAt": "2026-06-16T07:01:39.443Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -8,24 +8,158 @@
     "stopBefore": "Use recommended queries during manual review only. Do not change article status or publish without explicit approval."
   },
   "sourceEvidence": {
-    "nextReviewSourcePackItems": 19,
+    "nextReviewSourcePackItems": 15,
     "searchQueryCoverageItems": 12,
-    "sprintBoardItemsNeedingSearchQuery": 0,
+    "sprintBoardItemsNeedingSearchQuery": 2,
     "sprintBoardUnsafeItems": 0,
     "waveApprovalPacketItems": 3
   },
   "summary": {
-    "items": 0,
-    "itemsWithCommandBoundary": 0,
-    "itemsWithCoverageEvidence": 0,
-    "itemsWithFactCheckQueries": 0,
-    "itemsWithOfficialSources": 0,
-    "itemsWithRecommendedQueries": 0,
-    "readyItems": 0,
-    "safeDraftItems": 0,
-    "totalRecommendedQueries": 0,
+    "items": 2,
+    "itemsWithCommandBoundary": 2,
+    "itemsWithCoverageEvidence": 2,
+    "itemsWithFactCheckQueries": 2,
+    "itemsWithOfficialSources": 2,
+    "itemsWithRecommendedQueries": 2,
+    "readyItems": 2,
+    "safeDraftItems": 2,
+    "totalRecommendedQueries": 20,
     "unsafeItems": 0
   },
   "unsafeItems": [],
-  "items": []
+  "items": [
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vector-database-selection-for-rag-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/vector-database-selection-for-rag-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "coverageLane": "RAG, knowledge base, and Agent memory",
+      "coverageQueryCount": 35,
+      "factCheckQueries": [
+        "RAG 向量数据库怎么选 official docs latest",
+        "RAG 向量数据库怎么选 official documentation current limits",
+        "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 fact check official docs",
+        "AI 基建 official docs limits pricing changelog",
+        "RAG 知识库搭建教程",
+        "企业知识库 AI 部署",
+        "向量数据库 RAG 教程",
+        "RAG 评测怎么做"
+      ],
+      "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
+      "officialSourceTargets": [
+        "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+        "LangChain docs: https://python.langchain.com/docs",
+        "LlamaIndex docs: https://docs.llamaindex.ai",
+        "Hugging Face docs: https://huggingface.co/docs",
+        "OpenAI API docs: https://platform.openai.com/docs",
+        "OpenAI Agents docs: https://platform.openai.com/docs/guides/agents",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+        "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering"
+      ],
+      "primaryKeyword": "RAG 向量数据库怎么选",
+      "queryFamiliesUsed": [
+        "howTo",
+        "template",
+        "comparison"
+      ],
+      "readyForManualSearchQueryReview": true,
+      "recommendedSearchQueries": [
+        "RAG 向量数据库怎么选",
+        "RAG 向量数据库怎么选怎么做",
+        "RAG 向量数据库怎么选教程",
+        "RAG 向量数据库怎么选新手教程",
+        "RAG 向量数据库怎么选落地步骤",
+        "RAG 向量数据库怎么选对比",
+        "RAG 向量数据库怎么选怎么选",
+        "RAG 向量数据库怎么选模板",
+        "RAG 向量数据库怎么选清单",
+        "RAG 向量数据库怎么选SOP"
+      ],
+      "reviewChecklist": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before changing article metadata.",
+        "Use these queries as manual review evidence only; do not auto-edit article frontmatter from this report.",
+        "Prefer queries that match the article's actual title, description, and reader job-to-be-done.",
+        "Discard any query that would push the article toward unsupported traffic, ranking, revenue, or benchmark claims.",
+        "After human approval, add chosen search queries in the article review workflow before mark:review.",
+        "Do not run mark:review or publish commands from this gap brief."
+      ],
+      "safeDraft": true,
+      "sourceEvidence": [
+        "search-query-coverage",
+        "next-review-source-pack",
+        "wave-approval-packet"
+      ],
+      "sprintLane": "wave-review",
+      "sprintOrder": 2,
+      "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界"
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/supabase-pgvector-rag-guide.mdx --confirm-human",
+        "publishDryRunAfterReview": "npm run publish:articles -- --file=content/blog/supabase-pgvector-rag-guide.mdx",
+        "publishConfirm": "not-included",
+        "stopBefore": "Do not run mark:review until explicit human approval; do not publish without a separate explicit approval."
+      },
+      "coverageLane": "RAG, knowledge base, and Agent memory",
+      "coverageQueryCount": 35,
+      "factCheckQueries": [
+        "Supabase pgvector official docs latest",
+        "Supabase pgvector official documentation current limits",
+        "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 fact check official docs",
+        "AI 基建 official docs limits pricing changelog",
+        "RAG 知识库搭建教程",
+        "企业知识库 AI 部署",
+        "向量数据库 RAG 教程",
+        "RAG 评测怎么做"
+      ],
+      "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+      "officialSourceTargets": [
+        "OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval",
+        "LangChain docs: https://python.langchain.com/docs",
+        "LlamaIndex docs: https://docs.llamaindex.ai",
+        "Hugging Face docs: https://huggingface.co/docs",
+        "OpenAI API docs: https://platform.openai.com/docs",
+        "Vercel AI SDK docs: https://ai-sdk.dev/docs",
+        "LangChain docs: https://docs.langchain.com"
+      ],
+      "primaryKeyword": "Supabase pgvector",
+      "queryFamiliesUsed": [
+        "howTo",
+        "template",
+        "comparison"
+      ],
+      "readyForManualSearchQueryReview": true,
+      "recommendedSearchQueries": [
+        "Supabase pgvector",
+        "Supabase pgvector怎么做",
+        "Supabase pgvector教程",
+        "Supabase pgvector新手教程",
+        "Supabase pgvector落地步骤",
+        "Supabase pgvector对比",
+        "Supabase pgvector怎么选",
+        "Supabase pgvector模板",
+        "Supabase pgvector清单",
+        "Supabase pgvectorSOP"
+      ],
+      "reviewChecklist": [
+        "Confirm the article is still draft, noindex, and humanReviewRequired before changing article metadata.",
+        "Use these queries as manual review evidence only; do not auto-edit article frontmatter from this report.",
+        "Prefer queries that match the article's actual title, description, and reader job-to-be-done.",
+        "Discard any query that would push the article toward unsupported traffic, ranking, revenue, or benchmark claims.",
+        "After human approval, add chosen search queries in the article review workflow before mark:review.",
+        "Do not run mark:review or publish commands from this gap brief."
+      ],
+      "safeDraft": true,
+      "sourceEvidence": [
+        "search-query-coverage",
+        "next-review-source-pack",
+        "wave-approval-packet"
+      ],
+      "sprintLane": "wave-review",
+      "sprintOrder": 3,
+      "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索"
+    }
+  ]
 }

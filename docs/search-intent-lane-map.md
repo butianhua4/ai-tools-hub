@@ -1,6 +1,6 @@
 # Search Intent Lane Map
 
-Generated at: 2026-06-14T10:38:49.839Z
+Generated at: 2026-06-16T07:01:09.041Z
 
 This report is read-only. It maps broad AI search-intent lanes to existing public articles and safe draft candidates. It does not claim keyword volume, impressions, clicks, or traffic.
 
@@ -21,140 +21,33 @@ This report is read-only. It maps broad AI search-intent lanes to existing publi
 
 ## Summary
 
-- highPriorityLanes: 12
+- highPriorityLanes: 7
 - lanes: 12
-- lanesWithReadyDrafts: 12
-- lanesWithoutPublicCoverage: 10
-- maxPriorityScore: 386
-- notReadyMatchedDrafts: 321
-- totalReadyDraftMatches: 233
+- lanesWithReadyDrafts: 7
+- lanesWithoutPublicCoverage: 0
+- maxPriorityScore: 196
+- notReadyMatchedDrafts: 57
+- totalReadyDraftMatches: 22
 
 ## Top Lanes
 
 | Score | Demand | Public | Ready drafts | Current pack | Wave 1 | Expansion | Not ready matched drafts | Lane | Reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 386 | 10 | 0 | 23 | 2 | 2 | 7 | 4 | Cross-industry AI prompt templates and reusable prompt libraries | demandScore=10; no public coverage; readyDrafts=23; currentPack=2; wave1=2 |
-| 366 | 9 | 0 | 16 | 2 | 2 | 7 | 6 | Business department AI workflows across sales, support, ops, HR, finance, legal, and education | demandScore=9; no public coverage; readyDrafts=16; currentPack=2; wave1=2 |
-| 358 | 10 | 0 | 27 | 1 | 1 | 5 | 8 | AI Agent deployment, tool calling, and production workflow | demandScore=10; no public coverage; readyDrafts=27; currentPack=1; wave1=1 |
-| 358 | 10 | 0 | 35 | 1 | 1 | 5 | 0 | RAG, knowledge base, and Agent memory | demandScore=10; no public coverage; readyDrafts=35; currentPack=1; wave1=1 |
-| 330 | 10 | 0 | 29 | 0 | 0 | 3 | 0 | Large model deployment, LLM serving, and GPU infrastructure | demandScore=10; no public coverage; readyDrafts=29 |
-| 314 | 9 | 0 | 17 | 0 | 0 | 4 | 22 | Dify, n8n, no-code AI automation, and workflow deployment | demandScore=9; no public coverage; readyDrafts=17 |
-| 314 | 9 | 0 | 24 | 0 | 0 | 4 | 6 | Model API integration, rate limits, and multi-model fallback | demandScore=9; no public coverage; readyDrafts=24 |
-| 306 | 9 | 0 | 16 | 0 | 0 | 2 | 0 | Local and open-source model deployment | demandScore=9; no public coverage; readyDrafts=16 |
-
-## Cross-industry AI prompt templates and reusable prompt libraries
-
-- ID: industry-prompt-library
-- Audience: Teams trying to build reusable prompt libraries instead of one-off prompts.
-- Priority score: 386
-- Priority reason: demandScore=10; no public coverage; readyDrafts=23; currentPack=2; wave1=2
-- Intent seeds: AI 提示词大全, ChatGPT 提示词模板, 全行业 AI 提示词, AI prompt library
-- Workflow angles: industry taxonomy, input schema, output format, review checklist, reuse rules
-
-Review focus:
-
-- input fields
-- output format
-- quality checks
-- risk disclaimers
-- versioning
-
-Source targets:
-
-- OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering
-- OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation
-- Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
-- Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/
-
-Matched safe draft candidates:
-
-| Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | true | 100 | 40 | AI 提示词 | 全行业 AI 提示词模板 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| true | true | true | 100 | 34 | AI 部署 | 客服 AI 模型选型 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| false | false | true | 100 | 31 | AI 提示词 | 数据分析 AI 提示词 | 数据分析 AI 提示词模板：指标解释、SQL 思路、异常排查和报告摘要 | content/blog/data-analysis-ai-prompts-guide.mdx |
-| false | false | true | 100 | 31 | AI 提示词 | 教育 AI 提示词 | 教育 AI 提示词模板：备课、教案、测验、反馈和学习计划 | content/blog/education-ai-prompts-guide.mdx |
-| false | false | true | 100 | 30 | AI 提示词 | 客服 AI 提示词 | 客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断 | content/blog/customer-service-ai-prompts-guide.mdx |
-| false | false | true | 100 | 30 | AI 提示词 | 电商 AI 提示词 | 电商 AI 提示词模板：商品标题、详情页、评价分析和售后回复 | content/blog/ecommerce-ai-prompts-guide.mdx |
-| false | false | true | 86 | 32 | AI 提示词 | 团队 AI 提示词库 | 团队 AI 提示词库怎么搭：分类、版本、示例、审核和复用 | content/blog/ai-prompt-library-team-knowledge-base-guide.mdx |
-| false | false | false | 100 | 31 | AI 提示词 | 制造业 AI 提示词 | 制造业 AI 提示词模板：SOP、质检记录、设备故障和生产复盘 | content/blog/manufacturing-ai-prompts-guide.mdx |
-
-## Business department AI workflows across sales, support, ops, HR, finance, legal, and education
-
-- ID: business-ai-workflows
-- Audience: Business teams deciding how to use AI across departments.
-- Priority score: 366
-- Priority reason: demandScore=9; no public coverage; readyDrafts=16; currentPack=2; wave1=2
-- Intent seeds: 企业 AI 应用场景, AI 工作流模板, 销售 AI 提示词, 客服 AI 提示词, 运营 AI 提示词
-- Workflow angles: department workflows, SOP, review owner, handoff, template library
-
-Review focus:
-
-- role-specific input fields
-- approval owner
-- risk boundaries
-- measurable output format
-
-Source targets:
-
-- OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering
-- Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/
-
-Matched safe draft candidates:
-
-| Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | true | 100 | 40 | AI 提示词 | 全行业 AI 提示词模板 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| true | true | true | 100 | 34 | AI 部署 | 客服 AI 模型选型 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| false | false | true | 100 | 31 | AI 提示词 | 教育 AI 提示词 | 教育 AI 提示词模板：备课、教案、测验、反馈和学习计划 | content/blog/education-ai-prompts-guide.mdx |
-| false | false | true | 100 | 30 | AI 提示词 | 客服 AI 提示词 | 客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断 | content/blog/customer-service-ai-prompts-guide.mdx |
-| false | false | true | 100 | 30 | AI 提示词 | 电商 AI 提示词 | 电商 AI 提示词模板：商品标题、详情页、评价分析和售后回复 | content/blog/ecommerce-ai-prompts-guide.mdx |
-| false | false | true | 86 | 33 | AI 部署 | Dify 工作流错误处理 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
-| false | false | true | 86 | 33 | AI 部署 | Open WebUI Functions Pipelines | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| false | false | false | 100 | 31 | AI 提示词 | 制造业 AI 提示词 | 制造业 AI 提示词模板：SOP、质检记录、设备故障和生产复盘 | content/blog/manufacturing-ai-prompts-guide.mdx |
-
-## AI Agent deployment, tool calling, and production workflow
-
-- ID: agent-deployment-tools
-- Audience: Developers and teams trying to move beyond chatbots into production agents.
-- Priority score: 358
-- Priority reason: demandScore=10; no public coverage; readyDrafts=27; currentPack=1; wave1=1
-- Intent seeds: AI Agent 部署, AI Agent 工具调用, Vercel AI SDK Agent, OpenAI Agents SDK
-- Workflow angles: tool calling, multi-step execution, human approval, observability, permissions
-
-Review focus:
-
-- tool permission boundaries
-- loop control and stop conditions
-- human handoff
-- logs and fallback paths
-
-Source targets:
-
-- OpenAI Agents: https://platform.openai.com/docs/guides/agents
-- OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk
-- Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents
-- n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/
-
-Matched safe draft candidates:
-
-| Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | true | 100 | 40 | AI Agent | AI Agent 部署 | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| false | false | true | 100 | 40 | AI 记忆 | AI Agent 记忆 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| false | false | true | 86 | 33 | 项目报价 | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| false | false | true | 86 | 33 | AI 部署 | Dify 工作流错误处理 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
-| false | false | true | 86 | 33 | AI 部署 | Dify Workflow 和 Agent 区别 | Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核 | content/blog/dify-workflow-vs-agent-guide.mdx |
-| false | false | false | 100 | 33 | AI 部署 | n8n AI Agent 知识库记忆 | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
-| false | false | false | 100 | 23 | AI 基建 | Agent 生产上线 | Agent 生产上线检查表：权限、日志、成本和人工确认 | content/blog/agent-production-deployment-checklist.mdx |
-| false | false | false | 100 | 21 | AI 基建 | Agent 记忆 | Agent 记忆怎么设计：短期记忆、长期记忆和用户偏好 | content/blog/agent-memory-design-guide.mdx |
+| 196 | 10 | 31 | 4 | 1 | 0 | 0 | 0 | RAG, knowledge base, and Agent memory | demandScore=10; public coverage=31; readyDrafts=4; currentPack=1 |
+| 172 | 10 | 27 | 2 | 0 | 0 | 0 | 0 | Large model deployment, LLM serving, and GPU infrastructure | demandScore=10; public coverage=27; readyDrafts=2 |
+| 166 | 10 | 34 | 1 | 0 | 0 | 0 | 0 | AI Agent deployment, tool calling, and production workflow | demandScore=10; public coverage=34; readyDrafts=1 |
+| 164 | 9 | 28 | 2 | 1 | 0 | 0 | 0 | Model API integration, rate limits, and multi-model fallback | demandScore=9; public coverage=28; readyDrafts=2; currentPack=1 |
+| 162 | 8 | 87 | 7 | 0 | 0 | 0 | 14 | AI app deployment errors and beginner troubleshooting | demandScore=8; public coverage=87; readyDrafts=7 |
+| 162 | 8 | 141 | 5 | 1 | 0 | 0 | 39 | AI automation service pricing, scope, and delivery checklist | demandScore=8; public coverage=141; readyDrafts=5; currentPack=1 |
+| 160 | 10 | 27 | 0 | 0 | 0 | 0 | 0 | Cross-industry AI prompt templates and reusable prompt libraries | demandScore=10; public coverage=27; readyDrafts=0 |
+| 140 | 9 | 16 | 0 | 0 | 0 | 0 | 0 | Local and open-source model deployment | demandScore=9; public coverage=16; readyDrafts=0 |
 
 ## RAG, knowledge base, and Agent memory
 
 - ID: rag-knowledge-memory
 - Audience: Teams building customer support bots, internal knowledge assistants, and document Q&A.
-- Priority score: 358
-- Priority reason: demandScore=10; no public coverage; readyDrafts=35; currentPack=1; wave1=1
+- Priority score: 196
+- Priority reason: demandScore=10; public coverage=31; readyDrafts=4; currentPack=1
 - Intent seeds: RAG 知识库搭建, AI Agent 记忆, 向量数据库教程, 企业知识库 AI
 - Workflow angles: document cleanup, chunking, embedding, source citation, memory policy
 
@@ -176,21 +69,17 @@ Matched safe draft candidates:
 
 | Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | true | 100 | 34 | AI 部署 | 客服 AI 模型选型 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| false | false | true | 100 | 40 | AI 记忆 | AI Agent 记忆 | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| false | false | true | 100 | 30 | AI 提示词 | 客服 AI 提示词 | 客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断 | content/blog/customer-service-ai-prompts-guide.mdx |
-| false | false | true | 86 | 33 | 项目报价 | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| false | false | true | 86 | 33 | AI 部署 | Open WebUI Functions Pipelines | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| false | false | false | 100 | 33 | AI 部署 | n8n AI Agent 知识库记忆 | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
-| false | false | false | 100 | 25 | AI 基建 | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
-| false | false | false | 100 | 21 | AI 基建 | Agent 记忆 | Agent 记忆怎么设计：短期记忆、长期记忆和用户偏好 | content/blog/agent-memory-design-guide.mdx |
+| true | false | false | 100 | 25 | AI 基建 | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| false | false | false | 86 | 27 | AI 基建 | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| false | false | false | 86 | 24 | AI 基建 | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| false | false | false | 86 | 21 | AI 基建 | 向量数据库 | 向量数据库怎么选：新手先理解 embedding 和检索 | content/blog/vector-database-beginner-guide.mdx |
 
 ## Large model deployment, LLM serving, and GPU infrastructure
 
 - ID: llm-deployment-serving
 - Audience: Developers, solo builders, and companies deciding where and how to run models.
-- Priority score: 330
-- Priority reason: demandScore=10; no public coverage; readyDrafts=29
+- Priority score: 172
+- Priority reason: demandScore=10; public coverage=27; readyDrafts=2
 - Intent seeds: 大模型部署教程, LLM deployment, vLLM 部署, Hugging Face TGI 部署
 - Workflow angles: GPU sizing, serving API, quantization, autoscaling, cost control
 
@@ -212,56 +101,44 @@ Matched safe draft candidates:
 
 | Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| false | false | true | 100 | 40 | AI 部署 | 大模型部署 | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-| false | false | true | 86 | 32 | AI 部署 | 本地部署大模型显存不够 | 本地部署大模型显存不够怎么办：量化、上下文、并发和换模型 | content/blog/local-llm-vram-not-enough-guide.mdx |
-| false | false | true | 86 | 29 | AI 基建 | Docker 使用 NVIDIA GPU | Docker 怎么用 NVIDIA GPU：大模型部署先装对 Container Toolkit | content/blog/gpu-docker-nvidia-container-toolkit-guide.mdx |
-| false | false | false | 100 | 21 | AI 基建 | 大模型部署成本 | 大模型部署成本和延迟怎么估算：上线前检查清单 | content/blog/llm-serving-cost-latency-checklist.mdx |
-| false | false | false | 86 | 34 | AI 部署 | 大模型成本监控 | 大模型成本监控怎么做：按用户、功能、模型和项目拆账 | content/blog/llm-cost-monitoring-dashboard-guide.mdx |
-| false | false | false | 86 | 32 | AI 部署 | 大模型 API 限流重试 | 大模型 API 限流和重试怎么做：429、队列、退避和降级方案 | content/blog/llm-api-rate-limit-retry-guide.mdx |
-| false | false | false | 86 | 29 | AI 基建 | BentoML LLM 部署 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
-| false | false | false | 86 | 29 | AI 基建 | Hugging Face TGI 部署 | Hugging Face TGI 怎么部署：Text Generation Inference 入门检查表 | content/blog/huggingface-tgi-deployment-guide.mdx |
+| false | false | false | 86 | 29 | AI 基建 | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| false | false | false | 86 | 22 | AI 基建 | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
 
-## Dify, n8n, no-code AI automation, and workflow deployment
+## AI Agent deployment, tool calling, and production workflow
 
-- ID: nocode-ai-automation
-- Audience: No-code and low-code automation builders using Dify, n8n, Flowise, Coze, and webhooks.
-- Priority score: 314
-- Priority reason: demandScore=9; no public coverage; readyDrafts=17
-- Intent seeds: Dify 部署教程, n8n AI Agent, AI 自动化工作流, Webhook AI Agent
-- Workflow angles: self-hosting, webhook, auth, retry, human fallback
+- ID: agent-deployment-tools
+- Audience: Developers and teams trying to move beyond chatbots into production agents.
+- Priority score: 166
+- Priority reason: demandScore=10; public coverage=34; readyDrafts=1
+- Intent seeds: AI Agent 部署, AI Agent 工具调用, Vercel AI SDK Agent, OpenAI Agents SDK
+- Workflow angles: tool calling, multi-step execution, human approval, observability, permissions
 
 Review focus:
 
-- self-hosting vs cloud boundaries
-- webhook auth
-- error handling
-- manual fallback
+- tool permission boundaries
+- loop control and stop conditions
+- human handoff
+- logs and fallback paths
 
 Source targets:
 
-- Dify Agent docs: https://docs.dify.ai/en/use-dify/build/agent
-- Dify Agent node: https://docs.dify.ai/en/guides/workflow/node/agent
-- n8n docs: https://docs.n8n.io
+- OpenAI Agents: https://platform.openai.com/docs/guides/agents
+- OpenAI Agents SDK: https://platform.openai.com/docs/guides/agents-sdk
+- Vercel AI SDK Agents: https://ai-sdk.dev/docs/agents
+- n8n AI Agent node: https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/
 
 Matched safe draft candidates:
 
 | Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| false | false | true | 86 | 33 | 项目报价 | AI 自动化项目报价 | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| false | false | true | 86 | 33 | AI 部署 | Dify 工作流错误处理 | Dify 工作流怎么做错误处理：变量、分支、重试和人工兜底 | content/blog/dify-workflow-error-handling-guide.mdx |
-| false | false | true | 86 | 33 | AI 部署 | Dify Workflow 和 Agent 区别 | Dify Workflow 和 Agent 怎么选：固定流程、工具调用和人工审核 | content/blog/dify-workflow-vs-agent-guide.mdx |
-| false | false | true | 86 | 33 | AI 部署 | Open WebUI Functions Pipelines | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| false | false | false | 100 | 33 | AI 部署 | n8n AI Agent 知识库记忆 | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 | content/blog/n8n-ai-agent-rag-memory-guide.mdx |
-| false | false | false | 86 | 33 | AI 部署 | n8n AI Agent Webhook | n8n AI Agent 接 Webhook 怎么上线：触发、鉴权、队列和失败重试 | content/blog/n8n-ai-agent-webhook-production-guide.mdx |
-| false | false | false | 86 | 26 | AI 基建 | Dify 接入 Ollama | Dify 怎么接 Ollama 本地模型：从模型供应商到知识库测试 | content/blog/dify-ollama-local-model-guide.mdx |
-| false | false | false | 86 | 26 | AI 基建 | Dify 接 OpenAI API | Dify 怎么接 OpenAI API：模型供应商、LLM 节点和费用边界 | content/blog/dify-openai-api-provider-guide.mdx |
+| false | false | false | 86 | 26 | AI 基建 | Vercel AI SDK 聊天机器人部署 | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
 
 ## Model API integration, rate limits, and multi-model fallback
 
 - ID: model-api-integration
 - Audience: Developers integrating OpenAI, Claude, Gemini, OpenRouter, and multi-model routing.
-- Priority score: 314
-- Priority reason: demandScore=9; no public coverage; readyDrafts=24
+- Priority score: 164
+- Priority reason: demandScore=9; public coverage=28; readyDrafts=2; currentPack=1
 - Intent seeds: OpenAI API 接入, Claude API 限流, Gemini API 限流, 多模型 Router 降级
 - Workflow angles: server-side calls, rate limit retry, fallback routing, key rotation, cost control
 
@@ -283,21 +160,110 @@ Matched safe draft candidates:
 
 | Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| false | false | true | 100 | 40 | AI 部署 | 大模型部署 | 大模型部署怎么选：Hugging Face Inference Endpoints、API、私有化和成本检查 | content/blog/llm-deployment-huggingface-inference-endpoints-guide.mdx |
-| false | false | true | 86 | 34 | AI 部署 | AI API Key 安全管理 | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
-| false | false | true | 86 | 34 | AI 部署 | Claude API rate limit reached | Claude API Rate limit reached 怎么办：限流、上下文、重试和降级 | content/blog/claude-api-rate-limit-debug-guide.mdx |
-| false | false | true | 86 | 34 | AI 部署 | Gemini API 限流 | Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型 | content/blog/gemini-api-rate-limit-debug-guide.mdx |
-| false | false | false | 100 | 34 | AI 部署 | 多模型 Router 降级 | 多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估 | content/blog/multi-model-router-fallback-guide.mdx |
-| false | false | false | 86 | 34 | AI 部署 | OpenAI Batch API | OpenAI Batch API 适合什么任务：批量摘要、分类、抽取和成本控制 | content/blog/openai-batch-api-cost-guide.mdx |
-| false | false | false | 86 | 34 | AI 部署 | Vercel AI Gateway 多模型 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
-| false | false | false | 86 | 32 | AI 部署 | 大模型 API 限流重试 | 大模型 API 限流和重试怎么做：429、队列、退避和降级方案 | content/blog/llm-api-rate-limit-retry-guide.mdx |
+| true | false | false | 86 | 34 | AI 部署 | Vercel AI Gateway 多模型 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| false | false | false | 86 | 27 | AI 基建 | Together AI API 接入 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+
+## AI app deployment errors and beginner troubleshooting
+
+- ID: deployment-troubleshooting
+- Audience: Beginners searching deployment errors, API failures, and environment variable mistakes.
+- Priority score: 162
+- Priority reason: demandScore=8; public coverage=87; readyDrafts=7
+- Intent seeds: Vercel build failed, API Key 无效, 环境变量缺失, npm command not found
+- Workflow angles: error log, reproduction, fix sequence, verification, handoff boundary
+
+Review focus:
+
+- reproduction
+- logs
+- fix order
+- verification command
+- avoid overgeneralized fixes
+
+Source targets:
+
+- Vercel docs: https://vercel.com/docs
+- OpenAI API docs: https://platform.openai.com/docs
+
+Matched safe draft candidates:
+
+| Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| false | false | false | 86 | 15 | 报错解决 | Vercel 部署后 404 检查清单 | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
+| false | false | false | 86 | 15 | 报错解决 | Vercel 部署后 404 常见误区 | Vercel 部署后 404 常见误区：别只盯着域名 | content/blog/vercel-404-after-deploy-mistakes.mdx |
+| false | false | false | 86 | 15 | 报错解决 | Vercel 部署成功但 404 | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
+| false | false | false | 86 | 13 | 报错解决 | Vercel build failed 排查清单 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
+| false | false | false | 86 | 13 | 报错解决 | Vercel build failed 项目 | Vercel build failed 排查能不能项目：先看这 7 个边界 | content/blog/vercel-build-failed-causes-freelance-scope.mdx |
+| false | false | false | 86 | 13 | 报错解决 | Vercel build failed 常见错误 | Vercel build failed 新手常见错误：别一上来就乱改 | content/blog/vercel-build-failed-causes-mistakes.mdx |
+| false | false | false | 86 | 13 | 报错解决 | Vercel build failed 常见原因 | Vercel build failed 常见原因：新手先看这份排查顺序 | content/blog/vercel-build-failed-causes.mdx |
+
+## AI automation service pricing, scope, and delivery checklist
+
+- ID: ai-service-pricing-scope
+- Audience: Freelancers and service sellers packaging AI automation work for clients.
+- Priority score: 162
+- Priority reason: demandScore=8; public coverage=141; readyDrafts=5; currentPack=1
+- Intent seeds: AI 自动化项目报价, AI Agent 项目, RAG 项目报价, Dify n8n 报价
+- Workflow angles: scope, pricing, acceptance, maintenance, risk language
+
+Review focus:
+
+- scope boundaries
+- acceptance criteria
+- maintenance fee
+- risk disclaimers
+- no income guarantees
+
+Source targets:
+
+- OpenAI API docs: https://platform.openai.com/docs
+- Vercel AI SDK docs: https://ai-sdk.dev/docs
+- Dify docs: https://docs.dify.ai
+
+Matched safe draft candidates:
+
+| Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| true | false | false | 100 | 25 | AI 基建 | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| false | false | false | 86 | 29 | AI 基建 | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| false | false | false | 86 | 22 | AI 基建 | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| false | false | false | 86 | 15 | 报错解决 | Vercel 部署后 404 检查清单 | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
+| false | false | false | 86 | 13 | 报错解决 | Vercel build failed 项目 | Vercel build failed 排查能不能项目：先看这 7 个边界 | content/blog/vercel-build-failed-causes-freelance-scope.mdx |
+
+## Cross-industry AI prompt templates and reusable prompt libraries
+
+- ID: industry-prompt-library
+- Audience: Teams trying to build reusable prompt libraries instead of one-off prompts.
+- Priority score: 160
+- Priority reason: demandScore=10; public coverage=27; readyDrafts=0
+- Intent seeds: AI 提示词大全, ChatGPT 提示词模板, 全行业 AI 提示词, AI prompt library
+- Workflow angles: industry taxonomy, input schema, output format, review checklist, reuse rules
+
+Review focus:
+
+- input fields
+- output format
+- quality checks
+- risk disclaimers
+- versioning
+
+Source targets:
+
+- OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering
+- OpenAI prompt generation: https://platform.openai.com/docs/guides/prompt-generation
+- Anthropic prompt engineering: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
+- Microsoft Copilot prompt gallery: https://adoption.microsoft.com/en-us/copilot/prompt-gallery/
+
+Matched safe draft candidates:
+
+- none
 
 ## Local and open-source model deployment
 
 - ID: local-open-models
 - Audience: Builders deploying open-source models locally or behind a private interface.
-- Priority score: 306
-- Priority reason: demandScore=9; no public coverage; readyDrafts=16
+- Priority score: 140
+- Priority reason: demandScore=9; public coverage=16; readyDrafts=0
 - Intent seeds: 本地部署大模型, Ollama 本地部署, Open WebUI 部署, 显存不够怎么办
 - Workflow angles: hardware check, model download, quantization, local web UI, private API
 
@@ -316,30 +282,21 @@ Source targets:
 
 Matched safe draft candidates:
 
-| Current | Wave 1 | Expansion | Score | Batch | Category | Primary keyword | Title | File |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| false | false | true | 86 | 33 | AI 部署 | Open WebUI Functions Pipelines | Open WebUI Functions 和 Pipelines 怎么用：扩展模型、RAG 和外部工作流 | content/blog/open-webui-functions-pipelines-deployment-guide.mdx |
-| false | false | true | 86 | 32 | AI 部署 | 本地部署大模型显存不够 | 本地部署大模型显存不够怎么办：量化、上下文、并发和换模型 | content/blog/local-llm-vram-not-enough-guide.mdx |
-| false | false | false | 86 | 33 | AI 基建 | MCP Server 部署安全 | MCP Server 怎么部署才安全：本地、远程、权限、日志和工具白名单 | content/blog/mcp-server-deployment-security-checklist.mdx |
-| false | false | false | 86 | 29 | AI 基建 | BentoML LLM 部署 | BentoML 怎么部署 LLM：从本地 Service 到 BentoCloud 验收 | content/blog/bentoml-llm-deployment-beginner-guide.mdx |
-| false | false | false | 86 | 27 | AI 基建 | Chroma 向量数据库 | Chroma 向量数据库怎么用：本地 RAG 原型先跑通 collection | content/blog/chroma-vector-database-rag-guide.mdx |
-| false | false | false | 86 | 26 | AI 基建 | Dify 接入 Ollama | Dify 怎么接 Ollama 本地模型：从模型供应商到知识库测试 | content/blog/dify-ollama-local-model-guide.mdx |
-| false | false | false | 86 | 26 | AI 基建 | llama.cpp server | llama.cpp server 怎么用：本地 GGUF 模型 API 入门 | content/blog/llama-cpp-server-beginner-guide.mdx |
-| false | false | false | 86 | 26 | AI 基建 | LM Studio 本地 API | LM Studio 本地 API 怎么用：把本地模型变成 OpenAI 兼容接口 | content/blog/lm-studio-local-api-guide.mdx |
+- none
 
 ## All Lanes
 
 | Score | Demand | Public | Ready drafts | Current pack | Wave 1 | Expansion | Not ready matched drafts | Lane | Reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 386 | 10 | 0 | 23 | 2 | 2 | 7 | 4 | Cross-industry AI prompt templates and reusable prompt libraries | demandScore=10; no public coverage; readyDrafts=23; currentPack=2; wave1=2 |
-| 366 | 9 | 0 | 16 | 2 | 2 | 7 | 6 | Business department AI workflows across sales, support, ops, HR, finance, legal, and education | demandScore=9; no public coverage; readyDrafts=16; currentPack=2; wave1=2 |
-| 358 | 10 | 0 | 27 | 1 | 1 | 5 | 8 | AI Agent deployment, tool calling, and production workflow | demandScore=10; no public coverage; readyDrafts=27; currentPack=1; wave1=1 |
-| 358 | 10 | 0 | 35 | 1 | 1 | 5 | 0 | RAG, knowledge base, and Agent memory | demandScore=10; no public coverage; readyDrafts=35; currentPack=1; wave1=1 |
-| 330 | 10 | 0 | 29 | 0 | 0 | 3 | 0 | Large model deployment, LLM serving, and GPU infrastructure | demandScore=10; no public coverage; readyDrafts=29 |
-| 314 | 9 | 0 | 17 | 0 | 0 | 4 | 22 | Dify, n8n, no-code AI automation, and workflow deployment | demandScore=9; no public coverage; readyDrafts=17 |
-| 314 | 9 | 0 | 24 | 0 | 0 | 4 | 6 | Model API integration, rate limits, and multi-model fallback | demandScore=9; no public coverage; readyDrafts=24 |
-| 306 | 9 | 0 | 16 | 0 | 0 | 2 | 0 | Local and open-source model deployment | demandScore=9; no public coverage; readyDrafts=16 |
-| 282 | 8 | 0 | 9 | 0 | 0 | 1 | 9 | MCP, tool permissions, and enterprise integration safety | demandScore=8; no public coverage; readyDrafts=9 |
-| 278 | 8 | 0 | 13 | 0 | 0 | 0 | 2 | LLM observability, evaluation, and production quality | demandScore=8; no public coverage; readyDrafts=13 |
-| 200 | 8 | 3 | 13 | 0 | 0 | 4 | 92 | AI app deployment errors and beginner troubleshooting | demandScore=8; public coverage=3; readyDrafts=13 |
-| 196 | 8 | 2 | 11 | 0 | 0 | 1 | 172 | AI automation service pricing, scope, and delivery checklist | demandScore=8; public coverage=2; readyDrafts=11 |
+| 196 | 10 | 31 | 4 | 1 | 0 | 0 | 0 | RAG, knowledge base, and Agent memory | demandScore=10; public coverage=31; readyDrafts=4; currentPack=1 |
+| 172 | 10 | 27 | 2 | 0 | 0 | 0 | 0 | Large model deployment, LLM serving, and GPU infrastructure | demandScore=10; public coverage=27; readyDrafts=2 |
+| 166 | 10 | 34 | 1 | 0 | 0 | 0 | 0 | AI Agent deployment, tool calling, and production workflow | demandScore=10; public coverage=34; readyDrafts=1 |
+| 164 | 9 | 28 | 2 | 1 | 0 | 0 | 0 | Model API integration, rate limits, and multi-model fallback | demandScore=9; public coverage=28; readyDrafts=2; currentPack=1 |
+| 162 | 8 | 87 | 7 | 0 | 0 | 0 | 14 | AI app deployment errors and beginner troubleshooting | demandScore=8; public coverage=87; readyDrafts=7 |
+| 162 | 8 | 141 | 5 | 1 | 0 | 0 | 39 | AI automation service pricing, scope, and delivery checklist | demandScore=8; public coverage=141; readyDrafts=5; currentPack=1 |
+| 160 | 10 | 27 | 0 | 0 | 0 | 0 | 0 | Cross-industry AI prompt templates and reusable prompt libraries | demandScore=10; public coverage=27; readyDrafts=0 |
+| 140 | 9 | 16 | 0 | 0 | 0 | 0 | 0 | Local and open-source model deployment | demandScore=9; public coverage=16; readyDrafts=0 |
+| 140 | 9 | 39 | 0 | 0 | 0 | 0 | 0 | Dify, n8n, no-code AI automation, and workflow deployment | demandScore=9; public coverage=39; readyDrafts=0 |
+| 140 | 9 | 22 | 0 | 0 | 0 | 0 | 0 | Business department AI workflows across sales, support, ops, HR, finance, legal, and education | demandScore=9; public coverage=22; readyDrafts=0 |
+| 126 | 8 | 14 | 1 | 0 | 0 | 0 | 0 | LLM observability, evaluation, and production quality | demandScore=8; public coverage=14; readyDrafts=1 |
+| 120 | 8 | 14 | 0 | 0 | 0 | 0 | 4 | MCP, tool permissions, and enterprise integration safety | demandScore=8; public coverage=14; readyDrafts=0 |

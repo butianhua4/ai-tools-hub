@@ -1,6 +1,6 @@
 # Tool Market Opportunity Map
 
-Generated at: 2026-06-14T10:39:13.751Z
+Generated at: 2026-06-16T07:01:32.761Z
 
 ## Guardrails
 
@@ -13,7 +13,7 @@ Generated at: 2026-06-14T10:39:13.751Z
 
 ## Current Surface
 
-- Public articles: 15
+- Public articles: 500
 - Existing tools: agent-deployment-planner, api-routing-cost-checker, error-explainer, industry-prompt-builder, llm-deployment-cost-planner, memory-rag-architecture-planner, ppt-planner, pricing-calculator, proposal-generator, public-seo-refresh-assistant, spreadsheet-cleaner
 - Live missing from sitemap: 0
 - Measured traffic sources: 0
@@ -28,7 +28,7 @@ Generated at: 2026-06-14T10:39:13.751Z
 - globalFirstOpportunities: 2
 - opportunities: 8
 - platformRegistrationsNeedingHuman: 5
-- publicArticles: 15
+- publicArticles: 500
 - publishConfirmCommandsIncluded: 0
 - searchedKeywordFamilies: 80
 - topToolCandidates: ppt-planner-layout-generator, spreadsheet-cleanup-assistant, industry-ai-prompt-builder
@@ -53,14 +53,14 @@ Generated at: 2026-06-14T10:39:13.751Z
 
 | Score | Track | Public | Tool | Content candidates | Title | Next asset |
 | ---: | --- | ---: | ---: | ---: | --- | --- |
-| 144 | dual-track | 0 | 1 | 1 | PPT 策划与美观排版助手 | Refresh the existing tool page and add article-to-tool internal links. |
-| 143 | dual-track | 0 | 1 | 7 | 表格一键整理与清洗助手 | Refresh the existing tool page and add article-to-tool internal links. |
-| 138 | cn-first | 0 | 1 | 8 | 全行业 AI 提示词工作流生成器 | Refresh the existing tool page and add article-to-tool internal links. |
-| 127 | dual-track | 2 | 1 | 8 | Agent 部署与工具权限规划器 | Refresh the existing tool page and add article-to-tool internal links. |
-| 136 | global-first | 0 | 1 | 8 | 大模型部署成本与路径选择器 | Refresh the existing tool page and add article-to-tool internal links. |
-| 139 | dual-track | 0 | 1 | 8 | Agent 记忆与 RAG 架构规划器 | Refresh the existing tool page and add article-to-tool internal links. |
-| 134 | global-first | 0 | 1 | 8 | AI API 接入、限流与成本路由检查器 | Refresh the existing tool page and add article-to-tool internal links. |
-| 133 | cn-first | 0 | 1 | 3 | 公开文章标题、描述与内链刷新助手 | Refresh the existing tool page and add article-to-tool internal links. |
+| 130 | dual-track | 1 | 1 | 1 | PPT 策划与美观排版助手 | Refresh the existing tool page and add article-to-tool internal links. |
+| 129 | dual-track | 5 | 1 | 7 | 表格一键整理与清洗助手 | Refresh the existing tool page and add article-to-tool internal links. |
+| 124 | cn-first | 25 | 1 | 8 | 全行业 AI 提示词工作流生成器 | Refresh the existing tool page and add article-to-tool internal links. |
+| 127 | dual-track | 54 | 1 | 8 | Agent 部署与工具权限规划器 | Refresh the existing tool page and add article-to-tool internal links. |
+| 122 | global-first | 29 | 1 | 8 | 大模型部署成本与路径选择器 | Refresh the existing tool page and add article-to-tool internal links. |
+| 125 | dual-track | 25 | 1 | 8 | Agent 记忆与 RAG 架构规划器 | Refresh the existing tool page and add article-to-tool internal links. |
+| 120 | global-first | 27 | 1 | 8 | AI API 接入、限流与成本路由检查器 | Refresh the existing tool page and add article-to-tool internal links. |
+| 119 | cn-first | 3 | 1 | 3 | 公开文章标题、描述与内链刷新助手 | Refresh the existing tool page and add article-to-tool internal links. |
 
 ## Platform Registration
 

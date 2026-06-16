@@ -1,6 +1,6 @@
 # Publication Bottleneck Report
 
-Generated at: 2026-06-14T10:39:28.813Z
+Generated at: 2026-06-16T07:01:47.986Z
 
 This report is read-only. It explains why public article growth is gated and what to review next.
 
@@ -15,23 +15,23 @@ This report is read-only. It explains why public article growth is gated and wha
 
 ## Summary
 
-- approvalBacklogItems: 5
+- approvalBacklogItems: 3
 - contentIntegrityBlockingItems: 0
 - contentIntegrityWarningItems: 77
 - currentPublishableNow: 0
 - immediateApprovalItems: 3
 - immediateApprovalReadyItems: 3
-- nextBatchActionItems: 34
+- nextBatchActionItems: 33
 - nextBatchWarningItems: 3
-- publicArticles: 15
-- publicMojibakeWarningItems: 9
-- publicRefreshActionItems: 181
+- publicArticles: 500
+- publicMojibakeWarningItems: 51
+- publicRefreshActionItems: 5070
 - publishConfirmCommandsIncluded: 0
 - reviewPreflightFailed: 0
 - reviewPreflightMojibakeWarningItems: 0
 - reviewPreflightPassed: 3
 - reviewPreflightWarningItems: 0
-- statusCounts: {"draft":633,"published":15,"archived":21}
+- statusCounts: {"published":500,"archived":21,"draft":148}
 - trafficDataAvailable: false
 - unsafeItems: 0
 
@@ -47,32 +47,32 @@ This report is read-only. It explains why public article growth is gated and wha
 
 | Priority | Gate | Reason | Title | File |
 | ---: | --- | --- | --- | --- |
-| 777 | explicit human approval required | Immediate Wave 1; projected public count after human approval is 18. | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| 773 | explicit human approval required | Immediate Wave 1; projected public count after human approval is 18. | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| 769 | explicit human approval required | Immediate Wave 1; projected public count after human approval is 18. | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| 446 | explicit human approval required | Immediate Wave 1; projected public count after human approval is 503. | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 439 | explicit human approval required | Immediate Wave 1; projected public count after human approval is 503. | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| 415 | explicit human approval required | Immediate Wave 1; projected public count after human approval is 503. | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
 
 ## Immediate Approval Queue
 
 | Priority | Unsafe reasons | Title | File |
 | ---: | --- | --- | --- |
-| 777 | none | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| 773 | none | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| 769 | none | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| 446 | none | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 439 | none | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| 415 | none | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
 
 ## Next Batch Warnings
 
 | Priority | Actions | Warnings | Title | File |
 | ---: | ---: | --- | --- | --- |
-| 872 | 15 | not yet matched in human approval clearance pack<br>no copydesk optimization brief matched<br>search query match warning exists | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
-| 820 | 10 | not yet matched in human approval clearance pack | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
-| 798 | 9 | none | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| 511 | 14 | search query match warning exists | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| 488 | 9 | no copydesk optimization brief matched<br>no freshness brief matched<br>search query match warning exists | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| 479 | 10 | not yet matched in human approval clearance pack<br>no copydesk optimization brief matched<br>no freshness brief matched<br>search query match warning exists | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
 
 ## Public Refresh Warnings
 
 | Priority | Actions | Reasons | Title | File |
 | ---: | ---: | --- | --- | --- |
-| 245 | 13 | mojibake-public<br>seo-warning<br>cannibalization<br>freshness-high<br>high-priority | Codex 和 Claude Code 怎么选：新手对比清单 | content/blog/codex-vs-claude-code-beginner-checklist.mdx |
 | 240 | 13 | mojibake-public<br>seo-warning<br>short-description<br>freshness-high<br>high-priority | 第一个 Upwork 小项目怎么报价：新手范围和底价检查 | content/blog/first-upwork-project-pricing-checklist.mdx |
 | 230 | 12 | mojibake-public<br>seo-warning<br>freshness-high<br>high-priority | Codex 和 GitHub 怎么配合：提交代码前检查 | content/blog/codex-github-before-commit-checklist.mdx |
 | 230 | 12 | mojibake-public<br>seo-warning<br>freshness-high<br>high-priority | Codex 部署 Vercel 前检查什么：上线前清单 | content/blog/codex-vercel-deploy-preflight-checklist.mdx |
-| 225 | 14 | mojibake-public<br>short-description<br>cannibalization<br>freshness-high<br>high-priority | Codex 怎么做第一个网页 | content/blog/build-first-webpage-with-codex.mdx |
+| 230 | 12 | mojibake-public<br>seo-warning<br>freshness-high<br>high-priority | Codex 和 Claude Code 怎么选：新手对比清单 | content/blog/codex-vs-claude-code-beginner-checklist.mdx |
+| 210 | 13 | mojibake-public<br>short-description<br>freshness-high | Codex 怎么做第一个网页 | content/blog/build-first-webpage-with-codex.mdx |

@@ -1,6 +1,6 @@
 # Autopilot Human Review Playbook
 
-Generated at: 2026-06-14T10:39:16.556Z
+Generated at: 2026-06-16T07:01:35.623Z
 
 This report is read-only. It merges the top autopilot approval packet with search, source, internal-link, and copydesk tasks for human review.
 
@@ -14,7 +14,7 @@ This report is read-only. It merges the top autopilot approval packet with searc
 
 ## Boundaries
 
-- Public published: 15
+- Public published: 500
 - Publishable now: 0
 - Traffic data available: false
 - Can claim traffic: false
@@ -27,37 +27,40 @@ This report is read-only. It merges the top autopilot approval packet with searc
 - itemsWithInternalLinkActions: 3
 - itemsWithSearchActions: 3
 - itemsWithSourceActions: 3
-- readyItems: 3
+- readyItems: 1
 - safeDraftItems: 3
-- unsafeItems: 0
+- unsafeItems: 2
 
 ## Source Evidence
 
 - approvalPacketUnsafeItems: 0
-- internalLinkUnsafeItems: 0
+- internalLinkUnsafeItems: 2
 - optimizationUnsafeCommands: 0
 - searchIntentUnsafeItems: 0
 - sourceVerificationUnsafeItems: 0
 
 ## Unsafe Items
 
-- none
+| Ready | Safe | Search actions | Source actions | Link actions | Mark-review command gated | Publish confirm | Title | File |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| false | true | 10 | 37 | 4 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| false | true | 6 | 33 | 4 | true | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Review Items
 
 | Ready | Safe | Search actions | Source actions | Link actions | Mark-review command gated | Publish confirm | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | true | 19 | 45 | 6 | true | not-included | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| true | true | 11 | 44 | 6 | true | not-included | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| true | true | 22 | 45 | 6 | true | not-included | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| true | true | 12 | 44 | 6 | true | not-included | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| false | true | 10 | 37 | 4 | true | not-included | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| false | true | 6 | 33 | 4 | true | not-included | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Per-Item Human Review Steps
 
-### AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查
+### Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级
 
-- File: content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
-- Mark review only after human approval: npm run mark:review -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx --confirm-human
-- Publish dry run after review: npm run publish:articles -- --file=content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
+- File: content/blog/vercel-ai-gateway-multi-provider-guide.mdx
+- Mark review only after human approval: npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx --confirm-human
+- Publish dry run after review: npm run publish:articles -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx
 - Publish confirm: not-included
 
 Stop before:
@@ -69,114 +72,54 @@ Stop before:
 
 Search and copydesk actions:
 
-- Confirm the opening directly answers primary query: AI Agent deployment tutorial.
-- During human review, consider whether the title can naturally include: AI Agent deployment tutorial.
-- During human review, tune the meta description around: AI Agent deployment tutorial.
-- During human review, add one natural H2/H3 or paragraph that answers: AI Agent deployment tutorial / agent tool calling tutorial.
+- Confirm the opening directly answers primary query: 大模型部署教程.
+- During human review, consider whether the title can naturally include: 大模型部署教程.
+- During human review, tune the meta description around: 大模型部署教程.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
 - Resolve search-intent weakness: no exact search query appears in title.
 - Resolve search-intent weakness: no exact search query appears in description.
-- Resolve search-intent weakness: no exact search query appears in headings or body.
-- Review proposed title option: AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查.
-- Review proposed meta description option: 面向新手解释 AI Agent 部署流程，覆盖 Vercel AI SDK、工具调用、多步执行、停止条件、日志、权限、人工接管和上线检查。.
-- 在开头 200 字内自然回答一次“AI Agent deployment tutorial”这个搜索意图，先给结论再展开步骤。
-- 补一个小节或提示框覆盖缺口：tool calling、human review、permissions、logs。
-- 在相关段落加入公开内链：Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist)。
-- Rewrite the meta description to name the reader, outcome, and search phrase: AI Agent deployment tutorial.
+- Review proposed title option: Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级.
+- Review proposed meta description option: 整理 Vercel AI Gateway 多模型接入思路，覆盖统一 API、provider 切换、日志、成本、降级、AI SDK 和上线检查。.
+- 在开头 200 字内自然回答一次“Vercel AI Gateway 多模型”这个搜索意图，先给结论再展开步骤。
+- 在相关段落加入公开内链：多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估 (/blog/multi-model-router-fallback-guide)。
+- Check whether the primary keyword can appear naturally in the title without making the title stiff.
+- Add one FAQ or checklist line that uses a high-intent query variant such as: Vercel AI Gateway 多模型.
 
 Source verification actions:
 
-- Verify 14 official source target(s).
-- Check 8 search query seed(s).
-- Review 22 combined checklist signal(s).
-- Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: AI Agent deployment tutorial.; Add one contextual link to a published article before approval..
-- Complete freshness checklist for fast-changing AI/tool guidance.
-- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
-- Open official source and verify current wording: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
-- Open official source and verify current wording: Vercel AI SDK docs: https://ai-sdk.dev/docs
-- Open official source and verify current wording: LangChain docs: https://python.langchain.com/docs
-- Open official source and verify current wording: OpenAI API docs: https://platform.openai.com/docs
-- Open official source and verify current wording: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
-- Reject or rewrite unsupported claims before any mark:review command.
-- Keep the article draft/noindex until explicit approval.
-- Open reachable source URL: https://ai-sdk.dev/docs.
-- Open reachable source URL: https://platform.openai.com/docs/guides/agents.
-- Open reachable source URL: https://python.langchain.com/docs.
-- Open reachable source URL: https://platform.openai.com/docs.
-- Open reachable source URL: https://platform.openai.com/docs/guides/retrieval.
-
-Internal link actions:
-
-- Add one contextual public article link during human review.
-- Review 5 suggested public link target(s).
-- Use one link only if it helps the reader continue the task; avoid stuffing links.
-- Keep the article draft/noindex until explicit approval.
-- If helpful, add one contextual public link: Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist).
-- Copydesk suggested public link: Codex 部署 Vercel 前检查什么：上线前清单 (/blog/codex-vercel-deploy-preflight-checklist).
-
-### 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用
-
-- File: content/blog/industry-ai-prompts-template-library-2026.mdx
-- Mark review only after human approval: npm run mark:review -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx --confirm-human
-- Publish dry run after review: npm run publish:articles -- --file=content/blog/industry-ai-prompts-template-library-2026.mdx
-- Publish confirm: not-included
-
-Stop before:
-
-- Do not run mark:review until explicit human approval; do not publish without a separate explicit approval.
-- Do not run mark:review until explicit human approval for this file.
-- Do not run publish:articles --confirm from this playbook.
-- Do not claim traffic, ranking, revenue, or conversion lift without measured evidence.
-
-Search and copydesk actions:
-
-- Confirm the opening directly answers primary query: ChatGPT prompts for business.
-- Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
-- Review proposed title option: 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用.
-- Review proposed meta description option: 整理全行业 AI 提示词模板库的搭建方法，覆盖销售、运营、客服、HR、财务、教育、产品和研发场景，重点讲分类、输入、输出、审核和复用。.
-- 在开头 200 字内自然回答一次“ChatGPT prompts for business”这个搜索意图，先给结论再展开步骤。
-- 补一个小节或提示框覆盖缺口：customer service。
-- 在相关段落加入公开内链：Upwork 客户需求太模糊怎么办：新手分析和追问清单 (/blog/upwork-client-requirements-analysis-beginner)。
-- Add one contextual link to a published article before approval.
-- Decide whether missing subtopics should become a short section or a follow-up article.
-- Review the suggested public internal link before publishing: Upwork 客户需求太模糊怎么办：新手分析和追问清单 (/blog/upwork-client-requirements-analysis-beginner).
-- Decide whether missing subtopics belong in this article or should become separate follow-up drafts.
-
-Source verification actions:
-
-- Verify 17 official source target(s).
-- Check 8 search query seed(s).
+- Verify 7 official source target(s).
+- Check 4 search query seed(s).
 - Review 19 combined checklist signal(s).
-- Apply copydesk remediation: Add one contextual link to a published article before approval.; Decide whether missing subtopics should become a short section or a follow-up article..
+- Apply copydesk remediation: Check whether the primary keyword can appear naturally in the title without making the title stiff.; Add one FAQ or checklist line that uses a high-intent query variant such as: Vercel AI Gateway 多模型..
 - Complete freshness checklist for fast-changing AI/tool guidance.
 - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
 - Open official source and verify current wording: OpenAI API docs: https://platform.openai.com/docs
-- Open official source and verify current wording: OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering
 - Open official source and verify current wording: Vercel AI SDK docs: https://ai-sdk.dev/docs
-- Open official source and verify current wording: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
-- Open official source and verify current wording: OpenAI prompt engineering: https://platform.openai.com/docs/guides/prompt-engineering
+- Open official source and verify current wording: Anthropic docs: https://docs.anthropic.com
+- Open official source and verify current wording: OpenAI Agents docs: https://platform.openai.com/docs/guides/agents
+- Open official source and verify current wording: Google AI docs: https://ai.google.dev/docs
 - Reject or rewrite unsupported claims before any mark:review command.
 - Keep the article draft/noindex until explicit approval.
 - Open reachable source URL: https://platform.openai.com/docs.
-- Open reachable source URL: https://platform.openai.com/docs/guides/prompt-engineering.
-- Open reachable source URL: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview.
 - Open reachable source URL: https://ai-sdk.dev/docs.
-- Open reachable source URL: https://platform.openai.com/docs/guides/retrieval.
+- Open reachable source URL: https://docs.anthropic.com.
+- Open reachable source URL: https://ai.google.dev/docs.
+- Open reachable source URL: https://platform.openai.com/docs/guides/prompt-engineering.
 
 Internal link actions:
 
-- Add one contextual public article link during human review.
+- Already links to at least one public article.
 - Review 5 suggested public link target(s).
 - Use one link only if it helps the reader continue the task; avoid stuffing links.
 - Keep the article draft/noindex until explicit approval.
-- If helpful, add one contextual public link: Upwork 客户需求太模糊怎么办：新手分析和追问清单 (/blog/upwork-client-requirements-analysis-beginner).
-- Copydesk suggested public link: Upwork 客户需求太模糊怎么办：新手分析和追问清单 (/blog/upwork-client-requirements-analysis-beginner).
+- If helpful, add one contextual public link: 多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估 (/blog/multi-model-router-fallback-guide).
+- Copydesk suggested public link: 多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估 (/blog/multi-model-router-fallback-guide).
 
-### 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检
+### Together AI API 怎么接入：开源模型接口、embedding 和部署边界
 
-- File: content/blog/ai-model-selection-customer-service-guide.mdx
-- Mark review only after human approval: npm run mark:review -- --file=content/blog/ai-model-selection-customer-service-guide.mdx --confirm-human
-- Publish dry run after review: npm run publish:articles -- --file=content/blog/ai-model-selection-customer-service-guide.mdx
+- File: content/blog/together-ai-api-beginner-guide.mdx
+- Mark review only after human approval: npm run mark:review -- --file=content/blog/together-ai-api-beginner-guide.mdx --confirm-human
+- Publish dry run after review: npm run publish:articles -- --file=content/blog/together-ai-api-beginner-guide.mdx
 - Publish confirm: not-included
 
 Stop before:
@@ -191,25 +134,19 @@ Search and copydesk actions:
 - Confirm the opening directly answers primary query: RAG 知识库搭建教程.
 - During human review, consider whether the title can naturally include: RAG 知识库搭建教程.
 - During human review, tune the meta description around: RAG 知识库搭建教程.
-- During human review, add one natural H2/H3 or paragraph that answers: RAG 知识库搭建教程 / 向量数据库教程.
+- During human review, add one natural H2/H3 or paragraph that answers: RAG 知识库搭建教程 / 企业知识库 AI 部署.
 - During human review, add user-language phrasing without keyword stuffing.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
 - Resolve search-intent weakness: no exact search query appears in title.
 - Resolve search-intent weakness: no exact search query appears in description.
 - Resolve search-intent weakness: no exact search query appears in headings or body.
 - Resolve search-intent weakness: few query tokens appear in searchable text.
-- Review proposed title option: 客服 AI 模型选型：速度、成本、知识库、转人工和质检.
-- Review proposed meta description option: 面向准备落地 客服 AI 模型选型 的团队，梳理判断标准、实施步骤、风险边界、验收清单和发布前人工审核重点。.
-- 在开头 200 字内自然回答一次“RAG 知识库搭建教程”这个搜索意图，先给结论再展开步骤。
-- 在相关段落加入公开内链：Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex)。
 
 Source verification actions:
 
-- Verify 19 official source target(s).
-- Check 5 search query seed(s).
-- Review 12 combined checklist signal(s).
-- Apply copydesk remediation: Rewrite the meta description to name the reader, outcome, and search phrase: RAG 知识库搭建教程.; Check whether the primary keyword can appear naturally in the title without making the title stiff..
-- Complete freshness checklist for fast-changing AI/tool guidance.
+- Verify 4 official source target(s).
+- Check 4 search query seed(s).
+- Review 13 combined checklist signal(s).
 - Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
 - Open official source and verify current wording: OpenAI retrieval docs: https://platform.openai.com/docs/guides/retrieval
 - Open official source and verify current wording: LangChain docs: https://python.langchain.com/docs
@@ -220,16 +157,67 @@ Source verification actions:
 - Keep the article draft/noindex until explicit approval.
 - Open reachable source URL: https://platform.openai.com/docs.
 - Open reachable source URL: https://ai-sdk.dev/docs.
+- Open reachable source URL: https://docs.anthropic.com.
 - Open reachable source URL: https://platform.openai.com/docs/guides/retrieval.
-- Open reachable source URL: https://platform.openai.com/docs/guides/prompt-engineering.
-- Open reachable source URL: https://python.langchain.com/docs.
+- Fact-check query: Together AI API 接入 official docs latest.
+- Fact-check query: Together AI API 接入 official documentation current limits.
+- Fact-check query: Together AI API 怎么接入：开源模型接口、embedding 和部署边界 fact check official docs.
 
 Internal link actions:
 
 - Add one contextual public article link during human review.
-- Review 5 suggested public link target(s).
+- No public link suggestion is available; inspect related published articles manually.
 - Use one link only if it helps the reader continue the task; avoid stuffing links.
 - Keep the article draft/noindex until explicit approval.
-- If helpful, add one contextual public link: Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex).
-- Copydesk suggested public link: Codex 怎么做第一个网页 (/blog/build-first-webpage-with-codex).
+
+### Vercel 部署成功但页面 404：新手排查顺序
+
+- File: content/blog/vercel-404-after-deploy.mdx
+- Mark review only after human approval: npm run mark:review -- --file=content/blog/vercel-404-after-deploy.mdx --confirm-human
+- Publish dry run after review: npm run publish:articles -- --file=content/blog/vercel-404-after-deploy.mdx
+- Publish confirm: not-included
+
+Stop before:
+
+- Do not run mark:review until explicit human approval; do not publish without a separate explicit approval.
+- Do not run mark:review until explicit human approval for this file.
+- Do not run publish:articles --confirm from this playbook.
+- Do not claim traffic, ranking, revenue, or conversion lift without measured evidence.
+
+Search and copydesk actions:
+
+- Confirm the opening directly answers primary query: Vercel build failed.
+- During human review, consider whether the title can naturally include: Vercel build failed.
+- During human review, tune the meta description around: Vercel build failed.
+- Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
+- Resolve search-intent weakness: no exact search query appears in title.
+- Resolve search-intent weakness: no exact search query appears in description.
+
+Source verification actions:
+
+- Verify 2 official source target(s).
+- Check 4 search query seed(s).
+- Review 13 combined checklist signal(s).
+- Do not approve traffic, ranking, revenue, benchmark, or stability claims without measured evidence.
+- Open official source and verify current wording: Vercel AI SDK docs: https://ai-sdk.dev/docs
+- Open official source and verify current wording: OpenAI API docs: https://platform.openai.com/docs
+- Open official source and verify current wording: OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering
+- Reject or rewrite unsupported claims before any mark:review command.
+- Keep the article draft/noindex until explicit approval.
+- Open reachable source URL: https://platform.openai.com/docs.
+- Open reachable source URL: https://platform.openai.com/docs/guides/prompt-engineering.
+- Open reachable source URL: https://ai-sdk.dev/docs.
+- Fact-check query: Vercel 部署成功但 404 official docs latest.
+- Fact-check query: Vercel 部署成功但 404 official documentation current limits.
+- Fact-check query: Vercel 部署成功但页面 404：新手排查顺序 fact check official docs.
+- Fact-check query: 报错解决 official docs limits pricing changelog.
+- Fact-check query: OpenAI API 报错解决.
+- Fact-check query: Vercel 部署失败.
+
+Internal link actions:
+
+- Add one contextual public article link during human review.
+- No public link suggestion is available; inspect related published articles manually.
+- Use one link only if it helps the reader continue the task; avoid stuffing links.
+- Keep the article draft/noindex until explicit approval.
 

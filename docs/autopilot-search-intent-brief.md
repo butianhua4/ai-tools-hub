@@ -1,6 +1,6 @@
 # Autopilot Search Intent Brief
 
-Generated at: 2026-06-14T10:39:15.165Z
+Generated at: 2026-06-16T07:01:34.211Z
 
 This report is read-only. It checks search-intent coverage for the top autopilot approval packet items.
 
@@ -14,7 +14,7 @@ This report is read-only. It checks search-intent coverage for the top autopilot
 
 ## Boundaries
 
-- Public published: 15
+- Public published: 500
 - Publishable now: 0
 - Traffic data available: false
 - Can claim traffic: false
@@ -22,13 +22,13 @@ This report is read-only. It checks search-intent coverage for the top autopilot
 ## Summary
 
 - approvalItems: 3
-- bodyCoveredItems: 1
-- descriptionCoveredItems: 1
+- bodyCoveredItems: 2
+- descriptionCoveredItems: 0
 - headingCoveredItems: 0
 - items: 3
 - packetUnsafeItems: 0
-- searchWeakItems: 2
-- titleCoveredItems: 1
+- searchWeakItems: 3
+- titleCoveredItems: 0
 - unsafeItems: 0
 
 ## Source Evidence
@@ -43,45 +43,35 @@ This report is read-only. It checks search-intent coverage for the top autopilot
 
 | Ready | Title hits | Description hits | Heading hits | Body hits | Token hits | Weaknesses | Primary query | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | 0 | 0 | 0 | 0 | 9 | 3 | AI Agent deployment tutorial | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| true | 0 | 0 | 0 | 0 | 2 | 4 | RAG 知识库搭建教程 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| true | 0 | 0 | 0 | 1 | 6 | 2 | 大模型部署教程 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| true | 0 | 0 | 0 | 0 | 3 | 4 | RAG 知识库搭建教程 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| true | 0 | 0 | 0 | 1 | 6 | 2 | Vercel build failed | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## All Items
 
 | Ready | Title hits | Description hits | Heading hits | Body hits | Token hits | Weaknesses | Primary query | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| true | 0 | 0 | 0 | 0 | 9 | 3 | AI Agent deployment tutorial | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| true | 1 | 1 | 0 | 3 | 12 | 0 | ChatGPT prompts for business | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
-| true | 0 | 0 | 0 | 0 | 2 | 4 | RAG 知识库搭建教程 | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| true | 0 | 0 | 0 | 1 | 6 | 2 | 大模型部署教程 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| true | 0 | 0 | 0 | 0 | 3 | 4 | RAG 知识库搭建教程 | Together AI API 怎么接入：开源模型接口、embedding 和部署边界 | content/blog/together-ai-api-beginner-guide.mdx |
+| true | 0 | 0 | 0 | 1 | 6 | 2 | Vercel build failed | Vercel 部署成功但页面 404：新手排查顺序 | content/blog/vercel-404-after-deploy.mdx |
 
 ## Review Suggestions
 
-### AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查
+### Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级
 
-- File: content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx
-- Primary query: AI Agent deployment tutorial
-- Search weaknesses: no exact search query appears in title; no exact search query appears in description; no exact search query appears in headings or body
-
-Review suggestions:
-
-- During human review, consider whether the title can naturally include: AI Agent deployment tutorial.
-- During human review, tune the meta description around: AI Agent deployment tutorial.
-- During human review, add one natural H2/H3 or paragraph that answers: AI Agent deployment tutorial / agent tool calling tutorial.
-- Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
-
-### 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用
-
-- File: content/blog/industry-ai-prompts-template-library-2026.mdx
-- Primary query: ChatGPT prompts for business
-- Search weaknesses: none
+- File: content/blog/vercel-ai-gateway-multi-provider-guide.mdx
+- Primary query: 大模型部署教程
+- Search weaknesses: no exact search query appears in title; no exact search query appears in description
 
 Review suggestions:
 
+- During human review, consider whether the title can naturally include: 大模型部署教程.
+- During human review, tune the meta description around: 大模型部署教程.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
 
-### 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检
+### Together AI API 怎么接入：开源模型接口、embedding 和部署边界
 
-- File: content/blog/ai-model-selection-customer-service-guide.mdx
+- File: content/blog/together-ai-api-beginner-guide.mdx
 - Primary query: RAG 知识库搭建教程
 - Search weaknesses: no exact search query appears in title; no exact search query appears in description; no exact search query appears in headings or body; few query tokens appear in searchable text
 
@@ -89,7 +79,19 @@ Review suggestions:
 
 - During human review, consider whether the title can naturally include: RAG 知识库搭建教程.
 - During human review, tune the meta description around: RAG 知识库搭建教程.
-- During human review, add one natural H2/H3 or paragraph that answers: RAG 知识库搭建教程 / 向量数据库教程.
+- During human review, add one natural H2/H3 or paragraph that answers: RAG 知识库搭建教程 / 企业知识库 AI 部署.
 - During human review, add user-language phrasing without keyword stuffing.
+- Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
+
+### Vercel 部署成功但页面 404：新手排查顺序
+
+- File: content/blog/vercel-404-after-deploy.mdx
+- Primary query: Vercel build failed
+- Search weaknesses: no exact search query appears in title; no exact search query appears in description
+
+Review suggestions:
+
+- During human review, consider whether the title can naturally include: Vercel build failed.
+- During human review, tune the meta description around: Vercel build failed.
 - Keep status=draft, noindex=true, and humanReviewRequired=true until explicit approval.
 
