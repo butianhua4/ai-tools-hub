@@ -22,7 +22,7 @@ export function GET() {
   const priorityPosts = uniquePosts(seoClusters.flatMap((cluster) => getHighAuthorityPosts(cluster.slug, 25)));
   const priorityBlogPosts = uniquePosts(seoClusters.flatMap((cluster) => getHighAuthorityPosts(cluster.slug, 5)));
 
-  for (const path of ["", "/blog", "/deployments", "/prompts", "/tools"]) {
+  for (const path of ["", "/blog", "/deployments", "/office-ai", "/prompts", "/templates", "/tools"]) {
     add(entries, { path, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 });
   }
 
