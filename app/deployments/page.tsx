@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  getBlogPath,
+  getClusterPath,
+  getHighAuthorityPosts,
+  getQuestionPath,
+  type SeoClusterSlug,
+  seoClusters,
+} from "@/lib/seo-graph";
 
 const deploymentLanes = [
   {
@@ -61,6 +69,10 @@ const searchTasks = [
   "客户项目部署交付清单",
 ];
 
+const deploymentSeoClusters = ["vercel", "ai-tools", "node-js-errors"] satisfies SeoClusterSlug[];
+const deploymentKeywordPattern =
+  /deploy|deployment|vercel|netlify|cloudflare|build|env|agent|rag|llm|ollama|vllm|gpu|api|openai|router|memory|docker|kubernetes|serverless|mcp/i;
+
 export const metadata: Metadata = {
   title: "AI 部署教程：网页、大模型、Agent、RAG 和 API 路由上线清单",
   description:
@@ -74,6 +86,23 @@ export const metadata: Metadata = {
 };
 
 export default function DeploymentsPage() {
+  const clusterEntries = deploymentSeoClusters
+    .map((slug) => seoClusters.find((cluster) => cluster.slug === slug))
+    .filter((cluster): cluster is (typeof seoClusters)[number] => Boolean(cluster));
+  const groupedDeploymentPosts = deploymentSeoClusters.map((slug) =>
+    getHighAuthorityPosts(slug, 24).filter((post) =>
+      deploymentKeywordPattern.test([post.slug, post.title, post.description, post.primaryKeyword, ...post.tags].join(" ")),
+    ),
+  );
+  const priorityQuestions = groupedDeploymentPosts
+    .flatMap((posts) => posts.slice(0, 4))
+    .filter((post, index, posts) => posts.findIndex((item) => item.slug === post.slug) === index)
+    .slice(0, 12);
+  const deepGuides = groupedDeploymentPosts
+    .flatMap((posts) => posts.filter((post) => post.contentType === "tutorial" || post.tags.some((tag) => deploymentKeywordPattern.test(tag))).slice(0, 3))
+    .filter((post, index, posts) => posts.findIndex((item) => item.slug === post.slug) === index)
+    .slice(0, 9);
+
   return (
     <main className="mx-auto w-full max-w-6xl overflow-hidden px-4 py-12">
       <section className="rounded-lg border border-gray-200 bg-gradient-to-b from-cyan-50 to-white p-6 shadow-sm md:p-8">
@@ -93,6 +122,63 @@ export default function DeploymentsPage() {
             </Link>
           </div>
         </div>
+      </section>
+
+      <section className="mt-8 rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
+          <div>
+            <h2 className="text-2xl font-bold text-ink">部署主题中心</h2>
+            <p className="mt-2 text-sm leading-6 text-gray-600">
+              先从主题中心进入，再分流到具体问题页和深度教程，形成部署类内容的内链闭环。
+            </p>
+          </div>
+          <Link className="text-sm font-medium text-brand hover:underline" href="/admin/seo-growth">
+            查看增长状态
+          </Link>
+        </div>
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
+          {clusterEntries.map((cluster) => (
+            <Link
+              className="rounded-lg border border-gray-200 bg-gray-50 p-4 transition hover:border-brand/50 hover:bg-white"
+              href={getClusterPath(cluster.slug)}
+              key={cluster.slug}
+            >
+              <h3 className="text-base font-semibold text-ink">{cluster.shortTitle}</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-600">{cluster.description}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
+        <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+          <h2 className="text-2xl font-bold text-ink">部署高频问题入口</h2>
+          <p className="mt-2 text-sm leading-6 text-gray-600">
+            这些页面优先承接搜索词，进入后会继续链接到深度文章和主题中心。
+          </p>
+          <div className="mt-5 grid gap-3 md:grid-cols-2">
+            {priorityQuestions.map((post) => (
+              <Link
+                className="rounded-lg border border-gray-200 p-4 text-sm font-medium leading-6 text-ink transition hover:border-brand/50 hover:text-brand"
+                href={getQuestionPath(post)}
+                key={post.slug}
+              >
+                {post.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <aside className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+          <h2 className="text-xl font-bold text-ink">深度部署教程</h2>
+          <p className="mt-2 text-sm leading-6 text-gray-600">适合继续阅读、排查和落地执行的文章。</p>
+          <div className="mt-4 grid gap-3">
+            {deepGuides.map((post) => (
+              <Link className="text-sm font-medium leading-6 text-brand hover:underline" href={getBlogPath(post)} key={post.slug}>
+                {post.title}
+              </Link>
+            ))}
+          </div>
+        </aside>
       </section>
 
       <section className="mt-8">
