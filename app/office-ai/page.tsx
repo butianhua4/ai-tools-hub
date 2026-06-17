@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  getBlogPath,
+  getClusterPath,
+  getPublishedSeoPosts,
+  getQuestionPath,
+  type SeoClusterSlug,
+  seoClusters,
+} from "@/lib/seo-graph";
 
 const officeWorkflows = [
   {
@@ -53,6 +61,19 @@ const copyPrompts = [
   "请把以下会议记录整理成纪要：输出议题、结论、分歧、行动项、负责人、截止时间和需要继续确认的问题。",
 ];
 
+const officeSeoClusters = ["ai-tools", "upwork", "codex"] satisfies SeoClusterSlug[];
+const officeKeywordPattern =
+  /office|办公|ppt|excel|spreadsheet|表格|周报|月报|日报|会议|纪要|邮件|通知|文案|脚本|sop|客服|销售|运营|简历|prompt|提示词|template|模板/i;
+
+function officeRelevanceScore(post: ReturnType<typeof getPublishedSeoPosts>[number]) {
+  const text = [post.slug, post.title, post.description, post.category, post.primaryKeyword, ...post.tags].join(" ");
+  const exactOfficeMatch = officeKeywordPattern.test(text) ? 40 : 0;
+  const tutorialBoost = post.contentType === "tutorial" ? 12 : 0;
+  const qualityBoost = Math.round((post.qualityScore || 0) / 10);
+  const tagBoost = post.tags.filter((tag) => officeKeywordPattern.test(tag)).length * 6;
+  return exactOfficeMatch + tutorialBoost + qualityBoost + tagBoost;
+}
+
 export const metadata: Metadata = {
   title: "AI 办公自动化工具：PPT、Excel、周报、邮件和会议纪要",
   description: "整理普通办公场景里常用的 AI 工作流，覆盖 AI 做 PPT、整理 Excel 表格、写周报、写邮件、会议纪要和运营内容。",
@@ -65,6 +86,17 @@ export const metadata: Metadata = {
 };
 
 export default function OfficeAiPage() {
+  const clusterEntries = officeSeoClusters
+    .map((slug) => seoClusters.find((cluster) => cluster.slug === slug))
+    .filter((cluster): cluster is (typeof seoClusters)[number] => Boolean(cluster));
+  const officePosts = getPublishedSeoPosts()
+    .filter((post) => officeKeywordPattern.test([post.slug, post.title, post.description, post.category, post.primaryKeyword, ...post.tags].join(" ")))
+    .sort((a, b) => officeRelevanceScore(b) - officeRelevanceScore(a) || a.slug.localeCompare(b.slug));
+  const officeQuestions = officePosts.slice(0, 16);
+  const officeGuides = officePosts
+    .filter((post) => post.contentType === "tutorial" || /ppt|excel|spreadsheet|prompt|template|办公|表格|周报|会议/i.test([post.title, post.slug, post.category].join(" ")))
+    .slice(0, 10);
+
   return (
     <main className="mx-auto w-full max-w-6xl overflow-hidden px-4 py-12">
       <section className="rounded-lg border border-gray-200 bg-gradient-to-b from-amber-50 to-white p-6 shadow-sm md:p-8">
@@ -84,6 +116,70 @@ export default function OfficeAiPage() {
             </Link>
           </div>
         </div>
+      </section>
+
+      <section className="mt-8 rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
+          <div>
+            <h2 className="text-2xl font-bold text-ink">AI 办公主题中心</h2>
+            <p className="mt-2 text-sm leading-6 text-gray-600">
+              这页负责承接 AI 办公、提示词、接单交付和开发辅助搜索流量，再把权重分发到主题中心、问题入口页和深度教程。
+            </p>
+          </div>
+          <Link className="text-sm font-medium text-brand hover:underline" href="/tools">
+            查看全部工具
+          </Link>
+        </div>
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
+          {clusterEntries.map((cluster) => (
+            <Link
+              className="rounded-lg border border-gray-200 bg-gray-50 p-4 transition hover:border-brand/50 hover:bg-white"
+              href={getClusterPath(cluster.slug)}
+              key={cluster.slug}
+            >
+              <h3 className="text-base font-semibold text-ink">{cluster.shortTitle}</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-600">{cluster.description}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
+        <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+          <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
+            <div>
+              <h2 className="text-2xl font-bold text-ink">高频办公问题入口</h2>
+              <p className="mt-2 text-sm leading-6 text-gray-600">这些 /q 页面是搜索入口层，适合承接“怎么做、怎么写、怎么整理、怎么自动化”这类长尾问题。</p>
+            </div>
+            <Link className="text-sm font-medium text-brand hover:underline" href="/q/ai-tools/ai-ppt-beginner-guide">
+              查看示例 q 页
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-3 md:grid-cols-2">
+            {officeQuestions.map((post) => (
+              <Link
+                className="rounded-lg border border-gray-100 bg-gray-50 p-4 text-sm font-medium leading-6 text-ink transition hover:border-brand/50 hover:bg-white"
+                href={getQuestionPath(post)}
+                key={post.slug}
+              >
+                {post.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <aside className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+          <h2 className="text-xl font-bold text-ink">深度办公教程</h2>
+          <p className="mt-2 text-sm leading-6 text-gray-600">问题页负责被发现，教程页负责解释完整方法，两个层级互相传递权重。</p>
+          <div className="mt-4 grid gap-3">
+            {officeGuides.map((post) => (
+              <Link className="rounded-md border border-gray-100 p-3 transition hover:border-brand/50" href={getBlogPath(post)} key={post.slug}>
+                <span className="block text-sm font-semibold leading-6 text-ink">{post.title}</span>
+                <span className="mt-1 block text-xs leading-5 text-gray-500">{post.category}</span>
+              </Link>
+            ))}
+          </div>
+        </aside>
       </section>
 
       <section className="mt-8">
