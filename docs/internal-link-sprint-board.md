@@ -1,6 +1,6 @@
 # Internal Link Sprint Board
 
-Generated at: 2026-06-17T06:38:03.394Z
+Generated at: 2026-06-17T12:06:03.323Z
 
 This report is read-only. It turns public-link suggestions into manual internal-link review waves without editing article bodies.
 

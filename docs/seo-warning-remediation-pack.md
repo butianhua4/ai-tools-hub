@@ -1,6 +1,6 @@
 # SEO Warning Remediation Pack
 
-Generated at: 2026-06-17T06:38:06.104Z
+Generated at: 2026-06-17T12:06:06.008Z
 
 This pack is read-only. It turns search snippet and structured-data warnings into human-review actions without editing articles, marking review, publishing, or claiming traffic.
 
