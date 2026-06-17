@@ -1,6 +1,6 @@
 # Content Integrity Audit
 
-Generated at: 2026-06-16T18:18:03.148Z
+Generated at: 2026-06-17T01:59:05.323Z
 
 This report is read-only. It checks article metadata, encoding integrity, and indexing boundaries before review or publishing.
 
@@ -31,17 +31,17 @@ This report is read-only. It checks article metadata, encoding integrity, and in
 
 | Status | Scope | Title chars | Description chars | Issues | Warnings | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| published | public, wave-1 | 47 | 69 | none | none | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| published | public, wave-1 | 29 | 52 | none | none | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| published | public, wave-1 | 37 | 67 | none | none | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| draft | wave-1, expansion | 44 | 83 | none | none | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| draft | recommended, wave-1, expansion | 42 | 71 | none | none | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| draft | recommended, wave-1, expansion | 51 | 72 | none | none | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 
 ## Recommended Items
 
 | Status | Scope | Title chars | Description chars | Issues | Warnings | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | draft | recommended | 16 | 69 | none | none | AI 工具新手不应该先买哪些工具 | content/blog/tools-not-to-buy-first.mdx |
-| draft | recommended, expansion | 42 | 71 | none | none | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
-| draft | recommended, expansion | 51 | 72 | none | none | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| draft | recommended, wave-1, expansion | 42 | 71 | none | none | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| draft | recommended, wave-1, expansion | 51 | 72 | none | none | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 
 ## Public Items
 
@@ -59,7 +59,7 @@ This report is read-only. It checks article metadata, encoding integrity, and in
 | published | public | 27 | 58 | none | none | Agent 生产上线检查表：权限、日志、成本和人工确认 | content/blog/agent-production-deployment-checklist.mdx |
 | published | public | 24 | 57 | none | none | Agent 工具调用怎么设计：读、写、执行要分清 | content/blog/agent-tool-calling-beginner-guide.mdx |
 | published | public | 29 | 58 | none | none | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
-| published | public, wave-1 | 47 | 69 | none | none | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| published | public | 47 | 69 | none | none | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
 | published | public | 41 | 60 | none | none | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
 | published | public | 33 | 59 | none | none | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
 | published | public | 19 | 49 | none | none | AI 辅助交付和完全自动交付的检查清单 | content/blog/ai-assisted-vs-automated-delivery-checklist.mdx |
@@ -97,7 +97,7 @@ This report is read-only. It checks article metadata, encoding integrity, and in
 | published | public | 14 | 62 | none | none | AI 工具技能路线图常见错误 | content/blog/ai-freelance-skill-roadmap-mistakes.mdx |
 | published | public | 15 | 70 | none | none | AI 工具新手技能路线图怎么排 | content/blog/ai-freelance-skill-roadmap.mdx |
 | published | public | 23 | 53 | none | none | AI 做 Logo 怎么开始：新手先别急着商用 | content/blog/ai-logo-design-beginner-guide.mdx |
-| published | public, wave-1 | 29 | 52 | none | none | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| published | public | 29 | 52 | none | none | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
 | published | public | 16 | 54 | none | none | AI 输出不稳定风险控制检查清单 | content/blog/ai-output-unstable-risk-control-checklist.mdx |
 | published | public | 16 | 60 | none | none | AI 输出不稳定风险控制常见错误 | content/blog/ai-output-unstable-risk-control-mistakes.mdx |
 | published | public | 15 | 62 | none | none | AI 输出不稳定怎么做风险控制 | content/blog/ai-output-unstable-risk-control.mdx |
@@ -407,7 +407,7 @@ This report is read-only. It checks article metadata, encoding integrity, and in
 | published | public | 30 | 58 | none | none | 人力招聘 AI 提示词模板：JD、简历初筛、面试题和培训材料 | content/blog/hr-recruiting-ai-prompts-guide.mdx |
 | published | public | 52 | 87 | none | none | Hugging Face Spaces 怎么部署 AI Demo：Gradio、Docker 和公开边界 | content/blog/huggingface-spaces-ai-demo-guide.mdx |
 | published | public | 53 | 97 | none | none | Hugging Face TGI 怎么部署：Text Generation Inference 入门检查表 | content/blog/huggingface-tgi-deployment-guide.mdx |
-| published | public, wave-1 | 37 | 67 | none | none | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| published | public | 37 | 67 | none | none | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
 | published | public | 18 | 55 | none | none | 海外收款手续费怎么估算：新手检查清单 | content/blog/international-payment-fee-estimate-checklist.mdx |
 | published | public | 11 | 68 | none | none | 海外收款手续费怎么估算 | content/blog/international-payment-fee-estimate.mdx |
 | published | public | 21 | 52 | none | none | AI 知识库权限怎么设计：别让检索结果越权 | content/blog/knowledge-base-permission-design-guide.mdx |

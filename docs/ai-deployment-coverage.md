@@ -1,6 +1,6 @@
 # AI Deployment Coverage
 
-Generated at: 2026-06-16T18:18:09.727Z
+Generated at: 2026-06-17T01:59:11.560Z
 
 This report is read-only. It organizes deployment, Agent, RAG, and model infrastructure drafts for manual review and does not publish anything.
 

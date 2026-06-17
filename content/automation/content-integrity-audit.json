@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T18:18:03.148Z",
+  "generatedAt": "2026-06-17T01:59:05.323Z",
   "guardrails": {
     "autoMarkReview": false,
     "autoPublish": false,
@@ -169,8 +169,7 @@
       "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
       "issues": [],
       "scope": [
-        "public",
-        "wave-1"
+        "public"
       ],
       "status": "published",
       "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
@@ -626,8 +625,7 @@
       "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
       "issues": [],
       "scope": [
-        "public",
-        "wave-1"
+        "public"
       ],
       "status": "published",
       "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
@@ -4427,8 +4425,7 @@
       "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
       "issues": [],
       "scope": [
-        "public",
-        "wave-1"
+        "public"
       ],
       "status": "published",
       "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
@@ -6145,6 +6142,7 @@
       "issues": [],
       "scope": [
         "recommended",
+        "wave-1",
         "expansion"
       ],
       "status": "draft",
@@ -6158,6 +6156,7 @@
       "issues": [],
       "scope": [
         "recommended",
+        "wave-1",
         "expansion"
       ],
       "status": "draft",
@@ -7196,42 +7195,44 @@
   ],
   "waveItems": [
     {
-      "descriptionLength": 69,
-      "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+      "descriptionLength": 83,
+      "file": "content/blog/supabase-pgvector-rag-guide.mdx",
       "issues": [],
       "scope": [
-        "public",
-        "wave-1"
+        "wave-1",
+        "expansion"
       ],
-      "status": "published",
-      "title": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
-      "titleLength": 47,
+      "status": "draft",
+      "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
+      "titleLength": 44,
       "warnings": []
     },
     {
-      "descriptionLength": 52,
-      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "descriptionLength": 71,
+      "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
       "issues": [],
       "scope": [
-        "public",
-        "wave-1"
+        "recommended",
+        "wave-1",
+        "expansion"
       ],
-      "status": "published",
-      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
-      "titleLength": 29,
+      "status": "draft",
+      "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
+      "titleLength": 42,
       "warnings": []
     },
     {
-      "descriptionLength": 67,
-      "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+      "descriptionLength": 72,
+      "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
       "issues": [],
       "scope": [
-        "public",
-        "wave-1"
+        "recommended",
+        "wave-1",
+        "expansion"
       ],
-      "status": "published",
-      "title": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
-      "titleLength": 37,
+      "status": "draft",
+      "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
+      "titleLength": 51,
       "warnings": []
     }
   ]

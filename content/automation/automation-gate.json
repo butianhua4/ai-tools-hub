@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-16T18:19:24.461Z",
+  "generatedAt": "2026-06-17T02:00:21.850Z",
   "ok": false,
   "summary": {
     "checks": 197,
-    "failed": 45,
-    "passed": 152
+    "failed": 46,
+    "passed": 151
   },
   "failed": [
     {
@@ -16,6 +16,11 @@
       "name": "publish pack includes human decision and risk context",
       "ok": false,
       "detail": "content/blog/tools-not-to-buy-first.mdx"
+    },
+    {
+      "name": "internal link sprint board covers all linkable candidates",
+      "ok": false,
+      "detail": "items=16, waves=4, public=500, suggestions=48"
     },
     {
       "name": "review action board tasks are ready and preserve command boundaries",
@@ -215,17 +220,17 @@
     {
       "name": "popular prompt approval bridge is read-only and covers every popular prompt lane",
       "ok": false,
-      "detail": "lanes=10, next=5, readyNext=3, alreadyQueued=0"
+      "detail": "lanes=10, next=5, readyNext=3, alreadyQueued=5"
     },
     {
       "name": "popular prompt approval bridge keeps next candidates human-gated and publish-safe",
       "ok": false,
-      "detail": "items=15, ready=9, templates=75, uniqueFiles=9, publishConfirm=0"
+      "detail": "items=14, ready=8, templates=70, uniqueFiles=8, publishConfirm=0"
     },
     {
       "name": "popular prompt sprint board keeps prompt expansion manual and publish-safe",
       "ok": false,
-      "detail": "ready=3, actions=90, nextFiles=9, publishConfirm=0"
+      "detail": "ready=3, actions=90, nextFiles=8, publishConfirm=0"
     },
     {
       "name": "public coverage gap plan keeps candidates safe for manual review",
@@ -361,7 +366,7 @@
     {
       "name": "traffic claim guard found no unsupported claims",
       "ok": true,
-      "detail": "filesScanned=220, unsafeClaims=0, watchMentions=9550"
+      "detail": "filesScanned=220, unsafeClaims=0, watchMentions=9545"
     },
     {
       "name": "content integrity audit is read-only and clean",
@@ -381,7 +386,7 @@
     {
       "name": "internal link opportunity audit is read-only and covers expansion candidates",
       "ok": true,
-      "detail": "public=500, expansion=15, broadFirst=0, candidates=19"
+      "detail": "public=500, expansion=15, broadFirst=0, candidates=16"
     },
     {
       "name": "internal link opportunity audit has public suggestions for Wave 1",
@@ -390,13 +395,13 @@
     },
     {
       "name": "internal link sprint board covers all linkable candidates",
-      "ok": true,
-      "detail": "items=19, waves=5, public=500, suggestions=57"
+      "ok": false,
+      "detail": "items=16, waves=4, public=500, suggestions=48"
     },
     {
       "name": "internal link sprint board keeps link edits manual and publish-safe",
       "ok": true,
-      "detail": "ready=19, actions=152, unsafe=0, publishConfirm=0"
+      "detail": "ready=16, actions=128, unsafe=0, publishConfirm=0"
     },
     {
       "name": "source target health audit is read-only and covers review source scopes",
@@ -896,7 +901,7 @@
     {
       "name": "search query match audit has no blocking search-alignment issues",
       "ok": true,
-      "detail": "blocking=0, averageFamilies=6.75"
+      "detail": "blocking=0, averageFamilies=6.83"
     },
     {
       "name": "search demand intake is read-only and covers broad user-search lanes",
@@ -961,12 +966,12 @@
     {
       "name": "popular prompt approval bridge is read-only and covers every popular prompt lane",
       "ok": false,
-      "detail": "lanes=10, next=5, readyNext=3, alreadyQueued=0"
+      "detail": "lanes=10, next=5, readyNext=3, alreadyQueued=5"
     },
     {
       "name": "popular prompt approval bridge keeps next candidates human-gated and publish-safe",
       "ok": false,
-      "detail": "items=15, ready=9, templates=75, uniqueFiles=9, publishConfirm=0"
+      "detail": "items=14, ready=8, templates=70, uniqueFiles=8, publishConfirm=0"
     },
     {
       "name": "popular prompt sprint board covers every broad prompt lane",
@@ -976,7 +981,7 @@
     {
       "name": "popular prompt sprint board keeps prompt expansion manual and publish-safe",
       "ok": false,
-      "detail": "ready=3, actions=90, nextFiles=9, publishConfirm=0"
+      "detail": "ready=3, actions=90, nextFiles=8, publishConfirm=0"
     },
     {
       "name": "public coverage gap plan is read-only and covers every no-public broad theme",

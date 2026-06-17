@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T18:18:48.116Z",
+  "generatedAt": "2026-06-17T01:59:47.398Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "clearanceGeneratedAt": "2026-06-16T18:18:46.638Z",
+    "clearanceGeneratedAt": "2026-06-17T01:59:46.021Z",
     "clearanceSummary": {
       "approvalItems": 3,
       "backlogItems": 0,
@@ -26,7 +26,7 @@
       "trafficDataAvailable": false,
       "unsafeItems": 0
     },
-    "collisionGeneratedAt": "2026-06-16T18:18:31.125Z",
+    "collisionGeneratedAt": "2026-06-17T01:59:31.677Z",
     "collisionSummary": {
       "blockedQueueMatchedItems": 0,
       "blockingItems": 0,
@@ -39,7 +39,7 @@
       "unsafeItems": 0,
       "warningItems": 0
     },
-    "freshnessGeneratedAt": "2026-06-16T18:18:32.248Z",
+    "freshnessGeneratedAt": "2026-06-17T01:59:32.714Z",
     "freshnessSummary": {
       "blockedItems": 0,
       "highRiskItems": 2,
@@ -49,7 +49,7 @@
       "readyItems": 2,
       "unsafeCommands": 0
     },
-    "nextReviewSourcePackGeneratedAt": "2026-06-16T18:18:12.681Z",
+    "nextReviewSourcePackGeneratedAt": "2026-06-17T01:59:14.359Z",
     "nextReviewSourcePackSummary": {
       "items": 15,
       "missingApprovalChecks": 0,
@@ -60,7 +60,7 @@
       "safeDraftItems": 15,
       "unsafeItems": 0
     },
-    "optimizationGeneratedAt": "2026-06-16T18:18:28.871Z",
+    "optimizationGeneratedAt": "2026-06-17T01:59:29.586Z",
     "optimizationSummary": {
       "briefs": 2,
       "briefsWithAction": 2,
@@ -69,7 +69,7 @@
       "readyBriefs": 2,
       "unsafeCommands": 0
     },
-    "queryCoverageGeneratedAt": "2026-06-16T18:18:15.068Z",
+    "queryCoverageGeneratedAt": "2026-06-17T01:59:16.606Z",
     "queryCoverageSummary": {
       "items": 12,
       "minFamiliesPerItem": 5,
@@ -82,10 +82,10 @@
       "uniqueLanes": 7,
       "uniqueQueries": 352
     },
-    "queryMatchGeneratedAt": "2026-06-16T18:18:15.565Z",
+    "queryMatchGeneratedAt": "2026-06-17T01:59:17.095Z",
     "queryMatchSummary": {
-      "averageExactMatches": 0.5,
-      "averageMatchedFamilies": 6.75,
+      "averageExactMatches": 0.67,
+      "averageMatchedFamilies": 6.83,
       "blockingItems": 0,
       "items": 12,
       "queryCoverageItems": 12,
@@ -93,14 +93,14 @@
       "readyItems": 12,
       "warningItems": 10
     },
-    "reviewBatchPlanGeneratedAt": "2026-06-16T18:18:11.710Z",
+    "reviewBatchPlanGeneratedAt": "2026-06-17T01:59:13.421Z",
     "reviewBatchPlanTotals": {
       "plannedBatches": 3,
       "plannedCandidates": 6,
       "sourceReviewCandidates": 25,
       "sourceOpportunities": 7
     },
-    "workbenchGeneratedAt": "2026-06-16T18:18:47.631Z",
+    "workbenchGeneratedAt": "2026-06-17T01:59:46.946Z",
     "trafficNote": "No measured traffic, ranking, impression, click, conversion, or revenue claim is made."
   },
   "publishingBoundary": {
@@ -254,10 +254,11 @@
           ],
           "manualFixReady": true,
           "primaryKeyword": "Vercel AI Gateway 多模型",
-          "priority": 48,
+          "priority": 78,
           "scope": [
             "expansion",
-            "recommended"
+            "recommended",
+            "wave-1"
           ],
           "schemaWarnings": [],
           "snippetWarnings": [
@@ -516,10 +517,11 @@
         ],
         "manualFixReady": true,
         "primaryKeyword": "Vercel AI Gateway 多模型",
-        "priority": 48,
+        "priority": 78,
         "scope": [
           "expansion",
-          "recommended"
+          "recommended",
+          "wave-1"
         ],
         "schemaWarnings": [],
         "snippetWarnings": [

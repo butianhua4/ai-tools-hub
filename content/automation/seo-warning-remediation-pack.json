@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T18:18:07.244Z",
+  "generatedAt": "2026-06-17T01:59:09.234Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "searchSnippetAuditGeneratedAt": "2026-06-16T18:18:06.098Z",
+    "searchSnippetAuditGeneratedAt": "2026-06-17T01:59:08.164Z",
     "searchSnippetSummary": {
       "blockingItems": 0,
       "expansionItems": 15,
@@ -20,7 +20,7 @@
       "waveItems": 3,
       "waveItemsWithBlockingIssues": 0
     },
-    "structuredDataAuditGeneratedAt": "2026-06-16T18:18:06.749Z",
+    "structuredDataAuditGeneratedAt": "2026-06-17T01:59:08.769Z",
     "structuredDataSummary": {
       "blockingItems": 0,
       "expansionItems": 15,
@@ -53,50 +53,43 @@
   "items": [
     {
       "commandBoundary": {
-        "markReviewAfterHumanApproval": "not-applicable-public-page",
+        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx --confirm-human",
         "publishConfirm": "not-included",
-        "publishDryRunAfterReview": "not-applicable-public-page"
+        "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
       },
-      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
       "humanChecklist": [
-        "Review file: content/blog/ai-model-selection-customer-service-guide.mdx.",
-        "Review status: published.",
-        "Confirm primary keyword intent: 客服 AI 模型选型.",
-        "Snippet warning: description may be thin for search snippets.",
+        "Review file: content/blog/vercel-ai-gateway-multi-provider-guide.mdx.",
+        "Review status: draft.",
+        "Confirm primary keyword intent: Vercel AI Gateway 多模型.",
         "Snippet warning: primary keyword is not an exact title substring.",
-        "Expand the meta description with the user problem, outcome, and one concrete workflow term.",
-        "Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.",
-        "Confirm description length remains suitable for search snippets after editing.",
-        "Check whether the title can naturally include the exact primary keyword: 客服 AI 模型选型.",
+        "Check whether the title can naturally include the exact primary keyword: Vercel AI Gateway 多模型.",
         "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
         "Confirm the H1/title/description still answer the same search intent after any metadata change.",
-        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable.",
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
         "Do not mark review or publish from this remediation pack."
       ],
       "manualActions": [
-        "Expand the meta description with the user problem, outcome, and one concrete workflow term.",
-        "Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.",
-        "Confirm description length remains suitable for search snippets after editing.",
-        "Check whether the title can naturally include the exact primary keyword: 客服 AI 模型选型.",
+        "Check whether the title can naturally include the exact primary keyword: Vercel AI Gateway 多模型.",
         "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
         "Confirm the H1/title/description still answer the same search intent after any metadata change.",
-        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
       ],
       "manualFixReady": true,
-      "primaryKeyword": "客服 AI 模型选型",
-      "priority": 96,
+      "primaryKeyword": "Vercel AI Gateway 多模型",
+      "priority": 78,
       "scope": [
-        "public",
+        "expansion",
+        "recommended",
         "wave-1"
       ],
       "schemaWarnings": [],
       "snippetWarnings": [
-        "description may be thin for search snippets",
         "primary keyword is not an exact title substring"
       ],
-      "status": "published",
-      "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
-      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+      "status": "draft",
+      "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
+      "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
       "unsafeReasons": []
     },
     {
@@ -238,6 +231,53 @@
       "status": "published",
       "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
       "title": "AI 新手接项目前的项目适配检查清单",
+      "unsafeReasons": []
+    },
+    {
+      "commandBoundary": {
+        "markReviewAfterHumanApproval": "not-applicable-public-page",
+        "publishConfirm": "not-included",
+        "publishDryRunAfterReview": "not-applicable-public-page"
+      },
+      "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+      "humanChecklist": [
+        "Review file: content/blog/ai-model-selection-customer-service-guide.mdx.",
+        "Review status: published.",
+        "Confirm primary keyword intent: 客服 AI 模型选型.",
+        "Snippet warning: description may be thin for search snippets.",
+        "Snippet warning: primary keyword is not an exact title substring.",
+        "Expand the meta description with the user problem, outcome, and one concrete workflow term.",
+        "Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.",
+        "Confirm description length remains suitable for search snippets after editing.",
+        "Check whether the title can naturally include the exact primary keyword: 客服 AI 模型选型.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable.",
+        "Do not mark review or publish from this remediation pack."
+      ],
+      "manualActions": [
+        "Expand the meta description with the user problem, outcome, and one concrete workflow term.",
+        "Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.",
+        "Confirm description length remains suitable for search snippets after editing.",
+        "Check whether the title can naturally include the exact primary keyword: 客服 AI 模型选型.",
+        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
+        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
+        "For published pages, make only deliberate SEO metadata edits and confirm the canonical URL remains stable."
+      ],
+      "manualFixReady": true,
+      "primaryKeyword": "客服 AI 模型选型",
+      "priority": 66,
+      "scope": [
+        "public"
+      ],
+      "schemaWarnings": [],
+      "snippetWarnings": [
+        "description may be thin for search snippets",
+        "primary keyword is not an exact title substring"
+      ],
+      "status": "published",
+      "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
+      "title": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
       "unsafeReasons": []
     },
     {
@@ -10303,46 +10343,6 @@
       "status": "published",
       "stopBefore": "Stop before human approval if a public page title, description, slug, canonical, or structured-data field would change.",
       "title": "没有客户时做练习项目的常见错误",
-      "unsafeReasons": []
-    },
-    {
-      "commandBoundary": {
-        "markReviewAfterHumanApproval": "npm run mark:review -- --file=content/blog/vercel-ai-gateway-multi-provider-guide.mdx --confirm-human",
-        "publishConfirm": "not-included",
-        "publishDryRunAfterReview": "npm run publish:articles -- --dry-run"
-      },
-      "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
-      "humanChecklist": [
-        "Review file: content/blog/vercel-ai-gateway-multi-provider-guide.mdx.",
-        "Review status: draft.",
-        "Confirm primary keyword intent: Vercel AI Gateway 多模型.",
-        "Snippet warning: primary keyword is not an exact title substring.",
-        "Check whether the title can naturally include the exact primary keyword: Vercel AI Gateway 多模型.",
-        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
-        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
-        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval.",
-        "Do not mark review or publish from this remediation pack."
-      ],
-      "manualActions": [
-        "Check whether the title can naturally include the exact primary keyword: Vercel AI Gateway 多模型.",
-        "If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.",
-        "Confirm the H1/title/description still answer the same search intent after any metadata change.",
-        "For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval."
-      ],
-      "manualFixReady": true,
-      "primaryKeyword": "Vercel AI Gateway 多模型",
-      "priority": 48,
-      "scope": [
-        "expansion",
-        "recommended"
-      ],
-      "schemaWarnings": [],
-      "snippetWarnings": [
-        "primary keyword is not an exact title substring"
-      ],
-      "status": "draft",
-      "stopBefore": "Stop before human approval before changing draft metadata, mark:review, or publishing.",
-      "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
       "unsafeReasons": []
     },
     {

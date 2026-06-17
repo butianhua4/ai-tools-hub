@@ -1,6 +1,6 @@
 # Search Query Match Audit
 
-Generated at: 2026-06-16T18:18:15.565Z
+Generated at: 2026-06-17T01:59:17.095Z
 
 This report is read-only. It checks whether planned query variants are visible in article metadata, headings, and body copy before human review.
 
@@ -14,8 +14,8 @@ This report is read-only. It checks whether planned query variants are visible i
 
 ## Summary
 
-- averageExactMatches: 0.5
-- averageMatchedFamilies: 6.75
+- averageExactMatches: 0.67
+- averageMatchedFamilies: 6.83
 - blockingItems: 0
 - items: 12
 - queryCoverageItems: 12
@@ -39,7 +39,7 @@ This report is read-only. It checks whether planned query variants are visible i
 | true | 1 | true | true | 0/35 | 7 | none | few exact query variant matches in article text | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
 | true | 1 | true | true | 0/30 | 7 | none | few exact query variant matches in article text | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 | true | 1 | true | true | 0/35 | 7 | none | few exact query variant matches in article text | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
-| true | 2 | true | true | 0/30 | 6 | none | few exact query variant matches in article text<br>missing query-family signals: intentSeeds | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| true | 2 | true | true | 0/30 | 7 | none | few exact query variant matches in article text | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
 | true | 2 | true | true | 0/35 | 7 | none | few exact query variant matches in article text | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
 | true | 3 | true | true | 1/30 | 7 | none | few exact query variant matches in article text | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
 | true | 3 | true | true | 0/30 | 6 | none | few exact query variant matches in article text<br>missing query-family signals: intentSeeds | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
@@ -54,8 +54,8 @@ This report is read-only. It checks whether planned query variants are visible i
 | true | 1 | true | true | 0/35 | 7 | none | few exact query variant matches in article text | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
 | true | 1 | true | true | 0/30 | 7 | none | few exact query variant matches in article text | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 | true | 1 | true | true | 0/35 | 7 | none | few exact query variant matches in article text | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
-| true | 2 | true | true | 2/35 | 7 | none | none | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
-| true | 2 | true | true | 0/30 | 6 | none | few exact query variant matches in article text<br>missing query-family signals: intentSeeds | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| true | 2 | true | true | 0/30 | 7 | none | few exact query variant matches in article text | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| true | 2 | true | true | 4/35 | 7 | none | none | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
 | true | 2 | true | true | 0/35 | 7 | none | few exact query variant matches in article text | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
 | true | 3 | true | true | 1/30 | 7 | none | few exact query variant matches in article text | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
 | true | 3 | true | true | 0/30 | 6 | none | few exact query variant matches in article text<br>missing query-family signals: intentSeeds | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
@@ -94,16 +94,15 @@ Review suggestions:
 Review suggestions:
 
 
-### vLLM 部署适合什么场景：新手先看推理服务边界
+### TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收
 
-- File: content/blog/vllm-deployment-beginner-guide.mdx
+- File: content/blog/tensorrt-llm-beginner-guide.mdx
 - Wave: 2
-- Primary keyword: vLLM 部署
-- Warning issues: few exact query variant matches in article text; missing query-family signals: intentSeeds
+- Primary keyword: TensorRT-LLM 入门
+- Warning issues: few exact query variant matches in article text
 
 Review suggestions:
 
-- 人工审核时检查是否自然覆盖核心搜索种子词，不要硬塞关键词。
 
 ### Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查
 

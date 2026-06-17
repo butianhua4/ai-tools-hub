@@ -1,6 +1,6 @@
 # Structured Data Readiness Audit
 
-Generated at: 2026-06-16T18:18:06.749Z
+Generated at: 2026-06-17T01:59:08.769Z
 
 This report is read-only. It checks whether public and publish-candidate articles have the metadata needed to render Article JSON-LD safely later.
 
@@ -31,17 +31,17 @@ This report is read-only. It checks whether public and publish-candidate article
 
 | Scope | Issues | Warnings | Date | Updated | Tags | Content type | Difficulty | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| public, wave-1 | none | none | 2026-06-06 | 2026-06-14 | AI Agent, Vercel AI SDK, 工具调用, AI 部署 | tutorial | intermediate | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| public, wave-1 | none | none | 2026-06-06 | 2026-06-14 | 客服 AI, 模型选型, RAG, AI Agent | tutorial | beginner | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| public, wave-1 | none | none | 2026-06-06 | 2026-06-14 | AI 提示词, 提示词模板, 行业 AI, SOP | tutorial | beginner | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| expansion, wave-1 | none | none | 2026-06-05 | 2026-06-05 | Supabase, pgvector, RAG, 向量数据库 | tutorial | beginner | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| expansion, recommended, wave-1 | none | none | 2026-06-05 | 2026-06-12 | 向量数据库, RAG, pgvector, Qdrant | tutorial | beginner | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| expansion, recommended, wave-1 | none | none | 2026-06-06 | 2026-06-06 | Vercel AI Gateway, AI SDK, 多模型, AI 部署 | tutorial | beginner | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 
 ## Recommended Items
 
 | Scope | Issues | Warnings | Date | Updated | Tags | Content type | Difficulty | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | recommended | none | none | 2026-06-03 | 2026-06-03 | 工具选择, AI 工具实践, 新手教程, 成本控制 | tutorial | beginner | AI 工具新手不应该先买哪些工具 | content/blog/tools-not-to-buy-first.mdx |
-| expansion, recommended | none | none | 2026-06-05 | 2026-06-12 | 向量数据库, RAG, pgvector, Qdrant | tutorial | beginner | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
-| expansion, recommended | none | none | 2026-06-06 | 2026-06-06 | Vercel AI Gateway, AI SDK, 多模型, AI 部署 | tutorial | beginner | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
+| expansion, recommended, wave-1 | none | none | 2026-06-05 | 2026-06-12 | 向量数据库, RAG, pgvector, Qdrant | tutorial | beginner | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| expansion, recommended, wave-1 | none | none | 2026-06-06 | 2026-06-06 | Vercel AI Gateway, AI SDK, 多模型, AI 部署 | tutorial | beginner | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 
 ## Public Items
 
@@ -59,7 +59,7 @@ This report is read-only. It checks whether public and publish-candidate article
 | public | none | none | 2026-06-05 | 2026-06-14 | Agent 上线, AI Agent, 生产部署, AI 基建 | tutorial | beginner | Agent 生产上线检查表：权限、日志、成本和人工确认 | content/blog/agent-production-deployment-checklist.mdx |
 | public | none | none | 2026-06-04 | 2026-06-14 | Agent 工具调用, AI Agent, Tool Calling, AI 基建 | tutorial | beginner | Agent 工具调用怎么设计：读、写、执行要分清 | content/blog/agent-tool-calling-beginner-guide.mdx |
 | public | none | none | 2026-06-06 | 2026-06-14 | AI Agent, Tool Calling, 权限控制, 安全 | tutorial | beginner | Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志 | content/blog/agent-tool-permission-safety-guide.mdx |
-| public, wave-1 | none | none | 2026-06-06 | 2026-06-14 | AI Agent, Vercel AI SDK, 工具调用, AI 部署 | tutorial | intermediate | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
+| public | none | none | 2026-06-06 | 2026-06-14 | AI Agent, Vercel AI SDK, 工具调用, AI 部署 | tutorial | intermediate | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
 | public | none | none | 2026-06-06 | 2026-06-14 | AI Agent, AI 记忆, RAG, 知识库 | tutorial | intermediate | AI Agent 记忆和 RAG 怎么设计：短期记忆、长期记忆、引用来源和隐私边界 | content/blog/ai-agent-memory-rag-design-guide.mdx |
 | public | none | none | 2026-06-06 | 2026-06-14 | API Key, AI 安全, 环境变量, 密钥管理 | tutorial | beginner | AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急 | content/blog/ai-api-key-security-rotation-guide.mdx |
 | public | none | none | 2026-06-03 | 2026-06-14 | AI 辅助交付, 交付检查清单, AI 工具实践, 人工审核 | checklist | beginner | AI 辅助交付和完全自动交付的检查清单 | content/blog/ai-assisted-vs-automated-delivery-checklist.mdx |
@@ -97,7 +97,7 @@ This report is read-only. It checks whether public and publish-candidate article
 | public | none | contentType is uncommon: troubleshooting | 2026-06-03 | 2026-06-14 | AI 工具实践, 技能路线图, 常见错误, 新手教程 | troubleshooting | beginner | AI 工具技能路线图常见错误 | content/blog/ai-freelance-skill-roadmap-mistakes.mdx |
 | public | none | none | 2026-06-03 | 2026-06-14 | AI 工具实践, 技能路线图, 新手教程, 自由职业 | tutorial | beginner | AI 工具新手技能路线图怎么排 | content/blog/ai-freelance-skill-roadmap.mdx |
 | public | none | none | 2026-06-04 | 2026-06-14 | AI Logo, 设计工具, Canva, 新手教程 | tutorial | beginner | AI 做 Logo 怎么开始：新手先别急着商用 | content/blog/ai-logo-design-beginner-guide.mdx |
-| public, wave-1 | none | none | 2026-06-06 | 2026-06-14 | 客服 AI, 模型选型, RAG, AI Agent | tutorial | beginner | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| public | none | none | 2026-06-06 | 2026-06-14 | 客服 AI, 模型选型, RAG, AI Agent | tutorial | beginner | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
 | public | none | none | 2026-06-03 | 2026-06-14 | AI 工具实践, 风险控制, 检查清单, 人工审核 | checklist | beginner | AI 输出不稳定风险控制检查清单 | content/blog/ai-output-unstable-risk-control-checklist.mdx |
 | public | none | contentType is uncommon: troubleshooting | 2026-06-03 | 2026-06-14 | AI 工具实践, 风险控制, 常见错误, 人工审核 | troubleshooting | beginner | AI 输出不稳定风险控制常见错误 | content/blog/ai-output-unstable-risk-control-mistakes.mdx |
 | public | none | none | 2026-06-03 | 2026-06-14 | AI 工具实践, 风险控制, 人工审核, 交付验证 | tutorial | beginner | AI 输出不稳定怎么做风险控制 | content/blog/ai-output-unstable-risk-control.mdx |
@@ -407,7 +407,7 @@ This report is read-only. It checks whether public and publish-candidate article
 | public | none | none | 2026-06-05 | 2026-06-14 | HR 提示词, 招聘, 简历筛选, 培训 | tutorial | beginner | 人力招聘 AI 提示词模板：JD、简历初筛、面试题和培训材料 | content/blog/hr-recruiting-ai-prompts-guide.mdx |
 | public | none | none | 2026-06-05 | 2026-06-14 | Hugging Face, Spaces, Gradio, AI Demo | tutorial | beginner | Hugging Face Spaces 怎么部署 AI Demo：Gradio、Docker 和公开边界 | content/blog/huggingface-spaces-ai-demo-guide.mdx |
 | public | none | none | 2026-06-05 | 2026-06-14 | Hugging Face, TGI, Text Generation Inference, LLM Serving | tutorial | beginner | Hugging Face TGI 怎么部署：Text Generation Inference 入门检查表 | content/blog/huggingface-tgi-deployment-guide.mdx |
-| public, wave-1 | none | none | 2026-06-06 | 2026-06-14 | AI 提示词, 提示词模板, 行业 AI, SOP | tutorial | beginner | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| public | none | none | 2026-06-06 | 2026-06-14 | AI 提示词, 提示词模板, 行业 AI, SOP | tutorial | beginner | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
 | public | none | none | 2026-06-03 | 2026-06-14 | 收款工具, 海外收款手续费, 报价检查, AI 工具实践 | checklist | beginner | 海外收款手续费怎么估算：新手检查清单 | content/blog/international-payment-fee-estimate-checklist.mdx |
 | public | none | none | 2026-06-03 | 2026-06-14 | 收款工具, 海外收款手续费, AI 工具实践, 新手教程 | tutorial | beginner | 海外收款手续费怎么估算 | content/blog/international-payment-fee-estimate.mdx |
 | public | none | none | 2026-06-04 | 2026-06-14 | 知识库权限, RAG, 企业知识库, AI 基建 | tutorial | beginner | AI 知识库权限怎么设计：别让检索结果越权 | content/blog/knowledge-base-permission-design-guide.mdx |
@@ -608,7 +608,7 @@ This report is read-only. It checks whether public and publish-candidate article
 ```json
 [
   {
-    "file": "content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx",
+    "file": "content/blog/supabase-pgvector-rag-guide.mdx",
     "jsonLd": {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -616,19 +616,19 @@ This report is read-only. It checks whether public and publish-candidate article
         "@type": "Organization",
         "name": "AI 工具指南"
       },
-      "dateModified": "2026-06-14",
-      "datePublished": "2026-06-06",
-      "description": "面向新手解释 AI Agent 部署流程，覆盖 Vercel AI SDK、工具调用、多步执行、停止条件、日志、权限、人工接管和上线检查。",
-      "headline": "AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查",
+      "dateModified": "2026-06-05",
+      "datePublished": "2026-06-05",
+      "description": "面向新手整理 Supabase pgvector 做 RAG 的入门思路，覆盖 vector column、embedding、SQL 查询、权限、索引、成本和维护。",
+      "headline": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
       "inLanguage": "zh-CN",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ai-jiedan-lab.vercel.app/blog/ai-agent-deployment-vercel-ai-sdk-guide"
+        "@id": "https://ai-jiedan-lab.vercel.app/blog/supabase-pgvector-rag-guide"
       }
     }
   },
   {
-    "file": "content/blog/ai-model-selection-customer-service-guide.mdx",
+    "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
     "jsonLd": {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -636,19 +636,19 @@ This report is read-only. It checks whether public and publish-candidate article
         "@type": "Organization",
         "name": "AI 工具指南"
       },
-      "dateModified": "2026-06-14",
-      "datePublished": "2026-06-06",
-      "description": "整理客服 AI 模型选型方法，覆盖响应速度、成本、知识库、情绪识别、转人工、质检、上下文长度和安全边界。",
-      "headline": "客服 AI 该选什么模型：速度、成本、知识库、转人工和质检",
+      "dateModified": "2026-06-12",
+      "datePublished": "2026-06-05",
+      "description": "面向新手整理 RAG 向量数据库选型思路，比较 pgvector、Qdrant、Milvus 等路线时应关注数据规模、权限、运维、成本和迁移。",
+      "headline": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
       "inLanguage": "zh-CN",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ai-jiedan-lab.vercel.app/blog/ai-model-selection-customer-service-guide"
+        "@id": "https://ai-jiedan-lab.vercel.app/blog/vector-database-selection-for-rag-guide"
       }
     }
   },
   {
-    "file": "content/blog/industry-ai-prompts-template-library-2026.mdx",
+    "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
     "jsonLd": {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -656,14 +656,14 @@ This report is read-only. It checks whether public and publish-candidate article
         "@type": "Organization",
         "name": "AI 工具指南"
       },
-      "dateModified": "2026-06-14",
+      "dateModified": "2026-06-06",
       "datePublished": "2026-06-06",
-      "description": "整理全行业 AI 提示词模板库的搭建方法，覆盖销售、运营、客服、HR、财务、教育、产品和研发场景，重点讲分类、输入、输出、审核和复用。",
-      "headline": "全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用",
+      "description": "整理 Vercel AI Gateway 多模型接入思路，覆盖统一 API、provider 切换、日志、成本、降级、AI SDK 和上线检查。",
+      "headline": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
       "inLanguage": "zh-CN",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ai-jiedan-lab.vercel.app/blog/industry-ai-prompts-template-library-2026"
+        "@id": "https://ai-jiedan-lab.vercel.app/blog/vercel-ai-gateway-multi-provider-guide"
       }
     }
   }

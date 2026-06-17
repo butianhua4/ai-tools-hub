@@ -1,6 +1,6 @@
 # Mojibake Remediation Brief
 
-Generated at: 2026-06-16T18:18:50.228Z
+Generated at: 2026-06-17T01:59:49.371Z
 
 Read-only queue for likely garbled Chinese article metadata and body excerpts. It does not edit articles, mark review, publish, or claim traffic.
 
@@ -37,7 +37,6 @@ Read-only queue for likely garbled Chinese article metadata and body excerpts. I
 | Priority | Status | Noindex | Immediate | Executive | Lanes | Fields | File |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 140 | published | false | false | false | internal-link-sprint | bodyExcerpt | content/blog/daily-ai-freelance-practice-log.mdx |
-| 140 | published | false | false | false | internal-link-sprint | bodyExcerpt | content/blog/llm-cost-monitoring-dashboard-guide.mdx |
 | 140 | published | false | false | false | internal-link-sprint | bodyExcerpt | content/blog/node-version-mismatch-fix-freelance-scope.mdx |
 | 140 | published | false | false | false | internal-link-sprint | description, bodyExcerpt | content/blog/node-version-mismatch-fix-mistakes.mdx |
 | 140 | published | false | false | false | internal-link-sprint | description | content/blog/permission-denied-fix-checklist.mdx |
@@ -61,6 +60,7 @@ Read-only queue for likely garbled Chinese article metadata and body excerpts. I
 | 100 | published | false | false | false | none | bodyExcerpt | content/blog/claude-code-small-project-tasks.mdx |
 | 100 | published | false | false | false | none | bodyExcerpt | content/blog/claude-code-vs-codex-web-editing-checklist.mdx |
 | 100 | published | false | false | false | none | description, bodyExcerpt | content/blog/codex-automation-steps-not-skip-mistakes.mdx |
+| 100 | published | false | false | false | none | bodyExcerpt | content/blog/codex-automation-steps-not-skip.mdx |
 
 ## Top Samples
 
@@ -71,14 +71,6 @@ Read-only queue for likely garbled Chinese article metadata and body excerpts. I
 - Publish confirm: not-included
 - Fields: bodyExcerpt
 - Sample: 不要只写“问了 AI”。要写清楚你给了什么上下文、AI 给了什么方案、你采纳了哪一部分、你拒绝了哪一部分。这样才能证明你不是盲目复制。
-
-### content/blog/llm-cost-monitoring-dashboard-guide.mdx
-
-- Status/noindex: published/false
-- Preserve status: true
-- Publish confirm: not-included
-- Fields: bodyExcerpt
-- Sample: AI 应用刚上线时，大家关心效果；用起来以后，成本问题会很快冒出来。哪个功能最贵，哪个用户消耗最多，哪个模型延迟最高，哪个 Agent 反复调用工具，哪些请求应该缓存，哪些批量任务应该改成异步，这些问题如果没有成本监控，就只能靠猜。大模型成本看板不是财务报表，而是产品和工程优化工具。
 
 ### content/blog/node-version-mismatch-fix-freelance-scope.mdx
 
@@ -143,4 +135,12 @@ Read-only queue for likely garbled Chinese article metadata and body excerpts. I
 - Publish confirm: not-included
 - Fields: bodyExcerpt
 - Sample: 不要为了拿下第一单就接受所有要求。第一次项目最重要的是形成可复用流程，而不是冒险碰高权限任务。凡是涉及客户账号、密钥、付款、隐私数据和生产环境的需求，都应该先暂停确认。
+
+### content/blog/build-first-webpage-with-codex.mdx
+
+- Status/noindex: published/false
+- Preserve status: true
+- Publish confirm: not-included
+- Fields: bodyExcerpt
+- Sample: 常见错误一，是把 AI 生成的 Proposal 原文直接发送。这样很容易出现你不会做却承诺会做的内容。常见错误二，是看到客户预算低就盲目压价，结果沟通、修改和部署花掉更多时间。常见错误三，是忽略平台规则，例如诱导站外付款、批量骚扰式发送、虚假案例，这些都可能伤害账号安全。常见错误四，是没有保存交付过程，最后客户问起修改内容时说不清楚。
 

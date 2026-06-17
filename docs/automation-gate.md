@@ -1,14 +1,14 @@
 # Automation Gate
 
-Generated at: 2026-06-16T18:19:24.461Z
+Generated at: 2026-06-17T02:00:21.850Z
 
 Overall: FAIL
 
 ## Summary
 
 - Checks: 197
-- Passed: 152
-- Failed: 45
+- Passed: 151
+- Failed: 46
 
 ## Checks
 
@@ -39,14 +39,14 @@ Overall: FAIL
 | project status still stops before publishing | PASS | publicPublished=500, publishableNow=0 |
 | traffic evidence audit passed and is read-only | PASS | failedChecks=0, measuredTrafficSources=0 |
 | traffic is not claimed without measured metrics | PASS | trafficDataAvailable=false, canClaimTraffic=false, claimableMetrics=0 |
-| traffic claim guard found no unsupported claims | PASS | filesScanned=220, unsafeClaims=0, watchMentions=9550 |
+| traffic claim guard found no unsupported claims | PASS | filesScanned=220, unsafeClaims=0, watchMentions=9545 |
 | content integrity audit is read-only and clean | PASS | filesScanned=669, blockingItems=0 |
 | content integrity audit mirrors mojibake warnings without blocking | PASS | warnings=77, mojibake=77, publicMojibake=51, remediationAffected=77/51 |
 | content integrity audit covers public, recommended, and Wave 1 items | PASS | public=500, recommended=3, wave=3 |
-| internal link opportunity audit is read-only and covers expansion candidates | PASS | public=500, expansion=15, broadFirst=0, candidates=19 |
+| internal link opportunity audit is read-only and covers expansion candidates | PASS | public=500, expansion=15, broadFirst=0, candidates=16 |
 | internal link opportunity audit has public suggestions for Wave 1 | PASS | wave=3, broadFirstMissing=0, waveMissing=0, candidateMissing=0 |
-| internal link sprint board covers all linkable candidates | PASS | items=19, waves=5, public=500, suggestions=57 |
-| internal link sprint board keeps link edits manual and publish-safe | PASS | ready=19, actions=152, unsafe=0, publishConfirm=0 |
+| internal link sprint board covers all linkable candidates | FAIL | items=16, waves=4, public=500, suggestions=48 |
+| internal link sprint board keeps link edits manual and publish-safe | PASS | ready=16, actions=128, unsafe=0, publishConfirm=0 |
 | source target health audit is read-only and covers review source scopes | PASS | broadFirst=0, current=3, publicGap=0, next=15, files=16 |
 | source target health audit has reachable URLs for every covered review file | PASS | checked=14, ok=14, failed=0, missingTargets=0, filesWithoutReachable=0 |
 | source target remediation pack is read-only and mirrors source health counts | PASS | items=10, failed=0/0, redirected=10/10 |
@@ -146,7 +146,7 @@ Overall: FAIL
 | search query coverage is read-only and matches planned waves | PASS | items=12, waves=4, files=12, lanes=7 |
 | search query coverage has broad user-search variants | PASS | uniqueQueries=352, ready=12, unsafe=0 |
 | search query match audit is read-only and covers query plan | PASS | items=12, ready=12, warnings=10 |
-| search query match audit has no blocking search-alignment issues | PASS | blocking=0, averageFamilies=6.75 |
+| search query match audit has no blocking search-alignment issues | PASS | blocking=0, averageFamilies=6.83 |
 | search demand intake is read-only and covers broad user-search lanes | FAIL | lanes=8, readyLanes=7, readyFiles=24, unsafe=1 |
 | search demand intake packages sources, formats, and manual review boundaries | FAIL | queries=81, sources=29, formats=32, queueMatches=10 |
 | search demand review pack is read-only and covers intake lanes | FAIL | lanes=8, items=11, maxPerLane=2, unsafe=0 |
@@ -159,10 +159,10 @@ Overall: FAIL
 | mass AI search action matrix keeps prompt and deployment work human-gated | FAIL | ready=6, deploy=4, prompt=0, unsafe=2 |
 | popular AI prompt playbook is read-only and covers broad prompt demand | PASS | items=10, work=3, agent=3, memory=1, sources=12 |
 | popular AI prompt playbook keeps templates human-gated and publish-safe | FAIL | ready=3, templates=50, queries=139, uniqueFiles=21, publishConfirm=0 |
-| popular prompt approval bridge is read-only and covers every popular prompt lane | FAIL | lanes=10, next=5, readyNext=3, alreadyQueued=0 |
-| popular prompt approval bridge keeps next candidates human-gated and publish-safe | FAIL | items=15, ready=9, templates=75, uniqueFiles=9, publishConfirm=0 |
+| popular prompt approval bridge is read-only and covers every popular prompt lane | FAIL | lanes=10, next=5, readyNext=3, alreadyQueued=5 |
+| popular prompt approval bridge keeps next candidates human-gated and publish-safe | FAIL | items=14, ready=8, templates=70, uniqueFiles=8, publishConfirm=0 |
 | popular prompt sprint board covers every broad prompt lane | PASS | items=10, queries=123, buckets=5, waves=5 |
-| popular prompt sprint board keeps prompt expansion manual and publish-safe | FAIL | ready=3, actions=90, nextFiles=9, publishConfirm=0 |
+| popular prompt sprint board keeps prompt expansion manual and publish-safe | FAIL | ready=3, actions=90, nextFiles=8, publishConfirm=0 |
 | public coverage gap plan is read-only and covers every no-public broad theme | PASS | gapThemes=0, items=0, uniqueFiles=0, duplicateFiles=0 |
 | public coverage gap plan keeps candidates safe for manual review | FAIL | ready=0, unsafe=0, waves=0 |
 | public coverage gap preflight is read-only and covers gap plan items | PASS | items=0, planItems=0, broadFirst=0, uniqueFiles=0 |

@@ -1,6 +1,6 @@
 # Manual Review Workbench
 
-Generated at: 2026-06-16T18:18:47.631Z
+Generated at: 2026-06-17T01:59:46.946Z
 
 This workbench is read-only. It does not publish articles or mark drafts for review.
 
@@ -193,7 +193,7 @@ Next review files:
 - Failed checks: 0
 - Unsupported traffic claims: 0
 - Traffic claim files scanned: 220
-- Traffic claim watch mentions: 9606
+- Traffic claim watch mentions: 9550
 
 ## Content Integrity
 
@@ -207,17 +207,17 @@ Next review files:
 
 ## Internal Link Opportunities
 
-- Candidate items: 19
-- Candidates with public suggestions: 19
+- Candidate items: 16
+- Candidates with public suggestions: 16
 - Candidate items missing suggestions: 0
 - Wave items: 3
 - Wave items missing suggestions: 0
 
 | Public links now | Suggestions | Title | File |
 | --- | --- | --- | --- |
-| 2/6 | Codex 修改现有网页 UI 使用前怎么判断是否适合 (/blog/codex-edit-existing-ui-freelance-scope)<br>Codex 需求不清楚的任务使用前怎么判断是否适合 (/blog/codex-client-requirement-questions-freelance-scope)<br>Codex 修 bug 任务使用前怎么判断是否适合 (/blog/codex-bugfix-rollback-record-freelance-scope) | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| 3/4 | n8n AI Agent 怎么接知识库和记忆：RAG、上下文和状态存储 (/blog/n8n-ai-agent-rag-memory-guide)<br>企业微信、飞书、Slack 怎么接 AI Agent：消息入口、权限和人工接管 (/blog/enterprise-im-ai-agent-integration-guide)<br>大模型成本监控怎么做：按用户、功能、模型和项目拆账 (/blog/llm-cost-monitoring-dashboard-guide) | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| 2/6 | 销售 AI 提示词模板：客户画像、跟进话术、异议处理和会议纪要 (/blog/sales-ai-prompts-guide)<br>AI 提示词怎么写才好用：全行业都能套的 5 段式框架 (/blog/ai-prompt-framework-business-guide)<br>客服 AI 提示词模板：回复草稿、工单分类、情绪安抚和升级判断 (/blog/customer-service-ai-prompts-guide) | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| 1/3 | Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide)<br>Pinecone 做 RAG 怎么开始：索引、metadata 和召回测试 (/blog/pinecone-rag-beginner-guide)<br>Chroma 向量数据库怎么用：本地 RAG 原型先跑通 collection (/blog/chroma-vector-database-rag-guide) | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 0/3 | Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤 (/blog/qdrant-vector-database-beginner-guide)<br>RAG 知识库怎么搭：文档、切分、检索和回答复核 (/blog/rag-knowledge-base-beginner-guide)<br>Chroma 向量数据库怎么用：本地 RAG 原型先跑通 collection (/blog/chroma-vector-database-rag-guide) | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 1/3 | 多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估 (/blog/multi-model-router-fallback-guide)<br>Claude API Rate limit reached 怎么办：限流、上下文、重试和降级 (/blog/claude-api-rate-limit-debug-guide)<br>Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型 (/blog/gemini-api-rate-limit-debug-guide) | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 
 ## Search Snippet Readiness
 
@@ -229,9 +229,9 @@ Next review files:
 
 | Title chars | Description chars | Issues | Warnings | Slug | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| 47 | 69 | none | none | ai-agent-deployment-vercel-ai-sdk-guide | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| 29 | 52 | none | description may be thin for search snippets<br>primary keyword is not an exact title substring | ai-model-selection-customer-service-guide | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| 37 | 67 | none | none | industry-ai-prompts-template-library-2026 | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| 44 | 83 | none | none | supabase-pgvector-rag-guide | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 42 | 71 | none | none | vector-database-selection-for-rag-guide | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 51 | 72 | none | primary keyword is not an exact title substring | vercel-ai-gateway-multi-provider-guide | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 
 ## Structured Data Readiness
 
@@ -244,9 +244,9 @@ Next review files:
 
 | Date | Updated | Tags | Type | Difficulty | Issues | Warnings | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-06-06 | 2026-06-14 | AI Agent, Vercel AI SDK, 工具调用, AI 部署 | tutorial | intermediate | none | none | AI Agent 部署怎么做：用 Vercel AI SDK 理解工具调用、多步执行和上线检查 | content/blog/ai-agent-deployment-vercel-ai-sdk-guide.mdx |
-| 2026-06-06 | 2026-06-14 | 客服 AI, 模型选型, RAG, AI Agent | tutorial | beginner | none | none | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
-| 2026-06-06 | 2026-06-14 | AI 提示词, 提示词模板, 行业 AI, SOP | tutorial | beginner | none | none | 全行业 AI 提示词模板库怎么做：销售、运营、客服、HR、财务和教育都能用 | content/blog/industry-ai-prompts-template-library-2026.mdx |
+| 2026-06-05 | 2026-06-05 | Supabase, pgvector, RAG, 向量数据库 | tutorial | beginner | none | none | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
+| 2026-06-05 | 2026-06-12 | 向量数据库, RAG, pgvector, Qdrant | tutorial | beginner | none | none | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
+| 2026-06-06 | 2026-06-06 | Vercel AI Gateway, AI SDK, 多模型, AI 部署 | tutorial | beginner | none | none | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 
 ## SEO Warning Remediation
 
@@ -262,14 +262,14 @@ Next review files:
 
 | Priority | Ready | Status | Scope | Snippet warnings | Schema warnings | Actions | Title | File |
 | ---: | --- | --- | --- | ---: | ---: | --- | --- | --- |
-| 96 | true | published | public, wave-1 | 2 | 0 | Expand the meta description with the user problem, outcome, and one concrete workflow term.<br>Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.<br>Confirm description length remains suitable for search snippets after editing.<br>Check whether the title can naturally include the exact primary keyword: 客服 AI 模型选型. | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
+| 78 | true | draft | expansion, recommended, wave-1 | 1 | 0 | Check whether the title can naturally include the exact primary keyword: Vercel AI Gateway 多模型.<br>If exact-match wording makes the title stiff or misleading, explicitly accept the warning and keep the more natural title.<br>Confirm the H1/title/description still answer the same search intent after any metadata change.<br>For draft/review pages, keep status, noindex, and humanReviewRequired unchanged until explicit approval. | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 | 66 | true | published | public | 2 | 0 | Expand the meta description with the user problem, outcome, and one concrete workflow term.<br>Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.<br>Confirm description length remains suitable for search snippets after editing.<br>Check whether the title can naturally include the exact primary keyword: AI 辅助交付检查清单. | AI 辅助交付和完全自动交付的检查清单 | content/blog/ai-assisted-vs-automated-delivery-checklist.mdx |
 | 66 | true | published | public | 2 | 0 | Expand the meta description with the user problem, outcome, and one concrete workflow term.<br>Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.<br>Confirm description length remains suitable for search snippets after editing.<br>Check whether the title can naturally include the exact primary keyword: AI 自动化项目报价. | AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围 | content/blog/ai-automation-project-pricing-scope-guide.mdx |
 | 66 | true | published | public | 2 | 0 | Expand the meta description with the user problem, outcome, and one concrete workflow term.<br>Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.<br>Confirm description length remains suitable for search snippets after editing.<br>Check whether the title can naturally include the exact primary keyword: AI 新手接项目前检查清单. | AI 新手接项目前的项目适配检查清单 | content/blog/ai-beginner-project-fit-check-checklist.mdx |
+| 66 | true | published | public | 2 | 0 | Expand the meta description with the user problem, outcome, and one concrete workflow term.<br>Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.<br>Confirm description length remains suitable for search snippets after editing.<br>Check whether the title can naturally include the exact primary keyword: 客服 AI 模型选型. | 客服 AI 该选什么模型：速度、成本、知识库、转人工和质检 | content/blog/ai-model-selection-customer-service-guide.mdx |
 | 66 | true | published | public | 2 | 0 | Expand the meta description with the user problem, outcome, and one concrete workflow term.<br>Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.<br>Confirm description length remains suitable for search snippets after editing.<br>Check whether the title can naturally include the exact primary keyword: AI 输出不稳定检查清单. | AI 输出不稳定风险控制检查清单 | content/blog/ai-output-unstable-risk-control-checklist.mdx |
 | 66 | true | published | public | 2 | 0 | Expand the meta description with the user problem, outcome, and one concrete workflow term.<br>Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.<br>Confirm description length remains suitable for search snippets after editing.<br>Check whether the title can naturally include the exact primary keyword: AI 项目练习项目检查清单. | AI 小项目练习选题检查清单 | content/blog/ai-small-project-practice-topics-checklist.mdx |
 | 66 | true | published | public | 2 | 0 | Expand the meta description with the user problem, outcome, and one concrete workflow term.<br>Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.<br>Confirm description length remains suitable for search snippets after editing.<br>Check whether the title can naturally include the exact primary keyword: AI 工具配置服务检查清单. | AI 工具配置服务项目检查清单 | content/blog/ai-tool-setup-service-checklist-checklist.mdx |
-| 66 | true | published | public | 2 | 0 | Expand the meta description with the user problem, outcome, and one concrete workflow term.<br>Keep the description reviewer-friendly and avoid unsupported traffic, ranking, or conversion claims.<br>Confirm description length remains suitable for search snippets after editing.<br>Check whether the title can naturally include the exact primary keyword: 网页修改 AI 工具检查清单. | Claude Code 和 Codex 网页修改新手检查清单 | content/blog/claude-code-vs-codex-web-editing-checklist.mdx |
 
 ## AI Deployment Coverage
 
@@ -300,10 +300,10 @@ Next review files:
 
 | Score | Demand | Public | Ready drafts | Candidates shown | Lane | Intent seeds | Reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 208 | 10 | 31 | 4 | 4 | RAG, knowledge base, and Agent memory | RAG 知识库搭建<br>AI Agent 记忆<br>向量数据库教程 | demandScore=10; public coverage=31; readyDrafts=4; currentPack=1 |
+| 224 | 10 | 31 | 4 | 4 | RAG, knowledge base, and Agent memory | RAG 知识库搭建<br>AI Agent 记忆<br>向量数据库教程 | demandScore=10; public coverage=31; readyDrafts=4; currentPack=1; wave1=2 |
+| 186 | 8 | 141 | 5 | 5 | AI automation service pricing, scope, and delivery checklist | AI 自动化项目报价<br>AI Agent 项目<br>RAG 项目报价 | demandScore=8; public coverage=141; readyDrafts=5; currentPack=1; wave1=1 |
 | 180 | 10 | 27 | 2 | 2 | Large model deployment, LLM serving, and GPU infrastructure | 大模型部署教程<br>LLM deployment<br>vLLM 部署 | demandScore=10; public coverage=27; readyDrafts=2 |
-| 178 | 8 | 141 | 5 | 5 | AI automation service pricing, scope, and delivery checklist | AI 自动化项目报价<br>AI Agent 项目<br>RAG 项目报价 | demandScore=8; public coverage=141; readyDrafts=5; currentPack=1 |
-| 172 | 9 | 28 | 2 | 2 | Model API integration, rate limits, and multi-model fallback | OpenAI API 接入<br>Claude API 限流<br>Gemini API 限流 | demandScore=9; public coverage=28; readyDrafts=2; currentPack=1 |
+| 180 | 9 | 28 | 2 | 2 | Model API integration, rate limits, and multi-model fallback | OpenAI API 接入<br>Claude API 限流<br>Gemini API 限流 | demandScore=9; public coverage=28; readyDrafts=2; currentPack=1; wave1=1 |
 | 170 | 10 | 34 | 1 | 1 | AI Agent deployment, tool calling, and production workflow | AI Agent 部署<br>AI Agent 工具调用<br>Vercel AI SDK Agent | demandScore=10; public coverage=34; readyDrafts=1 |
 | 170 | 8 | 87 | 7 | 7 | AI app deployment errors and beginner troubleshooting | Vercel build failed<br>API Key 无效<br>环境变量缺失 | demandScore=8; public coverage=87; readyDrafts=7 |
 | 160 | 10 | 27 | 0 | 0 | Cross-industry AI prompt templates and reusable prompt libraries | AI 提示词大全<br>ChatGPT 提示词模板<br>全行业 AI 提示词 | demandScore=10; public coverage=27; readyDrafts=0 |
@@ -333,7 +333,7 @@ Next review files:
 | Wave | Ready | Lanes | Focus | Files |
 | --- | --- | --- | --- | --- |
 | 1 | 3 | 2 | Current human approval packet | content/blog/vector-database-selection-for-rag-guide.mdx<br>content/blog/vercel-ai-gateway-multi-provider-guide.mdx<br>content/blog/supabase-pgvector-rag-guide.mdx |
-| 2 | 3 | 3 | Large model deployment, LLM serving, and GPU infrastructure + AI automation service pricing, scope, and delivery checklist + AI Agent deployment, tool calling, and production workflow | content/blog/tensorrt-llm-beginner-guide.mdx<br>content/blog/vllm-deployment-beginner-guide.mdx<br>content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
+| 2 | 3 | 3 | AI automation service pricing, scope, and delivery checklist + Large model deployment, LLM serving, and GPU infrastructure + AI Agent deployment, tool calling, and production workflow | content/blog/tensorrt-llm-beginner-guide.mdx<br>content/blog/vllm-deployment-beginner-guide.mdx<br>content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
 | 3 | 3 | 3 | AI app deployment errors and beginner troubleshooting + LLM observability, evaluation, and production quality + RAG, knowledge base, and Agent memory | content/blog/vercel-404-after-deploy-checklist.mdx<br>content/blog/vercel-build-failed-causes-checklist.mdx<br>content/blog/together-ai-api-beginner-guide.mdx |
 | 4 | 3 | 3 | RAG, knowledge base, and Agent memory + AI automation service pricing, scope, and delivery checklist + AI app deployment errors and beginner troubleshooting | content/blog/vector-database-beginner-guide.mdx<br>content/blog/vercel-build-failed-causes-freelance-scope.mdx<br>content/blog/vercel-404-after-deploy.mdx |
 
@@ -351,8 +351,8 @@ Next review files:
 | 1 | true | 35 | RAG, knowledge base, and Agent memory | RAG 向量数据库怎么选 | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
 | 1 | true | 30 | Model API integration, rate limits, and multi-model fallback | Vercel AI Gateway 多模型 | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 | 1 | true | 35 | RAG, knowledge base, and Agent memory | Supabase pgvector | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
-| 2 | true | 35 | Large model deployment, LLM serving, and GPU infrastructure | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
-| 2 | true | 30 | AI automation service pricing, scope, and delivery checklist | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| 2 | true | 30 | AI automation service pricing, scope, and delivery checklist | TensorRT-LLM 入门 | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| 2 | true | 35 | Large model deployment, LLM serving, and GPU infrastructure | vLLM 部署 | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
 | 2 | true | 35 | AI Agent deployment, tool calling, and production workflow | Vercel AI SDK 聊天机器人部署 | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
 | 3 | true | 30 | AI app deployment errors and beginner troubleshooting | Vercel 部署后 404 检查清单 | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
 | 3 | true | 30 | LLM observability, evaluation, and production quality | Vercel build failed 排查清单 | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |
@@ -367,16 +367,16 @@ Next review files:
 - Ready items: 12
 - Blocking items: 0
 - Warning items: 10
-- Average exact matches: 0.5
-- Average matched families: 6.75
+- Average exact matches: 0.67
+- Average matched families: 6.83
 
 | Wave | Ready | Title hit | Description hit | Exact queries | Families | Warnings | Title | File |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | true | true | true | 0 | 7 | few exact query variant matches in article text | RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界 | content/blog/vector-database-selection-for-rag-guide.mdx |
 | 1 | true | true | true | 0 | 7 | few exact query variant matches in article text | Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级 | content/blog/vercel-ai-gateway-multi-provider-guide.mdx |
 | 1 | true | true | true | 0 | 7 | few exact query variant matches in article text | Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索 | content/blog/supabase-pgvector-rag-guide.mdx |
-| 2 | true | true | true | 2 | 7 | none | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
-| 2 | true | true | true | 0 | 6 | few exact query variant matches in article text<br>missing query-family signals: intentSeeds | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| 2 | true | true | true | 0 | 7 | few exact query variant matches in article text | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| 2 | true | true | true | 4 | 7 | none | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
 | 2 | true | true | true | 0 | 7 | few exact query variant matches in article text | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
 | 3 | true | true | true | 1 | 7 | few exact query variant matches in article text | Vercel 部署后 404 检查清单：逐页验收更稳 | content/blog/vercel-404-after-deploy-checklist.mdx |
 | 3 | true | true | true | 0 | 6 | few exact query variant matches in article text<br>missing query-family signals: intentSeeds | Vercel build failed 排查清单：从日志到重新部署 | content/blog/vercel-build-failed-causes-checklist.mdx |

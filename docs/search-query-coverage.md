@@ -1,6 +1,6 @@
 # Search Query Coverage
 
-Generated at: 2026-06-16T18:18:15.068Z
+Generated at: 2026-06-17T01:59:16.606Z
 
 This report is read-only. It expands each planned review-wave article into user-search query variants for human review and SEO planning. It does not claim measured search volume.
 
@@ -222,21 +222,21 @@ intentSeeds:
 - 向量数据库教程
 - 企业知识库 AI
 
-## Wave 2: Large model deployment, LLM serving, and GPU infrastructure + AI automation service pricing, scope, and delivery checklist + AI Agent deployment, tool calling, and production workflow
+## Wave 2: AI automation service pricing, scope, and delivery checklist + Large model deployment, LLM serving, and GPU infrastructure + AI Agent deployment, tool calling, and production workflow
 
 - Items: 3
 - Query variants: 100
 
 | Ready | Queries | Lane | Primary keyword | Gaps | Title | File |
 | --- | --- | --- | --- | --- | --- | --- |
-| true | 35 | Large model deployment, LLM serving, and GPU infrastructure | TensorRT-LLM 入门 | none | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
-| true | 30 | AI automation service pricing, scope, and delivery checklist | vLLM 部署 | none | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
+| true | 30 | AI automation service pricing, scope, and delivery checklist | TensorRT-LLM 入门 | none | TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收 | content/blog/tensorrt-llm-beginner-guide.mdx |
+| true | 35 | Large model deployment, LLM serving, and GPU infrastructure | vLLM 部署 | none | vLLM 部署适合什么场景：新手先看推理服务边界 | content/blog/vllm-deployment-beginner-guide.mdx |
 | true | 35 | AI Agent deployment, tool calling, and production workflow | Vercel AI SDK 聊天机器人部署 | none | Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查 | content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx |
 
 ### TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收
 
 - File: content/blog/tensorrt-llm-beginner-guide.mdx
-- Lane: Large model deployment, LLM serving, and GPU infrastructure
+- Lane: AI automation service pricing, scope, and delivery checklist
 - Primary keyword: TensorRT-LLM 入门
 
 howTo:
@@ -251,14 +251,11 @@ deployment:
 - TensorRT-LLM 入门部署
 - TensorRT-LLM 入门工作流
 - TensorRT-LLM 入门生产环境
-- 大模型部署
-- LLM serving
-- GPU 部署
-- TensorRT-LLM 入门 GPU sizing
-- TensorRT-LLM 入门 serving API
-- TensorRT-LLM 入门 quantization
-- TensorRT-LLM 入门 autoscaling
-- TensorRT-LLM 入门 cost control
+- TensorRT-LLM 入门 scope
+- TensorRT-LLM 入门 pricing
+- TensorRT-LLM 入门 acceptance
+- TensorRT-LLM 入门 maintenance
+- TensorRT-LLM 入门 risk language
 
 template:
 
@@ -271,8 +268,6 @@ comparison:
 
 - TensorRT-LLM 入门对比
 - TensorRT-LLM 入门怎么选
-- vLLM 和 TGI 区别
-- RunPod 和 Modal 部署对比
 
 risk:
 
@@ -290,15 +285,15 @@ costOps:
 
 intentSeeds:
 
-- 大模型部署教程
-- LLM deployment
-- vLLM 部署
-- Hugging Face TGI 部署
+- AI 自动化项目报价
+- AI Agent 项目
+- RAG 项目报价
+- Dify n8n 报价
 
 ### vLLM 部署适合什么场景：新手先看推理服务边界
 
 - File: content/blog/vllm-deployment-beginner-guide.mdx
-- Lane: AI automation service pricing, scope, and delivery checklist
+- Lane: Large model deployment, LLM serving, and GPU infrastructure
 - Primary keyword: vLLM 部署
 
 howTo:
@@ -313,11 +308,14 @@ deployment:
 - vLLM 部署部署
 - vLLM 部署工作流
 - vLLM 部署生产环境
-- vLLM 部署 scope
-- vLLM 部署 pricing
-- vLLM 部署 acceptance
-- vLLM 部署 maintenance
-- vLLM 部署 risk language
+- 大模型部署
+- LLM serving
+- GPU 部署
+- vLLM 部署 GPU sizing
+- vLLM 部署 serving API
+- vLLM 部署 quantization
+- vLLM 部署 autoscaling
+- vLLM 部署 cost control
 
 template:
 
@@ -330,6 +328,8 @@ comparison:
 
 - vLLM 部署对比
 - vLLM 部署怎么选
+- vLLM 和 TGI 区别
+- RunPod 和 Modal 部署对比
 
 risk:
 
@@ -347,10 +347,10 @@ costOps:
 
 intentSeeds:
 
-- AI 自动化项目报价
-- AI Agent 项目
-- RAG 项目报价
-- Dify n8n 报价
+- 大模型部署教程
+- LLM deployment
+- vLLM 部署
+- Hugging Face TGI 部署
 
 ### Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查
 

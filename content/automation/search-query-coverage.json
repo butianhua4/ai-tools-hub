@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T18:18:15.068Z",
+  "generatedAt": "2026-06-17T01:59:16.606Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -214,10 +214,10 @@
     {
       "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
       "gaps": [],
-      "laneId": "llm-deployment-serving",
-      "laneTitle": "Large model deployment, LLM serving, and GPU infrastructure",
+      "laneId": "ai-service-pricing-scope",
+      "laneTitle": "AI automation service pricing, scope, and delivery checklist",
       "primaryKeyword": "TensorRT-LLM 入门",
-      "queryCount": 35,
+      "queryCount": 30,
       "queryFamilies": {
         "howTo": [
           "TensorRT-LLM 入门怎么做",
@@ -229,14 +229,11 @@
           "TensorRT-LLM 入门部署",
           "TensorRT-LLM 入门工作流",
           "TensorRT-LLM 入门生产环境",
-          "大模型部署",
-          "LLM serving",
-          "GPU 部署",
-          "TensorRT-LLM 入门 GPU sizing",
-          "TensorRT-LLM 入门 serving API",
-          "TensorRT-LLM 入门 quantization",
-          "TensorRT-LLM 入门 autoscaling",
-          "TensorRT-LLM 入门 cost control"
+          "TensorRT-LLM 入门 scope",
+          "TensorRT-LLM 入门 pricing",
+          "TensorRT-LLM 入门 acceptance",
+          "TensorRT-LLM 入门 maintenance",
+          "TensorRT-LLM 入门 risk language"
         ],
         "template": [
           "TensorRT-LLM 入门模板",
@@ -246,9 +243,7 @@
         ],
         "comparison": [
           "TensorRT-LLM 入门对比",
-          "TensorRT-LLM 入门怎么选",
-          "vLLM 和 TGI 区别",
-          "RunPod 和 Modal 部署对比"
+          "TensorRT-LLM 入门怎么选"
         ],
         "risk": [
           "TensorRT-LLM 入门避坑",
@@ -263,10 +258,10 @@
           "TensorRT-LLM 入门上线检查"
         ],
         "intentSeeds": [
-          "大模型部署教程",
-          "LLM deployment",
-          "vLLM 部署",
-          "Hugging Face TGI 部署"
+          "AI 自动化项目报价",
+          "AI Agent 项目",
+          "RAG 项目报价",
+          "Dify n8n 报价"
         ]
       },
       "readyForManualReview": true,
@@ -276,10 +271,10 @@
     {
       "file": "content/blog/vllm-deployment-beginner-guide.mdx",
       "gaps": [],
-      "laneId": "ai-service-pricing-scope",
-      "laneTitle": "AI automation service pricing, scope, and delivery checklist",
+      "laneId": "llm-deployment-serving",
+      "laneTitle": "Large model deployment, LLM serving, and GPU infrastructure",
       "primaryKeyword": "vLLM 部署",
-      "queryCount": 30,
+      "queryCount": 35,
       "queryFamilies": {
         "howTo": [
           "vLLM 部署怎么做",
@@ -291,11 +286,14 @@
           "vLLM 部署部署",
           "vLLM 部署工作流",
           "vLLM 部署生产环境",
-          "vLLM 部署 scope",
-          "vLLM 部署 pricing",
-          "vLLM 部署 acceptance",
-          "vLLM 部署 maintenance",
-          "vLLM 部署 risk language"
+          "大模型部署",
+          "LLM serving",
+          "GPU 部署",
+          "vLLM 部署 GPU sizing",
+          "vLLM 部署 serving API",
+          "vLLM 部署 quantization",
+          "vLLM 部署 autoscaling",
+          "vLLM 部署 cost control"
         ],
         "template": [
           "vLLM 部署模板",
@@ -305,7 +303,9 @@
         ],
         "comparison": [
           "vLLM 部署对比",
-          "vLLM 部署怎么选"
+          "vLLM 部署怎么选",
+          "vLLM 和 TGI 区别",
+          "RunPod 和 Modal 部署对比"
         ],
         "risk": [
           "vLLM 部署避坑",
@@ -320,10 +320,10 @@
           "vLLM 部署上线检查"
         ],
         "intentSeeds": [
-          "AI 自动化项目报价",
-          "AI Agent 项目",
-          "RAG 项目报价",
-          "Dify n8n 报价"
+          "大模型部署教程",
+          "LLM deployment",
+          "vLLM 部署",
+          "Hugging Face TGI 部署"
         ]
       },
       "readyForManualReview": true,
@@ -935,15 +935,15 @@
       "wave": 1
     },
     {
-      "focus": "Large model deployment, LLM serving, and GPU infrastructure + AI automation service pricing, scope, and delivery checklist + AI Agent deployment, tool calling, and production workflow",
+      "focus": "AI automation service pricing, scope, and delivery checklist + Large model deployment, LLM serving, and GPU infrastructure + AI Agent deployment, tool calling, and production workflow",
       "items": [
         {
           "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
           "gaps": [],
-          "laneId": "llm-deployment-serving",
-          "laneTitle": "Large model deployment, LLM serving, and GPU infrastructure",
+          "laneId": "ai-service-pricing-scope",
+          "laneTitle": "AI automation service pricing, scope, and delivery checklist",
           "primaryKeyword": "TensorRT-LLM 入门",
-          "queryCount": 35,
+          "queryCount": 30,
           "queryFamilies": {
             "howTo": [
               "TensorRT-LLM 入门怎么做",
@@ -955,14 +955,11 @@
               "TensorRT-LLM 入门部署",
               "TensorRT-LLM 入门工作流",
               "TensorRT-LLM 入门生产环境",
-              "大模型部署",
-              "LLM serving",
-              "GPU 部署",
-              "TensorRT-LLM 入门 GPU sizing",
-              "TensorRT-LLM 入门 serving API",
-              "TensorRT-LLM 入门 quantization",
-              "TensorRT-LLM 入门 autoscaling",
-              "TensorRT-LLM 入门 cost control"
+              "TensorRT-LLM 入门 scope",
+              "TensorRT-LLM 入门 pricing",
+              "TensorRT-LLM 入门 acceptance",
+              "TensorRT-LLM 入门 maintenance",
+              "TensorRT-LLM 入门 risk language"
             ],
             "template": [
               "TensorRT-LLM 入门模板",
@@ -972,9 +969,7 @@
             ],
             "comparison": [
               "TensorRT-LLM 入门对比",
-              "TensorRT-LLM 入门怎么选",
-              "vLLM 和 TGI 区别",
-              "RunPod 和 Modal 部署对比"
+              "TensorRT-LLM 入门怎么选"
             ],
             "risk": [
               "TensorRT-LLM 入门避坑",
@@ -989,10 +984,10 @@
               "TensorRT-LLM 入门上线检查"
             ],
             "intentSeeds": [
-              "大模型部署教程",
-              "LLM deployment",
-              "vLLM 部署",
-              "Hugging Face TGI 部署"
+              "AI 自动化项目报价",
+              "AI Agent 项目",
+              "RAG 项目报价",
+              "Dify n8n 报价"
             ]
           },
           "readyForManualReview": true,
@@ -1002,10 +997,10 @@
         {
           "file": "content/blog/vllm-deployment-beginner-guide.mdx",
           "gaps": [],
-          "laneId": "ai-service-pricing-scope",
-          "laneTitle": "AI automation service pricing, scope, and delivery checklist",
+          "laneId": "llm-deployment-serving",
+          "laneTitle": "Large model deployment, LLM serving, and GPU infrastructure",
           "primaryKeyword": "vLLM 部署",
-          "queryCount": 30,
+          "queryCount": 35,
           "queryFamilies": {
             "howTo": [
               "vLLM 部署怎么做",
@@ -1017,11 +1012,14 @@
               "vLLM 部署部署",
               "vLLM 部署工作流",
               "vLLM 部署生产环境",
-              "vLLM 部署 scope",
-              "vLLM 部署 pricing",
-              "vLLM 部署 acceptance",
-              "vLLM 部署 maintenance",
-              "vLLM 部署 risk language"
+              "大模型部署",
+              "LLM serving",
+              "GPU 部署",
+              "vLLM 部署 GPU sizing",
+              "vLLM 部署 serving API",
+              "vLLM 部署 quantization",
+              "vLLM 部署 autoscaling",
+              "vLLM 部署 cost control"
             ],
             "template": [
               "vLLM 部署模板",
@@ -1031,7 +1029,9 @@
             ],
             "comparison": [
               "vLLM 部署对比",
-              "vLLM 部署怎么选"
+              "vLLM 部署怎么选",
+              "vLLM 和 TGI 区别",
+              "RunPod 和 Modal 部署对比"
             ],
             "risk": [
               "vLLM 部署避坑",
@@ -1046,10 +1046,10 @@
               "vLLM 部署上线检查"
             ],
             "intentSeeds": [
-              "AI 自动化项目报价",
-              "AI Agent 项目",
-              "RAG 项目报价",
-              "Dify n8n 报价"
+              "大模型部署教程",
+              "LLM deployment",
+              "vLLM 部署",
+              "Hugging Face TGI 部署"
             ]
           },
           "readyForManualReview": true,
