@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-18T21:29:42.390Z",
-  "startedAt": "2026-06-18T21:29:24.743Z",
-  "endedAt": "2026-06-18T21:29:42.390Z",
+  "generatedAt": "2026-06-18T21:47:27.283Z",
+  "startedAt": "2026-06-18T21:47:08.778Z",
+  "endedAt": "2026-06-18T21:47:27.283Z",
   "guardrails": {
     "autoPublish": false,
     "autoGenerateMassContent": false,
@@ -557,7 +557,7 @@
   "tasks": [
     {
       "critical": true,
-      "durationMs": 1465,
+      "durationMs": 1536,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -566,7 +566,7 @@
     },
     {
       "critical": true,
-      "durationMs": 536,
+      "durationMs": 539,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -575,7 +575,7 @@
     },
     {
       "critical": false,
-      "durationMs": 1341,
+      "durationMs": 1347,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -584,7 +584,7 @@
     },
     {
       "critical": true,
-      "durationMs": 471,
+      "durationMs": 532,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -593,7 +593,7 @@
     },
     {
       "critical": true,
-      "durationMs": 470,
+      "durationMs": 519,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -602,7 +602,7 @@
     },
     {
       "critical": false,
-      "durationMs": 1320,
+      "durationMs": 1595,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -611,7 +611,7 @@
     },
     {
       "critical": true,
-      "durationMs": 698,
+      "durationMs": 844,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -620,7 +620,7 @@
     },
     {
       "critical": true,
-      "durationMs": 1867,
+      "durationMs": 2017,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -629,7 +629,7 @@
     },
     {
       "critical": true,
-      "durationMs": 886,
+      "durationMs": 869,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -638,7 +638,7 @@
     },
     {
       "critical": true,
-      "durationMs": 593,
+      "durationMs": 578,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -647,7 +647,7 @@
     },
     {
       "critical": true,
-      "durationMs": 618,
+      "durationMs": 613,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -656,7 +656,7 @@
     },
     {
       "critical": true,
-      "durationMs": 597,
+      "durationMs": 599,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -665,7 +665,7 @@
     },
     {
       "critical": false,
-      "durationMs": 6784,
+      "durationMs": 6916,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",

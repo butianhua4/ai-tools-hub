@@ -22,7 +22,8 @@ export const metadata: Metadata = {
   },
 };
 
-const trustItems = ["面向搜索", "人工审核", "工具优先", "不夸大收益"];
+const trustItems = ["面向搜索", "人工审核", "工具优先", "不夸大收入"];
+
 const searchEntrances = [
   ["提示词模板", "客服、销售、HR、营销、财务和软件开发场景。", "/prompts"],
   ["高频问题入口", "Codex、部署、Agent、RAG、报错和提示词搜索问题。", "/q"],
@@ -30,6 +31,26 @@ const searchEntrances = [
   ["办公自动化", "PPT 策划、表格整理、简历、文案和资料处理。", "/office-ai"],
   ["实用工具", "报价、Proposal、报错解释、成本估算和 SEO 刷新。", "/tools"],
 ];
+
+const toolCards = [
+  {
+    title: "Upwork Proposal 生成器",
+    description: "生成谨慎可修改的英文投标草稿，自动提示风险和客户问题。",
+    href: "/tools/proposal-generator",
+  },
+  {
+    title: "Codex 报错解释器",
+    description: "把常见 npm、Git、Vercel、TypeScript 报错翻译成新手步骤。",
+    href: "/tools/error-explainer",
+  },
+  {
+    title: "项目报价助手",
+    description: "按工时、难度、加急、沟通和平台抽成估算报价范围。",
+    href: "/tools/pricing-calculator",
+  },
+];
+
+const newbieSteps = ["配置 AI 开发工具", "找小项目", "判断项目是否能做", "生成 Proposal", "用 AI 辅助交付", "积累评价和案例"];
 
 export default function Home() {
   const allPosts = getAllPosts(false);
@@ -51,7 +72,7 @@ export default function Home() {
           <div className="min-w-0 max-w-full">
             <h1 className="break-words text-4xl font-bold tracking-tight text-ink md:text-6xl">AI 工具指南</h1>
             <p className="mt-5 max-w-3xl break-words text-xl leading-8 text-gray-800 [overflow-wrap:anywhere]">
-              面向 AI 搜索和普通用户的工具教程库，覆盖办公自动化、提示词、网页部署、大模型、Agent 和记忆/RAG。
+              面向搜索与真实问题的 AI 工具教程库，覆盖办公自动化、提示词、网页部署、大模型部署、Agent 和 RAG 记忆。
             </p>
             <p className="mt-4 max-w-2xl break-words text-base leading-7 text-gray-600 [overflow-wrap:anywhere]">
               先解决真实搜索问题，再顺带把工具、模板和服务入口做好。所有内容都强调人工审核、可复查步骤和风险边界，不承诺自动收入。
@@ -149,7 +170,7 @@ export default function Home() {
           <div>
             <h2 className="text-2xl font-bold text-ink">热门问题入口</h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-600">
-              优先展示 Agent、RAG、提示词、Codex 和部署相关问题页，这些页面负责承接搜索流量，再导向深度教程。
+              优先展示 Agent、RAG、提示词、Codex 和部署相关问题页。这些页面负责承接搜索流量，再导向深度教程。
             </p>
           </div>
           <Link href="/deployments" className="text-sm font-medium text-brand">进入部署教程</Link>
@@ -168,21 +189,21 @@ export default function Home() {
         <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
           <div>
             <h2 className="text-2xl font-bold text-ink">先用工具解决具体问题</h2>
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-600">工具先解决“能不能投、怎么报价、报错怎么查”三个最常见问题，再决定要不要继续接触客户。</p>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-600">工具先解决“能不能投、怎么报价、报错怎么查”这三个最常见问题，再决定要不要继续接触客户。</p>
           </div>
           <Link href="/tools" className="text-sm font-medium text-brand">查看全部工具</Link>
         </div>
         <div className="mt-5 grid gap-4 md:grid-cols-3">
-          <Card title="Upwork Proposal 生成器" description="生成谨慎可修改的英文投标草稿，自动提示风险和客户问题。" href="/tools/proposal-generator" />
-          <Card title="Codex 报错解释器" description="把常见 npm、Git、Vercel、TypeScript 报错翻译成新手步骤。" href="/tools/error-explainer" />
-          <Card title="项目报价助手" description="按工时、难度、加急、沟通和平台抽成估算报价范围。" href="/tools/pricing-calculator" />
+          {toolCards.map((tool) => (
+            <Card key={tool.href} title={tool.title} description={tool.description} href={tool.href} />
+          ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-8">
         <h2 className="text-2xl font-bold text-ink">新手路线</h2>
         <div className="mt-5 grid gap-4 md:grid-cols-3">
-          {["配置 AI 开发工具", "找小项目", "判断项目是否能做", "生成 Proposal", "用 AI 辅助交付", "积累评价和案例"].map((step, index) => (
+          {newbieSteps.map((step, index) => (
             <div key={step} className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
               <p className="text-sm font-medium text-brand">Step {index + 1}</p>
               <h3 className="mt-2 font-semibold text-ink">{step}</h3>

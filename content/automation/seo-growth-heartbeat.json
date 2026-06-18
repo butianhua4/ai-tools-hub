@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T21:29:42.352Z",
+  "generatedAt": "2026-06-18T21:47:27.227Z",
   "guardrails": {
     "fakeTrafficClaims": false,
     "fakeRevenueClaims": false,
@@ -36,7 +36,7 @@
       "status": 200,
       "url": "https://ai-jiedan-lab.vercel.app/",
       "cache": "HIT",
-      "age": "1017",
+      "age": "886",
       "contains": {
         "500": true,
         "AI 工具指南": true,
@@ -48,7 +48,7 @@
       "status": 200,
       "url": "https://ai-jiedan-lab.vercel.app/blog",
       "cache": "HIT",
-      "age": "923",
+      "age": "878",
       "contains": {
         "500": true,
         "新手教程": true,
@@ -60,7 +60,7 @@
       "status": 200,
       "url": "https://ai-jiedan-lab.vercel.app/q",
       "cache": "HIT",
-      "age": "923",
+      "age": "878",
       "contains": {
         "Question Layer": true,
         "/q/codex": true
@@ -71,7 +71,7 @@
       "status": 200,
       "url": "https://ai-jiedan-lab.vercel.app/sitemap.xml",
       "cache": "HIT",
-      "age": "986",
+      "age": "878",
       "contains": {
         "<sitemapindex": true
       }
@@ -81,7 +81,7 @@
       "status": 200,
       "url": "https://ai-jiedan-lab.vercel.app/sitemap-blog.xml",
       "cache": "HIT",
-      "age": "923",
+      "age": "878",
       "contains": {
         "<urlset": true
       },
@@ -92,7 +92,7 @@
       "status": 200,
       "url": "https://ai-jiedan-lab.vercel.app/sitemap-q.xml",
       "cache": "HIT",
-      "age": "922",
+      "age": "878",
       "contains": {
         "<urlset": true
       },
@@ -103,7 +103,7 @@
       "status": 200,
       "url": "https://ai-jiedan-lab.vercel.app/sitemap-cluster.xml",
       "cache": "HIT",
-      "age": "922",
+      "age": "878",
       "contains": {
         "<urlset": true
       },
@@ -114,7 +114,7 @@
       "status": 200,
       "url": "https://ai-jiedan-lab.vercel.app/robots.txt",
       "cache": "HIT",
-      "age": "922",
+      "age": "878",
       "contains": {
         "Sitemap": true,
         "Allow": true
@@ -136,7 +136,7 @@
       "status": 200,
       "url": "https://ai-jiedan-lab.vercel.app/indexnow-4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e.txt",
       "cache": "HIT",
-      "age": "1016",
+      "age": "889",
       "contains": {
         "4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e": true
       }
@@ -144,10 +144,10 @@
   },
   "vercel": {
     "repository": "butianhua4/ai-jiedan-lab",
-    "sha": "66aa84761a4eb91b18b13ee0a6222acd662646f9",
+    "sha": "211ea237681f7b00a46215947cf95bd2617d1cd3",
     "state": "pending",
     "description": "Vercel is deploying your app",
-    "targetUrl": "https://vercel.com/ip-studio-s-projects/ai-jiedan-lab/CcUenQWehG9sTfztPdNenqs7k4TR"
+    "targetUrl": "https://vercel.com/ip-studio-s-projects/ai-jiedan-lab/GGyadKZ248Y7dRWSQMZmB5dWcFu8"
   },
   "problems": [],
   "nextActions": [
