@@ -1,0 +1,68 @@
+name: SEO Growth Heartbeat
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "10 */2 * * *"
+
+permissions:
+  contents: read
+  actions: read
+  statuses: read
+
+concurrency:
+  group: seo-growth-heartbeat
+  cancel-in-progress: true
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm install
+
+      - name: Refresh priority inputs
+        shell: bash
+        run: |
+          npm run search-console:indexing-priority
+          npm run seo:growth-daily-ops
+          npm run indexnow:readiness
+
+      - name: Run SEO heartbeat
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: npm run seo:heartbeat
+
+      - name: Add heartbeat summary
+        if: always()
+        shell: bash
+        run: |
+          if [ -f docs/seo-growth-heartbeat.md ]; then
+            cat docs/seo-growth-heartbeat.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "# SEO Growth Heartbeat" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "Heartbeat report was not generated." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload heartbeat report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-growth-heartbeat
+          path: |
+            content/automation/seo-growth-heartbeat.json
+            docs/seo-growth-heartbeat.md
+            content/automation/gsc-indexing-priority.json
+            docs/gsc-indexing-priority.md
+            content/automation/seo-growth-daily-ops.json
+            docs/seo-growth-daily-ops.md
+            content/automation/indexnow-readiness.json
+            docs/indexnow-readiness.md

@@ -1,0 +1,159 @@
+{
+  "generatedAt": "2026-06-18T14:49:54.627Z",
+  "guardrails": {
+    "fakeTrafficClaims": false,
+    "fakeRevenueClaims": false,
+    "dataSources": [
+      "local SEO graph",
+      "live HTTP probes",
+      "GitHub commit status",
+      "existing automation reports"
+    ],
+    "note": "GSC clicks, impressions, rankings, and indexed page counts are not invented. They remain external until manually checked or API-connected."
+  },
+  "status": {
+    "severity": "green",
+    "healthScore": 100,
+    "growthStage": "warming",
+    "canContinueScaling": true
+  },
+  "growth": {
+    "totalPages": 1006,
+    "qPages": 500,
+    "blogPages": 500,
+    "clusterPages": 6,
+    "orphanPages": 0,
+    "weakPages": 0,
+    "internalLinkHealth": 100,
+    "growthReadinessScore": 100,
+    "seoScore": 100,
+    "graphNodes": 1006,
+    "graphEdges": 9572
+  },
+  "live": {
+    "home": {
+      "ok": true,
+      "status": 200,
+      "url": "https://ai-jiedan-lab.vercel.app/",
+      "cache": "HIT",
+      "age": "2825",
+      "contains": {
+        "500": true,
+        "AI 工具指南": true,
+        "SEO": true
+      }
+    },
+    "blog": {
+      "ok": true,
+      "status": 200,
+      "url": "https://ai-jiedan-lab.vercel.app/blog",
+      "cache": "HIT",
+      "age": "2825",
+      "contains": {
+        "500": true,
+        "新手教程": true,
+        "/blog/": true
+      }
+    },
+    "q": {
+      "ok": true,
+      "status": 200,
+      "url": "https://ai-jiedan-lab.vercel.app/q",
+      "cache": "HIT",
+      "age": "98",
+      "contains": {
+        "Question Layer": true,
+        "/q/codex": true
+      }
+    },
+    "sitemapIndex": {
+      "ok": true,
+      "status": 200,
+      "url": "https://ai-jiedan-lab.vercel.app/sitemap.xml",
+      "cache": "HIT",
+      "age": "2822",
+      "contains": {
+        "<sitemapindex": true
+      }
+    },
+    "sitemapBlog": {
+      "ok": true,
+      "status": 200,
+      "url": "https://ai-jiedan-lab.vercel.app/sitemap-blog.xml",
+      "cache": "HIT",
+      "age": "2822",
+      "contains": {
+        "<urlset": true
+      },
+      "locCount": 500
+    },
+    "sitemapQ": {
+      "ok": true,
+      "status": 200,
+      "url": "https://ai-jiedan-lab.vercel.app/sitemap-q.xml",
+      "cache": "HIT",
+      "age": "2822",
+      "contains": {
+        "<urlset": true
+      },
+      "locCount": 507
+    },
+    "sitemapCluster": {
+      "ok": true,
+      "status": 200,
+      "url": "https://ai-jiedan-lab.vercel.app/sitemap-cluster.xml",
+      "cache": "HIT",
+      "age": "2822",
+      "contains": {
+        "<urlset": true
+      },
+      "locCount": 6
+    },
+    "robots": {
+      "ok": true,
+      "status": 200,
+      "url": "https://ai-jiedan-lab.vercel.app/robots.txt",
+      "cache": "HIT",
+      "age": "2822",
+      "contains": {
+        "Sitemap": true,
+        "Allow": true
+      }
+    },
+    "growthApi": {
+      "ok": true,
+      "status": 200,
+      "url": "https://ai-jiedan-lab.vercel.app/api/seo/growth-report",
+      "cache": "MISS",
+      "age": "0",
+      "contains": {
+        "growthStage": true,
+        "qPages": true
+      }
+    },
+    "indexNowKey": {
+      "ok": true,
+      "status": 200,
+      "url": "https://ai-jiedan-lab.vercel.app/indexnow-4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e.txt",
+      "cache": "HIT",
+      "age": "97",
+      "contains": {
+        "4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e": true
+      }
+    }
+  },
+  "vercel": {
+    "repository": "butianhua4/ai-jiedan-lab",
+    "sha": "5eacc29f3767503e477683f841636030c7ca3de0",
+    "state": "success",
+    "description": "Deployment has completed",
+    "targetUrl": "https://vercel.com/ip-studio-s-projects/ai-jiedan-lab/3ygSagxkLqQbHt9soSGXwHbCCvsj"
+  },
+  "problems": [],
+  "nextActions": [
+    "In GSC, resubmit /sitemap.xml when a deployment changes q, cluster, or sitemap structure.",
+    "Manually request indexing for 5-15 priority URLs from docs/gsc-indexing-priority.md; do not submit all 500 pages.",
+    "Prioritize exact problem-entry pages: Codex errors, Vercel failures, GitHub Actions failures, Agent deployment, RAG memory, API key and rate limits.",
+    "Keep the current growth phase running; wait for Search Console to move discovered q/cluster pages into indexed pages."
+  ]
+}

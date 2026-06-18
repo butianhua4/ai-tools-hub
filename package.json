@@ -86,6 +86,7 @@
     "search-console:indexing-priority": "tsx scripts/gsc-indexing-priority.ts",
     "indexnow:readiness": "tsx scripts/indexnow-readiness.ts",
     "seo:growth-daily-ops": "tsx scripts/seo-growth-daily-ops.ts",
+    "seo:heartbeat": "tsx scripts/seo-growth-heartbeat.ts",
     "traffic:evidence": "tsx scripts/traffic-evidence-audit.ts",
     "traffic:claim-guard": "tsx scripts/traffic-claim-guard.ts",
     "automation:public-surface-inventory": "tsx scripts/public-surface-inventory.ts",
