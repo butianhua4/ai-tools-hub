@@ -22,8 +22,17 @@ export function GET() {
   const priorityPosts = getHighPotentialQuestionPosts(150);
   const priorityBlogPosts = uniquePosts(seoClusters.flatMap((cluster) => getHighAuthorityPosts(cluster.slug, 5)));
 
-  for (const path of ["", "/blog", "/deployments", "/office-ai", "/prompts", "/templates", "/tools"]) {
+  for (const path of ["", "/blog", "/deployments", "/office-ai", "/prompts", "/q", "/templates", "/tools"]) {
     add(entries, { path, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 });
+  }
+
+  for (const cluster of seoClusters) {
+    add(entries, {
+      path: `/q/${cluster.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.85,
+    });
   }
 
   for (const cluster of seoClusters) {

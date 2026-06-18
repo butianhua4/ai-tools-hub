@@ -4,6 +4,7 @@ const nav = [
   ["/", "首页"],
   ["/office-ai", "AI 办公"],
   ["/prompts", "提示词库"],
+  ["/q", "AI 问题"],
   ["/deployments", "部署教程"],
   ["/tools/llm-deployment-cost-planner", "大模型部署"],
   ["/tools/memory-rag-architecture-planner", "Agent/RAG"],

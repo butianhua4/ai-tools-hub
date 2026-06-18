@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 const trustItems = ["面向搜索", "人工审核", "工具优先", "不夸大收益"];
 const searchEntrances = [
   ["提示词模板", "客服、销售、HR、营销、财务和软件开发场景。", "/prompts"],
+  ["高频问题入口", "Codex、部署、Agent、RAG、报错和提示词搜索问题。", "/q"],
   ["AI 部署教程", "网页部署、大模型部署、Agent、API 和 RAG。", "/deployments"],
   ["办公自动化", "PPT 策划、表格整理、简历、文案和资料处理。", "/office-ai"],
   ["实用工具", "报价、Proposal、报错解释、成本估算和 SEO 刷新。", "/tools"],

@@ -272,6 +272,7 @@ function getGeneratedSitemapPaths() {
     "/deployments",
     "/office-ai",
     "/prompts",
+    "/q",
     "/tools",
     "/tools/proposal-generator",
     "/tools/ppt-planner",
@@ -294,11 +295,12 @@ function getGeneratedSitemapPaths() {
   ];
   const postRoutes = getAllPosts(false).map((post) => `/blog/${post.slug}`);
   const qRoutes = getAllPosts(false).map((post) => getQuestionPath(post));
+  const qCategoryRoutes = seoClusters.map((cluster) => `/q/${cluster.slug}`);
   const clusterRoutes = seoClusters.map((cluster) => getClusterPath(cluster.slug));
   const toolRoutes = tools.map((tool) => `/tools/${tool.slug}`);
   const categoryRoutes = getCategorySlugs().map((slug) => `/category/${slug}`);
   const tagRoutes = getTagSlugs().map((slug) => `/tag/${slug}`);
-  return [...staticRoutes, ...postRoutes, ...qRoutes, ...clusterRoutes, ...toolRoutes, ...categoryRoutes, ...tagRoutes].map(normalizePathOnly);
+  return [...staticRoutes, ...postRoutes, ...qRoutes, ...qCategoryRoutes, ...clusterRoutes, ...toolRoutes, ...categoryRoutes, ...tagRoutes].map(normalizePathOnly);
 }
 
 function getQuestionEngineStatus(publicPostCount: number) {

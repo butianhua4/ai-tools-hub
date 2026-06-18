@@ -30,6 +30,7 @@ function buildLlmsTxt() {
     `- [Deployments](${base}/deployments): AI deployment guide for web apps, LLMs, agents, RAG, and API routing`,
     `- [Office AI](${base}/office-ai): AI workflows for PPT, spreadsheets, weekly reports, email, and meeting notes`,
     `- [Prompts](${base}/prompts): AI prompt library for common industry workflows`,
+    `- [Questions](${base}/q): High-intent AI question entry pages grouped by topic cluster`,
     `- [Tools](${base}/tools): AI tools directory`,
     `- [Templates](${base}/templates): Downloadable templates`,
     `- [Roadmap](${base}/roadmap): AI tools learning roadmap`,
