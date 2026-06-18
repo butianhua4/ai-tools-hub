@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T20:51:55.982Z",
+  "generatedAt": "2026-06-18T21:04:05.173Z",
   "guardrails": {
     "submitByDefault": false,
     "note": "IndexNow is for Bing and other participating search engines. Google does not use IndexNow for normal q/blog pages."
@@ -518,7 +518,12 @@
       "https://ai-jiedan-lab.vercel.app/blog/env-variable-missing-fix-freelance-scope"
     ]
   },
-  "submission": null,
+  "submission": {
+    "ok": true,
+    "status": 200,
+    "statusText": "OK"
+  },
+  "submissionAttemptedThisRun": false,
   "summary": {
     "growthStage": "warming",
     "totalPages": 1006,

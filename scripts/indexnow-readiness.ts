@@ -36,9 +36,11 @@ const outputMarkdown = path.join(process.cwd(), "docs", "indexnow-readiness.md")
 
 async function main() {
   const shouldSubmit = process.argv.includes("--submit") || process.env.INDEXNOW_SUBMIT === "true";
+  const limit = readNumberArg("limit", 500);
+  const previousReport = readPreviousReport();
   const dailyOps = readDailyOps();
   const indexNowItems = dailyOps.gscDailyActions.topQueue ?? dailyOps.gscDailyActions.todayBatch;
-  const urlList = uniqueUrls(indexNowItems.map((item) => item.url)).slice(0, 500);
+  const urlList = uniqueUrls(indexNowItems.map((item) => item.url)).slice(0, limit);
   const keyLocation = `${base}/${keyFile}`;
   const liveKey = await checkLiveKey(keyLocation);
   const payload = {
@@ -47,7 +49,7 @@ async function main() {
     keyLocation,
     urlList,
   };
-  const submission = shouldSubmit && liveKey.ok ? await submitIndexNow(payload) : null;
+  const submission = shouldSubmit && liveKey.ok ? await submitIndexNow(payload) : previousReport?.submission ?? null;
   const report = {
     generatedAt: new Date().toISOString(),
     guardrails: {
@@ -58,6 +60,7 @@ async function main() {
     liveKey,
     payload,
     submission,
+    submissionAttemptedThisRun: shouldSubmit && liveKey.ok,
     summary: dailyOps.summary,
     nextActions: buildNextActions(liveKey.ok, shouldSubmit),
   };
@@ -75,6 +78,7 @@ async function main() {
         submitted: Boolean(report.submission?.ok),
         json: rel(outputJson),
         markdown: rel(outputMarkdown),
+        limit,
         urlCount: urlList.length,
       },
       null,
@@ -89,6 +93,17 @@ function readDailyOps(): DailyOps {
   }
 
   return JSON.parse(fs.readFileSync(dailyOpsJson, "utf8")) as DailyOps;
+}
+
+function readPreviousReport() {
+  if (!fs.existsSync(outputJson)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(outputJson, "utf8")) as {
+      submission?: null | { ok: boolean; status: number | string; statusText?: string; error?: string };
+    };
+  } catch {
+    return null;
+  }
 }
 
 async function checkLiveKey(url: string) {
@@ -137,6 +152,14 @@ function uniqueUrls(urls: string[]) {
   return [...new Set(urls.filter((url) => url.startsWith(`${base}/`)))];
 }
 
+function readNumberArg(name: string, fallback: number) {
+  const prefix = `--${name}=`;
+  const raw = process.argv.find((arg) => arg.startsWith(prefix))?.slice(prefix.length);
+  const value = raw ? Number(raw) : fallback;
+  if (!Number.isFinite(value) || value < 1) return fallback;
+  return Math.min(Math.floor(value), 500);
+}
+
 function buildNextActions(liveKeyOk: boolean, shouldSubmit: boolean) {
   if (!liveKeyOk) {
     return [
@@ -164,6 +187,7 @@ function toMarkdown(report: {
   payload: { host: string; key: string; keyLocation: string; urlList: string[] };
   ready: boolean;
   submission: null | { ok: boolean; status: number | string; statusText?: string; error?: string };
+  submissionAttemptedThisRun: boolean;
   summary: DailyOps["summary"];
 }) {
   return [
@@ -182,7 +206,8 @@ function toMarkdown(report: {
     `- Key URL: ${report.liveKey.url}`,
     `- Key HTTP status: ${report.liveKey.status}`,
     `- Key matches: ${report.liveKey.valueMatches ?? false}`,
-    `- Submission attempted: ${report.submission !== null}`,
+    `- Submission attempted this run: ${report.submissionAttemptedThisRun}`,
+    `- Last submission recorded: ${report.submission !== null}`,
     `- Submission ok: ${report.submission?.ok ?? false}`,
     "",
     "## SEO State",

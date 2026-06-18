@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-18T20:52:10.426Z",
-  "startedAt": "2026-06-18T20:51:52.314Z",
-  "endedAt": "2026-06-18T20:52:10.426Z",
+  "generatedAt": "2026-06-18T21:04:22.344Z",
+  "startedAt": "2026-06-18T21:04:01.941Z",
+  "endedAt": "2026-06-18T21:04:22.344Z",
   "guardrails": {
     "autoPublish": false,
     "autoGenerateMassContent": false,
@@ -562,7 +562,7 @@
   "tasks": [
     {
       "critical": true,
-      "durationMs": 1524,
+      "durationMs": 1497,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -571,7 +571,7 @@
     },
     {
       "critical": true,
-      "durationMs": 521,
+      "durationMs": 526,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -580,16 +580,16 @@
     },
     {
       "critical": false,
-      "durationMs": 1679,
+      "durationMs": 1264,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
-      "stdoutTail": "> ai-tools-guide@0.1.0 indexnow:readiness\n> tsx scripts/indexnow-readiness.ts\n\n{\n  \"ok\": true,\n  \"ready\": true,\n  \"submitted\": false,\n  \"json\": \"content/automation/indexnow-readiness.json\",\n  \"markdown\": \"docs/indexnow-readiness.md\",\n  \"urlCount\": 500\n}",
+      "stdoutTail": "> ai-tools-guide@0.1.0 indexnow:readiness\n> tsx scripts/indexnow-readiness.ts\n\n{\n  \"ok\": true,\n  \"ready\": true,\n  \"submitted\": true,\n  \"json\": \"content/automation/indexnow-readiness.json\",\n  \"markdown\": \"docs/indexnow-readiness.md\",\n  \"limit\": 500,\n  \"urlCount\": 500\n}",
       "title": "Refresh IndexNow readiness"
     },
     {
       "critical": true,
-      "durationMs": 457,
+      "durationMs": 469,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -598,7 +598,7 @@
     },
     {
       "critical": true,
-      "durationMs": 461,
+      "durationMs": 525,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -607,7 +607,7 @@
     },
     {
       "critical": false,
-      "durationMs": 1475,
+      "durationMs": 1484,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -616,7 +616,7 @@
     },
     {
       "critical": true,
-      "durationMs": 672,
+      "durationMs": 652,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -625,7 +625,7 @@
     },
     {
       "critical": true,
-      "durationMs": 1903,
+      "durationMs": 1867,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -634,7 +634,7 @@
     },
     {
       "critical": true,
-      "durationMs": 902,
+      "durationMs": 838,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -643,7 +643,7 @@
     },
     {
       "critical": true,
-      "durationMs": 618,
+      "durationMs": 592,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -652,7 +652,7 @@
     },
     {
       "critical": true,
-      "durationMs": 605,
+      "durationMs": 574,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -661,7 +661,7 @@
     },
     {
       "critical": true,
-      "durationMs": 628,
+      "durationMs": 606,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -670,7 +670,7 @@
     },
     {
       "critical": false,
-      "durationMs": 6665,
+      "durationMs": 9508,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",

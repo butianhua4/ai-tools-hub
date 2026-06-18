@@ -1,6 +1,6 @@
 # GSC Submission Progress
 
-Generated at: 2026-06-18T20:51:56.464Z
+Generated at: 2026-06-18T21:04:05.666Z
 
 ## Guardrails
 
@@ -22,7 +22,7 @@ Generated at: 2026-06-18T20:51:56.464Z
 - GSC remaining: 500
 - Next URL: https://ai-jiedan-lab.vercel.app/en
 - IndexNow ready: true
-- IndexNow submitted: false
+- IndexNow submitted: true
 - IndexNow URLs: 500
 - Duplicate URLs: 0
 
@@ -60,5 +60,4 @@ Generated at: 2026-06-18T20:51:56.464Z
 - Keep requesting GSC URL Inspection from docs/gsc-url-inspection-today.txt until rate-limited, then update content/automation/gsc-manual-progress.json.
 - After 24-72 hours, compare GSC Page Indexing statuses for the top 500 queue and prioritize pages that move from discovered to crawled.
 - When impressions appear, optimize only pages with evidence: tighten title, first answer block, FAQ, and related q links.
-- Retry IndexNow submission after verifying the key route still returns 200.
 - Do not expand beyond 500 until GSC shows crawl/indexing movement for this queue.

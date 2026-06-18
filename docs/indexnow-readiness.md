@@ -1,6 +1,6 @@
 # IndexNow Readiness
 
-Generated at: 2026-06-18T20:51:55.982Z
+Generated at: 2026-06-18T21:04:05.173Z
 
 ## Guardrails
 
@@ -13,8 +13,9 @@ Generated at: 2026-06-18T20:51:55.982Z
 - Key URL: https://ai-jiedan-lab.vercel.app/indexnow-4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e.txt
 - Key HTTP status: 200
 - Key matches: true
-- Submission attempted: false
-- Submission ok: false
+- Submission attempted this run: false
+- Last submission recorded: true
+- Submission ok: true
 
 ## SEO State
 
