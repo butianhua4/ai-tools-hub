@@ -1,14 +1,14 @@
 # Traffic Claim Guard
-Generated at: 2026-06-18T02:01:30.118Z
+Generated at: 2026-06-18T06:22:40.265Z
 This guard scans operational reports and docs for unsupported claims that real traffic, clicks, impressions, or visits already exist.
 ## Guardrails
 - Auto publish: false
 - Note: This guard scans operational docs and automation reports for unsupported traffic claims. It does not scan draft article teaching examples.
 ## Summary
-- filesScanned: 221
+- filesScanned: 225
 - measuredTrafficUnavailable: true
 - unsafeClaims: 0
-- watchMentions: 9546
+- watchMentions: 9553
 ## Unsafe Claims
 None.
 ## Watch Mentions
@@ -18,7 +18,7 @@ None.
 | README.md | 117 | npm run traffic:evidence |
 | README.md | 147 | - 不承诺搜索排名、收入、成交转化成功率或平台曝光 |
 | README.md | 159 | - 在有真实数据后接入 Search Console、Analytics、模板销售和联盟链接 |
-| app/llms.txt/route.ts | 50 | "- The site does not claim real traffic, impressions, income guarantees, or automatic publishing.", |
+| app/llms.txt/route.ts | 51 | "- The site does not claim real traffic, impressions, income guarantees, or automatic publishing.", |
 | docs/NEXT_ACTIONS.md | 24 | ## 4. 收款和流量收益 |
 | docs/NEXT_ACTIONS.md | 29 | - 稳定流量后再接联盟链接和广告。 |
 | docs/NEXT_ACTIONS.md | 46 | - 有 5 篇以上人工审核公开文章：注册 Google Search Console。 |
@@ -75,8 +75,8 @@ None.
 | docs/automation-digest.md | 1311 | - Measured traffic sources: none |
 | docs/automation-digest.md | 1312 | - Search Console verification evidence: false |
 | docs/automation-digest.md | 1315 | - Unsupported traffic claims: 0 |
-| docs/automation-digest.md | 1316 | - Traffic claim files scanned: 221 |
-| docs/automation-digest.md | 1317 | - Traffic claim watch mentions: 9546 |
+| docs/automation-digest.md | 1316 | - Traffic claim files scanned: 225 |
+| docs/automation-digest.md | 1317 | - Traffic claim watch mentions: 9553 |
 | docs/automation-digest.md | 1330 | - Traffic data available: false |
 | docs/automation-digest.md | 1452 | \| AI 提示词 \| 2026-06-14 \| 4 \| 医疗行政 AI 提示词模板：病历摘要、随访问卷和宣教材料怎么安全写 \| /blog/healthcare-admin-ai-prompts-guide \| |
 | docs/automation-digest.md | 1645 | \| 工具导航 \| 2026-06-14 \| 4 \| Google Analytics 什么时候再接入 \| /blog/google-analytics-when-to-add \| |
