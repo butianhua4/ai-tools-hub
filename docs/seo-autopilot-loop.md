@@ -1,6 +1,6 @@
 # SEO Autopilot Loop
 
-Generated at: 2026-06-18T20:46:18.936Z
+Generated at: 2026-06-18T20:52:10.426Z
 
 ## Status
 
@@ -67,7 +67,7 @@ Generated at: 2026-06-18T20:46:18.936Z
 ## Priority Lanes
 
 - [critical/ready] GSC manual indexing queue: 500 URLs prepared, 0 confirmed submitted, 500 remaining.
-- [critical/watch] Public mojibake and encoding repair: 0 public pages have possible mojibake warnings.
+- [critical/watch] Mojibake and encoding repair: 0 public pages and 0 non-public drafts/review candidates have possible mojibake warnings.
 - [high/watch] Search snippet CTR repair: 0 pages have snippet warnings, mostly title/keyword alignment.
 - [medium/watch] Structured data normalization: 0 pages have schema warnings; current count is non-blocking.
 - [high/ready] Internal-link opportunity queue: 16 candidate items and 3 recommended items have link suggestions.
@@ -89,16 +89,16 @@ Generated at: 2026-06-18T20:46:18.936Z
 
 | Task | Critical | Status | Exit | Duration |
 | --- | --- | --- | --- | --- |
-| Refresh GSC indexing priority | true | PASS | 0 | 1557ms |
-| Refresh SEO growth daily ops | true | PASS | 0 | 560ms |
-| Refresh IndexNow readiness | false | PASS | 0 | 1361ms |
-| Refresh GSC submission progress | true | PASS | 0 | 482ms |
-| Refresh SEO improvement priority | true | PASS | 0 | 474ms |
-| Run traffic evidence audit | false | PASS | 0 | 1636ms |
-| Run traffic claim guard | true | PASS | 0 | 691ms |
-| Run searchability check | true | PASS | 0 | 1794ms |
-| Run SEO safety check | true | PASS | 0 | 855ms |
-| Run content integrity audit | true | PASS | 0 | 597ms |
-| Run search snippet readiness audit | true | PASS | 0 | 609ms |
-| Run structured data readiness audit | true | PASS | 0 | 593ms |
-| Run SEO growth heartbeat | false | PASS | 0 | 6798ms |
+| Refresh GSC indexing priority | true | PASS | 0 | 1524ms |
+| Refresh SEO growth daily ops | true | PASS | 0 | 521ms |
+| Refresh IndexNow readiness | false | PASS | 0 | 1679ms |
+| Refresh GSC submission progress | true | PASS | 0 | 457ms |
+| Refresh SEO improvement priority | true | PASS | 0 | 461ms |
+| Run traffic evidence audit | false | PASS | 0 | 1475ms |
+| Run traffic claim guard | true | PASS | 0 | 672ms |
+| Run searchability check | true | PASS | 0 | 1903ms |
+| Run SEO safety check | true | PASS | 0 | 902ms |
+| Run content integrity audit | true | PASS | 0 | 618ms |
+| Run search snippet readiness audit | true | PASS | 0 | 605ms |
+| Run structured data readiness audit | true | PASS | 0 | 628ms |
+| Run SEO growth heartbeat | false | PASS | 0 | 6665ms |

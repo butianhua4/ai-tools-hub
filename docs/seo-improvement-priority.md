@@ -1,6 +1,6 @@
 # SEO Improvement Priority
 
-Generated at: 2026-06-18T20:46:05.328Z
+Generated at: 2026-06-18T20:51:56.923Z
 
 ## Guardrails
 
@@ -18,6 +18,8 @@ Generated at: 2026-06-18T20:46:05.328Z
 - indexNowSubmitted: false
 - indexNowUrls: 500
 - blockingItems: 0
+- contentMojibakeWarningItems: 0
+- draftMojibakeWarningItems: 0
 - publicMojibakeWarningItems: 0
 - snippetWarningItems: 0
 - schemaWarningItems: 0
@@ -49,13 +51,13 @@ Generated at: 2026-06-18T20:46:05.328Z
 | https://ai-jiedan-lab.vercel.app/q/vercel/agent-production-deployment-checklist |  |  |
 | https://ai-jiedan-lab.vercel.app/q/ai-tools/agent-tool-calling-beginner-guide |  |  |
 
-### 2. Public mojibake and encoding repair
+### 2. Mojibake and encoding repair
 
 - Impact: critical
 - Status: watch
 - Owner: content-fix
-- Evidence: 0 public pages have possible mojibake warnings.
-- Action: Repair titles/descriptions/body text for public pages with encoding damage before expanding new content.
+- Evidence: 0 public pages and 0 non-public drafts/review candidates have possible mojibake warnings.
+- Action: Repair public encoding damage first; block draft/review candidates with mojibake from publishing until metadata and excerpts are readable.
 
 | File/URL | Title | Warnings |
 | --- | --- | --- |
@@ -110,7 +112,7 @@ Generated at: 2026-06-18T20:46:05.328Z
 
 - Do not expand beyond the current top 500 queue until crawl/indexing movement is visible in GSC.
 - Keep the top queue focused on q and cluster pages; use blog pages as depth targets, not the first manual request priority.
-- Repair public mojibake warnings first because broken titles/descriptions reduce trust and CTR even when indexed.
+- Repair public mojibake warnings first, and keep draft mojibake out of the publishing queue until titles/descriptions are repaired.
 - Rewrite snippet warnings for pages already in the GSC top 500 queue before touching lower-priority pages.
 - Normalize structured-data contentType values so schema warnings stay non-blocking and consistent.
 - Apply the internal-link opportunity suggestions to draft/recommended pages before publishing them.

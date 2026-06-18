@@ -76,7 +76,9 @@ function main() {
   const internalLinks = readJson<GenericAudit>(files.internalLinks);
   const gscProgress = readJson<GscProgress>(files.gscProgress);
 
-  const publicMojibakeItems = (contentIntegrity.warningItems ?? [])
+  const allMojibakeItems = (contentIntegrity.warningItems ?? [])
+    .filter((item) => item.warnings?.includes("possible mojibake or replacement character"));
+  const publicMojibakeItems = allMojibakeItems
     .filter((item) => item.status === "published" || item.scope?.includes("public"))
     .slice(0, 20);
   const publicSnippetItems = (snippets.warningItems ?? [])
@@ -92,7 +94,7 @@ function main() {
 
   const lanes: PriorityLane[] = [
     buildGscLane(gscProgress),
-    buildMojibakeLane(contentIntegrity, publicMojibakeItems),
+    buildMojibakeLane(contentIntegrity, publicMojibakeItems, allMojibakeItems.slice(0, 20)),
     buildSnippetLane(snippets, publicSnippetItems),
     buildSchemaLane(structuredData, publicSchemaItems),
     buildInternalLinkLane(internalLinks, internalLinkItems),
@@ -101,7 +103,7 @@ function main() {
   const nextSevenActions = [
     "Do not expand beyond the current top 500 queue until crawl/indexing movement is visible in GSC.",
     "Keep the top queue focused on q and cluster pages; use blog pages as depth targets, not the first manual request priority.",
-    "Repair public mojibake warnings first because broken titles/descriptions reduce trust and CTR even when indexed.",
+    "Repair public mojibake warnings first, and keep draft mojibake out of the publishing queue until titles/descriptions are repaired.",
     "Rewrite snippet warnings for pages already in the GSC top 500 queue before touching lower-priority pages.",
     "Normalize structured-data contentType values so schema warnings stay non-blocking and consistent.",
     "Apply the internal-link opportunity suggestions to draft/recommended pages before publishing them.",
@@ -127,6 +129,9 @@ function main() {
         Number(contentIntegrity.summary.blockingItems ?? 0) +
         Number(snippets.summary.blockingItems ?? 0) +
         Number(structuredData.summary.blockingItems ?? 0),
+      contentMojibakeWarningItems: Number(contentIntegrity.summary.mojibakeWarningItems ?? 0),
+      draftMojibakeWarningItems:
+        Number(contentIntegrity.summary.mojibakeWarningItems ?? 0) - Number(contentIntegrity.summary.publicMojibakeWarningItems ?? 0),
       publicMojibakeWarningItems: Number(contentIntegrity.summary.publicMojibakeWarningItems ?? 0),
       snippetWarningItems: Number(snippets.summary.warningItems ?? 0),
       schemaWarningItems: Number(structuredData.summary.warningItems ?? 0),
@@ -184,15 +189,18 @@ function buildGscLane(gscProgress: GscProgress): PriorityLane {
   };
 }
 
-function buildMojibakeLane(audit: GenericAudit, items: AuditItem[]): PriorityLane {
+function buildMojibakeLane(audit: GenericAudit, publicItems: AuditItem[], allItems: AuditItem[]): PriorityLane {
+  const total = Number(audit.summary.mojibakeWarningItems ?? 0);
+  const publicCount = Number(audit.summary.publicMojibakeWarningItems ?? 0);
+  const nonPublicCount = Math.max(total - publicCount, 0);
   return {
-    name: "Public mojibake and encoding repair",
+    name: "Mojibake and encoding repair",
     impact: "critical",
-    status: items.length > 0 ? "ready" : "watch",
+    status: allItems.length > 0 ? "ready" : "watch",
     owner: "content-fix",
-    evidence: `${audit.summary.publicMojibakeWarningItems ?? 0} public pages have possible mojibake warnings.`,
-    action: "Repair titles/descriptions/body text for public pages with encoding damage before expanding new content.",
-    sampleItems: items.map(compactItem),
+    evidence: `${publicCount} public pages and ${nonPublicCount} non-public drafts/review candidates have possible mojibake warnings.`,
+    action: "Repair public encoding damage first; block draft/review candidates with mojibake from publishing until metadata and excerpts are readable.",
+    sampleItems: uniqueByFile([...publicItems, ...allItems]).map(compactItem),
   };
 }
 

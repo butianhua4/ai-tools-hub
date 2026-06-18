@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-18T20:46:18.936Z",
-  "startedAt": "2026-06-18T20:46:00.928Z",
-  "endedAt": "2026-06-18T20:46:18.936Z",
+  "generatedAt": "2026-06-18T20:52:10.426Z",
+  "startedAt": "2026-06-18T20:51:52.314Z",
+  "endedAt": "2026-06-18T20:52:10.426Z",
   "guardrails": {
     "autoPublish": false,
     "autoGenerateMassContent": false,
@@ -126,12 +126,12 @@
       ]
     },
     {
-      "name": "Public mojibake and encoding repair",
+      "name": "Mojibake and encoding repair",
       "impact": "critical",
       "status": "watch",
       "owner": "content-fix",
-      "evidence": "0 public pages have possible mojibake warnings.",
-      "action": "Repair titles/descriptions/body text for public pages with encoding damage before expanding new content.",
+      "evidence": "0 public pages and 0 non-public drafts/review candidates have possible mojibake warnings.",
+      "action": "Repair public encoding damage first; block draft/review candidates with mojibake from publishing until metadata and excerpts are readable.",
       "sampleItems": []
     },
     {
@@ -562,7 +562,7 @@
   "tasks": [
     {
       "critical": true,
-      "durationMs": 1557,
+      "durationMs": 1524,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -571,7 +571,7 @@
     },
     {
       "critical": true,
-      "durationMs": 560,
+      "durationMs": 521,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -580,7 +580,7 @@
     },
     {
       "critical": false,
-      "durationMs": 1361,
+      "durationMs": 1679,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -589,7 +589,7 @@
     },
     {
       "critical": true,
-      "durationMs": 482,
+      "durationMs": 457,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -598,7 +598,7 @@
     },
     {
       "critical": true,
-      "durationMs": 474,
+      "durationMs": 461,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -607,7 +607,7 @@
     },
     {
       "critical": false,
-      "durationMs": 1636,
+      "durationMs": 1475,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -616,7 +616,7 @@
     },
     {
       "critical": true,
-      "durationMs": 691,
+      "durationMs": 672,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -625,7 +625,7 @@
     },
     {
       "critical": true,
-      "durationMs": 1794,
+      "durationMs": 1903,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -634,7 +634,7 @@
     },
     {
       "critical": true,
-      "durationMs": 855,
+      "durationMs": 902,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -643,7 +643,7 @@
     },
     {
       "critical": true,
-      "durationMs": 597,
+      "durationMs": 618,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -652,7 +652,7 @@
     },
     {
       "critical": true,
-      "durationMs": 609,
+      "durationMs": 605,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -661,7 +661,7 @@
     },
     {
       "critical": true,
-      "durationMs": 593,
+      "durationMs": 628,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
@@ -670,7 +670,7 @@
     },
     {
       "critical": false,
-      "durationMs": 6798,
+      "durationMs": 6665,
       "exitCode": 0,
       "ok": true,
       "stderrTail": "",
