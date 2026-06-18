@@ -207,7 +207,9 @@ function detectProblems(probes: Awaited<ReturnType<typeof getLiveProbes>>, growt
   if (growth.orphanPages > 0) problems.push({ severity: "red", area: "internal links", message: `${growth.orphanPages} orphan pages found.` });
   if (growth.weakPages > 0) problems.push({ severity: "yellow", area: "internal links", message: `${growth.weakPages} weak pages found.` });
   if (growth.growthStage === "cold_start") problems.push({ severity: "yellow", area: "growth", message: "Growth stage is still cold_start." });
-  if (vercel.state === "pending") problems.push({ severity: "yellow", area: "vercel", message: "Latest Vercel deployment is still pending." });
+  if (vercel.state === "pending" && !criticalLiveProbesOk(probes)) {
+    problems.push({ severity: "yellow", area: "vercel", message: "Latest Vercel deployment is still pending and live SEO probes are not fully healthy." });
+  }
   if (vercel.state === "failure" || vercel.state === "error") problems.push({ severity: "red", area: "vercel", message: `Latest Vercel deployment status is ${vercel.state}.` });
 
   return problems;
@@ -226,7 +228,7 @@ function getHealthScore(
   problems: Array<{ severity: Severity }>,
 ) {
   let score = 0;
-  if (vercel.state === "success" || vercel.state === "unknown") score += 15;
+  if (vercel.state === "success" || vercel.state === "unknown" || (vercel.state === "pending" && criticalLiveProbesOk(probes))) score += 15;
   if (probes.sitemapIndex.ok && probes.sitemapBlog.ok && probes.sitemapQ.ok && probes.sitemapCluster.ok) score += 20;
   if (probes.home.ok && probes.blog.ok && probes.q.ok) score += 20;
   if (growth.qPages >= 300 && growth.blogPages >= 300 && growth.clusterPages >= 6) score += 20;
@@ -243,7 +245,7 @@ function getNextActions(
   vercel: Awaited<ReturnType<typeof getVercelStatus>>,
 ) {
   const actions: string[] = [];
-  if (vercel.state === "pending") actions.push("Check the Vercel deployment URL if it stays pending for more than 20 minutes.");
+  if (vercel.state === "pending") actions.push("Monitor the Vercel deployment URL, but keep SEO work moving while live probes remain healthy.");
   if (!probes.home.ok) actions.push("Fix the homepage because it is the highest-authority public entry.");
   if (!probes.sitemapQ.ok || (probes.sitemapQ.locCount || 0) < 450) actions.push("Fix q sitemap before requesting more indexing.");
   if (!probes.indexNowKey.ok) actions.push("Fix IndexNow key route before submitting Bing batches.");
@@ -253,6 +255,21 @@ function getNextActions(
   actions.push("Prioritize exact problem-entry pages: Codex errors, Vercel failures, GitHub Actions failures, Agent deployment, RAG memory, API key and rate limits.");
   if (severity === "green") actions.push("Keep the current growth phase running; wait for Search Console to move discovered q/cluster pages into indexed pages.");
   return actions;
+}
+
+function criticalLiveProbesOk(probes: Awaited<ReturnType<typeof getLiveProbes>>) {
+  return [
+    probes.home,
+    probes.blog,
+    probes.q,
+    probes.sitemapIndex,
+    probes.sitemapBlog,
+    probes.sitemapQ,
+    probes.sitemapCluster,
+    probes.robots,
+    probes.growthApi,
+    probes.indexNowKey,
+  ].every((probeItem) => probeItem.ok);
 }
 
 function toMarkdown(report: {
