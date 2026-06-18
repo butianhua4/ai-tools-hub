@@ -1,6 +1,6 @@
 # IndexNow Readiness
 
-Generated at: 2026-06-18T09:25:28.701Z
+Generated at: 2026-06-18T09:47:46.045Z
 
 ## Guardrails
 
@@ -9,12 +9,12 @@ Generated at: 2026-06-18T09:25:28.701Z
 
 ## Status
 
-- Ready: false
+- Ready: true
 - Key URL: https://ai-jiedan-lab.vercel.app/indexnow-4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e.txt
-- Key HTTP status: 404
-- Key matches: false
-- Submission attempted: false
-- Submission ok: false
+- Key HTTP status: 200
+- Key matches: true
+- Submission attempted: true
+- Submission ok: true
 
 ## SEO State
 
@@ -43,6 +43,4 @@ Generated at: 2026-06-18T09:25:28.701Z
 
 ## Next Actions
 
-- Deploy the site and verify https://ai-jiedan-lab.vercel.app/indexnow-4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e.txt returns the IndexNow key.
-- Register or import the site in Bing Webmaster Tools.
-- After the key is live, run npm run indexnow:readiness -- --submit only for a small priority batch.
+- Submission attempted. Check the submission status field and Bing Webmaster Tools after processing delay.

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-06-18T09:25:28.701Z",
+  "generatedAt": "2026-06-18T09:47:46.045Z",
   "guardrails": {
     "submitByDefault": false,
     "note": "IndexNow is for Bing and other participating search engines. Google does not use IndexNow for normal q/blog pages."
   },
-  "ready": false,
+  "ready": true,
   "liveKey": {
-    "ok": false,
-    "status": 404,
+    "ok": true,
+    "status": 200,
     "url": "https://ai-jiedan-lab.vercel.app/indexnow-4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e.txt",
-    "valueMatches": false
+    "valueMatches": true
   },
   "payload": {
     "host": "ai-jiedan-lab.vercel.app",
@@ -28,7 +28,11 @@
       "https://ai-jiedan-lab.vercel.app/q/upwork/ai-freelance-failure-review"
     ]
   },
-  "submission": null,
+  "submission": {
+    "ok": true,
+    "status": 202,
+    "statusText": "Accepted"
+  },
   "summary": {
     "growthStage": "warming",
     "totalPages": 1006,
@@ -43,8 +47,6 @@
     "graphEdges": 9572
   },
   "nextActions": [
-    "Deploy the site and verify https://ai-jiedan-lab.vercel.app/indexnow-4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e.txt returns the IndexNow key.",
-    "Register or import the site in Bing Webmaster Tools.",
-    "After the key is live, run npm run indexnow:readiness -- --submit only for a small priority batch."
+    "Submission attempted. Check the submission status field and Bing Webmaster Tools after processing delay."
   ]
 }
