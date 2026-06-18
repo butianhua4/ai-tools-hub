@@ -1,0 +1,1073 @@
+{
+  "generatedAt": "2026-06-18T18:00:47.221Z",
+  "guardrails": {
+    "noFakeTrafficClaims": true,
+    "readOnlyAnalysis": true,
+    "note": "This report consolidates existing audits and queues. It does not generate new content or claim indexing, impressions, clicks, or income."
+  },
+  "summary": {
+    "growthStage": "warming",
+    "growthReadinessScore": 100,
+    "confirmedGscSubmitted": 0,
+    "gscRemaining": 500,
+    "topQueueUrls": 500,
+    "indexNowSubmitted": true,
+    "indexNowUrls": 500,
+    "blockingItems": 0,
+    "publicMojibakeWarningItems": 51,
+    "snippetWarningItems": 204,
+    "schemaWarningItems": 92,
+    "internalLinkCandidateItems": 16,
+    "internalLinkRecommendedItems": 3,
+    "orphanPages": 0,
+    "weakPages": 0
+  },
+  "priorityLanes": [
+    {
+      "name": "GSC manual indexing queue",
+      "impact": "critical",
+      "status": "ready",
+      "owner": "manual-gsc",
+      "evidence": "500 URLs prepared, 0 confirmed submitted, 500 remaining.",
+      "action": "Continue manual URL Inspection requests from the priority queue, then update the local confirmed count so progress stays auditable.",
+      "sampleItems": [
+        {
+          "rank": 1,
+          "url": "https://ai-jiedan-lab.vercel.app/cluster/ai-tools"
+        },
+        {
+          "rank": 2,
+          "url": "https://ai-jiedan-lab.vercel.app/cluster/codex"
+        },
+        {
+          "rank": 3,
+          "url": "https://ai-jiedan-lab.vercel.app/cluster/github"
+        },
+        {
+          "rank": 4,
+          "url": "https://ai-jiedan-lab.vercel.app/cluster/node-js-errors"
+        },
+        {
+          "rank": 5,
+          "url": "https://ai-jiedan-lab.vercel.app/cluster/upwork"
+        },
+        {
+          "rank": 6,
+          "url": "https://ai-jiedan-lab.vercel.app/cluster/vercel"
+        },
+        {
+          "rank": 7,
+          "url": "https://ai-jiedan-lab.vercel.app/q/ai-tools/agent-observability-logging-guide"
+        },
+        {
+          "rank": 8,
+          "url": "https://ai-jiedan-lab.vercel.app/q/vercel/agent-production-deployment-checklist"
+        },
+        {
+          "rank": 9,
+          "url": "https://ai-jiedan-lab.vercel.app/q/ai-tools/agent-tool-calling-beginner-guide"
+        },
+        {
+          "rank": 10,
+          "url": "https://ai-jiedan-lab.vercel.app/q/ai-tools/agent-tool-permission-safety-guide"
+        }
+      ]
+    },
+    {
+      "name": "Public mojibake and encoding repair",
+      "impact": "critical",
+      "status": "ready",
+      "owner": "content-fix",
+      "evidence": "51 public pages have possible mojibake warnings.",
+      "action": "Repair titles/descriptions/body text for public pages with encoding damage before expanding new content.",
+      "sampleItems": [
+        {
+          "file": "content/blog/ai-ppt-beginner-guide.mdx",
+          "title": "AI 做 PPT 怎么开始：新手从大纲到成稿的流程",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/ai-small-project-practice-topics-checklist.mdx",
+          "title": "AI 小项目练习选题检查清单",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/ai-tools-recommendation-beginner.mdx",
+          "title": "AI 工具推荐怎么选：新手别一开始买太多",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/before-first-ai-freelance-job.mdx",
+          "title": "第一次接 AI 小单前要准备什么",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/build-first-webpage-with-codex.mdx",
+          "title": "Codex 怎么做第一个网页",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/canva-portfolio-cover-tips-checklist.mdx",
+          "title": "Canva 作品集封面发布前检查清单",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-beginner-mistakes-checklist.mdx",
+          "title": "Claude Code 新手使用检查清单",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-beginner-mistakes-mistakes.mdx",
+          "title": "Claude Code 新手常见错误和修正方法",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-beginner-use-cases-checklist.mdx",
+          "title": "Claude Code 新手使用场景检查清单",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-beginner-use-cases.mdx",
+          "title": "Claude Code 新手适合用在哪些项目场景",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-bug-prompt-mistakes.mdx",
+          "title": "Claude Code Bug Prompt 常见错误",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-bug-prompt.mdx",
+          "title": "Claude Code 修 bug 的 prompt 怎么写",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-common-commands-mistakes.mdx",
+          "title": "Claude Code 新手运行常用命令时的常见错误",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-common-commands.mdx",
+          "title": "Claude Code 新手常用命令怎么整理成项目笔记",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-error-debug-mistakes.mdx",
+          "title": "Claude Code 排查客户报错时的常见错误",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-github-file-scope-mistakes.mdx",
+          "title": "Claude Code 看 GitHub 文件时的常见范围错误",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-small-project-tasks.mdx",
+          "title": "哪些小项目任务适合用 Claude Code 辅助项目",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-vs-codex-web-editing-checklist.mdx",
+          "title": "Claude Code 和 Codex 网页修改新手检查清单",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/codex-automation-steps-not-skip-mistakes.mdx",
+          "title": "Codex 自动化开发流程常见错误",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        },
+        {
+          "file": "content/blog/codex-automation-steps-not-skip.mdx",
+          "title": "Codex 自动化开发流程哪些步骤不能省",
+          "status": "published",
+          "warnings": [
+            "possible mojibake or replacement character"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Search snippet CTR repair",
+      "impact": "high",
+      "status": "ready",
+      "owner": "content-fix",
+      "evidence": "204 pages have snippet warnings, mostly title/keyword alignment.",
+      "action": "Prioritize title and description rewrites for pages in the GSC top queue and pages with future impressions.",
+      "sampleItems": [
+        {
+          "file": "content/blog/ads-income-when-to-start.mdx",
+          "title": "广告收入要等到什么时候再接",
+          "status": "published",
+          "slug": "ads-income-when-to-start",
+          "primaryKeyword": "广告收入什么时候开始",
+          "warnings": [
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/affiliate-vs-service-income-checklist.mdx",
+          "title": "联盟链接收入和服务收入有什么区别：新手检查清单",
+          "status": "published",
+          "slug": "affiliate-vs-service-income-checklist",
+          "primaryKeyword": "联盟链接收入和服务收入区别",
+          "warnings": [
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/affiliate-vs-service-income.mdx",
+          "title": "联盟链接收入和服务收入有什么区别",
+          "status": "published",
+          "slug": "affiliate-vs-service-income",
+          "primaryKeyword": "联盟链接收入和服务收入有什么区别",
+          "warnings": [
+            "description may be thin for search snippets"
+          ]
+        },
+        {
+          "file": "content/blog/agent-human-review-loop-guide.mdx",
+          "title": "Agent 人工审核流程怎么设计：什么时候自动，什么时候必须人确认",
+          "status": "published",
+          "slug": "agent-human-review-loop-guide",
+          "primaryKeyword": "Agent 人工审核流程",
+          "warnings": [
+            "description may be thin for search snippets"
+          ]
+        },
+        {
+          "file": "content/blog/agent-memory-design-guide.mdx",
+          "title": "Agent 记忆怎么设计：短期记忆、长期记忆和用户偏好",
+          "status": "published",
+          "slug": "agent-memory-design-guide",
+          "primaryKeyword": "Agent 记忆",
+          "warnings": [
+            "description may be thin for search snippets"
+          ]
+        },
+        {
+          "file": "content/blog/agent-memory-postgres-schema-guide.mdx",
+          "title": "Agent 记忆用 Postgres 怎么设计：用户偏好、项目事实和过期规则",
+          "status": "published",
+          "slug": "agent-memory-postgres-schema-guide",
+          "primaryKeyword": "Agent 记忆数据库设计",
+          "warnings": [
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/agent-tool-permission-safety-guide.mdx",
+          "title": "Agent 调工具怎么做权限控制：白名单、审批、沙箱和日志",
+          "status": "published",
+          "slug": "agent-tool-permission-safety-guide",
+          "primaryKeyword": "Agent 工具权限控制",
+          "warnings": [
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/ai-api-key-security-rotation-guide.mdx",
+          "title": "AI API Key 怎么安全管理：环境变量、权限、轮换、泄露应急",
+          "status": "published",
+          "slug": "ai-api-key-security-rotation-guide",
+          "primaryKeyword": "AI API Key 安全管理",
+          "warnings": [
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/ai-assisted-vs-automated-delivery-checklist.mdx",
+          "title": "AI 辅助交付和完全自动交付的检查清单",
+          "status": "published",
+          "slug": "ai-assisted-vs-automated-delivery-checklist",
+          "primaryKeyword": "AI 辅助交付检查清单",
+          "warnings": [
+            "description may be thin for search snippets",
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/ai-assisted-vs-automated-delivery-mistakes.mdx",
+          "title": "AI 辅助交付常见错误和解决步骤",
+          "status": "published",
+          "slug": "ai-assisted-vs-automated-delivery-mistakes",
+          "primaryKeyword": "AI 辅助交付常见错误",
+          "warnings": [
+            "description may be thin for search snippets"
+          ]
+        },
+        {
+          "file": "content/blog/ai-automation-project-pricing-scope-guide.mdx",
+          "title": "AI 自动化项目怎么报价：Dify、n8n、RAG、Agent 和维护范围",
+          "status": "published",
+          "slug": "ai-automation-project-pricing-scope-guide",
+          "primaryKeyword": "AI 自动化项目报价",
+          "warnings": [
+            "description may be thin for search snippets",
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/ai-beginner-project-fit-check-checklist.mdx",
+          "title": "AI 新手接项目前的项目适配检查清单",
+          "status": "published",
+          "slug": "ai-beginner-project-fit-check-checklist",
+          "primaryKeyword": "AI 新手接项目前检查清单",
+          "warnings": [
+            "description may be thin for search snippets",
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/ai-beginner-project-fit-check-mistakes.mdx",
+          "title": "AI 新手判断接项目时的常见错误",
+          "status": "published",
+          "slug": "ai-beginner-project-fit-check-mistakes",
+          "primaryKeyword": "AI 新手判断接项目常见错误",
+          "warnings": [
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/ai-beginner-project-fit-check.mdx",
+          "title": "AI 新手如何判断自己能不能接项目",
+          "status": "published",
+          "slug": "ai-beginner-project-fit-check",
+          "primaryKeyword": "AI 新手如何判断自己能不能接项目",
+          "warnings": [
+            "description may be thin for search snippets"
+          ]
+        },
+        {
+          "file": "content/blog/ai-coding-tools-risk-check-checklist.mdx",
+          "title": "AI 编程工具使用前风险检查清单",
+          "status": "published",
+          "slug": "ai-coding-tools-risk-check-checklist",
+          "primaryKeyword": "AI 编程工具风险检查清单",
+          "warnings": [
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/ai-coding-tools-risk-check.mdx",
+          "title": "AI 编程工具使用前要检查哪些风险",
+          "status": "published",
+          "slug": "ai-coding-tools-risk-check",
+          "primaryKeyword": "AI 编程工具风险检查",
+          "warnings": [
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/ai-content-human-review-template.mdx",
+          "title": "AI 生成内容人工审核表怎么设计",
+          "status": "published",
+          "slug": "ai-content-human-review-template",
+          "primaryKeyword": "AI 生成内容人工审核表怎么设计",
+          "warnings": [
+            "description may be thin for search snippets"
+          ]
+        },
+        {
+          "file": "content/blog/ai-freelance-30-day-execution-checklist.mdx",
+          "title": "新手 30 天 AI 工具实践执行检查清单",
+          "status": "published",
+          "slug": "ai-freelance-30-day-execution-checklist",
+          "primaryKeyword": "新手 30 天 AI 工具实践执行检查清单",
+          "warnings": [
+            "description may be thin for search snippets"
+          ]
+        },
+        {
+          "file": "content/blog/ai-freelance-30-day-execution-mistakes.mdx",
+          "title": "新手 30 天 AI 工具实践计划常见执行错误",
+          "status": "published",
+          "slug": "ai-freelance-30-day-execution-mistakes",
+          "primaryKeyword": "新手 30 天 AI 工具实践计划常见错误",
+          "warnings": [
+            "primary keyword is not an exact title substring"
+          ]
+        },
+        {
+          "file": "content/blog/ai-freelance-automation-compliance-risk-checklist.mdx",
+          "title": "AI 自动化项目合规风险检查清单",
+          "status": "published",
+          "slug": "ai-freelance-automation-compliance-risk-checklist",
+          "primaryKeyword": "AI 自动化项目合规风险检查清单",
+          "warnings": [
+            "description may be thin for search snippets"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Structured data normalization",
+      "impact": "medium",
+      "status": "ready",
+      "owner": "automation",
+      "evidence": "92 pages have schema warnings; current count is non-blocking.",
+      "action": "Normalize uncommon contentType values and keep JSON-LD consistent across q, cluster, and blog pages.",
+      "sampleItems": [
+        {
+          "file": "content/blog/ai-assisted-vs-automated-delivery-mistakes.mdx",
+          "title": "AI 辅助交付常见错误和解决步骤",
+          "status": "published",
+          "slug": "ai-assisted-vs-automated-delivery-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/ai-beginner-project-fit-check-mistakes.mdx",
+          "title": "AI 新手判断接项目时的常见错误",
+          "status": "published",
+          "slug": "ai-beginner-project-fit-check-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/ai-freelance-30-day-execution-mistakes.mdx",
+          "title": "新手 30 天 AI 工具实践计划常见执行错误",
+          "status": "published",
+          "slug": "ai-freelance-30-day-execution-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/ai-freelance-automation-compliance-risk-mistakes.mdx",
+          "title": "AI 自动化项目常见合规错误和解决步骤",
+          "status": "published",
+          "slug": "ai-freelance-automation-compliance-risk-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/ai-freelance-common-misconceptions-mistakes.mdx",
+          "title": "AI 工具实践误区的常见错误和解决步骤",
+          "status": "published",
+          "slug": "ai-freelance-common-misconceptions-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/ai-freelance-failure-review-mistakes.mdx",
+          "title": "AI 项目失败复盘常见错误",
+          "status": "published",
+          "slug": "ai-freelance-failure-review-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/ai-freelance-first-7-days-mistakes.mdx",
+          "title": "AI 工具新手 7 天准备常见错误",
+          "status": "published",
+          "slug": "ai-freelance-first-7-days-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/ai-freelance-service-page-copy-mistakes.mdx",
+          "title": "AI 服务页文案常见错误",
+          "status": "published",
+          "slug": "ai-freelance-service-page-copy-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/ai-freelance-skill-roadmap-mistakes.mdx",
+          "title": "AI 工具技能路线图常见错误",
+          "status": "published",
+          "slug": "ai-freelance-skill-roadmap-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/ai-output-unstable-risk-control-mistakes.mdx",
+          "title": "AI 输出不稳定风险控制常见错误",
+          "status": "published",
+          "slug": "ai-output-unstable-risk-control-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/ai-small-project-practice-topics-mistakes.mdx",
+          "title": "AI 小项目练习常见错误",
+          "status": "published",
+          "slug": "ai-small-project-practice-topics-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/ai-tools-stack-free-start-mistakes.mdx",
+          "title": "AI 免费工具栈常见错误",
+          "status": "published",
+          "slug": "ai-tools-stack-free-start-mistakes",
+          "category": "AI 自由职业路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/api-key-invalid-or-missing-mistakes.mdx",
+          "title": "API Key 无效或缺失的常见错误和修复步骤",
+          "status": "published",
+          "slug": "api-key-invalid-or-missing-mistakes",
+          "category": "报错解决",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/before-first-ai-freelance-job-mistakes.mdx",
+          "title": "第一次接 AI 小单前最容易犯的错误",
+          "status": "published",
+          "slug": "before-first-ai-freelance-job-mistakes",
+          "category": "新手路线",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/bugfix-delivery-note-template.mdx",
+          "title": "Bug 修复交付说明模板怎么写",
+          "status": "published",
+          "slug": "bugfix-delivery-note-template",
+          "category": "模板和清单",
+          "warnings": [
+            "contentType is uncommon: template"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-automation-human-review-mistakes.mdx",
+          "title": "Claude Code 自动化最容易忽略的人工审核错误",
+          "status": "published",
+          "slug": "claude-code-automation-human-review-mistakes",
+          "category": "工具流程",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-beginner-mistakes-mistakes.mdx",
+          "title": "Claude Code 新手常见错误和修正方法",
+          "status": "published",
+          "slug": "claude-code-beginner-mistakes-mistakes",
+          "category": "工具流程",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-beginner-use-cases-mistakes.mdx",
+          "title": "Claude Code 新手选使用场景时的常见错误",
+          "status": "published",
+          "slug": "claude-code-beginner-use-cases-mistakes",
+          "category": "工具流程",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-bug-prompt-mistakes.mdx",
+          "title": "Claude Code Bug Prompt 常见错误",
+          "status": "published",
+          "slug": "claude-code-bug-prompt-mistakes",
+          "category": "工具流程",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        },
+        {
+          "file": "content/blog/claude-code-client-questions-mistakes.mdx",
+          "title": "Claude Code 项目前问客户时的常见错误",
+          "status": "published",
+          "slug": "claude-code-client-questions-mistakes",
+          "category": "工具流程",
+          "warnings": [
+            "contentType is uncommon: troubleshooting"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Internal-link opportunity queue",
+      "impact": "high",
+      "status": "ready",
+      "owner": "automation",
+      "evidence": "16 candidate items and 3 recommended items have link suggestions.",
+      "action": "Apply suggested public links to candidates before publishing and keep every new page above the internal-link floor.",
+      "sampleItems": [
+        {
+          "file": "content/blog/tools-not-to-buy-first.mdx",
+          "title": "AI 工具新手不应该先买哪些工具",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 3,
+          "suggestions": [
+            {
+              "title": "Codex 需求不清楚的任务使用前怎么判断是否适合",
+              "url": "/blog/codex-client-requirement-questions-freelance-scope",
+              "score": 91
+            },
+            {
+              "title": "新手如何记录每天的项目练习",
+              "url": "/blog/daily-ai-freelance-practice-log",
+              "score": 88
+            },
+            {
+              "title": "第一个作品集案例真实性检查清单",
+              "url": "/blog/first-portfolio-case-realistic-checklist",
+              "score": 88
+            }
+          ]
+        },
+        {
+          "file": "content/blog/vector-database-selection-for-rag-guide.mdx",
+          "title": "RAG 向量数据库怎么选：pgvector、Qdrant、Milvus 先看项目边界",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 3,
+          "suggestions": [
+            {
+              "title": "Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤",
+              "url": "/blog/qdrant-vector-database-beginner-guide",
+              "score": 118
+            },
+            {
+              "title": "RAG 知识库怎么搭：文档、切分、检索和回答复核",
+              "url": "/blog/rag-knowledge-base-beginner-guide",
+              "score": 106
+            },
+            {
+              "title": "Chroma 向量数据库怎么用：本地 RAG 原型先跑通 collection",
+              "url": "/blog/chroma-vector-database-rag-guide",
+              "score": 102
+            }
+          ]
+        },
+        {
+          "file": "content/blog/vercel-ai-gateway-multi-provider-guide.mdx",
+          "title": "Vercel AI Gateway 怎么做多模型接入：OpenAI、Claude、Gemini 和降级",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 3,
+          "suggestions": [
+            {
+              "title": "多模型 Router 怎么做降级：主模型、备用模型、成本和质量评估",
+              "url": "/blog/multi-model-router-fallback-guide",
+              "score": 106
+            },
+            {
+              "title": "Claude API Rate limit reached 怎么办：限流、上下文、重试和降级",
+              "url": "/blog/claude-api-rate-limit-debug-guide",
+              "score": 74
+            },
+            {
+              "title": "Gemini API 限流怎么排查：RPM、TPM、批量请求和降级模型",
+              "url": "/blog/gemini-api-rate-limit-debug-guide",
+              "score": 74
+            }
+          ]
+        },
+        {
+          "file": "content/blog/subscription-payment-failed-message.mdx",
+          "title": "订阅支付失败怎么和客户沟通",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 3,
+          "suggestions": [
+            {
+              "title": "订阅支付失败怎么和客户沟通：新手检查清单",
+              "url": "/blog/subscription-payment-failed-message-checklist",
+              "score": 170
+            },
+            {
+              "title": "人工服务先用什么方式收款更稳妥：新手检查清单",
+              "url": "/blog/service-payment-method-beginner-checklist",
+              "score": 130
+            },
+            {
+              "title": "人工服务先用什么方式收款更稳妥",
+              "url": "/blog/service-payment-method-beginner",
+              "score": 126
+            }
+          ]
+        },
+        {
+          "file": "content/blog/supabase-pgvector-rag-guide.mdx",
+          "title": "Supabase pgvector 做 RAG 怎么开始：Postgres 里的向量检索",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 3,
+          "suggestions": [
+            {
+              "title": "Qdrant 向量数据库怎么用：RAG 新手先看集合、向量和过滤",
+              "url": "/blog/qdrant-vector-database-beginner-guide",
+              "score": 114
+            },
+            {
+              "title": "Pinecone 做 RAG 怎么开始：索引、metadata 和召回测试",
+              "url": "/blog/pinecone-rag-beginner-guide",
+              "score": 110
+            },
+            {
+              "title": "Chroma 向量数据库怎么用：本地 RAG 原型先跑通 collection",
+              "url": "/blog/chroma-vector-database-rag-guide",
+              "score": 98
+            }
+          ]
+        },
+        {
+          "file": "content/blog/tensorrt-llm-beginner-guide.mdx",
+          "title": "TensorRT-LLM 怎么入门：NVIDIA GPU 推理优化先看模型和验收",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 3,
+          "suggestions": [
+            {
+              "title": "本地部署大模型怎么开始：新手先看硬件、模型和用途",
+              "url": "/blog/local-llm-deployment-beginner",
+              "score": 82
+            },
+            {
+              "title": "大模型部署成本和延迟怎么估算：上线前检查清单",
+              "url": "/blog/llm-serving-cost-latency-checklist",
+              "score": 78
+            },
+            {
+              "title": "Ray Serve 怎么部署 LLM：多节点、多模型和 OpenAI 兼容接口入门",
+              "url": "/blog/ray-serve-llm-deployment-guide",
+              "score": 74
+            }
+          ]
+        },
+        {
+          "file": "content/blog/together-ai-api-beginner-guide.mdx",
+          "title": "Together AI API 怎么接入：开源模型接口、embedding 和部署边界",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 5,
+          "suggestions": [
+            {
+              "title": "OpenRouter API 怎么接入：统一模型入口不是只换 Base URL",
+              "url": "/blog/openrouter-api-beginner-guide",
+              "score": 90
+            },
+            {
+              "title": "Groq API 怎么接入：高速推理适合什么 AI 应用",
+              "url": "/blog/groq-api-fast-llm-guide",
+              "score": 86
+            },
+            {
+              "title": "Replicate API 怎么做 AI Demo：模型调用、部署和费用边界",
+              "url": "/blog/replicate-api-ai-demo-guide",
+              "score": 82
+            }
+          ]
+        },
+        {
+          "file": "content/blog/vercel-404-after-deploy-checklist.mdx",
+          "title": "Vercel 部署后 404 检查清单：逐页验收更稳",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 3,
+          "suggestions": [
+            {
+              "title": "npm run dev 能跑但 build 失败使用前怎么判断是否适合",
+              "url": "/blog/dev-works-build-fails-freelance-scope",
+              "score": 110
+            },
+            {
+              "title": "dependency conflict 依赖冲突使用前怎么判断是否适合",
+              "url": "/blog/dependency-conflict-fix-freelance-scope",
+              "score": 106
+            },
+            {
+              "title": "环境变量 missing 使用前怎么判断是否适合",
+              "url": "/blog/env-variable-missing-fix-freelance-scope",
+              "score": 106
+            }
+          ]
+        },
+        {
+          "file": "content/blog/vercel-404-after-deploy-freelance-scope.mdx",
+          "title": "Vercel 404 部署成功但页面打不开怎么办：使用前怎么判断是否适合",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 6,
+          "suggestions": [
+            {
+              "title": "permission denied 报错新手怎么处理：使用前怎么判断是否适合",
+              "url": "/blog/permission-denied-fix-freelance-scope",
+              "score": 154
+            },
+            {
+              "title": "Next.js hydration error 怎么排查：使用前怎么判断是否适合",
+              "url": "/blog/nextjs-hydration-error-debug-freelance-scope",
+              "score": 146
+            },
+            {
+              "title": "环境变量 missing 使用前怎么判断是否适合",
+              "url": "/blog/env-variable-missing-fix-freelance-scope",
+              "score": 134
+            }
+          ]
+        },
+        {
+          "file": "content/blog/vercel-404-after-deploy.mdx",
+          "title": "Vercel 部署成功但页面 404：新手排查顺序",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 2,
+          "suggestions": [
+            {
+              "title": "Next.js hydration error 怎么排查：使用前怎么判断是否适合",
+              "url": "/blog/nextjs-hydration-error-debug-freelance-scope",
+              "score": 98
+            },
+            {
+              "title": "Node 版本不匹配使用前怎么判断是否适合",
+              "url": "/blog/node-version-mismatch-fix-freelance-scope",
+              "score": 98
+            },
+            {
+              "title": "Node 版本不匹配常见错误和解决步骤",
+              "url": "/blog/node-version-mismatch-fix-mistakes",
+              "score": 98
+            }
+          ]
+        },
+        {
+          "file": "content/blog/vercel-ai-sdk-chatbot-deploy-guide.mdx",
+          "title": "Vercel AI SDK 聊天机器人怎么部署：Next.js 流式输出和上线检查",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 4,
+          "suggestions": [
+            {
+              "title": "Gemini API 怎么接 Next.js：从 API Key 到服务端 Route Handler",
+              "url": "/blog/gemini-api-nextjs-guide",
+              "score": 94
+            },
+            {
+              "title": "Claude API 怎么接入：Messages API、费用和上下文边界",
+              "url": "/blog/claude-api-beginner-guide",
+              "score": 86
+            },
+            {
+              "title": "Ollama API 怎么接到网页应用：本地模型到前后端调用",
+              "url": "/blog/ollama-api-web-app-integration",
+              "score": 82
+            }
+          ]
+        },
+        {
+          "file": "content/blog/vercel-deploy-checklist-template.mdx",
+          "title": "Vercel 部署检查表怎么写：给新手的上线模板",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 3,
+          "suggestions": [
+            {
+              "title": "小网站上线检查 SOP 怎么写：新手检查清单",
+              "url": "/blog/small-site-launch-sop-checklist",
+              "score": 114
+            },
+            {
+              "title": "作品集页面文案模板怎么写真实：新手检查清单",
+              "url": "/blog/portfolio-page-copy-template-checklist",
+              "score": 110
+            },
+            {
+              "title": "新手练习项目记录表怎么用：新手检查清单",
+              "url": "/blog/practice-project-log-template-checklist",
+              "score": 110
+            }
+          ]
+        },
+        {
+          "file": "content/blog/vllm-deployment-beginner-guide.mdx",
+          "title": "vLLM 部署适合什么场景：新手先看推理服务边界",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 3,
+          "suggestions": [
+            {
+              "title": "本地部署大模型怎么开始：新手先看硬件、模型和用途",
+              "url": "/blog/local-llm-deployment-beginner",
+              "score": 90
+            },
+            {
+              "title": "RunPod Serverless 怎么部署大模型：Endpoint、Worker 和冷启动边界",
+              "url": "/blog/runpod-serverless-llm-deployment-guide",
+              "score": 90
+            },
+            {
+              "title": "Agent 生产上线检查表：权限、日志、成本和人工确认",
+              "url": "/blog/agent-production-deployment-checklist",
+              "score": 86
+            }
+          ]
+        },
+        {
+          "file": "content/blog/windows-path-permission-install-fix-checklist.mdx",
+          "title": "Windows 路径和权限导致安装失败怎么办：新手检查清单",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 6,
+          "suggestions": [
+            {
+              "title": "permission denied 报错新手怎么处理：新手检查清单",
+              "url": "/blog/permission-denied-fix-checklist",
+              "score": 134
+            },
+            {
+              "title": "permission denied 报错新手怎么处理：使用前怎么判断是否适合",
+              "url": "/blog/permission-denied-fix-freelance-scope",
+              "score": 130
+            },
+            {
+              "title": "Next.js hydration error 怎么排查：使用前怎么判断是否适合",
+              "url": "/blog/nextjs-hydration-error-debug-freelance-scope",
+              "score": 122
+            }
+          ]
+        },
+        {
+          "file": "content/blog/windows-path-permission-install-fix-freelance-scope.mdx",
+          "title": "Windows 路径和权限导致安装失败怎么办：使用前怎么判断是否适合",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 6,
+          "suggestions": [
+            {
+              "title": "permission denied 报错新手怎么处理：使用前怎么判断是否适合",
+              "url": "/blog/permission-denied-fix-freelance-scope",
+              "score": 154
+            },
+            {
+              "title": "Next.js hydration error 怎么排查：使用前怎么判断是否适合",
+              "url": "/blog/nextjs-hydration-error-debug-freelance-scope",
+              "score": 146
+            },
+            {
+              "title": "GitHub Actions build 失败使用前怎么判断是否适合",
+              "url": "/blog/github-actions-build-log-debug-freelance-scope",
+              "score": 138
+            }
+          ]
+        },
+        {
+          "file": "content/blog/windows-path-permission-install-fix.mdx",
+          "title": "Windows 路径和权限导致安装失败怎么办",
+          "status": "draft",
+          "warnings": [],
+          "currentInternalLinks": 6,
+          "suggestions": [
+            {
+              "title": "permission denied 报错新手怎么处理：使用前怎么判断是否适合",
+              "url": "/blog/permission-denied-fix-freelance-scope",
+              "score": 130
+            },
+            {
+              "title": "Next.js hydration error 怎么排查：使用前怎么判断是否适合",
+              "url": "/blog/nextjs-hydration-error-debug-freelance-scope",
+              "score": 122
+            },
+            {
+              "title": "permission denied 报错新手怎么处理：新手检查清单",
+              "url": "/blog/permission-denied-fix-checklist",
+              "score": 122
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "nextSevenActions": [
+    "Do not expand beyond the current top 500 queue until crawl/indexing movement is visible in GSC.",
+    "Keep the top queue focused on q and cluster pages; use blog pages as depth targets, not the first manual request priority.",
+    "Repair public mojibake warnings first because broken titles/descriptions reduce trust and CTR even when indexed.",
+    "Rewrite snippet warnings for pages already in the GSC top 500 queue before touching lower-priority pages.",
+    "Normalize structured-data contentType values so schema warnings stay non-blocking and consistent.",
+    "Apply the internal-link opportunity suggestions to draft/recommended pages before publishing them.",
+    "Record real manual GSC progress in content/automation/gsc-manual-progress.json after URL Inspection submissions."
+  ]
+}

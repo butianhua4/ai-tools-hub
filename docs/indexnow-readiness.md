@@ -1,6 +1,6 @@
 # IndexNow Readiness
 
-Generated at: 2026-06-18T17:29:16.911Z
+Generated at: 2026-06-18T17:50:04.086Z
 
 ## Guardrails
 

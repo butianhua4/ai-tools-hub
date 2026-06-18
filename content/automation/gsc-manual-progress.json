@@ -1,0 +1,8 @@
+{
+  "confirmedSubmittedCount": 0,
+  "lastSubmittedAt": null,
+  "lastSubmittedUrl": null,
+  "notes": [
+    "Update confirmedSubmittedCount after manual URL Inspection requests in GSC."
+  ]
+}

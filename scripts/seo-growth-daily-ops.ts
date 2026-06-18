@@ -297,7 +297,7 @@ function toMarkdown(payload: {
     "",
     ...payload.gscDailyActions.todayBatch.map((item, index) => `${index + 1}. ${item.url} (${item.type}, ${item.cluster}, score ${item.score})`),
     "",
-    "### Top 100 Queue",
+    `### Top ${payload.gscDailyActions.topQueueTarget} Queue`,
     "",
     ...payload.gscDailyActions.topQueue.map((item, index) => `${index + 1}. ${item.url} (${item.type}, ${item.cluster}, score ${item.score})`),
     "",

@@ -1,6 +1,6 @@
 # SEO Growth Daily Ops
 
-Generated at: 2026-06-18T17:28:44.554Z
+Generated at: 2026-06-18T17:49:25.092Z
 
 ## Guardrails
 
@@ -430,7 +430,7 @@ Generated at: 2026-06-18T17:28:44.554Z
 399. https://ai-jiedan-lab.vercel.app/blog/env-variable-missing-fix-freelance-scope (blog, upwork, score -166)
 400. https://ai-jiedan-lab.vercel.app/q/github/huggingface-spaces-ai-demo-guide (q, github, score -166)
 
-### Top 100 Queue
+### Top 500 Queue
 
 1. https://ai-jiedan-lab.vercel.app/cluster/ai-tools (cluster, ai-tools, score 100)
 2. https://ai-jiedan-lab.vercel.app/cluster/codex (cluster, codex, score 100)
