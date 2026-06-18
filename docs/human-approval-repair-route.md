@@ -1,6 +1,6 @@
 # Human Approval Repair Route
 
-Generated at: 2026-06-18T06:21:36.928Z
+Generated at: 2026-06-18T11:36:50.589Z
 
 This report is read-only. It converts the repair queue into a manual repair order and stops before article edits or status changes.
 

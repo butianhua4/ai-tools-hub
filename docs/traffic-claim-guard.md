@@ -1,11 +1,11 @@
 # Traffic Claim Guard
-Generated at: 2026-06-18T06:22:40.265Z
+Generated at: 2026-06-18T11:37:27.317Z
 This guard scans operational reports and docs for unsupported claims that real traffic, clicks, impressions, or visits already exist.
 ## Guardrails
 - Auto publish: false
 - Note: This guard scans operational docs and automation reports for unsupported traffic claims. It does not scan draft article teaching examples.
 ## Summary
-- filesScanned: 225
+- filesScanned: 227
 - measuredTrafficUnavailable: true
 - unsafeClaims: 0
 - watchMentions: 9553
@@ -75,7 +75,7 @@ None.
 | docs/automation-digest.md | 1311 | - Measured traffic sources: none |
 | docs/automation-digest.md | 1312 | - Search Console verification evidence: false |
 | docs/automation-digest.md | 1315 | - Unsupported traffic claims: 0 |
-| docs/automation-digest.md | 1316 | - Traffic claim files scanned: 225 |
+| docs/automation-digest.md | 1316 | - Traffic claim files scanned: 227 |
 | docs/automation-digest.md | 1317 | - Traffic claim watch mentions: 9553 |
 | docs/automation-digest.md | 1330 | - Traffic data available: false |
 | docs/automation-digest.md | 1452 | \| AI 提示词 \| 2026-06-14 \| 4 \| 医疗行政 AI 提示词模板：病历摘要、随访问卷和宣教材料怎么安全写 \| /blog/healthcare-admin-ai-prompts-guide \| |

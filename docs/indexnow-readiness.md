@@ -1,6 +1,6 @@
 # IndexNow Readiness
 
-Generated at: 2026-06-18T09:47:46.045Z
+Generated at: 2026-06-18T11:37:30.046Z
 
 ## Guardrails
 
@@ -13,8 +13,8 @@ Generated at: 2026-06-18T09:47:46.045Z
 - Key URL: https://ai-jiedan-lab.vercel.app/indexnow-4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e.txt
 - Key HTTP status: 200
 - Key matches: true
-- Submission attempted: true
-- Submission ok: true
+- Submission attempted: false
+- Submission ok: false
 
 ## SEO State
 
@@ -43,4 +43,5 @@ Generated at: 2026-06-18T09:47:46.045Z
 
 ## Next Actions
 
-- Submission attempted. Check the submission status field and Bing Webmaster Tools after processing delay.
+- Key file is live. Keep report generation automated.
+- Use --submit only after Bing Webmaster Tools is registered and the daily URL batch is reviewed.

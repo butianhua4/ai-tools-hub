@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T06:22:47.802Z",
+  "generatedAt": "2026-06-18T11:37:35.502Z",
   "guardrails": {
     "autoPublish": false,
     "note": "Digest is read-only. It summarizes local automation reports and does not use traffic, impressions, or Search Console performance data."
@@ -21162,7 +21162,7 @@
     "trafficDataAvailable": false
   },
   "trafficClaimGuard": {
-    "filesScanned": 225,
+    "filesScanned": 227,
     "measuredTrafficUnavailable": true,
     "unsafeClaims": 0,
     "watchMentions": 9553
@@ -68943,7 +68943,7 @@
   "liveSearch": {
     "checkedArticles": 500,
     "failedChecks": [],
-    "generatedAt": "2026-06-18T06:22:38.899Z",
+    "generatedAt": "2026-06-18T11:37:26.032Z",
     "missingFromSitemap": [],
     "ok": true,
     "publicArticles": 500
