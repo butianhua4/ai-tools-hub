@@ -34,10 +34,10 @@ function main() {
   const graphSummary = getSeoGraphSummary();
   const growth = getSeoGrowthReport(graph);
   const clusters = buildClusterItems();
-  const qPages = buildQuestionItems(72);
-  const blogPages = buildBlogItems(qPages, 30);
+  const qPages = buildQuestionItems(140);
+  const blogPages = buildBlogItems(qPages, 80);
   const allItems = [...clusters, ...qPages, ...blogPages].sort((a, b) => b.score - a.score || a.path.localeCompare(b.path));
-  const firstManualBatch = allItems.slice(0, 30);
+  const firstManualBatch = allItems.slice(0, 100);
   const payload = {
     generatedAt: new Date().toISOString(),
     guardrails: {
@@ -59,9 +59,9 @@ function main() {
       graphEdges: graphSummary.edgeCount,
     },
     recommendedManualBatchSize: {
-      firstDay: 30,
-      dailyAfterFirstDay: 20,
-      note: "Accelerated mode: submit hubs first, then q pages, then matching blog pages. Avoid requesting all 500 URLs in one day.",
+      firstDay: 100,
+      dailyAfterFirstDay: 30,
+      note: "Accelerated mode: prepare the top 100 URL Inspection queue first. Stop early if GSC rate-limits requests.",
     },
     firstManualBatch,
     sections: {
@@ -231,7 +231,7 @@ function toMarkdown(payload: {
     "",
     "## First Manual Batch",
     "",
-    `Submit these ${firstDay.length} URLs first. Then continue with the next 20 high-priority URLs per day if GSC allows it.`,
+    `Submit these ${firstDay.length} URLs first if GSC allows it. Stop at the current GSC limit and continue from the next URL later.`,
     "",
     ...firstDay.map((item, index) => `${index + 1}. ${item.url} - ${item.reason}`),
     "",
@@ -249,8 +249,8 @@ function toMarkdown(payload: {
     "",
     "## Operating Rule",
     "",
-    `- First day: submit about ${payload.recommendedManualBatchSize.firstDay} URLs.`,
-    `- After first day: submit about ${payload.recommendedManualBatchSize.dailyAfterFirstDay} URLs/day if needed.`,
+    `- Top queue target: prepare ${payload.recommendedManualBatchSize.firstDay} URLs.`,
+    `- After the top queue is processed: continue about ${payload.recommendedManualBatchSize.dailyAfterFirstDay} URLs/day if needed.`,
     `- ${payload.recommendedManualBatchSize.note}`,
     "",
   ].join("\n");

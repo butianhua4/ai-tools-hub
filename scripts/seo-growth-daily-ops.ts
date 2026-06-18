@@ -46,7 +46,10 @@ const priorityJson = path.join(process.cwd(), "content", "automation", "gsc-inde
 const outputJson = path.join(process.cwd(), "content", "automation", "seo-growth-daily-ops.json");
 const outputMarkdown = path.join(process.cwd(), "docs", "seo-growth-daily-ops.md");
 const outputText = path.join(process.cwd(), "docs", "gsc-url-inspection-today.txt");
-const dailyBatchSize = 20;
+const outputTop100Text = path.join(process.cwd(), "docs", "gsc-url-inspection-top-100.txt");
+const dailyBatchSize = 30;
+const topQueueTarget = 100;
+const launchDaySubmittedTarget = 30;
 const launchDate = "2026-06-18";
 
 const laneSeeds = [
@@ -92,6 +95,7 @@ function main() {
   const priority = readPriority();
   const queue = getInspectionQueue(priority.allItems);
   const batchPlan = getTodayBatchPlan(queue, priority.recommendedManualBatchSize.firstDay);
+  const topQueue = queue.slice(0, Math.min(topQueueTarget, queue.length));
   const problemLanes = buildProblemLanes(priority.allItems);
   const payload = {
     generatedAt: new Date().toISOString(),
@@ -104,6 +108,7 @@ function main() {
       sitemapIndex: "https://ai-jiedan-lab.vercel.app/sitemap.xml",
       submitSitemapFirst: true,
       manualUrlInspectionLimit: dailyBatchSize,
+      topQueueTarget,
       launchDate,
       dayIndex: batchPlan.dayIndex,
       queueSize: queue.length,
@@ -111,7 +116,8 @@ function main() {
       batchEnd: Math.min(queue.length, batchPlan.start + batchPlan.todayBatch.length),
       wrapsQueue: batchPlan.wrapsQueue,
       todayBatch: batchPlan.todayBatch,
-      operatingRule: "Submit sitemap.xml first in GSC. Then use URL Inspection for about 15-30 URLs from todayBatch if GSC allows it. Do not request indexing for hundreds of URLs in one day.",
+      topQueue,
+      operatingRule: "Submit sitemap.xml first in GSC. Then use URL Inspection from todayBatch until the top 100 queue is processed or GSC rate-limits requests.",
     },
     contentDailyActions: {
       targetFormat: "problem-entry page",
@@ -127,6 +133,7 @@ function main() {
   fs.writeFileSync(outputJson, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
   fs.writeFileSync(outputMarkdown, toMarkdown(payload), "utf8");
   fs.writeFileSync(outputText, toTextBatch(batchPlan.todayBatch), "utf8");
+  fs.writeFileSync(outputTop100Text, toTextBatch(topQueue), "utf8");
 
   console.log(
     JSON.stringify(
@@ -135,6 +142,7 @@ function main() {
         json: rel(outputJson),
         markdown: rel(outputMarkdown),
         text: rel(outputText),
+        top100Text: rel(outputTop100Text),
         todayBatch: batchPlan.todayBatch.length,
         batchStart: batchPlan.start + 1,
         batchEnd: Math.min(queue.length, batchPlan.start + batchPlan.todayBatch.length),
@@ -158,7 +166,7 @@ function readPriority(): PriorityPayload {
 }
 
 function getInspectionQueue(items: PriorityItem[]) {
-  return items.filter((item) => item.type === "cluster" || item.type === "q");
+  return items.filter((item) => item.type === "cluster" || item.type === "q" || item.type === "blog");
 }
 
 function getTodayBatchPlan(queue: PriorityItem[], firstDaySize: number) {
@@ -167,8 +175,19 @@ function getTodayBatchPlan(queue: PriorityItem[], firstDaySize: number) {
   }
 
   const dayIndex = Math.max(0, daysSinceLaunch());
-  const start = dayIndex === 0 ? 0 : firstDaySize + (dayIndex - 1) * dailyBatchSize;
-  const wrappedStart = start % queue.length;
+  if (dayIndex === 0) {
+    return { dayIndex, start: 0, todayBatch: queue.slice(0, Math.min(firstDaySize, queue.length)), wrapsQueue: false };
+  }
+
+  const previousTarget = Math.min(topQueueTarget, launchDaySubmittedTarget, firstDaySize);
+  const start = Math.min(previousTarget, queue.length);
+  const targetEnd = Math.min(topQueueTarget, queue.length);
+  if (start < targetEnd) {
+    return { dayIndex, start, todayBatch: queue.slice(start, targetEnd), wrapsQueue: false };
+  }
+
+  const laterStart = topQueueTarget + (dayIndex - 1) * dailyBatchSize;
+  const wrappedStart = laterStart % queue.length;
   const todayBatch = queue.slice(wrappedStart, wrappedStart + dailyBatchSize);
   if (todayBatch.length === dailyBatchSize) {
     return { dayIndex, start: wrappedStart, todayBatch, wrapsQueue: false };
@@ -229,6 +248,8 @@ function toMarkdown(payload: {
     sitemapIndex: string;
     submitSitemapFirst: boolean;
     todayBatch: PriorityItem[];
+    topQueue: PriorityItem[];
+    topQueueTarget: number;
     wrapsQueue: boolean;
   };
   guardrails: {
@@ -264,13 +285,17 @@ function toMarkdown(payload: {
     "## Daily GSC Actions",
     "",
     `1. Submit sitemap index: ${payload.gscDailyActions.sitemapIndex}`,
-    `2. Manual URL Inspection limit: ${payload.gscDailyActions.manualUrlInspectionLimit}`,
+    `2. Top queue target: ${payload.gscDailyActions.topQueueTarget}`,
     `3. Queue window: day ${payload.gscDailyActions.dayIndex + 1} since ${payload.gscDailyActions.launchDate}, URLs ${payload.gscDailyActions.batchStart}-${payload.gscDailyActions.batchEnd} of ${payload.gscDailyActions.queueSize}${payload.gscDailyActions.wrapsQueue ? " plus queue restart" : ""}`,
     `4. Rule: ${payload.gscDailyActions.operatingRule}`,
     "",
     "### Today URL Inspection Batch",
     "",
     ...payload.gscDailyActions.todayBatch.map((item, index) => `${index + 1}. ${item.url} (${item.type}, ${item.cluster}, score ${item.score})`),
+    "",
+    "### Top 100 Queue",
+    "",
+    ...payload.gscDailyActions.topQueue.map((item, index) => `${index + 1}. ${item.url} (${item.type}, ${item.cluster}, score ${item.score})`),
     "",
     "## Daily Content Actions",
     "",

@@ -11,6 +11,12 @@ type DailyOps = {
       cluster: string;
       score: number;
     }>;
+    topQueue?: Array<{
+      url: string;
+      type: string;
+      cluster: string;
+      score: number;
+    }>;
   };
   summary: {
     growthStage: string;
@@ -31,7 +37,8 @@ const outputMarkdown = path.join(process.cwd(), "docs", "indexnow-readiness.md")
 async function main() {
   const shouldSubmit = process.argv.includes("--submit") || process.env.INDEXNOW_SUBMIT === "true";
   const dailyOps = readDailyOps();
-  const urlList = uniqueUrls(dailyOps.gscDailyActions.todayBatch.map((item) => item.url)).slice(0, 10);
+  const indexNowItems = dailyOps.gscDailyActions.topQueue ?? dailyOps.gscDailyActions.todayBatch;
+  const urlList = uniqueUrls(indexNowItems.map((item) => item.url)).slice(0, 100);
   const keyLocation = `${base}/${keyFile}`;
   const liveKey = await checkLiveKey(keyLocation);
   const payload = {
