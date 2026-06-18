@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const post = findQuestionPost(category, slug);
   if (!post) return {};
 
-  const title = `${post.title}: 快速解决方案`;
-  const description = `围绕“${post.title}”整理快速解决方案、详细步骤、风险提示和深度文章入口。`;
+  const title = `${post.title}: quick fix, steps, and related guide`;
+  const description = `Fix ${post.title} with a short answer, practical steps, commands when available, risk notes, and a deeper guide.`;
 
   return {
     title,
@@ -52,7 +52,7 @@ export default async function QuestionPage({ params }: { params: Promise<{ categ
           </Link>
           <span>/</span>
           <Link className="font-medium text-brand" href={getBlogPath(post)}>
-            深度文章
+            Deep guide
           </Link>
         </div>
         <h1 className="mt-4 break-words text-3xl font-bold leading-tight text-ink md:text-4xl">{post.title}</h1>
@@ -62,22 +62,24 @@ export default async function QuestionPage({ params }: { params: Promise<{ categ
       <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
         <article className="min-w-0 space-y-8">
           <section>
-            <h2 className="text-2xl font-bold text-ink">问题是什么</h2>
+            <h2 className="text-2xl font-bold text-ink">What is the problem?</h2>
             <p className="mt-3 leading-8 text-gray-700">{post.description}</p>
           </section>
 
           <section className="rounded-lg border border-blue-100 bg-blue-50 p-5">
-            <h2 className="text-xl font-semibold text-ink">快速解决方案</h2>
+            <h2 className="text-xl font-semibold text-ink">Quick solution</h2>
             <p className="mt-3 leading-8 text-gray-700">
-              先确认这是 {cluster.shortTitle} 主题下的 {post.contentType} 问题，再按深度文章逐项检查环境、输入、权限和交付边界。需要完整背景时，继续阅读对应深度文章。
+              Treat this as a {cluster.shortTitle} {post.contentType} issue. First confirm the environment,
+              inputs, permissions, logs, and delivery boundary. Then use the linked deep guide for the full
+              checklist before changing production code or promising a result.
             </p>
             <Link className="mt-4 inline-flex rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white" href={getBlogPath(post)}>
-              阅读深度文章
+              Read the deep guide
             </Link>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-ink">详细步骤</h2>
+            <h2 className="text-2xl font-bold text-ink">Detailed steps</h2>
             <ol className="mt-4 space-y-3">
               {steps.map((step) => (
                 <li className="rounded-md border border-gray-200 bg-white p-4 text-sm leading-7 text-gray-700" key={step}>
@@ -88,27 +90,32 @@ export default async function QuestionPage({ params }: { params: Promise<{ categ
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-ink">命令 / 代码</h2>
+            <h2 className="text-2xl font-bold text-ink">Commands or code</h2>
             {code ? (
               <pre className="mt-4 overflow-auto rounded-lg bg-slate-950 p-4 text-sm leading-7 text-slate-100">
                 <code>{code}</code>
               </pre>
             ) : (
-              <p className="mt-3 rounded-md border border-gray-200 bg-white p-4 text-sm leading-7 text-gray-700">原始文章没有提供可复制的命令块，因此这里不编造命令；请按深度文章里的检查步骤执行。</p>
+              <p className="mt-3 rounded-md border border-gray-200 bg-white p-4 text-sm leading-7 text-gray-700">
+                The source article does not include a copyable command block. Do not invent commands here; follow
+                the diagnostic steps in the deep guide and validate changes in the real project environment.
+              </p>
             )}
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-ink">风险提示</h2>
+            <h2 className="text-2xl font-bold text-ink">Risk notes</h2>
             <p className="mt-3 leading-8 text-gray-700">
-              这个问题需要人工确认真实项目环境、账号权限、平台规则和输出结果。不要把 AI 生成内容直接交付给客户，也不要承诺未经验证的收入或部署结果。
+              Confirm the real project environment, account permissions, platform rules, and output quality before
+              delivery. Do not ship AI-generated changes without human review, and do not claim indexing, income,
+              deployment success, or ranking improvements without measured evidence.
             </p>
           </section>
         </article>
 
         <aside className="space-y-5 lg:sticky lg:top-24 lg:self-start">
           <section className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-            <h2 className="text-lg font-semibold text-ink">相关问题</h2>
+            <h2 className="text-lg font-semibold text-ink">Related questions</h2>
             <div className="mt-3 space-y-3">
               {relatedQuestions.slice(0, 8).map((question) => (
                 <Link className="block text-sm leading-6 text-brand hover:underline" href={question.path} key={question.path}>
@@ -119,13 +126,13 @@ export default async function QuestionPage({ params }: { params: Promise<{ categ
           </section>
 
           <section className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-            <h2 className="text-lg font-semibold text-ink">权重回流</h2>
+            <h2 className="text-lg font-semibold text-ink">Link flow</h2>
             <div className="mt-3 space-y-3 text-sm">
               <Link className="block text-brand hover:underline" href={getBlogPath(post)}>
-                Blog 深度内容
+                Blog deep content
               </Link>
               <Link className="block text-brand hover:underline" href={getClusterPath(cluster.slug)}>
-                Cluster 主题中心
+                Cluster hub
               </Link>
             </div>
           </section>
@@ -153,8 +160,8 @@ function extractSteps(content: string) {
   if (listItems.length >= 3) return listItems;
 
   return [
-    "先确认问题所属场景、工具版本、账号权限和输入材料是否完整。",
-    "再根据深度文章逐项检查配置、日志、命令输出和人工审核边界。",
-    "最后记录修改前后的结果，确认没有引入新的平台违规、隐私或交付风险。",
+    "Confirm the scenario, tool version, account permissions, inputs, and expected output before changing anything.",
+    "Check configuration, logs, command output, and human review boundaries against the linked deep guide.",
+    "Record the before and after result, then verify that the fix did not introduce platform, privacy, or delivery risk.",
   ];
 }

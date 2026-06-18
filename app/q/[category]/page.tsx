@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const cluster = getClusterBySlug(category);
   if (!cluster) return {};
 
-  const title = `${cluster.shortTitle} 问题入口`;
-  const description = `整理 ${cluster.shortTitle} 主题下的高频问题入口，链接到 q 页面、主题中心和深度教程。`;
+  const title = `${cluster.shortTitle} troubleshooting questions`;
+  const description = `Browse high-intent ${cluster.shortTitle} questions with q pages, cluster hubs, and deep tutorials for practical SEO entry traffic.`;
 
   return {
     title,
@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
       title,
       description,
       url: `${site.url}/q/${cluster.slug}`,
+      type: "website",
     },
   };
 }
@@ -52,24 +53,24 @@ export default async function QuestionCategoryPage({ params }: { params: Promise
       <section className="rounded-lg border border-gray-200 bg-gradient-to-b from-sky-50 to-white p-6 shadow-sm md:p-8">
         <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600">
           <Link className="font-medium text-brand" href="/q">
-            AI 问题入口
+            AI problem entrances
           </Link>
           <span>/</span>
           <Link className="font-medium text-brand" href={getClusterPath(cluster.slug)}>
-            {cluster.shortTitle} 主题中心
+            {cluster.shortTitle} cluster hub
           </Link>
         </div>
-        <h1 className="mt-4 break-words text-3xl font-bold leading-tight text-ink md:text-5xl">{cluster.shortTitle} 问题入口</h1>
+        <h1 className="mt-4 break-words text-3xl font-bold leading-tight text-ink md:text-5xl">{cluster.shortTitle} troubleshooting questions</h1>
         <p className="mt-4 max-w-3xl text-base leading-8 text-gray-700">{cluster.description}</p>
         <div className="mt-6 grid gap-3 sm:grid-cols-3">
           <Link className="rounded-md bg-brand px-4 py-3 text-center text-sm font-semibold text-white" href={getClusterPath(cluster.slug)}>
-            查看主题中心
+            View cluster hub
           </Link>
           <Link className="rounded-md border border-gray-300 bg-white px-4 py-3 text-center text-sm font-semibold text-ink" href="/blog">
-            查看教程库
+            View deep guides
           </Link>
           <Link className="rounded-md border border-gray-300 bg-white px-4 py-3 text-center text-sm font-semibold text-ink" href="/tools">
-            查看工具导航
+            View tools
           </Link>
         </div>
       </section>
@@ -77,10 +78,13 @@ export default async function QuestionCategoryPage({ params }: { params: Promise
       <section className="mt-8">
         <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
           <div>
-            <h2 className="text-2xl font-bold text-ink">该主题下的全部问题</h2>
-            <p className="mt-2 max-w-3xl text-sm leading-6 text-gray-600">优先展示高潜力问题，其余问题继续保留为可点击入口，避免 q 页面只存在于 sitemap 里。</p>
+            <h2 className="text-2xl font-bold text-ink">All questions in this topic</h2>
+            <p className="mt-2 max-w-3xl text-sm leading-6 text-gray-600">
+              High-potential questions are shown first. Every q page links back to a deep article and this cluster
+              hub, so crawlers and readers can move through the full topic network.
+            </p>
           </div>
-          <p className="text-sm text-gray-500">共 {posts.length} 个问题</p>
+          <p className="text-sm text-gray-500">{posts.length} questions</p>
         </div>
         <div className="mt-5 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
@@ -97,8 +101,10 @@ export default async function QuestionCategoryPage({ params }: { params: Promise
       </section>
 
       <section className="mt-10 rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-ink">深度教程入口</h2>
-        <p className="mt-2 text-sm leading-6 text-gray-600">如果 q 页只能回答快速路径，可以继续进入对应 blog 深度文章。</p>
+        <h2 className="text-2xl font-bold text-ink">Deep guide entry points</h2>
+        <p className="mt-2 text-sm leading-6 text-gray-600">
+          Use the q page for the fast answer, then continue to the matching blog article for the full checklist.
+        </p>
         <div className="mt-5 grid gap-3 md:grid-cols-2">
           {posts.slice(0, 12).map((post) => (
             <Link className="rounded-md border border-gray-100 bg-gray-50 p-3 transition hover:border-brand/50 hover:bg-white" href={getBlogPath(post)} key={post.slug}>
