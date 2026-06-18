@@ -26,6 +26,9 @@ const checks = [
   ["/sitemap-cluster.xml", "<urlset"],
   ["/robots.txt", "Sitemap"],
   ["/llms.txt", "Draft and noindex articles are intentionally excluded"],
+  ["/q/ai-tools/agent-tool-permission-safety-guide", "What is the problem?"],
+  ["/q/ai-tools", "All questions in this topic"],
+  ["/cluster/ai-tools", "Internal link map"],
 ] as const;
 
 async function main() {
