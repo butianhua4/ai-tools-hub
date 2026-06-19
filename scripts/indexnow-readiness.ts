@@ -28,7 +28,7 @@ type DailyOps = {
 };
 
 const key = "4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e";
-const keyFile = `indexnow-${key}.txt`;
+const keyFile = `${key}.txt`;
 const base = site.url.replace(/\/+$/, "");
 const dailyOpsJson = path.join(process.cwd(), "content", "automation", "seo-growth-daily-ops.json");
 const outputJson = path.join(process.cwd(), "content", "automation", "indexnow-readiness.json");

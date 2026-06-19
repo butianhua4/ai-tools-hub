@@ -103,7 +103,7 @@ async function getLiveProbes() {
     sitemapCluster: await probe(`${base}/sitemap-cluster.xml`, ["<urlset"], true),
     robots: await probe(`${base}/robots.txt`, ["Sitemap", "Allow"]),
     growthApi: await probe(`${base}/api/seo/growth-report`, ["growthStage", "qPages"]),
-    indexNowKey: await probe(`${base}/indexnow-${indexNowKey}.txt`, [indexNowKey]),
+    indexNowKey: await probe(`${base}/${indexNowKey}.txt`, [indexNowKey]),
   };
 
   return probes;
