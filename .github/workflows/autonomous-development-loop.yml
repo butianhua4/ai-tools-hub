@@ -27,8 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_TELEMETRY_DISABLED: 1
-      AUTONOMOUS_MODE: ${{ github.event_name == 'schedule' && 'report-only' || inputs.mode }}
-      AUTONOMOUS_COMMIT: ${{ github.event_name == 'workflow_dispatch' && inputs.mode == 'execute-low-risk' && '1' || '0' }}
+      AUTONOMOUS_MODE: ${{ github.event_name == 'schedule' && 'execute-low-risk' || inputs.mode }}
+      AUTONOMOUS_COMMIT: ${{ (github.event_name == 'schedule' || inputs.mode == 'execute-low-risk') && '1' || '0' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -42,7 +42,7 @@ jobs:
       - run: npm ci
 
       - name: Configure git author
-        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'execute-low-risk'
+        if: env.AUTONOMOUS_COMMIT == '1'
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
@@ -60,7 +60,7 @@ jobs:
           fi
 
       - name: Push autonomous commit
-        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'execute-low-risk'
+        if: env.AUTONOMOUS_COMMIT == '1'
         shell: bash
         run: |
           if git diff --quiet && git diff --cached --quiet; then
