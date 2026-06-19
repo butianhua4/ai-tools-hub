@@ -35,6 +35,19 @@ const mojibakePatterns = [
   /(?:鎬庝箞|鐨勭|鍋氾|绋嬶|妫€|锛氬|銆|浠庡|庝箞|叿|楠岃|||||)/,
 ];
 
+const commonChineseMojibakeMarkers = [
+  "\u5bb8", // common in broken UTF-8/GBK output
+  "\u93c2",
+  "\u936b",
+  "\u9359",
+  "\u9365",
+  "\u941e",
+  "\u7487",
+  "\u6d94",
+  "\u5d85",
+  "\ue63f",
+];
+
 async function main() {
   const reviewCandidates = readJson<ReviewCandidates>("content/automation/review-candidates.json");
   const waveApprovalPacket = readJson<WaveApprovalPacket>("content/automation/wave-approval-packet.json");
@@ -123,7 +136,7 @@ function auditFile(file: string, recommended: Set<string>, waveFiles: Set<string
     status !== "published" && article.data.noindex === false ? "non-published article must not be indexable" : "",
   ].filter(Boolean);
   const warnings = [
-    mojibakePatterns.some((pattern) => pattern.test(inspectedText)) ? "possible mojibake or replacement character" : "",
+    hasMojibake(inspectedText) ? "possible mojibake or replacement character" : "",
   ].filter(Boolean);
 
   return {
@@ -136,6 +149,16 @@ function auditFile(file: string, recommended: Set<string>, waveFiles: Set<string
     titleLength: title.length,
     warnings,
   };
+}
+
+function hasMojibake(text: string): boolean {
+  if (mojibakePatterns.some((pattern) => pattern.test(text))) return true;
+
+  const markerHits = commonChineseMojibakeMarkers.reduce((count, marker) => (
+    text.includes(marker) ? count + 1 : count
+  ), 0);
+
+  return markerHits >= 3 && chineseCount(text) >= 8;
 }
 
 function normalizeFile(file: string) {
