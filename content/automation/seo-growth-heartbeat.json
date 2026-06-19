@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T09:45:02.577Z",
+  "generatedAt": "2026-06-19T10:20:25.932Z",
   "guardrails": {
     "fakeTrafficClaims": false,
     "fakeRevenueClaims": false,
@@ -35,8 +35,8 @@
       "ok": true,
       "status": 200,
       "url": "https://ai.aporet.com/",
-      "cache": "HIT",
-      "age": "466",
+      "cache": "PRERENDER",
+      "age": "0",
       "contains": {
         "500": true,
         "AI 工具指南": true,
@@ -47,8 +47,8 @@
       "ok": true,
       "status": 200,
       "url": "https://ai.aporet.com/blog",
-      "cache": "HIT",
-      "age": "425",
+      "cache": "PRERENDER",
+      "age": "0",
       "contains": {
         "500": true,
         "新手教程": true,
@@ -59,8 +59,8 @@
       "ok": true,
       "status": 200,
       "url": "https://ai.aporet.com/q",
-      "cache": "HIT",
-      "age": "424",
+      "cache": "PRERENDER",
+      "age": "0",
       "contains": {
         "Question Layer": true,
         "/q/codex": true
@@ -71,7 +71,7 @@
       "status": 200,
       "url": "https://ai.aporet.com/sitemap.xml",
       "cache": "HIT",
-      "age": "466",
+      "age": "0",
       "contains": {
         "<sitemapindex": true
       }
@@ -80,8 +80,8 @@
       "ok": true,
       "status": 200,
       "url": "https://ai.aporet.com/sitemap-blog.xml",
-      "cache": "HIT",
-      "age": "424",
+      "cache": "PRERENDER",
+      "age": "0",
       "contains": {
         "<urlset": true
       },
@@ -91,8 +91,8 @@
       "ok": true,
       "status": 200,
       "url": "https://ai.aporet.com/sitemap-q.xml",
-      "cache": "HIT",
-      "age": "466",
+      "cache": "PRERENDER",
+      "age": "0",
       "contains": {
         "<urlset": true
       },
@@ -102,8 +102,8 @@
       "ok": true,
       "status": 200,
       "url": "https://ai.aporet.com/sitemap-cluster.xml",
-      "cache": "HIT",
-      "age": "466",
+      "cache": "PRERENDER",
+      "age": "0",
       "contains": {
         "<urlset": true
       },
@@ -114,7 +114,7 @@
       "status": 200,
       "url": "https://ai.aporet.com/robots.txt",
       "cache": "HIT",
-      "age": "623",
+      "age": "0",
       "contains": {
         "Sitemap": true,
         "Allow": true
@@ -135,8 +135,8 @@
       "ok": true,
       "status": 200,
       "url": "https://ai.aporet.com/4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e.txt",
-      "cache": "HIT",
-      "age": "468",
+      "cache": "PRERENDER",
+      "age": "0",
       "contains": {
         "4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e": true
       }
@@ -144,10 +144,10 @@
   },
   "vercel": {
     "repository": "butianhua4/ai-jiedan-lab",
-    "sha": "debba84b1374509c5f450af24766f21a5dd2938e",
+    "sha": "838efbfb461ddb0fe79cbc74d08353874cff60d7",
     "state": "pending",
     "description": "Vercel is deploying your app",
-    "targetUrl": "https://vercel.com/ip-studio-s-projects/ai-jiedan-lab/4tGo1fny8Zw45xaYFwszzNSdEvfe"
+    "targetUrl": "https://vercel.com/ip-studio-s-projects/ai-jiedan-lab/EbxWXYVsTv7Jw3mXqWZ2sj7vQEV1"
   },
   "problems": [],
   "nextActions": [

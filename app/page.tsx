@@ -32,6 +32,39 @@ const searchEntrances = [
   ["实用工具", "报价、Proposal、报错解释、成本估算和 SEO 刷新。", "/tools"],
 ];
 
+const usSearchProblems = [
+  {
+    title: "Vercel env variable missing",
+    description: "Fix missing production variables, preview settings, and deployment environment drift.",
+    href: "/q/vercel/env-variable-missing-fix",
+  },
+  {
+    title: "GitHub Actions build failed",
+    description: "Read workflow logs, isolate the failing step, and decide whether code or permissions are the issue.",
+    href: "/q/github/github-actions-build-log-debug",
+  },
+  {
+    title: "Claude API rate limit reached",
+    description: "Plan retries, queues, fallback models, and safe logging before promising production stability.",
+    href: "/q/ai-tools/claude-api-rate-limit-debug-guide",
+  },
+  {
+    title: "RAG retrieval returns no context",
+    description: "Check source data, chunking, embeddings, retrieval filters, and answer grounding.",
+    href: "/q/ai-tools/rag-retrieval-no-context-debug-guide",
+  },
+  {
+    title: "AI agent production deployment checklist",
+    description: "Review tool permissions, memory, logs, costs, human approval, monitoring, and rollback.",
+    href: "/q/vercel/agent-production-deployment-checklist",
+  },
+  {
+    title: "Agent tool permission safety",
+    description: "Design allowlists, parameter validation, sandbox execution, audit logs, and approval gates.",
+    href: "/q/ai-tools/agent-tool-permission-safety-guide",
+  },
+];
+
 const toolCards = [
   {
     title: "Upwork Proposal 生成器",
@@ -122,6 +155,29 @@ export default function Home() {
         {trustItems.map((item) => (
           <div key={item} className="rounded-lg border border-gray-200 bg-white p-4 text-center text-sm font-semibold text-ink shadow-sm">{item}</div>
         ))}
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-8">
+        <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
+          <div>
+            <p className="text-sm font-medium text-brand">US search entry points</p>
+            <h2 className="mt-1 text-2xl font-bold text-ink">High-intent AI troubleshooting topics</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-600">
+              These English problem pages target concrete searches around Vercel, GitHub Actions, Claude API,
+              RAG retrieval, agent deployment, and tool permissions. They route readers into deeper guides and
+              topic clusters instead of stopping at a generic article list.
+            </p>
+          </div>
+          <Link href="/en" className="text-sm font-medium text-brand">Open English entry</Link>
+        </div>
+        <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {usSearchProblems.map((item) => (
+            <Link key={item.href} href={item.href} className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm transition hover:border-brand/50 hover:shadow-md">
+              <h3 className="break-words text-base font-semibold leading-6 text-ink">{item.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-600">{item.description}</p>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-8">
