@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T09:08:43.615Z",
+  "generatedAt": "2026-06-19T09:55:25.200Z",
   "guardrails": {
     "submitByDefault": false,
     "note": "IndexNow is for Bing and other participating search engines. Google does not use IndexNow for normal q/blog pages."
@@ -523,7 +523,7 @@
     "status": 200,
     "statusText": "OK"
   },
-  "submissionAttemptedThisRun": true,
+  "submissionAttemptedThisRun": false,
   "summary": {
     "growthStage": "warming",
     "totalPages": 1006,
@@ -538,6 +538,7 @@
     "graphEdges": 9572
   },
   "nextActions": [
-    "Submission attempted. Check the submission status field and Bing Webmaster Tools after processing delay."
+    "Key file is live. Keep report generation automated.",
+    "Use --submit only after Bing Webmaster Tools is registered and the daily URL batch is reviewed."
   ]
 }

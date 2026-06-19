@@ -1,6 +1,6 @@
 # IndexNow Readiness
 
-Generated at: 2026-06-19T09:08:43.615Z
+Generated at: 2026-06-19T09:55:25.200Z
 
 ## Guardrails
 
@@ -13,7 +13,7 @@ Generated at: 2026-06-19T09:08:43.615Z
 - Key URL: https://ai.aporet.com/4d7b5e9c9f2a4c7c8e7d2a6b3c1f0a9e.txt
 - Key HTTP status: 200
 - Key matches: true
-- Submission attempted this run: true
+- Submission attempted this run: false
 - Last submission recorded: true
 - Submission ok: true
 
@@ -534,4 +534,5 @@ Generated at: 2026-06-19T09:08:43.615Z
 
 ## Next Actions
 
-- Submission attempted. Check the submission status field and Bing Webmaster Tools after processing delay.
+- Key file is live. Keep report generation automated.
+- Use --submit only after Bing Webmaster Tools is registered and the daily URL batch is reviewed.
