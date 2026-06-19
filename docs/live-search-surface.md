@@ -1,6 +1,6 @@
 # Live Search Surface Check
 
-Generated at: 2026-06-19T11:50:41.799Z
+Generated at: 2026-06-19T15:39:53.065Z
 
 This report checks the live production search surfaces. It does not use Search Console traffic, impressions, or ranking data.
 
@@ -15,7 +15,7 @@ Overall: PASS
 
 ## Search Surfaces
 
-- Sitemap index count: 5
+- Sitemap index count: 4
 - Blog sitemap URL count: 500
 - Q sitemap URL count: 507
 - Cluster sitemap URL count: 6

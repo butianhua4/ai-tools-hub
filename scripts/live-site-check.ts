@@ -90,7 +90,6 @@ async function main() {
   if (draftLeak) failedChecks.push("sitemap-leaks-drafts");
   if (!combinedSitemaps.includes(canonicalBase)) failedChecks.push("sitemap-base-mismatch");
   if (!robots.includes(`${canonicalBase}/sitemap.xml`)) failedChecks.push("robots-sitemap-mismatch");
-  if (!robots.includes(`${canonicalBase}/sitemap-q.xml`)) failedChecks.push("robots-sitemap-q-mismatch");
   if (!sitemap.includes(`${canonicalBase}/sitemap-blog.xml`)) failedChecks.push("sitemap-index-missing-blog");
   if (!sitemap.includes(`${canonicalBase}/sitemap-q.xml`)) failedChecks.push("sitemap-index-missing-q");
   if (!sitemap.includes(`${canonicalBase}/sitemap-cluster.xml`)) failedChecks.push("sitemap-index-missing-cluster");

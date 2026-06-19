@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T11:50:41.799Z",
+  "generatedAt": "2026-06-19T15:39:53.065Z",
   "ok": true,
   "base": "https://ai.aporet.com",
   "fetchBase": "https://ai.aporet.com",
@@ -119,7 +119,7 @@
     "clusterUrlCount": 6,
     "leaksDrafts": false,
     "qUrlCount": 507,
-    "sitemapIndexCount": 5,
+    "sitemapIndexCount": 4,
     "usesBase": true
   },
   "robots": {

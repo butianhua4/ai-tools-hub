@@ -1,6 +1,6 @@
 # Deployment Freshness
 
-Generated at: 2026-06-19T11:50:43.565Z
+Generated at: 2026-06-19T15:38:32.913Z
 
 This report checks whether production HTML matches the current SEO code expectations.
 
@@ -30,7 +30,7 @@ This report checks whether production HTML matches the current SEO code expectat
 | cluster hub uses current English title | PASS | AI tools and LLM applications topic hub | AI tools and LLM applications topic hub \| AI Tools Guide | https://ai.aporet.com/cluster/ai-tools |
 | cluster hub uses current English H1 | PASS | AI tools and LLM applications topic hub | AI tools and LLM applications topic hub | https://ai.aporet.com/cluster/ai-tools |
 | q index is reachable with JSON-LD | PASS | 200 and at least 4 JSON-LD blocks | 200, 4 JSON-LD block(s) | https://ai.aporet.com/q |
-| main sitemap index includes q, cluster, blog, and priority sitemaps | PASS | sitemap-q.xml, sitemap-cluster.xml, sitemap-blog.xml, sitemap-priority.xml | 200, length=680 | https://ai.aporet.com/sitemap.xml |
+| main sitemap index includes q, cluster, blog, and static sitemaps | PASS | sitemap-q.xml, sitemap-cluster.xml, sitemap-blog.xml, sitemap-static.xml | 200, length=565 | https://ai.aporet.com/sitemap.xml |
 
 ## Next Actions
 

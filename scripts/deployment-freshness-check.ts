@@ -90,12 +90,12 @@ async function main() {
     sitemap.html.includes("/sitemap-q.xml") &&
     sitemap.html.includes("/sitemap-cluster.xml") &&
     sitemap.html.includes("/sitemap-blog.xml") &&
-    sitemap.html.includes("/sitemap-priority.xml");
+    sitemap.html.includes("/sitemap-static.xml");
   checks.push({
-    name: "main sitemap index includes q, cluster, blog, and priority sitemaps",
+    name: "main sitemap index includes q, cluster, blog, and static sitemaps",
     ok: sitemapOk,
     url: sitemap.url,
-    expected: "sitemap-q.xml, sitemap-cluster.xml, sitemap-blog.xml, sitemap-priority.xml",
+    expected: "sitemap-q.xml, sitemap-cluster.xml, sitemap-blog.xml, sitemap-static.xml",
     actual: `${sitemap.status}, length=${sitemap.html.length}`,
     detail: sitemap.error || undefined,
   });
