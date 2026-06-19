@@ -1,6 +1,6 @@
 # Search Snippet Readiness Audit
 
-Generated at: 2026-06-19T06:41:13.244Z
+Generated at: 2026-06-19T11:49:31.040Z
 
 This report is read-only. It checks titles, descriptions, slugs, and indexing boundaries for public and publish-candidate snippets.
 

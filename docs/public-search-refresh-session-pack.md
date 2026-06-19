@@ -1,6 +1,6 @@
 # Public Search Refresh Session Pack
 
-Generated at: 2026-06-19T06:41:40.381Z
+Generated at: 2026-06-19T11:49:57.960Z
 
 This report is read-only. It turns public refresh waves into manual SEO refresh sessions without editing public pages or claiming traffic.
 
