@@ -8,7 +8,7 @@ import { site } from "@/data/site";
 
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID || process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
-const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
+const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "x9c2phrvfy";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
