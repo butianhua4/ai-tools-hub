@@ -59,6 +59,8 @@ jobs:
           refresh_code=0
           npm run traffic:evidence -- --url=https://ai-jiedan-lab.vercel.app
           refresh_code=$(( refresh_code || $? ))
+          npm run deploy:freshness -- --url=https://ai-jiedan-lab.vercel.app --fetch-retries=4 --fetch-timeout-ms=15000
+          refresh_code=$(( refresh_code || $? ))
           npm run traffic:claim-guard
           refresh_code=$(( refresh_code || $? ))
           npm run search-console:indexing-priority

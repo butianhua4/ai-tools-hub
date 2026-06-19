@@ -35,6 +35,7 @@ const tasks: Task[] = [
   { title: "Refresh GSC submission progress", args: ["run", "search-console:progress"], critical: true },
   { title: "Refresh SEO improvement priority", args: ["run", "seo:improvement-priority"], critical: true },
   { title: "Run traffic evidence audit", args: ["run", "traffic:evidence", "--", `--url=${baseUrl}`, "--fetch-retries=4", "--fetch-timeout-ms=15000"] },
+  { title: "Check production deployment freshness", args: ["run", "deploy:freshness", "--", `--url=${baseUrl}`, "--fetch-retries=4", "--fetch-timeout-ms=15000"] },
   { title: "Run traffic claim guard", args: ["run", "traffic:claim-guard"], critical: true },
   { title: "Run searchability check", args: ["run", "searchability:check"], critical: true },
   { title: "Run SEO safety check", args: ["run", "seo:check"], critical: true },

@@ -98,6 +98,7 @@
     "searchability:check": "tsx scripts/searchability-audit.ts",
     "smoke:web": "tsx scripts/web-smoke-check.ts",
     "live:check": "tsx scripts/live-site-check.ts",
+    "deploy:freshness": "tsx scripts/deployment-freshness-check.ts",
     "content:integrity": "tsx scripts/content-integrity-audit.ts",
     "content:internal-links": "tsx scripts/internal-link-opportunity-audit.ts",
     "automation:internal-link-sprint": "tsx scripts/internal-link-sprint-board.ts",
