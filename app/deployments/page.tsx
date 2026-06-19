@@ -132,8 +132,8 @@ export default function DeploymentsPage() {
               先从主题中心进入，再分流到具体问题页和深度教程，形成部署类内容的内链闭环。
             </p>
           </div>
-          <Link className="text-sm font-medium text-brand hover:underline" href="/admin/seo-growth">
-            查看增长状态
+          <Link className="text-sm font-medium text-brand hover:underline" href="/cluster/vercel">
+            查看 Vercel 主题中心
           </Link>
         </div>
         <div className="mt-5 grid gap-4 md:grid-cols-3">

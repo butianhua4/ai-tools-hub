@@ -130,7 +130,7 @@ export default function TemplatesPage() {
               <h2 className="text-2xl font-bold text-ink">高频模板问题入口</h2>
               <p className="mt-2 text-sm leading-6 text-gray-600">这些 /q 页面覆盖“模板怎么写、清单怎么做、交付怎么验收、报价怎么拆”这类长尾搜索。</p>
             </div>
-            <Link className="text-sm font-medium text-brand hover:underline" href="/q/upwork/upwork-proposal-beginner-guide">
+            <Link className="text-sm font-medium text-brand hover:underline" href="/q/upwork/chatgpt-vs-claude-proposal">
               查看示例 q 页
             </Link>
           </div>
