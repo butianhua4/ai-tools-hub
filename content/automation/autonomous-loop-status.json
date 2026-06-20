@@ -1,12 +1,12 @@
 {
   "enabled": true,
   "mode": "execute-low-risk",
-  "currentStage": "monetization",
-  "lastRunAt": "2026-06-19T18:05:13.381Z",
-  "lastTask": "Add GA/Clarity detection status",
+  "currentStage": "cold_start",
+  "lastRunAt": "2026-06-20T06:48:41.267Z",
+  "lastTask": "Add indexability report",
   "lastStatus": "success",
-  "lastReport": "reports/autonomous-loop/2026-06-19T18-05-13.md",
-  "nextRecommendedTask": "Add GSC/Bing data placeholders",
+  "lastReport": "reports/autonomous-loop/2026-06-20T06-48-41.md",
+  "nextRecommendedTask": "Add robots check",
   "autoExecuteAllowed": true,
   "blockedReasons": [],
   "guardrails": {
