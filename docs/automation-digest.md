@@ -1,6 +1,6 @@
 # Automation Digest
 
-Generated at: 2026-06-19T16:20:38.131Z
+Generated at: 2026-06-20T01:36:09.997Z
 
 This digest is read-only. It summarizes automation reports and does not publish or mark articles for review.
 
@@ -1305,8 +1305,8 @@ Next review files:
 - Live status: 200
 - Failed checks: 0
 - Unsupported traffic claims: 0
-- Traffic claim files scanned: 241
-- Traffic claim watch mentions: 9138
+- Traffic claim files scanned: 244
+- Traffic claim watch mentions: 9155
 
 ## Public Surface Inventory
 
@@ -2898,7 +2898,7 @@ Public categories:
 
 ## Live Search Surface
 
-- Latest check: 2026-06-19T16:20:27.393Z
+- Latest check: 2026-06-20T01:35:58.897Z
 - Ok: true
 - Public articles checked: 500
 - Sitemap URLs: undefined

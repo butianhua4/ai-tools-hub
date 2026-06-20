@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T16:19:49.948Z",
+  "generatedAt": "2026-06-20T01:35:06.859Z",
   "guardrails": {
     "autoCreateArticles": false,
     "autoEditArticles": false,
@@ -10,7 +10,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "approvalBridgeGeneratedAt": "2026-06-19T16:19:49.436Z",
+    "approvalBridgeGeneratedAt": "2026-06-20T01:35:06.350Z",
     "approvalBridgeSummary": {
       "approvalQueueItems": 3,
       "approvalQueueReadyItems": 3,
@@ -31,7 +31,7 @@
       "unsafeItems": 6,
       "uniqueFiles": 8
     },
-    "playbookGeneratedAt": "2026-06-19T16:19:48.916Z",
+    "playbookGeneratedAt": "2026-06-20T01:35:05.826Z",
     "playbookGuardrails": {
       "autoCreateArticles": false,
       "autoEditArticles": false,

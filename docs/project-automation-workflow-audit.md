@@ -1,6 +1,6 @@
 # Project Automation Workflow Audit
 
-Generated at: 2026-06-19T16:19:26.613Z
+Generated at: 2026-06-20T01:34:42.836Z
 
 This report is read-only. It verifies that scheduled project automation runs reports and gates, but does not review or publish articles.
 

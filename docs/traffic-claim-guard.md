@@ -1,14 +1,14 @@
 # Traffic Claim Guard
-Generated at: 2026-06-19T16:20:29.805Z
+Generated at: 2026-06-20T01:36:01.375Z
 This guard scans operational reports and docs for unsupported claims that real traffic, clicks, impressions, or visits already exist.
 ## Guardrails
 - Auto publish: false
 - Note: This guard scans operational docs and automation reports for unsupported traffic claims. It does not scan draft article teaching examples.
 ## Summary
-- filesScanned: 241
+- filesScanned: 244
 - measuredTrafficUnavailable: true
 - unsafeClaims: 0
-- watchMentions: 9138
+- watchMentions: 9155
 ## Unsafe Claims
 None.
 ## Watch Mentions
@@ -75,8 +75,8 @@ None.
 | docs/automation-digest.md | 1303 | - Measured traffic sources: google-analytics |
 | docs/automation-digest.md | 1304 | - Search Console verification evidence: false |
 | docs/automation-digest.md | 1307 | - Unsupported traffic claims: 0 |
-| docs/automation-digest.md | 1308 | - Traffic claim files scanned: 241 |
-| docs/automation-digest.md | 1309 | - Traffic claim watch mentions: 9138 |
+| docs/automation-digest.md | 1308 | - Traffic claim files scanned: 244 |
+| docs/automation-digest.md | 1309 | - Traffic claim watch mentions: 9155 |
 | docs/automation-digest.md | 1322 | - Traffic data available: false |
 | docs/automation-digest.md | 1444 | \| AI 提示词 \| 2026-06-14 \| 4 \| 医疗行政 AI 提示词模板：病历摘要、随访问卷和宣教材料怎么安全写 \| /blog/healthcare-admin-ai-prompts-guide \| |
 | docs/automation-digest.md | 1637 | \| 工具导航 \| 2026-06-14 \| 4 \| Google Analytics 什么时候再接入 \| /blog/google-analytics-when-to-add \| |

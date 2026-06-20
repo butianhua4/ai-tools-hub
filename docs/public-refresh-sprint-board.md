@@ -1,6 +1,6 @@
 # Public Refresh Sprint Board
 
-Generated at: 2026-06-19T16:19:59.951Z
+Generated at: 2026-06-20T01:35:16.597Z
 
 This report is read-only. It groups public pages into manual SEO refresh waves without editing pages or claiming traffic.
 
