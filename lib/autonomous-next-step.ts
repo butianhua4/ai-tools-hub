@@ -72,6 +72,8 @@ export type AutonomousObservedState = {
     hasBehaviorAnalyticsConfigured: boolean;
     hasManualIndexingList: boolean;
     hasTop50QuestionOptimizationList: boolean;
+    hasEnglishExpansionPlan: boolean;
+    hasEnglishQDraftFramework: boolean;
   };
   latestReports: Array<{ path: string; updatedAt: string }>;
   latestCommit: string | null;
@@ -174,6 +176,8 @@ export function getAutonomousObservedState(): AutonomousObservedState {
         system.searchPlatforms.analytics.googleAnalytics.configured && system.searchPlatforms.analytics.microsoftClarity.configured,
       hasManualIndexingList: fs.existsSync(projectPath("content", "automation", "manual-indexing-priority.json")),
       hasTop50QuestionOptimizationList: fs.existsSync(projectPath("content", "automation", "top-50-q-optimization.json")),
+      hasEnglishExpansionPlan: fs.existsSync(projectPath("content", "automation", "english-expansion-plan.json")),
+      hasEnglishQDraftFramework: fs.existsSync(projectPath("content", "automation", "english-q-draft-framework.json")),
     },
     latestReports: getLatestReports(),
     latestCommit: getLatestCommit(),
@@ -268,7 +272,9 @@ function rankCandidates(observed: AutonomousObservedState) {
   if (observed.seo.growthReadinessScore >= 100 && observed.monitoring.hasBehaviorAnalyticsConfigured && observed.monitoring.hasSearchPlatformStatusLib) {
     if (!observed.monitoring.hasManualIndexingList) push("content-gsc-manual-indexing-list");
     if (!observed.monitoring.hasTop50QuestionOptimizationList) push("content-top-50-q-optimization");
-    push("content-cn-to-en-expansion-plan");
+    if (!observed.monitoring.hasEnglishExpansionPlan) push("content-cn-to-en-expansion-plan");
+    if (!observed.monitoring.hasEnglishQDraftFramework) push("content-english-q-draft-plan");
+    push("content-high-potential-keywords");
   } else {
     push("monitoring-ga-clarity-status");
     push("monitoring-gsc-bing-placeholders");

@@ -9,6 +9,7 @@ import {
   type AutonomousMode,
   type AutonomousRunStatus,
 } from "../lib/autonomous-next-step";
+import { getEnglishExpansionPlan, getEnglishQDraftFramework } from "../lib/english-expansion-plan";
 import { getManualIndexingList } from "../lib/manual-indexing-list";
 import { getQuestionOptimizationList } from "../lib/q-optimization-list";
 
@@ -174,6 +175,12 @@ function executeTask(taskId: string, notes: string[]) {
   if (taskId === "content-top-50-q-optimization") {
     return createQuestionOptimizationList(notes);
   }
+  if (taskId === "content-cn-to-en-expansion-plan") {
+    return createEnglishExpansionPlan(notes);
+  }
+  if (taskId === "content-english-q-draft-plan") {
+    return createEnglishQDraftFramework(notes);
+  }
 
   const artifactPath = path.join(artifactDir, `${taskId}-${formatTimestamp(timestamp)}.json`);
   fs.writeFileSync(
@@ -257,6 +264,132 @@ function createQuestionOptimizationList(notes: string[]) {
   );
 
   notes.push(`Generated ${list.total} high-priority q page optimization targets.`);
+  return [
+    path.relative(process.cwd(), jsonPath).replace(/\\/g, "/"),
+    path.relative(process.cwd(), markdownPath).replace(/\\/g, "/"),
+  ];
+}
+
+function createEnglishExpansionPlan(notes: string[]) {
+  const plan = getEnglishExpansionPlan(50);
+  const jsonPath = path.join(process.cwd(), "content", "automation", "english-expansion-plan.json");
+  const markdownPath = path.join(process.cwd(), "docs", "english-expansion-plan.md");
+
+  fs.mkdirSync(path.dirname(jsonPath), { recursive: true });
+  fs.mkdirSync(path.dirname(markdownPath), { recursive: true });
+
+  fs.writeFileSync(jsonPath, `${JSON.stringify(plan, null, 2)}\n`, "utf8");
+  fs.writeFileSync(
+    markdownPath,
+    [
+      "# English Expansion Plan",
+      "",
+      `Generated at: ${plan.generatedAt}`,
+      `Status: ${plan.strategy.status}`,
+      `Publish gate: ${plan.strategy.publishGate}`,
+      `Total planned entries: ${plan.totalItems}`,
+      "",
+      "## Strategy",
+      "",
+      ...plan.strategy.notes.map((note) => `- ${note}`),
+      "",
+      "## Lanes",
+      "",
+      ...plan.lanes.flatMap((lane) => [
+        `### ${lane.lane}`,
+        "",
+        `- Source count: ${lane.sourceCount}`,
+        `- Reason: ${lane.reason}`,
+        "- Seed paths:",
+        ...(lane.seedPaths.length ? lane.seedPaths.map((seed) => `  - ${seed}`) : ["  - none"]),
+        "- Suggested English entry paths:",
+        ...(lane.suggestedEntryPaths.length ? lane.suggestedEntryPaths.map((entry) => `  - ${entry}`) : ["  - none"]),
+        "",
+      ]),
+      "## Top Planned English Entries",
+      "",
+      ...plan.items.slice(0, 50).flatMap((item, index) => [
+        `### ${index + 1}. ${item.proposedEnglishTitle}`,
+        "",
+        `- Source: ${item.sourcePath}`,
+        `- Proposed path: ${item.proposedPath}`,
+        `- Intent: ${item.intent}`,
+        `- Cluster: ${item.sourceCluster}`,
+        `- Publish gate: ${item.publishGate}`,
+        "- Target queries:",
+        ...item.targetQueries.map((query) => `  - ${query}`),
+        "- Actions:",
+        ...item.actions.map((action) => `  - ${action}`),
+        "",
+      ]),
+    ].join("\n"),
+    "utf8",
+  );
+
+  notes.push(`Generated ${plan.totalItems} reviewed English expansion candidates for US/global search planning.`);
+  return [
+    path.relative(process.cwd(), jsonPath).replace(/\\/g, "/"),
+    path.relative(process.cwd(), markdownPath).replace(/\\/g, "/"),
+  ];
+}
+
+function createEnglishQDraftFramework(notes: string[]) {
+  const framework = getEnglishQDraftFramework(30);
+  const jsonPath = path.join(process.cwd(), "content", "automation", "english-q-draft-framework.json");
+  const markdownPath = path.join(process.cwd(), "docs", "english-q-draft-framework.md");
+
+  fs.mkdirSync(path.dirname(jsonPath), { recursive: true });
+  fs.mkdirSync(path.dirname(markdownPath), { recursive: true });
+
+  fs.writeFileSync(jsonPath, `${JSON.stringify(framework, null, 2)}\n`, "utf8");
+  fs.writeFileSync(
+    markdownPath,
+    [
+      "# English Q Page Draft Framework",
+      "",
+      `Generated at: ${framework.generatedAt}`,
+      `Status: ${framework.status}`,
+      `Publish gate: ${framework.publishGate}`,
+      `Draft count: ${framework.drafts.length}`,
+      "",
+      "## Page Template",
+      "",
+      ...framework.pageTemplate.flatMap((section) => [
+        `### ${section.section}`,
+        "",
+        `Purpose: ${section.purpose}`,
+        "",
+        ...section.requirements.map((requirement) => `- ${requirement}`),
+        "",
+      ]),
+      "## Internal Link Rules",
+      "",
+      ...framework.internalLinkRules.map((rule) => `- ${rule}`),
+      "",
+      "## Draft Skeletons",
+      "",
+      ...framework.drafts.flatMap((draft, index) => [
+        `### ${index + 1}. ${draft.title}`,
+        "",
+        `- Proposed path: ${draft.proposedPath}`,
+        `- Source: ${draft.sourcePath}`,
+        `- Intent: ${draft.intent}`,
+        `- Opening answer: ${draft.openingAnswer}`,
+        "- Required sections:",
+        ...draft.requiredSections.map((section) => `  - ${section}`),
+        "- Target queries:",
+        ...draft.targetQueries.map((query) => `  - ${query}`),
+        "- Link targets:",
+        `  - Cluster: ${draft.linkTargets.cluster}`,
+        `  - Deep article: ${draft.linkTargets.sourceDeepArticle}`,
+        ...draft.linkTargets.relatedQ.map((related) => `  - Related q: ${related}`),
+        "",
+      ]),
+    ].join("\n"),
+    "utf8",
+  );
+
+  notes.push(`Generated ${framework.drafts.length} English q page draft skeletons without publishing new pages.`);
   return [
     path.relative(process.cwd(), jsonPath).replace(/\\/g, "/"),
     path.relative(process.cwd(), markdownPath).replace(/\\/g, "/"),

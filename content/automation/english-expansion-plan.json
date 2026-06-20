@@ -1,0 +1,1447 @@
+{
+  "generatedAt": "2026-06-20T13:24:43.386Z",
+  "strategy": {
+    "targetMarket": "United States and global English-speaking developers/operators",
+    "source": "Existing published q/blog/cluster graph and top q optimization list",
+    "status": "planning_only",
+    "publishGate": "human_review_required",
+    "noBulkTranslation": true,
+    "notes": [
+      "This file is a launch queue, not published content.",
+      "The site should prioritize problem-first English pages before generic AI tool introductions.",
+      "Use the custom domain canonical base when publishing: https://ai.aporet.com",
+      "Search Console and Bing should receive only reviewed URLs, not the full queue at once."
+    ]
+  },
+  "totalItems": 50,
+  "lanes": [
+    {
+      "lane": "Vercel deployment failures",
+      "reason": "Vercel and Next.js deployment errors are urgent problem searches with clear solutions.",
+      "sourceCount": 11,
+      "seedPaths": [
+        "/q/codex/codex-vercel-deployment",
+        "/q/vercel/dev-works-build-fails",
+        "/q/vercel/env-variable-missing-fix",
+        "/q/ai-tools/gemini-api-nextjs-guide",
+        "/q/vercel/llm-api-integration-deployment-checklist",
+        "/q/node-js-errors/nextjs-hydration-error-debug",
+        "/q/vercel/replicate-api-ai-demo-guide",
+        "/q/vercel/cloudflare-vs-namecheap-domain"
+      ],
+      "englishQueries": [
+        "how to fix codex vercel deployment",
+        "how to fix dev works build fails",
+        "how to fix env variable missing fix",
+        "how to fix gemini api nextjs guide",
+        "how to fix llm api integration deployment checklist"
+      ],
+      "suggestedEntryPaths": [
+        "/en/q/codex/codex-vercel-deployment-step-by-step-guide",
+        "/en/q/vercel/dev-works-build-fails-step-by-step-guide",
+        "/en/q/vercel/how-to-fix-env-variable-missing",
+        "/en/q/ai-tools/gemini-api-nextjs-guide-step-by-step-guide",
+        "/en/q/vercel/llm-api-integration-deployment-checklist",
+        "/en/q/node-js-errors/how-to-fix-nextjs-hydration-error-debug",
+        "/en/q/vercel/replicate-api-ai-demo-guide-step-by-step-guide",
+        "/en/q/vercel/cloudflare-vs-namecheap-domain-comparison-and-decision-guide"
+      ]
+    },
+    {
+      "lane": "Codex workflows",
+      "reason": "Codex setup, code review, and project automation queries match the site's existing topical authority.",
+      "sourceCount": 9,
+      "seedPaths": [
+        "/q/codex/codex-bugfix-rollback-record",
+        "/q/upwork/claude-code-low-risk-freelance-jobs",
+        "/q/codex/codex-css-spacing-responsive",
+        "/q/codex/codex-project-start-checklist",
+        "/q/codex/codex-vs-claude-code-beginner",
+        "/q/codex/codex-vs-cursor-web-editing",
+        "/q/codex/cursor-vs-codex-web-editing",
+        "/q/upwork/ai-automation-project-pricing-scope-guide"
+      ],
+      "englishQueries": [
+        "how to fix codex bugfix rollback record",
+        "how to fix claude code low risk freelance jobs",
+        "how to fix codex css spacing responsive",
+        "how to fix codex project start checklist",
+        "how to fix codex vs claude code beginner"
+      ],
+      "suggestedEntryPaths": [
+        "/en/q/codex/how-to-fix-codex-bugfix-rollback-record",
+        "/en/q/upwork/claude-code-low-risk-freelance-jobs-step-by-step-guide",
+        "/en/q/codex/codex-css-spacing-responsive-step-by-step-guide",
+        "/en/q/codex/codex-project-start-checklist",
+        "/en/q/codex/codex-vs-claude-code-beginner-comparison-and-decision-guide",
+        "/en/q/codex/codex-vs-cursor-web-editing-comparison-and-decision-guide",
+        "/en/q/codex/cursor-vs-codex-web-editing-comparison-and-decision-guide",
+        "/en/q/upwork/ai-automation-project-pricing-scope-guide-pricing-and-delivery-guide"
+      ]
+    },
+    {
+      "lane": "Node.js build errors",
+      "reason": "Node.js, npm, TypeScript, module, and build errors are stable evergreen search demand.",
+      "sourceCount": 9,
+      "seedPaths": [
+        "/q/codex/codex-npm-install-errors",
+        "/q/codex/codex-windows-install-failed",
+        "/q/node-js-errors/dependency-conflict-fix",
+        "/q/node-js-errors/eslint-error-should-not-disable",
+        "/q/node-js-errors/module-not-found-debug",
+        "/q/node-js-errors/node-version-mismatch-fix",
+        "/q/node-js-errors/npm-command-not-found-fix",
+        "/q/node-js-errors/port-already-in-use-fix"
+      ],
+      "englishQueries": [
+        "how to fix codex npm install errors",
+        "how to fix codex windows install failed",
+        "how to fix dependency conflict fix",
+        "how to fix eslint error should not disable",
+        "how to fix module not found debug"
+      ],
+      "suggestedEntryPaths": [
+        "/en/q/codex/how-to-fix-codex-npm-install-errors",
+        "/en/q/codex/how-to-fix-codex-windows-install-failed",
+        "/en/q/node-js-errors/how-to-fix-dependency-conflict",
+        "/en/q/node-js-errors/how-to-fix-eslint-error-should-not-disable",
+        "/en/q/node-js-errors/how-to-fix-module-not-found-debug",
+        "/en/q/node-js-errors/how-to-fix-node-version-mismatch",
+        "/en/q/node-js-errors/how-to-fix-npm-command-not-found",
+        "/en/q/node-js-errors/how-to-fix-port-already-in-use"
+      ]
+    },
+    {
+      "lane": "Agent deployment",
+      "reason": "Agent deployment, tool-calling, and workflow failures are concrete US/global builder searches.",
+      "sourceCount": 5,
+      "seedPaths": [
+        "/q/ai-tools/agent-observability-logging-guide",
+        "/q/vercel/agent-production-deployment-checklist",
+        "/q/ai-tools/agent-tool-calling-beginner-guide",
+        "/q/ai-tools/agent-tool-permission-safety-guide",
+        "/q/node-js-errors/dify-workflow-error-handling-guide"
+      ],
+      "englishQueries": [
+        "how to fix agent observability logging guide",
+        "how to fix agent production deployment checklist",
+        "how to fix agent tool calling beginner guide",
+        "how to fix agent tool permission safety guide",
+        "how to fix dify workflow error handling guide"
+      ],
+      "suggestedEntryPaths": [
+        "/en/q/ai-tools/agent-observability-logging-guide-step-by-step-guide",
+        "/en/q/vercel/agent-production-deployment-checklist",
+        "/en/q/ai-tools/agent-tool-calling-beginner-guide-step-by-step-guide",
+        "/en/q/ai-tools/agent-tool-permission-safety-guide-step-by-step-guide",
+        "/en/q/node-js-errors/how-to-fix-dify-workflow-error-handling"
+      ]
+    },
+    {
+      "lane": "GitHub Actions failures",
+      "reason": "CI failures, workflow errors, and repository automation issues are easy to diagnose from exact queries.",
+      "sourceCount": 5,
+      "seedPaths": [
+        "/q/github/failed-to-push-some-refs-fix",
+        "/q/github/git-authentication-failed-fix",
+        "/q/github/github-actions-build-log-debug",
+        "/q/github/package-lock-conflict-fix",
+        "/q/github/github-command-cheatsheet-beginner"
+      ],
+      "englishQueries": [
+        "how to fix failed to push some refs fix",
+        "how to fix git authentication failed fix",
+        "how to fix github actions build log debug",
+        "how to fix package lock conflict fix",
+        "how to fix github command cheatsheet beginner"
+      ],
+      "suggestedEntryPaths": [
+        "/en/q/github/how-to-fix-failed-to-push-some-refs",
+        "/en/q/github/how-to-fix-git-authentication-failed",
+        "/en/q/github/how-to-fix-github-actions-build-log-debug",
+        "/en/q/github/how-to-fix-package-lock-conflict",
+        "/en/q/github/github-command-cheatsheet-beginner-step-by-step-guide"
+      ]
+    },
+    {
+      "lane": "API key and rate limits",
+      "reason": "API key, quota, rate limit, and authentication failures are commercially valuable troubleshooting traffic.",
+      "sourceCount": 3,
+      "seedPaths": [
+        "/q/ai-tools/claude-api-rate-limit-debug-guide",
+        "/q/ai-tools/gemini-api-rate-limit-debug-guide",
+        "/q/ai-tools/llm-api-rate-limit-retry-guide"
+      ],
+      "englishQueries": [
+        "how to fix claude api rate limit debug guide",
+        "how to fix gemini api rate limit debug guide",
+        "how to fix llm api rate limit retry guide"
+      ],
+      "suggestedEntryPaths": [
+        "/en/q/ai-tools/how-to-fix-claude-api-rate-limit-debug",
+        "/en/q/ai-tools/how-to-fix-gemini-api-rate-limit-debug",
+        "/en/q/ai-tools/llm-api-rate-limit-retry-guide-pricing-and-delivery-guide"
+      ]
+    },
+    {
+      "lane": "RAG and memory",
+      "reason": "RAG memory and retrieval problems create high-intent implementation searches.",
+      "sourceCount": 0,
+      "seedPaths": [],
+      "englishQueries": [],
+      "suggestedEntryPaths": []
+    }
+  ],
+  "items": [
+    {
+      "sourcePath": "/q/ai-tools/agent-observability-logging-guide",
+      "sourceUrl": "https://ai.aporet.com/q/ai-tools/agent-observability-logging-guide",
+      "sourceCategory": "AI 基建",
+      "sourceCluster": "AI tools and LLM applications topic hub",
+      "sourceSlug": "agent-observability-logging-guide",
+      "proposedEnglishTitle": "Agent Observability Logging Guide: Step-by-Step Guide",
+      "proposedEnglishSlug": "agent-observability-logging-guide-step-by-step-guide",
+      "proposedPath": "/en/q/ai-tools/agent-observability-logging-guide-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix agent observability logging guide",
+        "agent deployment agent observability logging guide",
+        "agent observability logging guide step by step",
+        "agent observability logging guide checklist",
+        "agent observability logging guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/vercel/agent-production-deployment-checklist",
+      "sourceUrl": "https://ai.aporet.com/q/vercel/agent-production-deployment-checklist",
+      "sourceCategory": "AI 基建",
+      "sourceCluster": "Vercel and web deployment topic hub",
+      "sourceSlug": "agent-production-deployment-checklist",
+      "proposedEnglishTitle": "Agent Production Deployment Checklist",
+      "proposedEnglishSlug": "agent-production-deployment-checklist",
+      "proposedPath": "/en/q/vercel/agent-production-deployment-checklist",
+      "intent": "checklist",
+      "targetQueries": [
+        "how to fix agent production deployment checklist",
+        "agent deployment agent production deployment checklist",
+        "agent production deployment checklist step by step",
+        "agent production deployment checklist checklist",
+        "agent production deployment checklist best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/ai-tools/agent-tool-calling-beginner-guide",
+      "sourceUrl": "https://ai.aporet.com/q/ai-tools/agent-tool-calling-beginner-guide",
+      "sourceCategory": "AI 基建",
+      "sourceCluster": "AI tools and LLM applications topic hub",
+      "sourceSlug": "agent-tool-calling-beginner-guide",
+      "proposedEnglishTitle": "Agent Tool Calling Beginner Guide: Step-by-Step Guide",
+      "proposedEnglishSlug": "agent-tool-calling-beginner-guide-step-by-step-guide",
+      "proposedPath": "/en/q/ai-tools/agent-tool-calling-beginner-guide-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix agent tool calling beginner guide",
+        "agent deployment agent tool calling beginner guide",
+        "agent tool calling beginner guide step by step",
+        "agent tool calling beginner guide checklist",
+        "agent tool calling beginner guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/ai-tools/agent-tool-permission-safety-guide",
+      "sourceUrl": "https://ai.aporet.com/q/ai-tools/agent-tool-permission-safety-guide",
+      "sourceCategory": "AI 基建",
+      "sourceCluster": "AI tools and LLM applications topic hub",
+      "sourceSlug": "agent-tool-permission-safety-guide",
+      "proposedEnglishTitle": "Agent Tool Permission Safety Guide: Step-by-Step Guide",
+      "proposedEnglishSlug": "agent-tool-permission-safety-guide-step-by-step-guide",
+      "proposedPath": "/en/q/ai-tools/agent-tool-permission-safety-guide-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix agent tool permission safety guide",
+        "agent deployment agent tool permission safety guide",
+        "agent tool permission safety guide step by step",
+        "agent tool permission safety guide checklist",
+        "agent tool permission safety guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/ai-tools/ai-prompt-library-team-knowledge-base-guide",
+      "sourceUrl": "https://ai.aporet.com/q/ai-tools/ai-prompt-library-team-knowledge-base-guide",
+      "sourceCategory": "AI 提示词",
+      "sourceCluster": "AI tools and LLM applications topic hub",
+      "sourceSlug": "ai-prompt-library-team-knowledge-base-guide",
+      "proposedEnglishTitle": "AI Prompt Library Team Knowledge Base Guide: Step-by-Step Guide",
+      "proposedEnglishSlug": "ai-prompt-library-team-knowledge-base-guide-step-by-step-guide",
+      "proposedPath": "/en/q/ai-tools/ai-prompt-library-team-knowledge-base-guide-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix ai prompt library team knowledge base guide",
+        "ai tools workflow ai prompt library team knowledge base guide",
+        "ai prompt library team knowledge base guide step by step",
+        "ai prompt library team knowledge base guide checklist",
+        "ai prompt library team knowledge base guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/ai-tools/claude-api-rate-limit-debug-guide",
+      "sourceUrl": "https://ai.aporet.com/q/ai-tools/claude-api-rate-limit-debug-guide",
+      "sourceCategory": "AI 部署",
+      "sourceCluster": "AI tools and LLM applications topic hub",
+      "sourceSlug": "claude-api-rate-limit-debug-guide",
+      "proposedEnglishTitle": "How to Fix Claude API Rate Limit Debug",
+      "proposedEnglishSlug": "how-to-fix-claude-api-rate-limit-debug",
+      "proposedPath": "/en/q/ai-tools/how-to-fix-claude-api-rate-limit-debug",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix claude api rate limit debug guide",
+        "api key rate limit claude api rate limit debug guide",
+        "claude api rate limit debug guide step by step",
+        "claude api rate limit debug guide checklist",
+        "claude api rate limit debug guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/codex/codex-bugfix-rollback-record",
+      "sourceUrl": "https://ai.aporet.com/q/codex/codex-bugfix-rollback-record",
+      "sourceCategory": "Codex 新手教程",
+      "sourceCluster": "Codex AI coding topic hub",
+      "sourceSlug": "codex-bugfix-rollback-record",
+      "proposedEnglishTitle": "How to Fix Codex Bugfix Rollback Record",
+      "proposedEnglishSlug": "how-to-fix-codex-bugfix-rollback-record",
+      "proposedPath": "/en/q/codex/how-to-fix-codex-bugfix-rollback-record",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix codex bugfix rollback record",
+        "codex workflow codex bugfix rollback record",
+        "codex bugfix rollback record step by step",
+        "codex bugfix rollback record checklist",
+        "codex bugfix rollback record best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/codex/codex-npm-install-errors",
+      "sourceUrl": "https://ai.aporet.com/q/codex/codex-npm-install-errors",
+      "sourceCategory": "Troubleshooting",
+      "sourceCluster": "Codex AI coding topic hub",
+      "sourceSlug": "codex-npm-install-errors",
+      "proposedEnglishTitle": "How to Fix Codex NPM Install Errors",
+      "proposedEnglishSlug": "how-to-fix-codex-npm-install-errors",
+      "proposedPath": "/en/q/codex/how-to-fix-codex-npm-install-errors",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix codex npm install errors",
+        "node.js build error codex npm install errors",
+        "codex npm install errors step by step",
+        "codex npm install errors checklist",
+        "codex npm install errors best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/codex/codex-vercel-deployment",
+      "sourceUrl": "https://ai.aporet.com/q/codex/codex-vercel-deployment",
+      "sourceCategory": "Deployment",
+      "sourceCluster": "Codex AI coding topic hub",
+      "sourceSlug": "codex-vercel-deployment",
+      "proposedEnglishTitle": "Codex Vercel Deployment: Step-by-Step Guide",
+      "proposedEnglishSlug": "codex-vercel-deployment-step-by-step-guide",
+      "proposedPath": "/en/q/codex/codex-vercel-deployment-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix codex vercel deployment",
+        "vercel deployment codex vercel deployment",
+        "codex vercel deployment step by step",
+        "codex vercel deployment checklist",
+        "codex vercel deployment best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/codex/codex-windows-install-failed",
+      "sourceUrl": "https://ai.aporet.com/q/codex/codex-windows-install-failed",
+      "sourceCategory": "Codex 新手教程",
+      "sourceCluster": "Codex AI coding topic hub",
+      "sourceSlug": "codex-windows-install-failed",
+      "proposedEnglishTitle": "How to Fix Codex Windows Install Failed",
+      "proposedEnglishSlug": "how-to-fix-codex-windows-install-failed",
+      "proposedPath": "/en/q/codex/how-to-fix-codex-windows-install-failed",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix codex windows install failed",
+        "node.js build error codex windows install failed",
+        "codex windows install failed step by step",
+        "codex windows install failed checklist",
+        "codex windows install failed best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/node-js-errors/dependency-conflict-fix",
+      "sourceUrl": "https://ai.aporet.com/q/node-js-errors/dependency-conflict-fix",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "Node.js errors and engineering issues topic hub",
+      "sourceSlug": "dependency-conflict-fix",
+      "proposedEnglishTitle": "How to Fix Dependency Conflict",
+      "proposedEnglishSlug": "how-to-fix-dependency-conflict",
+      "proposedPath": "/en/q/node-js-errors/how-to-fix-dependency-conflict",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix dependency conflict fix",
+        "node.js build error dependency conflict fix",
+        "dependency conflict fix step by step",
+        "dependency conflict fix checklist",
+        "dependency conflict fix best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/vercel/dev-works-build-fails",
+      "sourceUrl": "https://ai.aporet.com/q/vercel/dev-works-build-fails",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "Vercel and web deployment topic hub",
+      "sourceSlug": "dev-works-build-fails",
+      "proposedEnglishTitle": "Dev Works Build Fails: Step-by-Step Guide",
+      "proposedEnglishSlug": "dev-works-build-fails-step-by-step-guide",
+      "proposedPath": "/en/q/vercel/dev-works-build-fails-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix dev works build fails",
+        "vercel deployment dev works build fails",
+        "dev works build fails step by step",
+        "dev works build fails checklist",
+        "dev works build fails best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/node-js-errors/dify-workflow-error-handling-guide",
+      "sourceUrl": "https://ai.aporet.com/q/node-js-errors/dify-workflow-error-handling-guide",
+      "sourceCategory": "AI 部署",
+      "sourceCluster": "Node.js errors and engineering issues topic hub",
+      "sourceSlug": "dify-workflow-error-handling-guide",
+      "proposedEnglishTitle": "How to Fix Dify Workflow Error Handling",
+      "proposedEnglishSlug": "how-to-fix-dify-workflow-error-handling",
+      "proposedPath": "/en/q/node-js-errors/how-to-fix-dify-workflow-error-handling",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix dify workflow error handling guide",
+        "agent deployment dify workflow error handling guide",
+        "dify workflow error handling guide step by step",
+        "dify workflow error handling guide checklist",
+        "dify workflow error handling guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/vercel/env-variable-missing-fix",
+      "sourceUrl": "https://ai.aporet.com/q/vercel/env-variable-missing-fix",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "Vercel and web deployment topic hub",
+      "sourceSlug": "env-variable-missing-fix",
+      "proposedEnglishTitle": "How to Fix ENV Variable Missing",
+      "proposedEnglishSlug": "how-to-fix-env-variable-missing",
+      "proposedPath": "/en/q/vercel/how-to-fix-env-variable-missing",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix env variable missing fix",
+        "vercel deployment env variable missing fix",
+        "env variable missing fix step by step",
+        "env variable missing fix checklist",
+        "env variable missing fix best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/node-js-errors/eslint-error-should-not-disable",
+      "sourceUrl": "https://ai.aporet.com/q/node-js-errors/eslint-error-should-not-disable",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "Node.js errors and engineering issues topic hub",
+      "sourceSlug": "eslint-error-should-not-disable",
+      "proposedEnglishTitle": "How to Fix Eslint Error Should Not Disable",
+      "proposedEnglishSlug": "how-to-fix-eslint-error-should-not-disable",
+      "proposedPath": "/en/q/node-js-errors/how-to-fix-eslint-error-should-not-disable",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix eslint error should not disable",
+        "node.js build error eslint error should not disable",
+        "eslint error should not disable step by step",
+        "eslint error should not disable checklist",
+        "eslint error should not disable best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/github/failed-to-push-some-refs-fix",
+      "sourceUrl": "https://ai.aporet.com/q/github/failed-to-push-some-refs-fix",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "GitHub and code collaboration topic hub",
+      "sourceSlug": "failed-to-push-some-refs-fix",
+      "proposedEnglishTitle": "How to Fix Failed To Push Some Refs",
+      "proposedEnglishSlug": "how-to-fix-failed-to-push-some-refs",
+      "proposedPath": "/en/q/github/how-to-fix-failed-to-push-some-refs",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix failed to push some refs fix",
+        "github actions failed to push some refs fix",
+        "failed to push some refs fix step by step",
+        "failed to push some refs fix checklist",
+        "failed to push some refs fix best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/ai-tools/gemini-api-nextjs-guide",
+      "sourceUrl": "https://ai.aporet.com/q/ai-tools/gemini-api-nextjs-guide",
+      "sourceCategory": "AI 基建",
+      "sourceCluster": "AI tools and LLM applications topic hub",
+      "sourceSlug": "gemini-api-nextjs-guide",
+      "proposedEnglishTitle": "Gemini API Nextjs Guide: Step-by-Step Guide",
+      "proposedEnglishSlug": "gemini-api-nextjs-guide-step-by-step-guide",
+      "proposedPath": "/en/q/ai-tools/gemini-api-nextjs-guide-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix gemini api nextjs guide",
+        "vercel deployment gemini api nextjs guide",
+        "gemini api nextjs guide step by step",
+        "gemini api nextjs guide checklist",
+        "gemini api nextjs guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/ai-tools/gemini-api-rate-limit-debug-guide",
+      "sourceUrl": "https://ai.aporet.com/q/ai-tools/gemini-api-rate-limit-debug-guide",
+      "sourceCategory": "AI 部署",
+      "sourceCluster": "AI tools and LLM applications topic hub",
+      "sourceSlug": "gemini-api-rate-limit-debug-guide",
+      "proposedEnglishTitle": "How to Fix Gemini API Rate Limit Debug",
+      "proposedEnglishSlug": "how-to-fix-gemini-api-rate-limit-debug",
+      "proposedPath": "/en/q/ai-tools/how-to-fix-gemini-api-rate-limit-debug",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix gemini api rate limit debug guide",
+        "api key rate limit gemini api rate limit debug guide",
+        "gemini api rate limit debug guide step by step",
+        "gemini api rate limit debug guide checklist",
+        "gemini api rate limit debug guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/github/git-authentication-failed-fix",
+      "sourceUrl": "https://ai.aporet.com/q/github/git-authentication-failed-fix",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "GitHub and code collaboration topic hub",
+      "sourceSlug": "git-authentication-failed-fix",
+      "proposedEnglishTitle": "How to Fix Git Authentication Failed",
+      "proposedEnglishSlug": "how-to-fix-git-authentication-failed",
+      "proposedPath": "/en/q/github/how-to-fix-git-authentication-failed",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix git authentication failed fix",
+        "github actions git authentication failed fix",
+        "git authentication failed fix step by step",
+        "git authentication failed fix checklist",
+        "git authentication failed fix best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/github/github-actions-build-log-debug",
+      "sourceUrl": "https://ai.aporet.com/q/github/github-actions-build-log-debug",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "GitHub and code collaboration topic hub",
+      "sourceSlug": "github-actions-build-log-debug",
+      "proposedEnglishTitle": "How to Fix Github Actions Build Log Debug",
+      "proposedEnglishSlug": "how-to-fix-github-actions-build-log-debug",
+      "proposedPath": "/en/q/github/how-to-fix-github-actions-build-log-debug",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix github actions build log debug",
+        "github actions github actions build log debug",
+        "github actions build log debug step by step",
+        "github actions build log debug checklist",
+        "github actions build log debug best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/ai-tools/helicone-llm-observability-guide",
+      "sourceUrl": "https://ai.aporet.com/q/ai-tools/helicone-llm-observability-guide",
+      "sourceCategory": "AI 基建",
+      "sourceCluster": "AI tools and LLM applications topic hub",
+      "sourceSlug": "helicone-llm-observability-guide",
+      "proposedEnglishTitle": "Helicone LLM Observability Guide: Step-by-Step Guide",
+      "proposedEnglishSlug": "helicone-llm-observability-guide-step-by-step-guide",
+      "proposedPath": "/en/q/ai-tools/helicone-llm-observability-guide-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix helicone llm observability guide",
+        "ai tools workflow helicone llm observability guide",
+        "helicone llm observability guide step by step",
+        "helicone llm observability guide checklist",
+        "helicone llm observability guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/vercel/llm-api-integration-deployment-checklist",
+      "sourceUrl": "https://ai.aporet.com/q/vercel/llm-api-integration-deployment-checklist",
+      "sourceCategory": "AI 基建",
+      "sourceCluster": "Vercel and web deployment topic hub",
+      "sourceSlug": "llm-api-integration-deployment-checklist",
+      "proposedEnglishTitle": "LLM API Integration Deployment Checklist",
+      "proposedEnglishSlug": "llm-api-integration-deployment-checklist",
+      "proposedPath": "/en/q/vercel/llm-api-integration-deployment-checklist",
+      "intent": "checklist",
+      "targetQueries": [
+        "how to fix llm api integration deployment checklist",
+        "vercel deployment llm api integration deployment checklist",
+        "llm api integration deployment checklist step by step",
+        "llm api integration deployment checklist checklist",
+        "llm api integration deployment checklist best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/ai-tools/llm-api-rate-limit-retry-guide",
+      "sourceUrl": "https://ai.aporet.com/q/ai-tools/llm-api-rate-limit-retry-guide",
+      "sourceCategory": "AI 部署",
+      "sourceCluster": "AI tools and LLM applications topic hub",
+      "sourceSlug": "llm-api-rate-limit-retry-guide",
+      "proposedEnglishTitle": "LLM API Rate Limit Retry Guide: Pricing and Delivery Guide",
+      "proposedEnglishSlug": "llm-api-rate-limit-retry-guide-pricing-and-delivery-guide",
+      "proposedPath": "/en/q/ai-tools/llm-api-rate-limit-retry-guide-pricing-and-delivery-guide",
+      "intent": "commercial",
+      "targetQueries": [
+        "how to fix llm api rate limit retry guide",
+        "api key rate limit llm api rate limit retry guide",
+        "llm api rate limit retry guide step by step",
+        "llm api rate limit retry guide checklist",
+        "llm api rate limit retry guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/node-js-errors/module-not-found-debug",
+      "sourceUrl": "https://ai.aporet.com/q/node-js-errors/module-not-found-debug",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "Node.js errors and engineering issues topic hub",
+      "sourceSlug": "module-not-found-debug",
+      "proposedEnglishTitle": "How to Fix Module Not Found Debug",
+      "proposedEnglishSlug": "how-to-fix-module-not-found-debug",
+      "proposedPath": "/en/q/node-js-errors/how-to-fix-module-not-found-debug",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix module not found debug",
+        "node.js build error module not found debug",
+        "module not found debug step by step",
+        "module not found debug checklist",
+        "module not found debug best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/node-js-errors/nextjs-hydration-error-debug",
+      "sourceUrl": "https://ai.aporet.com/q/node-js-errors/nextjs-hydration-error-debug",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "Node.js errors and engineering issues topic hub",
+      "sourceSlug": "nextjs-hydration-error-debug",
+      "proposedEnglishTitle": "How to Fix Nextjs Hydration Error Debug",
+      "proposedEnglishSlug": "how-to-fix-nextjs-hydration-error-debug",
+      "proposedPath": "/en/q/node-js-errors/how-to-fix-nextjs-hydration-error-debug",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix nextjs hydration error debug",
+        "vercel deployment nextjs hydration error debug",
+        "nextjs hydration error debug step by step",
+        "nextjs hydration error debug checklist",
+        "nextjs hydration error debug best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/node-js-errors/node-version-mismatch-fix",
+      "sourceUrl": "https://ai.aporet.com/q/node-js-errors/node-version-mismatch-fix",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "Node.js errors and engineering issues topic hub",
+      "sourceSlug": "node-version-mismatch-fix",
+      "proposedEnglishTitle": "How to Fix Node Version Mismatch",
+      "proposedEnglishSlug": "how-to-fix-node-version-mismatch",
+      "proposedPath": "/en/q/node-js-errors/how-to-fix-node-version-mismatch",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix node version mismatch fix",
+        "node.js build error node version mismatch fix",
+        "node version mismatch fix step by step",
+        "node version mismatch fix checklist",
+        "node version mismatch fix best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/node-js-errors/npm-command-not-found-fix",
+      "sourceUrl": "https://ai.aporet.com/q/node-js-errors/npm-command-not-found-fix",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "Node.js errors and engineering issues topic hub",
+      "sourceSlug": "npm-command-not-found-fix",
+      "proposedEnglishTitle": "How to Fix NPM Command Not Found",
+      "proposedEnglishSlug": "how-to-fix-npm-command-not-found",
+      "proposedPath": "/en/q/node-js-errors/how-to-fix-npm-command-not-found",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix npm command not found fix",
+        "node.js build error npm command not found fix",
+        "npm command not found fix step by step",
+        "npm command not found fix checklist",
+        "npm command not found fix best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/github/package-lock-conflict-fix",
+      "sourceUrl": "https://ai.aporet.com/q/github/package-lock-conflict-fix",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "GitHub and code collaboration topic hub",
+      "sourceSlug": "package-lock-conflict-fix",
+      "proposedEnglishTitle": "How to Fix Package Lock Conflict",
+      "proposedEnglishSlug": "how-to-fix-package-lock-conflict",
+      "proposedPath": "/en/q/github/how-to-fix-package-lock-conflict",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix package lock conflict fix",
+        "github actions package lock conflict fix",
+        "package lock conflict fix step by step",
+        "package lock conflict fix checklist",
+        "package lock conflict fix best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/node-js-errors/port-already-in-use-fix",
+      "sourceUrl": "https://ai.aporet.com/q/node-js-errors/port-already-in-use-fix",
+      "sourceCategory": "报错解决",
+      "sourceCluster": "Node.js errors and engineering issues topic hub",
+      "sourceSlug": "port-already-in-use-fix",
+      "proposedEnglishTitle": "How to Fix Port Already In Use",
+      "proposedEnglishSlug": "how-to-fix-port-already-in-use",
+      "proposedPath": "/en/q/node-js-errors/how-to-fix-port-already-in-use",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix port already in use fix",
+        "node.js build error port already in use fix",
+        "port already in use fix step by step",
+        "port already in use fix checklist",
+        "port already in use fix best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/vercel/replicate-api-ai-demo-guide",
+      "sourceUrl": "https://ai.aporet.com/q/vercel/replicate-api-ai-demo-guide",
+      "sourceCategory": "AI 基建",
+      "sourceCluster": "Vercel and web deployment topic hub",
+      "sourceSlug": "replicate-api-ai-demo-guide",
+      "proposedEnglishTitle": "Replicate API AI Demo Guide: Step-by-Step Guide",
+      "proposedEnglishSlug": "replicate-api-ai-demo-guide-step-by-step-guide",
+      "proposedPath": "/en/q/vercel/replicate-api-ai-demo-guide-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix replicate api ai demo guide",
+        "vercel deployment replicate api ai demo guide",
+        "replicate api ai demo guide step by step",
+        "replicate api ai demo guide checklist",
+        "replicate api ai demo guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/upwork/ai-freelance-failure-review",
+      "sourceUrl": "https://ai.aporet.com/q/upwork/ai-freelance-failure-review",
+      "sourceCategory": "AI 自由职业路线",
+      "sourceCluster": "Upwork AI freelancing topic hub",
+      "sourceSlug": "ai-freelance-failure-review",
+      "proposedEnglishTitle": "AI Freelance Failure Review: Step-by-Step Guide",
+      "proposedEnglishSlug": "ai-freelance-failure-review-step-by-step-guide",
+      "proposedPath": "/en/q/upwork/ai-freelance-failure-review-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix ai freelance failure review",
+        "ai tools workflow ai freelance failure review",
+        "ai freelance failure review step by step",
+        "ai freelance failure review checklist",
+        "ai freelance failure review best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/node-js-errors/claude-code-error-debug",
+      "sourceUrl": "https://ai.aporet.com/q/node-js-errors/claude-code-error-debug",
+      "sourceCategory": "工具流程",
+      "sourceCluster": "Node.js errors and engineering issues topic hub",
+      "sourceSlug": "claude-code-error-debug",
+      "proposedEnglishTitle": "How to Fix Claude Code Error Debug",
+      "proposedEnglishSlug": "how-to-fix-claude-code-error-debug",
+      "proposedPath": "/en/q/node-js-errors/how-to-fix-claude-code-error-debug",
+      "intent": "error",
+      "targetQueries": [
+        "how to fix claude code error debug",
+        "node.js build error claude code error debug",
+        "claude code error debug step by step",
+        "claude code error debug checklist",
+        "claude code error debug best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/upwork/claude-code-low-risk-freelance-jobs",
+      "sourceUrl": "https://ai.aporet.com/q/upwork/claude-code-low-risk-freelance-jobs",
+      "sourceCategory": "工具流程",
+      "sourceCluster": "Upwork AI freelancing topic hub",
+      "sourceSlug": "claude-code-low-risk-freelance-jobs",
+      "proposedEnglishTitle": "Claude Code Low Risk Freelance Jobs: Step-by-Step Guide",
+      "proposedEnglishSlug": "claude-code-low-risk-freelance-jobs-step-by-step-guide",
+      "proposedPath": "/en/q/upwork/claude-code-low-risk-freelance-jobs-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix claude code low risk freelance jobs",
+        "codex workflow claude code low risk freelance jobs",
+        "claude code low risk freelance jobs step by step",
+        "claude code low risk freelance jobs checklist",
+        "claude code low risk freelance jobs best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/vercel/cloudflare-vs-namecheap-domain",
+      "sourceUrl": "https://ai.aporet.com/q/vercel/cloudflare-vs-namecheap-domain",
+      "sourceCategory": "工具导航",
+      "sourceCluster": "Vercel and web deployment topic hub",
+      "sourceSlug": "cloudflare-vs-namecheap-domain",
+      "proposedEnglishTitle": "Cloudflare Vs Namecheap Domain: Comparison and Decision Guide",
+      "proposedEnglishSlug": "cloudflare-vs-namecheap-domain-comparison-and-decision-guide",
+      "proposedPath": "/en/q/vercel/cloudflare-vs-namecheap-domain-comparison-and-decision-guide",
+      "intent": "comparison",
+      "targetQueries": [
+        "how to fix cloudflare vs namecheap domain",
+        "vercel deployment cloudflare vs namecheap domain",
+        "cloudflare vs namecheap domain step by step",
+        "cloudflare vs namecheap domain checklist",
+        "cloudflare vs namecheap domain best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/codex/codex-css-spacing-responsive",
+      "sourceUrl": "https://ai.aporet.com/q/codex/codex-css-spacing-responsive",
+      "sourceCategory": "Codex 新手教程",
+      "sourceCluster": "Codex AI coding topic hub",
+      "sourceSlug": "codex-css-spacing-responsive",
+      "proposedEnglishTitle": "Codex Css Spacing Responsive: Step-by-Step Guide",
+      "proposedEnglishSlug": "codex-css-spacing-responsive-step-by-step-guide",
+      "proposedPath": "/en/q/codex/codex-css-spacing-responsive-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix codex css spacing responsive",
+        "codex workflow codex css spacing responsive",
+        "codex css spacing responsive step by step",
+        "codex css spacing responsive checklist",
+        "codex css spacing responsive best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/codex/codex-project-start-checklist",
+      "sourceUrl": "https://ai.aporet.com/q/codex/codex-project-start-checklist",
+      "sourceCategory": "模板和清单",
+      "sourceCluster": "Codex AI coding topic hub",
+      "sourceSlug": "codex-project-start-checklist",
+      "proposedEnglishTitle": "Codex Project Start Checklist",
+      "proposedEnglishSlug": "codex-project-start-checklist",
+      "proposedPath": "/en/q/codex/codex-project-start-checklist",
+      "intent": "checklist",
+      "targetQueries": [
+        "how to fix codex project start checklist",
+        "codex workflow codex project start checklist",
+        "codex project start checklist step by step",
+        "codex project start checklist checklist",
+        "codex project start checklist best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/codex/codex-vs-claude-code-beginner",
+      "sourceUrl": "https://ai.aporet.com/q/codex/codex-vs-claude-code-beginner",
+      "sourceCategory": "工具导航",
+      "sourceCluster": "Codex AI coding topic hub",
+      "sourceSlug": "codex-vs-claude-code-beginner",
+      "proposedEnglishTitle": "Codex Vs Claude Code Beginner: Comparison and Decision Guide",
+      "proposedEnglishSlug": "codex-vs-claude-code-beginner-comparison-and-decision-guide",
+      "proposedPath": "/en/q/codex/codex-vs-claude-code-beginner-comparison-and-decision-guide",
+      "intent": "comparison",
+      "targetQueries": [
+        "how to fix codex vs claude code beginner",
+        "codex workflow codex vs claude code beginner",
+        "codex vs claude code beginner step by step",
+        "codex vs claude code beginner checklist",
+        "codex vs claude code beginner best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/codex/codex-vs-cursor-web-editing",
+      "sourceUrl": "https://ai.aporet.com/q/codex/codex-vs-cursor-web-editing",
+      "sourceCategory": "工具对比",
+      "sourceCluster": "Codex AI coding topic hub",
+      "sourceSlug": "codex-vs-cursor-web-editing",
+      "proposedEnglishTitle": "Codex Vs Cursor Web Editing: Comparison and Decision Guide",
+      "proposedEnglishSlug": "codex-vs-cursor-web-editing-comparison-and-decision-guide",
+      "proposedPath": "/en/q/codex/codex-vs-cursor-web-editing-comparison-and-decision-guide",
+      "intent": "comparison",
+      "targetQueries": [
+        "how to fix codex vs cursor web editing",
+        "codex workflow codex vs cursor web editing",
+        "codex vs cursor web editing step by step",
+        "codex vs cursor web editing checklist",
+        "codex vs cursor web editing best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/codex/cursor-vs-codex-web-editing",
+      "sourceUrl": "https://ai.aporet.com/q/codex/cursor-vs-codex-web-editing",
+      "sourceCategory": "工具导航",
+      "sourceCluster": "Codex AI coding topic hub",
+      "sourceSlug": "cursor-vs-codex-web-editing",
+      "proposedEnglishTitle": "Cursor Vs Codex Web Editing: Comparison and Decision Guide",
+      "proposedEnglishSlug": "cursor-vs-codex-web-editing-comparison-and-decision-guide",
+      "proposedPath": "/en/q/codex/cursor-vs-codex-web-editing-comparison-and-decision-guide",
+      "intent": "comparison",
+      "targetQueries": [
+        "how to fix cursor vs codex web editing",
+        "codex workflow cursor vs codex web editing",
+        "cursor vs codex web editing step by step",
+        "cursor vs codex web editing checklist",
+        "cursor vs codex web editing best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/vercel/flowise-local-deployment-beginner-guide",
+      "sourceUrl": "https://ai.aporet.com/q/vercel/flowise-local-deployment-beginner-guide",
+      "sourceCategory": "AI 基建",
+      "sourceCluster": "Vercel and web deployment topic hub",
+      "sourceSlug": "flowise-local-deployment-beginner-guide",
+      "proposedEnglishTitle": "Flowise Local Deployment Beginner Guide: Step-by-Step Guide",
+      "proposedEnglishSlug": "flowise-local-deployment-beginner-guide-step-by-step-guide",
+      "proposedPath": "/en/q/vercel/flowise-local-deployment-beginner-guide-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix flowise local deployment beginner guide",
+        "vercel deployment flowise local deployment beginner guide",
+        "flowise local deployment beginner guide step by step",
+        "flowise local deployment beginner guide checklist",
+        "flowise local deployment beginner guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/vercel/llm-deployment-beginner-guide",
+      "sourceUrl": "https://ai.aporet.com/q/vercel/llm-deployment-beginner-guide",
+      "sourceCategory": "AI 基建",
+      "sourceCluster": "Vercel and web deployment topic hub",
+      "sourceSlug": "llm-deployment-beginner-guide",
+      "proposedEnglishTitle": "LLM Deployment Beginner Guide: Step-by-Step Guide",
+      "proposedEnglishSlug": "llm-deployment-beginner-guide-step-by-step-guide",
+      "proposedPath": "/en/q/vercel/llm-deployment-beginner-guide-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix llm deployment beginner guide",
+        "vercel deployment llm deployment beginner guide",
+        "llm deployment beginner guide step by step",
+        "llm deployment beginner guide checklist",
+        "llm deployment beginner guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/vercel/llm-deployment-huggingface-inference-endpoints-guide",
+      "sourceUrl": "https://ai.aporet.com/q/vercel/llm-deployment-huggingface-inference-endpoints-guide",
+      "sourceCategory": "AI 部署",
+      "sourceCluster": "Vercel and web deployment topic hub",
+      "sourceSlug": "llm-deployment-huggingface-inference-endpoints-guide",
+      "proposedEnglishTitle": "LLM Deployment Huggingface Inference Endpoints Guide: Step-by-Step Guide",
+      "proposedEnglishSlug": "llm-deployment-huggingface-inference-endpoints-guide-step-by-step-guide",
+      "proposedPath": "/en/q/vercel/llm-deployment-huggingface-inference-endpoints-guide-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix llm deployment huggingface inference endpoints guide",
+        "vercel deployment llm deployment huggingface inference endpoints guide",
+        "llm deployment huggingface inference endpoints guide step by step",
+        "llm deployment huggingface inference endpoints guide checklist",
+        "llm deployment huggingface inference endpoints guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/upwork/ai-automation-project-pricing-scope-guide",
+      "sourceUrl": "https://ai.aporet.com/q/upwork/ai-automation-project-pricing-scope-guide",
+      "sourceCategory": "项目报价",
+      "sourceCluster": "Upwork AI freelancing topic hub",
+      "sourceSlug": "ai-automation-project-pricing-scope-guide",
+      "proposedEnglishTitle": "AI Automation Project Pricing Scope Guide: Pricing and Delivery Guide",
+      "proposedEnglishSlug": "ai-automation-project-pricing-scope-guide-pricing-and-delivery-guide",
+      "proposedPath": "/en/q/upwork/ai-automation-project-pricing-scope-guide-pricing-and-delivery-guide",
+      "intent": "commercial",
+      "targetQueries": [
+        "how to fix ai automation project pricing scope guide",
+        "codex workflow ai automation project pricing scope guide",
+        "ai automation project pricing scope guide step by step",
+        "ai automation project pricing scope guide checklist",
+        "ai automation project pricing scope guide best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/upwork/ai-freelance-automation-compliance-risk",
+      "sourceUrl": "https://ai.aporet.com/q/upwork/ai-freelance-automation-compliance-risk",
+      "sourceCategory": "AI 自由职业路线",
+      "sourceCluster": "Upwork AI freelancing topic hub",
+      "sourceSlug": "ai-freelance-automation-compliance-risk",
+      "proposedEnglishTitle": "AI Freelance Automation Compliance Risk: Step-by-Step Guide",
+      "proposedEnglishSlug": "ai-freelance-automation-compliance-risk-step-by-step-guide",
+      "proposedPath": "/en/q/upwork/ai-freelance-automation-compliance-risk-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix ai freelance automation compliance risk",
+        "codex workflow ai freelance automation compliance risk",
+        "ai freelance automation compliance risk step by step",
+        "ai freelance automation compliance risk checklist",
+        "ai freelance automation compliance risk best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/upwork/ai-freelance-daily-planner",
+      "sourceUrl": "https://ai.aporet.com/q/upwork/ai-freelance-daily-planner",
+      "sourceCategory": "模板和清单",
+      "sourceCluster": "Upwork AI freelancing topic hub",
+      "sourceSlug": "ai-freelance-daily-planner",
+      "proposedEnglishTitle": "AI Freelance Daily Planner: Step-by-Step Guide",
+      "proposedEnglishSlug": "ai-freelance-daily-planner-step-by-step-guide",
+      "proposedPath": "/en/q/upwork/ai-freelance-daily-planner-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix ai freelance daily planner",
+        "ai tools workflow ai freelance daily planner",
+        "ai freelance daily planner step by step",
+        "ai freelance daily planner checklist",
+        "ai freelance daily planner best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/upwork/ai-freelance-first-7-days",
+      "sourceUrl": "https://ai.aporet.com/q/upwork/ai-freelance-first-7-days",
+      "sourceCategory": "AI 自由职业路线",
+      "sourceCluster": "Upwork AI freelancing topic hub",
+      "sourceSlug": "ai-freelance-first-7-days",
+      "proposedEnglishTitle": "AI Freelance First 7 Days: Step-by-Step Guide",
+      "proposedEnglishSlug": "ai-freelance-first-7-days-step-by-step-guide",
+      "proposedPath": "/en/q/upwork/ai-freelance-first-7-days-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix ai freelance first 7 days",
+        "ai tools workflow ai freelance first 7 days",
+        "ai freelance first 7 days step by step",
+        "ai freelance first 7 days checklist",
+        "ai freelance first 7 days best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/upwork/before-first-ai-freelance-job",
+      "sourceUrl": "https://ai.aporet.com/q/upwork/before-first-ai-freelance-job",
+      "sourceCategory": "新手路线",
+      "sourceCluster": "Upwork AI freelancing topic hub",
+      "sourceSlug": "before-first-ai-freelance-job",
+      "proposedEnglishTitle": "Before First AI Freelance Job: Step-by-Step Guide",
+      "proposedEnglishSlug": "before-first-ai-freelance-job-step-by-step-guide",
+      "proposedPath": "/en/q/upwork/before-first-ai-freelance-job-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix before first ai freelance job",
+        "ai tools workflow before first ai freelance job",
+        "before first ai freelance job step by step",
+        "before first ai freelance job checklist",
+        "before first ai freelance job best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/upwork/chatgpt-vs-claude-proposal",
+      "sourceUrl": "https://ai.aporet.com/q/upwork/chatgpt-vs-claude-proposal",
+      "sourceCategory": "Proposal",
+      "sourceCluster": "Upwork AI freelancing topic hub",
+      "sourceSlug": "chatgpt-vs-claude-proposal",
+      "proposedEnglishTitle": "Chatgpt Vs Claude Proposal: Comparison and Decision Guide",
+      "proposedEnglishSlug": "chatgpt-vs-claude-proposal-comparison-and-decision-guide",
+      "proposedPath": "/en/q/upwork/chatgpt-vs-claude-proposal-comparison-and-decision-guide",
+      "intent": "comparison",
+      "targetQueries": [
+        "how to fix chatgpt vs claude proposal",
+        "ai tools workflow chatgpt vs claude proposal",
+        "chatgpt vs claude proposal step by step",
+        "chatgpt vs claude proposal checklist",
+        "chatgpt vs claude proposal best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/upwork/client-acceptance-checklist",
+      "sourceUrl": "https://ai.aporet.com/q/upwork/client-acceptance-checklist",
+      "sourceCategory": "模板和清单",
+      "sourceCluster": "Upwork AI freelancing topic hub",
+      "sourceSlug": "client-acceptance-checklist",
+      "proposedEnglishTitle": "Client Acceptance Checklist",
+      "proposedEnglishSlug": "client-acceptance-checklist",
+      "proposedPath": "/en/q/upwork/client-acceptance-checklist",
+      "intent": "checklist",
+      "targetQueries": [
+        "how to fix client acceptance checklist",
+        "ai tools workflow client acceptance checklist",
+        "client acceptance checklist step by step",
+        "client acceptance checklist checklist",
+        "client acceptance checklist best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    },
+    {
+      "sourcePath": "/q/github/github-command-cheatsheet-beginner",
+      "sourceUrl": "https://ai.aporet.com/q/github/github-command-cheatsheet-beginner",
+      "sourceCategory": "工具导航",
+      "sourceCluster": "GitHub and code collaboration topic hub",
+      "sourceSlug": "github-command-cheatsheet-beginner",
+      "proposedEnglishTitle": "Github Command Cheatsheet Beginner: Step-by-Step Guide",
+      "proposedEnglishSlug": "github-command-cheatsheet-beginner-step-by-step-guide",
+      "proposedPath": "/en/q/github/github-command-cheatsheet-beginner-step-by-step-guide",
+      "intent": "guide",
+      "targetQueries": [
+        "how to fix github command cheatsheet beginner",
+        "github actions github command cheatsheet beginner",
+        "github command cheatsheet beginner step by step",
+        "github command cheatsheet beginner checklist",
+        "github command cheatsheet beginner best practice"
+      ],
+      "publishGate": "human_review_required",
+      "actions": [
+        "Rewrite from the source structure for US/global readers; do not publish a direct machine translation.",
+        "Start with the exact problem, quick fix, commands, and risk warning above the fold.",
+        "Link to the matching cluster hub, three related English q entries, and the original deep article.",
+        "Publish only after live URL, canonical, sitemap, and internal-link checks pass."
+      ]
+    }
+  ]
+}
