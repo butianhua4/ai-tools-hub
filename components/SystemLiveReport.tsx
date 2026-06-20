@@ -19,6 +19,7 @@ export function SystemLiveReport({ initialStatus }: { initialStatus: SystemStatu
       { title: "Content System", data: status.content },
       { title: "SEO System", data: status.seo },
       { title: "Search / Analytics Platforms", data: status.searchPlatforms },
+      { title: "Search Performance Imports", data: status.searchPerformance },
       { title: "Autonomous Development Loop", data: status.autonomousLoop },
       { title: "Question Engine", data: status.questionEngine },
       { title: "Page System", data: status.pages },
@@ -100,6 +101,27 @@ export function SystemLiveReport({ initialStatus }: { initialStatus: SystemStatu
         <p className="mt-4 text-sm text-gray-600">
           Search Console and Bing API metrics stay null until real API exports or tokens are connected. This panel only reports surfaces that can be verified from local code and public files.
         </p>
+      </Panel>
+
+      <Panel title="Search Performance Imports">
+        <div className="grid gap-3 md:grid-cols-4">
+          <Metric label="GSC rows" value={status.searchPerformance.imports.gsc.rows} />
+          <Metric label="Bing rows" value={status.searchPerformance.imports.bing.rows} />
+          <Metric label="Impressions" value={status.searchPerformance.totals.impressions ?? "waiting"} />
+          <Metric label="Clicks" value={status.searchPerformance.totals.clicks ?? "waiting"} />
+        </div>
+        <div className="mt-4 grid gap-3 md:grid-cols-2">
+          {Object.entries(status.searchPerformance.imports).map(([key, item]) => (
+            <div className="rounded-md border border-gray-200 bg-gray-50 p-3 text-sm" key={key}>
+              <p className="font-semibold text-ink">{key}</p>
+              <p className={item.connected ? "mt-1 text-emerald-700" : "mt-1 text-amber-700"}>{item.connected ? "real data imported" : "waiting for real export"}</p>
+              <p className="mt-1 text-xs text-gray-500">
+                {item.file} / rows {item.rows} / updated {item.updatedAt ? formatDate(item.updatedAt) : "never"}
+              </p>
+              <p className="mt-2 text-gray-700">{item.message}</p>
+            </div>
+          ))}
+        </div>
       </Panel>
 
       <Panel title="Autonomous Development Loop">

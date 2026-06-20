@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { getSearchPerformanceData } from "@/lib/search-performance-data";
 import { getSeoGraph, type SeoGraph, type SeoNode } from "@/lib/seo-graph";
 
 export type SeoSignalPage = {
@@ -15,7 +16,7 @@ export type SeoSignalPage = {
 };
 
 export type SeoSignalReport = {
-  gscConnected: false;
+  gscConnected: boolean;
   evidence: string;
   risingPages: SeoSignalPage[];
   deadPages: SeoSignalPage[];
@@ -25,21 +26,25 @@ export type SeoSignalReport = {
 
 export function detectSeoSignals(graph: SeoGraph = getSeoGraph()): SeoSignalReport {
   const crawlCounts = readCrawlCounts();
+  const performance = getSearchPerformanceData();
+  const performanceByPath = new Map(performance.pages.map((page) => [page.path, page]));
 
-  const pages = graph.nodes.map((node) => toSignalPage(node, crawlCounts.get(node.path) || 0));
+  const pages = graph.nodes.map((node) => toSignalPage(node, crawlCounts.get(node.path) || 0, performanceByPath.get(node.path)));
   const risingPages = pages
-    .filter((page) => page.crawlEvents > 0)
-    .sort((a, b) => b.crawlEvents - a.crawlEvents || b.incoming - a.incoming)
+    .filter((page) => page.crawlEvents > 0 || (page.impressions || 0) > 0 || (page.clicks || 0) > 0)
+    .sort((a, b) => (b.clicks || 0) - (a.clicks || 0) || (b.impressions || 0) - (a.impressions || 0) || b.crawlEvents - a.crawlEvents || b.incoming - a.incoming)
     .slice(0, 20);
-  const deadPages = graph.orphanPages.concat(graph.weakPages).map((node) => toSignalPage(node, crawlCounts.get(node.path) || 0));
+  const deadPages = graph.orphanPages.concat(graph.weakPages).map((node) => toSignalPage(node, crawlCounts.get(node.path) || 0, performanceByPath.get(node.path)));
   const potentialPages = pages
     .filter((page) => page.type === "q" || page.type === "cluster" || page.incoming >= 8)
     .sort((a, b) => scorePotential(b) - scorePotential(a))
     .slice(0, 30);
 
   return {
-    gscConnected: false,
-    evidence: "Search Console data is reserved and not connected yet. Crawl frequency only reads real crawl events from logs/system.log.",
+    gscConnected: performance.imports.gsc.connected,
+    evidence: performance.imports.gsc.connected
+      ? `Search Console export imported from ${performance.imports.gsc.file}; crawl frequency reads real crawl events from logs/system.log.`
+      : "Search Console data is reserved and not connected yet. Crawl frequency only reads real crawl events from logs/system.log.",
     risingPages,
     deadPages,
     potentialPages,
@@ -47,7 +52,7 @@ export function detectSeoSignals(graph: SeoGraph = getSeoGraph()): SeoSignalRepo
   };
 }
 
-function toSignalPage(node: SeoNode, crawlEvents: number): SeoSignalPage {
+function toSignalPage(node: SeoNode, crawlEvents: number, performance?: { impressions: number; clicks: number }): SeoSignalPage {
   return {
     path: node.path,
     title: node.title,
@@ -56,8 +61,8 @@ function toSignalPage(node: SeoNode, crawlEvents: number): SeoSignalPage {
     incoming: node.incoming.length,
     outgoing: node.outgoing.length,
     crawlEvents,
-    impressions: null,
-    clicks: null,
+    impressions: performance?.impressions ?? null,
+    clicks: performance?.clicks ?? null,
   };
 }
 

@@ -6,6 +6,7 @@ import { tools } from "@/data/tools";
 import type { AutonomousLoopStatus } from "@/lib/autonomous-next-step";
 import { getSeoGrowthReport, type SeoGrowthReport } from "@/lib/seo-growth-monitor";
 import { getClusterPath, getQuestionPath, getSeoGraph, seoClusters, type SeoGraph } from "@/lib/seo-graph";
+import { getSearchPerformanceData, type SearchPerformanceData } from "@/lib/search-performance-data";
 import { getSearchPlatformStatus, type SearchPlatformStatus } from "@/lib/search-platform-status";
 
 const root = projectPath();
@@ -108,6 +109,7 @@ export type SystemStatus = {
     potentialPages: number;
   };
   searchPlatforms: SearchPlatformStatus;
+  searchPerformance: SearchPerformanceData;
   autonomousLoop: AutonomousLoopStatus;
   logs: {
     file: string;
@@ -135,6 +137,7 @@ export function getSystemStatus(): SystemStatus {
   const buildStatus = getBuildStatus();
   const performance = getPerformanceStatus(sitemapStatus.urlCount);
   const searchPlatforms = getSearchPlatformStatus();
+  const searchPerformance = getSearchPerformanceData();
   const autonomousLoop = getAutonomousLoopStatusSnapshot();
   const latestLogs = readSystemLog().slice(-10).reverse();
   const errorLogs = readSystemLog().filter((entry) => entry.level === "error").slice(-20).reverse();
@@ -183,9 +186,11 @@ export function getSystemStatus(): SystemStatus {
       },
       robots: robotsStatus,
       searchConsole: {
-        connected: false,
-        status: "reserved",
-        evidence: "Search Console API/export is not connected yet. Manual screenshots exist, but this module does not invent indexing data.",
+        connected: searchPerformance.imports.gsc.connected,
+        status: searchPerformance.imports.gsc.connected ? "connected" : "reserved",
+        evidence: searchPerformance.imports.gsc.connected
+          ? `Imported ${searchPerformance.imports.gsc.rows} real Search Console row(s) from ${searchPerformance.imports.gsc.file}.`
+          : "Search Console API/export is not connected yet. Manual screenshots exist, but this module does not invent indexing data.",
       },
     },
     questionEngine,
@@ -204,6 +209,7 @@ export function getSystemStatus(): SystemStatus {
       potentialPages: seoGrowth.signals.potentialPages.length,
     },
     searchPlatforms,
+    searchPerformance,
     autonomousLoop,
     logs: {
       file: "logs/system.log",

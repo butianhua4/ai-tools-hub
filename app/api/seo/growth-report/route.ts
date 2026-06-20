@@ -10,10 +10,14 @@ export function GET() {
     totalPages: report.totalPages,
     qPages: report.qPages,
     clusterPages: report.clusterPages,
+    indexedPages: report.indexedPages,
+    impressions: report.impressions,
+    clicks: report.clicks,
     internalLinkHealth: report.internalLinkHealth,
     orphanPages: report.orphanPages,
     seoScore: report.seoScore,
     weakPages: report.weakPages,
     growthReadinessScore: report.growthReadinessScore,
+    gscConnected: report.gsc.connected,
   });
 }

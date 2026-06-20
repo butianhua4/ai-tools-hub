@@ -1,4 +1,5 @@
 import { getInternalLinkOptimizationReport } from "@/lib/internal-link-optimizer";
+import { getSearchPerformanceData } from "@/lib/search-performance-data";
 import { detectSeoSignals } from "@/lib/seo-signal-detector";
 import { getSeoGraph, type SeoGraph, type SeoNode } from "@/lib/seo-graph";
 
@@ -32,10 +33,10 @@ export type SeoGrowthReport = {
   };
   signals: ReturnType<typeof detectSeoSignals>;
   gsc: {
-    connected: false;
-    indexedPages: null;
-    impressions: null;
-    clicks: null;
+    connected: boolean;
+    indexedPages: number | null;
+    impressions: number | null;
+    clicks: number | null;
     note: string;
   };
 };
@@ -56,6 +57,7 @@ export function getSeoGrowthReport(graph: SeoGraph = getSeoGraph()): SeoGrowthRe
   const clusterPages = graph.nodes.filter((node) => node.type === "cluster");
   const optimizer = getInternalLinkOptimizationReport(graph);
   const signals = detectSeoSignals(graph);
+  const performance = getSearchPerformanceData();
   const growthReadinessScore = getGrowthReadinessScore({
     qPages: qPages.length,
     clusterPages: clusterPages.length,
@@ -65,15 +67,15 @@ export function getSeoGrowthReport(graph: SeoGraph = getSeoGraph()): SeoGrowthRe
   const seoScore = Math.round((growthReadinessScore + optimizer.health) / 2);
 
   return {
-    growthStage: detectGrowthStage({ growthReadinessScore, crawlEvents: signals.crawlEvents, impressions: null, clicks: null }),
+    growthStage: detectGrowthStage({ growthReadinessScore, crawlEvents: signals.crawlEvents, impressions: performance.totals.impressions, clicks: performance.totals.clicks }),
     generatedAt: new Date().toISOString(),
     totalPages: graph.nodes.length,
     qPages: qPages.length,
     blogPages: blogPages.length,
     clusterPages: clusterPages.length,
-    indexedPages: null,
-    impressions: null,
-    clicks: null,
+    indexedPages: performance.totals.indexedPages,
+    impressions: performance.totals.impressions,
+    clicks: performance.totals.clicks,
     orphanPages: graph.orphanPages.length,
     weakPages: graph.weakPages.length,
     internalLinkHealth: optimizer.health,
@@ -88,11 +90,13 @@ export function getSeoGrowthReport(graph: SeoGraph = getSeoGraph()): SeoGrowthRe
     pageGrades: gradePages(graph.nodes),
     signals,
     gsc: {
-      connected: false,
-      indexedPages: null,
-      impressions: null,
-      clicks: null,
-      note: "Search Console API/export is reserved. Values stay null until real GSC data is connected.",
+      connected: performance.imports.gsc.connected,
+      indexedPages: performance.totals.indexedPages,
+      impressions: performance.totals.impressions,
+      clicks: performance.totals.clicks,
+      note: performance.imports.gsc.connected
+        ? `Imported ${performance.imports.gsc.rows} Search Console row(s) from ${performance.imports.gsc.file}.`
+        : "Search Console API/export is reserved. Values stay null until a real GSC export is placed in content/automation/platform-data/gsc-performance.csv.",
     },
   };
 }
