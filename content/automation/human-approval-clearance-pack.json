@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T10:19:39.131Z",
+  "generatedAt": "2026-06-20T15:23:16.205Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "approvalQueueGeneratedAt": "2026-06-20T10:19:38.667Z",
+    "approvalQueueGeneratedAt": "2026-06-20T15:23:15.714Z",
     "approvalQueueSummary": {
       "backlogItems": 0,
       "commandBoundaries": 3,
@@ -27,7 +27,7 @@
       "trafficDataAvailable": false,
       "unsafeItems": 0
     },
-    "copydeskGeneratedAt": "2026-06-20T10:19:21.656Z",
+    "copydeskGeneratedAt": "2026-06-20T15:22:58.134Z",
     "copydeskSummary": {
       "briefs": 2,
       "briefsWithAction": 2,
@@ -36,7 +36,7 @@
       "readyBriefs": 2,
       "unsafeCommands": 0
     },
-    "sourceReplacementGeneratedAt": "2026-06-20T10:19:20.210Z",
+    "sourceReplacementGeneratedAt": "2026-06-20T15:22:56.658Z",
     "sourceReplacementSummary": {
       "affectedFiles": 16,
       "failedDecisionItems": 0,
@@ -52,7 +52,7 @@
       "sourceRemediationUnsafeItems": 0,
       "unsafeItems": 0
     },
-    "seoWarningGeneratedAt": "2026-06-20T10:19:00.436Z",
+    "seoWarningGeneratedAt": "2026-06-20T15:22:36.387Z",
     "seoWarningSummary": {
       "blockingItems": 0,
       "draftItems": 0,

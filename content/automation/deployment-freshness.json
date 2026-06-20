@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T10:20:14.039Z",
+  "generatedAt": "2026-06-20T15:23:47.454Z",
   "guardrails": {
     "noTrafficClaims": true,
     "noIndexingClaims": true,
@@ -20,7 +20,7 @@
       "ok": true,
       "url": "https://ai.aporet.com/q/ai-tools/agent-tool-permission-safety-guide",
       "expected": "Agent Tool Permission Safety Guide",
-      "actual": "Agent Tool Permission Safety Guide: quick fix, steps, and deep guide | AI Tools Guide"
+      "actual": "Agent Tool Permission Safety Guide | Quick Answer, Steps &amp; Risks | AI Tools Guide"
     },
     {
       "name": "q detail page uses current US-facing H1",

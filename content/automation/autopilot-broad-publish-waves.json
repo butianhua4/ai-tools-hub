@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T10:19:36.303Z",
+  "generatedAt": "2026-06-20T15:23:13.247Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -10,7 +10,7 @@
   },
   "sourceEvidence": {
     "projectStatusPublicPublished": 500,
-    "triageGeneratedAt": "2026-06-20T10:19:35.836Z",
+    "triageGeneratedAt": "2026-06-20T15:23:12.759Z",
     "triageGuardrails": {
       "autoEditArticles": false,
       "autoMarkReview": false,

@@ -1,6 +1,6 @@
 # Deployment Freshness
 
-Generated at: 2026-06-20T10:20:14.039Z
+Generated at: 2026-06-20T15:23:47.454Z
 
 This report checks whether production HTML matches the current SEO code expectations.
 
@@ -24,7 +24,7 @@ This report checks whether production HTML matches the current SEO code expectat
 
 | Check | Status | Expected | Actual | URL |
 | --- | --- | --- | --- | --- |
-| q detail page uses current US-facing title | PASS | Agent Tool Permission Safety Guide | Agent Tool Permission Safety Guide: quick fix, steps, and deep guide \| AI Tools Guide | https://ai.aporet.com/q/ai-tools/agent-tool-permission-safety-guide |
+| q detail page uses current US-facing title | PASS | Agent Tool Permission Safety Guide | Agent Tool Permission Safety Guide \| Quick Answer, Steps &amp; Risks \| AI Tools Guide | https://ai.aporet.com/q/ai-tools/agent-tool-permission-safety-guide |
 | q detail page uses current US-facing H1 | PASS | Agent Tool Permission Safety Guide | Agent Tool Permission Safety Guide | https://ai.aporet.com/q/ai-tools/agent-tool-permission-safety-guide |
 | q detail page keeps JSON-LD graph | PASS | FAQPage + BreadcrumbList + at least 4 JSON-LD blocks | 4 JSON-LD block(s) | https://ai.aporet.com/q/ai-tools/agent-tool-permission-safety-guide |
 | cluster hub uses current English title | PASS | AI tools and LLM applications topic hub | AI tools and LLM applications topic hub \| AI Tools Guide | https://ai.aporet.com/cluster/ai-tools |
