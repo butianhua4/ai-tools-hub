@@ -1,6 +1,6 @@
 # Content Freshness Check
 
-Generated at: 2026-06-20T15:23:01.144Z
+Generated at: 2026-06-21T01:45:23.063Z
 
 This report flags fast-changing content for manual fact review. It does not verify facts or publish anything.
 
