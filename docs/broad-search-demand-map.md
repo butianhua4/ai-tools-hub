@@ -1,6 +1,6 @@
 # Broad Search Demand Map
 
-Generated at: 2026-06-21T01:45:09.193Z
+Generated at: 2026-06-21T06:27:55.361Z
 
 This report is read-only. It turns broad user-search demand areas into a review and content-gap map. It does not publish, mark review, claim keyword volume, or claim traffic.
 
