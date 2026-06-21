@@ -5,7 +5,8 @@ Generated: 2026-06-20
 ## Code closure
 
 - GitHub branch: `main`
-- Latest pushed commit: `de864ee6 Close search platform data loop`
+- Latest pushed commit: `7840f365 Record platform closure verification`
+- Platform data loop commit: `de864ee6 Close search platform data loop`
 - Local validation:
   - `npm run lint`: pass
   - `npm run seo:check`: pass
@@ -43,16 +44,22 @@ Current local import status:
 
 This is expected until real exports are placed in `content/automation/platform-data/`.
 
-## Deployment caveat
+## Deployment verification
 
-The latest commit is pushed to GitHub, but the live `https://ai.aporet.com/api/seo/growth-report` endpoint still returned the previous response shape during verification. This means the production deployment had not yet switched to commit `de864ee6` at the time of this report.
+Initial verification showed the live `https://ai.aporet.com/api/seo/growth-report` endpoint still returning the previous response shape. A follow-up check on 2026-06-21 confirmed production had switched to the new response shape.
 
-Next verification target:
+Production endpoint now includes:
 
-- Recheck `https://ai.aporet.com/api/seo/growth-report`
-- Confirm response includes:
-  - `indexedPages`
-  - `impressions`
-  - `clicks`
-  - `gscConnected`
+- `indexedPages`
+- `impressions`
+- `clicks`
+- `gscConnected`
 
+Public verification on 2026-06-21:
+
+- `https://ai.aporet.com/`: HTTP 200
+- `https://ai.aporet.com/robots.txt`: HTTP 200
+- `https://ai.aporet.com/sitemap.xml`: HTTP 200
+- `https://ai.aporet.com/api/seo/growth-report`: HTTP 200
+
+Note: `https://ai.aporet.com/api/seo/performance` intentionally returns 404 in production unless `SYSTEM_STATUS_PUBLIC=1` is set. This keeps internal platform import details private by default.
