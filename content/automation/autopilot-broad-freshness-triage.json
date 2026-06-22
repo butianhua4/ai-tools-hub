@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T15:28:48.240Z",
+  "generatedAt": "2026-06-22T01:45:26.309Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "broadDemandGeneratedAt": "2026-06-21T15:28:47.739Z",
+    "broadDemandGeneratedAt": "2026-06-22T01:45:25.827Z",
     "broadDemandGuardrails": {
       "autoCreateArticles": false,
       "autoEditArticles": false,
@@ -28,7 +28,7 @@
       "reviewReadyDrafts": 148,
       "unsafeClusters": 0
     },
-    "contentFreshnessGeneratedAt": "2026-06-21T15:28:36.383Z",
+    "contentFreshnessGeneratedAt": "2026-06-22T01:45:14.942Z",
     "contentFreshnessGuardrails": {
       "autoPublish": false,
       "note": "This report flags freshness risk for manual review. It does not verify live facts, claim traffic, or change article status."
@@ -45,15 +45,15 @@
       "checkedUrls": 14,
       "broadFirstCoverageFiles": 0,
       "currentReviewFiles": 3,
-      "failedUrls": 1,
+      "failedUrls": 0,
       "filesCovered": 16,
       "filesWithReachableSource": 16,
       "filesWithoutReachableSource": 0,
       "missingUrlTargets": 0,
       "nextSourcePackFiles": 15,
-      "okUrls": 13,
+      "okUrls": 14,
       "publicGapDecisionFiles": 0,
-      "redirectedUrls": 9,
+      "redirectedUrls": 10,
       "sourceReferences": 86,
       "uniqueUrls": 14
     },

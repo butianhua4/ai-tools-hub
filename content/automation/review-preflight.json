@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T15:27:51.735Z",
+  "generatedAt": "2026-06-22T01:44:42.789Z",
   "guardrails": {
     "autoMarkReview": false,
     "note": "This preflight only checks whether recommended drafts are ready for human review. It does not change article status."

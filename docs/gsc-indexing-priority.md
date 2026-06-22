@@ -1,6 +1,6 @@
 # GSC Indexing Priority
 
-Generated at: 2026-06-21T15:29:24.525Z
+Generated at: 2026-06-22T01:46:02.039Z
 
 Use this list for manual URL Inspection and indexing requests in Google Search Console. Do not submit hundreds of URLs manually.
 
