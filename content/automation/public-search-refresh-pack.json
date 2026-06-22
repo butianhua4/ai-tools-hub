@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T06:59:19.175Z",
+  "generatedAt": "2026-06-22T13:12:54.844Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "cannibalizationGeneratedAt": "2026-06-22T06:59:17.060Z",
+    "cannibalizationGeneratedAt": "2026-06-22T13:12:51.885Z",
     "cannibalizationSummary": {
       "articleCount": 669,
       "conflicts": 199,
@@ -18,7 +18,7 @@
       "slugStemConflicts": 177,
       "titleStemConflicts": 11
     },
-    "freshnessGeneratedAt": "2026-06-22T06:59:18.444Z",
+    "freshnessGeneratedAt": "2026-06-22T13:12:53.820Z",
     "freshnessSummary": {
       "articlesChecked": 669,
       "currentReviewItems": 3,
@@ -27,7 +27,7 @@
       "mediumRisk": 93,
       "plannedReviewItems": 6
     },
-    "publicSurfaceGeneratedAt": "2026-06-22T06:58:55.358Z",
+    "publicSurfaceGeneratedAt": "2026-06-22T13:12:22.881Z",
     "publicSurfaceSummary": {
       "broadClusters": 8,
       "broadClustersWithoutPublicCoverage": 0,
@@ -45,7 +45,7 @@
       "trafficDataAvailable": false,
       "unsafeItems": 0
     },
-    "seoWarningsGeneratedAt": "2026-06-22T06:58:58.958Z",
+    "seoWarningsGeneratedAt": "2026-06-22T13:12:27.949Z",
     "seoWarningsSummary": {
       "blockingItems": 0,
       "draftItems": 0,
@@ -62,7 +62,7 @@
       "warningItems": 0,
       "waveItems": 0
     },
-    "trafficEvidenceGeneratedAt": "2026-06-22T06:58:54.266Z",
+    "trafficEvidenceGeneratedAt": "2026-06-22T13:12:21.361Z",
     "trafficEvidenceSummary": {
       "canClaimTraffic": false,
       "claimableMetrics": 0,

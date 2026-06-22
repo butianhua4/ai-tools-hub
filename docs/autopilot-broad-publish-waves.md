@@ -1,6 +1,6 @@
 # Autopilot Broad Publish Waves
 
-Generated at: 2026-06-22T06:59:27.681Z
+Generated at: 2026-06-22T13:13:06.431Z
 
 ## Guardrails
 
