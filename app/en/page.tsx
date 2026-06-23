@@ -3,7 +3,7 @@ import Link from "next/link";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "AI Tools Guide for Deployment, Agents, RAG, and Automation",
+  title: { absolute: "AI Tools Guide: AI Deployment, Agents, RAG & Automation" },
   description: site.englishDescription,
   alternates: {
     canonical: "/en",
