@@ -113,6 +113,16 @@ gtag('config', '${googleAnalyticsId}');
             },
           }}
         />
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: site.englishName,
+            url: site.url,
+            logo: new URL(site.ogImage, site.url).toString(),
+            description: site.englishDescription,
+          }}
+        />
         <Header />
         {children}
         <Footer />
