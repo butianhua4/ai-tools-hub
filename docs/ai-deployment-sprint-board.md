@@ -1,6 +1,6 @@
 # AI Deployment Sprint Board
 
-Generated at: 2026-06-22T18:05:19.269Z
+Generated at: 2026-06-23T01:28:32.483Z
 
 This report is read-only. It groups model deployment, Agent, RAG, memory, API, workflow, and infrastructure candidates into manual review waves.
 

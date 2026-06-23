@@ -1,6 +1,6 @@
 # Next Batch Route Remediation Pack
 
-Generated at: 2026-06-22T18:05:55.048Z
+Generated at: 2026-06-23T01:29:01.156Z
 
 This report is read-only. It converts next-batch route warnings into manual remediation tasks without editing articles or changing review/publish state.
 

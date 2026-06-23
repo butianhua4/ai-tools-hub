@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T18:06:27.364Z",
+  "generatedAt": "2026-06-23T01:29:49.377Z",
   "guardrails": {
     "autoPublish": false,
     "note": "This audit checks evidence for traffic measurement. It does not claim visits, clicks, impressions, rankings, or Search Console performance data."

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T18:05:31.967Z",
+  "generatedAt": "2026-06-23T01:28:38.887Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -155,8 +155,7 @@
       "url": "https://ai-sdk.dev/docs"
     },
     {
-      "error": "TimeoutError",
-      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=de",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs",
       "ok": true,
       "references": [
         {
@@ -1050,8 +1049,7 @@
       "url": "https://ai-sdk.dev/docs"
     },
     {
-      "error": "TimeoutError",
-      "finalUrl": "https://ai.google.dev/gemini-api/docs?hl=de",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs",
       "ok": true,
       "references": [
         {

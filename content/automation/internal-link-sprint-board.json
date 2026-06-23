@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T18:05:03.296Z",
+  "generatedAt": "2026-06-23T01:28:17.410Z",
   "guardrails": {
     "autoEditArticles": false,
     "autoMarkReview": false,
@@ -9,7 +9,7 @@
     "trafficClaim": "not-included"
   },
   "sourceEvidence": {
-    "internalLinkAuditGeneratedAt": "2026-06-22T18:05:02.786Z",
+    "internalLinkAuditGeneratedAt": "2026-06-23T01:28:16.919Z",
     "internalLinkAuditSummary": {
       "broadFirstCoverageItems": 0,
       "broadFirstCoverageItemsMissingPublicLinkSuggestion": 0,
