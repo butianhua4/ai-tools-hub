@@ -1,6 +1,6 @@
 # SEO Growth Daily Ops
 
-Generated at: 2026-06-23T10:48:57.308Z
+Generated at: 2026-06-23T16:11:46.647Z
 
 ## Guardrails
 
@@ -24,7 +24,7 @@ Generated at: 2026-06-23T10:48:57.308Z
 
 1. Submit sitemap index: https://ai.aporet.com/sitemap.xml
 2. Top queue target: 500
-3. Queue window: day 6 since 2026-06-18, URLs 1-500 of 1007
+3. Queue window: day 7 since 2026-06-18, URLs 1-500 of 1007
 4. Rule: Submit sitemap.xml first in GSC. Then use URL Inspection from todayBatch until the top 500 queue is processed or GSC rate-limits requests.
 
 ### Today URL Inspection Batch
