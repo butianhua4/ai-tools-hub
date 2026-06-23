@@ -12,7 +12,7 @@ import { getClusterPath, getHighPotentialQuestionPosts, getQuestionName, getQues
 export const metadata: Metadata = {
   title: site.name,
   description: site.description,
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", languages: { "zh-CN": "/", "en-US": "/en" } },
   openGraph: {
     title: site.name,
     description: site.description,
