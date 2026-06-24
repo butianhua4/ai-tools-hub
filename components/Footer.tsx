@@ -3,6 +3,7 @@ import Link from "next/link";
 const footerLinks = [
   ["/about", "About"],
   ["/privacy", "Privacy"],
+  ["/terms", "Terms"],
   ["/disclaimer", "Disclaimer"],
   ["/docs", "Docs"],
   ["/monetization", "Monetization"],
