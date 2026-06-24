@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T16:11:43.748Z",
+  "generatedAt": "2026-06-24T05:40:47.687Z",
   "guardrails": {
     "noTrafficClaims": true,
     "noIndexingClaims": true,
@@ -34,7 +34,7 @@
       "ok": true,
       "url": "https://ai.aporet.com/q/ai-tools/agent-tool-permission-safety-guide",
       "expected": "FAQPage + BreadcrumbList + at least 4 JSON-LD blocks",
-      "actual": "4 JSON-LD block(s)"
+      "actual": "6 JSON-LD block(s)"
     },
     {
       "name": "cluster hub uses current English title",
@@ -55,7 +55,7 @@
       "ok": true,
       "url": "https://ai.aporet.com/q",
       "expected": "200 and at least 4 JSON-LD blocks",
-      "actual": "200, 4 JSON-LD block(s)"
+      "actual": "200, 6 JSON-LD block(s)"
     },
     {
       "name": "main sitemap index includes q, cluster, blog, and static sitemaps",

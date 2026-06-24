@@ -1,6 +1,6 @@
 # Deployment Freshness
 
-Generated at: 2026-06-23T16:11:43.748Z
+Generated at: 2026-06-24T05:40:47.687Z
 
 This report checks whether production HTML matches the current SEO code expectations.
 
@@ -26,10 +26,10 @@ This report checks whether production HTML matches the current SEO code expectat
 | --- | --- | --- | --- | --- |
 | q detail page uses current US-facing title | PASS | Agent Tool Permission Safety Guide | Agent Tool Permission Safety Guide \| Quick Answer, Steps &amp; Risks \| AI Tools Guide | https://ai.aporet.com/q/ai-tools/agent-tool-permission-safety-guide |
 | q detail page uses current US-facing H1 | PASS | Agent Tool Permission Safety Guide | Agent Tool Permission Safety Guide | https://ai.aporet.com/q/ai-tools/agent-tool-permission-safety-guide |
-| q detail page keeps JSON-LD graph | PASS | FAQPage + BreadcrumbList + at least 4 JSON-LD blocks | 4 JSON-LD block(s) | https://ai.aporet.com/q/ai-tools/agent-tool-permission-safety-guide |
+| q detail page keeps JSON-LD graph | PASS | FAQPage + BreadcrumbList + at least 4 JSON-LD blocks | 6 JSON-LD block(s) | https://ai.aporet.com/q/ai-tools/agent-tool-permission-safety-guide |
 | cluster hub uses current English title | PASS | AI tools and LLM applications topic hub | AI tools and LLM applications topic hub \| AI Tools Guide | https://ai.aporet.com/cluster/ai-tools |
 | cluster hub uses current English H1 | PASS | AI tools and LLM applications topic hub | AI tools and LLM applications topic hub | https://ai.aporet.com/cluster/ai-tools |
-| q index is reachable with JSON-LD | PASS | 200 and at least 4 JSON-LD blocks | 200, 4 JSON-LD block(s) | https://ai.aporet.com/q |
+| q index is reachable with JSON-LD | PASS | 200 and at least 4 JSON-LD blocks | 200, 6 JSON-LD block(s) | https://ai.aporet.com/q |
 | main sitemap index includes q, cluster, blog, and static sitemaps | PASS | sitemap-q.xml, sitemap-cluster.xml, sitemap-blog.xml, sitemap-static.xml | 200, length=565 | https://ai.aporet.com/sitemap.xml |
 
 ## Next Actions

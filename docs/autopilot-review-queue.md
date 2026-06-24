@@ -1,6 +1,6 @@
 # Autopilot Review Queue
 
-Generated at: 2026-06-23T16:10:53.008Z
+Generated at: 2026-06-24T05:40:04.926Z
 
 This report is read-only. It ranks the next manual review assignments and stops before article status changes.
 
