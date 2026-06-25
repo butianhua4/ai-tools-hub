@@ -1,6 +1,6 @@
 # Autopilot Approval Remediation Pack
 
-Generated at: 2026-06-25T01:31:07.105Z
+Generated at: 2026-06-25T05:43:13.492Z
 
 This report is read-only. It consolidates approval-packet search, internal-link, source, and copydesk fixes before human review.
 

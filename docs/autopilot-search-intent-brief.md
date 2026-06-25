@@ -1,6 +1,6 @@
 # Autopilot Search Intent Brief
 
-Generated at: 2026-06-25T01:31:05.651Z
+Generated at: 2026-06-25T05:43:11.581Z
 
 This report is read-only. It checks search-intent coverage for the top autopilot approval packet items.
 

@@ -1,6 +1,6 @@
 # Autopilot Queued Playbook Brief
 
-Generated at: 2026-06-25T01:31:10.026Z
+Generated at: 2026-06-25T05:43:17.274Z
 
 This report is read-only. It prepares the queued-for-playbook sprint items for manual review and keeps all status changes human-gated.
 
