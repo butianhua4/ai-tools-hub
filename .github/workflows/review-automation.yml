@@ -5,11 +5,12 @@ on:
     branches:
       - main
   workflow_dispatch:
-  schedule:
-    - cron: "30 1 * * *"
-    - cron: "30 7 * * *"
-    - cron: "30 13 * * *"
-    - cron: "30 23 * * *"
+  # PAUSED 2026-06-25 战略转向"质"优先,停自治定时运行(手动用 workflow_dispatch)
+  # schedule:
+    # - cron: "30 1 * * *"
+    # - cron: "30 7 * * *"
+    # - cron: "30 13 * * *"
+    # - cron: "30 23 * * *"
 
 permissions:
   contents: write
