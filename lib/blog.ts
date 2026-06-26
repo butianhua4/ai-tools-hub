@@ -5,7 +5,7 @@ import readingTime from "reading-time";
 import type { BlogPost } from "./types";
 const blogDir = path.join(process.cwd(), "content", "blog");
 
-export function getAllPosts(includeDrafts = false): BlogPost[] {
+function readAllPosts(): BlogPost[] {
   if (!fs.existsSync(blogDir)) return [];
   return fs.readdirSync(blogDir).filter((f) => f.endsWith(".mdx") || f.endsWith(".md")).map((file) => {
     const filePath = path.join(blogDir, file);
@@ -13,9 +13,23 @@ export function getAllPosts(includeDrafts = false): BlogPost[] {
     const parsed = matter(raw);
     const data = parsed.data as Omit<BlogPost, "content" | "excerpt" | "readingTime" | "filePath">;
     return { ...data, content: parsed.content, excerpt: data.description || parsed.content.slice(0, 160), readingTime: readingTime(parsed.content).text, filePath };
-  }).filter((p) => includeDrafts || (p.status === "published" && p.noindex === false)).sort((a, b) => +new Date(b.date) - +new Date(a.date));
+  }).sort((a, b) => +new Date(b.date) - +new Date(a.date));
 }
-export function getPostBySlug(slug: string, includeDrafts = process.env.NODE_ENV === "development") { return getAllPosts(includeDrafts).find((p) => p.slug === slug); }
+
+// 列表/sitemap/相关用:排除草稿和 noindex 页(它们不进导航、站点地图、相关推荐)
+export function getAllPosts(includeDrafts = false): BlogPost[] {
+  return readAllPosts().filter((p) => includeDrafts || (p.status === "published" && p.noindex === false));
+}
+
+// 可渲染的已发布文章(含 noindex):用于构建参数和单页查找。
+// 让 noindex 页仍正常 200 渲染(只带 robots noindex meta),而不是 404——否则 noindex 会造成大量 404 和断链。
+export function getRenderablePosts(): BlogPost[] {
+  return readAllPosts().filter((p) => process.env.NODE_ENV === "development" || p.status === "published");
+}
+
+export function getPostBySlug(slug: string, includeDrafts = process.env.NODE_ENV === "development") {
+  return readAllPosts().filter((p) => includeDrafts || p.status === "published").find((p) => p.slug === slug);
+}
 
 export function getPostsByCategory(category: string) {
   return getAllPosts(false).filter((post) => slugify(post.category) === category);

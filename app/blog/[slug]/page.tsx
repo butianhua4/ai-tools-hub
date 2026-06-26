@@ -7,12 +7,13 @@ import { TagBadge } from "@/components/Badges";
 import { ToolCTA } from "@/components/ToolCTA";
 import { ArticleToolLinks } from "@/components/ArticleToolLinks";
 import { SeoInternalLinks } from "@/components/SeoInternalLinks";
-import { getAllPosts, getPostBySlug, renderMarkdown, slugify } from "@/lib/blog";
+import { getAllPosts, getRenderablePosts, getPostBySlug, renderMarkdown, slugify } from "@/lib/blog";
 import { site } from "@/data/site";
 import { defaultOgImages, seoDescription } from "@/lib/seo-metadata";
 
 export function generateStaticParams() {
-  return getAllPosts(false).map((post) => ({ slug: post.slug }));
+  // 含 noindex 页:它们仍需 200 渲染(带 robots noindex),避免 404 和断链
+  return getRenderablePosts().map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
